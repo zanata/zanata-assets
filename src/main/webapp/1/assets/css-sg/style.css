@@ -2082,22 +2082,22 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 
 */
-.new-zanata .txt--state--highlight {
+.new-zanata .txt--state-highlight {
   color: #4e9fdd;
 }
-.new-zanata .txt--state--success {
+.new-zanata .txt--state-success {
   color: #70a98b;
 }
-.new-zanata .txt--state--unsure {
+.new-zanata .txt--state-unsure {
   color: #e0c350;
 }
-.new-zanata .txt--state--warning {
+.new-zanata .txt--state-warning {
   color: #e3824e;
 }
-.new-zanata .txt--state--danger {
+.new-zanata .txt--state-danger {
   color: #e0575b;
 }
-.new-zanata .txt--state--neutral {
+.new-zanata .txt--state-neutral {
   color: #c6d2db;
 }
 
@@ -2182,6 +2182,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 /*
 
 ### Icons
+
+All icons also need the class `.i` added to them.
 
 */
 @font-face {
@@ -2981,9 +2983,6 @@ Sub-headings can be used when placing a heading under another heading.
   color: #4e9fdd;
   border: 1px solid transparent;
 }
-.dropdown:hover .new-zanata .dropdown__toggle {
-  color: #2479bb;
-}
 .new-zanata .dropdown__toggle:hover {
   background-color: rgba(65, 105, 136, 0.03);
 }
@@ -2995,6 +2994,9 @@ Sub-headings can be used when placing a heading under another heading.
   margin: -0.1875em 0;
   padding: 0.375em 0.375em 0.375em 0;
   color: #444c54;
+}
+.new-zanata .dropdown:hover .dropdown__toggle {
+  color: #2479bb;
 }
 .new-zanata .dropdown__toggle__icon {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -3008,17 +3010,17 @@ Sub-headings can be used when placing a heading under another heading.
   padding: 0 0.33333em;
   margin-top: 0.09em;
 }
-.dropdown__toggle.is-active .new-zanata .dropdown__toggle__icon {
+@media (min-width: 42.5em) {
+  .new-zanata .dropdown__toggle__icon {
+    padding: 0 0.16667em;
+  }
+}
+.new-zanata .dropdown__toggle.is-active .dropdown__toggle__icon {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-}
-@media (min-width: 42.5em) {
-  .new-zanata .dropdown__toggle__icon {
-    padding: 0 0.16667em;
-  }
 }
 .new-zanata .dropdown__menu {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -3117,11 +3119,8 @@ Sub-headings can be used when placing a heading under another heading.
 ### Labels
 
 ```
-<span class="label">Label</span>
-```
-
-```
-<span class="label--highlight">Label Highlight</span>
+<p><span class="label">Label</span></p>
+<p><span class="label--highlight">Label Highlight</span></p>
 ```
 
 */
@@ -3142,11 +3141,11 @@ Sub-headings can be used when placing a heading under another heading.
 
 /*
 
-### Labels
+### Badges
 
 */
-.new-zanata .badge, .new-zanata .badge--bl {
-  padding: 0 0.25714em;
+.new-zanata .badge, .new-zanata .badge--highlight, .new-zanata .badge--bl, .new-zanata .badge--br {
+  padding: 0 0.34286em;
   background-color: #d9e1e7;
   font-weight: 400;
   font-size: 0.875em;
@@ -3164,14 +3163,24 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .badge__container {
   position: relative;
 }
+.new-zanata .badge--inline {
+  position: relative;
+  margin-top: 0.21429em;
+}
 .new-zanata .badge--highlight {
   background-color: #4e9fdd;
   color: white;
 }
-.new-zanata .badge--bl {
+.new-zanata .badge--bl, .new-zanata .badge--br {
   position: absolute;
+}
+.new-zanata .badge--bl {
   bottom: 0.34286em;
   left: 0.34286em;
+}
+.new-zanata .badge--br {
+  bottom: 0.34286em;
+  right: 0.34286em;
 }
 
 /*
@@ -3179,18 +3188,40 @@ Sub-headings can be used when placing a heading under another heading.
 ### Buttons
 
 ```
-<a class="button">Button</a>
-
-<a class="button--full">Button</a>
+<p><a class="button">Button</a></p>
+<p><a class="button--full">Button</a></p>
 ```
 
 */
-.new-zanata .button, .new-zanata .button--full {
+.new-zanata input[type="submit"],
+.new-zanata button,
+.new-zanata .button,
+.new-zanata .button--full {
   border: none;
+  padding: 0.375em 0.75em;
+  background-color: #e6e6e6;
+  color: #565d65;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.new-zanata input[type="submit"]:hover,
+.new-zanata button:hover,
+.new-zanata .button:hover,
+.new-zanata .button--full:hover {
+  background-color: #cccccc;
+  color: black;
 }
 .new-zanata .button--full {
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 /*
@@ -3203,7 +3234,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 <header role="banner" class="accent__pop-more--large header">
   <div class="l__wrapper">
-    <h1 class="gamma text--align-center heading--sub"><a href="/"><img src="/assets/img/logo.svg"> Zanata</a></h1>
+    <h1 class="gamma text--align-center heading--sub"><a href="/"><img src="../logo.svg"> Zanata</a></h1>
   </div>
 </header>
 

@@ -94,14 +94,3 @@ Public domain: http://unlicense.org/
 /* ### Kalei theme ### */
 
 @import url("theme.css?v2");
-
-
-
-
-/* ### Examples ### */
-
-@import url("buttons.css");
-@import url("fixie-demo.css");
-/* ### Third Party ### */
-
-@import url("highlight/styles/googlecode.css");
