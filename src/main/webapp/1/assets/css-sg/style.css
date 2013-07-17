@@ -195,202 +195,31 @@ body.new-zanata {
   -webkit-overflow-scroll: touch;
 }
 
-.new-zanata {
-  /*
-  ### Headings
-  
-  #### General headings
-  
-  Used to section content and create hierarchy
-  
-  ```
-  <h1>Heading 1</h1>
-  <h2>Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h4>Heading 4</h4>
-  <h5>Heading 5</h5>
-  <h6>Heading 6</h6>
-  ```
-  ```
-  <div class="alpha">Alpha</div>
-  <div class="beta">Beta</div>
-  <div class="gamma">Gamma</div>
-  <div class="delta">Delta</div>
-  <div class="epsilon">Epsilon</div>
-  <div class="zeta">Zeta</div>
-  ```
-  
-  */
-  /*
-  
-  ### Text
-  
-  #### Standard Paragraph
-  
-  ```
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
-  ```
-  
-  */
-  /*
-  
-  ### Links
-  
-  ```
-  <a href="#">Link</a>
-  <br>
-  <a href="#" class=":hover">Link (Hover)</a>
-  <br>
-  <a href="#" class=":active">Link (Active)</a>
-  <br>
-  <a href="#" class=":focus">Link (Focus)</a>
-  ```
-  
-  */
-  /*
-  
-  ### Lists
-  
-  #### Unordered List
-  
-  ```
-  <ul>
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-  </ul>
-  ```
-  
-  #### Ordered List
-  
-  ```
-  <ol>
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-  </ol>
-  ```
-  
-  */
-  /*
-  
-  #### Definition List
-  
-  ```
-  <dl>
-    <dt>Term</dt>
-    <dd>Definition</dd>
-    <dt>Term</dt>
-    <dd>Definition</dd>
-    <dt>Term</dt>
-    <dd>Definition</dd>
-    <dt>Term</dt>
-    <dd>Definition</dd>
-  </dl>
-  ```
-  
-  */
-  /*
-  
-  ### Tables
-  
-  
-  ```
-  <table>
-    <thead>
-      <tr>
-        <th>Foo</th>
-        <th>Bar</th>
-      </tr>
-        <th>Lorem</th>
-        <th>Ipsum</th>
-        <th>Dolor</th>
-        <th>Sit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td>03.788</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <td>Dolor</td>
-        <td>32.210</td>
-        <td>Lorem</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <td>Dolor</td>
-        <td>47.797</td>
-        <td>Lorem</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <th>Sit</th>
-        <td>Dolor</td>
-        <td>09.640</td>
-        <td>Lorem</td>
-      </tr>
-      <tr>
-        <td>Dolor</td>
-        <td>12.117</td>
-        <td>Lorem</td>
-        <td>Lorem</td>
-      </tr>
-    </tbody>
-  </table>
-  ```
-  
-  */
-  /*
-  
-  ### Forms
-  
-  #### Basic Elements
-  
-  ```
-  <div class="l__wrapper">
-    <form>
-      <label for="basic-input">This is a label.</label>
-      <input type="text" id="basic-input" name="basic-input" placeholder="Standard Input">
-      <fieldset>
-        <legend>Fieldset Name</legend>
-        <input type="text" placeholder="Street">
-        <div class="g--tight">
-          <div class="w--2-4 w--s-2-4 g__item">
-            <input type="text" placeholder="City">
-          </div>
-          <div class="w--1-4 w--s-1-4 g__item">
-            <input type="text" placeholder="State">
-          </div>
-          <div class="w--1-4 w--s-1-4 g__item">
-            <input type="text" placeholder="ZIP">
-          </div>
-        </div>
-      </fieldset>
-      <textarea placeholder="Message"></textarea>
-    </form>
-  </div>
-  ```
-  
-  */
-  /*
-  
-  ### Miscellaneous
-  
-  #### Horizontal Rule
-  
-  ```
-  <hr>
-  ```
-  
-  */
-}
+/*
+### Headings
+
+#### General headings
+
+Used to section content and create hierarchy
+
+```
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+```
+<div class="alpha">Alpha</div>
+<div class="beta">Beta</div>
+<div class="gamma">Gamma</div>
+<div class="delta">Delta</div>
+<div class="epsilon">Epsilon</div>
+<div class="zeta">Zeta</div>
+```
+
+*/
 .new-zanata h1,
 .new-zanata .alpha, .new-zanata h2,
 .new-zanata .beta, .new-zanata h3,
@@ -465,6 +294,19 @@ body.new-zanata {
 .new-zanata h6 {
   margin-top: 0.75em;
 }
+
+/*
+
+### Text
+
+#### Standard Paragraph
+
+```
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+```
+
+*/
 .new-zanata p {
   margin: 0 0 0.75em;
 }
@@ -519,9 +361,26 @@ body.new-zanata {
 .new-zanata sub {
   bottom: -0.25em;
 }
+
+/*
+
+### Links
+
+```
+<a href="#">Link</a>
+<br>
+<a href="#" class=":hover">Link (Hover)</a>
+<br>
+<a href="#" class=":active">Link (Active)</a>
+<br>
+<a href="#" class=":focus">Link (Focus)</a>
+```
+
+*/
 .new-zanata a {
   color: #4e9fdd;
   text-decoration: none;
+  cursor: pointer;
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -548,6 +407,34 @@ a:hover,
 .new-zanata .\3A active {
   color: #444c54;
 }
+
+/*
+
+### Lists
+
+#### Unordered List
+
+```
+<ul>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+#### Ordered List
+
+```
+<ol>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ol>
+```
+
+*/
 .new-zanata ul,
 .new-zanata ol {
   margin: 0.75em 0;
@@ -558,9 +445,83 @@ a:hover,
   font-size: 1em;
   line-height: 1.5em;
 }
+
+/*
+
+#### Definition List
+
+```
+<dl>
+  <dt>Term</dt>
+  <dd>Definition</dd>
+  <dt>Term</dt>
+  <dd>Definition</dd>
+  <dt>Term</dt>
+  <dd>Definition</dd>
+  <dt>Term</dt>
+  <dd>Definition</dd>
+</dl>
+```
+
+*/
 .new-zanata dd {
   margin: 0 0 0 1.5em;
 }
+
+/*
+
+### Tables
+
+
+```
+<table>
+  <thead>
+    <tr>
+      <th>Foo</th>
+      <th>Bar</th>
+    </tr>
+      <th>Lorem</th>
+      <th>Ipsum</th>
+      <th>Dolor</th>
+      <th>Sit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Sit</th>
+      <td>Dolor</td>
+      <td>03.788</td>
+      <td>Lorem</td>
+    </tr>
+    <tr>
+      <td>Dolor</td>
+      <td>32.210</td>
+      <td>Lorem</td>
+      <td>Lorem</td>
+    </tr>
+    <tr>
+      <td>Dolor</td>
+      <td>47.797</td>
+      <td>Lorem</td>
+      <td>Lorem</td>
+    </tr>
+    <tr>
+      <th>Sit</th>
+      <td>Dolor</td>
+      <td>09.640</td>
+      <td>Lorem</td>
+    </tr>
+    <tr>
+      <td>Dolor</td>
+      <td>12.117</td>
+      <td>Lorem</td>
+      <td>Lorem</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
 .new-zanata table {
   position: relative;
   display: block;
@@ -599,6 +560,39 @@ a:hover,
 .new-zanata .numerical {
   text-align: right;
 }
+
+/*
+
+### Forms
+
+#### Basic Elements
+
+```
+<div class="l__wrapper">
+  <form>
+    <label for="basic-input">This is a label.</label>
+    <input type="text" id="basic-input" name="basic-input" placeholder="Standard Input">
+    <fieldset>
+      <legend>Fieldset Name</legend>
+      <input type="text" placeholder="Street">
+      <div class="g--tight">
+        <div class="w--2-4 w--s-2-4 g__item">
+          <input type="text" placeholder="City">
+        </div>
+        <div class="w--1-4 w--s-1-4 g__item">
+          <input type="text" placeholder="State">
+        </div>
+        <div class="w--1-4 w--s-1-4 g__item">
+          <input type="text" placeholder="ZIP">
+        </div>
+      </div>
+    </fieldset>
+    <textarea placeholder="Message"></textarea>
+  </form>
+</div>
+```
+
+*/
 .new-zanata form {
   margin: 0 0 0.75em;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -747,6 +741,7 @@ a:hover,
 .new-zanata select {
   width: 100%;
 }
+
 .new-zanata audio,
 .new-zanata canvas,
 .new-zanata video {
@@ -769,6 +764,18 @@ a:hover,
 .new-zanata figcaption {
   color: gray;
 }
+
+/*
+
+### Miscellaneous
+
+#### Horizontal Rule
+
+```
+<hr>
+```
+
+*/
 .new-zanata hr {
   height: 1.5em;
   width: 100%;
@@ -783,494 +790,23 @@ a:hover,
 
 These are components that can be utilised or are depended on by other components
 */
-.new-zanata {
-  /*
-  
-  ### Layout Helpers
-  
-  #### Clearfix
-  
-  <div class="ph__block l--clearfix">
-    .l--clearfix
-    (use overflow:hidden)
-  </div>
-  
-  <div class="ph__block l--clearfix-overflow">
-    .l--clearfix-overflow
-    (old style)
-  </div>
-  
-  */
-  /*
-  
-  #### Floats
-  
-  ```
-  <div class="ph__block l--float-left">
-    .l--float-left
-  </div>
-  
-  <div class="ph__block l--float-right">
-    .l--float-right
-  </div>
-  ```
-  
-  */
-  /*
-  
-  #### Wrapper
-  
-  $max-site-width is assigned to this
-  
-  */
-  /*
-  
-  #### Spacing
-  
-  These classes use `!important` as you would not be applying these should always "win".
-  Only use them if it does not make sense to add this styling to another element/component.
-  
-  */
-  /*
-  ```
-  <div class="ph__block l--push-top-0">
-    .l--push-top-0
-  </div>
-  
-  <div class="ph__block l--pad-top-0">
-    .l--pad-top-0
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-bottom-0">
-    .l--push-bottom-0
-  </div>
-  
-  <div class="ph__block l--pad-bottom-0">
-    .l--pad-bottom-0
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-left-0">
-    .l--push-left-0
-  </div>
-  
-  <div class="ph__block l--pad-left-0">
-    .l--pad-left-0
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-right-0">
-    .l--push-right-0
-  </div>
-  
-  <div class="ph__block l--pad-right-0">
-    .l--pad-right-0
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-v-0">
-    .l--push-v-0
-  </div>
-  
-  <div class="ph__block l--pad-v-0">
-    .l--pad-v-0
-  </div>
-  
-  <div class="ph__block l--push-h-0">
-    .l--push-h-0
-  </div>
-  
-  <div class="ph__block l--pad-h-0">
-    .l--pad-h-0
-  </div>
-  
-  <div class="ph__block l--push-all-0">
-    .l--push-v-0
-  </div>
-  
-  <div class="ph__block l--pad-all-0">
-    .l--pad-v-0
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-top-half">
-    .l--push-top-half
-  </div>
-  
-  <div class="ph__block l--pad-top-half">
-    .l--pad-top-half
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-bottom-half">
-    .l--push-bottom-half
-  </div>
-  
-  <div class="ph__block l--pad-bottom-half">
-    .l--pad-bottom-half
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-left-half">
-    .l--push-left-half
-  </div>
-  
-  <div class="ph__block l--pad-left-half">
-    .l--pad-left-half
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-right-half">
-    .l--push-right-half
-  </div>
-  
-  <div class="ph__block l--pad-right-half">
-    .l--pad-right-half
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-v-half">
-    .l--push-v-half
-  </div>
-  
-  <div class="ph__block l--pad-v-half">
-    .l--pad-v-half
-  </div>
-  
-  <div class="ph__block l--push-h-half">
-    .l--push-h-half
-  </div>
-  
-  <div class="ph__block l--pad-h-half">
-    .l--pad-h-half
-  </div>
-  
-  <div class="ph__block l--push-all-half">
-    .l--push-v-half
-  </div>
-  
-  <div class="ph__block l--pad-all-half">
-    .l--pad-v-half
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-top-1">
-    .l--push-top-1
-  </div>
-  
-  <div class="ph__block l--pad-top-1">
-    .l--pad-top-1
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-bottom-1">
-    .l--push-bottom-1
-  </div>
-  
-  <div class="ph__block l--pad-bottom-1">
-    .l--pad-bottom-1
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-left-1">
-    .l--push-left-1
-  </div>
-  
-  <div class="ph__block l--pad-left-1">
-    .l--pad-left-1
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-right-1">
-    .l--push-right-1
-  </div>
-  
-  <div class="ph__block l--pad-right-1">
-    .l--pad-right-1
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-v-1">
-    .l--push-v-1
-  </div>
-  
-  <div class="ph__block l--pad-v-1">
-    .l--pad-v-1
-  </div>
-  
-  <div class="ph__block l--push-h-1">
-    .l--push-h-1
-  </div>
-  
-  <div class="ph__block l--pad-h-1">
-    .l--pad-h-1
-  </div>
-  
-  <div class="ph__block l--push-all-1">
-    .l--push-v-1
-  </div>
-  
-  <div class="ph__block l--pad-all-1">
-    .l--pad-v-1
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-top-2">
-    .l--push-top-2
-  </div>
-  
-  <div class="ph__block l--pad-top-2">
-    .l--pad-top-2
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-bottom-2">
-    .l--push-bottom-2
-  </div>
-  
-  <div class="ph__block l--pad-bottom-2">
-    .l--pad-bottom-2
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-left-2">
-    .l--push-left-2
-  </div>
-  
-  <div class="ph__block l--pad-left-2">
-    .l--pad-left-2
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-right-2">
-    .l--push-right-2
-  </div>
-  
-  <div class="ph__block l--pad-right-2">
-    .l--pad-right-2
-  </div>
-  ```
-  */
-  /*
-  ```
-  <div class="ph__block l--push-v-2">
-    .l--push-v-2
-  </div>
-  
-  <div class="ph__block l--pad-v-2">
-    .l--pad-v-2
-  </div>
-  
-  <div class="ph__block l--push-h-2">
-    .l--push-h-2
-  </div>
-  
-  <div class="ph__block l--pad-h-2">
-    .l--pad-h-2
-  </div>
-  
-  <div class="ph__block l--push-all-2">
-    .l--push-v-2
-  </div>
-  
-  <div class="ph__block l--pad-all-2">
-    .l--pad-v-2
-  </div>
-  ```
-  */
-  /*
-  
-  ###  The Grid
-  
-  #### Standard Grid
-  
-  ```
-  <div class="l__wrapper">
-    <div class="g">
-      <div class="w--1 g__item"><div class="ph__block">One Whole</div></div>
-    </div>
-  
-    <div class="g">
-      <div class="w--5-6 g__item">
-        <div class="g">
-          <div class="w--1-2 g__item"><div class="ph__block">One Half of Five Sixths</div></div>
-          <div class="w--1-2 g__item"><div class="ph__block">One Half of Five Sixths</div></div>
-        </div>
-      </div>
-      <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
-    </div>
-  
-    <div class="g">
-      <div class="w--2-3 g__item"><div class="ph__block">Two Thirds</div></div>
-      <div class="w--1-3 g__item"><div class="ph__block">One Third</div></div>
-    </div>
-  
-    <div class="g">
-      <div class="w--3-10 g__item"><div class="ph__block">Three Tenths</div></div>
-      <div class="w--7-10 g__item"><div class="ph__block">Seven Tenths</div></div>
-    </div>
-  </div>
-  ```
-  
-  */
-  /*
-  
-  #### Tight Grid
-  
-  Tight grids have all the properties of regular grids, but with half the spacing.
-  
-  ```
-  <div class="l__wrapper">
-    <div class="g--tight">
-      <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
-      <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
-    </div>
-  </div>
-  ```
-  
-  */
-  /*
-  
-  #### Collapsed Grid
-  
-  Collapsed grids have all the properties of regular grids, minus any spacing.
-  
-  ```
-  <div class="l__wrapper">
-    <div class="g--collapsed">
-      <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
-      <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
-    </div>
-  </div>
-  ```
-  
-  */
-  /*
-  
-  #### Reversed Grid
-  
-  ```
-  <div class="l__wrapper">
-    <div class="g--rev">
-      <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
-      <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
-    </div>
-  </div>
-  ```
-  
-  */
-  /*
-  
-  #### Right Aligned Grid
-  
-  Align the entire grid to the right.
-  
-  ```
-  <div class="l__wrapper">
-    <div class="g--right">
-      <div class="w--3-6 g__item"><div class="ph__block">Three Sixths</div></div>
-      <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
-    </div>
-  </div>
-  ```
-  */
-  /*
-  
-  #### Center Aligned Grid
-  
-  Centered grids align grid items centrally without needing to use push or pull classes.
-  
-  ```
-  <div class="l__wrapper">
-    <div class="g--centered">
-      <div class="w--3-6 g__item"><div class="ph__block">Three Sixths</div></div>
-      <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
-    </div>
-  </div>
-  ```
-  */
-  /*
-  
-  ### Text Modifiers
-  
-  #### Text Transforms
-  
-  ```
-  <p class="txt--lowercase">Lowercase</p>
-  <p class="txt--uppercase">Uppercase</p>
-  <p class="txt--capitalize">capitalize</p>
-  ```
-  
-  #### Text Alignment
-  
-  ```
-  <p class="txt--align-left">Align Left</p>
-  <p class="txt--align-right">Align Right</p>
-  <p class="txt--align-center">Align Center</p>
-  ```
-  
-  */
-  /*
-  
-  #### Text Invert
-  
-  
-  
-  */
-  /*
-  
-  #### Text Hero
-  */
-  /*
-  
-  #### Text Meta
-  */
-  /*
-  
-  #### Text Important
-  */
-  /*
-  
-  #### Text Status
-  */
-}
+/*
+
+### Layout Helpers
+
+#### Clearfix
+
+<div class="ph__block l--clearfix">
+  .l--clearfix
+  (use overflow:hidden)
+</div>
+
+<div class="ph__block l--clearfix-overflow">
+  .l--clearfix-overflow
+  (old style)
+</div>
+
+*/
 .new-zanata .l--clearfix {
   overflow: hidden;
   *zoom: 1;
@@ -1283,12 +819,36 @@ These are components that can be utilised or are depended on by other components
   display: table;
   clear: both;
 }
+
+/*
+
+#### Floats
+
+```
+<div class="ph__block l--float-left">
+  .l--float-left
+</div>
+
+<div class="ph__block l--float-right">
+  .l--float-right
+</div>
+```
+
+*/
 .new-zanata .l--float-left {
   float: left !important;
 }
 .new-zanata .l--float-right {
   float: right !important;
 }
+
+/*
+
+#### Wrapper
+
+$max-site-width is assigned to this
+
+*/
 .new-zanata .l__wrapper {
   max-width: 120em;
   margin-left: auto;
@@ -1305,6 +865,299 @@ These are components that can be utilised or are depended on by other components
     padding: 0 3em;
   }
 }
+
+/*
+
+#### Spacing
+
+These classes use `!important` as you would not be applying these should always "win".
+Only use them if it does not make sense to add this styling to another element/component.
+
+*/
+/*
+```
+<div class="ph__block l--push-top-0">
+  .l--push-top-0
+</div>
+
+<div class="ph__block l--pad-top-0">
+  .l--pad-top-0
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-bottom-0">
+  .l--push-bottom-0
+</div>
+
+<div class="ph__block l--pad-bottom-0">
+  .l--pad-bottom-0
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-left-0">
+  .l--push-left-0
+</div>
+
+<div class="ph__block l--pad-left-0">
+  .l--pad-left-0
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-right-0">
+  .l--push-right-0
+</div>
+
+<div class="ph__block l--pad-right-0">
+  .l--pad-right-0
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-v-0">
+  .l--push-v-0
+</div>
+
+<div class="ph__block l--pad-v-0">
+  .l--pad-v-0
+</div>
+
+<div class="ph__block l--push-h-0">
+  .l--push-h-0
+</div>
+
+<div class="ph__block l--pad-h-0">
+  .l--pad-h-0
+</div>
+
+<div class="ph__block l--push-all-0">
+  .l--push-v-0
+</div>
+
+<div class="ph__block l--pad-all-0">
+  .l--pad-v-0
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-top-half">
+  .l--push-top-half
+</div>
+
+<div class="ph__block l--pad-top-half">
+  .l--pad-top-half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-bottom-half">
+  .l--push-bottom-half
+</div>
+
+<div class="ph__block l--pad-bottom-half">
+  .l--pad-bottom-half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-left-half">
+  .l--push-left-half
+</div>
+
+<div class="ph__block l--pad-left-half">
+  .l--pad-left-half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-right-half">
+  .l--push-right-half
+</div>
+
+<div class="ph__block l--pad-right-half">
+  .l--pad-right-half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-v-half">
+  .l--push-v-half
+</div>
+
+<div class="ph__block l--pad-v-half">
+  .l--pad-v-half
+</div>
+
+<div class="ph__block l--push-h-half">
+  .l--push-h-half
+</div>
+
+<div class="ph__block l--pad-h-half">
+  .l--pad-h-half
+</div>
+
+<div class="ph__block l--push-all-half">
+  .l--push-v-half
+</div>
+
+<div class="ph__block l--pad-all-half">
+  .l--pad-v-half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-top-1">
+  .l--push-top-1
+</div>
+
+<div class="ph__block l--pad-top-1">
+  .l--pad-top-1
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-bottom-1">
+  .l--push-bottom-1
+</div>
+
+<div class="ph__block l--pad-bottom-1">
+  .l--pad-bottom-1
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-left-1">
+  .l--push-left-1
+</div>
+
+<div class="ph__block l--pad-left-1">
+  .l--pad-left-1
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-right-1">
+  .l--push-right-1
+</div>
+
+<div class="ph__block l--pad-right-1">
+  .l--pad-right-1
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-v-1">
+  .l--push-v-1
+</div>
+
+<div class="ph__block l--pad-v-1">
+  .l--pad-v-1
+</div>
+
+<div class="ph__block l--push-h-1">
+  .l--push-h-1
+</div>
+
+<div class="ph__block l--pad-h-1">
+  .l--pad-h-1
+</div>
+
+<div class="ph__block l--push-all-1">
+  .l--push-v-1
+</div>
+
+<div class="ph__block l--pad-all-1">
+  .l--pad-v-1
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-top-2">
+  .l--push-top-2
+</div>
+
+<div class="ph__block l--pad-top-2">
+  .l--pad-top-2
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-bottom-2">
+  .l--push-bottom-2
+</div>
+
+<div class="ph__block l--pad-bottom-2">
+  .l--pad-bottom-2
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-left-2">
+  .l--push-left-2
+</div>
+
+<div class="ph__block l--pad-left-2">
+  .l--pad-left-2
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-right-2">
+  .l--push-right-2
+</div>
+
+<div class="ph__block l--pad-right-2">
+  .l--pad-right-2
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-v-2">
+  .l--push-v-2
+</div>
+
+<div class="ph__block l--pad-v-2">
+  .l--pad-v-2
+</div>
+
+<div class="ph__block l--push-h-2">
+  .l--push-h-2
+</div>
+
+<div class="ph__block l--pad-h-2">
+  .l--pad-h-2
+</div>
+
+<div class="ph__block l--push-all-2">
+  .l--push-v-2
+</div>
+
+<div class="ph__block l--pad-all-2">
+  .l--pad-v-2
+</div>
+```
+*/
 .new-zanata .l--push-top-0 {
   margin-top: 0em !important;
 }
@@ -1489,6 +1342,42 @@ These are components that can be utilised or are depended on by other components
 .new-zanata .l--pad-all-2 {
   padding: 3em !important;
 }
+
+/*
+
+###  The Grid
+
+#### Standard Grid
+
+```
+<div class="l__wrapper">
+  <div class="g">
+    <div class="w--1 g__item"><div class="ph__block">One Whole</div></div>
+  </div>
+
+  <div class="g">
+    <div class="w--5-6 g__item">
+      <div class="g">
+        <div class="w--1-2 g__item"><div class="ph__block">One Half of Five Sixths</div></div>
+        <div class="w--1-2 g__item"><div class="ph__block">One Half of Five Sixths</div></div>
+      </div>
+    </div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+
+  <div class="g">
+    <div class="w--2-3 g__item"><div class="ph__block">Two Thirds</div></div>
+    <div class="w--1-3 g__item"><div class="ph__block">One Third</div></div>
+  </div>
+
+  <div class="g">
+    <div class="w--3-10 g__item"><div class="ph__block">Three Tenths</div></div>
+    <div class="w--7-10 g__item"><div class="ph__block">Seven Tenths</div></div>
+  </div>
+</div>
+```
+
+*/
 .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
   *zoom: 1;
   margin: 0;
@@ -1540,6 +1429,23 @@ These are components that can be utilised or are depended on by other components
     padding-left: 3em;
   }
 }
+
+/*
+
+#### Tight Grid
+
+Tight grids have all the properties of regular grids, but with half the spacing.
+
+```
+<div class="l__wrapper">
+  <div class="g--tight">
+    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+
+*/
 .new-zanata .g--tight {
   margin-left: -0.375em;
 }
@@ -1566,12 +1472,44 @@ These are components that can be utilised or are depended on by other components
     padding-left: 1.5em;
   }
 }
+
+/*
+
+#### Collapsed Grid
+
+Collapsed grids have all the properties of regular grids, minus any spacing.
+
+```
+<div class="l__wrapper">
+  <div class="g--collapsed">
+    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+
+*/
 .new-zanata .g--collapsed {
   margin-left: 0;
 }
 .new-zanata .g--collapsed > .g__item {
   padding-left: 0;
 }
+
+/*
+
+#### Reversed Grid
+
+```
+<div class="l__wrapper">
+  <div class="g--rev">
+    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+
+*/
 .new-zanata .g--rev {
   direction: rtl;
   text-align: left;
@@ -1580,18 +1518,51 @@ These are components that can be utilised or are depended on by other components
   direction: ltr;
   text-align: left;
 }
+
+/*
+
+#### Right Aligned Grid
+
+Align the entire grid to the right.
+
+```
+<div class="l__wrapper">
+  <div class="g--right">
+    <div class="w--3-6 g__item"><div class="ph__block">Three Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+*/
 .new-zanata .g--right {
   text-align: right;
 }
 .new-zanata .g--right > .g__item {
   text-align: left;
 }
+
+/*
+
+#### Center Aligned Grid
+
+Centered grids align grid items centrally without needing to use push or pull classes.
+
+```
+<div class="l__wrapper">
+  <div class="g--centered">
+    <div class="w--3-6 g__item"><div class="ph__block">Three Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+*/
 .new-zanata .g--centered {
   text-align: center;
 }
 .new-zanata .g--centered > .g__item {
   text-align: left;
 }
+
 @media (min-width: 42.5em) {
   .new-zanata .w--1 {
     width: 100%;
@@ -1962,6 +1933,7 @@ These are components that can be utilised or are depended on by other components
     width: 91.666%;
   }
 }
+
 .new-zanata .is-hidden {
   display: none;
 }
@@ -1985,6 +1957,28 @@ These are components that can be utilised or are depended on by other components
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
+
+/*
+
+### Text Modifiers
+
+#### Text Transforms
+
+```
+<p class="txt--lowercase">Lowercase</p>
+<p class="txt--uppercase">Uppercase</p>
+<p class="txt--capitalize">capitalize</p>
+```
+
+#### Text Alignment
+
+```
+<p class="txt--align-left">Align Left</p>
+<p class="txt--align-right">Align Right</p>
+<p class="txt--align-center">Align Center</p>
+```
+
+*/
 .new-zanata .txt--lowercase {
   text-transform: lowercase;
 }
@@ -2016,6 +2010,16 @@ These are components that can be utilised or are depended on by other components
     text-align: center;
   }
 }
+
+/*
+
+#### Text Invert
+
+```
+<p class="txt--invert">Invert text with <a href="#">a link</a></p>
+```
+
+*/
 .new-zanata .txt--invert {
   color: #f0f2f4;
 }
@@ -2030,6 +2034,16 @@ These are components that can be utilised or are depended on by other components
   color: white;
   background-color: #2d3338;
 }
+
+/*
+
+#### Text Hero
+
+```
+<p class="txt--hero">Hero text</p>
+```
+
+*/
 .new-zanata .txt--hero {
   font-size: 1.75em;
   line-height: 1.28571em;
@@ -2038,23 +2052,55 @@ These are components that can be utilised or are depended on by other components
 .new-zanata .txt--hero strong {
   font-weight: 600;
 }
+
+/*
+
+#### Text Meta
+
+```
+<p class="txt--meta">Meta text</p>
+```
+
+*/
 .new-zanata .txt--meta {
   font-size: 0.875em;
   line-height: 1.71429em;
   color: #7c96ac;
 }
-.new-zanata .txt--important {
-  font-weight: 700;
+
+/*
+
+#### Text State
+
+```
+<p class="txt--state--highlight">State Highlight</p>
+<p class="txt--state--success">State Success</p>
+<p class="txt--state--unsure">State Unsure</p>
+<p class="txt--state--warning">State Warning</p>
+<p class="txt--state--danger">State Danger</p>
+<p class="txt--state--neutral">State Neutral</p>
+```
+
+*/
+.new-zanata .txt--state--highlight {
+  color: #4e9fdd;
 }
-.new-zanata .txt--status--success {
+.new-zanata .txt--state--success {
   color: #70a98b;
 }
-.new-zanata .txt--status--unsure {
+.new-zanata .txt--state--unsure {
   color: #e0c350;
 }
-.new-zanata .txt--status--danger {
+.new-zanata .txt--state--warning {
+  color: #e3824e;
+}
+.new-zanata .txt--state--danger {
   color: #e0575b;
 }
+.new-zanata .txt--state--neutral {
+  color: #c6d2db;
+}
+
 .new-zanata .divide, .new-zanata .d--left, .new-zanata .d--bottom, .new-zanata .d--top {
   border-width: 0;
   border-color: #d9e1e7;
@@ -2072,6 +2118,7 @@ These are components that can be utilised or are depended on by other components
 .new-zanata .d--top {
   border-top-width: 1px;
 }
+
 .new-zanata .bg--faint {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
@@ -2238,7 +2285,7 @@ These are components that can be utilised or are depended on by other components
   font-style: normal;
   font-variant: normal;
   font-family: 'Zanata';
-  line-height: 1.5em;
+  line-height: 1em;
   speak: none;
   -webkit-font-smoothing: antialiased;
 }
@@ -2338,186 +2385,23 @@ These are components that can be utilised or are depended on by other components
 
 ## Componenents
 */
-.new-zanata {
-  /*
-  
-  ### Headings
-  
-  #### Sub Heading
-  
-  Sub-headings can be used when placing a heading under another heading.
-  
-  ```
-  <h2>Heading 1</h2>
-  <h2 class="heading--sub">Heading Sub 2</h2>
-  <br>
-  <h3>Heading 3</h3>
-  <h4 class="heading--sub">Heading Sub 4</h4>
-  ```
-  
-  */
-  /*
-  #### Heading secondary
-  
-  ```
-  <h2 class="heading--secondary">Heading Secondary 2</h2>
-  
-  <h3 class="heading--secondary">Heading Secondary 3</h3>
-  
-  <h4 class="heading--secondary">Heading Secondary 4</h4>
-  
-  <h5 class="heading--secondary">Heading Secondary 5</h5>
-  
-  <h6 class="heading--secondary">Heading Secondary 6</h6>
-  ```
-  
-  */
-  /*
-  ### Lists
-  
-  #### No Bullet List
-  
-  ```
-  <ul class="list--no-bullets">
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-  </ul>
-  ```
-  
-  */
-  /*
-  
-  #### Navigation list
-  
-  ```
-  <nav>
-    <ul>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-    </ul>
-  </nav>
-  ```
-  
-  */
-  /*
-  
-  #### Horizontal List
-  
-  ```
-  <ul class="list--horizontal">
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-    <li>List item</li>
-  </ul>
-  ```
-  
-  */
-  /*
-  
-  #### List Slat
-  
-  ```
-  <ul class="list--slat">
-    <li>Standard</li>
-    <li><a href="#">Link</a></li>
-    <li><span class="list__title">Title</span></li>
-    <li><span class="list__title"><a href="#">Title Link</a></span></li>
-  </ul>
-  ```
-  
-  */
-  /*
-  
-  #### List Block Links
-  
-  ```
-  <ul class="list--block-links">
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-    <li><a href="#">Link</a></li>
-  </ul>
-  ```
-  
-  */
-  /*
-  
-  ### Media
-  
-  #### Media Circle
-  
-  ```
-  <div class="media--circle">
-    <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
-  </div>
-  ```
-  */
-  /*
-  
-  ### Dropdown
-  
-  ```
-  <div class="dropdown" ng-class="{is-active: is-active}">
-    <a class="dropdown__toggle" href="#" ng-click="is-active=!is-active"><i class="icon--arrow-down dropdown__toggle__icon"></i> Action</a>
-    <ul class="dropdown__menu" role="menu" aria-labelledby="dropdownMenu">
-      <li><a tabindex="-1" href="#">Action </a></li>
-      <li><a tabindex="-1" href="#">Another action</a></li>
-      <li><a tabindex="-1" href="#">Something else here</a></li>
-      <li class="dropdown__divider"></li>
-      <li><a tabindex="-1" href="#">Separated link</a></li>
-    </ul>
-  </div>
-  ```
-  
-  */
-  /*
-  
-  ### Labels
-  
-  <span class="label"></span>
-  
-  <span class="label--message"></span>
-  
-  */
-  /*
-  
-  ### Labels
-  
-  */
-  /*
-  
-  ### Buttons
-  
-  ```
-  <a class=".button">Button</a>
-  
-  <a class="button--full">Button</a>
-  ```
-  
-  */
-  /*
-  
-  ### Header
-  
-  #### Site Logo
-  
-  ```
-  
-  <header role="banner" class="accent__pop-more--large header">
-    <div class="l__wrapper">
-      <h1 class="gamma text--align-center heading--sub"><a href="/"><img src="/assets/img/logo.svg"> Zanata</a></h1>
-    </div>
-  </header>
-  
-  ```
-  
-  */
-}
+/*
+
+### Headings
+
+#### Sub Heading
+
+Sub-headings can be used when placing a heading under another heading.
+
+```
+<h2>Heading 1</h2>
+<h2 class="heading--sub">Heading Sub 2</h2>
+<br>
+<h3>Heading 3</h3>
+<h4 class="heading--sub">Heading Sub 4</h4>
+```
+
+*/
 .new-zanata .heading--sub {
   margin-top: 0;
   font-weight: 400;
@@ -2529,10 +2413,43 @@ These are components that can be utilised or are depended on by other components
   zoom: 1;
   *display: inline;
 }
+
+/*
+#### Heading secondary
+
+```
+<h2 class="heading--secondary">Heading Secondary 2</h2>
+
+<h3 class="heading--secondary">Heading Secondary 3</h3>
+
+<h4 class="heading--secondary">Heading Secondary 4</h4>
+
+<h5 class="heading--secondary">Heading Secondary 5</h5>
+
+<h6 class="heading--secondary">Heading Secondary 6</h6>
+```
+
+*/
 .new-zanata .heading--secondary {
   margin-top: 0;
   font-weight: 400;
 }
+
+/*
+### Lists
+
+#### No Bullet List
+
+```
+<ul class="list--no-bullets">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+*/
 .new-zanata .list--no-bullets, .new-zanata nav ul,
 .new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .list--slat {
   list-style: none;
@@ -2545,6 +2462,37 @@ These are components that can be utilised or are depended on by other components
   list-style-type: none;
   margin-left: 0;
 }
+
+/*
+
+#### Navigation list
+
+```
+<nav>
+  <ul>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+  </ul>
+</nav>
+```
+
+*/
+/*
+
+#### Horizontal List
+
+```
+<ul class="list--horizontal">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+*/
 .new-zanata .list--horizontal li {
   display: inline-block;
   margin-left: 0.375em;
@@ -2552,6 +2500,21 @@ These are components that can be utilised or are depended on by other components
 .new-zanata .list--horizontal li:first-child {
   margin-left: 0;
 }
+
+/*
+
+#### List Slat
+
+```
+<ul class="list--slat">
+  <li>Standard</li>
+  <li><a href="#">Link</a></li>
+  <li><span class="list__title">Title</span></li>
+  <li><span class="list__title"><a href="#">Title Link</a></span></li>
+</ul>
+```
+
+*/
 .new-zanata .list--slat > li {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.375em 0;
@@ -2568,360 +2531,27 @@ These are components that can be utilised or are depended on by other components
   font-size: 1em;
   line-height: 1.5em;
 }
+
+/*
+
+#### List Block Links
+
+```
+<ul class="list--block-links">
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+</ul>
+```
+
+*/
 .new-zanata .list--block-links li {
   padding: 0;
 }
 .new-zanata .list--block-links li > a {
   display: block;
   padding: 0.75em;
-}
-.new-zanata .tabs__nav {
-  letter-spacing: -0.31em;
-}
-.new-zanata .tabs__nav li {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  letter-spacing: normal;
-}
-.new-zanata .tabs__nav a {
-  padding: 0.75em 0.75em;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  min-width: 3em;
-  text-align: center;
-  font-weight: 600;
-}
-.new-zanata .tabs__nav .tab__end {
-  float: right;
-}
-.new-zanata .tabs--lined .tabs__nav {
-  border-bottom: 2px solid #d9e1e7;
-}
-.new-zanata .tabs--lined .tabs__nav a {
-  margin-bottom: -2px;
-  border-bottom: 2px solid transparent;
-}
-.new-zanata .tabs--lined .tabs__nav a:hover {
-  border-bottom-color: #c6d2db;
-}
-.new-zanata .tabs--lined .tabs__nav a.is-active {
-  border-bottom-color: #4e9fdd;
-}
-.new-zanata .tabs--accent .tabs__nav {
-  z-index: 1;
-  position: relative;
-}
-.new-zanata .tabs--accent .tabs__nav a {
-  font-size: 1em;
-  line-height: 1.5em;
-}
-.new-zanata .tabs--accent .tabs__nav a.is-active {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  position: relative;
-  padding-bottom: 0.9em;
-  margin-bottom: -0.15em;
-}
-.new-zanata .tabs--accent .tabs__nav a.is-active:after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-}
-.new-zanata .tabs--accent .tabs__nav li:first-child a.is-active {
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-}
-.new-zanata .tabs--accent .tabs__nav .tab__end a.is-active {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-}
-.new-zanata .tabs--accent .tabs__content {
-  z-index: 0;
-}
-.new-zanata .media--circle {
-  border-radius: 50%;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  overflow: hidden;
-}
-.new-zanata .media--circle img {
-  display: block;
-}
-.new-zanata .progress-bar {
-  background-color: #c6d2db;
-  height: 0.375em;
-  margin-bottom: 0.375em;
-  width: 100%;
-  position: relative;
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-}
-.no-touch .new-zanata .progress-bar__expander:hover .progress-bar {
-  height: 0.75em;
-  margin-bottom: 0;
-}
-.new-zanata .progress-bar__item, .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
-  position: absolute;
-  height: 100%;
-  left: 0;
-}
-.new-zanata .progress-bar__translated {
-  background-color: #70a98b;
-  z-index: 1;
-}
-.new-zanata .progress-bar__fuzzy {
-  background-color: #e0c350;
-  z-index: 2;
-}
-.new-zanata .progress-bar__rejected {
-  background-color: #e3824e;
-  z-index: 3;
-}
-.new-zanata .progress-bar__approved {
-  background-color: #4e9fdd;
-  z-index: 4;
-}
-.new-zanata .dropdown__container {
-  z-index: 2;
-  position: relative;
-}
-.new-zanata .dropdown__container.is-active {
-  z-index: 3;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-.new-zanata .dropdown__container.is-active + .dropdown__container {
-  z-index: 2;
-}
-.new-zanata .dropdown {
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  position: relative;
-  z-index: 11;
-  margin: 0 -0.375em;
-}
-.new-zanata .dropdown__toggle {
-  position: relative;
-  z-index: 13;
-  display: block;
-  padding: 0.1875em 0.375em 0.1875em 0;
-  cursor: pointer;
-  color: #4e9fdd;
-  border: 1px solid transparent;
-}
-.dropdown:hover .new-zanata .dropdown__toggle {
-  color: #2479bb;
-}
-.new-zanata .dropdown__toggle:hover {
-  background-color: rgba(65, 105, 136, 0.03);
-}
-.new-zanata .dropdown__toggle:active {
-  background-color: white;
-  border: 1px solid rgba(65, 105, 136, 0.15);
-}
-.new-zanata .dropdown__toggle.is-active {
-  margin: -0.1875em 0;
-  padding: 0.375em 0.375em 0.375em 0;
-  color: #444c54;
-}
-.new-zanata .dropdown__toggle__icon {
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  font-size: 1.125em;
-  line-height: 1.33333em;
-  position: relative;
-  float: left;
-  padding: 0 0.33333em;
-  margin-top: 0.09em;
-}
-.dropdown__toggle.is-active .new-zanata .dropdown__toggle__icon {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-@media (min-width: 42.5em) {
-  .new-zanata .dropdown__toggle__icon {
-    padding: 0 0.16667em;
-  }
-}
-.new-zanata .dropdown__menu {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 12;
-  visibility: hidden;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  max-height: 0;
-  width: 100%;
-  float: left;
-  min-width: 6em;
-  -webkit-transform: translate3d(0, -1.5em, 0);
-  -moz-transform: translate3d(0, -1.5em, 0);
-  -ms-transform: translate3d(0, -1.5em, 0);
-  -o-transform: translate3d(0, -1.5em, 0);
-  transform: translate3d(0, -1.5em, 0);
-}
-.new-zanata .dropdown__menu > li {
-  list-style: none;
-  margin: 0;
-  padding: 0.375em 0.375em 0.375em 1.95em;
-}
-.new-zanata .dropdown__menu > li > a {
-  display: block;
-  margin: 0;
-}
-@media (min-width: 42.5em) {
-  .new-zanata .dropdown__menu > li {
-    padding-left: 1.5em;
-  }
-}
-.new-zanata .dropdown__menu .dropdown__header {
-  border-bottom: 1px solid #f0f2f4;
-}
-.no-touch .new-zanata .dropdown__menu .dropdown__header:hover {
-  background-color: transparent;
-}
-.new-zanata .dropdown__divider {
-  display: block;
-  overflow: hidden;
-  padding: 0 !important;
-  width: 100%;
-  height: 1px;
-  border-bottom: 1px solid transparent;
-  background-color: #f0f2f4;
-}
-.new-zanata .dropdown.is-active .dropdown__menu {
-  visibility: visible;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  max-height: 15em;
-}
-.new-zanata .dropdown--right .dropdown__toggle__icon {
-  float: right;
-}
-.new-zanata .dropdown--right .dropdown__menu {
-  left: auto;
-  right: 0;
-  float: right;
-}
-.new-zanata .dropdown--inline {
-  display: inline-block;
-  margin-left: 0.1875em;
-}
-.new-zanata .dropdown--inline .dropdown__toggle {
-  margin: -0.375em 0;
-  padding: 0.1875em 0 0.1875em 0.375em;
-}
-.new-zanata .dropdown--inline .dropdown__toggle__icon {
-  float: none;
-  padding: 0;
-  margin-left: -0.16667em;
-  margin-top: 0;
-}
-.new-zanata .dropdown--inline .dropdown__menu {
-  width: auto;
-  margin-top: 0.375em;
-}
-.new-zanata .dropdown--inline .dropdown__menu > li {
-  white-space: nowrap;
-  padding: 0.375em 1.125em;
-}
-.new-zanata .label, .new-zanata .label--message {
-  background-color: #d9e1e7;
-  padding: 0 0.375em;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-.new-zanata .label--message {
-  background-color: #4e9fdd;
-  color: white;
-}
-.new-zanata .badge, .new-zanata .badge--bl {
-  padding: 0 0.25714em;
-  background-color: #d9e1e7;
-  font-weight: 400;
-  font-size: 0.875em;
-  line-height: 1.28571em;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-.new-zanata .badge__container {
-  position: relative;
-}
-.new-zanata .badge--message {
-  background-color: #4e9fdd;
-  color: white;
-}
-.new-zanata .badge--bl {
-  position: absolute;
-  bottom: 0.34286em;
-  left: 0.34286em;
-}
-.new-zanata .button, .new-zanata .button--full {
-  border: none;
-}
-.new-zanata .button--full {
-  display: block;
-  width: 100%;
-}
-.new-zanata .header__title {
-  font-size: 1.75em;
-  line-height: 1.71429em;
-  padding: 0;
-  margin: 0;
-}
-.new-zanata .header__site-logo {
-  height: 1.07143em;
-  margin-bottom: -0.21429em;
 }
 
 .off-canvas__outer {
@@ -3150,4 +2780,443 @@ These are components that can be utilised or are depended on by other components
 [data-off-canvas=over] .off-canvas__close:hover {
   background-color: #c4ccd4;
   color: white;
+}
+
+.new-zanata .tabs__nav {
+  letter-spacing: -0.31em;
+}
+.new-zanata .tabs__nav li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  letter-spacing: normal;
+}
+.new-zanata .tabs__nav a {
+  padding: 0.75em;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  min-width: 3em;
+  text-align: center;
+  font-weight: 600;
+}
+.new-zanata .tabs__nav .tab__end {
+  float: right;
+}
+.new-zanata .tabs--lined .tabs__nav {
+  border-bottom: 2px solid #d9e1e7;
+}
+.new-zanata .tabs--lined .tabs__nav a {
+  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
+}
+.new-zanata .tabs--lined .tabs__nav a:hover {
+  border-bottom-color: #c6d2db;
+}
+.new-zanata .tabs--lined .tabs__nav a.is-active {
+  border-bottom-color: #4e9fdd;
+}
+.new-zanata .tabs--accent .tabs__nav {
+  z-index: 1;
+  position: relative;
+}
+.new-zanata .tabs--accent .tabs__nav a {
+  line-height: 1.5em;
+}
+.new-zanata .tabs--accent .tabs__nav a .i {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.new-zanata .tabs--accent .tabs__nav a .i--large {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+.new-zanata .tabs--accent .tabs__nav a.is-active {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  position: relative;
+  padding-bottom: 0.9em;
+  margin-bottom: -0.15em;
+}
+.new-zanata .tabs--accent .tabs__nav a.is-active:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+.new-zanata .tabs--accent .tabs__nav li:first-child a.is-active {
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+}
+.new-zanata .tabs--accent .tabs__nav .tab__end a.is-active {
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
+}
+.new-zanata .tabs--accent .tabs__content {
+  z-index: 0;
+}
+
+/*
+
+### Media
+
+#### Media Circle
+
+```
+<div class="media--circle">
+  <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
+</div>
+```
+*/
+.new-zanata .media--circle {
+  border-radius: 50%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  overflow: hidden;
+}
+.new-zanata .media--circle img {
+  display: block;
+}
+
+.new-zanata .progress-bar {
+  background-color: #c6d2db;
+  height: 0.375em;
+  margin-bottom: 0.375em;
+  width: 100%;
+  position: relative;
+  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+}
+.no-touch .new-zanata .progress-bar__expander:hover .progress-bar {
+  height: 0.75em;
+  margin-bottom: 0;
+}
+.new-zanata .progress-bar__item, .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+.new-zanata .progress-bar__translated {
+  background-color: #70a98b;
+  z-index: 1;
+}
+.new-zanata .progress-bar__fuzzy {
+  background-color: #e0c350;
+  z-index: 2;
+}
+.new-zanata .progress-bar__rejected {
+  background-color: #e3824e;
+  z-index: 3;
+}
+.new-zanata .progress-bar__approved {
+  background-color: #4e9fdd;
+  z-index: 4;
+}
+
+/*
+
+### Dropdown
+
+```
+<div class="dropdown" ng-class="{is-active: is-active}">
+  <a class="dropdown__toggle" href="#" ng-click="is-active=!is-active"><i class="icon--arrow-down dropdown__toggle__icon"></i> Action</a>
+  <ul class="dropdown__menu" role="menu" aria-labelledby="dropdownMenu">
+    <li><a tabindex="-1" href="#">Action </a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+    <li><a tabindex="-1" href="#">Something else here</a></li>
+    <li class="dropdown__divider"></li>
+    <li><a tabindex="-1" href="#">Separated link</a></li>
+  </ul>
+</div>
+```
+
+*/
+.new-zanata .dropdown__container {
+  z-index: 2;
+  position: relative;
+}
+.new-zanata .dropdown__container.is-active {
+  z-index: 3;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.new-zanata .dropdown__container.is-active + .dropdown__container {
+  z-index: 2;
+}
+.new-zanata .dropdown {
+  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  position: relative;
+  z-index: 11;
+  margin: 0 -0.375em;
+}
+.new-zanata .dropdown__toggle {
+  position: relative;
+  z-index: 13;
+  display: block;
+  padding: 0.1875em 0.375em 0.1875em 0;
+  cursor: pointer;
+  color: #4e9fdd;
+  border: 1px solid transparent;
+}
+.dropdown:hover .new-zanata .dropdown__toggle {
+  color: #2479bb;
+}
+.new-zanata .dropdown__toggle:hover {
+  background-color: rgba(65, 105, 136, 0.03);
+}
+.new-zanata .dropdown__toggle:active {
+  background-color: white;
+  border: 1px solid rgba(65, 105, 136, 0.15);
+}
+.new-zanata .dropdown__toggle.is-active {
+  margin: -0.1875em 0;
+  padding: 0.375em 0.375em 0.375em 0;
+  color: #444c54;
+}
+.new-zanata .dropdown__toggle__icon {
+  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  position: relative;
+  float: left;
+  padding: 0 0.33333em;
+  margin-top: 0.09em;
+}
+.dropdown__toggle.is-active .new-zanata .dropdown__toggle__icon {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media (min-width: 42.5em) {
+  .new-zanata .dropdown__toggle__icon {
+    padding: 0 0.16667em;
+  }
+}
+.new-zanata .dropdown__menu {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 12;
+  visibility: hidden;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  width: 100%;
+  float: left;
+  min-width: 6em;
+  -webkit-transform: translate3d(0, -1.5em, 0);
+  -moz-transform: translate3d(0, -1.5em, 0);
+  -ms-transform: translate3d(0, -1.5em, 0);
+  -o-transform: translate3d(0, -1.5em, 0);
+  transform: translate3d(0, -1.5em, 0);
+}
+.new-zanata .dropdown__menu > li {
+  list-style: none;
+  margin: 0;
+  padding: 0.375em 0.375em 0.375em 1.95em;
+}
+.new-zanata .dropdown__menu > li > a {
+  display: block;
+  margin: 0;
+}
+@media (min-width: 42.5em) {
+  .new-zanata .dropdown__menu > li {
+    padding-left: 1.5em;
+  }
+}
+.new-zanata .dropdown__menu .dropdown__header {
+  border-bottom: 1px solid #f0f2f4;
+}
+.no-touch .new-zanata .dropdown__menu .dropdown__header:hover {
+  background-color: transparent;
+}
+.new-zanata .dropdown__divider {
+  display: block;
+  overflow: hidden;
+  padding: 0 !important;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid transparent;
+  background-color: #f0f2f4;
+}
+.new-zanata .dropdown.is-active .dropdown__menu {
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  max-height: 15em;
+}
+.new-zanata .dropdown--right .dropdown__toggle__icon {
+  float: right;
+}
+.new-zanata .dropdown--right .dropdown__menu {
+  left: auto;
+  right: 0;
+  float: right;
+}
+.new-zanata .dropdown--inline {
+  display: inline-block;
+  margin-left: 0.1875em;
+}
+.new-zanata .dropdown--inline .dropdown__toggle {
+  margin: -0.375em 0;
+  padding: 0.1875em 0 0.1875em 0.375em;
+}
+.new-zanata .dropdown--inline .dropdown__toggle__icon {
+  float: none;
+  padding: 0;
+  margin-left: -0.16667em;
+  margin-top: 0;
+}
+.new-zanata .dropdown--inline .dropdown__menu {
+  width: auto;
+  margin-top: 0.375em;
+}
+.new-zanata .dropdown--inline .dropdown__menu > li {
+  white-space: nowrap;
+  padding: 0.375em 1.125em;
+}
+
+/*
+
+### Labels
+
+```
+<span class="label">Label</span>
+```
+
+```
+<span class="label--highlight">Label Highlight</span>
+```
+
+*/
+.new-zanata .label, .new-zanata .label--highlight {
+  background-color: #d9e1e7;
+  padding: 0 0.375em;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+.new-zanata .label--highlight {
+  background-color: #4e9fdd;
+  color: white;
+}
+
+/*
+
+### Labels
+
+*/
+.new-zanata .badge, .new-zanata .badge--bl {
+  padding: 0 0.25714em;
+  background-color: #d9e1e7;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.28571em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+.new-zanata .badge__container {
+  position: relative;
+}
+.new-zanata .badge--highlight {
+  background-color: #4e9fdd;
+  color: white;
+}
+.new-zanata .badge--bl {
+  position: absolute;
+  bottom: 0.34286em;
+  left: 0.34286em;
+}
+
+/*
+
+### Buttons
+
+```
+<a class="button">Button</a>
+
+<a class="button--full">Button</a>
+```
+
+*/
+.new-zanata .button, .new-zanata .button--full {
+  border: none;
+}
+.new-zanata .button--full {
+  display: block;
+  width: 100%;
+}
+
+/*
+
+### Header
+
+#### Site Logo
+
+```
+
+<header role="banner" class="accent__pop-more--large header">
+  <div class="l__wrapper">
+    <h1 class="gamma text--align-center heading--sub"><a href="/"><img src="/assets/img/logo.svg"> Zanata</a></h1>
+  </div>
+</header>
+
+```
+
+*/
+.new-zanata .header__title {
+  font-size: 1.75em;
+  line-height: 1.71429em;
+  padding: 0;
+  margin: 0;
+}
+.new-zanata .header__site-logo {
+  height: 1.07143em;
+  margin-bottom: -0.21429em;
 }
