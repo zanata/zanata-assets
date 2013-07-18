@@ -1,452 +1,524 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" class="new-zanata-html">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Zanata:Home</title>
   <link class="component" href="http://translate.zanata.org/zanata/a4j/s/3_3_3.Finalcss/panel.xcss/DATB/eAFrvajdHLp8hjQAEgwDtA__" rel="stylesheet" type="text/css" />
-  <link class="user" href="http://translate.zanata.org/zanata/stylesheet/zanata.css" rel="stylesheet" type="text/css" />
-  <link class="user" href="http://translate.zanata.org/zanata/stylesheet/menu.css" rel="stylesheet" type="text/css" />
+  <link class="user" href="assets/css/old-zanata.css" rel="stylesheet" type="text/css" />
+  <!--   <link class="user" href="http://translate.zanata.org/zanata/stylesheet/menu.css" rel="stylesheet" type="text/css" />
+  -->
   <link class="user" href="http://translate.zanata.org/zanata/images/fontello/css/fontello.css" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="http://translate.zanata.org/zanata/images/favicon.ico" type="image/x-icon" />
-
   <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-</head>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,400italic' rel='stylesheet' type='text/css'></head>
 
-<body>
-  <!-- <div class="header">
-  <div class="navBar" xmlns="http://www.w3.org/1999/xhtml">
-
-    <ul>
-      <li id="logoCol">
-        <a href="/zanata/" id="j_id9">
-          <img src="http://translate.zanata.org/zanata/images/logo-small.png" alt="Zanata" class="logo" />
-        </a>
-      </li>
-      <li id="projectCol">
-        <a href="http://translate.zanata.org/zanata/project/list" id="Projects">
-          <img src="http://translate.zanata.org/zanata/images/crystal_project/_16x16/apps/kllckety.png" />
-          Projects
-        </a>
-      </li>
-      <li id="groupCol">
-        <a href="http://translate.zanata.org/zanata/version-group/list" id="version-groups">
-          <img src="http://translate.zanata.org/zanata/images/crystal_project/_16x16/apps/kdf.png" />
-          Groups
-        </a>
-      </li>
-      <li id="languageCol">
-        <a href="http://translate.zanata.org/zanata/language/list" id="Languages">
-          <img src="http://translate.zanata.org/zanata/images/crystal_project/_16x16/apps/locale.png" />
-          Languages
-        </a>
-      </li>
-      <li id="systemCol">
-        <a>
-          <img src="http://translate.zanata.org/zanata/images/z-logo-16px.png" />
-          More
-          <span class="icon-down-open downArrow"></span>
-        </a>
-        <div class="submenu">
-          <ul>
-            <li>
-              <a href="http://translate.zanata.org/zanata/help/view" id="help">
-                <img src="http://translate.zanata.org/zanata/images/crystal_project/_16x16/actions/help.png" />
-                Help
-              </a>
-            </li>
-            <li>
-              <a href="https://bugzilla.redhat.com/enter_bug.cgi?format=guided&amp;product=Zanata" target="_blank" id="reportBug">
-                <img src="http://translate.zanata.org/zanata/images/crystal_project/_16x16/apps/bug.png" />
-                Report problem
-              </a>
-            </li>
-            <li>
-              <a href="https://bugzilla.redhat.com/buglist.cgi?product=Zanata&amp;bug_status=__open__" target="_blank">
-                <img src="http://translate.zanata.org/zanata/images/crystal_project/_16x16/apps/error.png" />
-                Known issues
-              </a>
-            </li>
-            <li>
-              <a href="http://translate.zanata.org/zanata/account/register" id="Register">Register</a>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li id="userCol">
-        <a href="http://translate.zanata.org/zanata/account/sign_in?continue=%2Fzanata%2F" id="Sign_in">
-          <span class="icon-login"></span>
-          Sign In
-        </a>
-      </li>
-    </ul>
-
-    <div id="loading_top_right">
-      <span id="_viewRoot:status">
-        <span id="_viewRoot:status.start" style="display: none">
-          <img src="http://translate.zanata.org/zanata/images/loading.gif" />
-        </span>
-        <span id="_viewRoot:status.stop"></span>
-      </span>
-    </div>
-  </div>
-</div>
--->
-
-<div class="off-canvas__outer">
-  <div class="new-zanata">
-    <div class="off-canvas__target off-canvas--left" id="off-canvas--left" data-off-canvas="over">
-      <header class="off-canvas__header">
-        <a href="#off-canvas--left" class="off-canvas__close"> <i class="i i--cross"></i>
-          <span class="is-invisible">Close</span>
-        </a>
-      </header>
-      <nav>
-        <ul class="list--slat list--block-links">
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Groups</a>
-          </li>
-          <li>
-            <a href="#">Users</a>
-          </li>
-          <li>
-            <a href="#">Languages</a>
-          </li>
-          <li>
-            <a href="#">Help</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="off-canvas__target off-canvas--right" id="off-canvas--right" data-off-canvas="under">
-      <header class="off-canvas__header">
-        <a href="#off-canvas--right" class="off-canvas__close"> <i class="i i--cross"></i>
-          <span class="is-invisible">Close</span>
-        </a>
-      </header>
-      <nav>
-        <ul class="list--slat list--block-links txt--invert">
-          <li>
-            <a href="#"  class="is-active">
-              Dashboard
-              <span class="badge--highlight badge--inline l--float-right">4</span>
+<body class="new-zanata-body">
+  <div class="off-canvas__outer">
+    <div class="new-zanata-base">
+      <div class="new-zanata">
+        <div class="off-canvas__target off-canvas--left" id="off-canvas--left" data-off-canvas="over">
+          <header class="off-canvas__header">
+            <a href="#off-canvas--left" class="off-canvas__close"> <i class="i i--cross"></i>
+              <span class="is-invisible">Close</span>
             </a>
-          </li>
-          <li>
-            <a href="#">Projects</a>
-          </li>
-          <li>
-            <a href="#">Groups</a>
-          </li>
-          <li>
-            <a href="#">Settings</a>
-          </li>
-          <li>
-            <a href="#">Logout</a>
-          </li>
-        </ul>
-      </nav>
+          </header>
+          <nav>
+            <ul class="list--slat list--block-links">
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Groups</a>
+              </li>
+              <li>
+                <a href="#">Users</a>
+              </li>
+              <li>
+                <a href="#">Languages</a>
+              </li>
+              <li>
+                <a href="#">Help</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="off-canvas__target off-canvas--right" id="off-canvas--right" data-off-canvas="under">
+          <header class="off-canvas__header">
+            <a href="#off-canvas--right" class="off-canvas__close"> <i class="i i--cross"></i>
+              <span class="is-invisible">Close</span>
+            </a>
+          </header>
+          <nav>
+            <ul class="list--slat list--block-links txt--invert">
+              <li>
+                <a href="#"  class="is-active">
+                  Dashboard
+                  <span class="badge--highlight badge--inline l--float-right">4</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Groups</a>
+              </li>
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Settings</a>
+              </li>
+              <li>
+                <a href="#">Logout</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="off-canvas__inner">
-    <div class="new-zanata">
-      <header role="banner" class="bg--pop-highest txt--align-center txt--s-align-center">
-        <a href="#off-canvas--left" class="off-canvas__toggle--left l--float-left">
-          <i class="i i--large i--list"></i>
-          <span class="is-invisible">Menu</span>
-        </a>
-        <h1 class="header__title heading--sub">
-          <a href="/">
-            <img class="header__site-logo" src="logo.svg">Zanata</a>
-        </h1>
-        <a href="#off-canvas--right" class="off-canvas__toggle--right l--float-right badge__container">
-          <span class="badge--bl">4</span>
-          <i class="i i--large i--user"></i>
-          <span class="is-invisible">Account</span>
-        </a>
-      </header>
-    </div>
+    <div class="off-canvas__inner">
+      <div class="new-zanata-base">
+        <div class="new-zanata">
+          <header role="banner" class="bg--pop-highest txt--s-align-center">
+            <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left">
+              <i class="i i--large i--list"></i>
+              <span class="is-invisible">Menu</span>
+            </a>
+            <h1 class="header__title heading--sub">
+              <a href="/">
+                <img class="header__site-logo" src="logo.svg">Zanata</a>
+            </h1>
+            <nav class="header__menu is-hidden--s l--push-left-half">
+              <ul class="list--horizontal">
+                <li class="l--push-left-half">
+                  <a href="#">Projects</a>
+                </li>
+                <li class="l--push-left-half">
+                  <a href="#">Groups</a>
+                </li>
+                <li class="l--push-left-half">
+                  <a href="#">Languages</a>
+                </li>
+                <li class="l--push-left-half">
+                  <a href="#">Help</a>
+                </li>
+              </ul>
+            </nav>
+            <a href="#off-canvas--right" class="off-canvas__toggle--right l--float-right badge__container">
+              <span class="badge--bl">4</span>
+              <i class="i i--large i--user"></i>
+              <span class="is-invisible">Account</span>
+            </a>
+          </header>
+        </div>
+      </div>
 
-    <div id="container">
+          <div id="container">
       <div id="bd">
         <div id="search_div">
           <div id="search_panel" xmlns="http://www.w3.org/1999/xhtml">
-            <form id="j_id52" name="j_id52" method="post" action="http://translate.zanata.org/zanata/" enctype="application/x-www-form-urlencoded">
-              <input type="hidden" name="j_id52" value="j_id52" />
+            <form id="j_id52" name="j_id52" method="post" action="/zanata/project/list" enctype="application/x-www-form-urlencoded">
+              <input type="hidden" name="j_id52" value="j_id52">
 
               <span class="icon-search search-icon"></span>
-              <input id="j_id52:q" type="text" name="j_id52:q" class="with_icon" />
-              <input type="submit" name="j_id52:j_id55" value="Search Projects" class="projectSearchButton" />
-              <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id1" autocomplete="off" />
-            </form>
+              <input id="j_id52:q" type="text" name="j_id52:q" class="with_icon">
+              <input type="submit" name="j_id52:j_id55" value="Search Projects" class="projectSearchButton">
+              <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id2" autocomplete="off"></form>
 
           </div>
         </div>
         <div id="breadcrumbs_div">
           <div id="breadcrumbs_panel" xmlns="http://www.w3.org/1999/xhtml">
-            <form id="j_id59" name="j_id59" method="post" action="http://translate.zanata.org/zanata/" enctype="application/x-www-form-urlencoded">
-              <input type="hidden" name="j_id59" value="j_id59" />
-              <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id1" autocomplete="off" />
-            </form>
+            <form id="j_id59" name="j_id59" method="post" action="/zanata/project/list" enctype="application/x-www-form-urlencoded">
+              <input type="hidden" name="j_id59" value="j_id59">
+              <a href="/zanata/" id="j_id59:j_id60" class="breadcrumbs_home">
+                <span class="icon-home-1" title="Zanata"></span>
+              </a>
+              <span class="icon-right-open breadcrumbs-seperator"></span>
+              <span id="j_id59:j_id62:0:j_id65" class="breadcrumbs_display">Projects</span>
+              <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id2" autocomplete="off"></form>
           </div>
         </div>
         <div id="yui-main">
           <div class="yui-b">
             <span id="j_id69"></span>
             <div id="main_body_content">
-              <div></div>
-              <h1 class="seamTextHeadline1"> <b>Welcome to Zanata</b>
-              </h1>
-              <p class="seamTextPara"></p>
-
-              <div>
-                <i><b>Zanata</b></i>
-                is a web-based system for Translators to translate  documentation and software online using a web browser.
-              </div>
-              <p class="seamTextPara">
-                Please join the
-                <a href="https://www.redhat.com/mailman/listinfo/zanata-users" class="seamTextLink">mailing list</a>
-                to be kept informed of outages and other announcements.
-              </p>
-
-              <h2 class="seamTextHeadline2">
-                <b>Signing In</b>
-              </h2>
-              <div></div>
-              <p class="seamTextPara">
-                Users with a
-                <a href="https://admin.fedoraproject.org/accounts/" class="seamTextLink">Fedora Account System</a>
-                (FAS) account can use their FAS accounts to authenticate to this server. You can also use an OpenID (eg from Google or myOpenID), or create a local account.  You can attach multiple identities to a single account from your Profile page.
-              </p>
-
-              <div></div>
-              <div></div>
-              <div></div>
-              <p class="seamTextPara">
-                Please make sure you join the
-                <a href="http://www.redhat.com/mailman/listinfo/zanata-users" class="seamTextLink">mailing list</a>
-                .
-              </p>
-
-              <h2 class="seamTextHeadline2">
-                <b>Translators</b>
-              </h2>
-              <div></div>
-              <div>
-                All you need is a
-                <a href="https://admin.fedoraproject.org/accounts/" class="seamTextLink">FAS</a>
-                account and a web browser to start translating. To get started, please follow the simple instructions in the
-                <a href="https://github.comhttp://translate.zanata.org/zanata/zanata/wiki/Translator-Guide" class="seamTextLink">Translator Guide</a>
-                or the
-                <a href="http://zanata.org/docs/Zanata_Quickstart_Guide/html/pt02.html" class="seamTextLink">Translator Quickstart</a>
-                to join your language team and start contributing translations to the various projects on
-                <i><b>Zanata</b></i>
-                .
-              </div>
-              <p class="seamTextPara"></p>
-
-              <h2 class="seamTextHeadline2">
-                <b>Developers and Writers</b>
-              </h2>
-              <div></div>
-              <p class="seamTextPara">
-                With
-                <i>
-                  <b>Zanata</b>
-                </i>
-                you can open your project for translation without opening up the project's version  control. Currently,
-                <i>
-                  <b>Zanata</b>
-                </i>
-                supports translation of software and documentation projects that provide GNU Gettext format Portable Object (PO) files or Java Properties files. Project files can be pushed and pulled from the server using a Maven plugin or a Python client.
-              </p>
-
-              <div></div>
-              <div></div>
-              <div></div>
-              <p class="seamTextPara">
-                For detailed information on how to manage your projects on
-                <i>
-                  <b>Zanata</b>
-                </i>
-                , please read the
-                <a href="http://zanata.org/documentation.html" class="seamTextLink">Quickstart Guide and other documentation</a>
-                .
-              </p>
-
-              <p class="seamTextPara"></p>
-
-              <h2 class="seamTextHeadline2">
-                <b>Create a project</b>
-              </h2>
-              <div>
-                <b><br/></b>
-              </div>
-              <div></div>
-              <div></div>
-              <div>
-                To create a translation project in
-                <i>
-                  <b>Zanata</b>
-                </i>
-                for your open source software or documentation project, please
-                <a href="http://zanata.org/docs/Zanata_Quickstart_Guide/html/chap_redhat_prereqs.html" class="seamTextLink">obtain a FAS account and validate it with Zanata</a>
-                ; then visit the Projects page and click &quot;
-                <a href="/" class="seamTextLink">Create project</a>
-                &quot; (on the right).
-              </div>
-              <div></div>
-              <h2 class="seamTextHeadline2">Know More</h2>
-              <div></div>
-              <div>
-                You can find out more about the open source Zanata project (mailing lists, bug reports, source code) at
-                <a href="http://zanata.org/" class="seamTextLink">http://zanata.org/</a>
-              </div>
+              <div id="main_content">
+                <form id="main_content:form" name="main_content:form" method="post" action="/zanata/project/list" target="">
+                  <div class="rich-datascr " id="main_content:form:scroller" style=" " align="center">
+                    <table border="0" cellpadding="0" cellspacing="1" class="rich-dtascroller-table " id="main_content:form:scroller_table" style="text-align:center">
+                      <tbody>
+                        <tr>
+                          <td class="rich-datascr-button-dsbld rich-datascr-button">
+                            <span class="icon-to-start"></span>
+                          </td>
+                          <td class="rich-datascr-button-dsbld rich-datascr-button">
+                            <span class="icon-left-open"></span>
+                          </td>
+                          <td class="rich-datascr-act ">1</td>
+                          <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '2'});">2</td>
+                          <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '3'});">3</td>
+                          <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '4'});">4</td>
+                          <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '5'});">5</td>
+                          <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '6'});">6</td>
+                          <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '7'});">7</td>
+                          <td class=" rich-datascr-button" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': 'next'});">
+                            <span class="icon-right-open-1"></span>
+                          </td>
+                          <td class=" rich-datascr-button" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': 'last'});">
+                            <span class="icon-to-end"></span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <script type="text/javascript">new Richfaces.Datascroller('main_content:form:scroller', function(event){A4J.AJAX.Submit('main_content:form',event,{'ignoreDupResponses':true,'implicitEventsQueue':'main_content:form:scroller','similarityGroupingId':'main_content:form:scroller','parameters':{'ajaxSingle':'main_content:form:scroller','main_content:form:scroller':event.memo.page} ,'actionUrl':'/zanata/project/list'} ); return false;});</script>
+                  </div>
+                  <img alt="" class="rich-spacer " height="15" id="main_content:form:j_id84" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="1">
+                  <div id="main_content:form:j_id85" class="float-right">
+                    <input type="checkbox" name="main_content:form:j_id87" checked="checked" onchange="A4J.AJAX.Submit('main_content:form',event,{'similarityGroupingId':'main_content:form:j_id88','parameters':{'main_content:form:j_id88':'main_content:form:j_id88'} ,'containerId':'main_content:form:j_id86','actionUrl':'/zanata/project/list'} )" title="Filter active projects">
+                    Active
+                    <img alt="" class="rich-spacer " height="1" id="main_content:form:j_id90" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5">
+                    <input type="checkbox" name="main_content:form:j_id91" checked="checked" onchange="A4J.AJAX.Submit('main_content:form',event,{'similarityGroupingId':'main_content:form:j_id92','parameters':{'main_content:form:j_id92':'main_content:form:j_id92'} ,'containerId':'main_content:form:j_id86','actionUrl':'/zanata/project/list'} )" title="Filter read-only projects">
+                    Read-only
+                    <img alt="" class="rich-spacer " height="1" id="main_content:form:j_id94" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5"></div>
+                  <table class="rich-table " id="main_content:form:projectList" border="0" cellpadding="0" cellspacing="0">
+                    <colgroup span="4"></colgroup>
+                  <thead class="rich-table-thead">
+                    <tr class="rich-table-subheader ">
+                      <th class="rich-table-subheadercell  " scope="col" id="main_content:form:projectList:j_id99header" onclick="A4J.AJAX.Submit('main_content:form',event,{'similarityGroupingId':'main_content:form:projectList','parameters':{'main_content:form:projectList':'fsp','fsp':'main_content:form:projectList:j_id99'} ,'actionUrl':'/zanata/project/list'} )" style="cursor: pointer;">
+                        <div id="main_content:form:projectList:j_id99header:sortDiv">
+                          <span class="rich-table-sortable-header">
+                            Project Name
+                            <img src="/zanata/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.iconimages.DataTableIconSortNone/DATB/eAFjYGD49OkzAAWzAtg_" alt="" width="15" height="15" class="rich-sort-icon"></span>
+                        </div>
+                      </th>
+                      <th class="rich-table-subheadercell  " scope="col" id="main_content:form:projectList:j_id104header">
+                        <div id="main_content:form:projectList:j_id104header:sortDiv">Description</div>
+                      </th>
+                      <th class="rich-table-subheadercell  " scope="col" id="main_content:form:projectList:j_id107header" onclick="A4J.AJAX.Submit('main_content:form',event,{'similarityGroupingId':'main_content:form:projectList','parameters':{'main_content:form:projectList':'fsp','fsp':'main_content:form:projectList:j_id107'} ,'actionUrl':'/zanata/project/list'} )" style="cursor: pointer;">
+                        <div id="main_content:form:projectList:j_id107header:sortDiv">
+                          <span class="rich-table-sortable-header">
+                            Creation Date
+                            <img src="/zanata/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.iconimages.DataTableIconSortNone/DATB/eAFjYGD49OkzAAWzAtg_" alt="" width="15" height="15" class="rich-sort-icon"></span>
+                        </div>
+                      </th>
+                      <th class="rich-table-subheadercell  " scope="col" id="main_content:form:projectList:j_id110header" onclick="A4J.AJAX.Submit('main_content:form',event,{'similarityGroupingId':'main_content:form:projectList','parameters':{'main_content:form:projectList':'fsp','fsp':'main_content:form:projectList:j_id110'} ,'actionUrl':'/zanata/project/list'} )" style="cursor: pointer;">
+                        <div id="main_content:form:projectList:j_id110header:sortDiv">
+                          <span class="rich-table-sortable-header">
+                            Status
+                            <img src="/zanata/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.iconimages.DataTableIconSortNone/DATB/eAFjYGD49OkzAAWzAtg_" alt="" width="15" height="15" class="rich-sort-icon"></span>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="main_content:form:projectList:tb">
+                    <tr class="rich-table-row rich-table-firstrow ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:0:j_id99" width="270px">
+                        <a href="/zanata/project/view/EK" id="main_content:form:projectList:0:project" class="table_link">Eesti Kontsert</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:0:j_id104" width="270px">Eesti Kontsert: esinejad, teosed jms</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:0:j_id107" width="auto">Jul 17, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:0:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:1:j_id99" width="270px">
+                        <a href="/zanata/project/view/LogicCircuit" id="main_content:form:projectList:1:project" class="table_link">LogicCircuit</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:1:j_id104" width="270px">
+                        Educational software for designing and simulating digital logic circuits
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:1:j_id107" width="auto">Jul 14, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:1:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:2:j_id99" width="270px">
+                        <a href="/zanata/project/view/pptr-alternatifinternet" id="main_content:form:projectList:2:project" class="table_link">Alternatif İnternet</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:2:j_id104" width="270px"></td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:2:j_id107" width="auto">Jul 9, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:2:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:3:j_id99" width="270px">
+                        <a href="/zanata/project/view/satellite6-signo" id="main_content:form:projectList:3:project" class="table_link">Satellite6  Signo</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:3:j_id104" width="270px">Satellite6  Signo</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:3:j_id107" width="auto">Jul 9, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:3:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:4:j_id99" width="270px">
+                        <a href="/zanata/project/view/satellite6-katello-cli" id="main_content:form:projectList:4:project" class="table_link">Satellite6 Katello CLI</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:4:j_id104" width="270px">Satellite6 Katello CLI</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:4:j_id107" width="auto">Jul 9, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:4:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:5:j_id99" width="270px">
+                        <a href="/zanata/project/view/satellite6-katello" id="main_content:form:projectList:5:project" class="table_link">Satellite6 Katello</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:5:j_id104" width="270px">Satellite6 Katello</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:5:j_id107" width="auto">Jul 9, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:5:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:6:j_id99" width="270px">
+                        <a href="/zanata/project/view/docebo_pt-br" id="main_content:form:projectList:6:project" class="table_link">Docebo PT-BR</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:6:j_id104" width="270px"></td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:6:j_id107" width="auto">Jul 7, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:6:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:7:j_id99" width="270px">
+                        <a href="/zanata/project/view/mrztest" id="main_content:form:projectList:7:readonlyProject" class="table_link readonly_link">mr zanata test</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:7:j_id104" width="270px">test project to evaluate zanata</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:7:j_id107" width="auto">Jul 6, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:7:j_id110" width="60px">Read-only</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:8:j_id99" width="270px">
+                        <a href="/zanata/project/view/cavisions-project" id="main_content:form:projectList:8:project" class="table_link">CAVisions</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:8:j_id104" width="270px"></td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:8:j_id107" width="auto">Jun 28, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:8:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:9:j_id99" width="270px">
+                        <a href="/zanata/project/view/rhel-high-availability" id="main_content:form:projectList:9:project" class="table_link">[RHEL] [CLUSTER] High Availability Add-On Overview</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:9:j_id104" width="270px">[RHEL] [CLUSTER] High Availability Add-On Overview</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:9:j_id107" width="auto">Jun 26, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:9:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:10:j_id99" width="270px">
+                        <a href="/zanata/project/view/InoReader-UA" id="main_content:form:projectList:10:project" class="table_link">InoReader EN2UA</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:10:j_id104" width="270px">Translate InoReader.com into ukrainian language</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:10:j_id107" width="auto">Jun 19, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:10:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:11:j_id99" width="270px">
+                        <a href="/zanata/project/view/translate-site" id="main_content:form:projectList:11:project" class="table_link">Переклад сайту</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:11:j_id104" width="270px"></td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:11:j_id107" width="auto">Jun 12, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:11:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:12:j_id99" width="270px">
+                        <a href="/zanata/project/view/guns-and-robots" id="main_content:form:projectList:12:project" class="table_link">Guns And Robots</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:12:j_id104" width="270px"></td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:12:j_id107" width="auto">Jun 6, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:12:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:13:j_id99" width="270px">
+                        <a href="/zanata/project/view/testNLPC" id="main_content:form:projectList:13:project" class="table_link">testNLPC</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:13:j_id104" width="270px"></td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:13:j_id107" width="auto">Jun 6, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:13:j_id110" width="60px">Active</td>
+                    </tr>
+                    <tr class="rich-table-row ">
+                      <td class="rich-table-cell " id="main_content:form:projectList:14:j_id99" width="270px">
+                        <a href="/zanata/project/view/AR-ITSS" id="main_content:form:projectList:14:project" class="table_link">Animal Riddles</a>
+                      </td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:14:j_id104" width="270px">Animal Riddles translation</td>
+                      <td class="rich-table-cell " id="main_content:form:projectList:14:j_id107" width="auto">Jun 5, 2013</td>
+                      <td class="rich-table-cell centered" id="main_content:form:projectList:14:j_id110" width="60px">Active</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <img alt="" class="rich-spacer " height="15" id="main_content:form:j_id113" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="1">
+                <div class="rich-datascr " id="main_content:form:sc2" style=" " align="center">
+                  <table border="0" cellpadding="0" cellspacing="1" class="rich-dtascroller-table " id="main_content:form:sc2_table" style="text-align:center">
+                    <tbody>
+                      <tr>
+                        <td class="rich-datascr-button-dsbld rich-datascr-button">
+                          <span class="icon-to-start"></span>
+                        </td>
+                        <td class="rich-datascr-button-dsbld rich-datascr-button">
+                          <span class="icon-left-open"></span>
+                        </td>
+                        <td class="rich-datascr-act ">1</td>
+                        <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '2'});">2</td>
+                        <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '3'});">3</td>
+                        <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '4'});">4</td>
+                        <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '5'});">5</td>
+                        <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '6'});">6</td>
+                        <td class="rich-datascr-inact " onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': '7'});">7</td>
+                        <td class=" rich-datascr-button" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': 'next'});">
+                          <span class="icon-right-open-1"></span>
+                        </td>
+                        <td class=" rich-datascr-button" onclick="Event.fire(this, 'rich:datascroller:onscroll', {'page': 'last'});">
+                          <span class="icon-to-end"></span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <script type="text/javascript">new Richfaces.Datascroller('main_content:form:sc2', function(event){A4J.AJAX.Submit('main_content:form',event,{'ignoreDupResponses':true,'implicitEventsQueue':'main_content:form:sc2','similarityGroupingId':'main_content:form:sc2','parameters':{'main_content:form:sc2':event.memo.page,'ajaxSingle':'main_content:form:sc2'} ,'actionUrl':'/zanata/project/list'} ); return false;});</script>
+                </div>
+                <input type="hidden" autocomplete="off" name="main_content:form" value="main_content:form">
+                <input type="hidden" autocomplete="off" name="autoScroll" value="">
+                <script type="text/javascript">function clear_main_content_3Aform() {
+    _clearJSFFormParameters('main_content:form','',['main_content:form:j_idcl','main_content:form:_link_hidden_']);
+    }
+    function clearFormHiddenParams_main_content_3Aform(){clear_main_content_3Aform();}
+    function clearFormHiddenParams_main_content_form(){clear_main_content_3Aform();}
+    clear_main_content_3Aform();</script>
+                <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id2" autocomplete="off"></form>
             </div>
           </div>
         </div>
-        <div class="yui-b"></div>
       </div>
+      <div class="yui-b"></div>
+    </div>
     </div>
 
-    <div class="footer">
-      <div class="footer_container" xmlns="http://www.w3.org/1999/xhtml">
 
-        <div class="section_block">
-          <h4>Zanata</h4>
-          <div class="content">
-            <ul>
-              <li>
-                <a href="http://zanata.org/" target="_blank">About Zanata</a>
-              </li>
-              <li>
-                <a href="http://zanata.org/documentation.html" target="_blank">Documentation</a>
-              </li>
-              <li>
-                <a href="https://github.com/zanata/zanata/wiki" target="_blank">Wiki</a>
-              </li>
-              <li>
-                <a href="http://blog-zanatatm.rhcloud.com/" target="_blank">Blog</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="footer">
+        <div class="footer_container" xmlns="http://www.w3.org/1999/xhtml">
 
-        <div class="section_block">
-          <h4>Support</h4>
-          <div class="content">
-            <ul>
-              <li>
-                <a href="/zanata/help/view" id="j_id77">Help</a>
-              </li>
-              <li>
-                <a href="http://webchat.freenode.net/?channels=zanata" target="_blank">IRC Help</a>
-              </li>
-              <li>
-                <a href="http://zanata.org/faq.html" target="_blank">FAQ</a>
-              </li>
-              <li>
-                <a href="https://bugzilla.redhat.com/enter_bug.cgi?format=guided&amp;product=Zanata" target="_blank">Report problem</a>
-              </li>
-              <li>
-                <a href="https://bugzilla.redhat.com/buglist.cgi?product=Zanata&amp;bug_status=__open__" target="_blank">Known issues</a>
-              </li>
-            </ul>
+          <div class="section_block">
+            <h4>Zanata</h4>
+            <div class="content">
+              <ul>
+                <li>
+                  <a href="http://zanata.org/" target="_blank">About Zanata</a>
+                </li>
+                <li>
+                  <a href="http://zanata.org/documentation.html" target="_blank">Documentation</a>
+                </li>
+                <li>
+                  <a href="https://github.com/zanata/zanata/wiki" target="_blank">Wiki</a>
+                </li>
+                <li>
+                  <a href="http://blog-zanatatm.rhcloud.com/" target="_blank">Blog</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="section_block">
-          <h4>Site map</h4>
-          <div class="content">
-            <ul>
-              <li>
-                <a href="/zanata/project/list" id="Projects_sitemap">Projects</a>
-              </li>
-              <li>
-                <a href="/zanata/version-group/list" id="Groups_sitemap">Groups</a>
-              </li>
-              <li>
-                <a href="/zanata/language/list" id="Languages_sitemap">Languages</a>
-              </li>
-              <li>
-                <a href="/zanata/help/view" id="Help_sitemap">Help</a>
-              </li>
-            </ul>
+          <div class="section_block">
+            <h4>Support</h4>
+            <div class="content">
+              <ul>
+                <li>
+                  <a href="/zanata/help/view" id="j_id77">Help</a>
+                </li>
+                <li>
+                  <a href="http://webchat.freenode.net/?channels=zanata" target="_blank">IRC Help</a>
+                </li>
+                <li>
+                  <a href="http://zanata.org/faq.html" target="_blank">FAQ</a>
+                </li>
+                <li>
+                  <a href="https://bugzilla.redhat.com/enter_bug.cgi?format=guided&amp;product=Zanata" target="_blank">Report problem</a>
+                </li>
+                <li>
+                  <a href="https://bugzilla.redhat.com/buglist.cgi?product=Zanata&amp;bug_status=__open__" target="_blank">Known issues</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="locale_selector_block">
-          <form id="localeSelector_form" name="localeSelector_form" method="post" action="/zanata/" enctype="application/x-www-form-urlencoded">
-            <input type="hidden" name="localeSelector_form" value="localeSelector_form" />
-            <select id="localeSelector_form:Select" name="localeSelector_form:Select" size="1" onchange="submit()">
-              <option value="bg">
-                &#1073;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;
-              </option>
-              <option value="tr">T&uuml;rk&ccedil;e</option>
-              <option value="en" selected="selected">English</option>
-              <option value="de">Deutsch</option>
-              <option value="it">italiano</option>
-              <option value="fr">fran&ccedil;ais</option>
-              <option value="qc">qc</option>
-            </select>
-            <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id1" autocomplete="off" />
-          </form>
-        </div>
-        <div style="clear: both; display: block;"></div>
-        <div class="copyright_block">
-          <a href="http://zanata.org/" target="_blank">Zanata</a>
-          version 2.2.2 (20130306-2037). &copy; 2008-12
-          <a href="http://www.redhat.com/" target="_blank">Red Hat, Inc</a>
-          and others.
+
+          <div class="section_block">
+            <h4>Site map</h4>
+            <div class="content">
+              <ul>
+                <li>
+                  <a href="/zanata/project/list" id="Projects_sitemap">Projects</a>
+                </li>
+                <li>
+                  <a href="/zanata/version-group/list" id="Groups_sitemap">Groups</a>
+                </li>
+                <li>
+                  <a href="/zanata/language/list" id="Languages_sitemap">Languages</a>
+                </li>
+                <li>
+                  <a href="/zanata/help/view" id="Help_sitemap">Help</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="locale_selector_block">
+            <form id="localeSelector_form" name="localeSelector_form" method="post" action="/zanata/" enctype="application/x-www-form-urlencoded">
+              <input type="hidden" name="localeSelector_form" value="localeSelector_form" />
+              <select id="localeSelector_form:Select" name="localeSelector_form:Select" size="1" onchange="submit()">
+                <option value="bg">
+                  &#1073;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;
+                </option>
+                <option value="tr">T&uuml;rk&ccedil;e</option>
+                <option value="en" selected="selected">English</option>
+                <option value="de">Deutsch</option>
+                <option value="it">italiano</option>
+                <option value="fr">fran&ccedil;ais</option>
+                <option value="qc">qc</option>
+              </select>
+              <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id1" autocomplete="off" />
+            </form>
+          </div>
+          <div style="clear: both; display: block;"></div>
+          <div class="copyright_block">
+            <a href="http://zanata.org/" target="_blank">Zanata</a>
+            version 2.2.2 (20130306-2037). &copy; 2008-12
+            <a href="http://www.redhat.com/" target="_blank">Red Hat, Inc</a>
+            and others.
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="assets/js/script.js"></script>
   <!-- Piwik -->
   <script type="text/javascript">//<![CDATA[
-      //remove any trailing slash
-      function stripTrailingSlash(url)
-      {
-          return url.replace(/\/$/, "");
-      }
+          //remove any trailing slash
+          function stripTrailingSlash(url)
+          {
+              return url.replace(/\/$/, "");
+          }
 
-      //if url doesn't contain protocol, append to it
-      function checkProtocol(url)
-      {
-        var protocol="";
+          //if url doesn't contain protocol, append to it
+          function checkProtocol(url)
+          {
+            var protocol="";
 
-        if((url.indexOf("http") == -1) && (url.indexOf("https") == -1))
-        {
-          protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
-        }
-        return stripTrailingSlash(protocol + url);
-      }
+            if((url.indexOf("http") == -1) && (url.indexOf("https") == -1))
+            {
+              protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+            }
+            return stripTrailingSlash(protocol + url);
+          }
 
-      var pkBaseURL = checkProtocol("engstats.redhat.com/piwik") + "/";
+          var pkBaseURL = checkProtocol("engstats.redhat.com/piwik") + "/";
 
-      document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-      //]]></script>
+          document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+          //]]></script>
   <script type="text/javascript">//<![CDATA[
-      try {
-      var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 6);
-      var username =  "";
-      if(false == false)
-      {
-        username = "anonymous";
-      }
-      piwikTracker.setCustomVariable (1, "Visit", username, "visit" );
-      piwikTracker.setCustomVariable (2, "View page", username, "page" );
+          try {
+          var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 6);
+          var username =  "";
+          if(false == false)
+          {
+            username = "anonymous";
+          }
+          piwikTracker.setCustomVariable (1, "Visit", username, "visit" );
+          piwikTracker.setCustomVariable (2, "View page", username, "page" );
 
-      piwikTracker.trackPageView();
-      piwikTracker.enableLinkTracking();
-      } catch( err ) {}
-      //]]></script>
+          piwikTracker.trackPageView();
+          piwikTracker.enableLinkTracking();
+          } catch( err ) {}
+          //]]></script>
   <!-- End Piwik Code -->
 </body>
 </html>
