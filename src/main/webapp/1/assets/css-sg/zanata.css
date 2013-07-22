@@ -814,10 +814,13 @@ td.rf-tab-hdr-inact.rf-tab-hdr-top {
   border-top-left-radius: 2px;
   padding: 6px 16px;
 }
+td.rf-tab-hdr-inact.rf-tab-hdr-top:hover {
+  background: #fdfdfd;
+}
 
 /* Active Tab */
 td.rf-tab-hdr-act.rf-tab-hdr-top {
-  background: white;
+  background: #fdfdfd;
   color: #444c54;
 }
 
@@ -836,6 +839,17 @@ div.rf-tab-cnt {
 
 div.rf-tab-hdr-brd {
   height: 0px;
+}
+
+.rf-tab-lbl,
+.rf-dg-c {
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+.rf-tab-hdr-spcr {
+  display: none;
 }
 
 /* ====================== End Rich Tab Panel & Tabs =========================== */
