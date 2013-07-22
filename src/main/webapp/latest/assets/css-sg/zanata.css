@@ -103,7 +103,6 @@ input, textarea {
 input[type="text"], input[type="password"] {
   width: 260px;
   font-size: 14px;
-  height: 20px;
 }
 
 button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[type="submit"], input[type="button"] {
@@ -148,12 +147,7 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
 }
 
 input.with_icon {
-  background-position: 5px 50%;
-  background-repeat: no-repeat;
-  padding: 3px 3px 3px 25px;
-  line-height: 20px;
-  width: 280px;
-  font-size: 16px;
+  padding-left: 25px;
 }
 
 input[readonly] {
@@ -435,6 +429,11 @@ img.errors {
   vertical-align: bottom;
 }
 
+input[type="submit"].projectSearchButton {
+  position: relative;
+  margin-top: -2px;
+}
+
 /* Styles from the security-stuff in seamspace*/
 .checkmark {
   font-size: 16px;
@@ -674,13 +673,14 @@ table.rf-dt {
 
 /* Header cell */
 th.rf-dt-shdr-c {
-  padding: 15px 8px 15px 8px;
+  padding: 5px 8px;
   text-align: center;
   font-size: 13px;
+  border: none;
   color: #416988;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   white-space: nowrap;
-  background-color: white;
+  background: white;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -698,8 +698,8 @@ td.rf-dt-c {
   font-size: 14px;
   color: #595959;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  border-left: 0;
-  border-right: 0;
+  border: none;
+  border-top: 1px solid #ecf0f3;
 }
 
 .noBorderTable {
@@ -759,8 +759,9 @@ div.rf-p {
 .rf-p .rf-p-hdr {
   background-image: none;
   padding: 10px 8px;
-  font-size: 12px;
-  border-radius: 2px;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px 2px 0 0;
   background-color: #4e9fdd;
   color: white;
   font-weight: bold;
@@ -899,9 +900,11 @@ td.rf-dg-c {
 
 /* -----------------------  Login form CSS  -------------------------*/
 input[type="text"].loginForm_input, input[type="password"].loginForm_input {
-  line-height: 22px;
+  line-height: 1em;
   width: 250px;
-  font-size: 16px;
+  font-size: 1em;
+  line-height: 1.5em;
+  height: 2.25em;
   font-weight: normal;
 }
 
