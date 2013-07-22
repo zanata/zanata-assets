@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Zanata:Home</title>
   <link class="component" href="http://translate.zanata.org/zanata/a4j/s/3_3_3.Finalcss/panel.xcss/DATB/eAFrvajdHLp8hjQAEgwDtA__" rel="stylesheet" type="text/css" />
-  <link class="user" href="assets/css/old-zanata.css" rel="stylesheet" type="text/css" />
+  <link class="user" href="assets/css/zanata.css" rel="stylesheet" type="text/css" />
   <!--   <link class="user" href="http://translate.zanata.org/zanata/stylesheet/menu.css" rel="stylesheet" type="text/css" />
   -->
   <link class="user" href="http://translate.zanata.org/zanata/images/fontello/css/fontello.css" rel="stylesheet" type="text/css" />
@@ -118,1602 +118,180 @@
       <div id="container">
       <div id="bd">
         <div id="search_div"><div id="search_panel" xmlns="http://www.w3.org/1999/xhtml">
-<form id="j_id53" name="j_id53" method="post" action="/zanata/iteration/view.seam" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="j_id53" value="j_id53">
-Obsolete<input id="j_id53:inc_obs" type="checkbox" name="j_id53:inc_obs" title="Include Obsolete Projects in Search">
+<form id="j_idt58" name="j_idt58" method="post" action="/iteration/view.seam" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt58" value="j_idt58">
 
-     <span class="icon-search search-icon"></span><input id="j_id53:q" type="text" name="j_id53:q" class="with_icon"><input type="submit" name="j_id53:j_id56" value="Search Projects" class="projectSearchButton"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id6" autocomplete="off">
+
+     <span class="icon-search search-icon"></span><input id="j_idt58:q" type="text" name="j_idt58:q" class="with_icon"><input type="submit" name="j_idt58:j_idt61" value="Search Projects" class="projectSearchButton"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="3048607773983582057:-7786390797961153297" autocomplete="off">
 </form>
 
 </div>
           </div>
-          <div id="breadcrumbs_div"><div id="breadcrumbs_panel" xmlns="http://www.w3.org/1999/xhtml">
-<form id="j_id60" name="j_id60" method="post" action="/zanata/iteration/view.seam" enctype="application/x-www-form-urlencoded">
-<input type="hidden" name="j_id60" value="j_id60">
-<a href="/zanata/" id="j_id60:j_id61" class="breadcrumbs_home">
+          <div id="breadcrumbs_div"><div id="breadcrumbs_panel" style="white-space:nowrap" xmlns="http://www.w3.org/1999/xhtml">
+<form id="j_idt65" name="j_idt65" method="post" action="/iteration/view.seam" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt65" value="j_idt65">
+<a href="/" id="j_idt65:j_idt66" type="submit" class="breadcrumbs_home">
         <span class="icon-home-1" title="Zanata"></span></a>
-        <span class="icon-right-open breadcrumbs-seperator"></span><a href="/zanata/project/list?cid=86793" id="j_id60:j_id63:0:j_id65" class="breadcrumbs_link">Projects</a>
-        <span class="icon-right-open breadcrumbs-seperator"></span><a href="/zanata/project/view/zanata-server?cid=86793" id="j_id60:j_id63:1:j_id65" class="breadcrumbs_link">zanata-server</a>
-        <span class="icon-right-open breadcrumbs-seperator"></span><span id="j_id60:j_id63:2:j_id66" class="breadcrumbs_display">master</span><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id6" autocomplete="off">
+        <span class="icon-right-open breadcrumbs-seperator"></span><a href="/project/list?cid=123" id="j_idt65:j_idt69" type="submit" class="breadcrumbs_link">Projects</a>
+        <span class="icon-right-open breadcrumbs-seperator"></span><a href="/project/view/JBossAS&amp;cid=123" id="j_idt65:j_idt73" type="submit" class="breadcrumbs_link">JBossAS</a>
+        <span class="icon-right-open breadcrumbs-seperator"></span><span id="j_idt65:j_idt79" class="breadcrumbs_display">master</span><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="3048607773983582057:-7786390797961153297" autocomplete="off">
 </form>
 </div>
           </div>
         <div id="yui-main">
-          <div class="yui-b"><span id="j_id70"></span>
+          <div class="yui-b"><span id="j_idt83"><div id="messages"></div></span>
             <div id="main_body_content">
 
-  <div class="loading_parent"><span id="j_id78:langTableRegion:status"><span id="j_id78:langTableRegion:status.start" style="display: none" class="loading_frame"><img src="/zanata/images/loading-lg.gif" height="32" width="32" class="loading_image"></span><span id="j_id78:langTableRegion:status.stop"></span></span>
-  </div><form id="j_id78" name="j_id78" method="post" action="/zanata/iteration/view.seam" target=""><input type="hidden" name="javax.faces.FormSignature" value="isDr/QhmTj5AzlEDnJaqvr+yMFo=">Your teams will be <span class="highlighted_datatable_row">highlighted</span> below.<input class="float-right" id="j_id78:j_id81" name="j_id78:j_id81" onclick="A4J.AJAX.Submit('j_id78',event,{'similarityGroupingId':'j_id78:j_id81','parameters':{'j_id78:j_id81':'j_id78:j_id81'} ,'containerId':'j_id78:langTableRegion'} );return false;" value="Refresh" title="Refresh table" type="button">
-          <br><br><table class="rich-table iteration_inline_tribes" id="j_id78:data_table" border="0" cellpadding="0" cellspacing="0" width="100%"><colgroup span="3"></colgroup><thead class="rich-table-thead"><tr class="rich-table-subheader "><th class="rich-table-subheadercell  " scope="col" id="j_id78:data_table:j_id83header" onclick="A4J.AJAX.Submit('j_id78',event,{'similarityGroupingId':'j_id78:data_table','parameters':{'fsp':'j_id78:data_table:j_id83','j_id78:data_table':'fsp'} ,'containerId':'j_id78:langTableRegion'} )" style="cursor: pointer;"><div id="j_id78:data_table:j_id83header:sortDiv"><span class="rich-table-sortable-header">Language<img src="/zanata/a4j/g/3_3_3.Finalorg.richfaces.renderkit.html.iconimages.DataTableIconSortNone/DATB/eAFjYGD49OkzAAWzAtg_" alt="" width="15" height="15" class="rich-sort-icon"></span></div></th><th class="rich-table-subheadercell  " scope="col" id="j_id78:data_table:filesheader"><div id="j_id78:data_table:filesheader:sortDiv">Documents</div></th><th class="rich-table-subheadercell  " scope="col" id="j_id78:data_table:j_id104header"><div id="j_id78:data_table:j_id104header:sortDiv">Statistics
-                  <br><select id="j_id78:data_table:statsOption" name="j_id78:data_table:statsOption" class="headerInput" size="1" onchange="A4J.AJAX.Submit('j_id78',event,{'control':this,'similarityGroupingId':'j_id78:data_table:j_id110','parameters':{'ajaxSingle':'j_id78:data_table:statsOption','j_id78:data_table:j_id110':'j_id78:data_table:j_id110'} ,'containerId':'j_id78:langTableRegion'} )"> <option value="WORD" selected="selected">By Words</option>
+  <div class="loading_parent"><span id="j_idt88"><span style="display:none" class="rf-st-start loading_frame"><img src="/images/loading-lg.gif" height="32" width="32" class="loading_image"></span><span class="rf-st-stop"></span><script type="text/javascript">new RichFaces.ui.Status("j_idt88")</script></span>
+  </div>
+<form id="iterationLanguageForm" name="iterationLanguageForm" method="post" action="/iteration/view.seam" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="iterationLanguageForm" value="iterationLanguageForm">
+<input type="hidden" name="javax.faces.FormSignature" value="bFIO/cYf/0SdGjzQATnVlJjAcM8="><input id="iterationLanguageForm:j_idt93" name="iterationLanguageForm:j_idt93" onclick="RichFaces.ajax(&quot;iterationLanguageForm:j_idt93&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;" value="Refresh" class="float-right" title="Refresh table" type="submit">
+          <br><br><table id="iterationLanguageForm:data_table" class="rf-dt iteration_inline_tribes"><colgroup span="3"></colgroup><thead id="iterationLanguageForm:data_table:th" class="rf-dt-thd"><tr id="iterationLanguageForm:data_table:ch" class="rf-dt-shdr"><th class="rf-dt-shdr-c" scope="col" id="iterationLanguageForm:data_table:j_idt95">Language<a href="#" id="iterationLanguageForm:data_table:j_idt97:j_idt98" name="iterationLanguageForm:data_table:j_idt97:j_idt98" onclick="RichFaces.ajax(&quot;iterationLanguageForm:data_table:j_idt97:j_idt98&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;"><img src="/javax.faces.resource/unsorted.gif.seam?ln=images" style="vertical-align: middle"></a></th><th class="rf-dt-shdr-c" scope="col" id="iterationLanguageForm:data_table:j_idt124">Statistics
+                  <br><select id="iterationLanguageForm:data_table:statsOption" name="iterationLanguageForm:data_table:statsOption" class="headerInput" size="1" onchange="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;change&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;iterationLanguageForm:data_table:statsOption&quot;} ,&quot;sourceId&quot;:this} )">  <option value="WORD" selected="selected">By Words</option>
   <option value="MESSAGE">By Message</option>
-</select></div></th></tr></thead><tbody id="j_id78:data_table:tb"><tr class="rich-table-row rich-table-firstrow "><td class="rich-table-cell " id="j_id78:data_table:0:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=zh-Hant-TW&amp;locale=en" title="Open in Translation Editor" class="table_link">zh-Hant-TW<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:0:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">中文（繁體中文，台灣）</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:0:files"><a href="/zanata/iteration/files/zanata-server/master/zh-Hant-TW?" id="j_id78:data_table:0:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="zh-Hant-TW" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:0:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 3246, Need Review: 27" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:105.85828639193596px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.8805217906907797px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:3.261191817373258px;"></div>
+</select></th><th class="rf-dt-shdr-c" scope="col" id="iterationLanguageForm:data_table:j_idt142">Last Translated</th></tr></thead><tbody id="iterationLanguageForm:data_table:tb" class="rf-dt-b"><tr id="iterationLanguageForm:data_table:0" class="rf-dt-r rf-dt-fst-r"><td id="iterationLanguageForm:data_table:0:j_idt95" class="rf-dt-c">de<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">Deutsch</span></td><td id="iterationLanguageForm:data_table:0:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
 
-        <span class="statusBar_percentage">96%
-          (0.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:1:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=en-GB&amp;locale=en" title="Open in Translation Editor" class="table_link">en-GB<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:1:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">English (United Kingdom)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:1:files"><a href="/zanata/iteration/files/zanata-server/master/en-GB?" id="j_id78:data_table:1:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="en-GB" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:1:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 3246, Need Review: 27" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:105.85828639193596px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.8805217906907797px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:3.261191817373258px;"></div>
-
-        <span class="statusBar_percentage">96%
-          (0.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:2:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ja&amp;locale=en" title="Open in Translation Editor" class="table_link">ja<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:2:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">日本語</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:2:files"><a href="/zanata/iteration/files/zanata-server/master/ja?" id="j_id78:data_table:2:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ja" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:2:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 3246, Need Review: 27" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:105.85828639193596px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.8805217906907797px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:3.261191817373258px;"></div>
-
-        <span class="statusBar_percentage">96%
-          (0.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:3:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=uk&amp;locale=en" title="Open in Translation Editor" class="table_link">uk<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:3:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">українська</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:3:files"><a href="/zanata/iteration/files/zanata-server/master/uk?" id="j_id78:data_table:3:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="uk" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:3:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 2393, Need Review: 105" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:78.04032018974208px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:3.424251408241921px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:28.53542840201601px;"></div>
-
-        <span class="statusBar_percentage">70%
-          (3.7hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:4:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=tr&amp;locale=en" title="Open in Translation Editor" class="table_link">tr<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:4:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Türkçe</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:4:files"><a href="/zanata/iteration/files/zanata-server/master/tr?" id="j_id78:data_table:4:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="tr" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:4:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 490, Need Review: 7" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:15.979839905128966px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.22828342721612807px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:93.7918766676549px;"></div>
-
-        <span class="statusBar_percentage">14%
-          (11.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:5:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=fr&amp;locale=en" title="Open in Translation Editor" class="table_link">fr<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:5:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">français</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:5:files"><a href="/zanata/iteration/files/zanata-server/master/fr?" id="j_id78:data_table:5:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="fr" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:5:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 490, Need Review: 88" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:15.979839905128966px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.869848799288467px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:91.15031129558257px;"></div>
-
-        <span class="statusBar_percentage">14%
-          (11.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:6:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=bg&amp;locale=en" title="Open in Translation Editor" class="table_link">bg<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:6:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">български</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:6:files"><a href="/zanata/iteration/files/zanata-server/master/bg?" id="j_id78:data_table:6:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="bg" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:6:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 490, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:15.979839905128966px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:93.6940409131337px;"></div>
-
-        <span class="statusBar_percentage">14%
-          (11.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:7:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=de&amp;locale=en" title="Open in Translation Editor" class="table_link">de<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:7:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Deutsch</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:7:files"><a href="/zanata/iteration/files/zanata-server/master/de?" id="j_id78:data_table:7:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="de" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:7:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 490, Need Review: 65" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:15.979839905128966px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.119774681292618px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:91.90038541357842px;"></div>
-
-        <span class="statusBar_percentage">14%
-          (11.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:8:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=it&amp;locale=en" title="Open in Translation Editor" class="table_link">it<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:8:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">italiano</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:8:files"><a href="/zanata/iteration/files/zanata-server/master/it?" id="j_id78:data_table:8:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="it" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:8:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 490, Need Review: 79" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:15.979839905128966px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.576341535724874px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:91.44381855914617px;"></div>
-
-        <span class="statusBar_percentage">14%
-          (11.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:9:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ko&amp;locale=en" title="Open in Translation Editor" class="table_link">ko<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:9:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">한국어</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:9:files"><a href="/zanata/iteration/files/zanata-server/master/ko?" id="j_id78:data_table:9:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ko" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:9:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 83, Need Review: 77" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:2.706789208419804px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.511117699377409px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:104.78209309220279px;"></div>
-
-        <span class="statusBar_percentage">2%
-          (13hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:10:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=xh&amp;locale=en" title="Open in Translation Editor" class="table_link">xh<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:10:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Xhosa</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:10:files"><a href="/zanata/iteration/files/zanata-server/master/xh?" id="j_id78:data_table:10:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="xh" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:10:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
+   <div title="Total: 23211, Approved: 0, Translated: 18060, Draft: 0, Untranslated: 5151" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:85.58872948171125px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:24.41127051828874px;"></div>
 
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
+        <span class="statusBar_percentage">77%
+          (20.6hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:11:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=tl&amp;locale=en" title="Open in Translation Editor" class="table_link">tl<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:11:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">tl</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:11:files"><a href="/zanata/iteration/files/zanata-server/master/tl?" id="j_id78:data_table:11:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="tl" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:11:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
+</div></td><td id="iterationLanguageForm:data_table:0:j_idt142" class="rf-dt-c"> 08/01/13 15:24</td></tr><tr id="iterationLanguageForm:data_table:1" class="rf-dt-r"><td id="iterationLanguageForm:data_table:1:j_idt95" class="rf-dt-c">zh-Hant<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">中文 (繁體中文)</span></td><td id="iterationLanguageForm:data_table:1:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
 
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:12:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ca&amp;locale=en" title="Open in Translation Editor" class="table_link">ca<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:12:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">català</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:12:files"><a href="/zanata/iteration/files/zanata-server/master/ca?" id="j_id78:data_table:12:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ca" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:12:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
+   <div title="Total: 23211, Approved: 0, Translated: 0, Draft: 0, Untranslated: 23211" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:13:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=bn-IN&amp;locale=en" title="Open in Translation Editor" class="table_link">bn-IN<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:13:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">বাংলা (ভারত)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:13:files"><a href="/zanata/iteration/files/zanata-server/master/bn-IN?" id="j_id78:data_table:13:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="bn-IN" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:13:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 62" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.02193892677142px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.97806107322857px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:14:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=sr-Cyrl&amp;locale=en" title="Open in Translation Editor" class="table_link">sr-Cyrl<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:14:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Српски (Ћирилица)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:14:files"><a href="/zanata/iteration/files/zanata-server/master/sr-Cyrl?" id="j_id78:data_table:14:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="sr-Cyrl" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:14:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:15:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=nn&amp;locale=en" title="Open in Translation Editor" class="table_link">nn<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:15:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">nynorsk</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:15:files"><a href="/zanata/iteration/files/zanata-server/master/nn?" id="j_id78:data_table:15:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="nn" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:15:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 6" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.1956715090423955px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.8043284909576px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:16:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=de-CH&amp;locale=en" title="Open in Translation Editor" class="table_link">de-CH<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:16:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Deutsch (Schweiz)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:16:files"><a href="/zanata/iteration/files/zanata-server/master/de-CH?" id="j_id78:data_table:16:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="de-CH" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:16:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:17:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=te&amp;locale=en" title="Open in Translation Editor" class="table_link">te<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:17:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">తెలుగు</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:17:files"><a href="/zanata/iteration/files/zanata-server/master/te?" id="j_id78:data_table:17:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="te" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:17:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 62" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.02193892677142px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.97806107322857px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:18:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=bs&amp;locale=en" title="Open in Translation Editor" class="table_link">bs<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:18:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">bosanski</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:18:files"><a href="/zanata/iteration/files/zanata-server/master/bs?" id="j_id78:data_table:18:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="bs" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:18:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:19:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=br&amp;locale=en" title="Open in Translation Editor" class="table_link">br<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:19:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">brezhoneg</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:19:files"><a href="/zanata/iteration/files/zanata-server/master/br?" id="j_id78:data_table:19:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="br" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:19:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 0" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
         <div class="translationStatusBar statusBar_untranslated" style="width:110.0px;"></div>
 
         <span class="statusBar_percentage">0%
-          (13.5hrs)
+          (92.8hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:20:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ga&amp;locale=en" title="Open in Translation Editor" class="table_link">ga<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:20:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Gaeilge</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:20:files"><a href="/zanata/iteration/files/zanata-server/master/ga?" id="j_id78:data_table:20:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ga" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:20:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
+</div></td><td id="iterationLanguageForm:data_table:1:j_idt142" class="rf-dt-c"> </td></tr><tr id="iterationLanguageForm:data_table:2" class="rf-dt-r"><td id="iterationLanguageForm:data_table:2:j_idt95" class="rf-dt-c">ja-JP<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">日本語(日本)</span></td><td id="iterationLanguageForm:data_table:2:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
 
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:21:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=th&amp;locale=en" title="Open in Translation Editor" class="table_link">th<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:21:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">ไทย</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:21:files"><a href="/zanata/iteration/files/zanata-server/master/th?" id="j_id78:data_table:21:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="th" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:21:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
+   <div title="Total: 23211, Approved: 0, Translated: 0, Draft: 0, Untranslated: 23211" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:22:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=bn-BD&amp;locale=en" title="Open in Translation Editor" class="table_link">bn-BD<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:22:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">বাংলা (বাংলাদেশ)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:22:files"><a href="/zanata/iteration/files/zanata-server/master/bn-BD?" id="j_id78:data_table:22:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="bn-BD" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:22:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 6" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.1956715090423955px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.8043284909576px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:23:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=fi&amp;locale=en" title="Open in Translation Editor" class="table_link">fi<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:23:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">suomi</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:23:files"><a href="/zanata/iteration/files/zanata-server/master/fi?" id="j_id78:data_table:23:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="fi" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:23:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:24:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ta&amp;locale=en" title="Open in Translation Editor" class="table_link">ta<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:24:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">தமிழ்</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:24:files"><a href="/zanata/iteration/files/zanata-server/master/ta?" id="j_id78:data_table:24:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ta" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:24:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:25:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=pt-BR&amp;locale=en" title="Open in Translation Editor" class="table_link">pt-BR<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:25:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">português (Brasil)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:25:files"><a href="/zanata/iteration/files/zanata-server/master/pt-BR?" id="j_id78:data_table:25:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="pt-BR" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:25:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 78" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.5437296175511412px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.45627038244886px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.3hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:26:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ka&amp;locale=en" title="Open in Translation Editor" class="table_link">ka<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:26:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">ქართული</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:26:files"><a href="/zanata/iteration/files/zanata-server/master/ka?" id="j_id78:data_table:26:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ka" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:26:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 8" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.26089534538986064px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.73910465461014px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:27:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=sv&amp;locale=en" title="Open in Translation Editor" class="table_link">sv<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:27:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">svenska</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:27:files"><a href="/zanata/iteration/files/zanata-server/master/sv?" id="j_id78:data_table:27:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="sv" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:27:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:28:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=brx&amp;locale=en" title="Open in Translation Editor" class="table_link">brx<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:28:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">बड़ो</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:28:files"><a href="/zanata/iteration/files/zanata-server/master/brx?" id="j_id78:data_table:28:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="brx" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:28:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 3" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.09783575452119775px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.9021642454788px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:29:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=sl&amp;locale=en" title="Open in Translation Editor" class="table_link">sl<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:29:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">slovenščina</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:29:files"><a href="/zanata/iteration/files/zanata-server/master/sl?" id="j_id78:data_table:29:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="sl" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:29:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:30:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=sk&amp;locale=en" title="Open in Translation Editor" class="table_link">sk<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:30:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">slovenčina</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:30:files"><a href="/zanata/iteration/files/zanata-server/master/sk?" id="j_id78:data_table:30:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="sk" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:30:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:31:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ky&amp;locale=en" title="Open in Translation Editor" class="table_link">ky<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:31:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Kirghiz</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:31:files"><a href="/zanata/iteration/files/zanata-server/master/ky?" id="j_id78:data_table:31:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ky" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:31:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:32:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=da&amp;locale=en" title="Open in Translation Editor" class="table_link">da<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:32:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">dansk</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:32:files"><a href="/zanata/iteration/files/zanata-server/master/da?" id="j_id78:data_table:32:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="da" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:32:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:33:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=nds&amp;locale=en" title="Open in Translation Editor" class="table_link">nds<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:33:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Low German</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:33:files"><a href="/zanata/iteration/files/zanata-server/master/nds?" id="j_id78:data_table:33:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="nds" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:33:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:34:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=or&amp;locale=en" title="Open in Translation Editor" class="table_link">or<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:34:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">ଓଡ଼ିଆ</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:34:files"><a href="/zanata/iteration/files/zanata-server/master/or?" id="j_id78:data_table:34:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="or" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:34:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 62" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.02193892677142px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.97806107322857px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:35:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=sq&amp;locale=en" title="Open in Translation Editor" class="table_link">sq<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:35:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">shqipe</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:35:files"><a href="/zanata/iteration/files/zanata-server/master/sq?" id="j_id78:data_table:35:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="sq" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:35:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:36:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=cy&amp;locale=en" title="Open in Translation Editor" class="table_link">cy<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:36:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Cymraeg</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:36:files"><a href="/zanata/iteration/files/zanata-server/master/cy?" id="j_id78:data_table:36:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="cy" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:36:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:37:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=he&amp;locale=en" title="Open in Translation Editor" class="table_link">he<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:37:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">עברית</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:37:files"><a href="/zanata/iteration/files/zanata-server/master/he?" id="j_id78:data_table:37:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="he" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:37:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:38:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ta-IN&amp;locale=en" title="Open in Translation Editor" class="table_link">ta-IN<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:38:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">தமிழ் (இந்தியா)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:38:files"><a href="/zanata/iteration/files/zanata-server/master/ta-IN?" id="j_id78:data_table:38:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ta-IN" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:38:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 59" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:1.9241031722502224px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:108.07589682774977px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:39:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=kk&amp;locale=en" title="Open in Translation Editor" class="table_link">kk<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:39:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">қазақ тілі</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:39:files"><a href="/zanata/iteration/files/zanata-server/master/kk?" id="j_id78:data_table:39:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="kk" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:39:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 0" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
         <div class="translationStatusBar statusBar_untranslated" style="width:110.0px;"></div>
 
         <span class="statusBar_percentage">0%
-          (13.5hrs)
+          (92.8hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:40:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=en-US&amp;locale=en" title="Open in Translation Editor" class="table_link">en-US<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:40:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">English (United States)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:40:files"><a href="/zanata/iteration/files/zanata-server/master/en-US?" id="j_id78:data_table:40:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="en-US" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:40:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 0" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:2:j_idt142" class="rf-dt-c"> </td></tr><tr id="iterationLanguageForm:data_table:3" class="rf-dt-r"><td id="iterationLanguageForm:data_table:3:j_idt95" class="rf-dt-c">it<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">italiano</span></td><td id="iterationLanguageForm:data_table:3:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 0, Draft: 0, Untranslated: 23211" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
         <div class="translationStatusBar statusBar_untranslated" style="width:110.0px;"></div>
 
         <span class="statusBar_percentage">0%
-          (13.5hrs)
+          (92.8hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:41:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=cs&amp;locale=en" title="Open in Translation Editor" class="table_link">cs<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:41:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">čeština</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:41:files"><a href="/zanata/iteration/files/zanata-server/master/cs?" id="j_id78:data_table:41:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="cs" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:41:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 17" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:3:j_idt142" class="rf-dt-c"> </td></tr><tr id="iterationLanguageForm:data_table:4" class="rf-dt-r"><td id="iterationLanguageForm:data_table:4:j_idt95" class="rf-dt-c">zh-Hans<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">中文（简体中文）</span></td><td id="iterationLanguageForm:data_table:4:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 23211, Draft: 0, Untranslated: 0" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.554402608953454px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.44559739104655px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:110.0px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:0.0px;"></div>
 
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
+        <span class="statusBar_percentage">100%
+          (0hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:42:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=kn&amp;locale=en" title="Open in Translation Editor" class="table_link">kn<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:42:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">ಕನ್ನಡ</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:42:files"><a href="/zanata/iteration/files/zanata-server/master/kn?" id="j_id78:data_table:42:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="kn" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:42:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 62" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:4:j_idt142" class="rf-dt-c"> 08/01/13 15:24</td></tr><tr id="iterationLanguageForm:data_table:5" class="rf-dt-r"><td id="iterationLanguageForm:data_table:5:j_idt95" class="rf-dt-c">pt-BR<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">português (Brasil)</span></td><td id="iterationLanguageForm:data_table:5:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 20311, Draft: 0, Untranslated: 2900" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.02193892677142px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.97806107322857px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:96.25651630692344px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:13.74348369307656px;"></div>
 
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
+        <span class="statusBar_percentage">87%
+          (11.6hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:43:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=si&amp;locale=en" title="Open in Translation Editor" class="table_link">si<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:43:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">සිංහල</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:43:files"><a href="/zanata/iteration/files/zanata-server/master/si?" id="j_id78:data_table:43:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="si" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:43:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 6" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:5:j_idt142" class="rf-dt-c"> 08/01/13 15:24</td></tr><tr id="iterationLanguageForm:data_table:6" class="rf-dt-r"><td id="iterationLanguageForm:data_table:6:j_idt95" class="rf-dt-c">ko<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">한국어</span></td><td id="iterationLanguageForm:data_table:6:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 0, Draft: 0, Untranslated: 23211" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.1956715090423955px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.8043284909576px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:110.0px;"></div>
 
         <span class="statusBar_percentage">0%
-          (13.5hrs)
+          (92.8hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:44:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=gl&amp;locale=en" title="Open in Translation Editor" class="table_link">gl<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:44:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Galego</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:44:files"><a href="/zanata/iteration/files/zanata-server/master/gl?" id="j_id78:data_table:44:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="gl" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:44:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:6:j_idt142" class="rf-dt-c"> </td></tr><tr id="iterationLanguageForm:data_table:7" class="rf-dt-r"><td id="iterationLanguageForm:data_table:7:j_idt95" class="rf-dt-c">fr<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">français</span></td><td id="iterationLanguageForm:data_table:7:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 22697, Draft: 0, Untranslated: 514" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:107.56408599370988px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:2.4359140062901212px;"></div>
 
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
+        <span class="statusBar_percentage">97%
+          (2.1hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:45:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=pa&amp;locale=en" title="Open in Translation Editor" class="table_link">pa<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:45:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">ਪੰਜਾਬੀ</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:45:files"><a href="/zanata/iteration/files/zanata-server/master/pa?" id="j_id78:data_table:45:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="pa" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:45:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 63" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:7:j_idt142" class="rf-dt-c"> 08/01/13 15:24</td></tr><tr id="iterationLanguageForm:data_table:8" class="rf-dt-r"><td id="iterationLanguageForm:data_table:8:j_idt95" class="rf-dt-c">ru<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">русский</span></td><td id="iterationLanguageForm:data_table:8:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 0, Draft: 0, Untranslated: 23211" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.054550844945153px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.94544915505485px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:110.0px;"></div>
 
         <span class="statusBar_percentage">0%
-          (13.4hrs)
+          (92.8hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:46:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=la&amp;locale=en" title="Open in Translation Editor" class="table_link">la<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:46:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Latin</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:46:files"><a href="/zanata/iteration/files/zanata-server/master/la?" id="j_id78:data_table:46:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="la" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:46:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 6" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:8:j_idt142" class="rf-dt-c"> </td></tr><tr id="iterationLanguageForm:data_table:9" class="rf-dt-r"><td id="iterationLanguageForm:data_table:9:j_idt95" class="rf-dt-c">es<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">español</span></td><td id="iterationLanguageForm:data_table:9:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 20311, Draft: 0, Untranslated: 2900" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.1956715090423955px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.8043284909576px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:96.25651630692344px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:13.74348369307656px;"></div>
 
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
+        <span class="statusBar_percentage">87%
+          (11.6hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:47:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=pl&amp;locale=en" title="Open in Translation Editor" class="table_link">pl<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:47:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">polski</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:47:files"><a href="/zanata/iteration/files/zanata-server/master/pl?" id="j_id78:data_table:47:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="pl" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:47:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 19" class="translationStatusDiv">
+</div></td><td id="iterationLanguageForm:data_table:9:j_idt142" class="rf-dt-c"> 08/01/13 15:24</td></tr><tr id="iterationLanguageForm:data_table:10" class="rf-dt-r"><td id="iterationLanguageForm:data_table:10:j_idt95" class="rf-dt-c">ja<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><span class="nativeName">日本語</span></td><td id="iterationLanguageForm:data_table:10:j_idt124" class="rf-dt-c"><div xmlns="http://www.w3.org/1999/xhtml">
+
+   <div title="Total: 23211, Approved: 0, Translated: 20311, Draft: 0, Untranslated: 2900" class="translationStatusDiv">
         <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.619626445300919px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.38037355469908px;"></div>
+        <div class="translationStatusBar statusBar_translated" style="width:96.25651630692344px;"></div>
+        <div class="translationStatusBar statusBar_draft" style="width:0.0px;"></div>
+        <div class="translationStatusBar statusBar_untranslated" style="width:13.74348369307656px;"></div>
 
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
+        <span class="statusBar_percentage">87%
+          (11.6hrs)
         </span>
     </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:48:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=gu&amp;locale=en" title="Open in Translation Editor" class="table_link">gu<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:48:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">ગુજરાતી</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:48:files"><a href="/zanata/iteration/files/zanata-server/master/gu?" id="j_id78:data_table:48:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="gu" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:48:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 20, Need Review: 56" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.6522383634746517px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:1.8262674177290246px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.52149421879632px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.3hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:49:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ru&amp;locale=en" title="Open in Translation Editor" class="table_link">ru<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:49:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">русский</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:49:files"><a href="/zanata/iteration/files/zanata-server/master/ru?" id="j_id78:data_table:49:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ru" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:49:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 74" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.413281944856211px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.58671805514379px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.3hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:50:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=zh-Hans-CN&amp;locale=en" title="Open in Translation Editor" class="table_link">zh-Hans-CN<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:50:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">中文（简体中文、中国）</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:50:files"><a href="/zanata/iteration/files/zanata-server/master/zh-Hans-CN?" id="j_id78:data_table:50:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="zh-Hans-CN" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:50:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 16, Need Review: 72" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.5217906907797213px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.348058108508746px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.13015120071154px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.3hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:51:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=hr&amp;locale=en" title="Open in Translation Editor" class="table_link">hr<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:51:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">hrvatski</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:51:files"><a href="/zanata/iteration/files/zanata-server/master/hr?" id="j_id78:data_table:51:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="hr" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:51:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:52:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=es-MX&amp;locale=en" title="Open in Translation Editor" class="table_link">es-MX<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:52:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">español (México)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:52:files"><a href="/zanata/iteration/files/zanata-server/master/es-MX?" id="j_id78:data_table:52:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="es-MX" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:52:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 1" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.03261191817373258px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.96738808182627px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:53:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ro&amp;locale=en" title="Open in Translation Editor" class="table_link">ro<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:53:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">română</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:53:files"><a href="/zanata/iteration/files/zanata-server/master/ro?" id="j_id78:data_table:53:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ro" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:53:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:54:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=vi&amp;locale=en" title="Open in Translation Editor" class="table_link">vi<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:54:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Tiếng Việt</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:54:files"><a href="/zanata/iteration/files/zanata-server/master/vi?" id="j_id78:data_table:54:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="vi" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:54:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:55:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=hu&amp;locale=en" title="Open in Translation Editor" class="table_link">hu<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:55:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">magyar</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:55:files"><a href="/zanata/iteration/files/zanata-server/master/hu?" id="j_id78:data_table:55:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="hu" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:55:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 19" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.619626445300919px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.38037355469908px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:56:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ast&amp;locale=en" title="Open in Translation Editor" class="table_link">ast<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:56:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Asturian</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:56:files"><a href="/zanata/iteration/files/zanata-server/master/ast?" id="j_id78:data_table:56:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ast" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:56:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:57:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=lv&amp;locale=en" title="Open in Translation Editor" class="table_link">lv<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:57:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">latviešu</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:57:files"><a href="/zanata/iteration/files/zanata-server/master/lv?" id="j_id78:data_table:57:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="lv" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:57:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:58:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=lt&amp;locale=en" title="Open in Translation Editor" class="table_link">lt<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:58:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">lietuvių</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:58:files"><a href="/zanata/iteration/files/zanata-server/master/lt?" id="j_id78:data_table:58:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="lt" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:58:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:59:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=hi&amp;locale=en" title="Open in Translation Editor" class="table_link">hi<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:59:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">हिन्दी</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:59:files"><a href="/zanata/iteration/files/zanata-server/master/hi?" id="j_id78:data_table:59:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="hi" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:59:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 62" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.02193892677142px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.97806107322857px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:60:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=id&amp;locale=en" title="Open in Translation Editor" class="table_link">id<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:60:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Bahasa Indonesia</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:60:files"><a href="/zanata/iteration/files/zanata-server/master/id?" id="j_id78:data_table:60:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="id" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:60:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:61:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=mai&amp;locale=en" title="Open in Translation Editor" class="table_link">mai<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:61:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Maithili</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:61:files"><a href="/zanata/iteration/files/zanata-server/master/mai?" id="j_id78:data_table:61:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="mai" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:61:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 5" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.16305959086866292px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.83694040913134px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:62:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=es-ES&amp;locale=en" title="Open in Translation Editor" class="table_link">es-ES<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:62:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">español (España)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:62:files"><a href="/zanata/iteration/files/zanata-server/master/es-ES?" id="j_id78:data_table:62:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="es-ES" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:62:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 67" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.184998517640083px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.81500148235992px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:63:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ml&amp;locale=en" title="Open in Translation Editor" class="table_link">ml<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:63:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">മലയാളം</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:63:files"><a href="/zanata/iteration/files/zanata-server/master/ml?" id="j_id78:data_table:63:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ml" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:63:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 56" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:1.8262674177290246px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:108.17373258227097px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:64:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=mn&amp;locale=en" title="Open in Translation Editor" class="table_link">mn<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:64:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Mongolian</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:64:files"><a href="/zanata/iteration/files/zanata-server/master/mn?" id="j_id78:data_table:64:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="mn" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:64:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:65:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=eu&amp;locale=en" title="Open in Translation Editor" class="table_link">eu<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:65:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">euskara</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:65:files"><a href="/zanata/iteration/files/zanata-server/master/eu?" id="j_id78:data_table:65:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="eu" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:65:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:66:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=az&amp;locale=en" title="Open in Translation Editor" class="table_link">az<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:66:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">azərbaycanca</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:66:files"><a href="/zanata/iteration/files/zanata-server/master/az?" id="j_id78:data_table:66:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="az" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:66:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:67:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=is&amp;locale=en" title="Open in Translation Editor" class="table_link">is<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:67:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">íslenska</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:67:files"><a href="/zanata/iteration/files/zanata-server/master/is?" id="j_id78:data_table:67:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="is" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:67:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:68:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=mr&amp;locale=en" title="Open in Translation Editor" class="table_link">mr<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:68:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">मराठी</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:68:files"><a href="/zanata/iteration/files/zanata-server/master/mr?" id="j_id78:data_table:68:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="mr" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:68:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 62" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.02193892677142px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.97806107322857px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:69:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ms&amp;locale=en" title="Open in Translation Editor" class="table_link">ms<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:69:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Bahasa Melayu</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:69:files"><a href="/zanata/iteration/files/zanata-server/master/ms?" id="j_id78:data_table:69:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ms" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:69:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 7" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.22828342721612807px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.77171657278387px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:70:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=fa&amp;locale=en" title="Open in Translation Editor" class="table_link">fa<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:70:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">فارسی</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:70:files"><a href="/zanata/iteration/files/zanata-server/master/fa?" id="j_id78:data_table:70:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="fa" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:70:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 14" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.45656685443225614px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.54343314556775px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:71:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=as&amp;locale=en" title="Open in Translation Editor" class="table_link">as<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:71:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">অসমীয়া</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:71:files"><a href="/zanata/iteration/files/zanata-server/master/as?" id="j_id78:data_table:71:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="as" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:71:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 62" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.02193892677142px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.97806107322857px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:72:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=ar&amp;locale=en" title="Open in Translation Editor" class="table_link">ar<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:72:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">العربية</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:72:files"><a href="/zanata/iteration/files/zanata-server/master/ar?" id="j_id78:data_table:72:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="ar" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:72:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:73:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=pt-PT&amp;locale=en" title="Open in Translation Editor" class="table_link">pt-PT<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:73:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">português (Portugal)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:73:files"><a href="/zanata/iteration/files/zanata-server/master/pt-PT?" id="j_id78:data_table:73:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="pt-PT" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:73:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:74:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=de-DE&amp;locale=en" title="Open in Translation Editor" class="table_link">de-DE<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:74:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Deutsch (Deutschland)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:74:files"><a href="/zanata/iteration/files/zanata-server/master/de-DE?" id="j_id78:data_table:74:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="de-DE" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:74:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 66" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:2.1523865994663502px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:107.84761340053365px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:75:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=sr-Latn&amp;locale=en" title="Open in Translation Editor" class="table_link">sr-Latn<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:75:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Srpski (Latinica)</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:75:files"><a href="/zanata/iteration/files/zanata-server/master/sr-Latn?" id="j_id78:data_table:75:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="sr-Latn" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:75:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:76:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=el&amp;locale=en" title="Open in Translation Editor" class="table_link">el<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:76:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Ελληνικά</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:76:files"><a href="/zanata/iteration/files/zanata-server/master/el?" id="j_id78:data_table:76:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="el" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:76:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 11" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.3587310999110584px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.64126890008895px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:77:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=nb&amp;locale=en" title="Open in Translation Editor" class="table_link">nb<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:77:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">norsk bokmål</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:77:files"><a href="/zanata/iteration/files/zanata-server/master/nb?" id="j_id78:data_table:77:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="nb" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:77:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 7" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.22828342721612807px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.77171657278387px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:78:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=am&amp;locale=en" title="Open in Translation Editor" class="table_link">am<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:78:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">አማርኛ</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:78:files"><a href="/zanata/iteration/files/zanata-server/master/am?" id="j_id78:data_table:78:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="am" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:78:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:79:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=eo&amp;locale=en" title="Open in Translation Editor" class="table_link">eo<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:79:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">esperanto</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:79:files"><a href="/zanata/iteration/files/zanata-server/master/eo?" id="j_id78:data_table:79:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="eo" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:79:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:80:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=et&amp;locale=en" title="Open in Translation Editor" class="table_link">et<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:80:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">eesti</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:80:files"><a href="/zanata/iteration/files/zanata-server/master/et?" id="j_id78:data_table:80:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="et" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:80:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 10" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.32611918173732585px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.67388081826267px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:81:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=es&amp;locale=en" title="Open in Translation Editor" class="table_link">es<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:81:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">español</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:81:files"><a href="/zanata/iteration/files/zanata-server/master/es?" id="j_id78:data_table:81:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="es" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:81:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 60" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:1.956715090423955px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:108.04328490957604px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.4hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:82:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=nl&amp;locale=en" title="Open in Translation Editor" class="table_link">nl<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:82:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Nederlands</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:82:files"><a href="/zanata/iteration/files/zanata-server/master/nl?" id="j_id78:data_table:82:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="nl" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:82:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 18" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.5870145271271865px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.41298547287282px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr><tr class="rich-table-row "><td class="rich-table-cell " id="j_id78:data_table:83:j_id83"><a href="/zanata/webtrans/translate?project=zanata-server&amp;iteration=master&amp;localeId=af&amp;locale=en" title="Open in Translation Editor" class="table_link">af<img alt="" class="rich-spacer " height="1" id="j_id78:data_table:83:j_id91" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="5px"><span class="nativeName">Afrikaans</span></a></td><td class="rich-table-cell  centered" id="j_id78:data_table:83:files"><a href="/zanata/iteration/files/zanata-server/master/af?" id="j_id78:data_table:83:j_id98" class="table_link">
-                <span class="icon-docs icon"></span></a>
-              <!--  <h:outputLink value="/zanata/webtrans/Application.seam" styleClass="table_link">
-                <f:param name="project" value="zanata-server" />
-                <f:param name="iteration" value="master" />
-                <f:param name="localeId" value="af" />
-                <f:param name="locale" value="en" />
-                <span class="icon-docs icon"/>
-              </h:outputLink> --></td><td class="rich-table-cell " id="j_id78:data_table:83:j_id104"><div xmlns="http://www.w3.org/1999/xhtml">
-   <div title="Total: 3373, Translated: 0, Need Review: 9" class="translationStatusDiv">
-        <div class="translationStatusBar statusBar_approved" style="width:0.0px;"></div>
-        <div class="translationStatusBar statusBar_needReview" style="width:0.29350726356359325px;"></div>
-        <div class="translationStatusBar statusBar_untranslated" style="width:109.7064927364364px;"></div>
-
-        <span class="statusBar_percentage">0%
-          (13.5hrs)
-        </span>
-    </div>
-</div></td></tr></tbody></table><input type="hidden" autocomplete="off" name="j_id78" value="j_id78"><input type="hidden" autocomplete="off" name="autoScroll" value=""><script type="text/javascript">function clear_j_id78() {
-_clearJSFFormParameters('j_id78','',['j_id78:j_idcl','j_id78:_link_hidden_']);
-}
-function clearFormHiddenParams_j_id78(){clear_j_id78();}
-function clearFormHiddenParams_j_id78(){clear_j_id78();}
-clear_j_id78();</script><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id6" autocomplete="off"></form>
+</div></td><td id="iterationLanguageForm:data_table:10:j_idt142" class="rf-dt-c"> 08/01/13 15:24</td></tr></tbody><tbody id="iterationLanguageForm:data_table:sc"><tr><td style="display: none"><script type="text/javascript">new RichFaces.ui.DataTable("iterationLanguageForm:data_table",{"ajaxEventOptions":{} } )</script></td></tr></tbody></table><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="3048607773983582057:-7786390797961153297" autocomplete="off">
+</form>
             </div>
           </div>
         </div>
-        <div class="yui-b"><div class="rich-panel " id="loggedIn"><div class="rich-panel-header " id="loggedIn_header">Actions</div><div class="rich-panel-body " id="loggedIn_body"><a href="/zanata/iteration/edit/zanata-server/master" id="j_id125" class="action_link">Edit Version</a><a href="/zanata/iteration/source_files/zanata-server/master?" id="j_id128" class="action_link">Source Documents</a><a href="/zanata/iteration/view/zanata-server/master?actionMethod=iteration%2Fview.xhtml%3AconfigurationAction.getData%28%29&amp;cid=86793" id="j_id131" title="Generate project configuration file (zanata.xml)" class="action_link">Config file</a><span id="copyTransLink"><a href="/zanata/iteration/copytrans/zanata-server/master?cid=86793" id="j_id134" title="Copy approved translations from other similar documents." class="action_link">Copy Translations</a></span>
-                <a href="#" class="action_link" onclick="document.getElementById('versionSearchPanel').component.show()">Request To Join Group</a></div></div><div class="rich-panel " id="j_id139"><div class="rich-panel-header " id="j_id139_header">Joined Groups</div><div class="rich-panel-body " id="j_id139_body"><a href="/zanata/version-group/view/zanata" id="j_id141:0:j_id142" class="action_link">Zanata</a></div></div><form id="j_id144" name="j_id144" method="post" action="/zanata/iteration/view.seam" target=""><div id="j_id144:copyTransIndicator">
-                <!-- minValue is -1 because of a bug when 0 is used --><div id="j_id144:copyTransProgressBar"><span style="display: none;"><script type="text/javascript">new ProgressBar('j_id144:copyTransProgressBar',{'markup':null,'minValue':'\x2D1','value':2147483647,'state':'completeState','options':{'pollId':'j_id144:copyTransProgressBar','ignoreDupResponses':true,'implicitEventsQueue':'j_id144:copyTransProgressBar','similarityGroupingId':'j_id144:copyTransProgressBar','parameters':{'percent':'percent','ajaxSingle':'j_id144:copyTransProgressBar','j_id144:copyTransProgressBar':'j_id144:copyTransProgressBar'} ,'pollinterval':2000} ,'maxValue':0} )
-;A4J.AJAX.StopPoll('j_id144:copyTransProgressBar');
-</script></span></div><span id="j_id144:j_id148">
-                    </span></div><input type="hidden" autocomplete="off" name="j_id144" value="j_id144"><input type="hidden" autocomplete="off" name="autoScroll" value=""><script type="text/javascript">function clear_j_id144() {
-_clearJSFFormParameters('j_id144','',['j_id144:_link_hidden_','j_id144:j_idcl']);
-}
-function clearFormHiddenParams_j_id144(){clear_j_id144();}
-function clearFormHiddenParams_j_id144(){clear_j_id144();}
-clear_j_id144();</script><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id6" autocomplete="off"></form><div id="versionSearchPanel" style="display: none;"><input autocomplete="off" id="versionSearchPanelOpenedState" name="versionSearchPanelOpenedState" type="hidden"><div class="rich-modalpanel " id="versionSearchPanelContainer" style="position: absolute; display: none; z-index: 100; background-color: inherit;"><div class="rich-mpnl-mask-div-opaque rich-mpnl-mask-div" id="versionSearchPanelDiv" style="z-index: -1;"><button class="rich-mpnl-button" id="versionSearchPanelFirstHref"></button></div><div class="rich-mpnl-panel"><div class="rich-mp-container" id="versionSearchPanelCDiv" style="position: absolute; left: 0px; top: 0px; z-index: 9;"><div class="rich-mpnl-shadow" id="versionSearchPanelShadowDiv"></div><div class="rich-mpnl-ovf-hd rich-mpnl-trim rich-mpnl-content" id="versionSearchPanelContentDiv"><table border="0" cellpadding="0" cellspacing="0" class="rich-mp-content-table" id="versionSearchPanelContentTable" style="height: 100%; width: 100%;"><tbody><tr style="height: 99%"><td class="rich-mpnl-body" valign="top"><form id="versionSearch:j_id153" name="versionSearch:j_id153" method="post" action="/zanata/iteration/view.seam" target="">
-                    <h1>Find Group</h1>
-                    <p><input type="text" name="versionSearch:j_id153:j_id155" onkeydown="return submitSearchOnEnter(event)"><input id="versionSearch:j_id153:searchBtn" name="versionSearch:j_id153:searchBtn" onclick="A4J.AJAX.Submit('versionSearch:j_id153',event,{'status':'versionSearch:j_id158:status','similarityGroupingId':'versionSearch:j_id153:searchBtn','parameters':{'versionSearch:j_id153:searchBtn':'versionSearch:j_id153:searchBtn'} } );return false;" value="Search" type="button"><input id="versionSearch:j_id153:j_id156" name="versionSearch:j_id153:j_id156" onclick="document.getElementById('versionSearchPanel').component.hide(); return false;;A4J.AJAX.Submit('versionSearch:j_id153',event,{'similarityGroupingId':'versionSearch:j_id153:j_id156','parameters':{'versionSearch:j_id153:j_id156':'versionSearch:j_id153:j_id156'} } );return false;" value="Close" type="button">
-
-                    </p><input type="hidden" autocomplete="off" name="versionSearch:j_id153" value="versionSearch:j_id153"><input type="hidden" autocomplete="off" name="autoScroll" value=""><script type="text/javascript">function clear_versionSearch_3Aj_id153() {
-_clearJSFFormParameters('versionSearch:j_id153','',['versionSearch:j_id153:_link_hidden_','versionSearch:j_id153:j_idcl']);
-}
-function clearFormHiddenParams_versionSearch_3Aj_id153(){clear_versionSearch_3Aj_id153();}
-function clearFormHiddenParams_versionSearch_j_id153(){clear_versionSearch_3Aj_id153();}
-clear_versionSearch_3Aj_id153();</script><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id6" autocomplete="off"></form><span id="versionSearch:j_id158:status"><span id="versionSearch:j_id158:status.start" style="display: none">Searching...</span><span id="versionSearch:j_id158:status.stop"></span></span><form id="versionSearch:searchResults" name="versionSearch:searchResults" method="post" action="/zanata/iteration/view.seam" target=""><span id="versionSearch:searchResults:noResultsMessage">No result to display.</span><input type="hidden" autocomplete="off" name="versionSearch:searchResults" value="versionSearch:searchResults"><input type="hidden" autocomplete="off" name="autoScroll" value=""><script type="text/javascript">function clear_versionSearch_3AsearchResults() {
-_clearJSFFormParameters('versionSearch:searchResults','',['versionSearch:searchResults:_link_hidden_','versionSearch:searchResults:j_idcl']);
-}
-function clearFormHiddenParams_versionSearch_3AsearchResults(){clear_versionSearch_3AsearchResults();}
-function clearFormHiddenParams_versionSearch_searchResults(){clear_versionSearch_3AsearchResults();}
-clear_versionSearch_3AsearchResults();</script><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id6" autocomplete="off"></form></td></tr></tbody></table></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerN" style="width: 40px; height: 4px; cursor: n-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerE" style="height: 40px; width: 4px; cursor: e-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerS" style="width: 40px; height: 4px; cursor: s-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerW" style="height: 40px; width: 4px; cursor: w-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerNWU" style="width: 40px; height: 4px; cursor: nw-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerNEU" style="height: 40px; width: 4px; cursor: ne-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerNEL" style="width: 40px; height: 4px; cursor: ne-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerSEU" style="height: 40px; width: 4px; cursor: se-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerSEL" style="width: 40px; height: 4px; cursor: se-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerSWL" style="height: 40px; width: 4px; cursor: sw-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerSWU" style="width: 40px; height: 4px; cursor: sw-resize;"></div><div class="rich-mpnl-resizer" id="versionSearchPanelResizerNWL" style="height: 40px; width: 4px; cursor: nw-resize;"></div></div></div><div class="rich-mpnl-mask-div rich-mpnl-mask-div-transparent" id="versionSearchPanelCursorDiv" style="z-index: -200;"><button class="rich-mpnl-button" id="versionSearchPanelLastHref"></button></div><script type="text/javascript">new ModalPanel('versionSearchPanel',
-        {
-          width: 530,
-          height: 440,
-
-          minWidth: -1,
-          minHeight: -1,
-
-          resizeable: true,
-          moveable: true,
-
-          left: "auto",
-          top: "auto",
-
-          zindex: 100,onresize: '',onmove: '',onshow: '',onhide: '',onbeforeshow: '',onbeforehide: '',
-          domElementAttachment: "",
-          keepVisualState: false,
-          showWhenRendered: false,
-          selectBehavior: "disable",
-
-          autosized: false,
-          overlapEmbedObjects: false});</script></div><script type="text/javascript"></script></div>
+        <div class="yui-b">
+<form id="j_idt167" name="j_idt167" method="post" action="/iteration/view.seam" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt167" value="j_idt167">
+<input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="3048607773983582057:-7786390797961153297" autocomplete="off">
+</form>
         </div>
       </div>
     </div>

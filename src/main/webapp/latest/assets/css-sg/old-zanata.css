@@ -180,7 +180,7 @@ input[readonly] {
 }
 
 textarea.code_editor {
-  font-family: Courier;
+  font-family: Courier, monospace;
   font-size: 13px;
   font-weight: normal;
   width: 98%;

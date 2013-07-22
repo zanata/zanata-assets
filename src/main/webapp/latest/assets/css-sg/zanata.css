@@ -23,7 +23,9 @@ select, input, button, textarea, button {
   font: 99% "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
-a {
+a,
+a:link,
+a:visited {
   color: #4e9fdd;
   text-decoration: none;
   cursor: pointer;
@@ -36,10 +38,6 @@ a {
 a:hover,
 a:focus {
   color: #2479bb;
-}
-
-a:focus {
-  outline: thin dotted;
 }
 
 a:active,
@@ -115,7 +113,7 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
   margin-right: 2px;
 }
 
-.button, button, input[type="reset"], input[type="submit"], input[type="button"], input[type="submit"].projectSearchButton, a.button, a.action_link {
+.button, button, input[type="reset"], input[type="submit"], input[type="button"], input[type="submit"].projectSearchButton, a.button, a.action_link, span.action_link {
   border: none;
   padding: 0.375em 0.75em;
   background-color: white;
@@ -138,11 +136,11 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
-.button:hover, button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, a.action_link:hover {
+.button:hover, button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, a.action_link:hover, span.action_link:hover {
   background-color: #f5f7f8;
   color: black;
 }
-.button:active, button:active, input[type="reset"]:active, input[type="submit"]:active, input[type="button"]:active, a.action_link:active {
+.button:active, button:active, input[type="reset"]:active, input[type="submit"]:active, input[type="button"]:active, a.action_link:active, span.action_link:active {
   background-color: #e6e8ea;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -153,7 +151,7 @@ input.with_icon {
   background-position: 5px 50%;
   background-repeat: no-repeat;
   padding: 3px 3px 3px 25px;
-  height: 22px;
+  line-height: 20px;
   width: 280px;
   font-size: 16px;
 }
@@ -162,6 +160,15 @@ input[readonly] {
   background-color: #eeeeee;
   font-style: italic;
   color: #545454;
+}
+
+label.readOnlyLabel {
+  font-size: 14px;
+  color: #545454;
+  border: 1px solid #C5C5C5;
+  border-radius: 3px;
+  padding: 5px;
+  line-height: 20px;
 }
 
 /* -------------------- End Generic Base CSS ------------------------------ */
@@ -222,10 +229,6 @@ td.topAlignment {
   float: right;
 }
 
-#breadcrumbs_panel {
-  height: 100%;
-}
-
 .breadcrumbs-seperator {
   padding: 0 8px;
 }
@@ -237,7 +240,7 @@ td.topAlignment {
 
 a.breadcrumbs_home, a.breadcrumbs_home:hover {
   font-size: 13px;
-  color: #4e9fdd;
+  color: #000000;
 }
 
 a.breadcrumbs_link {
@@ -289,20 +292,20 @@ a.breadcrumbs_link:hover {
   padding: 5px;
   margin: 5px;
   border: 1px dotted lightGrey;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .inactive_message {
   font-size: 14px;
   padding: 5px;
-  color: #004BA9;
+  color: #4e9fdd;
 }
 
 .inactive_message_bold {
   font-weight: bold;
   font-size: 14px;
   padding: 5px;
-  color: #004BA9;
+  color: #4e9fdd;
   display: block;
 }
 
@@ -310,7 +313,7 @@ a.breadcrumbs_link:hover {
   padding-left: 2px;
   padding-right: 2px;
   font-size: 16px;
-  color: #004BA9;
+  color: #4e9fdd;
 }
 
 .message {
@@ -459,7 +462,7 @@ table.fullwidth {
 }
 
 td.wrapped {
-  word-break: break-word;
+  word-break: break-all;
   word-wrap: break-word;
 }
 
@@ -467,27 +470,29 @@ a.action_link span {
   font-size: 18px;
 }
 
-a.action_link {
+a.action_link, span.action_link {
   background-color: #4e9fdd;
   color: #f2f2f2;
   display: block;
   text-align: center;
   margin-bottom: 0.375em;
 }
-a.action_link:hover {
+a.action_link:hover, span.action_link:hover {
   background-color: #2479bb;
   color: white;
 }
-a.action_link:active {
+a.action_link:active, span.action_link:active {
   background-color: #416988;
   color: #d9e1e7;
 }
 
-a.disabled {
+a.disabled,
+span.disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-a.disabled:hover {
+a.disabled:hover,
+span.disabled:hover {
   background-color: inherit;
   color: inherit;
 }
@@ -508,7 +513,15 @@ a.table_link {
   outline: none;
 }
 
-a.table_link:hover {
+a.table_icon_link {
+  font-size: 20px;
+  color: #454545;
+  text-decoration: none;
+  text-align: right;
+  outline: none;
+}
+
+a.table_link:hover, a.table_icon_link:hover {
   color: #2479bb;
 }
 
@@ -519,7 +532,7 @@ a.table_link:hover {
 
 a.obsolete_link, a.obsolete_link:visited, a.obsolete_link:link {
   font-style: italic;
-  color: #C35817;
+  color: #416988;
   text-decoration: line-through;
 }
 
@@ -629,21 +642,38 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
 
 /* -----------------------  End Loading Frame CSS (loading.xhtml)  -------------------------*/
 /* -----------------------  JSF components CSS  -------------------------*/
-/* Copy of Richfaces Table styles*/
-.rich-table-thead {
-  /*border-bottom: solid 1px silver;*/
+/* ====================== Rich Data Table ==========================*/
+table {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
 }
 
-.rich-table-subheader th:first-child {
+table.rf-dt {
+  width: 100%;
+  empty-cells: show;
+  border: 0;
+  background-color: #f5f7f8;
+  margin-top: 1.5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.rf-dt-shdr th:first-child {
   border-top-left-radius: 2px;
 }
 
-.rich-table-subheader th:last-child {
+.rf-dt-shdr th:last-child {
   border-top-right-radius: 2px;
   border-right: 0;
 }
 
-.rich-table-subheadercell {
+/* Header cell */
+th.rf-dt-shdr-c {
   padding: 15px 8px 15px 8px;
   text-align: center;
   font-size: 13px;
@@ -658,37 +688,12 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   z-index: 2;
 }
 
-.rich-table .rich-table-header {
-  background-image: none;
-  padding: 2px 3px;
-}
-
-.rich-table-headercell {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  text-align: center;
-}
-
-.rich-table {
-  width: 100%;
-  empty-cells: show;
-  border: 0;
-  background-color: #f5f7f8;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.rich-table tbody tr {
-  border-top: 1px solid #a2b4c3;
-}
-
-.rich-table tbody tr:hover {
+.rf-dt tbody tr:hover {
   background-color: #fdfdfd;
 }
 
-.rich-table-cell {
+/* Table cell */
+td.rf-dt-c {
   padding: 14px;
   font-size: 14px;
   color: #595959;
@@ -710,27 +715,36 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   border-width: 0px;
 }
 
-/* End of Richfaces Table styles */
-/* Copy of Richfaces Panel styles*/
-.rich-panel .rich-panel-header {
+/* ====================== End Rich Data Table ========================== */
+/* ====================== Rich Data Scroller =========================== */
+/* Enabled Buttons */
+a.rf-ds-btn:hover {
+  color: #000000;
+  background-color: #dcdcdc;
+}
+
+/* Disabled Buttons */
+span.rf-ds-dis {
+  background-color: transparent;
   background-image: none;
-  padding: 6px;
-  font-size: 12px;
+  border-radius: 2px;
 }
 
-.rich-panel-header {
-  border-radius: 2px 2px 0 0;
-  text-align: center;
-  border-style: solid;
-  border-color: #4e9fdd;
-  background-color: #4e9fdd;
-  font-size: 11px;
-  color: white;
-  font-weight: bold;
-  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+/* Number button */
+a.rf-ds-nmb-btn {
+  border-top-color: transparent;
+  background-image: none;
 }
 
-.rich-panel {
+a.rf-ds-nmb-btn:hover {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+}
+
+/* ====================== End Rich Data Scroller =========================== */
+/* ====================== Rich Panel =========================== */
+div.rf-p {
   border-radius: 2px;
   margin-bottom: 1.5em;
   background-color: white;
@@ -741,19 +755,8 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   padding: 0;
 }
 
-.rich-panel-body {
-  padding: 10px;
-  font-size: 14px;
-  border: none;
-  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* End of Richfaces Panel styles */
-/* Copy of Richfaces Simple toggle styles*/
-.rich-stglpanel-header {
+/* Header */
+.rf-p .rf-p-hdr {
   background-image: none;
   padding: 10px 8px;
   font-size: 12px;
@@ -764,131 +767,139 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
-.rich-stglpanel {
-  background-image: none;
-  padding: 2px 3px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+/* Body */
+.rf-p .rf-p-b {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ====================== Rich Data Panel =========================== */
+/* ====================== Rich Tab Panel & Tabs =========================== */
+/* Header (where the tabs go) */
+div.rf-tab-hdr-tabline-vis.rf-tab-hdr-tabline-top {
+  background: none;
   border: none;
 }
 
-.rich-stglpanel-body {
-  overflow: auto;
-  background: #EEE;
+/* Header seaparator from content */
+div.rf-tab-hdr-brd {
+  border: none;
+  background-color: transparent;
 }
 
-.rich-stglpanel-body .noBorderTable {
-  background: #FFFFFF;
-  box-shadow: none;
+/* Tab (common) */
+td.rf-tab-hdr-act.rf-tab-hdr-top {
+  background-image: none;
+  border: 1px solid #4e9fdd;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  padding: 5px 20px 0 20px;
 }
 
-.rich-stglpanel-body .noBorderTable tr:hover {
-  background-color: inherit;
+/* Inactive Tab */
+td.rf-tab-hdr-inact.rf-tab-hdr-top {
+  color: #4e9fdd;
+  background-color: #eeeeee;
+  background-image: none;
+  border: 1px solid #4e9fdd;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  padding: 5px 20px 0 20px;
 }
 
-/* End of Richfaces Simple toggle styles */
+/* Active Tab */
+td.rf-tab-hdr-act.rf-tab-hdr-top {
+  color: #ffffff;
+  background-color: #4e9fdd;
+}
+
+/* Tab contents */
+div.rf-tab-cnt {
+  border: none;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+
+div.rf-tab-hdr-brd {
+  height: 0px;
+}
+
+/* ====================== End Rich Tab Panel & Tabs =========================== */
+/* ====================== Rich Dialogs =========================== */
+/* Dialog content */
+div.rf-pp-cntr {
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+/* Dialog Shadow */
+div.rf-pp-shdw {
+  border-radius: 5px;
+}
+
+/* Header */
+div.rf-pp-hdr {
+  background-image: none;
+  background-color: #4e9fdd;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 7px;
+}
+
+/* Body */
+div.rf-pp-cnt {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+/* ====================== End Rich Dialogs =========================== */
+/* ====================== Collapsible panel =========================== */
+div.rf-cp-hdr {
+  background-image: none;
+  background-color: #4e9fdd;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+div.rf-cp-lbl-colps, div.rf-cp-lbl-exp {
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+div.rf-cp {
+  padding: 0;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+/* ====================== End Collapsible panel =========================== */
 .inline_cell_item {
   width: 100%;
   float: left;
   margin: 0px;
 }
 
-.rich-dtascroller-table {
-  border: none;
-}
-
-.rich-mpnl-header {
-  background: #4e9fdd;
-  border-color: #4e9fdd;
-}
-
-/* Richfaces Data scroller styles */
-.rich-datascr {
-  margin-bottom: -1.6em;
-}
-
-.rich-table {
-  margin-top: 1.4em;
-}
-
-.rich-datascr-button:active {
-  background: #CCC;
-  background: -moz-linear-gradient(top, #dddddd 0%, white 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, white));
-  background: -webkit-linear-gradient(top, #dddddd 0%, white 100%);
-  background: -o-linear-gradient(top, #dddddd 0%, white 100%);
-  background: -ms-linear-gradient(top, #dddddd 0%, white 100%);
-  background: linear-gradient(to bottom, #dddddd 0%, #ffffff 100%);
-}
-
-.rich-datascr-button-dsbld {
-  color: silver;
-  cursor: default;
-}
-
-.rich-datascr-button-dsbld:hover {
-  cursor: default;
-}
-
-.rich-datascr-button {
-  border: none;
-  width: 23px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 14px;
-  background: none;
-}
-
-.rich-datascr-act {
-  color: #444c54;
-  border: 0px;
-  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  padding: 3px;
-}
-
-.rich-datascr-inact {
-  cursor: pointer;
-  text-align: center;
-  border: 0px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  color: #4e9fdd;
-  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  padding: 0 0.375em;
-}
-.rich-datascr-inact:hover {
-  color: #2479bb;
-}
-
-/* End Richfaces Data scroller styles */
-/* Richfaces Tab panel styles */
-.rich-tab-active {
-  background-color: #4e9fdd;
-  border-color: #4e9fdd;
-  color: #ffffff;
-}
-
-.rich-tab-inactive {
-  background-color: #eeeeee;
-}
-
-.rich-tabpanel-content {
-  background: white;
-}
-
-/* End Richfaces Tab panel styles */
 /* -----------------------  End JSF components CSS  -------------------------*/
+/* -----------------------  Data Grid with no borders  -------------------------*/
+table.noBorderDataGrid {
+  border: none;
+  background-color: transparent;
+}
+
+td.rf-dg-c {
+  border: none;
+  padding: 7px;
+}
+
 /* -----------------------  Login form CSS  -------------------------*/
 input[type="text"].loginForm_input, input[type="password"].loginForm_input {
-  height: 22px;
+  line-height: 22px;
   width: 250px;
   font-size: 16px;
   font-weight: normal;
@@ -908,7 +919,7 @@ input[type="text"].loginForm_input, input[type="password"].loginForm_input {
 }
 
 .statusBar_percentage {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: bold;
   padding-left: 1px;
 }
@@ -931,10 +942,14 @@ input[type="text"].loginForm_input, input[type="password"].loginForm_input {
 }
 
 .statusBar_approved {
+  background-color: #4e9fdd;
+}
+
+.statusBar_translated {
   background-color: #70a98b;
 }
 
-.statusBar_needReview {
+.statusBar_draft {
   background-color: #e0c350;
 }
 
@@ -960,14 +975,25 @@ input.language_action_button {
   background-color: #FEEDEF;
 }
 
+.roleMsg {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-bottom: 1.5em;
+}
+
+.roleMsg input {
+  vertical-align: middle;
+  margin-left: 2em;
+}
+
 /* -----------------------  End Language Administration CSS  -------------------------*/
 /* -----------------------  Project iteration CSS  -------------------------*/
 .iterations table.version_details_panel tr:hover {
-  background: #FFFFF;
+  background: #FFF;
 }
 
 .iterations table.version_details_panel tr:hover {
-  background: #FFFFF;
+  background: #FFF;
 }
 
 .iterations .rich-table tbody tr:hover .version_details_panel {
@@ -999,12 +1025,12 @@ a.version_language_list {
 
 span.readOnlyIcon {
   font-size: 16px;
-  color: #B62918;
+  color: #e0575b;
 }
 
 span.obsoleteIcon {
   font-size: 16px;
-  color: #B62918;
+  color: #e0575b;
 }
 
 span.expendIcon {
@@ -1043,6 +1069,12 @@ a.version_link:hover {
   color: #595959;
 }
 
+a.maintainer_email {
+  font-weight: bold;
+  color: #595959;
+  text-decoration: underline;
+}
+
 a.table_link span.nativeName, span.nativeName {
   font-size: 11px;
   font-style: italic;
@@ -1051,7 +1083,7 @@ a.table_link span.nativeName, span.nativeName {
 /* -----------------------  End project iteration CSS  -------------------------*/
 /* -----------------------  Project Iteration Files CSS  -----------------------------*/
 .translate_restriction_title {
-  color: #B62918;
+  color: #e0575b;
 }
 
 .translate_restriction_mssg_row {
@@ -1060,6 +1092,7 @@ a.table_link span.nativeName, span.nativeName {
 
 input.filter_input {
   width: 120px;
+  line-height: 16px;
 }
 
 td.actionCol {
@@ -1074,25 +1107,30 @@ select.headerInput {
 /* -----------------------  Project Iteration Copy Trans CSS  -----------------------------*/
 .copy_trans_options_table td {
   padding: 5px 5px 5px 5px;
+  font-size: 13px;
+}
+
+.copy_trans_options_table th {
+  font-size: 14px;
 }
 
 .copy_trans_options_table td.reject_action, .reject_action {
-  background-color: red;
+  background-color: #e0575b;
   text-align: center;
 }
 
-.copy_trans_options_table td.approved_action, .approved_action {
-  background-color: #099b09;
+.copy_trans_options_table td.translated_action, .translated_action {
+  background-color: #70a98b;
   text-align: center;
 }
 
 .copy_trans_options_table td.downgrade_action, .downgrade_action {
-  background-color: #ffc000;
+  background-color: #e0c350;
   text-align: center;
 }
 
 .copy_trans_options_table td.ignore_action, .ignore_action {
-  background-color: #ffffff;
+  background-color: #c6d2db;
   text-align: center;
 }
 
@@ -1159,16 +1197,16 @@ div.glosaryDeleteWarn span.warn {
 /* ------------------------ End Glossary Page CSS --------------------------------------*/
 /* ------------------------ Admin Page CSS -------------------------------------*/
 a.admin_link {
-  font-size: 1.0em;
+  font-size: 13px;
   font-weight: bold;
-  color: #7092C3;
+  color: #4e9fdd;
   text-decoration: none;
   text-align: center;
   outline: none;
 }
 
 a.admin_link:hover {
-  color: #990000;
+  color: #2479bb;
 }
 
 .admin_link_div .admin_link_img {
@@ -1180,7 +1218,7 @@ a.admin_link:hover {
 }
 
 .admin_link_div {
-  border: 1px solid #7092C3;
+  border: 1px solid #4e9fdd;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -1192,8 +1230,44 @@ a.admin_link:hover {
 }
 
 .admin_link_div:hover {
-  border: 1px solid #990000;
+  border: 1px solid #2479bb;
   background-color: #F3F2F2;
+}
+
+.stats_container {
+  padding: 8px;
+  border: 1px dotted gray;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.stats_label {
+  font-size: 14px;
+  font-weight: bold;
+  width: 170px;
+  display: inline-block;
+  color: #0085CC;
+}
+
+.stats_value {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 25px;
+  color: #e3824e;
+}
+
+.stats_sub_container {
+  padding: 4px;
+}
+
+.stats_sub_container .stats_label {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.stats_sub_container .stats_value {
+  font-size: 14px;
+  font-weight: normal;
 }
 
 /* ------------------------ End Admin Page CSS --------------------------------------*/

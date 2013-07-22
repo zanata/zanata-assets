@@ -1492,9 +1492,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
   top: -9999px;
   left: -9999px;
 }
-.new-zanata .is-transition, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .no-touch .new-zanata .dropdown__menu > li:hover,
+.new-zanata .is-transition, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high:hover,
-.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .dropdown__menu,
+.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .dropdown__content,
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
@@ -1655,27 +1655,27 @@ Centered grids align grid items centrally without needing to use push or pull cl
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-.new-zanata .bg--high, .new-zanata .bg--pop-high, .no-touch .new-zanata .dropdown__menu > li:hover,
+.new-zanata .bg--high, .new-zanata .bg--pop-high, .no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--pop-high:hover,
-.no-touch .new-zanata .dropdown__menu > li:hover,
+.no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high--hover:hover {
   background-color: #f5f7f8;
 }
-.new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__menu,
+.new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__content,
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
-.new-zanata .dropdown__menu:hover,
+.new-zanata .dropdown__content:hover,
 .new-zanata .bg--higher--hover:hover {
   background-color: #fdfdfd;
 }
-.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .dropdown__toggle.is-active, .new-zanata .dropdown.is-active .dropdown__menu,
+.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown.is-active .dropdown__content,
 .new-zanata .bg--highest:hover,
 .new-zanata .bg--pop-highest:hover,
 .new-zanata .tabs--accent .tabs__nav:hover,
-.new-zanata .dropdown__toggle.is-active:hover,
-.new-zanata .dropdown.is-active .dropdown__menu:hover,
+.new-zanata .dropdown.is-active .dropdown__toggle:hover,
+.new-zanata .dropdown.is-active .dropdown__content:hover,
 .new-zanata .bg--highest--hover:hover {
   background-color: white;
 }
@@ -1701,7 +1701,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
-.new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .dropdown__toggle.is-active, .new-zanata .dropdown.is-active .dropdown__menu {
+.new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown.is-active .dropdown__content {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -2431,9 +2431,9 @@ Sub-headings can be used when placing a heading under another heading.
 ### Dropdown
 
 ```
-<div class="dropdown" ng-class="{is-active: is-active}">
-  <a class="dropdown__toggle" href="#" ng-click="is-active=!is-active"><i class="icon--arrow-down dropdown__toggle__icon"></i> Action</a>
-  <ul class="dropdown__menu" role="menu" aria-labelledby="dropdownMenu">
+<div class="dropdown">
+  <a class="dropdown__toggle" href="#"><i class="icon--arrow-down dropdown__toggle__icon"></i> Action</a>
+  <ul class="dropdown__content" role="content" aria-labelledby="dropdownContent">
     <li><a tabindex="-1" href="#">Action </a></li>
     <li><a tabindex="-1" href="#">Another action</a></li>
     <li><a tabindex="-1" href="#">Something else here</a></li>
@@ -2481,7 +2481,7 @@ Sub-headings can be used when placing a heading under another heading.
   background-color: white;
   border: 1px solid rgba(65, 105, 136, 0.15);
 }
-.new-zanata .dropdown__toggle.is-active {
+.new-zanata .dropdown__container.is-active .dropdown__toggle {
   margin: -0.1875em 0;
   padding: 0.375em 0.375em 0.375em 0;
   color: #416988;
@@ -2501,14 +2501,14 @@ Sub-headings can be used when placing a heading under another heading.
   padding: 0 0.33333em;
   margin-top: 0.09em;
 }
-.new-zanata .dropdown__toggle.is-active .dropdown__toggle__icon {
+.new-zanata .dropdown.is-active .dropdown__toggle__icon {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.new-zanata .dropdown__menu {
+.new-zanata .dropdown__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   position: absolute;
@@ -2529,19 +2529,19 @@ Sub-headings can be used when placing a heading under another heading.
   -o-transform: translate3d(0, -1.5em, 0);
   transform: translate3d(0, -1.5em, 0);
 }
-.new-zanata .dropdown__menu > li {
+.new-zanata .dropdown__content > li {
   list-style: none;
   margin: 0;
   padding: 0.375em 0.375em 0.375em 1.95em;
 }
-.new-zanata .dropdown__menu > li > a {
+.new-zanata .dropdown__content > li > a {
   display: block;
   margin: 0;
 }
-.new-zanata .dropdown__menu .dropdown__header {
+.new-zanata .dropdown__content .dropdown__header {
   border-bottom: 1px solid #f0f2f4;
 }
-.no-touch .new-zanata .dropdown__menu .dropdown__header:hover {
+.no-touch .new-zanata .dropdown__content .dropdown__header:hover {
   background-color: transparent;
 }
 .new-zanata .dropdown__divider {
@@ -2553,7 +2553,7 @@ Sub-headings can be used when placing a heading under another heading.
   border-bottom: 1px solid transparent;
   background-color: #f0f2f4;
 }
-.new-zanata .dropdown.is-active .dropdown__menu {
+.new-zanata .dropdown.is-active .dropdown__content {
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -2567,7 +2567,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .dropdown--right .dropdown__toggle__icon {
   float: right;
 }
-.new-zanata .dropdown--right .dropdown__menu {
+.new-zanata .dropdown--right .dropdown__content {
   left: auto;
   right: 0;
   float: right;
@@ -2586,11 +2586,11 @@ Sub-headings can be used when placing a heading under another heading.
   margin-left: -0.16667em;
   margin-top: 0;
 }
-.new-zanata .dropdown--inline .dropdown__menu {
+.new-zanata .dropdown--inline .dropdown__content {
   width: auto;
   margin-top: 0.375em;
 }
-.new-zanata .dropdown--inline .dropdown__menu > li {
+.new-zanata .dropdown--inline .dropdown__content > li {
   white-space: nowrap;
   padding: 0.375em 1.125em;
 }

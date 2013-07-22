@@ -1,4 +1,4 @@
-/*! zanata-proto - v0.1.0 - 2013-07-18
+/*! zanata-proto - v0.1.0 - 2013-07-22
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Luke Brooker; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07
@@ -2004,11 +2004,30 @@ window.Modernizr = (function( window, document, undefined ) {
 Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0));};
 ;
 
+$(function () {
+
+});
+
 $(function() {
-  // TODO: Probably needs to go in another file
-  $(".dropdown__toggle").hammer().on("tap", function() {
-    $(this).toggleClass("is-active").parent(".dropdown").toggleClass("is-active").parents(".dropdown__container").toggleClass("is-active");
-  });
+
+  var collapseActiveDropdowns,
+      toggleThisCollapseOthers;
+
+  collapseActiveDropdowns = function () {
+    $(".dropdown.is-active .dropdown__toggle").click();
+  };
+
+  toggleThisCollapseOthers = function (e) {
+    var dropdown = $(this).parent(".dropdown");
+    $(".dropdown.is-active").not(dropdown).removeClass("is-active")
+                            .parents(".dropdown__container").removeClass("is-active");
+    dropdown.toggleClass("is-active").parents(".dropdown__container");
+    e.stopPropagation();
+  };
+
+  $(document).bind("click", collapseActiveDropdowns);
+  $(".dropdown__toggle").bind("click", toggleThisCollapseOthers);
+
 });
 
 $(function() {
