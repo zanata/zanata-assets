@@ -2445,16 +2445,13 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .dropdown__container {
-  z-index: 2;
+  z-index: 5;
   position: relative;
 }
 .new-zanata .dropdown__container.is-active {
-  z-index: 3;
+  z-index: 6;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-}
-.new-zanata .dropdown__container.is-active + .dropdown__container {
-  z-index: 2;
 }
 .new-zanata .dropdown {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);

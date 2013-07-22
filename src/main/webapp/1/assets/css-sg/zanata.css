@@ -673,7 +673,7 @@ table.rf-dt {
 
 /* Header cell */
 th.rf-dt-shdr-c {
-  padding: 5px 8px;
+  padding: 12px 8px;
   text-align: center;
   font-size: 13px;
   border: none;
@@ -795,35 +795,43 @@ div.rf-tab-hdr-brd {
 
 /* Tab (common) */
 td.rf-tab-hdr-act.rf-tab-hdr-top {
-  background-image: none;
-  border: 1px solid #4e9fdd;
+  background: #fdfdfd;
+  border: none;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
-  padding: 5px 20px 0 20px;
+  padding: 6px 16px;
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Inactive Tab */
 td.rf-tab-hdr-inact.rf-tab-hdr-top {
   color: #4e9fdd;
-  background-color: #eeeeee;
-  background-image: none;
-  border: 1px solid #4e9fdd;
+  background: #f5f7f8;
+  border: none;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
-  padding: 5px 20px 0 20px;
+  padding: 6px 16px;
 }
 
 /* Active Tab */
 td.rf-tab-hdr-act.rf-tab-hdr-top {
-  color: #ffffff;
-  background-color: #4e9fdd;
+  background: white;
+  color: #444c54;
 }
 
 /* Tab contents */
 div.rf-tab-cnt {
   border: none;
-  border-radius: 5px;
-  background-color: #eeeeee;
+  border-radius: 2px;
+  border-top-left-radius: 0;
+  background-color: white;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 div.rf-tab-hdr-brd {
@@ -834,21 +842,21 @@ div.rf-tab-hdr-brd {
 /* ====================== Rich Dialogs =========================== */
 /* Dialog content */
 div.rf-pp-cntr {
-  border-radius: 5px;
+  border-radius: 2px;
   border-color: transparent;
 }
 
 /* Dialog Shadow */
 div.rf-pp-shdw {
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Header */
 div.rf-pp-hdr {
   background-image: none;
   background-color: #4e9fdd;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
   padding: 7px;
 }
 
