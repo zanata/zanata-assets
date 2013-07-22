@@ -170,6 +170,8 @@ NOTE: No classes should go in element files
 .new-zanata-body,
 .new-zanata-html {
   min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 html.new-zanata,

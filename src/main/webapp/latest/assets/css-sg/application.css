@@ -1,5 +1,20 @@
-body {
-  background-color: #f8f9fa;
+.l--clearfix-overflow, #container {
+  *zoom: 1;
+}
+.l--clearfix-overflow:after, #container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  min-height: 400px;
+  min-width: 960px;
+  padding-bottom: 3em;
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -332,9 +347,9 @@ td.RejectedStateDecoration div div div {
 .DocumentListTable th, .DocumentListTable td.docListHeader {
   font-size: 13px;
   font-weight: bold;
-  color: #ffffff;
-  font-family: Arial, Verdana, sans-serif;
-  background-color: #461446;
+  color: #416988;
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  background-color: white;
   border-bottom: none;
   border-left: 1px solid #FFFFFF;
   text-align: center;
@@ -448,14 +463,14 @@ td.RejectedStateDecoration div div div {
   margin-bottom: 5px;
   min-height: 1em;
   font-size: 14px;
-  font-family: sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
 
 .translationContainer pre, .translationContainer textarea {
   font-size: 14px;
-  font-family: sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
