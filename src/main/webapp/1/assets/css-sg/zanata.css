@@ -206,7 +206,8 @@ td.topAlignment {
 
 #yui-main {
   float: left;
-  width: 680px !important;
+  width: 70%;
+  max-width: 900px;
 }
 
 .bold-larger {
@@ -544,7 +545,8 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
 
 /* -----------------------   Left/right container CSS  -------------------------*/
 .yui-b {
-  width: 200px;
+  width: 25%;
+  max-width: 300px;
   float: right;
 }
 
@@ -561,7 +563,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding: 2.57143em 3.42857em;
+  padding: 2.76923em 3.69231em;
 }
 
 .footer {

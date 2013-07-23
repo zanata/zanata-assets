@@ -2269,6 +2269,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .off-canvas__close .i {
   vertical-align: top;
   line-height: 1em;
+  padding: 0;
 }
 .new-zanata .off-canvas__close:hover {
   background-color: #9ca5af;
