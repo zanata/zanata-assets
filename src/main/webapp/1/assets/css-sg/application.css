@@ -1,20 +1,23 @@
-.l--clearfix-overflow, #container {
+.l--clearfix-overflow {
   *zoom: 1;
 }
-.l--clearfix-overflow:after, #container:after {
+.l--clearfix-overflow:after {
   content: "";
   display: table;
   clear: both;
 }
 
 #container {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  min-height: 400px;
-  min-width: 960px;
-  padding-bottom: 3em;
+  width: 100%;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+.off-canvas__outer,
+.off-canvas__inner,
+#container {
+  height: 100% !important;
 }
 
 /*
