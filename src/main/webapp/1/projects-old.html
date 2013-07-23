@@ -114,143 +114,45 @@
 
           <div id="container">
       <div id="bd">
-        <div id="search_div">
-          <div id="search_panel" xmlns="http://www.w3.org/1999/xhtml">
-            <form id="j_id52" name="j_id52" method="post" action="http://translate.zanata.org/zanata/" enctype="application/x-www-form-urlencoded">
-              <input type="hidden" name="j_id52" value="j_id52" />
+        <div id="search_div"><div id="search_panel" xmlns="http://www.w3.org/1999/xhtml">
+<form id="j_idt57" name="j_idt57" method="post" action="/project/list" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt57" value="j_idt57">
 
-              <span class="icon-search search-icon"></span>
-              <input id="j_id52:q" type="text" name="j_id52:q" class="with_icon" />
-              <input type="submit" name="j_id52:j_id55" value="Search Projects" class="projectSearchButton" />
-              <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id1" autocomplete="off" />
-            </form>
 
+     <span class="icon-search search-icon"></span><input id="j_idt57:q" type="text" name="j_idt57:q" class="with_icon"><input type="submit" name="j_idt57:j_idt60" value="Search Projects" class="projectSearchButton"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-7582279721848487806:-7324397914448134689" autocomplete="off">
+</form>
+
+</div>
           </div>
-        </div>
-        <div id="breadcrumbs_div">
-          <div id="breadcrumbs_panel" xmlns="http://www.w3.org/1999/xhtml">
-            <form id="j_id59" name="j_id59" method="post" action="http://translate.zanata.org/zanata/" enctype="application/x-www-form-urlencoded">
-              <input type="hidden" name="j_id59" value="j_id59" />
-              <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id1" autocomplete="off" />
-            </form>
+          <div id="breadcrumbs_div"><div id="breadcrumbs_panel" style="white-space:nowrap" xmlns="http://www.w3.org/1999/xhtml">
+<form id="j_idt64" name="j_idt64" method="post" action="/project/list" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_idt64" value="j_idt64">
+<a href="/" id="j_idt64:j_idt65" type="submit" class="breadcrumbs_home">
+        <span class="icon-home-1" title="Zanata"></span></a>
+        <span class="icon-right-open breadcrumbs-seperator"></span><span id="j_idt64:j_idt69" class="breadcrumbs_display">Projects</span><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-7582279721848487806:-7324397914448134689" autocomplete="off">
+</form>
+</div>
           </div>
-        </div>
         <div id="yui-main">
-          <div class="yui-b">
-            <span id="j_id69"></span>
+          <div class="yui-b"><span id="j_idt73"><div id="messages"></div></span>
             <div id="main_body_content">
-              <div></div>
-              <h1 class="seamTextHeadline1"> <b>Welcome to Zanata</b>
-              </h1>
-              <p class="seamTextPara"></p>
+<form id="main_content:form" name="main_content:form" method="post" action="/project/list" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="main_content:form" value="main_content:form">
 
-              <div>
-                <i><b>Zanata</b></i>
-                is a web-based system for Translators to translate  documentation and software online using a web browser.
-              </div>
-              <p class="seamTextPara">
-                Please join the
-                <a href="https://www.redhat.com/mailman/listinfo/zanata-users" class="seamTextLink">mailing list</a>
-                to be kept informed of outages and other announcements.
-              </p>
 
-              <h2 class="seamTextHeadline2">
-                <b>Signing In</b>
-              </h2>
-              <div></div>
-              <p class="seamTextPara">
-                Users with a
-                <a href="https://admin.fedoraproject.org/accounts/" class="seamTextLink">Fedora Account System</a>
-                (FAS) account can use their FAS accounts to authenticate to this server. You can also use an OpenID (eg from Google or myOpenID), or create a local account.  You can attach multiple identities to a single account from your Profile page.
-              </p>
+    <div style="text-align: center"><span class="rf-ds " id="main_content:form:scroller" style="display:none"></span>
+    </div><div id="main_content:form:j_idt89" class="float-right"><input id="main_content:form:j_idt91" type="checkbox" name="main_content:form:j_idt91" checked="checked" title="Filter active projects" onchange="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;change&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;main_content:form:j_idt91&quot;} ,&quot;sourceId&quot;:this} )">Active<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"><input id="main_content:form:j_idt97" type="checkbox" name="main_content:form:j_idt97" checked="checked" title="Filter read-only projects" onchange="RichFaces.ajax(this,event,{&quot;parameters&quot;:{&quot;javax.faces.behavior.event&quot;:&quot;change&quot;,&quot;org.richfaces.ajax.component&quot;:&quot;main_content:form:j_idt97&quot;} ,&quot;sourceId&quot;:this} )">Read-only<img src="/javax.faces.resource/spacer.gif.seam?ln=images" height="0px" width="5px"></div>
+        <br><table id="main_content:form:projectList" class="rf-dt"><colgroup span="4"></colgroup><thead id="main_content:form:projectList:th" class="rf-dt-thd"><tr id="main_content:form:projectList:ch" class="rf-dt-shdr"><th class="rf-dt-shdr-c" scope="col" id="main_content:form:projectList:j_idt104">Project Name
+                    <a href="#" id="main_content:form:projectList:j_idt106:j_idt107" name="main_content:form:projectList:j_idt106:j_idt107" onclick="RichFaces.ajax(&quot;main_content:form:projectList:j_idt106:j_idt107&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;"><img src="/javax.faces.resource/unsorted.gif.seam?ln=images" style="vertical-align: middle"></a></th><th class="rf-dt-shdr-c" scope="col" id="main_content:form:projectList:j_idt114">Description</th><th class="rf-dt-shdr-c" scope="col" id="main_content:form:projectList:j_idt117">Creation Date<a href="#" id="main_content:form:projectList:j_idt119:j_idt107" name="main_content:form:projectList:j_idt119:j_idt107" onclick="RichFaces.ajax(&quot;main_content:form:projectList:j_idt119:j_idt107&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;"><img src="/javax.faces.resource/unsorted.gif.seam?ln=images" style="vertical-align: middle"></a></th><th class="rf-dt-shdr-c" scope="col" id="main_content:form:projectList:j_idt121">Status<a href="#" id="main_content:form:projectList:j_idt123:j_idt107" name="main_content:form:projectList:j_idt123:j_idt107" onclick="RichFaces.ajax(&quot;main_content:form:projectList:j_idt123:j_idt107&quot;,event,{&quot;incId&quot;:&quot;1&quot;} );return false;"><img src="/javax.faces.resource/unsorted.gif.seam?ln=images" style="vertical-align: middle"></a></th></tr></thead><tbody id="main_content:form:projectList:tb" class="rf-dt-b"><tr id="main_content:form:projectList:0" class="rf-dt-r rf-dt-fst-r"><td id="main_content:form:projectList:0:j_idt104" class="rf-dt-c"><a href="/project/view/AboutFedora" id="main_content:form:projectList:0:project" type="submit" class="table_link">About Fedora</a></td><td id="main_content:form:projectList:0:j_idt114" class="rf-dt-c"></td><td id="main_content:form:projectList:0:j_idt117" class="rf-dt-c">Jan 7, 2013</td><td id="main_content:form:projectList:0:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:1" class="rf-dt-r"><td id="main_content:form:projectList:1:j_idt104" class="rf-dt-c"><a href="/project/view/SecurityGuide" id="main_content:form:projectList:1:project" type="submit" class="table_link">Fedora Security Guide</a></td><td id="main_content:form:projectList:1:j_idt114" class="rf-dt-c"></td><td id="main_content:form:projectList:1:j_idt117" class="rf-dt-c">Jan 7, 2013</td><td id="main_content:form:projectList:1:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:2" class="rf-dt-r"><td id="main_content:form:projectList:2:j_idt104" class="rf-dt-c"><a href="/project/view/FileProject" id="main_content:form:projectList:2:project" type="submit" class="table_link">File Project</a></td><td id="main_content:form:projectList:2:j_idt114" class="rf-dt-c">File Project</td><td id="main_content:form:projectList:2:j_idt117" class="rf-dt-c">Jul 9, 2013</td><td id="main_content:form:projectList:2:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:3" class="rf-dt-r"><td id="main_content:form:projectList:3:j_idt104" class="rf-dt-c"><a href="/project/view/Guvnor" id="main_content:form:projectList:3:project" type="submit" class="table_link">Guvnor</a></td><td id="main_content:form:projectList:3:j_idt114" class="rf-dt-c"></td><td id="main_content:form:projectList:3:j_idt117" class="rf-dt-c">Jan 7, 2013</td><td id="main_content:form:projectList:3:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:4" class="rf-dt-r"><td id="main_content:form:projectList:4:j_idt104" class="rf-dt-c"><a href="/project/view/ibus-chewing" id="main_content:form:projectList:4:project" type="submit" class="table_link">IBusChewing</a></td><td id="main_content:form:projectList:4:j_idt114" class="rf-dt-c"></td><td id="main_content:form:projectList:4:j_idt117" class="rf-dt-c">Jan 7, 2013</td><td id="main_content:form:projectList:4:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:5" class="rf-dt-r"><td id="main_content:form:projectList:5:j_idt104" class="rf-dt-c"><a href="/project/view/JBossAS" id="main_content:form:projectList:5:project" type="submit" class="table_link">JBoss AS</a></td><td id="main_content:form:projectList:5:j_idt114" class="rf-dt-c"></td><td id="main_content:form:projectList:5:j_idt117" class="rf-dt-c">Jan 7, 2013</td><td id="main_content:form:projectList:5:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:6" class="rf-dt-r"><td id="main_content:form:projectList:6:j_idt104" class="rf-dt-c"><a href="/project/view/Spacewalk" id="main_content:form:projectList:6:project" type="submit" class="table_link">Spacewalk</a></td><td id="main_content:form:projectList:6:j_idt114" class="rf-dt-c"></td><td id="main_content:form:projectList:6:j_idt117" class="rf-dt-c">Jan 7, 2013</td><td id="main_content:form:projectList:6:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:7" class="rf-dt-r"><td id="main_content:form:projectList:7:j_idt104" class="rf-dt-c"><a href="/project/view/test1" id="main_content:form:projectList:7:project" type="submit" class="table_link">test1</a></td><td id="main_content:form:projectList:7:j_idt114" class="rf-dt-c">test</td><td id="main_content:form:projectList:7:j_idt117" class="rf-dt-c">Jul 16, 2013</td><td id="main_content:form:projectList:7:j_idt121" class="rf-dt-c centered">Active</td></tr><tr id="main_content:form:projectList:8" class="rf-dt-r"><td id="main_content:form:projectList:8:j_idt104" class="rf-dt-c"><a href="/project/view/WeldCore" id="main_content:form:projectList:8:project" type="submit" class="table_link">Weld Core</a></td><td id="main_content:form:projectList:8:j_idt114" class="rf-dt-c"></td><td id="main_content:form:projectList:8:j_idt117" class="rf-dt-c">Jan 7, 2013</td><td id="main_content:form:projectList:8:j_idt121" class="rf-dt-c centered">Active</td></tr></tbody><tbody id="main_content:form:projectList:sc"><tr><td style="display: none"><script type="text/javascript">new RichFaces.ui.DataTable("main_content:form:projectList",{"ajaxEventOptions":{} } )</script></td></tr></tbody></table>
 
-              <div></div>
-              <div></div>
-              <div></div>
-              <p class="seamTextPara">
-                Please make sure you join the
-                <a href="http://www.redhat.com/mailman/listinfo/zanata-users" class="seamTextLink">mailing list</a>
-                .
-              </p>
-
-              <h2 class="seamTextHeadline2">
-                <b>Translators</b>
-              </h2>
-              <div></div>
-              <div>
-                All you need is a
-                <a href="https://admin.fedoraproject.org/accounts/" class="seamTextLink">FAS</a>
-                account and a web browser to start translating. To get started, please follow the simple instructions in the
-                <a href="https://github.comhttp://translate.zanata.org/zanata/zanata/wiki/Translator-Guide" class="seamTextLink">Translator Guide</a>
-                or the
-                <a href="http://zanata.org/docs/Zanata_Quickstart_Guide/html/pt02.html" class="seamTextLink">Translator Quickstart</a>
-                to join your language team and start contributing translations to the various projects on
-                <i><b>Zanata</b></i>
-                .
-              </div>
-              <p class="seamTextPara"></p>
-
-              <h2 class="seamTextHeadline2">
-                <b>Developers and Writers</b>
-              </h2>
-              <div></div>
-              <p class="seamTextPara">
-                With
-                <i>
-                  <b>Zanata</b>
-                </i>
-                you can open your project for translation without opening up the project's version  control. Currently,
-                <i>
-                  <b>Zanata</b>
-                </i>
-                supports translation of software and documentation projects that provide GNU Gettext format Portable Object (PO) files or Java Properties files. Project files can be pushed and pulled from the server using a Maven plugin or a Python client.
-              </p>
-
-              <div></div>
-              <div></div>
-              <div></div>
-              <p class="seamTextPara">
-                For detailed information on how to manage your projects on
-                <i>
-                  <b>Zanata</b>
-                </i>
-                , please read the
-                <a href="http://zanata.org/documentation.html" class="seamTextLink">Quickstart Guide and other documentation</a>
-                .
-              </p>
-
-              <p class="seamTextPara"></p>
-
-              <h2 class="seamTextHeadline2">
-                <b>Create a project</b>
-              </h2>
-              <div>
-                <b><br/></b>
-              </div>
-              <div></div>
-              <div></div>
-              <div>
-                To create a translation project in
-                <i>
-                  <b>Zanata</b>
-                </i>
-                for your open source software or documentation project, please
-                <a href="http://zanata.org/docs/Zanata_Quickstart_Guide/html/chap_redhat_prereqs.html" class="seamTextLink">obtain a FAS account and validate it with Zanata</a>
-                ; then visit the Projects page and click &quot;
-                <a href="/" class="seamTextLink">Create project</a>
-                &quot; (on the right).
-              </div>
-              <div></div>
-              <h2 class="seamTextHeadline2">Know More</h2>
-              <div></div>
-              <div>
-                You can find out more about the open source Zanata project (mailing lists, bug reports, source code) at
-                <a href="http://zanata.org/" class="seamTextLink">http://zanata.org/</a>
-              </div>
+        <div style="text-align: center"><span class="rf-ds " id="main_content:form:sc2" style="display:none"></span>
+        </div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="-7582279721848487806:-7324397914448134689" autocomplete="off">
+</form>
             </div>
           </div>
         </div>
-        <div class="yui-b"></div>
+        <div class="yui-b">
+        </div>
       </div>
     </div>
 

@@ -554,6 +554,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   position: static;
   width: auto;
   float: none;
+  max-width: none;
 }
 
 /* -----------------------  End Left/right container CSS  -------------------------*/

@@ -48,11 +48,10 @@
       <header class="off-canvas__header">
         <a href="#off-canvas--left" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
       </header>
-      <nav>
+      <nav id="nav-main-side">
         <ul class="list--slat list--block-links">
-          <li><a href="#">Projects</a></li>
+          <li><a href="projects-old.html">Projects</a></li>
           <li><a href="#">Groups</a></li>
-          <li><a href="#">Users</a></li>
           <li><a href="#">Languages</a></li>
           <li><a href="#">Help</a></li>
         </ul>
@@ -62,12 +61,12 @@
       <header class="off-canvas__header">
         <a href="#off-canvas--right" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
       </header>
-      <nav>
+      <nav id="nav-user">
         <ul class="list--slat list--block-links txt--invert">
-          <li><a href="#"  class="is-active">Dashboard <span class="badge--highlight badge--inline l--float-right">4</span></a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Groups</a></li>
-          <li><a href="#">Settings</a></li>
+          <li><a href="/dashboard">Dashboard <span class="badge--highlight badge--inline l--float-right">4</span></a></li>
+<!--           <li><a href="#">Projects</a></li>
+          <li><a href="#">Groups</a></li> -->
+          <li><a href="/settings">Settings</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
       </nav>
@@ -79,12 +78,12 @@
         <h1 class="header__title heading--sub"><a href="/"><img class="header__site-logo" src="logo.svg"> Zanata</a></h1>
         
         <a href="#off-canvas--right" class="off-canvas__toggle--right l--float-right badge__container"><span class="badge--bl">4</span><i class="i i--large i--user"></i><span class="is-invisible">Account</span></a>
-        <nav class="header__menu is-hidden--s l--push-left-half">
+        <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half">
           <ul class="list--horizontal">
-            <li class="l--push-left-half"><a href="#">Projects</a></li>
-            <li class="l--push-left-half"><a href="#">Groups</a></li>
-            <li class="l--push-left-half"><a href="#">Languages</a></li>
-            <li class="l--push-left-half"><a href="#">Help</a></li>
+            <li class="l--push-left-half"><a href="/projects-old.html">Projects</a></li>
+            <li class="l--push-left-half"><a href="/groups">Groups</a></li>
+            <li class="l--push-left-half"><a href="/languages">Languages</a></li>
+            <li class="l--push-left-half"><a href="/help">Help</a></li>
           </ul>
         </nav>
       </header>
@@ -212,14 +211,8 @@
                         <li>
                           <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
                         </li>
-                        <li>
-                          <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
-                        </li>
-                        <li>
-                          <a href="#" title="Go to Japanese translation">JP</a>
-                        </li>
                         <li class="l--float-right">
-                          <span class="txt--state-success">73%</span>
+                          <!-- <span class="txt--state-success">73%</span> -->
                         </li>
                       </ul>
                     </div>
@@ -231,9 +224,6 @@
                           </li>
                           <li>
                             <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
-                          </li>
-                          <li>
-                            <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
                           </li>
                         </ul>
                       </li>
@@ -286,14 +276,8 @@
                         <li>
                           <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
                         </li>
-                        <li>
-                          <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
-                        </li>
-                        <li>
-                          <a href="#" title="Go to Japanese translation">JP</a>
-                        </li>
                         <li class="l--float-right">
-                          <span class="txt--state-success">73%</span>
+                          <span class="txt--meta">Read only</span>
                         </li>
                       </ul>
                     </div>
