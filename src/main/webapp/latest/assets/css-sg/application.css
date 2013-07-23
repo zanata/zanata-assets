@@ -17,6 +17,14 @@
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
+html,
+body,
+.off-canvas__outer,
+.off-canvas__inner,
+#container {
+  height: 100%;
+}
+
 /*
 Styling for errors when webtrans fails to load
 */
