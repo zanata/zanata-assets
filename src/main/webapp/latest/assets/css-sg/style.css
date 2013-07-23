@@ -2650,10 +2650,21 @@ Sub-headings can be used when placing a heading under another heading.
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding: 0.75em;
+  padding: 0.375em;
   text-align: center;
   height: 3em;
   width: 3em;
+}
+.off-canvas__toggle img, .off-canvas__toggle--left img, .off-canvas__toggle--right img, .new-zanata .off-canvas__close img {
+  -webkit-border-radius: 3em;
+  -moz-border-radius: 3em;
+  border-radius: 3em;
+}
+.off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i {
+  padding: 0.375em;
+}
+.off-canvas__toggle .i--large, .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large {
+  padding: 0.25em;
 }
 .off-canvas__toggle.is-active, .is-active.off-canvas__toggle--left, .is-active.off-canvas__toggle--right, .new-zanata .is-active.off-canvas__close {
   color: #444c54;

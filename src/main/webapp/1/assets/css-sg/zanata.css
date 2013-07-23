@@ -172,7 +172,7 @@ label.readOnlyLabel {
   margin-top: 5px;
   min-height: 400px;
   min-width: 960px;
-  padding: 0 3em 3em;
+  padding: 0 3.42857em 3.42857em;
 }
 
 #main_body_content > h1, #main_body_content > h2 {
@@ -561,7 +561,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding: 2.25em 3em;
+  padding: 2.57143em 3.42857em;
 }
 
 .footer {
