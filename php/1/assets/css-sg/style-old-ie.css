@@ -1718,8 +1718,8 @@ All icons also need the class `.i` added to them.
 */
 @font-face {
   font-family: 'Zanata';
-  src: url("../fonts/zanata-v1/Zanata.eot");
-  src: url("../fonts/zanata-v1/Zanata.eot?#iefix") format("embedded-opentype"), url("../fonts/zanata-v1/Zanata.woff") format("woff"), url("../fonts/zanata-v1/Zanata.ttf") format("truetype"), url("../fonts/zanata-v1/Zanata.svg#Zanata") format("svg");
+  src: url("../fonts/zanata-v2/zanata.eot");
+  src: url("../fonts/zanata-v2/zanata.eot?#iefix") format("embedded-opentype"), url("../fonts/zanata-v2/zanata.woff") format("woff"), url("../fonts/zanata-v2/zanata.ttf") format("truetype"), url("../fonts/zanata-v2/zanata.svg#zanata") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1731,22 +1731,22 @@ All icons also need the class `.i` added to them.
 <pre><i class="i i--code"></i> .i--code</pre>
 */
 /*
-<pre><i class="i i--eye"></i> .i--eye</pre>
+<pre><i class="i i--review"></i> .i--review</pre>
 */
 /*
-<pre><i class="i i--globe"></i> .i--globe</pre>
+<pre><i class="i i--language"></i> .i--language</pre>
 */
 /*
 <pre><i class="i i--star"></i> .i--star</pre>
 */
 /*
-<pre><i class="i i--bell"></i> .i--bell</pre>
+<pre><i class="i i--notification"></i> .i--notification</pre>
 */
 /*
-<pre><i class="i i--clipboard"></i> .i--clipboard</pre>
+<pre><i class="i i--project"></i> .i--project</pre>
 */
 /*
-<pre><i class="i i--document-alt-fill"></i> .i--document-alt-fill</pre>
+<pre><i class="i i--document"></i> .i--document</pre>
 */
 /*
 <pre><i class="i i--clock"></i> .i--clock</pre>
@@ -1755,10 +1755,16 @@ All icons also need the class `.i` added to them.
 <pre><i class="i i--history"></i> .i--history</pre>
 */
 /*
-<pre><i class="i i--infinity"></i> .i--infinity</pre>
+<pre><i class="i i--all"></i> .i--all</pre>
 */
 /*
-<pre><i class="i i--network"></i> .i--network</pre>
+<pre><i class="i i--maintain"></i> .i--maintain</pre>
+*/
+/*
+<pre><i class="i i--translate"></i> .i--translate</pre>
+*/
+/*
+<pre><i class="i i--translate-up"></i> .i--translate-up</pre>
 */
 /*
 <pre><i class="i i--users"></i> .i--users</pre>
@@ -1767,16 +1773,19 @@ All icons also need the class `.i` added to them.
 <pre><i class="i i--user"></i> .i--user</pre>
 */
 /*
-<pre><i class="i i--cog"></i> .i--cog</pre>
+<pre><i class="i i--settings"></i> .i--settings</pre>
 */
 /*
-<pre><i class="i i--plus"></i> .i--plus</pre>
+<pre><i class="i i--add"></i> .i--add</pre>
 */
 /*
-<pre><i class="i i--pencil"></i> .i--pencil</pre>
+<pre><i class="i i--edit"></i> .i--edit</pre>
 */
 /*
-<pre><i class="i i--cross"></i> .i--cross</pre>
+<pre><i class="i i--cancel"></i> .i--cancel</pre>
+*/
+/*
+<pre><i class="i i--remove"></i> .i--remove</pre>
 */
 /*
 <pre><i class="i i--checkmark"></i> .i--checkmark</pre>
@@ -1794,7 +1803,7 @@ All icons also need the class `.i` added to them.
 <pre><i class="i i--arrow-right"></i> .i--arrow-right</pre>
 */
 /*
-<pre><i class="i i--star-2"></i> .i--star-2</pre>
+<pre><i class="i i--star-outline"></i> .i--star-outline</pre>
 */
 /*
 <pre><i class="i i--search"></i> .i--search</pre>
@@ -1806,6 +1815,7 @@ All icons also need the class `.i` added to them.
 <pre><i class="i i--comment"></i> .i--comment</pre>
 */
 .new-zanata .i {
+  position: relative;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1828,31 +1838,39 @@ All icons also need the class `.i` added to them.
   font-size: 1.5em;
   line-height: 1em;
 }
-.new-zanata .i--list:before {
+.new-zanata .i--list:before,
+.new-zanata .i--menu:before {
   content: "\f0ac";
 }
-.new-zanata .i--code:before {
+.new-zanata .i--code:before,
+.new-zanata .i--source:before {
   content: "\e000";
 }
-.new-zanata .i--eye:before {
+.new-zanata .i--eye:before,
+.new-zanata .i--review:before {
   content: "\e002";
 }
-.new-zanata .i--globe:before {
+.new-zanata .i--globe:before,
+.new-zanata .i--language:before {
   content: "\e003";
 }
 .new-zanata .i--star:before {
   content: "\e001";
 }
-.new-zanata .i--bell:before {
+.new-zanata .i--bell:before,
+.new-zanata .i--notification:before {
   content: "\e004";
 }
-.new-zanata .i--clipboard {
+.new-zanata .i--clipboard,
+.new-zanata .i--project {
   margin-top: -0.18em;
 }
-.new-zanata .i--clipboard:before {
+.new-zanata .i--clipboard:before,
+.new-zanata .i--project:before {
   content: "\e005";
 }
-.new-zanata .i--document-alt-fill:before {
+.new-zanata .i--document-alt-fill:before,
+.new-zanata .i--document:before {
   content: "\e007";
 }
 .new-zanata .i--clock:before {
@@ -1861,11 +1879,23 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--history:before {
   content: "\e009";
 }
-.new-zanata .i--infinity:before {
+.new-zanata .i--infinity:before,
+.new-zanata .i--all:before {
   content: "\e00a";
 }
-.new-zanata .i--network:before {
+.new-zanata .i--maintain {
+  margin-top: -0.09em;
+}
+.new-zanata .i--maintain:before {
+  content: "\e01c";
+}
+.new-zanata .i--network:before,
+.new-zanata .i--translate:before {
   content: "\e00b";
+}
+.new-zanata .i--network-up:before,
+.new-zanata .i--translate-up:before {
+  content: "\e01b";
 }
 .new-zanata .i--users:before {
   content: "\e00c";
@@ -1873,16 +1903,21 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--user:before {
   content: "\e00e";
 }
-.new-zanata .i--cog:before {
+.new-zanata .i--cog:before,
+.new-zanata .i--settings:before {
   content: "\e00f";
 }
-.new-zanata .i--plus:before {
+.new-zanata .i--plus:before,
+.new-zanata .i--add:before {
   content: "\e011";
 }
-.new-zanata .i--pencil:before {
+.new-zanata .i--pencil:before,
+.new-zanata .i--edit:before {
   content: "\e014";
 }
-.new-zanata .i--cross:before {
+.new-zanata .i--cross:before,
+.new-zanata .i--remove:before,
+.new-zanata .i--cancel:before {
   content: "\e006";
 }
 .new-zanata .i--checkmark:before {
@@ -1900,7 +1935,8 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--arrow-right:before {
   content: "\e015";
 }
-.new-zanata .i--star-2:before {
+.new-zanata .i--star-2:before,
+.new-zanata .i--star-outline:before {
   content: "\e016";
 }
 .new-zanata .i--search:before {
@@ -1911,6 +1947,12 @@ All icons also need the class `.i` added to them.
 }
 .new-zanata .i--comment:before {
   content: "\e019";
+}
+.new-zanata .i--version {
+  margin-top: -0.18em;
+}
+.new-zanata .i--version:before {
+  content: "\e01a";
 }
 
 /*
@@ -2654,6 +2696,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .badge__container {
   position: relative;
+  z-index: 1;
 }
 .new-zanata .badge--inline {
   position: relative;
@@ -2665,6 +2708,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .badge--bl, .new-zanata .badge--br {
   position: absolute;
+  z-index: 2;
 }
 .new-zanata .badge--bl {
   bottom: 0.34286em;
