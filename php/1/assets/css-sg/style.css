@@ -2125,8 +2125,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 .new-zanata .divide, .new-zanata .d--left, .new-zanata .d--bottom, .new-zanata .d--top {
   border-width: 0;
-  border-color: #d9e1e7;
   border-style: solid;
+  border-color: rgba(65, 105, 136, 0.15);
 }
 .new-zanata .d--right {
   border-right-width: 1px;
@@ -2189,16 +2189,22 @@ Centered grids align grid items centrally without needing to use push or pull cl
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 .new-zanata .bg--pop-higher {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
 }
 .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown.is-active .dropdown__content {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 4;
 }
 
 /*
@@ -2582,7 +2588,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--slat > li {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(65, 105, 136, 0.1);
   padding: 0.375em 0;
 }
 .new-zanata .list--slat > li > a {
@@ -3036,11 +3042,11 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .dropdown__container {
-  z-index: 5;
+  z-index: 1;
   position: relative;
 }
 .new-zanata .dropdown__container.is-active {
-  z-index: 6;
+  z-index: 2;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
@@ -3050,12 +3056,12 @@ Sub-headings can be used when placing a heading under another heading.
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   position: relative;
-  z-index: 11;
+  z-index: 10;
   margin: 0 -0.375em;
 }
 .new-zanata .dropdown__toggle {
   position: relative;
-  z-index: 13;
+  z-index: 12;
   display: block;
   padding: 0.1875em 0.375em 0.1875em 0;
   cursor: pointer;
@@ -3104,10 +3110,10 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .dropdown__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  position: absolute;
+  position: absolute !important;
   top: 100%;
   left: 0;
-  z-index: 12;
+  z-index: 11;
   visibility: hidden;
   overflow: hidden;
   margin: 0;
