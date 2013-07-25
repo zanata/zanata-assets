@@ -2662,6 +2662,23 @@ Sub-headings can be used when placing a heading under another heading.
   -webkit-overflow-scrolling: touch;
 }
 
+.off-canvas--left-over .off-canvas__inner:after,
+.off-canvas--right-over .off-canvas__inner:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 99;
+  background: url('/img/rgbapng/0000007f-5.png?1374733757');
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+}
+
 @media (max-width: 87.4375em) {
   .no-csstransforms3d .off-canvas--left-under .off-canvas__inner {
     left: 270px;
@@ -3279,18 +3296,21 @@ Sub-headings can be used when placing a heading under another heading.
 
 ```
 <p><a class="button">Button</a></p>
-<p><a class="button--full">Button</a></p>
+<p><a class="button--full">Button Full</a></p>
+<p><a class="button--primary">Button Primary</a></p>
 ```
 
 */
 .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
-.new-zanata .button--full {
-  border: none;
+.new-zanata .button--full,
+.new-zanata .button--primary {
   padding: 0.375em 0.75em;
+  border: none;
   background-color: white;
   color: #565d65;
+  font-weight: 600;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -3307,15 +3327,17 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata input[type="submit"]:hover,
 .new-zanata button:hover,
 .new-zanata .button:hover,
-.new-zanata .button--full:hover {
-  background-color: #f2f2f2;
+.new-zanata .button--full:hover,
+.new-zanata .button--primary:hover {
+  background-color: #fdfdfd;
   color: black;
 }
 .new-zanata input[type="submit"]:active,
 .new-zanata button:active,
 .new-zanata .button:active,
-.new-zanata .button--full:active {
-  background-color: #cccccc;
+.new-zanata .button--full:active,
+.new-zanata .button--primary:active {
+  background-color: #e4e5e7;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3324,6 +3346,23 @@ Sub-headings can be used when placing a heading under another heading.
   display: block;
   width: 100%;
   text-align: center;
+}
+.new-zanata .button--primary {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background-color: #4e9fdd;
+  color: #f2f2f2;
+}
+.new-zanata .button--primary:hover {
+  background-color: #4a97d1;
+  color: white;
+}
+.new-zanata .button--primary:active {
+  background-color: #3e7fb0;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /*
@@ -3371,4 +3410,17 @@ Sub-headings can be used when placing a heading under another heading.
   zoom: 1;
   *display: inline;
   line-height: 3em;
+}
+.new-zanata .header__login {
+  padding: 0.75em 0.75em;
+}
+@media (min-width: 42.5em) {
+  .new-zanata .header__login {
+    padding: 0.375em 1.5em;
+  }
+}
+@media (min-width: 53.75em) {
+  .new-zanata .header__login {
+    padding: 0.375em 3em;
+  }
 }
