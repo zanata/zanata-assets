@@ -331,8 +331,19 @@ Used to section content and create hierarchy
 .new-zanata kbd,
 .new-zanata pre,
 .new-zanata samp {
+  padding: 0 0.21429em;
   font-family: monospace, serif;
-  font-size: 1em;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+.new-zanata code {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-color: #e8eaec;
 }
 .new-zanata pre {
   white-space: pre;
@@ -1973,7 +1984,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle {
+.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .new-zanata .reveal__target {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2095,32 +2106,38 @@ Centered grids align grid items centrally without needing to use push or pull cl
 #### Text State
 
 ```
-<p class="txt--state--highlight">State Highlight</p>
-<p class="txt--state--success">State Success</p>
-<p class="txt--state--unsure">State Unsure</p>
-<p class="txt--state--warning">State Warning</p>
-<p class="txt--state--danger">State Danger</p>
-<p class="txt--state--neutral">State Neutral</p>
+<p class="txt--highlight">State Highlight</p>
+<p class="txt--success">State Success</p>
+<p class="txt--unsure">State Unsure</p>
+<p class="txt--warning">State Warning</p>
+<p class="txt--danger">State Danger</p>
+<p class="txt--neutral">State Neutral</p>
 ```
 
 */
+.new-zanata .txt--highlight,
 .new-zanata .txt--state-highlight {
   color: #4e9fdd;
 }
+.new-zanata .txt--success,
 .new-zanata .txt--state-success {
   color: #70a98b;
 }
+.new-zanata .txt--unsure,
 .new-zanata .txt--state-unsure {
   color: #e0c350;
 }
+.new-zanata .txt--warning,
 .new-zanata .txt--state-warning {
   color: #e3824e;
 }
+.new-zanata .txt--danger,
 .new-zanata .txt--state-danger {
   color: #e0575b;
 }
+.new-zanata .txt--neutral,
 .new-zanata .txt--state-neutral {
-  color: #c6d2db;
+  color: #a2b4c3;
 }
 
 .new-zanata .divide, .new-zanata .d--left, .new-zanata .d--bottom, .new-zanata .d--top {
@@ -2142,8 +2159,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 
 .new-zanata .bg--faint {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
 }
 .no-touch .new-zanata .bg--faint:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -2312,7 +2329,7 @@ All icons also need the class `.i` added to them.
 /*
 <pre><i class="i i--comment"></i> .i--comment</pre>
 */
-.new-zanata .i {
+.new-zanata .i, .new-zanata .i--large, .new-zanata .i--huge {
   position: relative;
   display: -moz-inline-stack;
   display: inline-block;
@@ -2329,10 +2346,14 @@ All icons also need the class `.i` added to them.
   speak: none;
   -webkit-font-smoothing: antialiased;
 }
-.list--horizontal .new-zanata .i {
+.list--horizontal .new-zanata .i, .list--horizontal .new-zanata .i--large, .list--horizontal .new-zanata .i--huge {
   margin-top: -0.18em;
 }
 .new-zanata .i--large {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+.new-zanata .i--huge {
   font-size: 1.5em;
   line-height: 1em;
 }
@@ -2367,9 +2388,16 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--project:before {
   content: "\e005";
 }
+.new-zanata .i--document-alt-fill,
+.new-zanata .i--document {
+  margin-top: -0.09em;
+}
 .new-zanata .i--document-alt-fill:before,
 .new-zanata .i--document:before {
   content: "\e007";
+}
+.new-zanata .i--clock {
+  margin-top: -0.09em;
 }
 .new-zanata .i--clock:before {
   content: "\e008";
@@ -2523,13 +2551,13 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--no-bullets, .new-zanata nav ul,
-.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .list--slat {
+.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .list--slat, .new-zanata .list--slat-horizontal {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .new-zanata .list--no-bullets li, .new-zanata nav ul li,
-.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .list--slat li {
+.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -2567,10 +2595,10 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list--horizontal li {
   display: inline-block;
-  margin-left: 0.375em;
+  margin-right: 0.375em;
 }
-.new-zanata .list--horizontal li:first-child {
-  margin-left: 0;
+.new-zanata .list--horizontal li:last-child {
+  margin-right: 0;
 }
 
 /*
@@ -2588,14 +2616,56 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--slat > li {
-  border-top: 1px solid rgba(65, 105, 136, 0.1);
   padding: 0.375em 0;
+  border-top: 1px solid rgba(65, 105, 136, 0.1);
 }
 .new-zanata .list--slat > li > a {
   display: inline-block;
 }
 .new-zanata .list--slat > li:first-child {
   border-top: none;
+}
+.new-zanata .list__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/*
+
+#### List Slat Horizontal
+
+```
+<ul class="list--slat-horizontal">
+  <li>Standard</li>
+  <li><a href="#">Link</a></li>
+  <li><span class="list__title">Title</span></li>
+  <li><span class="list__title"><a href="#">Title Link</a></span></li>
+</ul>
+```
+
+*/
+.new-zanata .list--slat-horizontal > li {
+  display: inline-block;
+  padding: 0 0.375em;
+  border-left: 1px solid rgba(65, 105, 136, 0.1);
+}
+.new-zanata .list--slat-horizontal > li > a {
+  display: inline-block;
+}
+.new-zanata .list--slat-horizontal > li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+.new-zanata .list--slat-horizontal > li.list__right {
+  padding: 0;
+  border-left: none;
+}
+@media (min-width: 42.5em) {
+  .new-zanata .list--slat-horizontal > li.list__right {
+    float: right;
+  }
 }
 .new-zanata .list__title {
   margin: 0;
@@ -2728,7 +2798,7 @@ Sub-headings can be used when placing a heading under another heading.
   -moz-border-radius: 3em;
   border-radius: 3em;
 }
-.off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i {
+.off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge {
   padding: 0.375em;
 }
 .off-canvas__toggle .i--large, .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large {
@@ -2869,7 +2939,7 @@ Sub-headings can be used when placing a heading under another heading.
   color: #5b6670;
   float: right;
 }
-.new-zanata .off-canvas__close .i {
+.new-zanata .off-canvas__close .i, .new-zanata .off-canvas__close .i--large, .new-zanata .off-canvas__close .i--huge {
   vertical-align: top;
   line-height: 1em;
   padding: 0;
@@ -2939,7 +3009,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .tabs--accent .tabs__nav a {
   line-height: 1.5em;
 }
-.new-zanata .tabs--accent .tabs__nav a .i {
+.new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .i--huge {
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -3007,7 +3077,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 
 .new-zanata .progress-bar {
-  background-color: #c6d2db;
+  background-color: #a2b4c3;
   height: 0.375em;
   margin-bottom: 0.375em;
   width: 100%;
@@ -3363,6 +3433,30 @@ Sub-headings can be used when placing a heading under another heading.
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*
+### Reveal
+
+Used to show extra information on hover of the parent element
+
+```
+<div class="reveal">
+  <p>Hover over this area to show the hidden items</p>
+  <p class="reveal__target">Look at me!</p>
+</div>
+
+```
+
+*/
+.reveal:hover .reveal__target {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.reveal__target {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
 
 /*

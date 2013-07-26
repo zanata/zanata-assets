@@ -428,14 +428,14 @@ td.RejectedStateDecoration div div div {
 .DocumentListTable td.untranslatedCol {
   font-weight: bold;
   font-size: 14px;
-  color: #818181;
+  color: #416988;
   text-align: center;
 }
 
 .DocumentListTable td.remainingCol {
   font-weight: bold;
   font-size: 14px;
-  color: #c6d2db;
+  color: #416988;
   text-align: center;
 }
 

@@ -969,7 +969,7 @@ input[type="text"].loginForm_input, input[type="password"].loginForm_input {
 }
 
 .statusBar_untranslated {
-  background-color: #c6d2db;
+  background-color: #a2b4c3;
 }
 
 /* -----------------------  End Stats bar CSS  -------------------------*/
@@ -1145,7 +1145,7 @@ select.headerInput {
 }
 
 .copy_trans_options_table td.ignore_action, .ignore_action {
-  background-color: #c6d2db;
+  background-color: #a2b4c3;
   text-align: center;
 }
 
