@@ -1514,7 +1514,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .new-zanata .reveal__target {
+.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .no-touch .new-zanata .reveal__target {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2901,12 +2901,11 @@ Used to show extra information on hover of the parent element
 ```
 
 */
-.reveal:hover .reveal__target {
+.no-touch .new-zanata .reveal:hover .reveal__target {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-
-.reveal__target {
+.no-touch .new-zanata .reveal__target {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }

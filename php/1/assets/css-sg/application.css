@@ -401,14 +401,17 @@ td.RejectedStateDecoration div div div {
 .DocumentListTable td.documentCol {
   max-width: 100px;
   width: 25%;
-  text-decoration: underline;
+  color: #4e9fdd;
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
 }
+.DocumentListTable td.documentCol:hover {
+  color: #2479bb;
+}
 
 .DocumentListTable .hasError {
-  color: red;
+  color: #e0575b;
   font-weight: bold;
 }
 
@@ -539,7 +542,7 @@ td.RejectedStateDecoration div div div {
 }
 
 .resultTable .details:hover {
-  color: red;
+  color: #e0575b;
 }
 
 .tableMsg {
