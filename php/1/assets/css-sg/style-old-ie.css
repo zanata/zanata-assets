@@ -1514,7 +1514,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .no-touch .new-zanata .reveal__target {
+.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .no-touch .new-zanata .reveal__target, .new-zanata .loader, .new-zanata .loader__label, .new-zanata .loader__spinner {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2247,7 +2247,7 @@ Sub-headings can be used when placing a heading under another heading.
   height: 100%;
   content: "";
   z-index: 99;
-  background: url('/img/rgbapng/0000007f-5.png?1374733757');
+  background: url('/img/rgbapng/0000007f-5.png?1374817930');
   background: rgba(0, 0, 0, 0.5);
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2908,6 +2908,92 @@ Used to show extra information on hover of the parent element
 .no-touch .new-zanata .reveal__target {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+}
+
+.loader {
+  display: block;
+  line-height: 2.25em;
+  text-align: center;
+}
+.loader:hover {
+  background-color: rgba(65, 105, 136, 0.03);
+}
+.loader:active {
+  background-color: rgba(65, 105, 136, 0.03);
+}
+.loader.is-active {
+  cursor: default;
+  background-color: rgba(65, 105, 136, 0.03);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.loader__label {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+.loader.is-active .loader__label {
+  padding-left: 2.25em;
+  color: #416988;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+.loader__spinner {
+  position: absolute;
+  left: 0;
+  padding: 0.9375em 0;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.loader.is-active .loader__spinner {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.loader__spinner span {
+  display: inline-block;
+  width: 0.375em;
+  height: 0.375em;
+  margin-left: 0.1875em;
+  border-radius: 1.5em;
+  background-color: #416988;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-function: linear;
+}
+.loader__spinner span:nth-child(1) {
+  margin-left: 0;
+  -webkit-animation-delay: 0.15s;
+}
+.loader__spinner span:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+}
+.loader__spinner span:nth-child(3) {
+  -webkit-animation-delay: 0.35s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+
+  50% {
+    background-color: #416988;
+  }
+
+  100% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
 }
 
 /*
