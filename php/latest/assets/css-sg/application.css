@@ -662,16 +662,19 @@ td.RejectedStateDecoration div div div {
   cursor: default;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  background: #f0f2f4;
+  background: #f5f7f8;
   color: #416988;
   font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none;
 }
 
 #gwt-debug-transHistoryTabPanel.gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
-  border: none;
-  background: #f0f2f4;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
   border-radius: 2px;
   border-top-left-radius: 0;
+  background: #f5f7f8;
 }
 
 /* end translation history style*/
@@ -680,7 +683,7 @@ td.RejectedStateDecoration div div div {
   font-size: 13px;
   text-align: center;
   padding: 3px 0;
-  border-radius: 5px;
+  border-radius: 2px;
   border: 1px dotted gray;
   color: #FFFFFF;
 }
@@ -828,10 +831,22 @@ a.downloadLink {
 
 .gwt-DialogBox-CloseButton {
   width: 5em;
-  margin: 10px 5px 5px 0;
+  margin: 0;
   float: right;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  background-color: white;
+}
+.gwt-DialogBox-CloseButton:hover {
+  background-color: #fdfdfd;
+}
+.gwt-DialogBox-CloseButton:active {
+  background-color: #e8eaec;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .transUnitCol .bookmark {
@@ -876,6 +891,7 @@ a.downloadLink {
 
 #gwt-debug-transHistory-content .gwt-TabLayoutPanel {
   font-size: 14px;
+  height: 100% !important;
 }
 #gwt-debug-transHistory-content .gwt-TabLayoutPanel > div:nth-of-type(2) {
   height: 32px !important;
@@ -985,7 +1001,7 @@ html .gwt-DecoratorPanel .bottomRightInner {
 
 .gwt-DialogBox .dialogMiddleCenter {
   padding: .75em;
-  background: #f5f7f8;
+  background: #ecf0f3;
 }
 
 .gwt-DialogBox .dialogBottomCenter {
