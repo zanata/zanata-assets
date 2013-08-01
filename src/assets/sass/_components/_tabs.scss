@@ -1,0 +1,89 @@
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.tabs {
+
+}
+
+.tabs__nav {
+  letter-spacing: -0.31em;
+  li {
+    @include inline-block;
+    letter-spacing: normal;
+  }
+  a {
+    padding: rhythm(.5);
+    @include inline-block;
+    min-width: rhythm(2);
+    text-align: center;
+    font-weight: 600;
+  }
+  .tab__end {
+    float: right;
+  }
+}
+
+.tabs--lined {
+  .tabs__nav {
+    border-bottom: 2px solid $color-secondary-20;
+    a {
+      margin-bottom: -2px;
+      border-bottom: 2px solid transparent;
+    }
+    a:hover {
+      border-bottom-color: $color-secondary-30;
+    }
+    a.is-active {
+      border-bottom-color: $color-link;
+    }
+  }
+}
+
+.tabs--accent {
+  .tabs__nav {
+    @extend .bg--pop-highest;
+    z-index: 1;
+    position: relative;
+    a {
+      line-height: rhythm(1);
+      .i {
+        @include adjust-font-size-to(16px);
+      }
+      .i--large {
+        @include adjust-font-size-to(24px,1);
+      }
+    }
+    a:hover {
+      @extend .bg--higher;
+    }
+    a.is-active {
+      @extend .bg--higher;
+      @include background-image(linear-gradient(left, rgba(0,0,0,0.05) 0%,rgba(255,255,255,0) 10%,rgba(255,255,255,0) 90%,rgba(0,0,0,0.05) 100%));
+      position: relative;
+      padding-bottom: rhythm(0.6);
+      margin-bottom: rhythm(-0.1);
+      &:after {
+        @extend .bg--higher;
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+      }
+    }
+    li:first-child a.is-active {
+      @include background-image(linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(0,0,0,0.05) 100%));
+    }
+    // li
+    .tab__end a.is-active {
+      @include background-image(linear-gradient(left, rgba(0,0,0,0.05) 0%,rgba(255,255,255,0) 10%,rgba(255,255,255,0) 100%));
+    }
+  }
+  .tabs__content {
+    z-index: 0;
+  }
+}
+
+}

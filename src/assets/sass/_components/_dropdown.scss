@@ -1,0 +1,191 @@
+
+
+/*
+
+### Dropdown
+
+```
+<div class="dropdown">
+  <a class="dropdown__toggle" href="#"><i class="icon--arrow-down dropdown__toggle__icon"></i> Action</a>
+  <ul class="dropdown__content" role="content" aria-labelledby="dropdownContent">
+    <li><a tabindex="-1" href="#">Action </a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+    <li><a tabindex="-1" href="#">Something else here</a></li>
+    <li class="dropdown__divider"></li>
+    <li><a tabindex="-1" href="#">Separated link</a></li>
+  </ul>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.dropdown__container {
+  z-index: 1;
+  position: relative;
+  &.is-active {
+    z-index: 2;
+    @include opacity(1);
+  }
+}
+
+.dropdown {
+  @include transition($default-transition);
+  position: relative;
+  z-index: 10;
+  margin: 0 rhythm(-.25);
+}
+
+.dropdown__toggle {
+  @extend .is-transition;
+  position: relative;
+  z-index: 12;
+  display: block;
+  // margin: rhythm(-.25) 0;
+  padding: rhythm(.125) rhythm(.25) rhythm(.125) 0;
+  cursor: pointer;
+  color: $color-link;
+  border: 1px solid transparent;
+  &:hover {
+    background-color: rgba($color-secondary, 0.03);
+  }
+  &:active {
+    background-color: $white;
+    border: 1px solid rgba($color-secondary, 0.15);
+  }
+  // &.is-active {
+  //   margin: rhythm(-.125) 0;
+  //   padding: rhythm(.25) rhythm(.25) rhythm(.25) 0;
+  //   @extend .bg--pop-highest;
+  //   color: $color-link-active;
+  // }
+}
+
+.dropdown__container.is-active .dropdown__toggle {
+  margin: rhythm(-.125) 0;
+  padding: rhythm(.25) rhythm(.25) rhythm(.25) 0;
+  color: $color-link-active;
+}
+
+.dropdown.is-active .dropdown__toggle {
+  @extend .bg--pop-highest;
+}
+
+.dropdown:hover .dropdown__toggle {
+  color: $color-link-hover;
+}
+
+.dropdown__toggle__icon {
+  @include transition($default-transition);
+  @include adjust-font-size-to(18px,1);
+  position: relative;
+  float: left;
+  padding: 0 rhythm(.25, 18px);
+  margin-top: rhythm(.06);
+  @include breakpoint($gte-medium) {
+    padding: 0 rhythm(.125, 18px);
+  }
+}
+
+.dropdown.is-active .dropdown__toggle__icon {
+  @include rotate(180deg);
+}
+
+.dropdown__content {
+  @extend .bg--higher;
+  @include opacity(0);
+  position: absolute !important;
+  top: 100%;
+  left: 0;
+  z-index: 11;
+  visibility: hidden;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  width: 100%;
+  float: left;
+  min-width: rhythm(4);
+  @include transform3d(translate3d(0,rhythm(-1),0));
+  > li {
+    list-style: none;
+    margin: 0;
+    padding: rhythm(.25) rhythm(.25) rhythm(.25) rhythm(1.3);
+    &:hover {
+      .no-touch & {
+        @extend .bg--high;
+      }
+    }
+    > a {
+      display: block;
+      margin: 0;
+    }
+    @include breakpoint($gte-medium) {
+      padding-left: rhythm(1);
+    }
+  }
+  .dropdown__header {
+    border-bottom: 1px solid $color-bg;
+    &:hover {
+      .no-touch & {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.dropdown__divider {
+  display: block;
+  overflow: hidden;
+  padding: 0 !important;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid transparent;
+  background-color: $color-bg;
+}
+
+.dropdown.is-active .dropdown__content {
+  visibility: visible;
+  @include transform3d(translate3d(0,0,0));
+  @include opacity(1);
+  max-height: rhythm(10); // TODO: Set max-height with js
+  @extend .bg--pop-highest;
+}
+
+.dropdown--right {
+  .dropdown__toggle__icon {
+    float: right;
+  }
+  .dropdown__content {
+    left: auto;
+    right: 0;
+    float: right;
+  }
+}
+
+.dropdown--inline {
+  display: inline-block;
+  margin-left: rhythm(.125);
+  .dropdown__toggle {
+    margin: rhythm(-.25) 0;
+    padding: rhythm(.125) 0 rhythm(.125) rhythm(.25);
+  }
+  .dropdown__toggle__icon {
+    float: none;
+    padding: 0;
+    margin-left: rhythm(-.125, 18px);
+    margin-top: 0;
+  }
+  .dropdown__content {
+    width: auto;
+    margin-top: rhythm(.25);
+    > li {
+      white-space:nowrap;
+      padding: rhythm(.25) rhythm(.75);
+    }
+  }
+}
+
+}

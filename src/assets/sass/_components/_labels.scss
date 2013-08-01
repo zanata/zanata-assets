@@ -1,0 +1,36 @@
+//
+// Label Component - Default Settings
+// ----------------------------------
+// Change in _settings.scss
+
+$label-prefix : "label";
+$label-el     : #{$label-prefix}#{$el};
+$label-mod    : #{$label-prefix}#{$mod};
+
+/*
+
+### Labels
+
+```
+<p><span class="label">Label</span></p>
+<p><span class="label--highlight">Label Highlight</span></p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$label-prefix} {
+  background-color: $color-secondary-20;
+  padding: 0 rhythm(.25);
+  @include inline-block;
+}
+
+.#{$label-mod}highlight {
+  @extend .#{$label-prefix};
+  background-color: $color-highlight;
+  color: $white;
+}
+
+}

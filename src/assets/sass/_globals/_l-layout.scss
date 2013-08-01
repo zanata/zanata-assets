@@ -1,0 +1,194 @@
+//
+// Layout Component - Default Settings
+// -----------------------------------
+// Change in _settings.scss
+
+$layout-prefix                  : "l"                             !default;
+$layout-mod                     : "#{$layout-prefix}#{$mod}"      !default;
+$layout-el                      : "#{$layout-prefix}#{el}"        !default;
+$layout-wrapper-max-width       : 48em                            !default;
+$layout-wrapper-min-ie-width    : 44em                            !default; // NOTE: old ie only
+$layout-spacing-increments      : 0 0.5 1 2                       !default;
+$layout-spacing-increment-names : 0 "half" 1 2                    !default;
+$layout-spacing-sides           : top bottom left right           !default;
+
+/*
+
+### Layout Helpers
+
+#### Clearfix
+
+<div class="#{$placeholder-el}block #{$layout-mod}clearfix">
+  .#{$layout-mod}clearfix
+  (use overflow:hidden)
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}clearfix-overflow">
+  .#{$layout-mod}clearfix-overflow
+  (old style)
+</div>
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$layout-mod}clearfix {
+  @include clearfix;
+}
+
+.#{$layout-mod}clearfix-overflow {
+  @include pie-clearfix;
+}
+
+}
+
+/*
+
+#### Floats
+
+```
+<div class="#{$placeholder-el}block #{$layout-mod}float-left">
+  .#{$layout-mod}float-left
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}float-right">
+  .#{$layout-mod}float-right
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$layout-mod}float-left {
+  float: left !important;
+}
+
+.#{$layout-mod}float-right {
+  float: right !important;
+}
+
+}
+
+/*
+
+#### Wrapper
+
+$max-site-width is assigned to this
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$layout-el}wrapper {
+  max-width: $layout-wrapper-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $grid-padding / 4;
+  @include breakpoint($gte-medium) {
+    padding: 0 $grid-padding / 2;
+  }
+  @include breakpoint($gte-large) {
+    padding: 0 $grid-padding;
+  }
+  @include no-mqueries {
+    min-width: $layout-wrapper-min-ie-width; // ? Sets a min-width in ie so it doesn't get too squashed
+  }
+}
+
+}
+
+/*
+
+#### Spacing
+
+These classes use `!important` as you would not be applying these should always "win".
+Only use them if it does not make sense to add this styling to another element/component.
+
+*/
+@each $i in  $layout-spacing-increments {
+  $i-name: nth($layout-spacing-increment-names, index($layout-spacing-increments, $i));
+  @each $side in  $layout-spacing-sides {
+/*
+```
+<div class="#{$placeholder-el}block #{$layout-mod}push-#{$side}-#{$i-name}">
+  .#{$layout-mod}push-#{$side}-#{$i-name}
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}pad-#{$side}-#{$i-name}">
+  .#{$layout-mod}pad-#{$side}-#{$i-name}
+</div>
+```
+*/
+  }
+/*
+```
+<div class="#{$placeholder-el}block #{$layout-mod}push-v-#{$i-name}">
+  .#{$layout-mod}push-v-#{$i-name}
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}pad-v-#{$i-name}">
+  .#{$layout-mod}pad-v-#{$i-name}
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}push-h-#{$i-name}">
+  .#{$layout-mod}push-h-#{$i-name}
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}pad-h-#{$i-name}">
+  .#{$layout-mod}pad-h-#{$i-name}
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}push-all-#{$i-name}">
+  .#{$layout-mod}push-v-#{$i-name}
+</div>
+
+<div class="#{$placeholder-el}block #{$layout-mod}pad-all-#{$i-name}">
+  .#{$layout-mod}pad-v-#{$i-name}
+</div>
+```
+*/
+}
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+@each $i in  $layout-spacing-increments {
+  $i-name: nth($layout-spacing-increment-names, index($layout-spacing-increments, $i));
+  @each $side in  $layout-spacing-sides {
+    .#{$layout-mod}push-#{$side}-#{$i-name} {
+      margin-#{$side}: rhythm($i) !important;
+    }
+    .#{$layout-mod}pad-#{$side}-#{$i-name} {
+      padding-#{$side}: rhythm($i) !important;
+    }
+  }
+  .#{$layout-mod}push-v-#{$i-name} {
+    margin-top: rhythm($i) !important;
+    margin-bottom: rhythm($i) !important;
+  }
+  .#{$layout-mod}pad-v-#{$i-name} {
+    padding-top: rhythm($i) !important;
+    padding-bottom: rhythm($i) !important;
+  }
+  .#{$layout-mod}push-h-#{$i-name} {
+    margin-left: rhythm($i) !important;
+    margin-right: rhythm($i) !important;
+  }
+  .#{$layout-mod}pad-h-#{$i-name} {
+    padding-left: rhythm($i) !important;
+    padding-right: rhythm($i) !important;
+  }
+  .#{$layout-mod}push-all-#{$i-name} {
+    margin: rhythm($i) !important;
+  }
+  .#{$layout-mod}pad-all-#{$i-name} {
+    padding: rhythm($i) !important;
+  }
+}
+
+}
+

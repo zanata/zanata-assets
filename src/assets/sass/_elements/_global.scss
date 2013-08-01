@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+[hidden] {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+}
+
+.new-zanata-body,
+.new-zanata-html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// TODO: Remove namespacing when old zanata removed
+html.new-zanata,
+.new-zanata-base {
+  @include reset-baseline;
+  color: $color-base-font;
+  font-size: $base-font-size;
+  font-family: $font-family-base;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  // @include breakpoint($gte-medium) {
+  //   @include adjust-font-size-to($medium-font-size, 1);
+  // }
+  // @include breakpoint($gte-large) {
+  //   @include adjust-font-size-to($large-font-size, 1);
+  // }
+}
+
+body.new-zanata,
+.new-zanata-base-inner {
+  margin: 0;
+  background: $color-body-background;
+  -webkit-overflow-scrolling: touch;
+}

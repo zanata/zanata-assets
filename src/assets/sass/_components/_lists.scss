@@ -1,0 +1,223 @@
+//
+// Lists Component - Default Settings
+// ----------------------------------
+// Change in _settings.scss
+
+$list-prefix : "list";
+$list-el     : #{$list-prefix}#{$el};
+$list-mod    : #{$list-prefix}#{$mod};
+
+/*
+### Lists
+
+#### No Bullet List
+
+```
+<ul class="#{$list-mod}no-bullets">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//ul
+.#{$list-mod}no-bullets {
+  @include no-bullets;
+  margin: 0;
+  padding: 0;
+}
+
+}
+
+/*
+
+#### Navigation list
+
+```
+<nav>
+  <ul>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+  </ul>
+</nav>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+nav ul,
+nav ol {
+  @extend .#{$list-mod}no-bullets;
+}
+
+}
+
+/*
+
+#### Horizontal List
+
+```
+<ul class="#{$list-mod}horizontal">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//ul
+.#{$list-mod}horizontal {
+  @extend .#{$list-mod}no-bullets;
+  li {
+    display: inline-block;
+    margin-right: rhythm(.25);
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+}
+
+/*
+
+#### List Slat
+
+```
+<ul class="#{$list-mod}slat">
+  <li>Standard</li>
+  <li><a href="#">Link</a></li>
+  <li><span class="#{$list-el}title">Title</span></li>
+  <li><span class="#{$list-el}title"><a href="#">Title Link</a></span></li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$list-mod}slat {
+  @extend .#{$list-mod}no-bullets;
+  > li {
+    @include old-ie {
+      border-top: 1px solid $color-secondary-20;
+    }
+    padding: rhythm(.25) 0;
+    border-top: 1px solid rgba($color-secondary, .1);
+    > a {
+      display: inline-block;
+    }
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.#{$list-el}title {
+  margin: 0;
+  font-weight: 600;
+  @include adjust-font-size-to($base-font-size);
+}
+
+}
+
+/*
+
+#### List Slat Horizontal
+
+```
+<ul class="#{$list-mod}slat-horizontal">
+  <li>Standard</li>
+  <li><a href="#">Link</a></li>
+  <li><span class="#{$list-el}title">Title</span></li>
+  <li><span class="#{$list-el}title"><a href="#">Title Link</a></span></li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$list-mod}slat-horizontal {
+  @extend .#{$list-mod}no-bullets;
+  > li {
+    @include old-ie {
+      border-left: 1px solid $color-secondary-20;
+    }
+    display: inline-block;
+    padding: 0 rhythm(.25);
+    border-left: 1px solid rgba($color-secondary, .1);
+    > a {
+      display: inline-block;
+    }
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+    &.list__right {
+      padding: 0;
+      border-left: none;
+      @include breakpoint($gte-medium) {
+        float: right;
+      }
+    }
+  }
+}
+
+.#{$list-el}title {
+  margin: 0;
+  font-weight: 600;
+  @include adjust-font-size-to($base-font-size);
+}
+
+}
+
+/*
+
+#### List Block Links
+
+```
+<ul class="#{$list-mod}block-links">
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$list-mod}block-links {
+  li {
+    padding: 0;
+    > a {
+      display: block;
+      padding: rhythm(.5);
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+}

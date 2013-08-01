@@ -1,0 +1,180 @@
+//
+// Width Component - Default Settings
+// ----------------------------------
+// Change in _settings.scss
+
+$width-prefix : "w"                       !default;
+$width-mod    : "#{$width-prefix}#{$mod}" !default;
+
+// Setup for widths
+
+@mixin width-setup($namespace: "") {
+  .#{$width-mod}1#{$namespace} {
+    width:100%;
+  }
+
+  .#{$width-mod}1-2#{$namespace} {
+    width:50%;
+  }
+
+  .#{$width-mod}1-3#{$namespace} {
+    width:33.333%;
+  }
+  .#{$width-mod}2-3#{$namespace} {
+    width:66.666%;
+  }
+
+  .#{$width-mod}1-4#{$namespace} {
+    width:25%;
+  }
+  .#{$width-mod}2-4#{$namespace} {
+    @extend .#{$width-mod}1-2#{$namespace};
+  }
+  .#{$width-mod}3-4#{$namespace} {
+    width:75%;
+  }
+
+  .#{$width-mod}1-5#{$namespace} {
+    width:20%;
+  }
+  .#{$width-mod}2-5#{$namespace} {
+    width:40%;
+  }
+  .#{$width-mod}3-5#{$namespace} {
+    width:60%;
+  }
+  .#{$width-mod}4-5#{$namespace} {
+    width:80%;
+  }
+
+  .#{$width-mod}1-6#{$namespace} {
+    width:16.666%;
+  }
+  .#{$width-mod}2-6#{$namespace} {
+    @extend .#{$width-mod}1-3#{$namespace};
+  }
+  .#{$width-mod}3-6#{$namespace} {
+    @extend .#{$width-mod}1-2#{$namespace};
+  }
+  .#{$width-mod}4-6#{$namespace} {
+    @extend .#{$width-mod}2-3#{$namespace};
+  }
+  .#{$width-mod}5-6#{$namespace} {
+    width:83.333%;
+  }
+
+  .#{$width-mod}1-8#{$namespace} {
+    width:12.5%;
+  }
+  .#{$width-mod}2-8#{$namespace} {
+    @extend .#{$width-mod}1-4#{$namespace};
+  }
+  .#{$width-mod}3-8#{$namespace} {
+    width:37.5%;
+  }
+  .#{$width-mod}4-8#{$namespace} {
+    @extend .#{$width-mod}1-2#{$namespace};
+  }
+  .#{$width-mod}5-8#{$namespace} {
+    width:62.5%;
+  }
+  .#{$width-mod}6-8#{$namespace} {
+    @extend .#{$width-mod}3-4#{$namespace};
+  }
+  .#{$width-mod}7-8#{$namespace} {
+    width:87.5%;
+  }
+
+
+  .#{$width-mod}1-10#{$namespace} {
+    width:10%;
+  }
+  .#{$width-mod}2-10#{$namespace} {
+    @extend .#{$width-mod}1-5#{$namespace};
+  }
+  .#{$width-mod}3-10#{$namespace} {
+    width:30%;
+  }
+  .#{$width-mod}4-10#{$namespace} {
+    @extend .#{$width-mod}2-5#{$namespace};
+  }
+  .#{$width-mod}5-10#{$namespace} {
+    @extend .#{$width-mod}1-2#{$namespace};
+  }
+  .#{$width-mod}6-10#{$namespace} {
+    @extend .#{$width-mod}3-5#{$namespace};
+  }
+  .#{$width-mod}7-10#{$namespace} {
+    width:70%;
+  }
+  .#{$width-mod}8-10#{$namespace} {
+    @extend .#{$width-mod}4-5#{$namespace};
+  }
+  .#{$width-mod}9-10#{$namespace} {
+    width:90%;
+  }
+
+  .#{$width-mod}1-12#{$namespace} {
+    width:8.333%;
+  }
+  .#{$width-mod}2-12#{$namespace} {
+    @extend .#{$width-mod}1-6#{$namespace};
+  }
+  .#{$width-mod}3-12#{$namespace} {
+    @extend .#{$width-mod}1-4#{$namespace};
+  }
+  .#{$width-mod}4-12#{$namespace} {
+    @extend .#{$width-mod}1-3#{$namespace};
+  }
+  .#{$width-mod}5-12#{$namespace} {
+    width:41.666%
+  }
+  .#{$width-mod}6-12#{$namespace} {
+    @extend .#{$width-mod}1-2#{$namespace};
+  }
+  .#{$width-mod}7-12#{$namespace} {
+    width:58.333%;
+  }
+  .#{$width-mod}8-12#{$namespace} {
+    @extend .#{$width-mod}2-3#{$namespace};
+  }
+  .#{$width-mod}9-12#{$namespace} {
+    @extend .#{$width-mod}3-4#{$namespace};
+  }
+  .#{$width-mod}10-12#{$namespace} {
+    @extend .#{$width-mod}5-6#{$namespace};
+  }
+  .#{$width-mod}11-12#{$namespace} {
+    width:91.666%;
+  }
+}
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+// Apply Global Widths - Don't apply to small
+@include breakpoint($gte-medium) {
+  @include width-setup;
+}
+
+// Small Only Widths
+@include breakpoint($lte-small) {
+  @include width-setup('-s');
+}
+
+// Medium Only Widths
+@include breakpoint($e-medium) {
+  @include width-setup('-m');
+}
+
+// Large Only Widths
+@include breakpoint($e-large) {
+  @include width-setup('-l');
+}
+
+// Huge and up Widths
+@include breakpoint($gte-huge) {
+  @include width-setup('-h');
+}
+
+}

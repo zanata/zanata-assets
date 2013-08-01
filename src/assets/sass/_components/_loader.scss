@@ -1,0 +1,82 @@
+%loader-transition {
+  @include transition(0.15s cubic-bezier(.26, .47, .36, .94))
+}
+
+.loader {
+  @extend %loader-transition;
+  display: block;
+  line-height: rhythm(1.5);
+  text-align: center;
+  &:hover {
+    background-color: rgba($color-secondary, 0.03);
+  }
+  &:active {
+    background-color: rgba($color-secondary, 0.03);
+  }
+  &.is-active {
+    cursor: default;
+    background-color: rgba($color-secondary, 0.03);
+    @include border-radius($default-border-radius);
+  }
+}
+
+.loader__label {
+  @extend %loader-transition;
+  position: relative;
+  @include inline-block;
+  .loader.is-active & {
+    padding-left: rhythm(1.5);
+    color: $color-link-active;
+    @include opacity(.5);
+  }
+}
+
+.loader__spinner {
+  @extend %loader-transition;
+  position: absolute;
+  left: 0;
+  padding: rhythm(.625) 0;
+  width: rhythm(1);
+  height: rhythm(1);
+  // background-color: rgba($color-secondary, 0.05);
+  text-align: center;
+  // @include border-radius($default-border-radius);
+  @include opacity(0);
+  .loader.is-active & {
+    @include opacity(1);
+  }
+  span {
+    display: inline-block;
+    width: rhythm(.25);
+    height: rhythm(.25);
+    margin-left: rhythm(.125);
+    border-radius: rhythm(1);
+    background-color: rgba($color-secondary,1);
+    -webkit-animation-name: loading;
+    -webkit-animation-duration:.5s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-function:linear;
+    &:nth-child(1){
+      margin-left: 0;
+      -webkit-animation-delay: 0.15s;
+    }
+    &:nth-child(2){
+      -webkit-animation-delay: 0.25s;
+    }
+    &:nth-child(3){
+      -webkit-animation-delay: 0.35s;
+    }
+  }
+}
+
+@-webkit-keyframes loading {
+  0%{
+    background-color: rgba($color-secondary,0.2);
+  }
+  50%{
+    background-color: rgba($color-secondary,1);
+  }
+  100%{
+    background-color: rgba($color-secondary,0.2);
+  }
+}

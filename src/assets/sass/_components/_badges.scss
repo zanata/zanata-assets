@@ -1,0 +1,62 @@
+//
+// Badge Component - Default Settings
+// ----------------------------------
+// Change in _settings.scss
+
+$badge-prefix : "badge";
+$badge-el     : #{$badge-prefix}#{$el};
+$badge-mod    : #{$badge-prefix}#{$mod};
+
+/*
+
+### Badges
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$badge-prefix} {
+  padding: 0 rhythm(.2, 14px);
+  background-color: $color-secondary-20;
+  font-weight: 400;
+  @include adjust-font-size-to(14px, 0.75);
+  @include border-radius($default-border-radius);
+  @include inline-block;
+}
+
+.#{$badge-el}container {
+  position: relative;
+  z-index: 1;
+}
+
+.#{$badge-mod}inline {
+  position: relative;
+  margin-top: rhythm(.125,14px);
+}
+
+.#{$badge-mod}highlight {
+  @extend .#{$badge-prefix};
+  background-color: $color-highlight;
+  color: $white;
+}
+
+%#{$badge-mod}position {
+  @extend .#{$badge-prefix};
+  position: absolute;
+  z-index: 2;
+}
+
+.#{$badge-mod}bl {
+  @extend %#{$badge-mod}position;
+  bottom: rhythm(.2, 14px);
+  left: rhythm(.2, 14px);
+}
+
+.#{$badge-mod}br {
+  @extend %#{$badge-mod}position;
+  bottom: rhythm(.2, 14px);
+  right: rhythm(.2, 14px);
+}
+
+}

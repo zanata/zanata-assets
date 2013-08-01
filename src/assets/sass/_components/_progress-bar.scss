@@ -1,0 +1,50 @@
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.progress-bar {
+  background-color: $color-neutral;
+  height: rhythm(.25);
+  margin-bottom: rhythm(.25);
+  width: 100%;
+  position: relative;
+  @include transition($default-transition);
+}
+
+.progress-bar__expander:hover .progress-bar {
+  .no-touch & {
+    height: rhythm(.5);
+    margin-bottom: 0;
+  }
+}
+
+.progress-bar__item {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+
+.progress-bar__translated {
+  @extend .progress-bar__item;
+  background-color: $color-success;
+  z-index: 1;
+}
+
+.progress-bar__fuzzy {
+  @extend .progress-bar__item;
+  background-color: $color-unsure;
+  z-index: 2;
+}
+
+.progress-bar__rejected {
+  @extend .progress-bar__item;
+  background-color: $color-warning;
+  z-index: 3;
+}
+
+.progress-bar__approved {
+  @extend .progress-bar__item;
+  background-color: $color-highlight;
+  z-index: 4;
+}
+
+}

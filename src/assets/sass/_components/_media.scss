@@ -1,0 +1,26 @@
+/*
+
+### Media
+
+#### Media Circle
+
+```
+<div class="media--circle">
+  <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
+</div>
+```
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.media--circle {
+  border-radius: 50%;
+  @include inline-block;
+  overflow: hidden;
+  img {
+    display: block;
+  }
+}
+
+}

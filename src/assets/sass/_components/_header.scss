@@ -1,0 +1,54 @@
+/*
+
+### Header
+
+#### Site Logo
+
+```
+
+<header role="banner" class="accent__pop-more--large header">
+  <div class="l__wrapper">
+    <h1 class="gamma text--align-center heading--sub"><a href="/"><img src="../logo.svg"> Zanata</a></h1>
+  </div>
+</header>
+
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.header__title {
+  @include adjust-font-size-to(28px, 2);
+  padding: 0;
+  margin: 0;
+  @include breakpoint($gte-medium) {
+    margin: 0 0 0 rhythm(1,28px);
+  }
+  @include breakpoint($gte-large) {
+    margin: 0 0 0 rhythm(2,28px);
+  }
+}
+
+.header__site-logo {
+  height: rhythm(1.25, 28px);
+  margin-bottom: rhythm(-.25, 28px);
+}
+
+.header__menu {
+  @include inline-block;
+  line-height: rhythm(2);
+}
+
+.header__login {
+  padding: rhythm(.5) rhythm(.5);
+  @include breakpoint($gte-medium) {
+    padding: rhythm(.25) rhythm(1);
+  }
+  @include breakpoint($gte-large) {
+    padding: rhythm(.25) rhythm(2);
+  }
+}
+
+}

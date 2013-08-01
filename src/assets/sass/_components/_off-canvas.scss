@@ -1,0 +1,242 @@
+//
+// Off Canvas Component - Default Settings
+// ----------------------------------
+// Change in _settings.scss
+
+$offcanvas-outer-bg-color : $color-base-font !default;
+$offcanvas-inner-bg-color : $color-bg !default;
+// Replace when old style removed
+// $offcanvas-target-width   : rhythm(11) !default;
+$offcanvas-target-width   : 270px !default;
+
+.off-canvas__outer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  background-color: $offcanvas-outer-bg-color;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  @include transition($default-transition);
+  @include box-sizing(border-box);
+}
+
+.off-canvas__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $offcanvas-inner-bg-color;
+  @include transition($default-transition);
+  // To stop the "flashes" during animation
+  -webkit-backface-visibility: hidden;
+  // Smoother scrolling
+  -webkit-overflow-scrolling: touch;
+}
+
+.off-canvas--left-over,
+.off-canvas--right-over {
+  .off-canvas__inner {
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      z-index: 99;
+      @include rgba-background(rgba($black, 0.5));
+      @include transition($default-transition);
+    }
+  }
+}
+
+@include breakpoint($lte-large) {
+  .off-canvas--left-under .off-canvas__inner {
+    .no-csstransforms3d & {
+      left: $offcanvas-target-width;
+    }
+    .csstransforms3d & {
+      @include transform3d(translate3d($offcanvas-target-width,0,0));
+    }
+  }
+  .off-canvas--right-under .off-canvas__inner {
+    .no-csstransforms3d & {
+      right: $offcanvas-target-width;
+    }
+    .csstransforms3d & {
+      @include transform3d(translate3d(- $offcanvas-target-width,0,0));
+    }
+  }
+}
+
+@include breakpoint($gte-huge) {
+  .off-canvas--left-under {
+    padding-left: $offcanvas-target-width;
+  }
+  .off-canvas--right-under {
+    padding-right: $offcanvas-target-width;
+  }
+}
+
+.off-canvas__toggle {
+  @include inline-block;
+  padding: rhythm(.25);
+  text-align: center;
+  height: rhythm(2);
+  width: rhythm(2);
+  img {
+    @include border-radius(rhythm(2));
+  }
+  .i {
+    padding: rhythm(.25);
+  }
+  .i--large {
+    padding: rhythm(.25, 24px);
+  }
+  &.is-active {
+    color: $offcanvas-outer-bg-color;
+  }
+}
+
+.off-canvas__toggle--left {
+  @extend .off-canvas__toggle;
+  border-right: 1px solid $color-secondary-20;
+}
+
+.off-canvas__toggle--right {
+  @extend .off-canvas__toggle;
+  border-left: 1px solid $color-secondary-20;
+}
+
+.off-canvas__header {
+  background-color: lighten($offcanvas-outer-bg-color, 10%);
+  height: rhythm(2);
+  @include box-shadow($default-box-shadow);
+}
+
+[data-off-canvas=over] .off-canvas__header {
+  background-color: lighten($offcanvas-inner-bg-color, 10%);
+}
+
+%off-canvas__target {
+  width: $offcanvas-target-width;
+  background-color: $offcanvas-outer-bg-color;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  @include transition($default-transition);
+  @include box-shadow(inset 0 0 8px rgba($black, .2));
+  // To stop the "flashes" during animation
+  -webkit-backface-visibility: hidden;
+  &[data-off-canvas=over] {
+    background-color: $color-bg-lighter;
+    @include box-shadow(0 2px 8px rgba($black,.2));
+    z-index: 100;
+  }
+}
+
+.off-canvas--left {
+  @extend %off-canvas__target;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  &[data-off-canvas=over] {
+    left: - $offcanvas-target-width;
+    .js & {
+      left: 0;
+    }
+    .no-csstransforms3d & {
+      left: - $offcanvas-target-width;
+    }
+    .csstransforms3d & {
+      @include transform3d(translate3d(-$offcanvas-target-width,0,0));
+    }
+  }
+}
+
+.off-canvas--left-over .off-canvas--left {
+  .no-csstransforms3d & {
+    left: 0;
+  }
+  .csstransforms3d & {
+    @include transform3d(translate3d(0,0,0));
+  }
+}
+@include breakpoint($gte-huge) {
+  .off-canvas--left-under .off-canvas--left {
+    .no-csstransforms3d & {
+      left: 0;
+    }
+    .csstransforms3d & {
+      @include transform3d(translate3d(0,0,0));
+    }
+  }
+}
+
+.off-canvas--right {
+  @extend %off-canvas__target;
+  right: 0;
+  -webkit-backface-visibility: hidden;
+  &[data-off-canvas=over] {
+    right: - $offcanvas-target-width;
+    .js & {
+      right: 0;
+    }
+    .no-csstransforms3d & {
+      right: - $offcanvas-target-width;
+    }
+    .csstransforms3d & {
+      @include transform3d(translate3d($offcanvas-target-width,0,0));
+    }
+  }
+}
+
+.off-canvas--right-over .off-canvas--right {
+  .no-csstransforms3d & {
+    right: $offcanvas-target-width;
+  }
+  .csstransforms3d & {
+    @include transform3d(translate3d(0,0,0));
+  }
+}
+
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+  .off-canvas__close {
+    @extend .off-canvas__toggle;
+    @include adjust-font-size-to(24px, 1);
+    margin: rhythm(.5, 24px);
+    padding: 0;
+    width: rhythm(1, 24px);
+    height: rhythm(1, 24px);
+    border-radius: 50%;
+    background-color: lighten($offcanvas-outer-bg-color, 30%);
+    color: lighten($offcanvas-outer-bg-color, 10%);
+    float: right;
+    .i {
+      vertical-align: top;
+      line-height: 1em;
+      padding: 0;
+    }
+    &:hover {
+      background-color: lighten($offcanvas-outer-bg-color, 35%);
+      color: $offcanvas-outer-bg-color;
+    }
+  }
+}
+
+.off-canvas--left .off-canvas__close {
+  float: left;
+}
+
+[data-off-canvas=over] .off-canvas__close {
+  background-color: darken($offcanvas-inner-bg-color, 7%);
+  color: lighten($offcanvas-inner-bg-color, 5%);
+  &:hover {
+    background-color: darken($offcanvas-inner-bg-color, 15%);
+    color: lighten($offcanvas-inner-bg-color, 10%);
+  }
+}

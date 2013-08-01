@@ -1,0 +1,182 @@
+//
+// Forms Element - Default Settings
+// --------------------------------
+// Change in _settings.scss
+
+// Form spacing/measurments written in vertical rhythm (eg. .5 is half a vertical rhtyhm)
+$form-spacing:                        .5                          !default;
+$form-font-size:                      $base-font-size             !default;
+$form-border-radius:                  $default-border-radius      !default;
+$form-font:                           $font-family-base           !default;
+$form-label-font-size:                $form-font-size             !default;
+$form-label-color:                    $color-base-font            !default;
+$form-label-weight:                   bold                        !default;
+$form-input-font-size:                $form-font-size             !default;
+$form-input-background-color:         lighten($lightest-grey, 2)  !default;
+$form-input-color:                    $dark-grey                  !default;
+$form-input-border-color:             $light-grey                 !default;
+$form-input-box-shadow-inset:         $default-box-shadow-inset   !default;
+$form-input-focus-background-color:   $white                      !default;
+$form-input-focus-border-color:       $dark-grey                  !default;
+$form-fieldset-border-color:          $lighter-grey               !default;
+$form-legend-weight:                  bold                        !default;
+
+/*
+
+### Forms
+
+#### Basic Elements
+
+```
+<div class="#{$layout-el}wrapper">
+  <form>
+    <label for="basic-input">This is a label.</label>
+    <input type="text" id="basic-input" name="basic-input" placeholder="Standard Input">
+    <fieldset>
+      <legend>Fieldset Name</legend>
+      <input type="text" placeholder="Street">
+      <div class="#{$grid-mod}tight">
+        <div class="#{$width-mod}2-4 #{$width-mod}s-2-4 #{$grid-el}item">
+          <input type="text" placeholder="City">
+        </div>
+        <div class="#{$width-mod}1-4 #{$width-mod}s-1-4 #{$grid-el}item">
+          <input type="text" placeholder="State">
+        </div>
+        <div class="#{$width-mod}1-4 #{$width-mod}s-1-4 #{$grid-el}item">
+          <input type="text" placeholder="ZIP">
+        </div>
+      </div>
+    </fieldset>
+    <textarea placeholder="Message"></textarea>
+  </form>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+form {
+  margin: 0 0 rhythm($form-spacing);
+  font-family: $form-font;
+  @include adjust-font-size-to($form-input-font-size);
+}
+
+fieldset {
+  @include rhythm-borders(1px, $form-spacing, $form-input-font-size);
+  @include border-radius($form-border-radius);
+  margin: rhythm($form-spacing * 1.5) 0;
+  padding-bottom: 0;
+  border-color: $form-fieldset-border-color;
+}
+
+legend {
+  border: 0;
+  font-weight: $form-legend-weight;
+  background: $white;
+  padding: 0 rhythm($form-spacing / 4);
+  margin-left: rhythm(-($form-spacing / 4));
+}
+
+label {
+  @include adjust-font-size-to($form-label-font-size);
+  display: block;
+  margin-bottom: rhythm($form-spacing / 2);
+  color: $form-label-color;
+  font-weight: $form-label-weight;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+
+input[type="search"] {
+  @include box-sizing(content-box);
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  @include border-radius($form-border-radius);
+  @include transition($default-transition);
+  @include font-size($form-input-font-size);
+  @include box-shadow($form-input-box-shadow-inset);
+  padding: rhythm($form-spacing / 2, $form-input-font-size);
+  display: block;
+  width: 100%;
+  border: 1px solid $form-input-border-color;
+  background-color: $form-input-background-color;
+  color: $form-input-color;
+  margin: 0 0 rhythm($form-spacing, $form-input-font-size);
+  &:focus {
+    @include transition($default-transition);
+    outline: none !important;
+    border-color: $form-input-focus-border-color;
+    background: $form-input-focus-background-color;
+  }
+  &[disabled] { background-color: $light-grey;}
+}
+
+textarea {
+  overflow: auto;
+  height: auto;
+  vertical-align: top;
+}
+
+select {
+  width: 100%;
+}
+
+}

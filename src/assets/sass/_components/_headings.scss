@@ -1,0 +1,59 @@
+$heading--sub-weight : 400;
+$heading-color       : $color-heading;
+
+/*
+
+### Headings
+
+#### Sub Heading
+
+Sub-headings can be used when placing a heading under another heading.
+
+```
+<h2>Heading 1</h2>
+<h2 class="heading--sub">Heading Sub 2</h2>
+<br>
+<h3>Heading 3</h3>
+<h4 class="heading--sub">Heading Sub 4</h4>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.heading--sub {
+  margin-top: 0;
+  font-weight: $heading--sub-weight;
+  color: lighten($heading-color, 25%);
+  @include inline-block;
+}
+
+}
+
+/*
+#### Heading secondary
+
+```
+<h2 class="heading--secondary">Heading Secondary 2</h2>
+
+<h3 class="heading--secondary">Heading Secondary 3</h3>
+
+<h4 class="heading--secondary">Heading Secondary 4</h4>
+
+<h5 class="heading--secondary">Heading Secondary 5</h5>
+
+<h6 class="heading--secondary">Heading Secondary 6</h6>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.heading--secondary {
+  margin-top: 0;
+  font-weight: $heading--sub-weight;
+}
+
+}

@@ -1,0 +1,217 @@
+//
+// Text Component - Default Settings
+// ---------------------------------
+// Change in _settings.scss
+
+$text-prefix : "txt";
+$text-el     : #{$text-prefix}#{$el};
+$text-mod    : #{$text-prefix}#{$mod};
+
+/*
+
+### Text Modifiers
+
+#### Text Transforms
+
+```
+<p class="#{$text-mod}lowercase">Lowercase</p>
+<p class="#{$text-mod}uppercase">Uppercase</p>
+<p class="#{$text-mod}capitalize">capitalize</p>
+```
+
+#### Text Alignment
+
+```
+<p class="#{$text-mod}align-left">Align Left</p>
+<p class="#{$text-mod}align-right">Align Right</p>
+<p class="#{$text-mod}align-center">Align Center</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$text-mod}lowercase {
+  text-transform: lowercase;
+}
+
+.#{$text-mod}uppercase {
+  text-transform: uppercase;
+}
+
+.#{$text-mod}capitalize {
+  text-transform: capitalize;
+}
+
+@include breakpoint($lte-small) {
+  .#{$text-mod}s-align-left {
+    text-align: left;
+  }
+
+  .#{$text-mod}s-align-right {
+    text-align: right;
+  }
+
+  .#{$text-mod}s-align-center {
+    text-align: center;
+  }
+}
+
+@include breakpoint($gte-medium) {
+  .#{$text-mod}align-left {
+    text-align: left;
+  }
+
+  .#{$text-mod}align-right {
+    text-align: right;
+  }
+
+  .#{$text-mod}align-center {
+    text-align: center;
+  }
+}
+
+}
+
+/*
+
+#### Text Invert
+
+```
+<p class="#{$text-mod}invert">Invert text with <a href="#">a link</a></p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$text-mod}invert {
+  $invert-base-font: contrast-color($color-base-font);
+  color: $invert-base-font;
+  a {
+    color: darken($invert-base-font, 15%) !important;
+    &:hover {
+      color: lighten($invert-base-font, 10%) !important;
+      background-color: darken($color-base-font, 5%) !important;
+    }
+    &:active,
+    &.is-active {
+      color: lighten($invert-base-font, 15%) !important;
+      background-color: darken($color-base-font, 10%) !important;
+    }
+  }
+}
+
+}
+
+/*
+
+#### Text Hero
+
+```
+<p class="#{$text-mod}hero">Hero text</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$text-mod}hero {
+  @include adjust-font-size-to(28px);
+  font-weight: 300;
+  strong {
+    font-weight: 600;
+  }
+}
+
+}
+
+/*
+
+#### Text Meta
+
+```
+<p class="#{$text-mod}meta">Meta text</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$text-mod}meta {
+  @include adjust-font-size-to(14px);
+  color: $color-secondary-70;
+}
+
+}
+
+/*
+
+#### Text Important
+
+<p class="#{$text-mod}important">Important</p>
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$text-mod}important {
+  font-weight: 700;
+}
+
+}
+
+/*
+
+#### Text State
+
+```
+<p class="#{$text-mod}highlight">State Highlight</p>
+<p class="#{$text-mod}success">State Success</p>
+<p class="#{$text-mod}unsure">State Unsure</p>
+<p class="#{$text-mod}warning">State Warning</p>
+<p class="#{$text-mod}danger">State Danger</p>
+<p class="#{$text-mod}neutral">State Neutral</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$text-mod}highlight,
+.#{$text-mod}state-highlight {
+  color: $color-highlight;
+}
+
+.#{$text-mod}success,
+.#{$text-mod}state-success {
+  color: $color-success;
+}
+
+.#{$text-mod}unsure,
+.#{$text-mod}state-unsure {
+  color: $color-unsure;
+}
+
+.#{$text-mod}warning,
+.#{$text-mod}state-warning {
+  color: $color-warning;
+}
+
+.#{$text-mod}danger,
+.#{$text-mod}state-danger {
+  color: $color-danger;
+}
+
+.#{$text-mod}neutral,
+.#{$text-mod}state-neutral {
+  color: $color-neutral;
+}
+
+}
