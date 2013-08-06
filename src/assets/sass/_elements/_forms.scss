@@ -115,6 +115,7 @@ input[type="submit"] {
 button[disabled],
 input[disabled] {
   cursor: default;
+  opacity: 0.5;
 }
 
 input[type="checkbox"],
