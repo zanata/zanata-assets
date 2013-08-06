@@ -117,6 +117,21 @@ button,input[type="checkbox"],input[type="radio"],input[type="reset"],input[type
   margin-right: 2px;
 }
 
+button[disabled],
+input[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+button[disabled],
+input[type="submit"][disabled] {
+  &:hover, &:active {
+	background-color: $color-bg-lighter !important;
+	color: tint($color-base-font, 10%) !important;
+	@include box-shadow($default-box-shadow !important);
+  }
+}
+
 .button {
   border: none;
   padding: rhythm(.25) rhythm(.5);
@@ -452,6 +467,14 @@ img.errors {
 .errors input,.errors textarea {
   border: 1px solid #F00000 !important;
   background-color: #FFFAFA;
+}
+
+.errorPageMessage {
+  padding:1em;
+  margin:0.5em;
+  text-align:center;
+  border:1px solid #eee;
+  box-shadow: 8px 8px 10px #ddd;
 }
 
 .required {

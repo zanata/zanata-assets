@@ -454,6 +454,14 @@ img.errors {
   background-color: #FFFAFA;
 }
 
+.errorPageMessage {
+  padding:1em;
+  margin:0.5em;
+  text-align:center;
+  border:1px solid #eee;
+  box-shadow: 8px 8px 10px #ddd;
+}
+
 .required {
   color: #F00000;
   padding-left: 2px;

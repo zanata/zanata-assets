@@ -112,6 +112,22 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
   margin-right: 2px;
 }
 
+button[disabled],
+input[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+button[disabled]:hover, button[disabled]:active,
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:active {
+  background-color: #fdfdfd !important;
+  color: #565d65 !important;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
 .button, button, input[type="reset"], input[type="submit"], input[type="button"], input[type="submit"].projectSearchButton, a.button, a.action_link, span.action_link {
   border: none;
   padding: 0.375em 0.75em;
@@ -407,6 +423,14 @@ img.errors {
 .errors input, .errors textarea {
   border: 1px solid #F00000 !important;
   background-color: #FFFAFA;
+}
+
+.errorPageMessage {
+  padding: 1em;
+  margin: 0.5em;
+  text-align: center;
+  border: 1px solid #eee;
+  box-shadow: 8px 8px 10px #ddd;
 }
 
 .required {
