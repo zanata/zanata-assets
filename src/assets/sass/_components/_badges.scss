@@ -28,6 +28,7 @@ $badge-mod    : #{$badge-prefix}#{$mod};
 .#{$badge-el}container {
   position: relative;
   z-index: 1;
+  display: inline-block;
 }
 
 .#{$badge-mod}inline {
@@ -49,14 +50,14 @@ $badge-mod    : #{$badge-prefix}#{$mod};
 
 .#{$badge-mod}bl {
   @extend %#{$badge-mod}position;
-  bottom: rhythm(.2, 14px);
-  left: rhythm(.2, 14px);
+  bottom: rhythm(-.125, 14px);
+  left: rhythm(-.125, 14px);
 }
 
 .#{$badge-mod}br {
   @extend %#{$badge-mod}position;
-  bottom: rhythm(.2, 14px);
-  right: rhythm(.2, 14px);
+  bottom: rhythm(-.125, 14px);
+  right: rhythm(-.125, 14px);
 }
 
 }

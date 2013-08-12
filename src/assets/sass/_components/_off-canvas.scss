@@ -86,15 +86,18 @@ $offcanvas-target-width   : 270px !default;
   padding: rhythm(.25);
   text-align: center;
   height: rhythm(2);
-  width: rhythm(2);
   img {
     @include border-radius(rhythm(2));
+    max-width: rhythm(1.5);
   }
   .i {
-    padding: rhythm(.25);
+    padding: rhythm(.125);
   }
   .i--large {
-    padding: rhythm(.25, 24px);
+    padding: rhythm(.125, 20px);
+  }
+  .i--huge {
+    padding: rhythm(.125, 24px);
   }
   &.is-active {
     color: $offcanvas-outer-bg-color;

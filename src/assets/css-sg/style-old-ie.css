@@ -2274,18 +2274,21 @@ Sub-headings can be used when placing a heading under another heading.
   padding: 0.375em;
   text-align: center;
   height: 3em;
-  width: 3em;
 }
 .off-canvas__toggle img, .off-canvas__toggle--left img, .off-canvas__toggle--right img, .new-zanata .off-canvas__close img {
   -webkit-border-radius: 3em;
   -moz-border-radius: 3em;
   border-radius: 3em;
+  max-width: 2.25em;
 }
 .off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge {
-  padding: 0.375em;
+  padding: 0.1875em;
 }
 .off-canvas__toggle .i--large, .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large {
-  padding: 0.25em;
+  padding: 0.15em;
+}
+.off-canvas__toggle .i--huge, .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge {
+  padding: 0.125em;
 }
 .off-canvas__toggle.is-active, .is-active.off-canvas__toggle--left, .is-active.off-canvas__toggle--right, .new-zanata .is-active.off-canvas__close {
   color: #444c54;
@@ -2862,6 +2865,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .badge__container {
   position: relative;
   z-index: 1;
+  display: inline-block;
 }
 .new-zanata .badge--inline {
   position: relative;
@@ -2876,12 +2880,12 @@ Sub-headings can be used when placing a heading under another heading.
   z-index: 2;
 }
 .new-zanata .badge--bl {
-  bottom: 0.34286em;
-  left: 0.34286em;
+  bottom: -0.21429em;
+  left: -0.21429em;
 }
 .new-zanata .badge--br {
-  bottom: 0.34286em;
-  right: 0.34286em;
+  bottom: -0.21429em;
+  right: -0.21429em;
 }
 
 /*
