@@ -2750,8 +2750,7 @@ Sub-headings can be used when placing a heading under another heading.
   height: 100%;
   content: "";
   z-index: 99;
-  background: url('/img/rgbapng/0000007f-5.png?1374817930');
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);

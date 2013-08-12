@@ -47,7 +47,7 @@ $offcanvas-target-width   : 270px !default;
       height: 100%;
       content: "";
       z-index: 99;
-      @include rgba-background(rgba($black, 0.5));
+      background-color: rgba($black, 0.5);
       @include transition($default-transition);
     }
   }
