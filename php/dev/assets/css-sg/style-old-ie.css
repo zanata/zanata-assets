@@ -632,6 +632,7 @@ a:hover,
 .new-zanata button[disabled],
 .new-zanata input[disabled] {
   cursor: default;
+  opacity: 0.5;
 }
 .new-zanata input[type="checkbox"],
 .new-zanata input[type="radio"] {
@@ -1695,6 +1696,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .dropdown__content:hover,
 .new-zanata .bg--higher--hover:hover {
   background-color: #fdfdfd;
@@ -2256,7 +2258,8 @@ Sub-headings can be used when placing a heading under another heading.
   height: 100%;
   content: "";
   z-index: 99;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: url('/img/rgbapng/0000007f-5.png?1375332214');
+  background: rgba(0, 0, 0, 0.5);
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2871,6 +2874,15 @@ Sub-headings can be used when placing a heading under another heading.
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.new-zanata button[disabled]:hover, .new-zanata button[disabled]:active,
+.new-zanata input[type="submit"][disabled]:hover,
+.new-zanata input[type="submit"][disabled]:active {
+  background-color: #fdfdfd !important;
+  color: #565d65 !important;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
 .new-zanata .button--full {
   display: block;

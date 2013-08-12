@@ -44,6 +44,15 @@ button,
   }
 }
 
+button[disabled],
+input[type="submit"][disabled] {
+  &:hover, &:active {
+	background-color: $color-bg-lighter !important;
+	color: tint($color-base-font, 10%) !important;
+	@include box-shadow($default-box-shadow !important);
+  }
+}
+
 .#{$button-mod}full {
   @extend .#{$button-prefix};
   display: block;

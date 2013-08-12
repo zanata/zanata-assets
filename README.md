@@ -1,13 +1,16 @@
-# Zanata Proto
+# Zanata Assets
 
-For prototyping new Zanata Ideas
+Zanata style guide and css
 
 ## Getting Started
 
-- Install node and ruby
+- Install ruby and npm `yum install npm ruby-devel`
 - Install Grunt CLI globally `npm install -g grunt-cli`
+- Install ruby dependencies with `sudo gem install sass compass breakpoint compass-rgbapng jekyll`
+- Install lastest dev version of sass and compass `sudo gem install sass --pre` and `sudo gem install compass --pre`
+
+Go to zanata-assets dir
 - Install node dependencies with: `npm install`
-- Install ruby dependencies with: `gem install sass compass breakpoint rgbapng`. You may need to use `sudo`.
 
 ## In Use
 To start developing run `grunt wo`. This will start a livereload server, open the server in your browser and run a watch task.
