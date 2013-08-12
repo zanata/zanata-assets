@@ -315,7 +315,7 @@ Used to section content and create hierarchy
 }
 .new-zanata b,
 .new-zanata strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 .new-zanata em {
   font-style: italic;
@@ -2187,7 +2187,6 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
-.new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .dropdown__content:hover,
 .new-zanata .bg--higher--hover:hover {
   background-color: #fdfdfd;
@@ -2752,8 +2751,7 @@ Sub-headings can be used when placing a heading under another heading.
   height: 100%;
   content: "";
   z-index: 99;
-  background: url('/img/rgbapng/0000007f-5.png?1375332214');
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -3327,6 +3325,69 @@ Sub-headings can be used when placing a heading under another heading.
 
 /*
 
+### Alerts
+
+#### Alert
+```
+<div class="alert">
+  <h2 class="alert__heading">Welcome</h2>
+  <div class="alert__content">
+    <p>Welcome to Zanata</p>
+    <p>We hope you enjoy your stay</p>
+    <p><button class="button--primary">Continue</button></p>
+  </div>
+</div>
+```
+
+*/
+.new-zanata .alert, .new-zanata .alert--danger {
+  margin-bottom: 0.75em;
+  text-align: center;
+  background-color: #f5f7f8;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.new-zanata .alert__heading {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  background-color: #4e9fdd;
+  color: #f2f2f2;
+}
+.new-zanata .alert__content {
+  padding: 1.5em;
+}
+.new-zanata .alert__highlight {
+  color: #4e9fdd;
+  font-weight: 600;
+}
+
+/*
+#### Alert Danger
+```
+<div class="alert--danger">
+  <h2 class="alert__heading">We're Sorry</h2>
+  <div class="alert__content">
+    <p class="alert__highlight">An unexpected error has occurred.</p>
+    <p>But you can help us fix it!</p>
+    <p><button class="button--danger">Report this problem</button></p>
+  </div>
+</div>
+```
+*/
+.new-zanata .alert--danger {
+  border-top: 2px solid #e0575b;
+}
+.new-zanata .alert--danger .alert__heading {
+  background-color: #e0575b;
+}
+.new-zanata .alert--danger .alert__highlight {
+  color: #e0575b;
+}
+
+/*
+
 ### Badges
 
 */
@@ -3379,6 +3440,8 @@ Sub-headings can be used when placing a heading under another heading.
 <p><a class="button">Button</a></p>
 <p><a class="button--full">Button Full</a></p>
 <p><a class="button--primary">Button Primary</a></p>
+<p><a class="button--secondary">Button Secondary</a></p>
+<p><a class="button--danger">Button Danger</a></p>
 ```
 
 */
@@ -3386,7 +3449,9 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--full,
-.new-zanata .button--primary {
+.new-zanata .button--primary,
+.new-zanata .button--secondary,
+.new-zanata .button--danger {
   padding: 0.375em 0.75em;
   border: none;
   background-color: white;
@@ -3409,7 +3474,9 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata button:hover,
 .new-zanata .button:hover,
 .new-zanata .button--full:hover,
-.new-zanata .button--primary:hover {
+.new-zanata .button--primary:hover,
+.new-zanata .button--secondary:hover,
+.new-zanata .button--danger:hover {
   background-color: #fdfdfd;
   color: black;
 }
@@ -3417,7 +3484,9 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata button:active,
 .new-zanata .button:active,
 .new-zanata .button--full:active,
-.new-zanata .button--primary:active {
+.new-zanata .button--primary:active,
+.new-zanata .button--secondary:active,
+.new-zanata .button--danger:active {
   background-color: #e4e5e7;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3437,22 +3506,40 @@ Sub-headings can be used when placing a heading under another heading.
   width: 100%;
   text-align: center;
 }
-.new-zanata .button--primary {
+.new-zanata .button--primary, .new-zanata .button--secondary, .new-zanata .button--danger {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   background-color: #4e9fdd;
   color: #f2f2f2;
 }
-.new-zanata .button--primary:hover {
+.new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--danger:hover {
   background-color: #4a97d1;
   color: white;
 }
-.new-zanata .button--primary:active {
+.new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--danger:active {
   background-color: #3e7fb0;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.new-zanata .button--secondary {
+  background-color: #416988;
+}
+.new-zanata .button--secondary:hover {
+  background-color: #3d6381;
+}
+.new-zanata .button--secondary:active {
+  background-color: #34546c;
+}
+.new-zanata .button--danger {
+  background-color: #e0575b;
+}
+.new-zanata .button--danger:hover {
+  background-color: #d45256;
+}
+.new-zanata .button--danger:active {
+  background-color: #b34548;
 }
 
 /*
@@ -3593,6 +3680,7 @@ Used to show extra information on hover of the parent element
   line-height: 1.71429em;
   padding: 0;
   margin: 0;
+  min-height: 1.71429em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .header__title {

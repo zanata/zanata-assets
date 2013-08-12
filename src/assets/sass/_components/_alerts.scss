@@ -1,0 +1,75 @@
+/*
+
+### Alerts
+
+#### Alert
+```
+<div class="alert">
+  <h2 class="alert__heading">Welcome</h2>
+  <div class="alert__content">
+    <p>Welcome to Zanata</p>
+    <p>We hope you enjoy your stay</p>
+    <p><button class="button--primary">Continue</button></p>
+  </div>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.alert {
+  margin-bottom: rhythm(.5);
+  text-align: center;
+  background-color: $color-bg-light;
+  @include box-shadow($default-box-shadow);
+}
+
+.alert__heading {
+  margin: 0;
+  @include adjust-font-size-to(24px);
+  background-color: $color-primary;
+  color: $lightest-grey;
+}
+
+.alert__content {
+  padding: rhythm(1);
+}
+
+.alert__highlight {
+  color: $color-primary;
+  font-weight: 600;
+}
+
+}
+
+/*
+#### Alert Danger
+```
+<div class="alert--danger">
+  <h2 class="alert__heading">We're Sorry</h2>
+  <div class="alert__content">
+    <p class="alert__highlight">An unexpected error has occurred.</p>
+    <p>But you can help us fix it!</p>
+    <p><button class="button--danger">Report this problem</button></p>
+  </div>
+</div>
+```
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.alert--danger {
+  @extend .alert;
+  border-top: 2px solid $color-danger;
+  .alert__heading {
+    background-color: $color-danger;
+  }
+  .alert__highlight {
+    color: $color-danger;
+  }
+}
+
+}

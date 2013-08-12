@@ -119,8 +119,8 @@ button,input[type="checkbox"],input[type="radio"],input[type="reset"],input[type
 
 button[disabled],
 input[disabled] {
-  cursor: default;
-  opacity: 0.5;
+  cursor: default !important;
+  opacity: 0.5 !important;
 }
 
 button[disabled],
@@ -397,7 +397,7 @@ a.breadcrumbs_link:hover
 }
 
 .message li.errormsg {
-  color:#B62918;
+  color: $color-danger;
   font-size:1.2em;
   font-weight:bold;
 }
@@ -478,7 +478,7 @@ img.errors {
 
 .errorPageMessage a {
   font-size:12px;
-  background:#e8eaec;
+  background: #e8eaec;
   padding:5px 8px;
   margin:0 5px;
 }
