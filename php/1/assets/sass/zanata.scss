@@ -819,6 +819,7 @@ a.readonly_link,a.readonly_link:visited,a.readonly_link:link {
   border-radius: $default-border-radius;
   opacity:0.6;
   text-align: center;
+  z-index:3;
 }
 
 .loading_frame .loading_image {
