@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/style-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="{% if page.root %}{{ page.root }}{% endif %}assets/css/style.css">
   <!--<![endif]-->
 
   <!--[if (lt IE 9) & (!IEMobile)]>
