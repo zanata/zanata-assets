@@ -1,0 +1,51 @@
+<div class="off-canvas__outer new-zanata">
+    <div class="off-canvas__target off-canvas--left" id="off-canvas--left" data-off-canvas="over">
+      <header class="off-canvas__header">
+        <a href="#off-canvas--left" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
+      </header>
+      <nav id="nav-main-side">
+        <ul class="list--slat list--block-links">
+          <li><a href="projects-old.html">Projects</a></li>
+          <li><a href="#">Groups</a></li>
+          <li><a href="#">Languages</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <div class="l--push-all-half"><a href="#" class="button--primary button--full">Sign up</a></div>
+      </nav>
+    </div>
+    <div class="off-canvas__target off-canvas--right" id="off-canvas--right" data-off-canvas="under">
+      <header class="off-canvas__header">
+        <a href="#off-canvas--right" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
+      </header>
+      <nav id="nav-user">
+        <ul class="list--slat list--block-links txt--invert">
+          <li><a href="/dashboard">Dashboard <span class="badge--highlight badge--inline l--float-right">4</span></a></li>
+<!--           <li><a href="#">Projects</a></li>
+          <li><a href="#">Groups</a></li> -->
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="off-canvas__inner">
+      <header role="banner" class="bg--pop-highest txt--s-align-center">
+        <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+        {% if page.layout == "home" %}
+        <h1 class="header__title heading--sub"><a href="/"><img class="header__site-logo" src="logo.svg"> Zanata</a></h1>
+        {% else %}
+        <h2 class="header__title heading--sub"><a href="/"><img class="header__site-logo" src="logo.svg"> Zanata</a></h2>
+        {% endif %}
+        <!-- Alternative -->
+        <div class="header__login l--float-right">
+          <a href="/sign-up" class="is-hidden--s button">Sign Up</a>
+          <a href="/dashboard" class="l--push-left-half button--primary">Log In</a>
+        </div>
+        <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half">
+          <ul class="list--horizontal">
+            <li class="l--push-left-half"><a href="/projects-old.html">Projects</a></li>
+            <li class="l--push-left-half"><a href="/groups">Groups</a></li>
+            <li class="l--push-left-half"><a href="/languages">Languages</a></li>
+            <li class="l--push-left-half"><a href="/help">Help</a></li>
+          </ul>
+        </nav>
+      </header>

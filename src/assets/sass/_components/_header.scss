@@ -43,12 +43,12 @@
 }
 
 .header__login {
-  padding: rhythm(.5) rhythm(.5);
+  padding: rhythm(.25) rhythm(.25) rhythm(.25) 0;
   @include breakpoint($gte-medium) {
-    padding: rhythm(.25) rhythm(1);
+    padding: rhythm(.25) rhythm(1) rhythm(.25) 0;
   }
   @include breakpoint($gte-large) {
-    padding: rhythm(.25) rhythm(2);
+    padding: rhythm(.25) rhythm(2) rhythm(.25) 0;;
   }
 }
 

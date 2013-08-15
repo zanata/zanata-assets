@@ -1655,7 +1655,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .txt--neutral,
 .new-zanata .txt--state-neutral {
-  color: #a2b4c3;
+  color: #c6d2db;
 }
 
 .new-zanata .divide, .new-zanata .d--left, .new-zanata .d--bottom, .new-zanata .d--top {
@@ -2551,7 +2551,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 
 .new-zanata .progress-bar {
-  background-color: #a2b4c3;
+  background-color: #c6d2db;
   height: 0.375em;
   margin-bottom: 0.375em;
   width: 100%;
@@ -3152,5 +3152,5 @@ Used to show extra information on hover of the parent element
   line-height: 3em;
 }
 .new-zanata .header__login {
-  padding: 0.75em 0.75em;
+  padding: 0.375em 0.375em 0.375em 0;
 }
