@@ -19,11 +19,11 @@
       </header>
       <nav id="nav-user">
         <ul class="list--slat list--block-links txt--invert">
-          <li><a href="/dashboard">Dashboard <span class="badge--highlight badge--inline l--float-right">4</span></a></li>
+          <li><a href="{% if page.root %}{{ page.root }}{% endif %}dashboard">Dashboard <span class="badge--highlight badge--inline l--float-right">4</span></a></li>
 <!--           <li><a href="#">Projects</a></li>
           <li><a href="#">Groups</a></li> -->
-          <li><a href="/settings">Settings</a></li>
-          <li><a href="/index.html">Logout</a></li>
+          <li><a href="{% if page.root %}{{ page.root }}{% endif %}settings">Settings</a></li>
+          <li><a href="{% if page.root %}{{ page.root }}{% endif %}index.html">Logout</a></li>
         </ul>
       </nav>
     </div>
@@ -31,10 +31,6 @@
       <header role="banner" class="bg--pop-highest txt--s-align-center">
         <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
         {% include title.html %}
-        <!-- Alternative -->
-        <!-- <div class="header__login l--float-right">
-          <a href="#">Login</a> <a href="#" class="is-hidden--s l--push-left-half button--primary">Sign up</a>
-        </div> -->
         <a href="#off-canvas--right" class="off-canvas__toggle--right l--float-right">
           <i class="i i--huge i--list l--float-left l--pad-left-0"></i>
           <span class="badge__container">
@@ -44,10 +40,10 @@
         </a>
         <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half">
           <ul class="list--horizontal">
-            <li class="l--push-left-half"><a href="/projects-old.html">Projects</a></li>
-            <li class="l--push-left-half"><a href="/groups">Groups</a></li>
-            <li class="l--push-left-half"><a href="/languages">Languages</a></li>
-            <li class="l--push-left-half"><a href="/help">Help</a></li>
+            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}projects-old.html">Projects</a></li>
+            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups</a></li>
+            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Languages</a></li>
+            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
           </ul>
         </nav>
       </header>

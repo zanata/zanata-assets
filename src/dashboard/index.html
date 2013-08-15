@@ -8,7 +8,7 @@ root: "../"
   <div class="g__item w--1-2 l--push-v-1">
     <div class="l--float-left w--2-6-s l--push-right-1">
       <div class="media--circle">
-        <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
+        <a href="{% if page.root %}{{ page.root }}{% endif %}profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
       </div>
     </div>
     <div class="txt--s-align-right">
