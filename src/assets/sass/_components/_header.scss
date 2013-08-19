@@ -35,6 +35,13 @@
 .header__site-logo {
   height: rhythm(1.25, 28px);
   margin-bottom: rhythm(-.25, 28px);
+  // Add a temporary global loader until templates are redesigned
+  &.header--loading {
+    @include animation-name(rotate);
+    @include animation-duration(.5s);
+    @include animation-iteration-count(infinite);
+    @include animation-timing-function(linear);
+  }
 }
 
 .header__menu {
