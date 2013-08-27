@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   
-    <title>Login | Zanata | </title>
+    <title>Log In | Zanata | </title>
   
   <meta name="description" content="">
   <meta name="author" content="">
@@ -65,7 +65,7 @@
       <header role="banner" class="bg--pop-highest txt--s-align-center l--clearfix">
         <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
         
-<h2 class="header__title heading--sub l--float-left"><a href="/"><img class="header__site-logo" src="../logo.svg"> Zanata</a></h2>
+<h2 class="header__title heading--sub"><a href="/"><img class="header__site-logo" src="../logo.svg"> Zanata</a></h2>
 
 
         <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half l--float-left">
@@ -78,8 +78,8 @@
         </nav>
         <!-- Alternative -->
         <div class="header__login l--float-right">
-          <a href="../sign-up" class="is-hidden--s button">Sign Up</a>
-          <a href="../dashboard" class="l--push-left-half button--primary">Log In</a>
+          <a href="../signup" class="is-hidden--s button">Sign Up</a>
+          <a href="../login" class="l--push-left-half button--primary">Log In</a>
         </div>
       </header>
 
@@ -92,8 +92,8 @@
       <h1 class="l--push-all-0 beta">Log In<!-- <span class="heading--sub">with Zanata</span> --></h1>
       <div class="g">
         <div class="l--push-top-half g__item w--7-12 w--1-m">
-          <h2 class="delta heading--sub">with Zanata</h2>
-          <div class="l--push-top-half l--pad-all-1 bg--pop-higher">
+          <h2 class="gamma heading--sub">with Zanata</h2>
+          <form action="" class="l--push-top-half l--pad-all-1 bg--pop-higher">
             <div class="l--clearfix">
               <label for="email" class="l--float-left">Email</label>
               <span class="txt--meta l--float-right">No account? <a href="#">Sign Up</a></span>
@@ -107,24 +107,26 @@
             <div class="l--push-top-half">
               <input type="submit" value="Log In" class="button--primary">
             </div>
-          </div>
+          </form>
         </div>
         <div class="l--push-top-half g__item w--5-12 w--1-m">
-          <h2 class="delta heading--sub">or Open ID</h2>
+          <h2 class="gamma heading--sub">or</h2>
           <ul class="list--no-bullets">
             <li class="l--pad-top-half"><a href="#" class="button--full button--fedora">Fedora</a></li>
             <li class="l--pad-top-half"><a href="#" class="button--full button--google">Google</a></li>
             <li class="l--pad-top-half"><a href="#" class="button--full button--yahoo">Yahoo</a></li>
             <li class="l--pad-top-half">
-              <label for="openid">Other</label>
-              <div class="g--tighter">
-                <div class="g__item w--4-5">
-                  <input id="openid" type="url" placeholder="http://myopenid.com/">
+              <form action="">
+                <label for="openid">Open ID</label>
+                <div class="g--tighter">
+                  <div class="g__item w--4-5">
+                    <input id="openid" type="url" placeholder="e.g. http://myopenid.com/">
+                  </div>
+                  <div class="g__item w--1-5">
+                    <input type="submit" value="Go" class="button--full">
+                  </div>
                 </div>
-                <div class="g__item w--1-5">
-                  <input type="submit" value="Go" class="button--full">
-                </div>
-              </div>
+              </form>
             </li>
           </ul>
         </div>

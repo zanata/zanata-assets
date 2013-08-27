@@ -26,6 +26,7 @@
   min-height: rhythm(2, 28px);
   @include breakpoint($gte-medium) {
     margin: 0 0 0 rhythm(1,28px);
+    float: left;
   }
   @include breakpoint($gte-large) {
     margin: 0 0 0 rhythm(2,28px);
