@@ -14,7 +14,11 @@ $button-mod        : #{$button-prefix}#{$mod}    !default;
 
 ```
 <p><a class="#{$button-prefix}">Button</a></p>
+<p><a class="#{$button-mod}large">Button Large</a></p>
+<p><a class="#{$button-mod}huge">Button Huge</a></p>
 <p><a class="#{$button-mod}full">Button Full</a></p>
+<p><a class="#{$button-mod}inline-right">Button Inline Right</a></p>
+<p><a class="#{$button-mod}inline-left">Button Inline Left</a></p>
 <p><a class="#{$button-mod}primary">Button Primary</a></p>
 <p><a class="#{$button-mod}secondary">Button Secondary</a></p>
 <p><a class="#{$button-mod}danger">Button Danger</a></p>
@@ -25,7 +29,7 @@ $button-mod        : #{$button-prefix}#{$mod}    !default;
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-input[type="submit"],
+[type="submit"],
 button,
 .#{$button-prefix} {
   padding: rhythm(.25) rhythm(.5);
@@ -40,7 +44,8 @@ button,
     background-color: $color-bg-lighter;
     color: $black;
   }
-  &:active {
+  &:active,
+  &.is-active {
     background-color: shade($color-bg, 5%);
     @include box-shadow($default-box-shadow-inset);
   }
@@ -48,11 +53,21 @@ button,
 
 button[disabled],
 input[type="submit"][disabled] {
-  &:hover, &:active {
+  &:hover,
+  &:active,
+  &.is-active {
 	background-color: $color-bg-lighter !important;
 	color: tint($color-base-font, 10%) !important;
 	@include box-shadow($default-box-shadow !important);
   }
+}
+
+.#{$button-mod}large {
+  @include adjust-font-size-to(20px);
+}
+
+.#{$button-mod}huge {
+  @include adjust-font-size-to(24px);
 }
 
 .#{$button-mod}full {
@@ -60,6 +75,14 @@ input[type="submit"][disabled] {
   display: block;
   width: 100%;
   text-align: center;
+}
+
+.#{$button-mod}inline-right {
+  @include border-radius(0 $default-border-radius $default-border-radius 0);
+}
+
+.#{$button-mod}inline-left {
+  @include border-radius($default-border-radius 0 0 $default-border-radius);
 }
 
 .#{$button-mod}primary {
@@ -71,7 +94,8 @@ input[type="submit"][disabled] {
     background-color: shade($color-primary, 5%);
     color: $white;
   }
-  &:active {
+  &:active,
+  &.is-active {
     background-color: shade($color-primary, 20%);
     @include box-shadow(inset 0 1px 2px rgba($black,0.3));
   }
@@ -83,7 +107,8 @@ input[type="submit"][disabled] {
   &:hover {
     background-color: shade($color-secondary, 5%);
   }
-  &:active {
+  &:active,
+  &.is-active {
     background-color: shade($color-secondary, 20%);
   }
 }
@@ -94,9 +119,32 @@ input[type="submit"][disabled] {
   &:hover {
     background-color: shade($color-danger, 5%);
   }
-  &:active {
+  &:active,
+  &.is-active {
     background-color: shade($color-danger, 20%);
   }
+}
+
+// Specific Branded Buttons
+
+%#{$button-mod}brand {
+  background-repeat: no-repeat;
+  @include background-size(contain);
+}
+
+.#{$button-mod}fedora {
+  @extend %#{$button-mod}brand;
+  background-image: url(../img/fedora-logo.svg);
+}
+
+.#{$button-mod}google {
+  @extend %#{$button-mod}brand;
+  background-image: url(../img/google-logo.svg);
+}
+
+.#{$button-mod}yahoo {
+  @extend %#{$button-mod}brand;
+  background-image: url(../img/yahoo-logo.svg);
 }
 
 }

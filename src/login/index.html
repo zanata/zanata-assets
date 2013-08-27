@@ -1,0 +1,52 @@
+---
+title: Login | Zanata
+layout: logged-out
+root: "../"
+---
+
+<div class="g--centered">
+  <div class="g__item w--1-2 w--3-4-l w--2-3-m">
+    <div class="l--push-v-2">
+      <h1 class="l--push-all-0 beta">Log In<!-- <span class="heading--sub">with Zanata</span> --></h1>
+      <div class="g">
+        <div class="l--push-top-half g__item w--7-12 w--1-m">
+          <h2 class="delta heading--sub">with Zanata</h2>
+          <div class="l--push-top-half l--pad-all-1 bg--pop-higher">
+            <div class="l--clearfix">
+              <label for="email" class="l--float-left">Email</label>
+              <span class="txt--meta l--float-right">No account? <a href="#">Sign Up</a></span>
+            </div>
+            <input id="email" name="email" type="text" placeholder="email@example.com">
+            <div class="l--push-top-half l--clearfix">
+              <label for="password" class="l--float-left">Password</label>
+              <span class="txt--meta l--float-right"><a href="#">Forgot password?</a></span>
+            </div>
+            <input id="password" name="password" type="password">
+            <div class="l--push-top-half">
+              <input type="submit" value="Log In" class="button--primary">
+            </div>
+          </div>
+        </div>
+        <div class="l--push-top-half g__item w--5-12 w--1-m">
+          <h2 class="delta heading--sub">or Open ID</h2>
+          <ul class="list--no-bullets">
+            <li class="l--pad-top-half"><a href="#" class="button--full button--fedora">Fedora</a></li>
+            <li class="l--pad-top-half"><a href="#" class="button--full button--google">Google</a></li>
+            <li class="l--pad-top-half"><a href="#" class="button--full button--yahoo">Yahoo</a></li>
+            <li class="l--pad-top-half">
+              <label for="openid">Other</label>
+              <div class="g--tighter">
+                <div class="g__item w--4-5">
+                  <input id="openid" type="url" placeholder="http://myopenid.com/">
+                </div>
+                <div class="g__item w--1-5">
+                  <input type="submit" value="Go" class="button--full">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

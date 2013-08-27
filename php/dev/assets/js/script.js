@@ -1,4 +1,4 @@
-/*! zanata-proto - v0.1.0 - 2013-08-19
+/*! zanata-proto - v0.1.0 - 2013-08-27
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Luke Brooker; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07
@@ -2449,7 +2449,6 @@ $(function () {
   // Check the url, see which links match and make them active
   $('#nav-user a, #nav-main a, #nav-main-side a, #nav-footer a').each(function () {
     var navLink = $(this).attr('href').replace(/\//g, '').replace(/\./g, '');
-    console.log(navLink);
     if (pathname.toLowerCase().indexOf(navLink) >= 0) {
       $(this).addClass('is-active');
     }

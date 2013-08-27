@@ -100,7 +100,7 @@ textarea {
 
 button,
 input {
-  line-height: normal;
+  line-height: rhythm(1);
 }
 
 button,
@@ -109,6 +109,7 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: none;
+  outline: none;
 }
 
 
@@ -156,6 +157,7 @@ textarea {
   @include box-shadow($form-input-box-shadow-inset);
   padding: rhythm($form-spacing / 2, $form-input-font-size);
   display: block;
+  height: rhythm(1.5);
   width: 100%;
   border: 1px solid $form-input-border-color;
   background-color: $form-input-background-color;

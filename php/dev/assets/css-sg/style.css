@@ -165,6 +165,7 @@ NOTE: No classes should go in element files
 .new-zanata html,
 .new-zanata body {
   height: 100%;
+  margin: 0;
 }
 
 .new-zanata-body,
@@ -645,7 +646,7 @@ a:hover,
 }
 .new-zanata button,
 .new-zanata input {
-  line-height: normal;
+  line-height: 1.5em;
 }
 .new-zanata button,
 .new-zanata html input[type="button"],
@@ -653,6 +654,7 @@ a:hover,
 .new-zanata input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: none;
+  outline: none;
 }
 .new-zanata button[disabled],
 .new-zanata input[disabled] {
@@ -702,6 +704,7 @@ a:hover,
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   padding: 0.375em;
   display: block;
+  height: 2.25em;
   width: 100%;
   border: 1px solid #c6d2db;
   background-color: #fdfdfd;
@@ -1385,7 +1388,7 @@ Only use them if it does not make sense to add this styling to another element/c
 ```
 
 */
-.new-zanata .g, .new-zanata .g--tight, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
+.new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
   *zoom: 1;
   margin: 0;
   margin-left: -0.75em;
@@ -1393,22 +1396,22 @@ Only use them if it does not make sense to add this styling to another element/c
   list-style: none;
   letter-spacing: -0.31em;
 }
-.new-zanata .g:after, .new-zanata .g--tight:after, .new-zanata .g--collapsed:after, .new-zanata .g--rev:after, .new-zanata .g--right:after, .new-zanata .g--centered:after {
+.new-zanata .g:after, .new-zanata .g--tight:after, .new-zanata .g--tighter:after, .new-zanata .g--collapsed:after, .new-zanata .g--rev:after, .new-zanata .g--right:after, .new-zanata .g--centered:after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 42.5em) {
-  .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
+  .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
     margin-left: -1.5em;
   }
 }
 @media (min-width: 53.75em) {
-  .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
+  .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
     margin-left: -3em;
   }
 }
-.new-zanata .g > .g, .new-zanata .g--tight > .g, .new-zanata .g--collapsed > .g, .new-zanata .g--rev > .g, .new-zanata .g--right > .g, .new-zanata .g--centered > .g, .new-zanata .g > .g--tight, .new-zanata .g--tight > .g--tight, .new-zanata .g--collapsed > .g--tight, .new-zanata .g--rev > .g--tight, .new-zanata .g--right > .g--tight, .new-zanata .g--centered > .g--tight, .new-zanata .g > .g--collapsed, .new-zanata .g--tight > .g--collapsed, .new-zanata .g--collapsed > .g--collapsed, .new-zanata .g--rev > .g--collapsed, .new-zanata .g--right > .g--collapsed, .new-zanata .g--centered > .g--collapsed, .new-zanata .g > .g--rev, .new-zanata .g--tight > .g--rev, .new-zanata .g--collapsed > .g--rev, .new-zanata .g--rev > .g--rev, .new-zanata .g--right > .g--rev, .new-zanata .g--centered > .g--rev, .new-zanata .g > .g--right, .new-zanata .g--tight > .g--right, .new-zanata .g--collapsed > .g--right, .new-zanata .g--rev > .g--right, .new-zanata .g--right > .g--right, .new-zanata .g--centered > .g--right, .new-zanata .g > .g--centered, .new-zanata .g--tight > .g--centered, .new-zanata .g--collapsed > .g--centered, .new-zanata .g--rev > .g--centered, .new-zanata .g--right > .g--centered, .new-zanata .g--centered > .g--centered {
+.new-zanata .g > .g, .new-zanata .g--tight > .g, .new-zanata .g--tighter > .g, .new-zanata .g--collapsed > .g, .new-zanata .g--rev > .g, .new-zanata .g--right > .g, .new-zanata .g--centered > .g, .new-zanata .g > .g--tight, .new-zanata .g--tight > .g--tight, .new-zanata .g--tighter > .g--tight, .new-zanata .g--collapsed > .g--tight, .new-zanata .g--rev > .g--tight, .new-zanata .g--right > .g--tight, .new-zanata .g--centered > .g--tight, .new-zanata .g > .g--tighter, .new-zanata .g--tight > .g--tighter, .new-zanata .g--tighter > .g--tighter, .new-zanata .g--collapsed > .g--tighter, .new-zanata .g--rev > .g--tighter, .new-zanata .g--right > .g--tighter, .new-zanata .g--centered > .g--tighter, .new-zanata .g > .g--collapsed, .new-zanata .g--tight > .g--collapsed, .new-zanata .g--tighter > .g--collapsed, .new-zanata .g--collapsed > .g--collapsed, .new-zanata .g--rev > .g--collapsed, .new-zanata .g--right > .g--collapsed, .new-zanata .g--centered > .g--collapsed, .new-zanata .g > .g--rev, .new-zanata .g--tight > .g--rev, .new-zanata .g--tighter > .g--rev, .new-zanata .g--collapsed > .g--rev, .new-zanata .g--rev > .g--rev, .new-zanata .g--right > .g--rev, .new-zanata .g--centered > .g--rev, .new-zanata .g > .g--right, .new-zanata .g--tight > .g--right, .new-zanata .g--tighter > .g--right, .new-zanata .g--collapsed > .g--right, .new-zanata .g--rev > .g--right, .new-zanata .g--right > .g--right, .new-zanata .g--centered > .g--right, .new-zanata .g > .g--centered, .new-zanata .g--tight > .g--centered, .new-zanata .g--tighter > .g--centered, .new-zanata .g--collapsed > .g--centered, .new-zanata .g--rev > .g--centered, .new-zanata .g--right > .g--centered, .new-zanata .g--centered > .g--centered {
   margin-left: 0;
 }
 .new-zanata .opera:-o-prefocus,
@@ -1477,6 +1480,49 @@ Tight grids have all the properties of regular grids, but with half the spacing.
 @media (min-width: 53.75em) {
   .new-zanata .g--tight > .g__item {
     padding-left: 1.5em;
+  }
+}
+
+/*
+
+#### Tighter Grid
+
+Tighter grids have all the properties of regular grids, but with a quarter the spacing.
+
+```
+<div class="l__wrapper">
+  <div class="g--tighter">
+    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+
+*/
+.new-zanata .g--tighter {
+  margin-left: -0.1875em;
+}
+@media (min-width: 42.5em) {
+  .new-zanata .g--tighter {
+    margin-left: -0.375em;
+  }
+}
+@media (min-width: 53.75em) {
+  .new-zanata .g--tighter {
+    margin-left: -0.75em;
+  }
+}
+.new-zanata .g--tighter > .g__item {
+  padding-left: 0.1875em;
+}
+@media (min-width: 42.5em) {
+  .new-zanata .g--tighter > .g__item {
+    padding-left: 0.375em;
+  }
+}
+@media (min-width: 53.75em) {
+  .new-zanata .g--tighter > .g__item {
+    padding-left: 0.75em;
   }
 }
 
@@ -2566,12 +2612,7 @@ Sub-headings can be used when placing a heading under another heading.
   margin-top: 0;
   font-weight: 400;
   color: #84a8c4;
-  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
 }
 
 /*
@@ -3492,14 +3533,18 @@ Sub-headings can be used when placing a heading under another heading.
 
 ```
 <p><a class="button">Button</a></p>
+<p><a class="button--large">Button Large</a></p>
+<p><a class="button--huge">Button Huge</a></p>
 <p><a class="button--full">Button Full</a></p>
+<p><a class="button--inline-right">Button Inline Right</a></p>
+<p><a class="button--inline-left">Button Inline Left</a></p>
 <p><a class="button--primary">Button Primary</a></p>
 <p><a class="button--secondary">Button Secondary</a></p>
 <p><a class="button--danger">Button Danger</a></p>
 ```
 
 */
-.new-zanata input[type="submit"],
+.new-zanata [type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--full,
@@ -3524,7 +3569,7 @@ Sub-headings can be used when placing a heading under another heading.
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.new-zanata input[type="submit"]:hover,
+.new-zanata [type="submit"]:hover,
 .new-zanata button:hover,
 .new-zanata .button:hover,
 .new-zanata .button--full:hover,
@@ -3534,31 +3579,56 @@ Sub-headings can be used when placing a heading under another heading.
   background-color: #fdfdfd;
   color: black;
 }
-.new-zanata input[type="submit"]:active,
+.new-zanata [type="submit"]:active, .new-zanata [type="submit"].is-active,
 .new-zanata button:active,
+.new-zanata button.is-active,
 .new-zanata .button:active,
 .new-zanata .button--full:active,
 .new-zanata .button--primary:active,
 .new-zanata .button--secondary:active,
-.new-zanata .button--danger:active {
+.new-zanata .button--danger:active,
+.new-zanata .button.is-active,
+.new-zanata .is-active.button--full,
+.new-zanata .is-active.button--primary,
+.new-zanata .is-active.button--secondary,
+.new-zanata .is-active.button--danger {
   background-color: #e4e5e7;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-.new-zanata button[disabled]:hover, .new-zanata button[disabled]:active,
+.new-zanata button[disabled]:hover, .new-zanata button[disabled]:active, .new-zanata button[disabled].is-active,
 .new-zanata input[type="submit"][disabled]:hover,
-.new-zanata input[type="submit"][disabled]:active {
+.new-zanata input[type="submit"][disabled]:active,
+.new-zanata input[type="submit"][disabled].is-active {
   background-color: #fdfdfd !important;
   color: #565d65 !important;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
 }
+.new-zanata .button--large {
+  font-size: 1.25em;
+  line-height: 1.2em;
+}
+.new-zanata .button--huge {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
 .new-zanata .button--full {
   display: block;
   width: 100%;
   text-align: center;
+}
+.new-zanata .button--inline-right {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+.new-zanata .button--inline-left {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
 }
 .new-zanata .button--primary, .new-zanata .button--secondary, .new-zanata .button--danger {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -3571,7 +3641,7 @@ Sub-headings can be used when placing a heading under another heading.
   background-color: #4a97d1;
   color: white;
 }
-.new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--danger:active {
+.new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--danger:active, .new-zanata .button--primary.is-active, .new-zanata .is-active.button--secondary, .new-zanata .is-active.button--danger {
   background-color: #3e7fb0;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -3583,7 +3653,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .button--secondary:hover {
   background-color: #3d6381;
 }
-.new-zanata .button--secondary:active {
+.new-zanata .button--secondary:active, .new-zanata .button--secondary.is-active {
   background-color: #34546c;
 }
 .new-zanata .button--danger {
@@ -3592,8 +3662,24 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .button--danger:hover {
   background-color: #d45256;
 }
-.new-zanata .button--danger:active {
+.new-zanata .button--danger:active, .new-zanata .button--danger.is-active {
   background-color: #b34548;
+}
+.new-zanata .button--fedora, .new-zanata .button--google, .new-zanata .button--yahoo {
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+.new-zanata .button--fedora {
+  background-image: url(../img/fedora-logo.svg);
+}
+.new-zanata .button--google {
+  background-image: url(../img/google-logo.svg);
+}
+.new-zanata .button--yahoo {
+  background-image: url(../img/yahoo-logo.svg);
 }
 
 /*
