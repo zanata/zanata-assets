@@ -108,6 +108,29 @@ $text-mod    : #{$text-prefix}#{$mod};
 
 /*
 
+#### Text Lead
+
+```
+<p class="#{$text-mod}lead">Lead text</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.#{$text-mod}lead {
+  @include adjust-font-size-to(20px);
+  font-weight: 300;
+  strong {
+    font-weight: 600;
+  }
+}
+
+}
+
+/*
+
 #### Text Hero
 
 ```

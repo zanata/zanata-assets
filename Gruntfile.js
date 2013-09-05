@@ -212,14 +212,14 @@ var srcFolder = './src/',
       },
       livereload: {
         options: {
-          port: 4000,
+          port: 5000,
           base: buildFolder + devFolder
         }
       }
     },
     open : {
       server : {
-        path: 'http://localhost:4000'
+        path: 'http://localhost:5000'
       }
     },
     watch: {

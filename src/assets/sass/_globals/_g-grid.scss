@@ -112,20 +112,26 @@ Tight grids have all the properties of regular grids, but with half the spacing.
 
 .#{$grid-mod}tight{
   @extend .#{$grid-prefix};
-  margin-left: - $grid-padding/8;
+  margin-left: - $grid-padding/16;
+  margin-right: - $grid-padding/16;
   @include breakpoint($gte-medium) {
-    margin-left: - $grid-padding/4;
+    margin-left: - $grid-padding/8;
+    margin-right: - $grid-padding/8;
   }
   @include breakpoint($gte-large) {
-    margin-left: - $grid-padding/2;
+    margin-left: - $grid-padding/4;
+    margin-right: - $grid-padding/4;
   }
   > .#{$grid-el}item{
-    padding-left: $grid-padding/8;
+    padding-left: $grid-padding/16;
+    padding-right: $grid-padding/16;
     @include breakpoint($gte-medium) {
-      padding-left: $grid-padding/4;
+      padding-left: $grid-padding/8;
+      padding-right: $grid-padding/8;
     }
     @include breakpoint($gte-large) {
-      padding-left: $grid-padding/2;
+      padding-left: $grid-padding/4;
+      padding-right: $grid-padding/4;
     }
   }
 }

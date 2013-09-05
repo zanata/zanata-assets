@@ -48,19 +48,27 @@ kbd,
 pre,
 samp {
   padding: 0 rhythm(.125, 14px);
-  font-family: monospace, serif;
+  font-family: "Monaco", Courier, "Courier New", monospace;
   @include adjust-font-size-to(14px);
 }
 
 code {
   @include inline-block;
-  background-color: $color-bg-dark;
+  background-color: $white;
 }
 
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  padding: rhythm(.5);
+  border-top: 1px solid $lighter-grey;
+  border-bottom: 1px solid $lighter-grey;
+  -webkit-overflow-scrolling: touch;
+  code {
+    background-color: transparent;
+    font-size: 1em;
+  }
 }
 
 q {

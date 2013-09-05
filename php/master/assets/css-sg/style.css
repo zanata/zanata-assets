@@ -170,7 +170,7 @@ NOTE: No classes should go in element files
 
 .new-zanata-body,
 .new-zanata-html {
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -333,7 +333,7 @@ Used to section content and create hierarchy
 .new-zanata pre,
 .new-zanata samp {
   padding: 0 0.21429em;
-  font-family: monospace, serif;
+  font-family: "Monaco", Courier, "Courier New", monospace;
   font-size: 0.875em;
   line-height: 1.71429em;
 }
@@ -344,12 +344,20 @@ Used to section content and create hierarchy
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background-color: #e8eaec;
+  background-color: white;
 }
 .new-zanata pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  padding: 0.75em;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  -webkit-overflow-scrolling: touch;
+}
+.new-zanata pre code {
+  background-color: transparent;
+  font-size: 1em;
 }
 .new-zanata q {
   quotes: "\201C" "\201D" "\2018" "\2019";
@@ -1457,29 +1465,35 @@ Tight grids have all the properties of regular grids, but with half the spacing.
 
 */
 .new-zanata .g--tight {
-  margin-left: -0.375em;
+  margin-left: -0.1875em;
+  margin-right: -0.1875em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .g--tight {
-    margin-left: -0.75em;
+    margin-left: -0.375em;
+    margin-right: -0.375em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g--tight {
-    margin-left: -1.5em;
+    margin-left: -0.75em;
+    margin-right: -0.75em;
   }
 }
 .new-zanata .g--tight > .g__item {
-  padding-left: 0.375em;
+  padding-left: 0.1875em;
+  padding-right: 0.1875em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .g--tight > .g__item {
-    padding-left: 0.75em;
+    padding-left: 0.375em;
+    padding-right: 0.375em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g--tight > .g__item {
-    padding-left: 1.5em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
   }
 }
 
@@ -2115,6 +2129,24 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 /*
 
+#### Text Lead
+
+```
+<p class="txt--lead">Lead text</p>
+```
+
+*/
+.new-zanata .txt--lead {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  font-weight: 300;
+}
+.new-zanata .txt--lead strong {
+  font-weight: 600;
+}
+
+/*
+
 #### Text Hero
 
 ```
@@ -2278,6 +2310,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 4;
+}
+.new-zanata .bg--primary {
+  background-color: #4e9fdd;
 }
 
 @-webkit-keyframes pulse {
@@ -2804,7 +2839,7 @@ Sub-headings can be used when placing a heading under another heading.
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   background-color: #444c54;
   z-index: 0;
   -webkit-backface-visibility: hidden;
