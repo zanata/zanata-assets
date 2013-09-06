@@ -64,6 +64,7 @@ pre {
   padding: rhythm(.5);
   border-top: 1px solid $lighter-grey;
   border-bottom: 1px solid $lighter-grey;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
   code {
     background-color: transparent;
