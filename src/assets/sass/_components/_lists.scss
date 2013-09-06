@@ -220,4 +220,13 @@ nav ol {
   }
 }
 
+.txt--invert.#{$list-mod}block-links li > a {
+  &:hover {
+    background-color: darken($color-base-font, 5%) !important;
+  }
+  &:active {
+    background-color: darken($color-base-font, 10%) !important;
+  }
+}
+
 }

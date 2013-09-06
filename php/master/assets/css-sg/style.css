@@ -2120,11 +2120,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .txt--invert a:hover {
   color: white !important;
-  background-color: #393f46 !important;
 }
 .new-zanata .txt--invert a:active, .new-zanata .txt--invert a.is-active {
   color: white !important;
-  background-color: #2d3338 !important;
 }
 
 /*
@@ -2839,6 +2837,12 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .list--block-links li > a:hover {
   background-color: white;
+}
+.new-zanata .txt--invert.list--block-links li > a:hover {
+  background-color: #393f46 !important;
+}
+.new-zanata .txt--invert.list--block-links li > a:active {
+  background-color: #2d3338 !important;
 }
 
 .off-canvas__outer {

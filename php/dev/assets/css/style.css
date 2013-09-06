@@ -2449,12 +2449,10 @@ Centered grids align grid items centrally without needing to use push or pull cl
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\0000395}}
 .new-zanata .txt--invert a:hover {
   color: white !important;
-  background-color: #393f46 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\0000399}}
 .new-zanata .txt--invert a:active, .new-zanata .txt--invert a.is-active {
   color: white !important;
-  background-color: #2d3338 !important;
 }
 
 /*
@@ -2466,13 +2464,13 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003120}}
 .new-zanata .txt--lead {
   font-size: 1.25em;
   line-height: 1.2em;
   font-weight: 300;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003123}}
 .new-zanata .txt--lead strong {
   font-weight: 600;
 }
@@ -2486,15 +2484,22 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003145}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003143}}
 .new-zanata .txt--hero {
-  font-size: 1.75em;
-  line-height: 1.28571em;
+  font-size: 1.5em;
+  line-height: 1.5em;
   font-weight: 300;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003146}}
 .new-zanata .txt--hero strong {
   font-weight: 600;
+}
+@media (min-width: 42.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003143}}
+  .new-zanata .txt--hero {
+    font-size: 1.75em;
+    line-height: 1.28571em;
+  }
 }
 
 /*
@@ -2506,7 +2511,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003168}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003169}}
 .new-zanata .txt--meta {
   font-size: 0.875em;
   line-height: 1.71429em;
@@ -2520,7 +2525,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 <p class="txt--important">Important</p>
 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003187}}
 .new-zanata .txt--important {
   font-weight: 700;
 }
@@ -2539,32 +2544,32 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003212}}
 .new-zanata .txt--highlight,
 .new-zanata .txt--state-highlight {
   color: #4e9fdd;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003217}}
 .new-zanata .txt--success,
 .new-zanata .txt--state-success {
   color: #70a98b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003222}}
 .new-zanata .txt--unsure,
 .new-zanata .txt--state-unsure {
   color: #e0c350;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003226}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003227}}
 .new-zanata .txt--warning,
 .new-zanata .txt--state-warning {
   color: #e3824e;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003232}}
 .new-zanata .txt--danger,
 .new-zanata .txt--state-danger {
   color: #e0575b;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003236}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_txt-text\.scss}line{font-family:\00003237}}
 .new-zanata .txt--neutral,
 .new-zanata .txt--state-neutral {
   color: #c6d2db;
@@ -3255,6 +3260,14 @@ Sub-headings can be used when placing a heading under another heading.
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_lists\.scss}line{font-family:\00003216}}
 .new-zanata .list--block-links li > a:hover {
   background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_lists\.scss}line{font-family:\00003224}}
+.new-zanata .txt--invert.list--block-links li > a:hover {
+  background-color: #393f46 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_lists\.scss}line{font-family:\00003227}}
+.new-zanata .txt--invert.list--block-links li > a:active {
+  background-color: #2d3338 !important;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_off-canvas\.scss}line{font-family:\0000312}}

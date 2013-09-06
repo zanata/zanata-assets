@@ -94,12 +94,10 @@ $text-mod    : #{$text-prefix}#{$mod};
     color: darken($invert-base-font, 15%) !important;
     &:hover {
       color: lighten($invert-base-font, 10%) !important;
-      background-color: darken($color-base-font, 5%) !important;
     }
     &:active,
     &.is-active {
       color: lighten($invert-base-font, 15%) !important;
-      background-color: darken($color-base-font, 10%) !important;
     }
   }
 }
