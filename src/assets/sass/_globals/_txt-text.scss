@@ -143,10 +143,13 @@ $text-mod    : #{$text-prefix}#{$mod};
 .new-zanata {
 
 .#{$text-mod}hero {
-  @include adjust-font-size-to(28px);
+  @include adjust-font-size-to(24px);
   font-weight: 300;
   strong {
     font-weight: 600;
+  }
+  @include breakpoint($gte-medium) {
+    @include adjust-font-size-to(28px);
   }
 }
 
