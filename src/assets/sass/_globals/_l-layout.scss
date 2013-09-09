@@ -8,8 +8,8 @@ $layout-mod                     : "#{$layout-prefix}#{$mod}"      !default;
 $layout-el                      : "#{$layout-prefix}#{el}"        !default;
 $layout-wrapper-max-width       : 48em                            !default;
 $layout-wrapper-min-ie-width    : 44em                            !default; // NOTE: old ie only
-$layout-spacing-increments      : 0 0.5 1 2                       !default;
-$layout-spacing-increment-names : 0 "half" 1 2                    !default;
+$layout-spacing-increments      : 0 0.25 0.5 1 2                       !default;
+$layout-spacing-increment-names : 0 "quarter" "half" 1 2          !default;
 $layout-spacing-sides           : top bottom left right           !default;
 
 /*
