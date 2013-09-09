@@ -4,8 +4,8 @@
 // Change in _settings.scss
 
 $button-prefix     : "button"                    !default;
-$button-el         : #{$button-prefix}#{$el}     !default;
-$button-mod        : #{$button-prefix}#{$mod}    !default;
+$button-el         : button#{$el}     !default;
+$button-mod        : button#{$mod}    !default;
 
 
 /*
@@ -13,15 +13,15 @@ $button-mod        : #{$button-prefix}#{$mod}    !default;
 ### Buttons
 
 ```
-<p><a class="#{$button-prefix}">Button</a></p>
-<p><a class="#{$button-mod}large">Button Large</a></p>
-<p><a class="#{$button-mod}huge">Button Huge</a></p>
-<p><a class="#{$button-mod}full">Button Full</a></p>
-<p><a class="#{$button-mod}inline-right">Button Inline Right</a></p>
-<p><a class="#{$button-mod}inline-left">Button Inline Left</a></p>
-<p><a class="#{$button-mod}primary">Button Primary</a></p>
-<p><a class="#{$button-mod}secondary">Button Secondary</a></p>
-<p><a class="#{$button-mod}danger">Button Danger</a></p>
+<p><a class="button">Button</a></p>
+<p><a class="button--large">Button Large</a></p>
+<p><a class="button--huge">Button Huge</a></p>
+<p><a class="button--full">Button Full</a></p>
+<p><a class="button--inline-right">Button Inline Right</a></p>
+<p><a class="button--inline-left">Button Inline Left</a></p>
+<p><a class="button--primary">Button Primary</a></p>
+<p><a class="button--secondary">Button Secondary</a></p>
+<p><a class="button--danger">Button Danger</a></p>
 ```
 
 */
@@ -29,9 +29,9 @@ $button-mod        : #{$button-prefix}#{$mod}    !default;
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-[type="submit"],
+input[type="submit"],
 button,
-.#{$button-prefix} {
+.button {
   padding: rhythm(.25) rhythm(.5);
   border: none;
   background-color: $white;
@@ -40,7 +40,11 @@ button,
   @include inline-block;
   @include box-shadow($default-box-shadow);
   @include border-radius($default-border-radius);
-  &:hover {
+  &:focus {
+    outline: 1px dotted $color-secondary;
+  }
+  &:hover,
+  &:focus {
     background-color: $color-bg-light;
     color: $black;
     @include box-shadow(0 1px 1px rgba($black,0.1));
@@ -55,6 +59,7 @@ button,
 button[disabled],
 input[type="submit"][disabled] {
   &:hover,
+  &:focus,
   &:active,
   &.is-active {
 	background-color: $color-bg-lighter !important;
@@ -63,35 +68,37 @@ input[type="submit"][disabled] {
   }
 }
 
-.#{$button-mod}large {
+.button--large {
   @include adjust-font-size-to(20px);
 }
 
-.#{$button-mod}huge {
+.button--huge {
   @include adjust-font-size-to(24px);
 }
 
-.#{$button-mod}full {
-  @extend .#{$button-prefix};
+.button--full {
+  @extend .button;
   display: block;
   width: 100%;
   text-align: center;
 }
 
-.#{$button-mod}inline-right {
+.button--inline-right {
   @include border-radius(0 $default-border-radius $default-border-radius 0);
 }
 
-.#{$button-mod}inline-left {
+.button--inline-left {
   @include border-radius($default-border-radius 0 0 $default-border-radius);
 }
 
-.#{$button-mod}primary {
-  @extend .#{$button-prefix};
+.button--primary,
+input.button--primary {
+  @extend .button;
   @include box-shadow(0 1px 2px rgba($black, 0.3));
   background-color: $color-primary;
   color: $lightest-grey;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: shade($color-primary, 5%);
     color: $white;
   }
@@ -102,10 +109,12 @@ input[type="submit"][disabled] {
   }
 }
 
-.#{$button-mod}secondary {
-  @extend .#{$button-mod}primary;
+.button--secondary,
+input.button--secondary, {
+  @extend .button--primary;
   background-color: $color-secondary;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: shade($color-secondary, 5%);
   }
   &:active,
@@ -114,10 +123,12 @@ input[type="submit"][disabled] {
   }
 }
 
-.#{$button-mod}danger {
-  @extend .#{$button-mod}primary;
+.button--danger,
+input.button--danger, {
+  @extend .button--primary;
   background-color: $color-danger;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: shade($color-danger, 5%);
   }
   &:active,
@@ -128,23 +139,23 @@ input[type="submit"][disabled] {
 
 // Specific Branded Buttons
 
-%#{$button-mod}brand {
+%button--brand {
   background-repeat: no-repeat;
   @include background-size(contain);
 }
 
-.#{$button-mod}fedora {
-  @extend %#{$button-mod}brand;
+.button--fedora {
+  @extend %button--brand;
   background-image: url(../img/fedora-logo.svg);
 }
 
-.#{$button-mod}google {
-  @extend %#{$button-mod}brand;
+.button--google {
+  @extend %button--brand;
   background-image: url(../img/google-logo.svg);
 }
 
-.#{$button-mod}yahoo {
-  @extend %#{$button-mod}brand;
+.button--yahoo {
+  @extend %button--brand;
   background-image: url(../img/yahoo-logo.svg);
 }
 

@@ -17,7 +17,7 @@ $form-input-color:                    $dark-grey                  !default;
 $form-input-border-color:             $light-grey                 !default;
 $form-input-box-shadow-inset:         $default-box-shadow-inset   !default;
 $form-input-focus-background-color:   $white                      !default;
-$form-input-focus-border-color:       $dark-grey                  !default;
+$form-input-focus-border-color:       $darkest-grey               !default;
 $form-fieldset-border-color:          $lighter-grey               !default;
 $form-legend-weight:                  bold                        !default;
 
@@ -110,6 +110,9 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: none;
   outline: none;
+  &:focus {
+    outline: 1px dotted $color-secondary;
+  }
 }
 
 
@@ -166,7 +169,7 @@ textarea {
   &:focus {
     @include transition($default-transition);
     outline: none !important;
-    border-color: $form-input-focus-border-color;
+    border: 2px solid $form-input-focus-border-color;
     background: $form-input-focus-background-color;
   }
   &[disabled] { background-color: $light-grey;}

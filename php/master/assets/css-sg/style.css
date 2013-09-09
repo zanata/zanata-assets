@@ -665,6 +665,12 @@ a:hover,
   -webkit-appearance: none;
   outline: none;
 }
+.new-zanata button:focus,
+.new-zanata html input[type="button"]:focus,
+.new-zanata input[type="reset"]:focus,
+.new-zanata input[type="submit"]:focus {
+  outline: 1px dotted #416988;
+}
 .new-zanata button[disabled],
 .new-zanata input[disabled] {
   cursor: default;
@@ -736,7 +742,7 @@ a:hover,
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   outline: none !important;
-  border-color: #a2b4c3;
+  border: 2px solid #7c96ac;
   background: white;
 }
 .new-zanata input[type="text"][disabled],
@@ -3707,13 +3713,14 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 
 */
-.new-zanata [type="submit"],
+.new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--full,
 .new-zanata .button--primary,
 .new-zanata .button--secondary,
-.new-zanata .button--danger {
+.new-zanata .button--danger,
+.new-zanata input.button--primary {
   padding: 0.375em 0.75em;
   border: none;
   background-color: white;
@@ -3732,20 +3739,35 @@ Sub-headings can be used when placing a heading under another heading.
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.new-zanata [type="submit"]:hover,
+.new-zanata input[type="submit"]:focus,
+.new-zanata button:focus,
+.new-zanata .button:focus,
+.new-zanata .button--full:focus,
+.new-zanata .button--primary:focus,
+.new-zanata .button--secondary:focus,
+.new-zanata .button--danger:focus {
+  outline: 1px dotted #416988;
+}
+.new-zanata input[type="submit"]:hover, .new-zanata input[type="submit"]:focus,
 .new-zanata button:hover,
+.new-zanata button:focus,
 .new-zanata .button:hover,
 .new-zanata .button--full:hover,
 .new-zanata .button--primary:hover,
 .new-zanata .button--secondary:hover,
-.new-zanata .button--danger:hover {
+.new-zanata .button--danger:hover,
+.new-zanata .button:focus,
+.new-zanata .button--full:focus,
+.new-zanata .button--primary:focus,
+.new-zanata .button--secondary:focus,
+.new-zanata .button--danger:focus {
   background-color: #f5f7f8;
   color: black;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-.new-zanata [type="submit"]:active, .new-zanata [type="submit"].is-active,
+.new-zanata input[type="submit"]:active, .new-zanata input[type="submit"].is-active,
 .new-zanata button:active,
 .new-zanata button.is-active,
 .new-zanata .button:active,
@@ -3763,8 +3785,9 @@ Sub-headings can be used when placing a heading under another heading.
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-.new-zanata button[disabled]:hover, .new-zanata button[disabled]:active, .new-zanata button[disabled].is-active,
+.new-zanata button[disabled]:hover, .new-zanata button[disabled]:focus, .new-zanata button[disabled]:active, .new-zanata button[disabled].is-active,
 .new-zanata input[type="submit"][disabled]:hover,
+.new-zanata input[type="submit"][disabled]:focus,
 .new-zanata input[type="submit"][disabled]:active,
 .new-zanata input[type="submit"][disabled].is-active {
   background-color: #fdfdfd !important;
@@ -3796,39 +3819,66 @@ Sub-headings can be used when placing a heading under another heading.
   -moz-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
 }
-.new-zanata .button--primary, .new-zanata .button--secondary, .new-zanata .button--danger {
+.new-zanata .button--primary, .new-zanata .button--secondary,
+.new-zanata input.button--secondary, .new-zanata .button--danger,
+.new-zanata input.button--danger,
+.new-zanata input.button--primary,
+.new-zanata input.button--secondary,
+.new-zanata input.button--danger {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   background-color: #4e9fdd;
   color: #f2f2f2;
 }
-.new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--danger:hover {
+.new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--danger:hover, .new-zanata .button--primary:focus, .new-zanata .button--secondary:focus, .new-zanata .button--danger:focus,
+.new-zanata input.button--primary:hover,
+.new-zanata input.button--secondary:hover,
+.new-zanata input.button--danger:hover,
+.new-zanata input.button--primary:focus,
+.new-zanata input.button--secondary:focus,
+.new-zanata input.button--danger:focus {
   background-color: #4a97d1;
   color: white;
 }
-.new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--danger:active, .new-zanata .button--primary.is-active, .new-zanata .is-active.button--secondary, .new-zanata .is-active.button--danger {
+.new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--danger:active, .new-zanata .button--primary.is-active, .new-zanata .is-active.button--secondary, .new-zanata .is-active.button--danger,
+.new-zanata input.button--primary:active,
+.new-zanata input.button--secondary:active,
+.new-zanata input.button--danger:active,
+.new-zanata input.button--primary.is-active,
+.new-zanata input.is-active.button--secondary,
+.new-zanata input.is-active.button--danger {
   background-color: #3e7fb0;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
 }
-.new-zanata .button--secondary {
+.new-zanata .button--secondary,
+.new-zanata input.button--secondary {
   background-color: #416988;
 }
-.new-zanata .button--secondary:hover {
+.new-zanata .button--secondary:hover, .new-zanata .button--secondary:focus,
+.new-zanata input.button--secondary:hover,
+.new-zanata input.button--secondary:focus {
   background-color: #3d6381;
 }
-.new-zanata .button--secondary:active, .new-zanata .button--secondary.is-active {
+.new-zanata .button--secondary:active, .new-zanata .button--secondary.is-active,
+.new-zanata input.button--secondary:active,
+.new-zanata input.button--secondary.is-active {
   background-color: #34546c;
 }
-.new-zanata .button--danger {
+.new-zanata .button--danger,
+.new-zanata input.button--danger {
   background-color: #e0575b;
 }
-.new-zanata .button--danger:hover {
+.new-zanata .button--danger:hover, .new-zanata .button--danger:focus,
+.new-zanata input.button--danger:hover,
+.new-zanata input.button--danger:focus {
   background-color: #d45256;
 }
-.new-zanata .button--danger:active, .new-zanata .button--danger.is-active {
+.new-zanata .button--danger:active, .new-zanata .button--danger.is-active,
+.new-zanata input.button--danger:active,
+.new-zanata input.button--danger.is-active {
   background-color: #b34548;
 }
 .new-zanata .button--fedora, .new-zanata .button--google, .new-zanata .button--yahoo {
