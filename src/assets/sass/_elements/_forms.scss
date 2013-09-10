@@ -172,7 +172,9 @@ textarea {
     border: 2px solid $form-input-focus-border-color;
     background: $form-input-focus-background-color;
   }
-  &[disabled] { background-color: $light-grey;}
+  &[disabled] {
+    background-color: $light-grey;
+  }
 }
 
 textarea {

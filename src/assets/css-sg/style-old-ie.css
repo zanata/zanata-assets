@@ -1921,6 +1921,24 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--primary {
   background-color: #4e9fdd;
 }
+.new-zanata .bg--danger {
+  background-color: #f8ddde;
+}
+.new-zanata .bg--warning {
+  background-color: #f9e6db;
+}
+.new-zanata .bg--unsure {
+  background-color: #f8f3dc;
+}
+.new-zanata .bg--success {
+  background-color: #e2ede7;
+}
+.new-zanata .bg--highlight {
+  background-color: #dbebf8;
+}
+.new-zanata .bg--neutral {
+  background-color: #f3f6f7;
+}
 
 @-webkit-keyframes pulse {
   0% {
@@ -2443,6 +2461,33 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .txt--invert.list--block-links li > a:active {
   background-color: #2d3338 !important;
+}
+
+input[type="text"].form--error,
+input[type="password"].form--error,
+input[type="date"].form--error,
+input[type="datetime"].form--error,
+input[type="email"].form--error,
+input[type="number"].form--error,
+input[type="search"].form--error,
+input[type="tel"].form--error,
+input[type="time"].form--error,
+input[type="url"].form--error,
+textarea.form--error {
+  border: 2px solid #e0575b !important;
+}
+input[type="text"].form--warning,
+input[type="password"].form--warning,
+input[type="date"].form--warning,
+input[type="datetime"].form--warning,
+input[type="email"].form--warning,
+input[type="number"].form--warning,
+input[type="search"].form--warning,
+input[type="tel"].form--warning,
+input[type="time"].form--warning,
+input[type="url"].form--warning,
+textarea.form--warning {
+  border: 2px solid #e3824e;
 }
 
 .off-canvas__outer {

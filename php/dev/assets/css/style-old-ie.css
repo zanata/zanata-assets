@@ -817,13 +817,13 @@ a:hover,
 .new-zanata textarea[disabled] {
   background-color: #cccccc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_elements\/_forms\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_elements\/_forms\.scss}line{font-family:\00003180}}
 .new-zanata textarea {
   overflow: auto;
   height: auto;
   vertical-align: top;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_elements\/_forms\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_elements\/_forms\.scss}line{font-family:\00003186}}
 .new-zanata select {
   width: 100%;
 }
@@ -2146,6 +2146,30 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--primary {
   background-color: #4e9fdd;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\0000391}}
+.new-zanata .bg--danger {
+  background-color: #f8ddde;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\0000395}}
+.new-zanata .bg--warning {
+  background-color: #f9e6db;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\0000399}}
+.new-zanata .bg--unsure {
+  background-color: #f8f3dc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\00003103}}
+.new-zanata .bg--success {
+  background-color: #e2ede7;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\00003107}}
+.new-zanata .bg--highlight {
+  background-color: #dbebf8;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\00003111}}
+.new-zanata .bg--neutral {
+  background-color: #f3f6f7;
+}
 
 @-webkit-keyframes pulse {
   /* line 2, ../sass/_globals/_a-animations.scss */
@@ -2732,6 +2756,35 @@ Sub-headings can be used when placing a heading under another heading.
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_lists\.scss}line{font-family:\00003227}}
 .new-zanata .txt--invert.list--block-links li > a:active {
   background-color: #2d3338 !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_forms\.scss}line{font-family:\0000312}}
+input[type="text"].form--error,
+input[type="password"].form--error,
+input[type="date"].form--error,
+input[type="datetime"].form--error,
+input[type="email"].form--error,
+input[type="number"].form--error,
+input[type="search"].form--error,
+input[type="tel"].form--error,
+input[type="time"].form--error,
+input[type="url"].form--error,
+textarea.form--error {
+  border: 2px solid #e0575b !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_forms\.scss}line{font-family:\0000315}}
+input[type="text"].form--warning,
+input[type="password"].form--warning,
+input[type="date"].form--warning,
+input[type="datetime"].form--warning,
+input[type="email"].form--warning,
+input[type="number"].form--warning,
+input[type="search"].form--warning,
+input[type="tel"].form--warning,
+input[type="time"].form--warning,
+input[type="url"].form--warning,
+textarea.form--warning {
+  border: 2px solid #e3824e;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_off-canvas\.scss}line{font-family:\0000312}}

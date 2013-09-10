@@ -11,7 +11,7 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$bg-mod}faint {
+.bg--faint {
   @extend .is-transition;
   @include opacity(.9);
   &:hover {
@@ -24,68 +24,92 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
 // TODO: Fix hover for touch devices
 // Use hover for each class so it is not overwritten by other hover classes
 
-.#{$bg-mod}high,
-.#{$bg-mod}high:hover,
-.#{$bg-mod}high--hover:hover {
+.bg--high,
+.bg--high:hover,
+.bg--high--hover:hover {
   @extend .is-transition;
   background-color: $color-bg-light;
 }
 
-.#{$bg-mod}higher,
-.#{$bg-mod}higher:hover,
-.#{$bg-mod}higher--hover:hover {
+.bg--higher,
+.bg--higher:hover,
+.bg--higher--hover:hover {
   @extend .is-transition;
   background-color: $color-bg-lighter;
 }
 
-.#{$bg-mod}highest,
-.#{$bg-mod}highest:hover,
-.#{$bg-mod}highest--hover:hover {
+.bg--highest,
+.bg--highest:hover,
+.bg--highest--hover:hover {
   @extend .is-transition;
   background-color: $color-bg-lightest;
 }
 
-.#{$bg-mod}low,
-.#{$bg-mod}low--hover:hover {
+.bg--low,
+.bg--low--hover:hover {
   @extend .is-transition;
   background-color: darken($color-body-background, 10%);
 }
 
-.#{$bg-mod}lower,
-.#{$bg-mod}lower--hover:hover {
+.bg--lower,
+.bg--lower--hover:hover {
   @extend .is-transition;
   background-color: darken($color-body-background, 25%);
 }
 
-.#{$bg-mod}lowest,
-.#{$bg-mod}lowest--hover:hover {
+.bg--lowest,
+.bg--lowest--hover:hover {
   @extend .is-transition;
   background-color: darken($color-body-background, 40%);
 }
 
-.#{$bg-mod}pop-high {
-  @extend .#{$bg-mod}high;
+.bg--pop-high {
+  @extend .bg--high;
   @include box-shadow($bg-pop-shadow);
   position: relative;
   z-index: 2;
 }
 
-.#{$bg-mod}pop-higher {
-  @extend .#{$bg-mod}higher;
+.bg--pop-higher {
+  @extend .bg--higher;
   @include box-shadow($bg-pop-shadow);
   position: relative;
   z-index: 3;
 }
 
-.#{$bg-mod}pop-highest {
-  @extend .#{$bg-mod}highest;
+.bg--pop-highest {
+  @extend .bg--highest;
   @include box-shadow($bg-pop-shadow);
   position: relative;
   z-index: 4;
 }
 
-.#{$bg-mod}primary {
+.bg--primary {
   background-color: $color-primary;
+}
+
+.bg--danger {
+  background-color: tint($color-danger, 80%);
+}
+
+.bg--warning {
+  background-color: tint($color-warning, 80%);
+}
+
+.bg--unsure {
+  background-color: tint($color-unsure, 80%);
+}
+
+.bg--success {
+  background-color: tint($color-success, 80%);
+}
+
+.bg--highlight {
+  background-color: tint($color-highlight, 80%);
+}
+
+.bg--neutral {
+  background-color: tint($color-neutral, 80%);
 }
 
 }
