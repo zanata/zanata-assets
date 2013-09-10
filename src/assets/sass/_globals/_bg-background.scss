@@ -3,10 +3,38 @@
 // ---------------------------------------
 // Change in _settings.scss
 
-$bg-prefix     : "bg"                    !default;
-$bg-el         : #{$bg-prefix}#{$el}     !default;
-$bg-mod        : #{$bg-prefix}#{$mod}    !default;
 $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
+
+/*
+
+### Backgrounds
+
+#### Background Levels
+
+```
+<div class="bg--lowest l--pad-all-1 l--push-bottom-half">I am so so very low. Go away.</div>
+
+<div class="bg--lower l--pad-all-1 l--push-bottom-half">I am very low</div>
+
+<div class="bg--low l--pad-all-1 l--push-bottom-half">I am low</div>
+
+<div class="bg--neutral l--pad-all-1 l--push-bottom-half">I am keeping the peace. I mean I am neutral.</div>
+
+<div class="bg--high l--pad-all-1 l--push-bottom-half">I am soooo high</div>
+
+<div class="bg--higher l--pad-all-1 l--push-bottom-half">I am way higher</div>
+
+<div class="bg--highest l--pad-all-1 l--push-bottom-half">I am the highest, wooo!</div>
+
+<div class="bg--highest l--pad-all-1 l--push-bottom-half">I am the highest, wooo!</div>
+
+<div class="bg--high--hover l--pad-all-1 l--push-bottom-half">I am just hovering around.</div>
+
+<div class="bg--pop-highest l--pad-all-1 l--push-bottom-half">Yeah, but I am poppin.</div>
+
+```
+
+*/
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
@@ -84,8 +112,44 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
   z-index: 4;
 }
 
+.bg--neutral {
+  background-color: $color-bg;
+}
+
+}
+
+/*
+
+#### Background States
+
+```
+<div class="bg--primary l--pad-all-1 l--push-bottom-half">I am Primary.</div>
+
+<div class="bg--secondary l--pad-all-1 l--push-bottom-half">I am Secondary.</div>
+
+<div class="bg--danger l--pad-all-1 l--push-bottom-half">Oh noes.</div>
+
+<div class="bg--warning l--pad-all-1 l--push-bottom-half">Careful.</div>
+
+<div class="bg--unsure l--pad-all-1 l--push-bottom-half">Are you sure.</div>
+
+<div class="bg--success l--pad-all-1 l--push-bottom-half">Woo hoo!.</div>
+
+<div class="bg--highlight l--pad-all-1 l--push-bottom-half">Hi.</div>
+
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
 .bg--primary {
   background-color: $color-primary;
+}
+
+.bg--secondary {
+  background-color: $color-secondary;
 }
 
 .bg--danger {
@@ -97,7 +161,7 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
 }
 
 .bg--unsure {
-  background-color: tint($color-unsure, 80%);
+  background-color: tint($color-unsure, 90%);
 }
 
 .bg--success {
@@ -106,10 +170,6 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
 
 .bg--highlight {
   background-color: tint($color-highlight, 80%);
-}
-
-.bg--neutral {
-  background-color: tint($color-neutral, 80%);
 }
 
 }
