@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 
 # Styleguide
@@ -2331,27 +2332,27 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 
 */
-.new-zanata .txt--highlight,
+.new-zanata .txt--highlight, .new-zanata .message--highlight,
 .new-zanata .txt--state-highlight {
   color: #4e9fdd;
 }
-.new-zanata .txt--success,
+.new-zanata .txt--success, .new-zanata .message--success,
 .new-zanata .txt--state-success {
   color: #70a98b;
 }
-.new-zanata .txt--unsure,
+.new-zanata .txt--unsure, .new-zanata .message--unsure,
 .new-zanata .txt--state-unsure {
   color: #e0c350;
 }
-.new-zanata .txt--warning,
+.new-zanata .txt--warning, .new-zanata .message--warning,
 .new-zanata .txt--state-warning {
   color: #e3824e;
 }
-.new-zanata .txt--danger,
+.new-zanata .txt--danger, .new-zanata .message--danger,
 .new-zanata .txt--state-danger {
   color: #e0575b;
 }
-.new-zanata .txt--neutral,
+.new-zanata .txt--neutral, .new-zanata .message--neutral,
 .new-zanata .txt--state-neutral {
   color: #c6d2db;
 }
@@ -2442,22 +2443,22 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--primary {
   background-color: #4e9fdd;
 }
-.new-zanata .bg--danger {
+.new-zanata .bg--danger, .new-zanata .message--danger {
   background-color: #f8ddde;
 }
-.new-zanata .bg--warning {
+.new-zanata .bg--warning, .new-zanata .message--warning {
   background-color: #f9e6db;
 }
-.new-zanata .bg--unsure {
+.new-zanata .bg--unsure, .new-zanata .message--unsure {
   background-color: #f8f3dc;
 }
-.new-zanata .bg--success {
+.new-zanata .bg--success, .new-zanata .message--success {
   background-color: #e2ede7;
 }
-.new-zanata .bg--highlight {
+.new-zanata .bg--highlight, .new-zanata .message--highlight {
   background-color: #dbebf8;
 }
-.new-zanata .bg--neutral {
+.new-zanata .bg--neutral, .new-zanata .message--neutral {
   background-color: #f3f6f7;
 }
 
@@ -3692,6 +3693,29 @@ textarea.form--warning {
 }
 .new-zanata .alert--danger .alert__highlight {
   color: #e0575b;
+}
+
+/*
+
+### Messages
+
+```
+<div class="message--danger l--push-bottom-half">Oh noes! Don't do that.</div>
+
+<div class="message--warning l--push-bottom-half">Ooooh that looks risky…</div>
+
+<div class="message--unsure l--push-bottom-half">Wait, are you sure?</div>
+
+<div class="message--success l--push-bottom-half">Yay! Way to GO!!!!!</div>
+
+<div class="message--highlight l--push-bottom-half">Oh look, a squirrel!</div>
+
+<div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
+```
+
+*/
+.message, .message--danger, .message--warning, .message--unsure, .message--success, .message--highlight, .message--neutral {
+  padding: 0.375em 0.75em;
 }
 
 /*

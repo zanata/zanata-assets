@@ -1,0 +1,60 @@
+/*
+
+### Messages
+
+```
+<div class="message--danger l--push-bottom-half">Oh noes! Don't do that.</div>
+
+<div class="message--warning l--push-bottom-half">Ooooh that looks risky…</div>
+
+<div class="message--unsure l--push-bottom-half">Wait, are you sure?</div>
+
+<div class="message--success l--push-bottom-half">Yay! Way to GO!!!!!</div>
+
+<div class="message--highlight l--push-bottom-half">Oh look, a squirrel!</div>
+
+<div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
+```
+
+*/
+
+.message {
+  padding: rhythm(.25) rhythm(.5);
+}
+
+.message--danger {
+  @extend .message;
+  @extend .bg--danger;
+  @extend .txt--danger;
+}
+
+.message--warning {
+  @extend .message;
+  @extend .bg--warning;
+  @extend .txt--warning;
+}
+
+.message--unsure {
+  @extend .message;
+  @extend .bg--unsure;
+  @extend .txt--unsure;
+}
+
+.message--success {
+  @extend .message;
+  @extend .bg--success;
+  @extend .txt--success;
+}
+
+.message--highlight {
+  @extend .message;
+  @extend .bg--highlight;
+  @extend .txt--highlight;
+}
+
+.message--neutral {
+  @extend .message;
+  @extend .bg--neutral;
+  @extend .txt--neutral;
+}
+
