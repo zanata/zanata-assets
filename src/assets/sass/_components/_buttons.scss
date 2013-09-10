@@ -69,10 +69,12 @@ input[type="submit"][disabled] {
 }
 
 .button--large {
+  @extend .button;
   @include adjust-font-size-to(20px);
 }
 
 .button--huge {
+  @extend .button;
   @include adjust-font-size-to(24px);
 }
 
@@ -84,10 +86,12 @@ input[type="submit"][disabled] {
 }
 
 .button--inline-right {
+  @extend .button;
   @include border-radius(0 $default-border-radius $default-border-radius 0);
 }
 
 .button--inline-left {
+  @extend .button;
   @include border-radius($default-border-radius 0 0 $default-border-radius);
 }
 
