@@ -21,38 +21,38 @@
   <div class="ph__color-base-font">$color-base-font</div>
 */
 [class*="ph__color"] {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.625em;
   width: 100%;
   font-family: Monaco, Courier, monospace;
-  line-height: 2.25em;
+  line-height: 2.4375em;
 }
 [class*="ph__color"]:before {
   display: block;
   content: "";
-  height: 3em;
+  height: 3.25em;
 }
 [class*="ph__color"]:after {
   display: block;
-  padding: 0 0.75em;
+  padding: 0 0.8125em;
   background-color: rgba(0, 0, 0, 0.025);
 }
 @media (min-width: 53.75em) {
   [class*="ph__color"] {
-    line-height: 4.5em;
+    line-height: 4.875em;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.025);
   }
   [class*="ph__color"]:before {
-    height: 4.5em;
+    height: 4.875em;
     float: left;
     width: 20%;
-    margin-right: 0.75em;
+    margin-right: 0.8125em;
   }
   [class*="ph__color"]:after {
     float: right;
     width: 20%;
     text-align: center;
-    margin-left: 0.75em;
+    margin-left: 0.8125em;
   }
 }
 
@@ -88,18 +88,18 @@
   <div class="ph__font-family-heading">$font-family-heading</div>
 */
 [class*="ph__font"] {
-  margin-bottom: 1.5em;
-  padding: 0 0.75em;
+  margin-bottom: 1.625em;
+  padding: 0 0.8125em;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.025);
   font-family: Monaco, Courier, monospace;
-  line-height: 2.25em;
-  line-height: 3em;
+  line-height: 2.4375em;
+  line-height: 3.25em;
 }
 [class*="ph__font"]:before {
   display: block;
-  margin: 0 -0.75em;
-  padding: 0 0.75em;
+  margin: 0 -0.8125em;
+  padding: 0 0.8125em;
   background-color: rgba(0, 0, 0, 0.025);
   content: "";
 }
@@ -115,7 +115,7 @@
 }
 
 .ph__block, .ph__inline-block {
-  line-height: 7.5em;
+  line-height: 8.125em;
   text-align: center;
   background-color: #e6e6e6;
   display: block;
@@ -178,7 +178,7 @@ NOTE: No classes should go in element files
 
 html.new-zanata,
 .new-zanata-base {
-  line-height: 1.5em;
+  line-height: 1.625em;
   color: #444c54;
   font-size: 16px;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -244,54 +244,54 @@ Used to section content and create hierarchy
 .new-zanata h1,
 .new-zanata .alpha {
   font-size: 2.25em;
-  line-height: 1.33333em;
+  line-height: 1.44444em;
 }
 .new-zanata h1 {
-  margin-bottom: 0.33333em;
+  margin-bottom: 0.36111em;
 }
 .new-zanata h2,
 .new-zanata .beta {
   font-size: 1.75em;
-  line-height: 1.28571em;
+  line-height: 1.39286em;
 }
 .new-zanata h2 {
-  margin-top: 0.85714em;
-  margin-bottom: 0.42857em;
+  margin-top: 0.92857em;
+  margin-bottom: 0.46429em;
 }
 .new-zanata h3,
 .new-zanata .gamma {
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 .new-zanata h3 {
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 1.08333em;
+  margin-bottom: 0.54167em;
 }
 .new-zanata h4,
 .new-zanata .delta {
   font-size: 1.25em;
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 .new-zanata h4 {
-  margin-top: 0.6em;
-  margin-bottom: 0.3em;
+  margin-top: 0.65em;
+  margin-bottom: 0.325em;
 }
 .new-zanata h5,
 .new-zanata .epsilon {
   font-size: 1.125em;
-  line-height: 1.33333em;
+  line-height: 1.44444em;
 }
 .new-zanata h5 {
-  margin-top: 0.66667em;
-  margin-bottom: 0.66667em;
+  margin-top: 0.72222em;
+  margin-bottom: 0.72222em;
 }
 .new-zanata h6,
 .new-zanata .zeta {
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 .new-zanata h6 {
-  margin-top: 0.75em;
+  margin-top: 0.8125em;
 }
 
 /*
@@ -307,7 +307,7 @@ Used to section content and create hierarchy
 
 */
 .new-zanata p {
-  margin: 0 0 0.75em;
+  margin: 0 0 0.8125em;
 }
 .new-zanata p:last-child {
   margin-bottom: 0;
@@ -333,10 +333,10 @@ Used to section content and create hierarchy
 .new-zanata kbd,
 .new-zanata pre,
 .new-zanata samp {
-  padding: 0 0.21429em;
+  padding: 0 0.23214em;
   font-family: "Monaco", Courier, "Courier New", monospace;
   font-size: 0.875em;
-  line-height: 1.71429em;
+  line-height: 1.85714em;
 }
 .new-zanata code {
   display: -moz-inline-stack;
@@ -351,7 +351,7 @@ Used to section content and create hierarchy
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
-  padding: 0.75em;
+  padding: 0.8125em;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
   overflow: auto;
@@ -456,13 +456,13 @@ a:hover,
 */
 .new-zanata ul,
 .new-zanata ol {
-  margin: 0.75em 0;
-  padding: 0 0 0 1.5em;
+  margin: 0.8125em 0;
+  padding: 0 0 0 1.625em;
 }
 .new-zanata ul li,
 .new-zanata ol li {
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 
 /*
@@ -484,7 +484,7 @@ a:hover,
 
 */
 .new-zanata dd {
-  margin: 0 0 0 1.5em;
+  margin: 0 0 0 1.625em;
 }
 
 /*
@@ -555,13 +555,13 @@ a:hover,
 }
 .new-zanata th,
 .new-zanata td {
-  padding: 0.1875em 0.375em;
+  padding: 0.20313em 0.40625em;
   text-align: left;
 }
 @media (min-width: 42.5em) {
   .new-zanata th,
   .new-zanata td {
-    padding: 0.375em 0.75em;
+    padding: 0.40625em 0.8125em;
   }
 }
 .new-zanata [colspan] {
@@ -613,19 +613,19 @@ a:hover,
 
 */
 .new-zanata form {
-  margin: 0 0 0.75em;
+  margin: 0 0 0.8125em;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 .new-zanata fieldset {
   border-width: 0.0625em;
   border-style: solid;
-  padding: 0.6875em;
+  padding: 0.75em;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  margin: 1.125em 0;
+  margin: 1.21875em 0;
   padding-bottom: 0;
   border-color: #d9e1e7;
 }
@@ -633,14 +633,14 @@ a:hover,
   border: 0;
   font-weight: 600;
   background: white;
-  padding: 0 0.1875em;
-  margin-left: -0.1875em;
+  padding: 0 0.20313em;
+  margin-left: -0.20313em;
 }
 .new-zanata label {
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.625em;
   display: block;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.40625em;
   color: #444c54;
   font-weight: 600;
   font-family: inherit;
@@ -656,7 +656,7 @@ a:hover,
 }
 .new-zanata button,
 .new-zanata input {
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 .new-zanata button,
 .new-zanata html input[type="button"],
@@ -718,14 +718,14 @@ a:hover,
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 0.375em;
+  padding: 0.40625em;
   display: block;
-  height: 2.25em;
+  height: 2.4375em;
   width: 100%;
   border: 1px solid #c6d2db;
   background-color: #fdfdfd;
   color: #333333;
-  margin: 0 0 0.75em;
+  margin: 0 0 0.8125em;
 }
 .new-zanata input[type="text"]:focus,
 .new-zanata input[type="password"]:focus,
@@ -803,10 +803,10 @@ a:hover,
 
 */
 .new-zanata hr {
-  height: 1.5em;
+  height: 1.625em;
   width: 100%;
   border: 0;
-  margin: 1.5em 0;
+  margin: 1.625em 0;
   background: transparent;
 }
 
@@ -879,16 +879,16 @@ $max-site-width is assigned to this
   max-width: 120em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 0.75em;
+  padding: 0 0.8125em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .l__wrapper {
-    padding: 0 1.5em;
+    padding: 0 1.625em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .l__wrapper {
-    padding: 0 3em;
+    padding: 0 3.25em;
   }
 }
 
@@ -1302,188 +1302,188 @@ Only use them if it does not make sense to add this styling to another element/c
   padding: 0em !important;
 }
 .new-zanata .l--push-top-quarter {
-  margin-top: 0.375em !important;
+  margin-top: 0.40625em !important;
 }
 .new-zanata .l--pad-top-quarter {
-  padding-top: 0.375em !important;
+  padding-top: 0.40625em !important;
 }
 .new-zanata .l--push-bottom-quarter {
-  margin-bottom: 0.375em !important;
+  margin-bottom: 0.40625em !important;
 }
 .new-zanata .l--pad-bottom-quarter {
-  padding-bottom: 0.375em !important;
+  padding-bottom: 0.40625em !important;
 }
 .new-zanata .l--push-left-quarter {
-  margin-left: 0.375em !important;
+  margin-left: 0.40625em !important;
 }
 .new-zanata .l--pad-left-quarter {
-  padding-left: 0.375em !important;
+  padding-left: 0.40625em !important;
 }
 .new-zanata .l--push-right-quarter {
-  margin-right: 0.375em !important;
+  margin-right: 0.40625em !important;
 }
 .new-zanata .l--pad-right-quarter {
-  padding-right: 0.375em !important;
+  padding-right: 0.40625em !important;
 }
 .new-zanata .l--push-v-quarter {
-  margin-top: 0.375em !important;
-  margin-bottom: 0.375em !important;
+  margin-top: 0.40625em !important;
+  margin-bottom: 0.40625em !important;
 }
 .new-zanata .l--pad-v-quarter {
-  padding-top: 0.375em !important;
-  padding-bottom: 0.375em !important;
+  padding-top: 0.40625em !important;
+  padding-bottom: 0.40625em !important;
 }
 .new-zanata .l--push-h-quarter {
-  margin-left: 0.375em !important;
-  margin-right: 0.375em !important;
+  margin-left: 0.40625em !important;
+  margin-right: 0.40625em !important;
 }
 .new-zanata .l--pad-h-quarter {
-  padding-left: 0.375em !important;
-  padding-right: 0.375em !important;
+  padding-left: 0.40625em !important;
+  padding-right: 0.40625em !important;
 }
 .new-zanata .l--push-all-quarter {
-  margin: 0.375em !important;
+  margin: 0.40625em !important;
 }
 .new-zanata .l--pad-all-quarter {
-  padding: 0.375em !important;
+  padding: 0.40625em !important;
 }
 .new-zanata .l--push-top-half {
-  margin-top: 0.75em !important;
+  margin-top: 0.8125em !important;
 }
 .new-zanata .l--pad-top-half {
-  padding-top: 0.75em !important;
+  padding-top: 0.8125em !important;
 }
 .new-zanata .l--push-bottom-half {
-  margin-bottom: 0.75em !important;
+  margin-bottom: 0.8125em !important;
 }
 .new-zanata .l--pad-bottom-half {
-  padding-bottom: 0.75em !important;
+  padding-bottom: 0.8125em !important;
 }
 .new-zanata .l--push-left-half {
-  margin-left: 0.75em !important;
+  margin-left: 0.8125em !important;
 }
 .new-zanata .l--pad-left-half {
-  padding-left: 0.75em !important;
+  padding-left: 0.8125em !important;
 }
 .new-zanata .l--push-right-half {
-  margin-right: 0.75em !important;
+  margin-right: 0.8125em !important;
 }
 .new-zanata .l--pad-right-half {
-  padding-right: 0.75em !important;
+  padding-right: 0.8125em !important;
 }
 .new-zanata .l--push-v-half {
-  margin-top: 0.75em !important;
-  margin-bottom: 0.75em !important;
+  margin-top: 0.8125em !important;
+  margin-bottom: 0.8125em !important;
 }
 .new-zanata .l--pad-v-half {
-  padding-top: 0.75em !important;
-  padding-bottom: 0.75em !important;
+  padding-top: 0.8125em !important;
+  padding-bottom: 0.8125em !important;
 }
 .new-zanata .l--push-h-half {
-  margin-left: 0.75em !important;
-  margin-right: 0.75em !important;
+  margin-left: 0.8125em !important;
+  margin-right: 0.8125em !important;
 }
 .new-zanata .l--pad-h-half {
-  padding-left: 0.75em !important;
-  padding-right: 0.75em !important;
+  padding-left: 0.8125em !important;
+  padding-right: 0.8125em !important;
 }
 .new-zanata .l--push-all-half {
-  margin: 0.75em !important;
+  margin: 0.8125em !important;
 }
 .new-zanata .l--pad-all-half {
-  padding: 0.75em !important;
+  padding: 0.8125em !important;
 }
 .new-zanata .l--push-top-1 {
-  margin-top: 1.5em !important;
+  margin-top: 1.625em !important;
 }
 .new-zanata .l--pad-top-1 {
-  padding-top: 1.5em !important;
+  padding-top: 1.625em !important;
 }
 .new-zanata .l--push-bottom-1 {
-  margin-bottom: 1.5em !important;
+  margin-bottom: 1.625em !important;
 }
 .new-zanata .l--pad-bottom-1 {
-  padding-bottom: 1.5em !important;
+  padding-bottom: 1.625em !important;
 }
 .new-zanata .l--push-left-1 {
-  margin-left: 1.5em !important;
+  margin-left: 1.625em !important;
 }
 .new-zanata .l--pad-left-1 {
-  padding-left: 1.5em !important;
+  padding-left: 1.625em !important;
 }
 .new-zanata .l--push-right-1 {
-  margin-right: 1.5em !important;
+  margin-right: 1.625em !important;
 }
 .new-zanata .l--pad-right-1 {
-  padding-right: 1.5em !important;
+  padding-right: 1.625em !important;
 }
 .new-zanata .l--push-v-1 {
-  margin-top: 1.5em !important;
-  margin-bottom: 1.5em !important;
+  margin-top: 1.625em !important;
+  margin-bottom: 1.625em !important;
 }
 .new-zanata .l--pad-v-1 {
-  padding-top: 1.5em !important;
-  padding-bottom: 1.5em !important;
+  padding-top: 1.625em !important;
+  padding-bottom: 1.625em !important;
 }
 .new-zanata .l--push-h-1 {
-  margin-left: 1.5em !important;
-  margin-right: 1.5em !important;
+  margin-left: 1.625em !important;
+  margin-right: 1.625em !important;
 }
 .new-zanata .l--pad-h-1 {
-  padding-left: 1.5em !important;
-  padding-right: 1.5em !important;
+  padding-left: 1.625em !important;
+  padding-right: 1.625em !important;
 }
 .new-zanata .l--push-all-1 {
-  margin: 1.5em !important;
+  margin: 1.625em !important;
 }
 .new-zanata .l--pad-all-1 {
-  padding: 1.5em !important;
+  padding: 1.625em !important;
 }
 .new-zanata .l--push-top-2 {
-  margin-top: 3em !important;
+  margin-top: 3.25em !important;
 }
 .new-zanata .l--pad-top-2 {
-  padding-top: 3em !important;
+  padding-top: 3.25em !important;
 }
 .new-zanata .l--push-bottom-2 {
-  margin-bottom: 3em !important;
+  margin-bottom: 3.25em !important;
 }
 .new-zanata .l--pad-bottom-2 {
-  padding-bottom: 3em !important;
+  padding-bottom: 3.25em !important;
 }
 .new-zanata .l--push-left-2 {
-  margin-left: 3em !important;
+  margin-left: 3.25em !important;
 }
 .new-zanata .l--pad-left-2 {
-  padding-left: 3em !important;
+  padding-left: 3.25em !important;
 }
 .new-zanata .l--push-right-2 {
-  margin-right: 3em !important;
+  margin-right: 3.25em !important;
 }
 .new-zanata .l--pad-right-2 {
-  padding-right: 3em !important;
+  padding-right: 3.25em !important;
 }
 .new-zanata .l--push-v-2 {
-  margin-top: 3em !important;
-  margin-bottom: 3em !important;
+  margin-top: 3.25em !important;
+  margin-bottom: 3.25em !important;
 }
 .new-zanata .l--pad-v-2 {
-  padding-top: 3em !important;
-  padding-bottom: 3em !important;
+  padding-top: 3.25em !important;
+  padding-bottom: 3.25em !important;
 }
 .new-zanata .l--push-h-2 {
-  margin-left: 3em !important;
-  margin-right: 3em !important;
+  margin-left: 3.25em !important;
+  margin-right: 3.25em !important;
 }
 .new-zanata .l--pad-h-2 {
-  padding-left: 3em !important;
-  padding-right: 3em !important;
+  padding-left: 3.25em !important;
+  padding-right: 3.25em !important;
 }
 .new-zanata .l--push-all-2 {
-  margin: 3em !important;
+  margin: 3.25em !important;
 }
 .new-zanata .l--pad-all-2 {
-  padding: 3em !important;
+  padding: 3.25em !important;
 }
 
 /*
@@ -1524,7 +1524,7 @@ Only use them if it does not make sense to add this styling to another element/c
 .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
   *zoom: 1;
   margin: 0;
-  margin-left: -0.75em;
+  margin-left: -0.8125em;
   padding: 0;
   list-style: none;
   letter-spacing: -0.31em;
@@ -1536,12 +1536,12 @@ Only use them if it does not make sense to add this styling to another element/c
 }
 @media (min-width: 42.5em) {
   .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
-    margin-left: -1.5em;
+    margin-left: -1.625em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
-    margin-left: -3em;
+    margin-left: -3.25em;
   }
 }
 .new-zanata .g > .g, .new-zanata .g--tight > .g, .new-zanata .g--tighter > .g, .new-zanata .g--collapsed > .g, .new-zanata .g--rev > .g, .new-zanata .g--right > .g, .new-zanata .g--centered > .g, .new-zanata .g > .g--tight, .new-zanata .g--tight > .g--tight, .new-zanata .g--tighter > .g--tight, .new-zanata .g--collapsed > .g--tight, .new-zanata .g--rev > .g--tight, .new-zanata .g--right > .g--tight, .new-zanata .g--centered > .g--tight, .new-zanata .g > .g--tighter, .new-zanata .g--tight > .g--tighter, .new-zanata .g--tighter > .g--tighter, .new-zanata .g--collapsed > .g--tighter, .new-zanata .g--rev > .g--tighter, .new-zanata .g--right > .g--tighter, .new-zanata .g--centered > .g--tighter, .new-zanata .g > .g--collapsed, .new-zanata .g--tight > .g--collapsed, .new-zanata .g--tighter > .g--collapsed, .new-zanata .g--collapsed > .g--collapsed, .new-zanata .g--rev > .g--collapsed, .new-zanata .g--right > .g--collapsed, .new-zanata .g--centered > .g--collapsed, .new-zanata .g > .g--rev, .new-zanata .g--tight > .g--rev, .new-zanata .g--tighter > .g--rev, .new-zanata .g--collapsed > .g--rev, .new-zanata .g--rev > .g--rev, .new-zanata .g--right > .g--rev, .new-zanata .g--centered > .g--rev, .new-zanata .g > .g--right, .new-zanata .g--tight > .g--right, .new-zanata .g--tighter > .g--right, .new-zanata .g--collapsed > .g--right, .new-zanata .g--rev > .g--right, .new-zanata .g--right > .g--right, .new-zanata .g--centered > .g--right, .new-zanata .g > .g--centered, .new-zanata .g--tight > .g--centered, .new-zanata .g--tighter > .g--centered, .new-zanata .g--collapsed > .g--centered, .new-zanata .g--rev > .g--centered, .new-zanata .g--right > .g--centered, .new-zanata .g--centered > .g--centered {
@@ -1555,7 +1555,7 @@ Only use them if it does not make sense to add this styling to another element/c
   display: inline-block;
   margin: 0;
   padding: 0;
-  padding-left: 0.75em;
+  padding-left: 0.8125em;
   width: 100%;
   vertical-align: top;
   word-spacing: normal;
@@ -1564,12 +1564,12 @@ Only use them if it does not make sense to add this styling to another element/c
 }
 @media (min-width: 42.5em) {
   .new-zanata .g__item {
-    padding-left: 1.5em;
+    padding-left: 1.625em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g__item {
-    padding-left: 3em;
+    padding-left: 3.25em;
   }
 }
 
@@ -1590,35 +1590,35 @@ Tight grids have all the properties of regular grids, but with half the spacing.
 
 */
 .new-zanata .g--tight {
-  margin-left: -0.1875em;
-  margin-right: -0.1875em;
+  margin-left: -0.20313em;
+  margin-right: -0.20313em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .g--tight {
-    margin-left: -0.375em;
-    margin-right: -0.375em;
+    margin-left: -0.40625em;
+    margin-right: -0.40625em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g--tight {
-    margin-left: -0.75em;
-    margin-right: -0.75em;
+    margin-left: -0.8125em;
+    margin-right: -0.8125em;
   }
 }
 .new-zanata .g--tight > .g__item {
-  padding-left: 0.1875em;
-  padding-right: 0.1875em;
+  padding-left: 0.20313em;
+  padding-right: 0.20313em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .g--tight > .g__item {
-    padding-left: 0.375em;
-    padding-right: 0.375em;
+    padding-left: 0.40625em;
+    padding-right: 0.40625em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g--tight > .g__item {
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+    padding-left: 0.8125em;
+    padding-right: 0.8125em;
   }
 }
 
@@ -1639,29 +1639,29 @@ Tighter grids have all the properties of regular grids, but with a quarter the s
 
 */
 .new-zanata .g--tighter {
-  margin-left: -0.1875em;
+  margin-left: -0.20313em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .g--tighter {
-    margin-left: -0.375em;
+    margin-left: -0.40625em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g--tighter {
-    margin-left: -0.75em;
+    margin-left: -0.8125em;
   }
 }
 .new-zanata .g--tighter > .g__item {
-  padding-left: 0.1875em;
+  padding-left: 0.20313em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .g--tighter > .g__item {
-    padding-left: 0.375em;
+    padding-left: 0.40625em;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .g--tighter > .g__item {
-    padding-left: 0.75em;
+    padding-left: 0.8125em;
   }
 }
 
@@ -2261,7 +2261,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--lead {
   font-size: 1.25em;
-  line-height: 1.2em;
+  line-height: 1.3em;
   font-weight: 300;
 }
 .new-zanata .txt--lead strong {
@@ -2279,7 +2279,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--hero {
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.625em;
   font-weight: 300;
 }
 .new-zanata .txt--hero strong {
@@ -2288,7 +2288,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 @media (min-width: 42.5em) {
   .new-zanata .txt--hero {
     font-size: 1.75em;
-    line-height: 1.28571em;
+    line-height: 1.39286em;
   }
 }
 
@@ -2303,7 +2303,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--meta {
   font-size: 0.875em;
-  line-height: 1.71429em;
+  line-height: 1.85714em;
   color: #7c96ac;
 }
 
@@ -2691,15 +2691,15 @@ All icons also need the class `.i` added to them.
   -webkit-font-smoothing: antialiased;
 }
 .list--horizontal .new-zanata .i, .list--horizontal .new-zanata .i--large, .list--horizontal .new-zanata .i--huge {
-  margin-top: -0.18em;
+  margin-top: -0.195em;
 }
 .new-zanata .i--large {
   font-size: 1.25em;
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 .new-zanata .i--huge {
   font-size: 1.5em;
-  line-height: 1em;
+  line-height: 1.08333em;
 }
 .new-zanata .i--list:before,
 .new-zanata .i--menu:before {
@@ -2726,7 +2726,7 @@ All icons also need the class `.i` added to them.
 }
 .new-zanata .i--clipboard,
 .new-zanata .i--project {
-  margin-top: -0.18em;
+  margin-top: -0.195em;
 }
 .new-zanata .i--clipboard:before,
 .new-zanata .i--project:before {
@@ -2734,14 +2734,14 @@ All icons also need the class `.i` added to them.
 }
 .new-zanata .i--document-alt-fill,
 .new-zanata .i--document {
-  margin-top: -0.09em;
+  margin-top: -0.0975em;
 }
 .new-zanata .i--document-alt-fill:before,
 .new-zanata .i--document:before {
   content: "\e007";
 }
 .new-zanata .i--clock {
-  margin-top: -0.09em;
+  margin-top: -0.0975em;
 }
 .new-zanata .i--clock:before {
   content: "\e008";
@@ -2754,7 +2754,7 @@ All icons also need the class `.i` added to them.
   content: "\e00a";
 }
 .new-zanata .i--maintain {
-  margin-top: -0.09em;
+  margin-top: -0.0975em;
 }
 .new-zanata .i--maintain:before {
   content: "\e01c";
@@ -2819,7 +2819,7 @@ All icons also need the class `.i` added to them.
   content: "\e019";
 }
 .new-zanata .i--version {
-  margin-top: -0.18em;
+  margin-top: -0.195em;
 }
 .new-zanata .i--version:before {
   content: "\e01a";
@@ -2934,7 +2934,7 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list--horizontal li {
   display: inline-block;
-  margin-right: 0.375em;
+  margin-right: 0.40625em;
 }
 .new-zanata .list--horizontal li:last-child {
   margin-right: 0;
@@ -2955,7 +2955,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--slat > li {
-  padding: 0.375em 0;
+  padding: 0.40625em 0;
   border-top: 1px solid rgba(65, 105, 136, 0.1);
 }
 .new-zanata .list--slat > li > a {
@@ -2968,7 +2968,7 @@ Sub-headings can be used when placing a heading under another heading.
   margin: 0;
   font-weight: 600;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 
 /*
@@ -2987,7 +2987,7 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list--slat-horizontal > li {
   display: inline-block;
-  padding: 0 0.375em;
+  padding: 0 0.40625em;
   border-left: 1px solid rgba(65, 105, 136, 0.1);
 }
 .new-zanata .list--slat-horizontal > li > a {
@@ -3010,7 +3010,7 @@ Sub-headings can be used when placing a heading under another heading.
   margin: 0;
   font-weight: 600;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 
 /*
@@ -3032,7 +3032,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .list--block-links li > a {
   display: block;
-  padding: 0.75em;
+  padding: 0.8125em;
 }
 .new-zanata .list--block-links li > a:hover {
   background-color: white;
@@ -3159,24 +3159,24 @@ textarea.form--warning {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding: 0.375em;
+  padding: 0.40625em;
   text-align: center;
-  height: 3em;
+  height: 3.25em;
 }
 .off-canvas__toggle img, .off-canvas__toggle--left img, .off-canvas__toggle--right img, .new-zanata .off-canvas__close img {
-  -webkit-border-radius: 3em;
-  -moz-border-radius: 3em;
-  border-radius: 3em;
-  max-width: 2.25em;
+  -webkit-border-radius: 3.25em;
+  -moz-border-radius: 3.25em;
+  border-radius: 3.25em;
+  max-width: 2.4375em;
 }
 .off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge {
-  padding: 0.1875em;
+  padding: 0.20313em;
 }
 .off-canvas__toggle .i--large, .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large {
-  padding: 0.15em;
+  padding: 0.1625em;
 }
 .off-canvas__toggle .i--huge, .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge {
-  padding: 0.125em;
+  padding: 0.13542em;
 }
 .off-canvas__toggle.is-active, .is-active.off-canvas__toggle--left, .is-active.off-canvas__toggle--right, .new-zanata .is-active.off-canvas__close {
   color: #444c54;
@@ -3192,7 +3192,7 @@ textarea.form--warning {
 
 .off-canvas__header {
   background-color: #5b6670;
-  height: 3em;
+  height: 3.25em;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -3303,11 +3303,11 @@ textarea.form--warning {
 
 .new-zanata .off-canvas__close {
   font-size: 1.5em;
-  line-height: 1em;
-  margin: 0.5em;
+  line-height: 1.08333em;
+  margin: 0.54167em;
   padding: 0;
-  width: 1em;
-  height: 1em;
+  width: 1.08333em;
+  height: 1.08333em;
   border-radius: 50%;
   background-color: #8e99a3;
   color: #5b6670;
@@ -3349,14 +3349,14 @@ textarea.form--warning {
   letter-spacing: normal;
 }
 .new-zanata .tabs__nav a {
-  padding: 0.75em;
+  padding: 0.8125em;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  min-width: 3em;
+  min-width: 3.25em;
   text-align: center;
   font-weight: 600;
 }
@@ -3381,15 +3381,15 @@ textarea.form--warning {
   position: relative;
 }
 .new-zanata .tabs--accent .tabs__nav a {
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 .new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .i--huge {
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 .new-zanata .tabs--accent .tabs__nav a .i--large {
   font-size: 1.5em;
-  line-height: 1em;
+  line-height: 1.08333em;
 }
 .new-zanata .tabs--accent .tabs__nav a.is-active {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
@@ -3397,8 +3397,8 @@ textarea.form--warning {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
   position: relative;
-  padding-bottom: 0.9em;
-  margin-bottom: -0.15em;
+  padding-bottom: 0.975em;
+  margin-bottom: -0.1625em;
 }
 .new-zanata .tabs--accent .tabs__nav a.is-active:after {
   content: "";
@@ -3452,8 +3452,8 @@ textarea.form--warning {
 
 .new-zanata .progress-bar {
   background-color: #c6d2db;
-  height: 0.375em;
-  margin-bottom: 0.375em;
+  height: 0.40625em;
+  margin-bottom: 0.40625em;
   width: 100%;
   position: relative;
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -3462,7 +3462,7 @@ textarea.form--warning {
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .no-touch .new-zanata .progress-bar__expander:hover .progress-bar {
-  height: 0.75em;
+  height: 0.8125em;
   margin-bottom: 0;
 }
 .new-zanata .progress-bar__item, .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
@@ -3521,13 +3521,13 @@ textarea.form--warning {
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   position: relative;
   z-index: 10;
-  margin: 0 -0.375em;
+  margin: 0 -0.40625em;
 }
 .new-zanata .dropdown__toggle {
   position: relative;
   z-index: 12;
   display: block;
-  padding: 0.1875em 0.375em 0.1875em 0;
+  padding: 0.20313em 0.40625em 0.20313em 0;
   cursor: pointer;
   color: #4e9fdd;
   border: 1px solid transparent;
@@ -3540,8 +3540,8 @@ textarea.form--warning {
   border: 1px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .dropdown__container.is-active .dropdown__toggle {
-  margin: -0.1875em 0;
-  padding: 0.375em 0.375em 0.375em 0;
+  margin: -0.20313em 0;
+  padding: 0.40625em 0.40625em 0.40625em 0;
   color: #416988;
 }
 .new-zanata .dropdown:hover .dropdown__toggle {
@@ -3553,15 +3553,15 @@ textarea.form--warning {
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   font-size: 1.125em;
-  line-height: 1.33333em;
+  line-height: 1.44444em;
   position: relative;
   float: left;
-  padding: 0 0.33333em;
-  margin-top: 0.09em;
+  padding: 0 0.36111em;
+  margin-top: 0.0975em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .dropdown__toggle__icon {
-    padding: 0 0.16667em;
+    padding: 0 0.18056em;
   }
 }
 .new-zanata .dropdown.is-active .dropdown__toggle__icon {
@@ -3585,17 +3585,17 @@ textarea.form--warning {
   max-height: 0;
   width: 100%;
   float: left;
-  min-width: 6em;
-  -webkit-transform: translate3d(0, -1.5em, 0);
-  -moz-transform: translate3d(0, -1.5em, 0);
-  -ms-transform: translate3d(0, -1.5em, 0);
-  -o-transform: translate3d(0, -1.5em, 0);
-  transform: translate3d(0, -1.5em, 0);
+  min-width: 6.5em;
+  -webkit-transform: translate3d(0, -1.625em, 0);
+  -moz-transform: translate3d(0, -1.625em, 0);
+  -ms-transform: translate3d(0, -1.625em, 0);
+  -o-transform: translate3d(0, -1.625em, 0);
+  transform: translate3d(0, -1.625em, 0);
 }
 .new-zanata .dropdown__content > li {
   list-style: none;
   margin: 0;
-  padding: 0.375em 0.375em 0.375em 1.95em;
+  padding: 0.40625em 0.40625em 0.40625em 2.1125em;
 }
 .new-zanata .dropdown__content > li > a {
   display: block;
@@ -3603,7 +3603,7 @@ textarea.form--warning {
 }
 @media (min-width: 42.5em) {
   .new-zanata .dropdown__content > li {
-    padding-left: 1.5em;
+    padding-left: 1.625em;
   }
 }
 .new-zanata .dropdown__content .dropdown__header {
@@ -3630,7 +3630,7 @@ textarea.form--warning {
   transform: translate3d(0, 0, 0);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
-  max-height: 15em;
+  max-height: 16.25em;
 }
 .new-zanata .dropdown--right .dropdown__toggle__icon {
   float: right;
@@ -3642,25 +3642,25 @@ textarea.form--warning {
 }
 .new-zanata .dropdown--inline {
   display: inline-block;
-  margin-left: 0.1875em;
+  margin-left: 0.20313em;
 }
 .new-zanata .dropdown--inline .dropdown__toggle {
-  margin: -0.375em 0;
-  padding: 0.1875em 0 0.1875em 0.375em;
+  margin: -0.40625em 0;
+  padding: 0.20313em 0 0.20313em 0.40625em;
 }
 .new-zanata .dropdown--inline .dropdown__toggle__icon {
   float: none;
   padding: 0;
-  margin-left: -0.16667em;
+  margin-left: -0.18056em;
   margin-top: 0;
 }
 .new-zanata .dropdown--inline .dropdown__content {
   width: auto;
-  margin-top: 0.375em;
+  margin-top: 0.40625em;
 }
 .new-zanata .dropdown--inline .dropdown__content > li {
   white-space: nowrap;
-  padding: 0.375em 1.125em;
+  padding: 0.40625em 1.21875em;
 }
 
 /*
@@ -3675,7 +3675,7 @@ textarea.form--warning {
 */
 .new-zanata .label, .new-zanata .label--highlight {
   background-color: #d9e1e7;
-  padding: 0 0.375em;
+  padding: 0 0.40625em;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -3706,7 +3706,7 @@ textarea.form--warning {
 
 */
 .new-zanata .alert, .new-zanata .alert--danger {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.8125em;
   text-align: center;
   background-color: #f5f7f8;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -3716,12 +3716,12 @@ textarea.form--warning {
 .new-zanata .alert__heading {
   margin: 0;
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.625em;
   background-color: #4e9fdd;
   color: #f2f2f2;
 }
 .new-zanata .alert__content {
-  padding: 1.5em;
+  padding: 1.625em;
 }
 .new-zanata .alert__highlight {
   color: #4e9fdd;
@@ -3771,7 +3771,7 @@ textarea.form--warning {
 
 */
 .message, .message--danger, .message--warning, .message--unsure, .message--success, .message--highlight, .message--neutral {
-  padding: 0.375em 0.75em;
+  padding: 0.40625em 0.8125em;
 }
 
 /*
@@ -3780,11 +3780,11 @@ textarea.form--warning {
 
 */
 .new-zanata .badge, .new-zanata .badge--highlight, .new-zanata .badge--bl, .new-zanata .badge--br {
-  padding: 0 0.34286em;
+  padding: 0 0.37143em;
   background-color: #d9e1e7;
   font-weight: 400;
   font-size: 0.875em;
-  line-height: 1.28571em;
+  line-height: 1.39286em;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -3802,7 +3802,7 @@ textarea.form--warning {
 }
 .new-zanata .badge--inline {
   position: relative;
-  margin-top: 0.21429em;
+  margin-top: 0.23214em;
 }
 .new-zanata .badge--highlight {
   background-color: #4e9fdd;
@@ -3813,12 +3813,12 @@ textarea.form--warning {
   z-index: 2;
 }
 .new-zanata .badge--bl {
-  bottom: -0.21429em;
-  left: -0.21429em;
+  bottom: -0.23214em;
+  left: -0.23214em;
 }
 .new-zanata .badge--br {
-  bottom: -0.21429em;
-  right: -0.21429em;
+  bottom: -0.23214em;
+  right: -0.23214em;
 }
 
 /*
@@ -3850,7 +3850,7 @@ textarea.form--warning {
 .new-zanata .button--secondary,
 .new-zanata .button--danger,
 .new-zanata input.button--primary {
-  padding: 0.375em 0.75em;
+  padding: 0.40625em 0.8125em;
   border: none;
   background-color: white;
   color: #565d65;
@@ -3947,11 +3947,11 @@ textarea.form--warning {
 }
 .new-zanata .button--large {
   font-size: 1.25em;
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 .new-zanata .button--huge {
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.625em;
 }
 .new-zanata .button--full {
   display: block;
@@ -4079,7 +4079,7 @@ Used to show extra information on hover of the parent element
 
 .loader {
   display: block;
-  line-height: 2.25em;
+  line-height: 2.4375em;
   text-align: center;
 }
 .loader:hover {
@@ -4106,7 +4106,7 @@ Used to show extra information on hover of the parent element
   *display: inline;
 }
 .loader.is-active .loader__label {
-  padding-left: 2.25em;
+  padding-left: 2.4375em;
   color: #416988;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
@@ -4115,9 +4115,9 @@ Used to show extra information on hover of the parent element
 .loader__spinner {
   position: absolute;
   left: 0;
-  padding: 0.9375em 0;
-  width: 1.5em;
-  height: 1.5em;
+  padding: 1.01563em 0;
+  width: 1.625em;
+  height: 1.625em;
   text-align: center;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -4128,10 +4128,10 @@ Used to show extra information on hover of the parent element
 }
 .loader__spinner span {
   display: inline-block;
-  width: 0.375em;
-  height: 0.375em;
-  margin-left: 0.1875em;
-  border-radius: 1.5em;
+  width: 0.40625em;
+  height: 0.40625em;
+  margin-left: 0.20313em;
+  border-radius: 1.625em;
   background-color: #416988;
   -webkit-animation-name: loading;
   -webkit-animation-duration: .5s;
@@ -4182,25 +4182,25 @@ Used to show extra information on hover of the parent element
 */
 .new-zanata .header__title {
   font-size: 1.75em;
-  line-height: 1.71429em;
+  line-height: 1.85714em;
   padding: 0;
   margin: 0;
-  min-height: 1.71429em;
+  min-height: 1.85714em;
 }
 @media (min-width: 42.5em) {
   .new-zanata .header__title {
-    margin: 0 0 0 0.85714em;
+    margin: 0 0 0 0.92857em;
     float: left;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .header__title {
-    margin: 0 0 0 1.71429em;
+    margin: 0 0 0 1.85714em;
   }
 }
 .new-zanata .header__site-logo {
-  height: 1.07143em;
-  margin-bottom: -0.21429em;
+  height: 1.16071em;
+  margin-bottom: -0.23214em;
 }
 .new-zanata .header__site-logo.header--loading {
   -webkit-animation-name: rotate;
@@ -4227,18 +4227,18 @@ Used to show extra information on hover of the parent element
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  line-height: 3em;
+  line-height: 3.25em;
 }
 .new-zanata .header__login {
-  padding: 0.375em 0.375em 0.375em 0;
+  padding: 0.40625em 0.40625em 0.40625em 0;
 }
 @media (min-width: 42.5em) {
   .new-zanata .header__login {
-    padding: 0.375em 1.5em 0.375em 0;
+    padding: 0.40625em 1.625em 0.40625em 0;
   }
 }
 @media (min-width: 53.75em) {
   .new-zanata .header__login {
-    padding: 0.375em 3em 0.375em 0;
+    padding: 0.40625em 3.25em 0.40625em 0;
   }
 }

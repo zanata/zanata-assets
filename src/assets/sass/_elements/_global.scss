@@ -61,10 +61,13 @@ html.new-zanata,
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   // @include breakpoint($gte-medium) {
-  //   @include adjust-font-size-to($medium-font-size, 1);
+  //   font-size: $medium-font-size;
   // }
   // @include breakpoint($gte-large) {
-  //   @include adjust-font-size-to($large-font-size, 1);
+  //   font-size: $large-font-size;
+  // }
+  // @include breakpoint($gte-huge) {
+  //   font-size: $huge-font-size;
   // }
 }
 

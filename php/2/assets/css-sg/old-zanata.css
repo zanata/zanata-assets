@@ -117,7 +117,7 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
 
 .button, button, input[type="reset"], input[type="submit"], input[type="button"], input[type="submit"].projectSearchButton, a.button, a.action_link {
   border: none;
-  padding: 0.375em 0.75em;
+  padding: 0.40625em 0.8125em;
   background-color: white;
   color: #565d65;
   cursor: pointer;
@@ -172,7 +172,7 @@ input[readonly] {
   margin-top: 5px;
   min-height: 400px;
   min-width: 960px;
-  padding-bottom: 3em;
+  padding-bottom: 3.25em;
 }
 
 #main_body_content > h1, #main_body_content > h2 {
@@ -472,7 +472,7 @@ a.action_link {
   color: #f2f2f2;
   display: block;
   text-align: center;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.40625em;
 }
 a.action_link:hover {
   background-color: #2479bb;
@@ -550,7 +550,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding: 2.25em 0;
+  padding: 2.4375em 0;
 }
 
 .footer {
@@ -732,7 +732,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
 
 .rich-panel {
   border-radius: 2px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.625em;
   background-color: white;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -862,7 +862,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   color: #4e9fdd;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  padding: 0 0.375em;
+  padding: 0 0.40625em;
 }
 .rich-datascr-inact:hover {
   color: #2479bb;

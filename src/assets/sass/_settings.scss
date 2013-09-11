@@ -118,13 +118,14 @@ $font-family-heading               : 'Source Sans Pro', $font-sans-serif;
 // -------------------------
 
 $base-font-size                    : 16px; //? Makes the font size usable by some compass mixins (it needs px)
-$base-line-height                  : 24px; //? The measurement for vertical rhythm, converts to ems
+$base-line-height                  : 26px; //? The measurement for vertical rhythm, converts to ems
 $font-unit                         : 1em;
 $relative-font-sizing              : true;
 $round-to-nearest-half-line        : true; //? eg. if line-height is 24px, it's allowed to make it 12px if needed
 
 $medium-font-size                  : 16px;
 $large-font-size                   : 16px;
+$huge-font-size                    : 16px;
 
 //
 // Compass - Color
