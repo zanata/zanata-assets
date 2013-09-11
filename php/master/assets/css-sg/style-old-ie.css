@@ -1903,6 +1903,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .dropdown__content:hover,
 .new-zanata .bg--higher--hover:hover {
   background-color: #fdfdfd;
