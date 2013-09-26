@@ -1903,7 +1903,6 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
-.new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .dropdown__content:hover,
 .new-zanata .bg--higher--hover:hover {
   background-color: #fdfdfd;
@@ -2521,31 +2520,73 @@ Sub-headings can be used when placing a heading under another heading.
   background-color: #2d3338 !important;
 }
 
-input[type="text"].form--error,
-input[type="password"].form--error,
-input[type="date"].form--error,
-input[type="datetime"].form--error,
-input[type="email"].form--error,
-input[type="number"].form--error,
-input[type="search"].form--error,
-input[type="tel"].form--error,
-input[type="time"].form--error,
-input[type="url"].form--error,
-textarea.form--error {
+/*
+
+### Custom Form Components
+
+#### Form Errors
+
+```example
+<input type="text" class="form--error" value="form error"/>
+<input type="text" class="form--warning" value="form warning"/>
+```
+
+*/
+.new-zanata input[type="text"].form--error,
+.new-zanata input[type="password"].form--error,
+.new-zanata input[type="date"].form--error,
+.new-zanata input[type="datetime"].form--error,
+.new-zanata input[type="email"].form--error,
+.new-zanata input[type="number"].form--error,
+.new-zanata input[type="search"].form--error,
+.new-zanata input[type="tel"].form--error,
+.new-zanata input[type="time"].form--error,
+.new-zanata input[type="url"].form--error,
+.new-zanata textarea.form--error {
   border: 2px solid #e0575b !important;
 }
-input[type="text"].form--warning,
-input[type="password"].form--warning,
-input[type="date"].form--warning,
-input[type="datetime"].form--warning,
-input[type="email"].form--warning,
-input[type="number"].form--warning,
-input[type="search"].form--warning,
-input[type="tel"].form--warning,
-input[type="time"].form--warning,
-input[type="url"].form--warning,
-textarea.form--warning {
+.new-zanata input[type="text"].form--warning,
+.new-zanata input[type="password"].form--warning,
+.new-zanata input[type="date"].form--warning,
+.new-zanata input[type="datetime"].form--warning,
+.new-zanata input[type="email"].form--warning,
+.new-zanata input[type="number"].form--warning,
+.new-zanata input[type="search"].form--warning,
+.new-zanata input[type="tel"].form--warning,
+.new-zanata input[type="time"].form--warning,
+.new-zanata input[type="url"].form--warning,
+.new-zanata textarea.form--warning {
   border: 2px solid #e3824e;
+}
+
+/*
+
+#### Form Password Show/Hide
+
+Keep focus while showing and hiding a password field
+
+```example
+<div class="form__password js-form-password">
+  <input id="password" class="js-form-password-input form__input" name="password" type="password">
+  <a href="#" class="form__toggle js-form-password-toggle">Show</a>
+</div>
+```
+
+*/
+.new-zanata .form__password {
+  position: relative;
+}
+.new-zanata .form__password .form__input {
+  padding-right: 3.25em;
+}
+.new-zanata .form__password .form__toggle {
+  font-size: 0.875em;
+  line-height: 2.78571em;
+  position: absolute;
+  top: 0;
+  right: 0.92857em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .off-canvas__outer {

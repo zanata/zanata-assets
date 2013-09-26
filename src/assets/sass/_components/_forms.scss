@@ -1,3 +1,19 @@
+/*
+
+### Custom Form Components
+
+#### Form Errors
+
+```example
+<input type="text" class="form--error" value="form error"/>
+<input type="text" class="form--warning" value="form warning"/>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -15,4 +31,41 @@ textarea {
   &.form--warning {
     border: 2px solid $color-warning;
   }
+}
+
+}
+
+/*
+
+#### Form Password Show/Hide
+
+Keep focus while showing and hiding a password field
+
+```example
+<div class="form__password js-form-password">
+  <input id="password" class="js-form-password-input form__input" name="password" type="password">
+  <a href="#" class="form__toggle js-form-password-toggle">Show</a>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.form__password {
+  position: relative;
+  .form__input {
+    padding-right: rhythm(2);
+  }
+  .form__toggle {
+    @include adjust-font-size-to(14px, 1.5);
+    position: absolute;
+    top: 0;
+    right: rhythm(.5, 14px);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
 }

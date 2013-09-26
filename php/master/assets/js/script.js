@@ -1,4 +1,4 @@
-/*! zanata-proto - v0.1.0 - 2013-09-11
+/*! zanata-proto - v0.1.0 - 2013-09-26
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Luke Brooker; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07
@@ -2383,6 +2383,28 @@ $(function() {
   $(document).bind('click', collapseActiveDropdowns);
   $('.dropdown__toggle').bind('click', toggleThisCollapseOthers);
 
+});
+
+$(function () {
+  $('.js-form-password-toggle').on('click', function(e) {
+    var $passwordInput = $(this).parents('.js-form-password').find('.js-form-password-input').focus();
+    e.preventDefault();
+    if ($passwordInput.attr('type') === 'password') {
+      $passwordInput.attr({
+        'type': 'text',
+        'autocapitalize': 'off',
+        'autocomplete': 'off',
+        'autocorrect': 'off',
+        'spellcheck': 'false'
+      });
+      $(this).text('Hide');
+    }
+    else {
+      $passwordInput.attr('type', 'password');
+      $(this).text('Show');
+    }
+    $passwordInput.focus();
+  });
 });
 
 $(function () {

@@ -101,13 +101,15 @@
             <label for="email">Email</label>
             <input id="email" name="email" type="email" placeholder="email@example.com">
             <label for="password" class="l--push-top-half">Password</label>
-            <input id="password" name="password" type="password">
+            <div class="form__password js-form-password">
+              <input id="password" class="js-form-password-input form__input" name="password" type="password">
+              <a href="#" class="form__toggle js-form-password-toggle">Show</a>
+            </div>
+            <label class="is-hidden" for="human">If you are a human, do not fill in this field.</label>
+            <input class="is-hidden" id="human" name="human" type="text">
             <div class="l--push-top-1">
               <input type="submit" value="Sign Up" class="button--primary">  <span class="l--push-h-quarter">or</span> <a href="/login">Log In</a>
             </div>
-            <p class="txt--meta l--push-top-half">
-              By clicking "Sign Up", you agree to our <a href="#" target="_blank">terms of service</a> and <a href="#" target="_blank">privacy policy</a>.
-            </p>
           </div>
         </form>
         <div class="l--push-top-half g__item w--5-12 w--1-m">
@@ -132,6 +134,9 @@
           </ul>
         </div>
       </div>
+      <p class="txt--meta l--push-top-1 txt--align-center">
+        By signing up for Zanata, you agree to our <a href="#" target="_blank">terms of service</a> and <a href="#" target="_blank">privacy policy</a>.
+      </p>
     </div>
   </div>
 </div>
