@@ -1122,6 +1122,11 @@ a.table_link span.nativeName, span.nativeName {
   font-style: italic;
 }
 
+.validation_options {
+  color: #595959;
+  font-size: 1em;
+}
+
 /* -----------------------  End project iteration CSS  -------------------------*/
 /* -----------------------  Project Iteration Files CSS  -----------------------------*/
 .translate_restriction_title {
