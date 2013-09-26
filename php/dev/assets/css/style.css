@@ -39,7 +39,7 @@
   padding: 0 0.8125em;
   background-color: rgba(0, 0, 0, 0.025);
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_placeholders\.scss}line{font-family:\0000328}}
   [class*="ph__color"] {
     line-height: 4.875em;
@@ -990,7 +990,7 @@ $max-site-width is assigned to this
     padding: 0 1.625em;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_l-layout\.scss}line{font-family:\0000386}}
   .new-zanata .l__wrapper {
     padding: 0 3.25em;
@@ -1717,7 +1717,7 @@ Only use them if it does not make sense to add this styling to another element/c
     margin-left: -1.625em;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_g-grid\.scss}line{font-family:\0000347}}
   .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
     margin-left: -3.25em;
@@ -1750,7 +1750,7 @@ Only use them if it does not make sense to add this styling to another element/c
     padding-left: 1.625em;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_g-grid\.scss}line{font-family:\0000370}}
   .new-zanata .g__item {
     padding-left: 3.25em;
@@ -1785,7 +1785,7 @@ Tight grids have all the properties of regular grids, but with half the spacing.
     margin-right: -0.40625em;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_g-grid\.scss}line{font-family:\00003110}}
   .new-zanata .g--tight {
     margin-left: -0.8125em;
@@ -1804,7 +1804,7 @@ Tight grids have all the properties of regular grids, but with half the spacing.
     padding-right: 0.40625em;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_g-grid\.scss}line{font-family:\00003122}}
   .new-zanata .g--tight > .g__item {
     padding-left: 0.8125em;
@@ -1838,7 +1838,7 @@ Tighter grids have all the properties of regular grids, but with a quarter the s
     margin-left: -0.40625em;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_g-grid\.scss}line{font-family:\00003158}}
   .new-zanata .g--tighter {
     margin-left: -0.8125em;
@@ -1854,7 +1854,7 @@ Tighter grids have all the properties of regular grids, but with a quarter the s
     padding-left: 0.40625em;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_g-grid\.scss}line{font-family:\00003167}}
   .new-zanata .g--tighter > .g__item {
     padding-left: 0.8125em;
@@ -2155,7 +2155,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
     width: 91.666%;
   }
 }
-@media (min-width: 42.5em) and (max-width: 53.6875em) {
+@media (min-width: 42.5em) and (max-width: 62.4375em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_w-widths\.scss}line{font-family:\0000312}}
   .new-zanata .w--1-m {
     width: 100%;
@@ -2253,7 +2253,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
     width: 91.666%;
   }
 }
-@media (min-width: 53.75em) and (max-width: 87.4375em) {
+@media (min-width: 62.5em) and (max-width: 87.4375em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_w-widths\.scss}line{font-family:\0000312}}
   .new-zanata .w--1-l {
     width: 100%;
@@ -2460,7 +2460,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
     display: none !important;
   }
 }
-@media (min-width: 42.5em) and (max-width: 53.6875em) {
+@media (min-width: 42.5em) and (max-width: 62.4375em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_is-states\.scss}line{font-family:\0000315}}
   .new-zanata .is-hidden--m {
     display: none !important;
@@ -2472,7 +2472,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
     display: none !important;
   }
 }
-@media (min-width: 53.75em) and (max-width: 87.4375em) {
+@media (min-width: 62.5em) and (max-width: 87.4375em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_is-states\.scss}line{font-family:\0000327}}
   .new-zanata .is-hidden--l {
     display: none !important;
@@ -4842,7 +4842,7 @@ Used to show extra information on hover of the parent element
     float: left;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_header\.scss}line{font-family:\0000322}}
   .new-zanata .header__title {
     margin: 0 0 0 1.85714em;
@@ -4892,7 +4892,7 @@ Used to show extra information on hover of the parent element
     padding: 0.40625em 1.625em 0.40625em 0;
   }
 }
-@media (min-width: 53.75em) {
+@media (min-width: 62.5em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_header\.scss}line{font-family:\0000353}}
   .new-zanata .header__login {
     padding: 0.40625em 3.25em 0.40625em 0;
