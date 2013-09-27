@@ -3056,31 +3056,21 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 
 */
-.new-zanata input[type="text"].form--error,
-.new-zanata input[type="password"].form--error,
-.new-zanata input[type="date"].form--error,
-.new-zanata input[type="datetime"].form--error,
-.new-zanata input[type="email"].form--error,
-.new-zanata input[type="number"].form--error,
-.new-zanata input[type="search"].form--error,
-.new-zanata input[type="tel"].form--error,
-.new-zanata input[type="time"].form--error,
-.new-zanata input[type="url"].form--error,
-.new-zanata textarea.form--error {
+.new-zanata .form__item {
+  margin-bottom: 0.8125em;
+}
+.new-zanata .form__item--error input,
+.new-zanata .form__item--error textarea, .new-zanata .form__item--warning input,
+.new-zanata .form__item--warning textarea {
+  margin-bottom: 0;
+}
+.new-zanata .form__item--error input,
+.new-zanata .form__item--error textarea {
   border: 2px solid #e0575b !important;
 }
-.new-zanata input[type="text"].form--warning,
-.new-zanata input[type="password"].form--warning,
-.new-zanata input[type="date"].form--warning,
-.new-zanata input[type="datetime"].form--warning,
-.new-zanata input[type="email"].form--warning,
-.new-zanata input[type="number"].form--warning,
-.new-zanata input[type="search"].form--warning,
-.new-zanata input[type="tel"].form--warning,
-.new-zanata input[type="time"].form--warning,
-.new-zanata input[type="url"].form--warning,
-.new-zanata textarea.form--warning {
-  border: 2px solid #e3824e;
+.new-zanata .form__item--warning input,
+.new-zanata .form__item--warning textarea {
+  border: 2px solid #e3824e !important;
 }
 
 /*

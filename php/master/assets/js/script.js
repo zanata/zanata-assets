@@ -1,4 +1,4 @@
-/*! zanata-proto - v0.1.0 - 2013-09-26
+/*! zanata-proto - v0.1.0 - 2013-09-27
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Luke Brooker; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07

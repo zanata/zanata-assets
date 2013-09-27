@@ -14,22 +14,27 @@
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea {
-  &.form--error {
+.form__item {
+  margin-bottom: rhythm(.5);
+}
+
+%form__item--alert {
+  margin-bottom: 0;
+}
+
+.form__item--error {
+  input,
+  textarea {
+    @extend %form__item--alert;
     border: 2px solid $color-danger !important;
   }
-  &.form--warning {
-    border: 2px solid $color-warning;
+}
+
+.form__item--warning {
+  input,
+  textarea {
+    @extend %form__item--alert;
+    border: 2px solid $color-warning !important;
   }
 }
 

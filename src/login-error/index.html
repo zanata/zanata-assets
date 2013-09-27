@@ -39,8 +39,10 @@ root: "../"
               <label for="password" class="l--float-left">Password</label>
               <span class="txt--meta l--float-right"><a href="#">Forgot password?</a></span>
             </div>
-            <input id="password" name="password" type="password" class="form--error l--push-all-0">
-            <div class="message--danger l--pad-h-half">Please enter a password</div>
+            <div class="form__item--error">
+              <input id="password" name="password" type="password">
+              <div class="message--danger">Please enter a password</div>
+            </div>
             <div class="l--push-top-half">
               <input type="submit" value="Log In" class="button--primary"> <span class="l--push-h-quarter">or</span> <a href="/signup">Sign Up</a>
             </div>
