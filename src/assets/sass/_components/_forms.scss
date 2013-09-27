@@ -23,6 +23,7 @@
 }
 
 .form__item--error {
+  @extend .form__item;
   input,
   textarea {
     @extend %form__item--alert;
@@ -31,6 +32,7 @@
 }
 
 .form__item--warning {
+  @extend .form__item;
   input,
   textarea {
     @extend %form__item--alert;

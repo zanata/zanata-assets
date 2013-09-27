@@ -2532,7 +2532,7 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 
 */
-.new-zanata .form__item {
+.new-zanata .form__item, .new-zanata .form__item--error, .new-zanata .form__item--warning {
   margin-bottom: 0.8125em;
 }
 .new-zanata .form__item--error input,
