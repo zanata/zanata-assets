@@ -845,6 +845,35 @@ These are components that can be utilised or are depended on by other components
 
 /*
 
+#### Constraints
+
+```
+<div class="ph__block l--constrain-small">
+  .l--constrain-small
+</div>
+
+<div class="ph__block l--constrain-medium">
+  .l--constrain-medium
+</div>
+
+<div class="ph__block l--constrain-large">
+  .l--constrain-large
+</div>
+```
+
+*/
+.new-zanata .l--constrain-small {
+  max-width: 29.25em;
+}
+.new-zanata .l--constrain-medium {
+  max-width: 52em;
+}
+.new-zanata .l--constrain-large {
+  max-width: 68.25em;
+}
+
+/*
+
 #### Wrapper
 
 $max-site-width is assigned to this
@@ -3674,4 +3703,12 @@ Used to show extra information on hover of the parent element
 }
 .new-zanata .header__login {
   padding: 0.40625em 0.40625em 0.40625em 0;
+}
+.new-zanata .header__logo-only {
+  text-align: center;
+  margin-top: 3.25em;
+}
+.new-zanata .header__logo-only .header__site-logo {
+  width: 6.5em;
+  height: 6.5em;
 }

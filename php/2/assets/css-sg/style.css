@@ -558,7 +558,7 @@ a:hover,
   padding: 0.20313em 0.40625em;
   text-align: left;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata th,
   .new-zanata td {
     padding: 0.40625em 0.8125em;
@@ -870,6 +870,68 @@ These are components that can be utilised or are depended on by other components
 
 /*
 
+#### Constraints
+
+```
+<div class="ph__block l--constrain-small">
+  .l--constrain-small
+</div>
+
+<div class="ph__block l--constrain-medium">
+  .l--constrain-medium
+</div>
+
+<div class="ph__block l--constrain-large">
+  .l--constrain-large
+</div>
+```
+
+*/
+.new-zanata .l--constrain-small {
+  max-width: 29.25em;
+}
+.new-zanata .l--constrain-medium {
+  max-width: 52em;
+}
+.new-zanata .l--constrain-large {
+  max-width: 68.25em;
+}
+@media (min-width: 39.375em) and (max-width: 62.4375em) {
+  .new-zanata .l--constrain-small-m {
+    max-width: 29.25em;
+  }
+  .new-zanata .l--constrain-medium-m {
+    max-width: 52em;
+  }
+  .new-zanata .l--constrain-large-m {
+    max-width: 68.25em;
+  }
+}
+@media (min-width: 62.5em) and (max-width: 87.4375em) {
+  .new-zanata .l--constrain-small-l {
+    max-width: 29.25em;
+  }
+  .new-zanata .l--constrain-medium-l {
+    max-width: 52em;
+  }
+  .new-zanata .l--constrain-large-l {
+    max-width: 68.25em;
+  }
+}
+@media (min-width: 87.5em) {
+  .new-zanata .l--constrain-small-h {
+    max-width: 29.25em;
+  }
+  .new-zanata .l--constrain-medium-h {
+    max-width: 52em;
+  }
+  .new-zanata .l--constrain-large-h {
+    max-width: 68.25em;
+  }
+}
+
+/*
+
 #### Wrapper
 
 $max-site-width is assigned to this
@@ -881,7 +943,7 @@ $max-site-width is assigned to this
   margin-right: auto;
   padding: 0 0.8125em;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .l__wrapper {
     padding: 0 1.625em;
   }
@@ -1534,7 +1596,7 @@ Only use them if it does not make sense to add this styling to another element/c
   display: table;
   clear: both;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
     margin-left: -1.625em;
   }
@@ -1562,7 +1624,7 @@ Only use them if it does not make sense to add this styling to another element/c
   letter-spacing: normal;
   *zoom: 1;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .g__item {
     padding-left: 1.625em;
   }
@@ -1593,7 +1655,7 @@ Tight grids have all the properties of regular grids, but with half the spacing.
   margin-left: -0.20313em;
   margin-right: -0.20313em;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .g--tight {
     margin-left: -0.40625em;
     margin-right: -0.40625em;
@@ -1609,7 +1671,7 @@ Tight grids have all the properties of regular grids, but with half the spacing.
   padding-left: 0.20313em;
   padding-right: 0.20313em;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .g--tight > .g__item {
     padding-left: 0.40625em;
     padding-right: 0.40625em;
@@ -1641,7 +1703,7 @@ Tighter grids have all the properties of regular grids, but with a quarter the s
 .new-zanata .g--tighter {
   margin-left: -0.20313em;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .g--tighter {
     margin-left: -0.40625em;
   }
@@ -1654,7 +1716,7 @@ Tighter grids have all the properties of regular grids, but with a quarter the s
 .new-zanata .g--tighter > .g__item {
   padding-left: 0.20313em;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .g--tighter > .g__item {
     padding-left: 0.40625em;
   }
@@ -1755,7 +1817,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   text-align: left;
 }
 
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .w--1 {
     width: 100%;
   }
@@ -1829,7 +1891,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
     width: 91.666%;
   }
 }
-@media (max-width: 42.4375em) {
+@media (max-width: 39.3125em) {
   .new-zanata .w--1-s {
     width: 100%;
   }
@@ -1903,7 +1965,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
     width: 91.666%;
   }
 }
-@media (min-width: 42.5em) and (max-width: 62.4375em) {
+@media (min-width: 39.375em) and (max-width: 62.4375em) {
   .new-zanata .w--1-m {
     width: 100%;
   }
@@ -2129,17 +2191,17 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .is-hidden {
   display: none !important;
 }
-@media (max-width: 42.4375em) {
+@media (max-width: 39.3125em) {
   .new-zanata .is-hidden--s {
     display: none !important;
   }
 }
-@media (min-width: 42.5em) and (max-width: 62.4375em) {
+@media (min-width: 39.375em) and (max-width: 62.4375em) {
   .new-zanata .is-hidden--m {
     display: none !important;
   }
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .is-hidden--m-up {
     display: none !important;
   }
@@ -2205,18 +2267,21 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .txt--capitalize {
   text-transform: capitalize;
 }
-@media (max-width: 42.4375em) {
+@media (max-width: 39.3125em) {
+  .new-zanata .txt--align-left-s,
   .new-zanata .txt--s-align-left {
     text-align: left;
   }
+  .new-zanata .txt--align-right-s,
   .new-zanata .txt--s-align-right {
     text-align: right;
   }
+  .new-zanata .txt--align-center-s,
   .new-zanata .txt--s-align-center {
     text-align: center;
   }
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .txt--align-left {
     text-align: left;
   }
@@ -2285,7 +2350,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .txt--hero strong {
   font-weight: 600;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .txt--hero {
     font-size: 1.75em;
     line-height: 1.39286em;
@@ -3001,7 +3066,7 @@ Sub-headings can be used when placing a heading under another heading.
   padding: 0;
   border-left: none;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .list--slat-horizontal > li.list__right {
     float: right;
   }
@@ -3591,7 +3656,7 @@ Keep focus while showing and hiding a password field
   padding: 0 0.36111em;
   margin-top: 0.0975em;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .dropdown__toggle__icon {
     padding: 0 0.18056em;
   }
@@ -3633,7 +3698,7 @@ Keep focus while showing and hiding a password field
   display: block;
   margin: 0;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .dropdown__content > li {
     padding-left: 1.625em;
   }
@@ -4219,7 +4284,7 @@ Used to show extra information on hover of the parent element
   margin: 0;
   min-height: 1.85714em;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .header__title {
     margin: 0 0 0 0.92857em;
     float: left;
@@ -4264,7 +4329,7 @@ Used to show extra information on hover of the parent element
 .new-zanata .header__login {
   padding: 0.40625em 0.40625em 0.40625em 0;
 }
-@media (min-width: 42.5em) {
+@media (min-width: 39.375em) {
   .new-zanata .header__login {
     padding: 0.40625em 1.625em 0.40625em 0;
   }
@@ -4273,4 +4338,12 @@ Used to show extra information on hover of the parent element
   .new-zanata .header__login {
     padding: 0.40625em 3.25em 0.40625em 0;
   }
+}
+.new-zanata .header__logo-only {
+  text-align: center;
+  margin-top: 3.25em;
+}
+.new-zanata .header__logo-only .header__site-logo {
+  width: 6.5em;
+  height: 6.5em;
 }

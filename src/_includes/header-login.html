@@ -1,27 +1,2 @@
 <div class="off-canvas__outer new-zanata">
-    <div class="off-canvas__target off-canvas--left" id="off-canvas--left" data-off-canvas="over">
-      <header class="off-canvas__header">
-        <a href="#off-canvas--left" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
-      </header>
-      <nav id="nav-main-side">
-        <ul class="list--slat list--block-links">
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}projects">Projects</a></li>
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups</a></li>
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}languagess">Languages</a></li>
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
-        </ul>
-      </nav>
-    </div>
     <div class="off-canvas__inner">
-      <header role="banner" class="bg--pop-highest txt--s-align-center l--clearfix">
-        <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
-        {% include title.html %}
-        <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half l--float-left">
-          <ul class="list--horizontal">
-            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}projects-old.html">Projects</a></li>
-            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups</a></li>
-            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Languages</a></li>
-            <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
-          </ul>
-        </nav>
-      </header>

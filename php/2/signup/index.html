@@ -46,47 +46,19 @@
 
 
 
-<div class="off-canvas__outer new-zanata">
-    <div class="off-canvas__target off-canvas--left" id="off-canvas--left" data-off-canvas="over">
-      <header class="off-canvas__header">
-        <a href="#off-canvas--left" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
-      </header>
-      <nav id="nav-main-side">
-        <ul class="list--slat list--block-links">
-          <li><a href="../projects">Projects</a></li>
-          <li><a href="../groups">Groups</a></li>
-          <li><a href="../languagess">Languages</a></li>
-          <li><a href="../help">Help</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="off-canvas__inner">
-      <header role="banner" class="bg--pop-highest txt--s-align-center l--clearfix">
-        <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
-        
-<h2 class="header__title heading--sub"><a href="/"><img class="header__site-logo" src="../logo.svg"> Zanata</a></h2>
-
-
-        <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half l--float-left">
-          <ul class="list--horizontal">
-            <li class="l--push-left-half"><a href="../projects-old.html">Projects</a></li>
-            <li class="l--push-left-half"><a href="../groups">Groups</a></li>
-            <li class="l--push-left-half"><a href="../languages">Languages</a></li>
-            <li class="l--push-left-half"><a href="../help">Help</a></li>
-          </ul>
-        </nav>
-      </header>
-
+      <div class="header__logo-only">
+        <a href="/"><img class="header__site-logo" alt="Zanata" src="../logo.svg"></a>
+      </div>
 
       <main role="main" class="l--pad-v-1">
         <div class="l__wrapper">
           <div class="g--centered">
-  <div class="g__item w--7-12 w--3-4-l w--2-3-m">
-    <div class="l--push-v-2">
+  <div class="g__item l--constrain-medium l--constrain-small-m">
+    <div class="l--push-v-1">
       <h1 class="l--push-all-0 beta">Sign Up<!-- <span class="heading--sub">with Zanata</span> --></h1>
       <div class="g">
         <form action="" class="l--push-top-half g__item w--7-12 w--1-m js-form-password-parent">
-          <h2 class="gamma heading--sub">with Zanata</h2>
+          <h2 class="gamma heading--sub">with your email address</h2>
           <div class="l--push-top-half l--pad-all-1 bg--pop-higher">
             <label for="name">Full Name</label>
             <input id="name" name="name" type="text" placeholder="Linus Torvalds">
@@ -101,13 +73,17 @@
             </div>
             <label class="is-hidden" for="human">If you are a human, do not fill in this field.</label>
             <input class="is-hidden" id="human" name="human" type="text">
-            <div class="l--push-top-1">
-              <input type="submit" value="Sign Up" class="button--primary">  <span class="l--push-h-quarter">or</span> <a href="/login">Log In</a>
+            <p class="txt--meta l--push-top-half">
+              By signing up for Zanata, you agree to our <a href="#" target="_blank">terms of service</a> and <a href="#" target="_blank">privacy policy</a>.
+            </p>
+            <div class="l--push-top-half">
+              <input type="submit" value="Sign Up" class="button--primary button--full">
+              <div class="l--push-top-half txt--align-center txt--align-center-s">Already have an account? <a href="/login">Log In</a></div>
             </div>
           </div>
         </form>
         <div class="l--push-top-half g__item w--5-12 w--1-m">
-          <h2 class="gamma heading--sub">or</h2>
+          <h2 class="gamma heading--sub">or sign up using</h2>
           <ul class="list--no-bullets">
             <li class="l--pad-top-half"><a href="#" class="button--full button--fedora">Fedora</a></li>
             <li class="l--pad-top-half"><a href="#" class="button--full button--google">Google</a></li>
@@ -116,10 +92,10 @@
               <form action="">
                 <label for="openid">Open ID</label>
                 <div class="g--tighter">
-                  <div class="g__item w--3-4">
+                  <div class="g__item w--3-4 w--3-4-s">
                     <input id="openid" type="url" value="http://">
                   </div>
-                  <div class="g__item w--1-4">
+                  <div class="g__item w--1-4 w--1-4-s">
                     <input type="submit" value="Go" class="button--full l--push-bottom-half">
                   </div>
                 </div>
@@ -128,9 +104,6 @@
           </ul>
         </div>
       </div>
-      <p class="txt--meta l--push-top-1 txt--align-center">
-        By signing up for Zanata, you agree to our <a href="#" target="_blank">terms of service</a> and <a href="#" target="_blank">privacy policy</a>.
-      </p>
     </div>
   </div>
 </div>

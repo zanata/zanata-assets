@@ -45,14 +45,17 @@ $text-mod    : #{$text-prefix}#{$mod};
 }
 
 @include breakpoint($lte-small) {
+  .#{$text-mod}align-left-s,
   .#{$text-mod}s-align-left {
     text-align: left;
   }
 
+  .#{$text-mod}align-right-s,
   .#{$text-mod}s-align-right {
     text-align: right;
   }
 
+  .#{$text-mod}align-center-s,
   .#{$text-mod}s-align-center {
     text-align: center;
   }

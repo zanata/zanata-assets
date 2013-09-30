@@ -1,6 +1,8 @@
 {% include head.html %}
 
-{% include header-login.html %}
+      <div class="header__logo-only">
+        <a href="/"><img class="header__site-logo" alt="Zanata" src="{% if page.root %}{{ page.root }}{% endif %}logo.svg"></a>
+      </div>
 
       <main role="main" class="l--pad-v-1">
         <div class="l__wrapper">

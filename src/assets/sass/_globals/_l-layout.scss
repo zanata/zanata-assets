@@ -74,6 +74,85 @@ $layout-spacing-sides           : top bottom left right           !default;
 
 /*
 
+#### Constraints
+
+```
+<div class="ph__block l--constrain-small">
+  .l--constrain-small
+</div>
+
+<div class="ph__block l--constrain-medium">
+  .l--constrain-medium
+</div>
+
+<div class="ph__block l--constrain-large">
+  .l--constrain-large
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.l--constrain-small {
+  max-width: rhythm(18);
+}
+
+.l--constrain-medium {
+  max-width: rhythm(32);
+}
+
+.l--constrain-large {
+  max-width: rhythm(42);
+}
+
+@include breakpoint($e-medium) {
+  .l--constrain-small-m {
+    max-width: rhythm(18);
+  }
+
+  .l--constrain-medium-m {
+    max-width: rhythm(32);
+  }
+
+  .l--constrain-large-m {
+    max-width: rhythm(42);
+  }
+}
+
+@include breakpoint($e-large) {
+  .l--constrain-small-l {
+    max-width: rhythm(18);
+  }
+
+  .l--constrain-medium-l {
+    max-width: rhythm(32);
+  }
+
+  .l--constrain-large-l {
+    max-width: rhythm(42);
+  }
+}
+
+@include breakpoint($gte-huge) {
+  .l--constrain-small-h {
+    max-width: rhythm(18);
+  }
+
+  .l--constrain-medium-h {
+    max-width: rhythm(32);
+  }
+
+  .l--constrain-large-h {
+    max-width: rhythm(42);
+  }
+}
+
+}
+
+/*
+
 #### Wrapper
 
 $max-site-width is assigned to this
