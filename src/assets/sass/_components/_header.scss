@@ -64,8 +64,22 @@
   text-align: center;
   margin-top: rhythm(2);
   .header__site-logo {
-    width: rhythm(4);
-    height: rhythm(4);
+    @extend .is-transition;
+    width: rhythm(3);
+    height: rhythm(3);
+  }
+  @include breakpoint($gte-medium) {
+    .header__site-logo {
+      width: rhythm(4);
+      height: rhythm(4);
+    }
+  }
+  @include breakpoint($gte-large) {
+    margin-top: rhythm(3);
+    .header__site-logo {
+      width: rhythm(5);
+      height: rhythm(5);
+    }
   }
 }
 

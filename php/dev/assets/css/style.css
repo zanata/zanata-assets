@@ -2574,7 +2574,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .no-touch .new-zanata .reveal__target {
+.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .no-touch .new-zanata .reveal__target, .new-zanata .header__logo-only .header__site-logo {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -4974,6 +4974,24 @@ Used to show extra information on hover of the parent element
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_header\.scss}line{font-family:\0000366}}
 .new-zanata .header__logo-only .header__site-logo {
-  width: 6.5em;
-  height: 6.5em;
+  width: 4.875em;
+  height: 4.875em;
+}
+@media (min-width: 39.375em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_header\.scss}line{font-family:\0000372}}
+  .new-zanata .header__logo-only .header__site-logo {
+    width: 6.5em;
+    height: 6.5em;
+  }
+}
+@media (min-width: 62.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_header\.scss}line{font-family:\0000363}}
+  .new-zanata .header__logo-only {
+    margin-top: 4.875em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_header\.scss}line{font-family:\0000379}}
+  .new-zanata .header__logo-only .header__site-logo {
+    width: 8.125em;
+    height: 8.125em;
+  }
 }
