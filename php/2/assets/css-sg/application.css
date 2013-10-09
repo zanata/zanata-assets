@@ -489,6 +489,11 @@ td.RejectedStateDecoration div div div {
   white-space: pre-wrap;
 }
 
+.translationContainer pre {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 /* TM and Glossary result*/
 .resultTable {
   width: 100%;

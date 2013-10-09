@@ -81,7 +81,7 @@ legend {
 
 label {
   @include adjust-font-size-to($form-label-font-size);
-  display: block;
+  display: inline-block;
   margin-bottom: rhythm($form-spacing / 2);
   color: $form-label-color;
   font-weight: $form-label-weight;
