@@ -405,6 +405,7 @@ td.RejectedStateDecoration div div div {
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
+  text-align: center;
 }
 .DocumentListTable td.documentCol:hover {
   color: #2479bb;
@@ -416,34 +417,27 @@ td.RejectedStateDecoration div div div {
 }
 
 .DocumentListTable td.statisticCol {
-  font-size: 14px;
   text-align: center;
   min-width: 130px;
 }
 
 .DocumentListTable td.translatedCol {
-  font-weight: bold;
-  font-size: 14px;
   color: #70a98b;
   text-align: center;
 }
 
 .DocumentListTable td.untranslatedCol {
-  font-weight: bold;
-  font-size: 14px;
   color: #416988;
   text-align: center;
 }
 
 .DocumentListTable td.remainingCol {
-  font-weight: bold;
-  font-size: 14px;
   color: #416988;
   text-align: center;
 }
 
 .DocumentListTable td.auditCol {
-  font-size: 12px;
+  font-size: 0.8em;
   text-align: center;
 }
 
@@ -915,6 +909,7 @@ a.downloadLink {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  display: table !important;
 }
 
 /**

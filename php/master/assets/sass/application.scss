@@ -453,6 +453,7 @@ td.RejectedStateDecoration div div div
   text-overflow:ellipsis;
   overflow:hidden;
   cursor:pointer;
+  text-align: center;
   &:hover {
     color: $color-link-hover;
   }
@@ -465,34 +466,27 @@ td.RejectedStateDecoration div div div
 
 
 .DocumentListTable td.statisticCol {
-  font-size:14px;
   text-align:center;
   min-width:130px;
 }
 
 .DocumentListTable td.translatedCol {
-  font-weight:bold;
-  font-size:14px;
   color: $color-success;
   text-align:center;
 }
 
 .DocumentListTable td.untranslatedCol {
-  font-weight:bold;
-  font-size:14px;
   color: $color-secondary;
   text-align:center;
 }
 
 .DocumentListTable td.remainingCol {
-  font-weight:bold;
-  font-size:14px;
   color: $color-secondary;
   text-align:center;
 }
 
 .DocumentListTable td.auditCol {
-  font-size:12px;
+  font-size:0.8em;
   text-align:center;
 }
 
@@ -1027,6 +1021,7 @@ a.downloadLink
 .DocumentListTable {
   background: $color-bg-light !important;
   @include box-shadow($default-box-shadow);
+  display: table !important;
 }
 
 @import "standard";
