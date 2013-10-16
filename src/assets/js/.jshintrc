@@ -25,7 +25,5 @@
   "proto": true,
   "sub": true,
 
-  "browser": true,
-
-  "onevar": true
+  "browser": true
 }
