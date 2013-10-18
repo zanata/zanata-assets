@@ -77,6 +77,14 @@ Removes some of the styling on the page-level splitters
   font-size: 20px;
 }
 
+.transUnitTable {
+  border-collapse: collapse;
+  /* setting width to 99% to leave some space from the scroll bar */
+  width: 99%;
+  margin: 0 0.1em;
+  table-layout: fixed;
+}
+
 .transUnitTable tr.selected {
   border-left: 2px dotted #4e9fdd;
   border-right: 2px dotted #4e9fdd;
@@ -98,6 +106,10 @@ Removes some of the styling on the page-level splitters
 
 .transUnitTable tr .fadeElement {
   opacity: 0;
+}
+
+.transUnitTable > tr > td {
+  border-bottom: 1px solid silver;
 }
 
 td.TableEditorCell {
