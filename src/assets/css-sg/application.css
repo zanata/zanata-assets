@@ -501,11 +501,6 @@ td.RejectedStateDecoration div div div {
 }
 
 /* TM and Glossary result*/
-.resultTable {
-  width: 100%;
-  table-layout: fixed;
-}
-
 .resultTable tbody td {
   vertical-align: top;
 }
@@ -522,41 +517,8 @@ td.RejectedStateDecoration div div div {
   background: #DFE3E7;
 }
 
-.resultTable .numTransCol {
-  width: 60px;
-}
-
-.resultTable .detailCol {
-  width: 60px;
-}
-
-.resultTable .similarityCol {
-  width: 60px;
-}
-
-.resultTable .actionCol {
-  width: 60px;
-}
-
-.resultTable .th {
-  color: #4e9fdd;
-  font-weight: bold;
-  font-size: 13px;
-  text-decoration: underline;
-}
-
-.resultTable .centered {
-  text-align: center;
-}
-
-.resultTable .details {
-  font-size: 16px;
-  color: #416988;
-  cursor: pointer;
-}
-
-.resultTable .details:hover {
-  color: #e0575b;
+.resultTable .smallCol {
+  width: 2em;
 }
 
 .tableMsg {

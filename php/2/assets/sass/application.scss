@@ -553,75 +553,27 @@ td.RejectedStateDecoration div div div
 }
 
 /* TM and Glossary result*/
-.resultTable
-{
-  width:100%;
-    table-layout: fixed;
-}
-.resultTable tbody td
-{
+
+.resultTable tbody td {
     vertical-align: top;
 }
 
-.resultTable .oddRow
-{
+.resultTable .oddRow {
   background:#F3F7FB;
 }
 
-.resultTable tr:first-child:hover
-{
+.resultTable tr:first-child:hover {
   background:none;
 }
 
-.resultTable tr:hover
-{
+.resultTable tr:hover {
   background:#DFE3E7;
 }
 
-.resultTable .numTransCol
-{
-  width:60px;
+.resultTable .smallCol {
+  width:2em;
 }
 
-.resultTable .detailCol
-{
-  width:60px;
-}
-
-.resultTable .similarityCol
-{
-  width:60px;
-}
-
-.resultTable .actionCol
-{
-  width:60px;
-}
-
-.resultTable .th
-{
-  color: $color-primary;
-  font-weight: bold;
-  font-size:13px;
-  text-decoration:underline;
-}
-
-.resultTable .centered
-{
-  text-align:center;
-}
-
-.resultTable .details
-{
-  font-size:16px;
-  color: $color-secondary;
-  cursor:pointer;
-}
-
-.resultTable .details:hover
-{
-  color:#e0575b;
-}
 
 .tableMsg
 {
