@@ -717,6 +717,87 @@ td.RejectedStateDecoration div div div
     color:#FFFFFF;
 }
 
+/* -------------- No fixed size dialog box ---------------*/
+.gwt-DialogBox-NoFixedSize
+{
+  background:#F2F2F2;
+  border:1px solid #C0C0C0;
+  border-radius:3px;
+  padding:5px;
+  box-shadow:1px 1px 3px #5C5C5C;
+}
+
+.gwt-DialogBox-NoFixedSize .Caption
+{
+  padding:4px;
+  margin-bottom:10px;
+  font-weight:bold;
+  font-size:1.1em;
+  border-radius:3px;
+  background:#575757;
+  color:#FFFFFF;
+  cursor:move;
+}
+
+.gwt-DialogBox-NoFixedSize .info span
+{
+  font-size:20px;
+  color: $color-secondary;
+}
+
+
+.gwt-DialogBox-NoFixedSize .message
+{
+  max-width:500px;
+  max-height:500px;
+  overflow:auto;
+}
+
+
+.gwt-DialogBox-NoFixedSize .buttonPanel
+{
+  margin-top:8px;
+}
+
+.gwt-DialogBox-NoFixedSize .buttonPanel td
+{
+  padding:2px;
+}
+
+.gwt-DialogBox-NoFixedSize .buttonPanel .button
+{
+  border-radius:3px;
+  width:60px;
+  text-align:center;
+}
+
+.gwt-DialogBox-NoFixedSize span.time_label
+{
+  font-size:12px;
+}
+
+.gwt-DialogBox-NoFixedSize span.severity_icon
+{
+  font-size:18px;
+}
+
+.gwt-DialogBox-NoFixedSize a.downloadLink
+{
+  color:#575757;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.gwt-DialogBox-NoFixedSize form
+{
+  margin:0;
+}
+
+.gwt-DialogBox-NoFixedSize .message_label
+{
+  padding:8px;
+}
+
 span.severity_info
 {
   color:#3090C7;
@@ -762,67 +843,54 @@ a.downloadLink
 /* -------------- Fixed size dialog box ---------------*/
 .gwt-DialogBox-fixedSize
 {
-  width:50em;
-  height:32em;
+  width:600px;
+  height:400px;
+  background:#F2F2F2;
+  border:1px solid #C0C0C0;
+  border-radius:3px;
+  padding:5px;
   box-shadow:1px 1px 3px #5C5C5C;
 }
 
-.gwt-DialogBox-fixedSize .Caption {
-  background: #fff;
-  padding: .75em;
-  cursor: default;
+.gwt-DialogBox-fixedSize .Caption
+{
+  padding:4px;
+  font-weight:bold;
+  font-size:1.1em;
+  border-radius:3px;
+  background:#575757;
+  color:#FFFFFF;
+  cursor:move;
 }
 
-.gwt-DialogBox-fixedSize .dialogContent {
+.gwt-DialogBox-fixedSize table
+{
+  width:100%;
 }
-.gwt-DialogBox-fixedSize .dialogMiddleCenter {
-  padding: .75em;
-  background: $color-secondary-10;
+
+.gwt-DialogBox-fixedSize .headerLabel
+{
+  padding-right:5px;
+  color: $color-secondary;
+  font-weight:bold;
 }
-.gwt-DialogBox-fixedSize .dialogBottomCenter {
-  display: none;
+
+.gwt-DialogBox-fixedSize .alignTop
+{
+  vertical-align:top;
 }
-.gwt-DialogBox-fixedSize .dialogMiddleLeft {
-  display: none;
+
+.gwt-DialogBox-fixedSize .lastModifiedLabel
+{
+  color: $color-secondary;
+  font-weight:bold;
 }
-.gwt-DialogBox-fixedSize .dialogMiddleRight {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogTopLeftInner {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogTopRightInner {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogBottomLeftInner {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogBottomRightInner {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogTopLeft {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogTopRight {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogBottomLeft {
-  display: none;
-}
-.gwt-DialogBox-fixedSize .dialogBottomRight {
-  display: none;
-}
-html .gwt-DialogBox-fixedSize .dialogTopLeftInner {
-  display: none;
-}
-html .gwt-DialogBox-fixedSize .dialogTopRightInner {
-  display: none;
-}
-html .gwt-DialogBox-fixedSize .dialogBottomLeftInner {
-  display: none;
-}
-html .gwt-DialogBox-fixedSize .dialogBottomRightInner {
-  display: none;
+
+.gwt-DialogBox-fixedSize .button
+{
+  width:70px;
+  margin:1px;
+  padding:2px;
 }
 
 .gwt-DialogBox-CloseButton
