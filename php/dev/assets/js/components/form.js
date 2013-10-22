@@ -1,6 +1,7 @@
 $(function () {
   $('.js-form-password-parent').on('click', '.js-form-password-toggle', function(e) {
-    var $passwordInput = $(this).parents('.js-form-password-parent').find('.js-form-password-input');
+    var $passwordInput = $(this).parents('.js-form-password-parent')
+                                .find('.js-form-password-input');
     e.preventDefault();
     if ($passwordInput.attr('type') === 'password') {
       $passwordInput.attr({

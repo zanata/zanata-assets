@@ -422,6 +422,9 @@ a:hover,
 .new-zanata .\3A active {
   color: #416988;
 }
+.new-zanata a.is-active {
+  cursor: default;
+}
 
 /*
 
@@ -2767,8 +2770,15 @@ Sub-headings can be used when placing a heading under another heading.
 #### Form Errors
 
 ```example
-<input type="text" class="form--error" value="form error"/>
-<input type="text" class="form--warning" value="form warning"/>
+<div class="form__item--error" >
+  <label for="error">Error example</label>
+  <input type="text" id="error" value="form error"/>
+</div>
+
+<div class="form__item--warning" >
+  <label for="warning">Warning example</label>
+  <input type="text" id="warning" value="form warning"/>
+</div>
 ```
 
 */
@@ -2933,9 +2943,9 @@ Keep focus while showing and hiding a password field
 .off-canvas__header {
   background-color: #5b6670;
   height: 3.25em;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 [data-off-canvas=over] .off-canvas__header {
@@ -3064,8 +3074,15 @@ Keep focus while showing and hiding a password field
   color: white;
 }
 
+/*
+
+### Tabs
+
+*/
 .new-zanata .tabs__nav {
   letter-spacing: -0.31em;
+  margin: 0;
+  padding: 0;
 }
 .new-zanata .tabs__nav li {
   display: -moz-inline-stack;
@@ -3076,6 +3093,10 @@ Keep focus while showing and hiding a password field
   *display: inline;
   letter-spacing: normal;
 }
+.new-zanata .tabs__nav li.is-active a {
+  color: #416988;
+  cursor: default;
+}
 .new-zanata .tabs__nav a {
   padding: 0.8125em;
   display: -moz-inline-stack;
@@ -3084,17 +3105,26 @@ Keep focus while showing and hiding a password field
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  min-width: 3.25em;
-  text-align: center;
   font-weight: 600;
 }
 .new-zanata .tabs__nav .tab__end {
   float: right;
 }
+.new-zanata .tabs__content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.new-zanata .tabs__content li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
 .new-zanata .tabs--lined .tabs__nav {
   border-bottom: 2px solid #d9e1e7;
 }
 .new-zanata .tabs--lined .tabs__nav a {
+  text-align: center;
   margin-bottom: -2px;
   border-bottom: 2px solid transparent;
 }
@@ -3109,7 +3139,9 @@ Keep focus while showing and hiding a password field
   position: relative;
 }
 .new-zanata .tabs--accent .tabs__nav a {
+  text-align: center;
   line-height: 1.625em;
+  min-width: 3.25em;
 }
 .new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .i--huge {
   font-size: 1em;
@@ -3153,6 +3185,60 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs--accent .tabs__content {
   z-index: 0;
+}
+
+/*
+
+#### Tabs Vertical
+
+```example
+<div class="tabs--vertical js-tabs">
+  <ul class="tabs__nav js-tabs-nav">
+    <li class="is-active"><a href="#tab-vertical-1"><i class="i i--language"></i> <span class="is-hidden--s">Tab 1</span></a></li>
+    <li><a href="#tab-vertical-2"><i class="i i--language"></i> <span class="is-hidden--s">Tab 2</span></a></li>
+    <li><a href="#tab-vertical-3"><i class="i i--language"></i> <span class="is-hidden--s">Tab 3</span></a></li>
+  </ul>
+  <ul class="tabs__content js-tabs-content">
+    <li class="is-active" id="tab-vertical-1">Tab content here, more tab content and maybe some more. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</li>
+    <li id="tab-vertical-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.Tab content here, more tab content and maybe some more.</li>
+    <li id="tab-vertical-3">Tab content here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. more tab content and maybe some more.</li>
+  </ul>
+</div>
+```
+
+*/
+.new-zanata .tabs--vertical .tabs__nav {
+  float: left;
+  width: 20%;
+}
+.new-zanata .tabs--vertical .tabs__nav li {
+  display: block;
+}
+.new-zanata .tabs--vertical .tabs__nav li.is-active {
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.new-zanata .tabs--vertical .tabs__nav a {
+  padding: 0.40625em 0.8125em;
+  display: block;
+}
+.new-zanata .tabs--vertical .tabs__content {
+  float: left;
+  width: 80%;
+}
+.new-zanata .tabs--vertical .tabs__content li {
+  display: none;
+}
+.new-zanata .tabs--vertical .tabs__content li.is-active {
+  -webkit-box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 0.8125em;
+  min-height: 7.3125em;
+  background-color: #fdfdfd;
 }
 
 /*
@@ -3432,9 +3518,9 @@ Keep focus while showing and hiding a password field
   margin-bottom: 0.8125em;
   text-align: center;
   background-color: #f5f7f8;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .new-zanata .alert__heading {
   margin: 0;
@@ -3586,9 +3672,9 @@ Keep focus while showing and hiding a password field
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -3668,9 +3754,9 @@ Keep focus while showing and hiding a password field
 .new-zanata input[type="submit"][disabled].is-active {
   background-color: #fdfdfd !important;
   color: #565d65 !important;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 .new-zanata .button--large {
   font-size: 1.25em;

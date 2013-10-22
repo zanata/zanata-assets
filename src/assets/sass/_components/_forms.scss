@@ -5,8 +5,15 @@
 #### Form Errors
 
 ```example
-<input type="text" class="form--error" value="form error"/>
-<input type="text" class="form--warning" value="form warning"/>
+<div class="form__item--error" >
+  <label for="error">Error example</label>
+  <input type="text" id="error" value="form error"/>
+</div>
+
+<div class="form__item--warning" >
+  <label for="warning">Warning example</label>
+  <input type="text" id="warning" value="form warning"/>
+</div>
 ```
 
 */

@@ -1,3 +1,8 @@
+/*
+
+### Tabs
+
+*/
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
@@ -8,15 +13,21 @@
 
 .tabs__nav {
   letter-spacing: -0.31em;
+  margin: 0;
+  padding: 0;
   li {
     @include inline-block;
     letter-spacing: normal;
+    &.is-active {
+      a {
+        color: $color-link-active;
+        cursor: default;
+      }
+    }
   }
   a {
     padding: rhythm(.5);
     @include inline-block;
-    min-width: rhythm(2);
-    text-align: center;
     font-weight: 600;
   }
   .tab__end {
@@ -24,10 +35,17 @@
   }
 }
 
+.tabs__content {
+  @include no-bullets;
+  margin: 0;
+  padding: 0;
+}
+
 .tabs--lined {
   .tabs__nav {
     border-bottom: 2px solid $color-secondary-20;
     a {
+      text-align: center;
       margin-bottom: -2px;
       border-bottom: 2px solid transparent;
     }
@@ -46,7 +64,9 @@
     z-index: 1;
     position: relative;
     a {
+      text-align: center;
       line-height: rhythm(1);
+      min-width: rhythm(2);
       .i {
         @include adjust-font-size-to(16px);
       }
@@ -83,6 +103,75 @@
   }
   .tabs__content {
     z-index: 0;
+  }
+}
+
+}
+
+/*
+
+#### Tabs Vertical
+
+```example
+<div class="tabs--vertical js-tabs">
+  <ul class="tabs__nav js-tabs-nav">
+    <li class="is-active"><a href="#tab-vertical-1"><i class="i i--language"></i> <span class="is-hidden--s">Tab 1</span></a></li>
+    <li><a href="#tab-vertical-2"><i class="i i--language"></i> <span class="is-hidden--s">Tab 2</span></a></li>
+    <li><a href="#tab-vertical-3"><i class="i i--language"></i> <span class="is-hidden--s">Tab 3</span></a></li>
+  </ul>
+  <ul class="tabs__content js-tabs-content">
+    <li class="is-active" id="tab-vertical-1">Tab content here, more tab content and maybe some more. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</li>
+    <li id="tab-vertical-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.Tab content here, more tab content and maybe some more.</li>
+    <li id="tab-vertical-3">Tab content here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. more tab content and maybe some more.</li>
+  </ul>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.tabs--vertical {
+  .tabs__nav {
+    float: left;
+    width: 20%;
+    li {
+      display: block;
+      &.is-active {
+        background-color: $color-bg-lighter;
+        @include box-shadow($default-box-shadow);
+      }
+    }
+    a {
+      padding: rhythm(.25) rhythm(.5);
+      display: block;
+    }
+  }
+  .tabs__content {
+    float: left;
+    width: 80%;
+    li {
+      display: none;
+      &.is-active {
+        @include box-shadow(2px 1px 2px 0 rgba($black, 0.1));
+        display: block;
+        padding: rhythm(.5);
+        min-height: rhythm(4.5);
+        background-color: $color-bg-lighter;
+      }
+    }
+  }
+  @include breakpoint($lte-small) {
+    .tabs__nav {
+      width: 10% !important;
+      a {
+        padding: rhythm(.25);
+      }
+    }
+    .tabs__content {
+      width: 90% !important;
+    }
   }
 }
 
