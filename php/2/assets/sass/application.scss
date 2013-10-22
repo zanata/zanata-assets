@@ -83,6 +83,15 @@ Removes some of the styling on the page-level splitters
   font-size:20px;
 }
 
+.transUnitTable {
+  border-collapse: collapse;
+  /* setting width to 99% to leave some space from the scroll bar */
+  width: 99%;
+  margin: 0 0.1em;
+  table-layout: fixed;
+}
+
+
 .transUnitTable tr.selected
 {
   border-left: 2px dotted $color-primary;
@@ -110,6 +119,10 @@ Removes some of the styling on the page-level splitters
 .transUnitTable tr .fadeElement
 {
   opacity:0;
+}
+
+.transUnitTable>tbody>tr>td {
+  border-bottom: 1px solid silver;
 }
 
 
@@ -540,75 +553,27 @@ td.RejectedStateDecoration div div div
 }
 
 /* TM and Glossary result*/
-.resultTable
-{
-  width:100%;
-    table-layout: fixed;
-}
-.resultTable tbody td
-{
+
+.resultTable tbody td {
     vertical-align: top;
 }
 
-.resultTable .oddRow
-{
+.resultTable .oddRow {
   background:#F3F7FB;
 }
 
-.resultTable tr:first-child:hover
-{
+.resultTable tr:first-child:hover {
   background:none;
 }
 
-.resultTable tr:hover
-{
+.resultTable tr:hover {
   background:#DFE3E7;
 }
 
-.resultTable .numTransCol
-{
-  width:60px;
+.resultTable .smallCol {
+  width:2em;
 }
 
-.resultTable .detailCol
-{
-  width:60px;
-}
-
-.resultTable .similarityCol
-{
-  width:60px;
-}
-
-.resultTable .actionCol
-{
-  width:60px;
-}
-
-.resultTable .th
-{
-  color: $color-primary;
-  font-weight: bold;
-  font-size:13px;
-  text-decoration:underline;
-}
-
-.resultTable .centered
-{
-  text-align:center;
-}
-
-.resultTable .details
-{
-  font-size:16px;
-  color: $color-secondary;
-  cursor:pointer;
-}
-
-.resultTable .details:hover
-{
-  color:#e0575b;
-}
 
 .tableMsg
 {
@@ -864,6 +829,14 @@ a.downloadLink
 
 .translatorEditorContainer > div:nth-of-type(2) {
   overflow:visible !important;
+}
+
+.l--scroll-auto {
+  overflow: auto;
+}
+
+.list--horizontal li {
+  vertical-align: middle;
 }
 
 

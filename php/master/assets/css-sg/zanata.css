@@ -145,8 +145,6 @@ input[type="submit"][disabled]:active {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -347,8 +345,6 @@ a.breadcrumbs_link:hover {
   margin-bottom: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -1272,8 +1268,6 @@ a.admin_link:hover {
   border: 1px solid #4e9fdd;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   padding: 5px;
   margin-bottom: 3px;
@@ -1339,7 +1333,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
   background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
   background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
-  background: linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
   /* Text (previously on the a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1359,7 +1353,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, white 0%, #dddddd 100%);
   background: -o-linear-gradient(top, white 0%, #dddddd 100%);
   background: -ms-linear-gradient(top, white 0%, #dddddd 100%);
-  background: linear-gradient(top, #ffffff 0%, #dddddd 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
 }
 
 .genericButton:active {
@@ -1370,7 +1364,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #dddddd 0%, white 100%);
   background: -o-linear-gradient(top, #dddddd 0%, white 100%);
   background: -ms-linear-gradient(top, #dddddd 0%, white 100%);
-  background: linear-gradient(top, #dddddd 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #dddddd 0%, #ffffff 100%);
 }
 
 .greenBtn {
@@ -1382,7 +1376,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #5dbb73 0%, #2d9047 100%);
   background: -o-linear-gradient(top, #5dbb73 0%, #2d9047 100%);
   background: -ms-linear-gradient(top, #5dbb73 0%, #2d9047 100%);
-  background: linear-gradient(top, #5dbb73 0%, #2d9047 100%);
+  background: linear-gradient(to bottom, #5dbb73 0%, #2d9047 100%);
   /* Text (previously on an a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1405,7 +1399,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #68ce80 0%, #3cae5a 100%);
   background: -o-linear-gradient(top, #68ce80 0%, #3cae5a 100%);
   background: -ms-linear-gradient(top, #68ce80 0%, #3cae5a 100%);
-  background: linear-gradient(top, #68ce80 0%, #3cae5a 100%);
+  background: linear-gradient(to bottom, #68ce80 0%, #3cae5a 100%);
 }
 
 .greenBtn:active {
@@ -1415,7 +1409,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #2d9047 0%, #5dbb73 100%);
   background: -o-linear-gradient(top, #2d9047 0%, #5dbb73 100%);
   background: -ms-linear-gradient(top, #2d9047 0%, #5dbb73 100%);
-  background: linear-gradient(top, #2d9047 0%, #5dbb73 100%);
+  background: linear-gradient(to bottom, #2d9047 0%, #5dbb73 100%);
 }
 
 .redBtn {
@@ -1427,7 +1421,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #ef6638 0%, #b62918 100%);
   background: -o-linear-gradient(top, #ef6638 0%, #b62918 100%);
   background: -ms-linear-gradient(top, #ef6638 0%, #b62918 100%);
-  background: linear-gradient(top, #ef6638 0%, #b62918 100%);
+  background: linear-gradient(to bottom, #ef6638 0%, #b62918 100%);
   /* Text (previously on an a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1449,7 +1443,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #ed754e 0%, #c93e23 100%);
   background: -o-linear-gradient(top, #ed754e 0%, #c93e23 100%);
   background: -ms-linear-gradient(top, #ed754e 0%, #c93e23 100%);
-  background: linear-gradient(top, #ed754e 0%, #c93e23 100%);
+  background: linear-gradient(to bottom, #ed754e 0%, #c93e23 100%);
 }
 
 .redBtn:active {
@@ -1459,7 +1453,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #c93e23 0%, #ed754e 100%);
   background: -o-linear-gradient(top, #c93e23 0%, #ed754e 100%);
   background: -ms-linear-gradient(top, #c93e23 0%, #ed754e 100%);
-  background: linear-gradient(top, #c93e23 0%, #ed754e 100%);
+  background: linear-gradient(to bottom, #c93e23 0%, #ed754e 100%);
 }
 
 .blueBtn {
@@ -1471,7 +1465,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #4770b0 0%, #153e7e 100%);
   background: -o-linear-gradient(top, #4770b0 0%, #153e7e 100%);
   background: -ms-linear-gradient(top, #4770b0 0%, #153e7e 100%);
-  background: linear-gradient(top, #4770b0 0%, #153e7e 100%);
+  background: linear-gradient(to bottom, #4770b0 0%, #153e7e 100%);
   /* Text (previously on an a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1493,7 +1487,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
   background: -o-linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
   background: -ms-linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
-  background: linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
+  background: linear-gradient(to bottom, #3d66a6 0%, #3d66a6 100%);
 }
 
 .blueBtn:active {
@@ -1503,7 +1497,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #153e7e 0%, #4770b0 100%);
   background: -o-linear-gradient(top, #153e7e 0%, #4770b0 100%);
   background: -ms-linear-gradient(top, #153e7e 0%, #4770b0 100%);
-  background: linear-gradient(top, #153e7e 0%, #4770b0 100%);
+  background: linear-gradient(to bottom, #153e7e 0%, #4770b0 100%);
 }
 
 /* Button sizes */
