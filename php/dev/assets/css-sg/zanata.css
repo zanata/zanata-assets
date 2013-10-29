@@ -121,7 +121,7 @@ input[disabled] {
 button[disabled]:hover, button[disabled]:active,
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:active {
-  background-color: #fdfdfd !important;
+  background-color: #fefefe !important;
   color: #565d65 !important;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
@@ -726,7 +726,7 @@ th.rf-dt-shdr-c {
 }
 
 .rf-dt tbody tr:hover {
-  background-color: #fdfdfd;
+  background-color: #fefefe;
 }
 
 /* Table cell */
@@ -851,7 +851,7 @@ div.rf-p {
   padding: 6px 16px;
 }
 .rf-tbp td.rf-tab-hdr-inact.rf-tab-hdr-top:hover {
-  background: #fdfdfd;
+  background: #fefefe;
 }
 .rf-tbp div.rf-tab-cnt {
   border: none;
@@ -1107,7 +1107,7 @@ a.version_link:hover {
 }
 
 .highlighted_datatable_row {
-  background-color: #fdfdfd;
+  background-color: #fefefe;
 }
 
 .maintainer {

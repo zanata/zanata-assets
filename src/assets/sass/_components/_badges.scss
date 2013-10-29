@@ -17,12 +17,12 @@ $badge-mod    : #{$badge-prefix}#{$mod};
 .new-zanata {
 
 .#{$badge-prefix} {
+  @include adjust-font-size-to(14px, 0.75);
+  @include border-radius($default-border-radius);
+  display: inline-block;
   padding: 0 rhythm(.2, 14px);
   background-color: $color-secondary-20;
   font-weight: 400;
-  @include adjust-font-size-to(14px, 0.75);
-  @include border-radius($default-border-radius);
-  @include inline-block;
 }
 
 .#{$badge-el}container {

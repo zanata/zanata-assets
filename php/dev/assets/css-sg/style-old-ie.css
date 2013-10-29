@@ -181,6 +181,7 @@ html.new-zanata,
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  min-width: 20em;
 }
 
 body.new-zanata,
@@ -240,7 +241,7 @@ Used to section content and create hierarchy
 .new-zanata h1,
 .new-zanata .alpha {
   font-size: 2.25em;
-  line-height: 1.44444em;
+  line-height: 1.08333em;
 }
 .new-zanata h1 {
   margin-bottom: 0.36111em;
@@ -421,9 +422,6 @@ a:hover,
 .new-zanata a.is-active,
 .new-zanata .\3A active {
   color: #416988;
-}
-.new-zanata a.is-active {
-  cursor: default;
 }
 
 /*
@@ -721,7 +719,7 @@ a:hover,
   height: 2.4375em;
   width: 100%;
   border: 1px solid #c6d2db;
-  background-color: #fdfdfd;
+  background-color: #fefefe;
   color: #333333;
   margin: 0 0 0.8125em;
 }
@@ -831,14 +829,19 @@ These are components that can be utilised or are depended on by other components
 </div>
 
 */
-.new-zanata .l--clearfix {
+.new-zanata .l--clearfix,
+.new-zanata .l--cf {
   overflow: hidden;
   *zoom: 1;
 }
-.new-zanata .l--clearfix-overflow {
+.new-zanata .l--clearfix-overflow,
+.new-zanata .l--cf-of,
+.new-zanata .media {
   *zoom: 1;
 }
-.new-zanata .l--clearfix-overflow:after {
+.new-zanata .l--clearfix-overflow:after,
+.new-zanata .l--cf-of:after,
+.new-zanata .media:after {
   content: "";
   display: table;
   clear: both;
@@ -886,7 +889,7 @@ These are components that can be utilised or are depended on by other components
 
 */
 .new-zanata .l--constrain-small {
-  max-width: 29.25em;
+  max-width: 24.375em;
 }
 .new-zanata .l--constrain-medium {
   max-width: 52em;
@@ -895,13 +898,51 @@ These are components that can be utilised or are depended on by other components
   max-width: 68.25em;
 }
 .new-zanata .l--constrain-small-l {
-  max-width: 29.25em;
+  max-width: 24.375em;
 }
 .new-zanata .l--constrain-medium-l {
   max-width: 52em;
 }
 .new-zanata .l--constrain-large-l {
   max-width: 68.25em;
+}
+
+/*
+
+#### Limits
+
+```
+<div class="ph__block l--limit-small">
+  .l--limit-small
+</div>
+
+<div class="ph__block l--limit-medium">
+  .l--limit-medium
+</div>
+
+<div class="ph__block l--limit-large">
+  .l--limit-large
+</div>
+```
+
+*/
+.new-zanata .l--limit-small {
+  min-width: 24.375em;
+}
+.new-zanata .l--limit-medium {
+  min-width: 52em;
+}
+.new-zanata .l--limit-large {
+  min-width: 68.25em;
+}
+.new-zanata .l--limit-small-l {
+  min-width: 24.375em;
+}
+.new-zanata .l--limit-medium-l {
+  min-width: 52em;
+}
+.new-zanata .l--limit-large-l {
+  min-width: 68.25em;
 }
 
 /*
@@ -1550,7 +1591,7 @@ Only use them if it does not make sense to add this styling to another element/c
 ```
 
 */
-.new-zanata .g, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
+.new-zanata .g, .new-zanata .g--fit, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
   *zoom: 1;
   margin: 0;
   margin-left: -0.8125em;
@@ -1560,12 +1601,12 @@ Only use them if it does not make sense to add this styling to another element/c
   margin-left: -1.625em;
   margin-left: -3.25em;
 }
-.new-zanata .g:after, .new-zanata .g--tight:after, .new-zanata .g--tighter:after, .new-zanata .g--collapsed:after, .new-zanata .g--rev:after, .new-zanata .g--right:after, .new-zanata .g--centered:after {
+.new-zanata .g:after, .new-zanata .g--fit:after, .new-zanata .g--tight:after, .new-zanata .g--tighter:after, .new-zanata .g--collapsed:after, .new-zanata .g--rev:after, .new-zanata .g--right:after, .new-zanata .g--centered:after {
   content: "";
   display: table;
   clear: both;
 }
-.new-zanata .g > .g, .new-zanata .g--tight > .g, .new-zanata .g--tighter > .g, .new-zanata .g--collapsed > .g, .new-zanata .g--rev > .g, .new-zanata .g--right > .g, .new-zanata .g--centered > .g, .new-zanata .g > .g--tight, .new-zanata .g--tight > .g--tight, .new-zanata .g--tighter > .g--tight, .new-zanata .g--collapsed > .g--tight, .new-zanata .g--rev > .g--tight, .new-zanata .g--right > .g--tight, .new-zanata .g--centered > .g--tight, .new-zanata .g > .g--tighter, .new-zanata .g--tight > .g--tighter, .new-zanata .g--tighter > .g--tighter, .new-zanata .g--collapsed > .g--tighter, .new-zanata .g--rev > .g--tighter, .new-zanata .g--right > .g--tighter, .new-zanata .g--centered > .g--tighter, .new-zanata .g > .g--collapsed, .new-zanata .g--tight > .g--collapsed, .new-zanata .g--tighter > .g--collapsed, .new-zanata .g--collapsed > .g--collapsed, .new-zanata .g--rev > .g--collapsed, .new-zanata .g--right > .g--collapsed, .new-zanata .g--centered > .g--collapsed, .new-zanata .g > .g--rev, .new-zanata .g--tight > .g--rev, .new-zanata .g--tighter > .g--rev, .new-zanata .g--collapsed > .g--rev, .new-zanata .g--rev > .g--rev, .new-zanata .g--right > .g--rev, .new-zanata .g--centered > .g--rev, .new-zanata .g > .g--right, .new-zanata .g--tight > .g--right, .new-zanata .g--tighter > .g--right, .new-zanata .g--collapsed > .g--right, .new-zanata .g--rev > .g--right, .new-zanata .g--right > .g--right, .new-zanata .g--centered > .g--right, .new-zanata .g > .g--centered, .new-zanata .g--tight > .g--centered, .new-zanata .g--tighter > .g--centered, .new-zanata .g--collapsed > .g--centered, .new-zanata .g--rev > .g--centered, .new-zanata .g--right > .g--centered, .new-zanata .g--centered > .g--centered {
+.new-zanata .g > .g, .new-zanata .g--fit > .g, .new-zanata .g--tight > .g, .new-zanata .g--tighter > .g, .new-zanata .g--collapsed > .g, .new-zanata .g--rev > .g, .new-zanata .g--right > .g, .new-zanata .g--centered > .g, .new-zanata .g > .g--fit, .new-zanata .g--fit > .g--fit, .new-zanata .g--tight > .g--fit, .new-zanata .g--tighter > .g--fit, .new-zanata .g--collapsed > .g--fit, .new-zanata .g--rev > .g--fit, .new-zanata .g--right > .g--fit, .new-zanata .g--centered > .g--fit, .new-zanata .g > .g--tight, .new-zanata .g--fit > .g--tight, .new-zanata .g--tight > .g--tight, .new-zanata .g--tighter > .g--tight, .new-zanata .g--collapsed > .g--tight, .new-zanata .g--rev > .g--tight, .new-zanata .g--right > .g--tight, .new-zanata .g--centered > .g--tight, .new-zanata .g > .g--tighter, .new-zanata .g--fit > .g--tighter, .new-zanata .g--tight > .g--tighter, .new-zanata .g--tighter > .g--tighter, .new-zanata .g--collapsed > .g--tighter, .new-zanata .g--rev > .g--tighter, .new-zanata .g--right > .g--tighter, .new-zanata .g--centered > .g--tighter, .new-zanata .g > .g--collapsed, .new-zanata .g--fit > .g--collapsed, .new-zanata .g--tight > .g--collapsed, .new-zanata .g--tighter > .g--collapsed, .new-zanata .g--collapsed > .g--collapsed, .new-zanata .g--rev > .g--collapsed, .new-zanata .g--right > .g--collapsed, .new-zanata .g--centered > .g--collapsed, .new-zanata .g > .g--rev, .new-zanata .g--fit > .g--rev, .new-zanata .g--tight > .g--rev, .new-zanata .g--tighter > .g--rev, .new-zanata .g--collapsed > .g--rev, .new-zanata .g--rev > .g--rev, .new-zanata .g--right > .g--rev, .new-zanata .g--centered > .g--rev, .new-zanata .g > .g--right, .new-zanata .g--fit > .g--right, .new-zanata .g--tight > .g--right, .new-zanata .g--tighter > .g--right, .new-zanata .g--collapsed > .g--right, .new-zanata .g--rev > .g--right, .new-zanata .g--right > .g--right, .new-zanata .g--centered > .g--right, .new-zanata .g > .g--centered, .new-zanata .g--fit > .g--centered, .new-zanata .g--tight > .g--centered, .new-zanata .g--tighter > .g--centered, .new-zanata .g--collapsed > .g--centered, .new-zanata .g--rev > .g--centered, .new-zanata .g--right > .g--centered, .new-zanata .g--centered > .g--centered {
   margin-left: 0;
 }
 .new-zanata .opera:-o-prefocus,
@@ -1588,6 +1629,26 @@ Only use them if it does not make sense to add this styling to another element/c
 
 /*
 
+#### Fit Grid
+
+Technically not a grid, but used when you want the grid spacing but no widths on grid items
+
+```
+<div class="l__wrapper">
+  <div class="g--tight g--fit">
+    <div class="g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+
+*/
+.g--fit > .g__item {
+  width: auto !important;
+}
+
+/*
+
 #### Tight Grid
 
 Tight grids have all the properties of regular grids, but with half the spacing.
@@ -1595,8 +1656,8 @@ Tight grids have all the properties of regular grids, but with half the spacing.
 ```
 <div class="l__wrapper">
   <div class="g--tight">
-    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
-    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
+    <div class="g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 </div>
 ```
@@ -2013,6 +2074,20 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 /*
 
+#### Text Mini
+
+```
+<p class="txt--mini">Mini text</p>
+```
+
+*/
+.new-zanata .txt--mini {
+  font-size: 0.875em;
+  line-height: 1.85714em;
+}
+
+/*
+
 #### Text Meta
 
 ```
@@ -2023,6 +2098,19 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .txt--meta {
   font-size: 0.875em;
   line-height: 1.85714em;
+  color: #7c96ac;
+}
+
+/*
+
+#### Text Understated
+
+```
+<p class="txt--understated">Understated text</p>
+```
+
+*/
+.new-zanata .txt--understated {
   color: #7c96ac;
 }
 
@@ -2039,7 +2127,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 /*
 
-#### Text State
+#### Text States
 
 ```
 <p class="txt--highlight">State Highlight</p>
@@ -2053,27 +2141,27 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--highlight, .new-zanata .message--highlight,
 .new-zanata .txt--state-highlight {
-  color: #4e9fdd;
+  color: #4e9fdd !important;
 }
 .new-zanata .txt--success, .new-zanata .message--success,
 .new-zanata .txt--state-success {
-  color: #70a98b;
+  color: #70a98b !important;
 }
 .new-zanata .txt--unsure, .new-zanata .message--unsure,
 .new-zanata .txt--state-unsure {
-  color: #e0c350;
+  color: #e0c350 !important;
 }
 .new-zanata .txt--warning, .new-zanata .message--warning,
 .new-zanata .txt--state-warning {
-  color: #e3824e;
+  color: #e3824e !important;
 }
 .new-zanata .txt--danger, .new-zanata .message--danger,
 .new-zanata .txt--state-danger {
-  color: #e0575b;
+  color: #e0575b !important;
 }
 .new-zanata .txt--neutral, .new-zanata .message--neutral,
 .new-zanata .txt--state-neutral {
-  color: #c6d2db;
+  color: #c6d2db !important;
 }
 
 .new-zanata .divide, .new-zanata .d--left, .new-zanata .d--bottom, .new-zanata .d--top {
@@ -2147,7 +2235,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .dropdown__content:hover,
 .new-zanata .bg--higher--hover:hover {
-  background-color: #fdfdfd;
+  background-color: #fefefe;
 }
 .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown.is-active .dropdown__content,
 .new-zanata .bg--highest:hover,
@@ -2237,6 +2325,41 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .bg--highlight, .new-zanata .message--highlight {
   background-color: #dbebf8;
+}
+
+/*
+
+### Box
+
+#### Box Round
+
+```
+<div class="bx--round">
+  <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
+</div>
+```
+
+*/
+.new-zanata .bx--round, .new-zanata .media--circle {
+  border-radius: 1000px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  overflow: hidden;
+}
+.new-zanata .bx--round img, .new-zanata .media--circle img {
+  display: block;
+}
+
+.bx--table {
+  display: table;
+}
+
+.bx--table__cell {
+  display: table-cell;
 }
 
 @-webkit-keyframes pulse {
@@ -2396,12 +2519,8 @@ All icons also need the class `.i` added to them.
 */
 .new-zanata .i, .new-zanata .i--large, .new-zanata .i--huge {
   position: relative;
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   text-transform: none;
   font-weight: normal;
   font-style: normal;
@@ -2410,9 +2529,6 @@ All icons also need the class `.i` added to them.
   line-height: 1em;
   speak: none;
   -webkit-font-smoothing: antialiased;
-}
-.list--horizontal .new-zanata .i, .list--horizontal .new-zanata .i--large, .list--horizontal .new-zanata .i--huge {
-  margin-top: -0.195em;
 }
 .new-zanata .i--large {
   font-size: 1.25em;
@@ -2445,24 +2561,13 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--notification:before {
   content: "\e004";
 }
-.new-zanata .i--clipboard,
-.new-zanata .i--project {
-  margin-top: -0.195em;
-}
 .new-zanata .i--clipboard:before,
 .new-zanata .i--project:before {
   content: "\e005";
 }
-.new-zanata .i--document-alt-fill,
-.new-zanata .i--document {
-  margin-top: -0.0975em;
-}
 .new-zanata .i--document-alt-fill:before,
 .new-zanata .i--document:before {
   content: "\e007";
-}
-.new-zanata .i--clock {
-  margin-top: -0.0975em;
 }
 .new-zanata .i--clock:before {
   content: "\e008";
@@ -2473,9 +2578,6 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--infinity:before,
 .new-zanata .i--all:before {
   content: "\e00a";
-}
-.new-zanata .i--maintain {
-  margin-top: -0.0975em;
 }
 .new-zanata .i--maintain:before {
   content: "\e01c";
@@ -2538,9 +2640,6 @@ All icons also need the class `.i` added to them.
 }
 .new-zanata .i--comment:before {
   content: "\e019";
-}
-.new-zanata .i--version {
-  margin-top: -0.195em;
 }
 .new-zanata .i--version:before {
   content: "\e01a";
@@ -2611,13 +2710,13 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--no-bullets, .new-zanata nav ul,
-.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .list--slat, .new-zanata .list--slat-horizontal {
+.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .list--slat, .new-zanata .list--slat-horizontal, .new-zanata .list--stats {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .new-zanata .list--no-bullets li, .new-zanata nav ul li,
-.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li {
+.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li, .new-zanata .list--stats li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -2761,6 +2860,22 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .txt--invert.list--block-links li > a:active {
   background-color: #2d3338 !important;
+}
+
+.new-zanata .list--stats .list__item {
+  display: table;
+  padding: 0.40625em 0.8125em;
+  min-height: 3.65625em;
+}
+.new-zanata .list--stats .list__item__info {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+.new-zanata .list--stats .list__item__stats {
+  margin-left: 0.8125em;
+  text-align: right;
+  color: #416988;
 }
 
 /*
@@ -2968,7 +3083,7 @@ Keep focus while showing and hiding a password field
   -webkit-backface-visibility: hidden;
 }
 [data-off-canvas=over].off-canvas--left, [data-off-canvas=over].off-canvas--right {
-  background-color: #fdfdfd;
+  background-color: #fefefe;
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -3080,7 +3195,7 @@ Keep focus while showing and hiding a password field
 
 */
 .new-zanata .tabs__nav {
-  letter-spacing: -0.31em;
+  letter-spacing: -0.2em;
   margin: 0;
   padding: 0;
 }
@@ -3098,7 +3213,7 @@ Keep focus while showing and hiding a password field
   cursor: default;
 }
 .new-zanata .tabs__nav a {
-  padding: 0.8125em;
+  padding: 0.40625em;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -3109,6 +3224,9 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs__nav .tab__end {
   float: right;
+}
+.new-zanata .tabs__nav a {
+  padding: 0.8125em;
 }
 .new-zanata .tabs__content {
   list-style: none;
@@ -3125,14 +3243,27 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs--lined .tabs__nav a {
   text-align: center;
+  padding: 0.40625em 0.60938em;
   margin-bottom: -2px;
   border-bottom: 2px solid transparent;
+  max-height: 2.4375em;
+}
+.new-zanata .tabs--lined .tabs__nav .i, .new-zanata .tabs--lined .tabs__nav .i--large, .new-zanata .tabs--lined .tabs__nav .i--huge {
+  line-height: 1.625em;
+  padding: 0 0 0.12188em;
 }
 .new-zanata .tabs--lined .tabs__nav a:hover {
   border-bottom-color: #c6d2db;
 }
 .new-zanata .tabs--lined .tabs__nav a.is-active {
-  border-bottom-color: #4e9fdd;
+  border-bottom-color: #416988;
+}
+.new-zanata .tabs--lined .tabs__nav a {
+  padding: 0.40625em 0.8125em;
+}
+.new-zanata .tabs--lined .tabs__nav a {
+  padding: 0.8125em;
+  max-height: 3.25em;
 }
 .new-zanata .tabs--accent .tabs__nav {
   z-index: 1;
@@ -3215,7 +3346,7 @@ Keep focus while showing and hiding a password field
   display: block;
 }
 .new-zanata .tabs--vertical .tabs__nav li.is-active {
-  background-color: #fdfdfd;
+  background-color: #fefefe;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3238,36 +3369,28 @@ Keep focus while showing and hiding a password field
   display: block;
   padding: 0.8125em;
   min-height: 7.3125em;
-  background-color: #fdfdfd;
+  background-color: #fefefe;
 }
 
 /*
 
 ### Media
 
-#### Media Circle
 
-```
-<div class="media--circle">
-  <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
-</div>
-```
 */
-.new-zanata .media--circle {
-  border-radius: 50%;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
+.new-zanata .media__body {
   overflow: hidden;
 }
-.new-zanata .media--circle img {
-  display: block;
+.new-zanata .media__item--left {
+  float: left;
+  margin-right: 1.625em;
+}
+.new-zanata .media__item--right {
+  float: right;
+  margin-left: 1.625em;
 }
 
-.new-zanata .progress-bar {
+.new-zanata .progress-bar, .new-zanata .progress-bar--large {
   background-color: #c6d2db;
   height: 0.40625em;
   margin-bottom: 0.40625em;
@@ -3278,14 +3401,22 @@ Keep focus while showing and hiding a password field
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
-.no-touch .new-zanata .progress-bar__expander:hover .progress-bar {
+.new-zanata .progress-bar--large {
   height: 0.8125em;
   margin-bottom: 0;
+}
+.no-touch .new-zanata .progress-bar__expander:hover .progress-bar, .no-touch .new-zanata .progress-bar__expander:hover .progress-bar--large {
+  -webkit-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
+  -moz-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
+  -ms-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
+  -o-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
+  transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
 }
 .new-zanata .progress-bar__item, .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
   position: absolute;
   height: 100%;
   left: 0;
+  z-index: 1;
 }
 .new-zanata .progress-bar__translated {
   background-color: #70a98b;
@@ -3357,8 +3488,11 @@ Keep focus while showing and hiding a password field
   border: 1px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .dropdown__container.is-active .dropdown__toggle {
-  margin: -0.20313em 0;
-  padding: 0.40625em 0.40625em 0.40625em 0;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  -o-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
   color: #416988;
 }
 .new-zanata .dropdown:hover .dropdown__toggle {
@@ -3451,11 +3585,11 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .dropdown--inline {
   display: inline-block;
-  margin-left: 0.20313em;
+  margin-left: 0.60938em;
 }
 .new-zanata .dropdown--inline .dropdown__toggle {
-  margin: -0.40625em 0;
-  padding: 0.20313em 0 0.20313em 0.40625em;
+  margin: -0.40625em;
+  padding: 0.20313em 0.40625em 0.20313em 0.8125em;
 }
 .new-zanata .dropdown--inline .dropdown__toggle__icon {
   float: none;
@@ -3465,11 +3599,16 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .dropdown--inline .dropdown__content {
   width: auto;
-  margin-top: 0.40625em;
+  margin: 0.40625em -0.40625em 0;
 }
 .new-zanata .dropdown--inline .dropdown__content > li {
   white-space: nowrap;
-  padding: 0.40625em 1.21875em;
+  padding: 0.40625em 1.625em 0.40625em 0.8125em;
+}
+.new-zanata .dropdown--small {
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  margin-top: 0.23214em;
 }
 
 /*
@@ -3589,9 +3728,6 @@ Keep focus while showing and hiding a password field
 
 */
 .new-zanata .badge, .new-zanata .badge--highlight, .new-zanata .badge--bl, .new-zanata .badge--br {
-  padding: 0 0.37143em;
-  background-color: #d9e1e7;
-  font-weight: 400;
   font-size: 0.875em;
   line-height: 1.39286em;
   -webkit-border-radius: 2px;
@@ -3599,12 +3735,10 @@ Keep focus while showing and hiding a password field
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
+  padding: 0 0.37143em;
+  background-color: #d9e1e7;
+  font-weight: 400;
 }
 .new-zanata .badge__container {
   position: relative;
@@ -3752,7 +3886,7 @@ Keep focus while showing and hiding a password field
 .new-zanata input[type="submit"][disabled]:focus,
 .new-zanata input[type="submit"][disabled]:active,
 .new-zanata input[type="submit"][disabled].is-active {
-  background-color: #fdfdfd !important;
+  background-color: #fefefe !important;
   color: #565d65 !important;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
@@ -3980,6 +4114,37 @@ Used to show extra information on hover of the parent element
   100% {
     background-color: rgba(65, 105, 136, 0.2);
   }
+}
+
+.stats, .stats--small, .stats--large {
+  color: #416988;
+}
+
+.stats--small {
+  font-size: 0.6875em;
+  line-height: 2.36364em;
+}
+
+.stats--large {
+  font-size: 1.0625em;
+  line-height: 1.52941em;
+  font-size: 1.3125em;
+  line-height: 1.2381em;
+}
+
+.stats__figure {
+  font-size: 2.875em;
+  display: block;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+.stats__unit {
+  font-size: 1.25em;
+  display: block;
+  white-space: nowrap;
+  font-weight: 300;
+  line-height: 1em;
 }
 
 /*

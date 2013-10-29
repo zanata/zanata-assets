@@ -18,13 +18,13 @@ $layout-spacing-sides           : top bottom left right           !default;
 
 #### Clearfix
 
-<div class="#{$placeholder-el}block #{$layout-mod}clearfix">
-  .#{$layout-mod}clearfix
+<div class="ph__block l--clearfix">
+  .l--clearfix
   (use overflow:hidden)
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}clearfix-overflow">
-  .#{$layout-mod}clearfix-overflow
+<div class="ph__block l--clearfix-overflow">
+  .l--clearfix-overflow
   (old style)
 </div>
 
@@ -33,11 +33,13 @@ $layout-spacing-sides           : top bottom left right           !default;
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$layout-mod}clearfix {
+.l--clearfix,
+.l--cf {
   @include clearfix;
 }
 
-.#{$layout-mod}clearfix-overflow {
+.l--clearfix-overflow,
+.l--cf-of {
   @include pie-clearfix;
 }
 
@@ -48,12 +50,12 @@ $layout-spacing-sides           : top bottom left right           !default;
 #### Floats
 
 ```
-<div class="#{$placeholder-el}block #{$layout-mod}float-left">
-  .#{$layout-mod}float-left
+<div class="ph__block l--float-left">
+  .l--float-left
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}float-right">
-  .#{$layout-mod}float-right
+<div class="ph__block l--float-right">
+  .l--float-right
 </div>
 ```
 
@@ -62,11 +64,11 @@ $layout-spacing-sides           : top bottom left right           !default;
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$layout-mod}float-left {
+.l--float-left {
   float: left !important;
 }
 
-.#{$layout-mod}float-right {
+.l--float-right {
   float: right !important;
 }
 
@@ -96,7 +98,7 @@ $layout-spacing-sides           : top bottom left right           !default;
 .new-zanata {
 
 .l--constrain-small {
-  max-width: rhythm(18);
+  max-width: rhythm(15);
 }
 
 .l--constrain-medium {
@@ -109,7 +111,7 @@ $layout-spacing-sides           : top bottom left right           !default;
 
 @include breakpoint($e-medium) {
   .l--constrain-small-m {
-    max-width: rhythm(18);
+    max-width: rhythm(15);
   }
 
   .l--constrain-medium-m {
@@ -123,7 +125,7 @@ $layout-spacing-sides           : top bottom left right           !default;
 
 @include breakpoint($e-large) {
   .l--constrain-small-l {
-    max-width: rhythm(18);
+    max-width: rhythm(15);
   }
 
   .l--constrain-medium-l {
@@ -137,7 +139,7 @@ $layout-spacing-sides           : top bottom left right           !default;
 
 @include breakpoint($gte-huge) {
   .l--constrain-small-h {
-    max-width: rhythm(18);
+    max-width: rhythm(15);
   }
 
   .l--constrain-medium-h {
@@ -146,6 +148,85 @@ $layout-spacing-sides           : top bottom left right           !default;
 
   .l--constrain-large-h {
     max-width: rhythm(42);
+  }
+}
+
+}
+
+/*
+
+#### Limits
+
+```
+<div class="ph__block l--limit-small">
+  .l--limit-small
+</div>
+
+<div class="ph__block l--limit-medium">
+  .l--limit-medium
+</div>
+
+<div class="ph__block l--limit-large">
+  .l--limit-large
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.l--limit-small {
+  min-width: rhythm(15);
+}
+
+.l--limit-medium {
+  min-width: rhythm(32);
+}
+
+.l--limit-large {
+  min-width: rhythm(42);
+}
+
+@include breakpoint($e-medium) {
+  .l--limit-small-m {
+    min-width: rhythm(15);
+  }
+
+  .l--limit-medium-m {
+    min-width: rhythm(32);
+  }
+
+  .l--limit-large-m {
+    min-width: rhythm(42);
+  }
+}
+
+@include breakpoint($e-large) {
+  .l--limit-small-l {
+    min-width: rhythm(15);
+  }
+
+  .l--limit-medium-l {
+    min-width: rhythm(32);
+  }
+
+  .l--limit-large-l {
+    min-width: rhythm(42);
+  }
+}
+
+@include breakpoint($gte-huge) {
+  .l--limit-small-h {
+    min-width: rhythm(15);
+  }
+
+  .l--limit-medium-h {
+    min-width: rhythm(32);
+  }
+
+  .l--limit-large-h {
+    min-width: rhythm(42);
   }
 }
 
@@ -193,40 +274,40 @@ Only use them if it does not make sense to add this styling to another element/c
   @each $side in  $layout-spacing-sides {
 /*
 ```
-<div class="#{$placeholder-el}block #{$layout-mod}push-#{$side}-#{$i-name}">
-  .#{$layout-mod}push-#{$side}-#{$i-name}
+<div class="ph__block l--push-#{$side}-#{$i-name}">
+  .l--push-#{$side}-#{$i-name}
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}pad-#{$side}-#{$i-name}">
-  .#{$layout-mod}pad-#{$side}-#{$i-name}
+<div class="ph__block l--pad-#{$side}-#{$i-name}">
+  .l--pad-#{$side}-#{$i-name}
 </div>
 ```
 */
   }
 /*
 ```
-<div class="#{$placeholder-el}block #{$layout-mod}push-v-#{$i-name}">
-  .#{$layout-mod}push-v-#{$i-name}
+<div class="ph__block l--push-v-#{$i-name}">
+  .l--push-v-#{$i-name}
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}pad-v-#{$i-name}">
-  .#{$layout-mod}pad-v-#{$i-name}
+<div class="ph__block l--pad-v-#{$i-name}">
+  .l--pad-v-#{$i-name}
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}push-h-#{$i-name}">
-  .#{$layout-mod}push-h-#{$i-name}
+<div class="ph__block l--push-h-#{$i-name}">
+  .l--push-h-#{$i-name}
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}pad-h-#{$i-name}">
-  .#{$layout-mod}pad-h-#{$i-name}
+<div class="ph__block l--pad-h-#{$i-name}">
+  .l--pad-h-#{$i-name}
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}push-all-#{$i-name}">
-  .#{$layout-mod}push-v-#{$i-name}
+<div class="ph__block l--push-all-#{$i-name}">
+  .l--push-v-#{$i-name}
 </div>
 
-<div class="#{$placeholder-el}block #{$layout-mod}pad-all-#{$i-name}">
-  .#{$layout-mod}pad-v-#{$i-name}
+<div class="ph__block l--pad-all-#{$i-name}">
+  .l--pad-v-#{$i-name}
 </div>
 ```
 */
@@ -238,33 +319,33 @@ Only use them if it does not make sense to add this styling to another element/c
 @each $i in  $layout-spacing-increments {
   $i-name: nth($layout-spacing-increment-names, index($layout-spacing-increments, $i));
   @each $side in  $layout-spacing-sides {
-    .#{$layout-mod}push-#{$side}-#{$i-name} {
+    .l--push-#{$side}-#{$i-name} {
       margin-#{$side}: rhythm($i) !important;
     }
-    .#{$layout-mod}pad-#{$side}-#{$i-name} {
+    .l--pad-#{$side}-#{$i-name} {
       padding-#{$side}: rhythm($i) !important;
     }
   }
-  .#{$layout-mod}push-v-#{$i-name} {
+  .l--push-v-#{$i-name} {
     margin-top: rhythm($i) !important;
     margin-bottom: rhythm($i) !important;
   }
-  .#{$layout-mod}pad-v-#{$i-name} {
+  .l--pad-v-#{$i-name} {
     padding-top: rhythm($i) !important;
     padding-bottom: rhythm($i) !important;
   }
-  .#{$layout-mod}push-h-#{$i-name} {
+  .l--push-h-#{$i-name} {
     margin-left: rhythm($i) !important;
     margin-right: rhythm($i) !important;
   }
-  .#{$layout-mod}pad-h-#{$i-name} {
+  .l--pad-h-#{$i-name} {
     padding-left: rhythm($i) !important;
     padding-right: rhythm($i) !important;
   }
-  .#{$layout-mod}push-all-#{$i-name} {
+  .l--push-all-#{$i-name} {
     margin: rhythm($i) !important;
   }
-  .#{$layout-mod}pad-all-#{$i-name} {
+  .l--pad-all-#{$i-name} {
     padding: rhythm($i) !important;
   }
 }

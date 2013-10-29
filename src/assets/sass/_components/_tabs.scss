@@ -12,7 +12,7 @@
 }
 
 .tabs__nav {
-  letter-spacing: -0.31em;
+  letter-spacing: -0.2em;
   margin: 0;
   padding: 0;
   li {
@@ -26,12 +26,17 @@
     }
   }
   a {
-    padding: rhythm(.5);
+    padding: rhythm(.25);
     @include inline-block;
     font-weight: 600;
   }
   .tab__end {
     float: right;
+  }
+  @include breakpoint($gte-medium) {
+    a {
+      padding: rhythm(.5);
+    }
   }
 }
 
@@ -46,14 +51,39 @@
     border-bottom: 2px solid $color-secondary-20;
     a {
       text-align: center;
+      padding: rhythm(.25) rhythm(.375);
       margin-bottom: -2px;
       border-bottom: 2px solid transparent;
+      max-height: rhythm(1.5);
+      // FIXME: Probably should find a better way to keep the tabs lined up no
+      // matter what content is included (e.g. icons, text etc)
+    }
+    .i {
+      line-height: rhythm(1);
+      padding: 0 0 rhythm(.075);
+      // FIXME: Probably should find a better way to keep the tabs lined up no
+      // matter what content is included (e.g. icons, text etc)
     }
     a:hover {
       border-bottom-color: $color-secondary-30;
     }
     a.is-active {
-      border-bottom-color: $color-link;
+      border-bottom-color: $color-secondary;
+    }
+  }
+  @include breakpoint($gte-medium) {
+    .tabs__nav {
+      a {
+        padding: rhythm(.25) rhythm(.5);
+      }
+    }
+  }
+  @include breakpoint($gte-large) {
+    .tabs__nav {
+      a {
+        padding: rhythm(.5);
+        max-height: rhythm(2);
+      }
     }
   }
 }

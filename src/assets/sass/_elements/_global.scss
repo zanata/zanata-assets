@@ -60,6 +60,7 @@ html.new-zanata,
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  min-width: (320px/$base-font-size)*1em;
   // @include breakpoint($gte-medium) {
   //   font-size: $medium-font-size;
   // }

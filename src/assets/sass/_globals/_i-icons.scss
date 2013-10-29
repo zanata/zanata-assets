@@ -1,11 +1,3 @@
-//
-// Icons Component - Default Settings
-// ----------------------------------
-// Change in _settings.scss
-
-$icon-prefix : "i"                      !default;
-$icon-mod    : "#{$icon-prefix}#{$mod}" !default;
-
 /*
 
 ### Icons
@@ -29,16 +21,17 @@ $icons: list, code, review, language, star, notification, project, document, clo
 
 @each $icon in $icons {
 /*
-<pre><i class="i #{$icon-mod}#{$icon}"></i> .#{$icon-mod}#{$icon}</pre>
+<pre><i class="i i--#{$icon}"></i> .i--#{$icon}</pre>
 */
 }
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$icon-prefix} {
+.i {
 	position: relative;
-	@include inline-block;
+	display: inline-block;
+	vertical-align: middle;
 	text-transform: none;
 	font-weight: normal;
 	font-style: normal;
@@ -47,140 +40,142 @@ $icons: list, code, review, language, star, notification, project, document, clo
 	line-height: 1em;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
-	.list--horizontal & {
-		margin-top: rhythm(-.12);
-	}
+	// .list--horizontal & {
+	// 	margin-top: rhythm(-.12);
+	// }
 }
 
-.#{$icon-mod}large {
-	@extend .#{$icon-prefix};
+.i--large {
+	@extend .i;
 	@include adjust-font-size-to(20px,1);
 }
 
-.#{$icon-mod}huge {
-	@extend .#{$icon-prefix};
+.i--huge {
+	@extend .i;
 	@include adjust-font-size-to(24px,1);
 }
 
 
-.#{$icon-mod}list:before,
-.#{$icon-mod}menu:before {
+.i--list:before,
+.i--menu:before {
 	content: "\f0ac";
 }
-.#{$icon-mod}code:before,
-.#{$icon-mod}source:before {
+.i--code:before,
+.i--source:before {
 	content: "\e000";
 }
-.#{$icon-mod}eye:before,
-.#{$icon-mod}review:before {
+.i--eye:before,
+.i--review:before {
 	content: "\e002";
 }
-.#{$icon-mod}globe:before,
-.#{$icon-mod}language:before {
-	content: "\e003";
+.i--globe,
+.i--language {
+	&:before {
+		content: "\e003";
+	}
 }
-.#{$icon-mod}star:before {
+.i--star:before {
 	content: "\e001";
 }
-.#{$icon-mod}bell:before,
-.#{$icon-mod}notification:before {
+.i--bell:before,
+.i--notification:before {
 	content: "\e004";
 }
-.#{$icon-mod}clipboard,
-.#{$icon-mod}project {
-	margin-top: rhythm(-.12);
+.i--clipboard,
+.i--project {
+	// margin-top: rhythm(-.12);
 	&:before {
 		content: "\e005";
 	}
 }
-.#{$icon-mod}document-alt-fill,
-.#{$icon-mod}document {
-	margin-top: rhythm(-.06);
+.i--document-alt-fill,
+.i--document {
+	// margin-top: rhythm(-.06);
 	&:before {
 		content: "\e007";
 	}
 }
-.#{$icon-mod}clock {
-	margin-top: rhythm(-.06);
+.i--clock {
+	// margin-top: rhythm(-.06);
 	&:before {
 		content: "\e008";
 	}
 }
-.#{$icon-mod}history:before {
+.i--history:before {
 	content: "\e009";
 }
-.#{$icon-mod}infinity:before,
-.#{$icon-mod}all:before {
+.i--infinity:before,
+.i--all:before {
 	content: "\e00a";
 }
-.#{$icon-mod}maintain {
-	margin-top: rhythm(-.06);
+.i--maintain {
+	// margin-top: rhythm(-.06);
 	&:before {
 		content: "\e01c";
 	}
 }
-.#{$icon-mod}network:before,
-.#{$icon-mod}translate:before {
+.i--network:before,
+.i--translate:before {
 	content: "\e00b";
 }
-.#{$icon-mod}network-up:before,
-.#{$icon-mod}translate-up:before {
+.i--network-up:before,
+.i--translate-up:before {
 	content: "\e01b";
 }
-.#{$icon-mod}users:before {
+.i--users:before {
 	content: "\e00c";
 }
-.#{$icon-mod}user:before {
+.i--user:before {
 	content: "\e00e";
 }
-.#{$icon-mod}cog:before,
-.#{$icon-mod}settings:before {
+.i--cog:before,
+.i--settings:before {
 	content: "\e00f";
 }
-.#{$icon-mod}plus:before,
-.#{$icon-mod}add:before {
+.i--plus:before,
+.i--add:before {
 	content: "\e011";
 }
-.#{$icon-mod}pencil:before,
-.#{$icon-mod}edit:before,
+.i--pencil:before,
+.i--edit:before,
  {
 	content: "\e014";
 }
-.#{$icon-mod}cross:before,
-.#{$icon-mod}remove:before,
-.#{$icon-mod}cancel:before {
+.i--cross:before,
+.i--remove:before,
+.i--cancel:before {
 	content: "\e006";
 }
-.#{$icon-mod}checkmark:before {
+.i--checkmark:before {
 	content: "\e00d";
 }
-.#{$icon-mod}arrow-left:before {
+.i--arrow-left:before {
 	content: "\e010";
 }
-.#{$icon-mod}arrow-down:before {
+.i--arrow-down:before {
 	content: "\e012";
 }
-.#{$icon-mod}arrow-up:before {
+.i--arrow-up:before {
 	content: "\e013";
 }
-.#{$icon-mod}arrow-right:before {
+.i--arrow-right:before {
 	content: "\e015";
 }
-.#{$icon-mod}star-2:before,
-.#{$icon-mod}star-outline:before {
+.i--star-2:before,
+.i--star-outline:before {
 	content: "\e016";
 }
-.#{$icon-mod}search:before {
+.i--search:before {
 	content: "\e017";
 }
-.#{$icon-mod}keyboard:before {
+.i--keyboard:before {
 	content: "\e018";
 }
-.#{$icon-mod}comment:before {
+.i--comment:before {
 	content: "\e019";
 }
-.#{$icon-mod}version {
-	margin-top: rhythm(-.12);
+.i--version {
+	// margin-top: rhythm(-.12);
 	&:before {
 		content: "\e01a";
 	}

@@ -2,25 +2,33 @@
 
 ### Media
 
-#### Media Circle
 
-```
-<div class="media--circle">
-  <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
-</div>
-```
 */
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.media--circle {
-  border-radius: 50%;
-  @include inline-block;
+.media {
+  @extend .l--cf-of;
+}
+
+.media__body {
   overflow: hidden;
-  img {
-    display: block;
-  }
+}
+
+.media__item--left {
+  float: left;
+  margin-right: rhythm(1);
+}
+
+.media__item--right {
+  float: right;
+  margin-left: rhythm(1);
+}
+
+// Deprecated
+.media--circle {
+  @extend .bx--round;
 }
 
 }

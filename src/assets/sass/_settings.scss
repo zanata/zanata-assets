@@ -80,7 +80,7 @@ $color-secondary-10                : #ecf0f3;
 
 $color-bg                          : #f0f2f4;
 $color-bg-lightest                 : $white;
-$color-bg-lighter                  : #fdfdfd;
+$color-bg-lighter                  : #fefefe;
 $color-bg-light                    : #f5f7f8;
 $color-bg-dark                     : shade($color-bg, 3%);
 $color-bg-darker                   : shade($color-bg, 6%);
@@ -162,9 +162,9 @@ $breakpoint-base-font-size         : false;
 // - These should not be left the same, adapt them to content
 
 $breakpoint-small                  : 0;
-$breakpoint-medium                 : 630px;
-$breakpoint-large                  : 1000px;
-$breakpoint-huge                   : 1400px;
+$breakpoint-medium                 : 740px;
+$breakpoint-large                  : 1270px;
+$breakpoint-huge                   : 1540px;
 $breakpoint-hi-res                 : 2 device-pixel-ratio;
 $breakpoint-portrait               : orientation portrait;
 $breakpoint-landscape              : orientation landscape;

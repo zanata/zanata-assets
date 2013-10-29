@@ -52,7 +52,7 @@ Used to section content and create hierarchy
 h1,
 .alpha {
   @extend %heading;
-  @include adjust-font-size-to($heading-h1-size);
+  @include adjust-font-size-to($heading-h1-size, 1.5);
 }
 
 h1 {

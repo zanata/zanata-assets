@@ -1,12 +1,3 @@
-//
-// Text Component - Default Settings
-// ---------------------------------
-// Change in _settings.scss
-
-$text-prefix : "txt";
-$text-el     : #{$text-prefix}#{$el};
-$text-mod    : #{$text-prefix}#{$mod};
-
 /*
 
 ### Text Modifiers
@@ -14,17 +5,17 @@ $text-mod    : #{$text-prefix}#{$mod};
 #### Text Transforms
 
 ```
-<p class="#{$text-mod}lowercase">Lowercase</p>
-<p class="#{$text-mod}uppercase">Uppercase</p>
-<p class="#{$text-mod}capitalize">capitalize</p>
+<p class="txt--lowercase">Lowercase</p>
+<p class="txt--uppercase">Uppercase</p>
+<p class="txt--capitalize">capitalize</p>
 ```
 
 #### Text Alignment
 
 ```
-<p class="#{$text-mod}align-left">Align Left</p>
-<p class="#{$text-mod}align-right">Align Right</p>
-<p class="#{$text-mod}align-center">Align Center</p>
+<p class="txt--align-left">Align Left</p>
+<p class="txt--align-right">Align Right</p>
+<p class="txt--align-center">Align Center</p>
 ```
 
 */
@@ -32,45 +23,45 @@ $text-mod    : #{$text-prefix}#{$mod};
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$text-mod}lowercase {
+.txt--lowercase {
   text-transform: lowercase;
 }
 
-.#{$text-mod}uppercase {
+.txt--uppercase {
   text-transform: uppercase;
 }
 
-.#{$text-mod}capitalize {
+.txt--capitalize {
   text-transform: capitalize;
 }
 
 @include breakpoint($lte-small) {
-  .#{$text-mod}align-left-s,
-  .#{$text-mod}s-align-left {
+  .txt--align-left-s,
+  .txt--s-align-left {
     text-align: left;
   }
 
-  .#{$text-mod}align-right-s,
-  .#{$text-mod}s-align-right {
+  .txt--align-right-s,
+  .txt--s-align-right {
     text-align: right;
   }
 
-  .#{$text-mod}align-center-s,
-  .#{$text-mod}s-align-center {
+  .txt--align-center-s,
+  .txt--s-align-center {
     text-align: center;
   }
 }
 
 @include breakpoint($gte-medium) {
-  .#{$text-mod}align-left {
+  .txt--align-left {
     text-align: left;
   }
 
-  .#{$text-mod}align-right {
+  .txt--align-right {
     text-align: right;
   }
 
-  .#{$text-mod}align-center {
+  .txt--align-center {
     text-align: center;
   }
 }
@@ -82,7 +73,7 @@ $text-mod    : #{$text-prefix}#{$mod};
 #### Text Invert
 
 ```
-<p class="#{$text-mod}invert">Invert text with <a href="#">a link</a></p>
+<p class="txt--invert">Invert text with <a href="#">a link</a></p>
 ```
 
 */
@@ -90,7 +81,7 @@ $text-mod    : #{$text-prefix}#{$mod};
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$text-mod}invert {
+.txt--invert {
   $invert-base-font: contrast-color($color-base-font);
   color: $invert-base-font;
   a {
@@ -112,7 +103,7 @@ $text-mod    : #{$text-prefix}#{$mod};
 #### Text Lead
 
 ```
-<p class="#{$text-mod}lead">Lead text</p>
+<p class="txt--lead">Lead text</p>
 ```
 
 */
@@ -120,7 +111,7 @@ $text-mod    : #{$text-prefix}#{$mod};
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$text-mod}lead {
+.txt--lead {
   @include adjust-font-size-to(20px);
   font-weight: 300;
   strong {
@@ -135,7 +126,7 @@ $text-mod    : #{$text-prefix}#{$mod};
 #### Text Hero
 
 ```
-<p class="#{$text-mod}hero">Hero text</p>
+<p class="txt--hero">Hero text</p>
 ```
 
 */
@@ -143,7 +134,7 @@ $text-mod    : #{$text-prefix}#{$mod};
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$text-mod}hero {
+.txt--hero {
   @include adjust-font-size-to(24px);
   font-weight: 300;
   strong {
@@ -158,10 +149,10 @@ $text-mod    : #{$text-prefix}#{$mod};
 
 /*
 
-#### Text Meta
+#### Text Mini
 
 ```
-<p class="#{$text-mod}meta">Meta text</p>
+<p class="txt--mini">Mini text</p>
 ```
 
 */
@@ -169,8 +160,46 @@ $text-mod    : #{$text-prefix}#{$mod};
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$text-mod}meta {
+.txt--mini {
   @include adjust-font-size-to(14px);
+}
+
+}
+
+/*
+
+#### Text Meta
+
+```
+<p class="txt--meta">Meta text</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--meta {
+  @include adjust-font-size-to(14px);
+  color: $color-secondary-70;
+}
+
+}
+
+/*
+
+#### Text Understated
+
+```
+<p class="txt--understated">Understated text</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--understated {
   color: $color-secondary-70;
 }
 
@@ -180,14 +209,14 @@ $text-mod    : #{$text-prefix}#{$mod};
 
 #### Text Important
 
-<p class="#{$text-mod}important">Important</p>
+<p class="txt--important">Important</p>
 
 */
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$text-mod}important {
+.txt--important {
   font-weight: 700;
 }
 
@@ -195,15 +224,15 @@ $text-mod    : #{$text-prefix}#{$mod};
 
 /*
 
-#### Text State
+#### Text States
 
 ```
-<p class="#{$text-mod}highlight">State Highlight</p>
-<p class="#{$text-mod}success">State Success</p>
-<p class="#{$text-mod}unsure">State Unsure</p>
-<p class="#{$text-mod}warning">State Warning</p>
-<p class="#{$text-mod}danger">State Danger</p>
-<p class="#{$text-mod}neutral">State Neutral</p>
+<p class="txt--highlight">State Highlight</p>
+<p class="txt--success">State Success</p>
+<p class="txt--unsure">State Unsure</p>
+<p class="txt--warning">State Warning</p>
+<p class="txt--danger">State Danger</p>
+<p class="txt--neutral">State Neutral</p>
 ```
 
 */
@@ -211,34 +240,34 @@ $text-mod    : #{$text-prefix}#{$mod};
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$text-mod}highlight,
-.#{$text-mod}state-highlight {
-  color: $color-highlight;
+.txt--highlight,
+.txt--state-highlight {
+  color: $color-highlight !important;
 }
 
-.#{$text-mod}success,
-.#{$text-mod}state-success {
-  color: $color-success;
+.txt--success,
+.txt--state-success {
+  color: $color-success !important;
 }
 
-.#{$text-mod}unsure,
-.#{$text-mod}state-unsure {
-  color: $color-unsure;
+.txt--unsure,
+.txt--state-unsure {
+  color: $color-unsure !important;
 }
 
-.#{$text-mod}warning,
-.#{$text-mod}state-warning {
-  color: $color-warning;
+.txt--warning,
+.txt--state-warning {
+  color: $color-warning !important;
 }
 
-.#{$text-mod}danger,
-.#{$text-mod}state-danger {
-  color: $color-danger;
+.txt--danger,
+.txt--state-danger {
+  color: $color-danger !important;
 }
 
-.#{$text-mod}neutral,
-.#{$text-mod}state-neutral {
-  color: $color-neutral;
+.txt--neutral,
+.txt--state-neutral {
+  color: $color-neutral !important;
 }
 
 }

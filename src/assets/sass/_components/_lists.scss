@@ -102,8 +102,8 @@ nav ol {
 <ul class="#{$list-mod}slat">
   <li>Standard</li>
   <li><a href="#">Link</a></li>
-  <li><span class="#{$list-el}title">Title</span></li>
-  <li><span class="#{$list-el}title"><a href="#">Title Link</a></span></li>
+  <li><span class="list__title">Title</span></li>
+  <li><span class="list__title"><a href="#">Title Link</a></span></li>
 </ul>
 ```
 
@@ -129,7 +129,7 @@ nav ol {
   }
 }
 
-.#{$list-el}title {
+.list__title {
   margin: 0;
   font-weight: 600;
   @include adjust-font-size-to($base-font-size);
@@ -145,8 +145,8 @@ nav ol {
 <ul class="#{$list-mod}slat-horizontal">
   <li>Standard</li>
   <li><a href="#">Link</a></li>
-  <li><span class="#{$list-el}title">Title</span></li>
-  <li><span class="#{$list-el}title"><a href="#">Title Link</a></span></li>
+  <li><span class="list__title">Title</span></li>
+  <li><span class="list__title"><a href="#">Title Link</a></span></li>
 </ul>
 ```
 
@@ -181,7 +181,7 @@ nav ol {
   }
 }
 
-.#{$list-el}title {
+.list__title {
   margin: 0;
   font-weight: 600;
   @include adjust-font-size-to($base-font-size);
@@ -226,6 +226,30 @@ nav ol {
   }
   &:active {
     background-color: darken($color-base-font, 10%) !important;
+  }
+}
+
+}
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list--stats {
+  @extend .list--no-bullets;
+  .list__item {
+    display: table;
+    padding: rhythm(.25) rhythm(.5);
+    min-height: rhythm(2.25);
+  }
+  .list__item__info {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .list__item__stats {
+    margin-left: rhythm(.5);
+    text-align: right;
+    color: $color-secondary;
   }
 }
 

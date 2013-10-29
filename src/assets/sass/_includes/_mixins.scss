@@ -23,7 +23,7 @@
 @mixin font-size($to-size, $from-size: $base-font-size) {
   @if not $relative-font-sizing and $from-size != $base-font-size {
     @warn "$relative-font-sizing is false but a relative font size was passed to adjust-font-size-to"; }
-  font-size: $font-unit / ($to-size / $from-size);
+  font-size: $font-unit * ($to-size / $from-size);
 }
 
 @mixin readable-line-length($characters: 70, $font-size: $base-font-size) {

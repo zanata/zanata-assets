@@ -14,27 +14,27 @@ $grid-padding : rhythm(2)                     !default;
 ```
 <div class="l__wrapper">
   <div class="g">
-    <div class="w--1 g__item"><div class="#{$placeholder-el}block">One Whole</div></div>
+    <div class="w--1 g__item"><div class="ph__block">One Whole</div></div>
   </div>
 
   <div class="g">
     <div class="w--5-6 g__item">
       <div class="g">
-        <div class="w--1-2 g__item"><div class="#{$placeholder-el}block">One Half of Five Sixths</div></div>
-        <div class="w--1-2 g__item"><div class="#{$placeholder-el}block">One Half of Five Sixths</div></div>
+        <div class="w--1-2 g__item"><div class="ph__block">One Half of Five Sixths</div></div>
+        <div class="w--1-2 g__item"><div class="ph__block">One Half of Five Sixths</div></div>
       </div>
     </div>
-    <div class="w--1-6 g__item"><div class="#{$placeholder-el}block">One Sixth</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 
   <div class="g">
-    <div class="w--2-3 g__item"><div class="#{$placeholder-el}block">Two Thirds</div></div>
-    <div class="w--1-3 g__item"><div class="#{$placeholder-el}block">One Third</div></div>
+    <div class="w--2-3 g__item"><div class="ph__block">Two Thirds</div></div>
+    <div class="w--1-3 g__item"><div class="ph__block">One Third</div></div>
   </div>
 
   <div class="g">
-    <div class="w--3-10 g__item"><div class="#{$placeholder-el}block">Three Tenths</div></div>
-    <div class="w--7-10 g__item"><div class="#{$placeholder-el}block">Seven Tenths</div></div>
+    <div class="w--3-10 g__item"><div class="ph__block">Three Tenths</div></div>
+    <div class="w--7-10 g__item"><div class="ph__block">Seven Tenths</div></div>
   </div>
 </div>
 ```
@@ -89,6 +89,30 @@ $grid-padding : rhythm(2)                     !default;
 
 /*
 
+#### Fit Grid
+
+Technically not a grid, but used when you want the grid spacing but no widths on grid items
+
+```
+<div class="l__wrapper">
+  <div class="g--tight g--fit">
+    <div class="g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+
+*/
+
+.g--fit {
+  @extend .g;
+  > .g__item {
+    width: auto !important; // This needs to override all other grids
+  }
+}
+
+/*
+
 #### Tight Grid
 
 Tight grids have all the properties of regular grids, but with half the spacing.
@@ -96,8 +120,8 @@ Tight grids have all the properties of regular grids, but with half the spacing.
 ```
 <div class="l__wrapper">
   <div class="g--tight">
-    <div class="w--5-6 g__item"><div class="#{$placeholder-el}block">Five Sixths</div></div>
-    <div class="w--1-6 g__item"><div class="#{$placeholder-el}block">One Sixth</div></div>
+    <div class="g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 </div>
 ```
@@ -144,8 +168,8 @@ Tighter grids have all the properties of regular grids, but with a quarter the s
 ```
 <div class="l__wrapper">
   <div class="g--tighter">
-    <div class="w--5-6 g__item"><div class="#{$placeholder-el}block">Five Sixths</div></div>
-    <div class="w--1-6 g__item"><div class="#{$placeholder-el}block">One Sixth</div></div>
+    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 </div>
 ```
@@ -186,8 +210,8 @@ Collapsed grids have all the properties of regular grids, minus any spacing.
 ```
 <div class="l__wrapper">
   <div class="g--collapsed">
-    <div class="w--5-6 g__item"><div class="#{$placeholder-el}block">Five Sixths</div></div>
-    <div class="w--1-6 g__item"><div class="#{$placeholder-el}block">One Sixth</div></div>
+    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 </div>
 ```
@@ -215,8 +239,8 @@ Collapsed grids have all the properties of regular grids, minus any spacing.
 ```
 <div class="l__wrapper">
   <div class="g--rev">
-    <div class="w--5-6 g__item"><div class="#{$placeholder-el}block">Five Sixths</div></div>
-    <div class="w--1-6 g__item"><div class="#{$placeholder-el}block">One Sixth</div></div>
+    <div class="w--5-6 g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 </div>
 ```
@@ -248,8 +272,8 @@ Align the entire grid to the right.
 ```
 <div class="l__wrapper">
   <div class="g--right">
-    <div class="w--3-6 g__item"><div class="#{$placeholder-el}block">Three Sixths</div></div>
-    <div class="w--1-6 g__item"><div class="#{$placeholder-el}block">One Sixth</div></div>
+    <div class="w--3-6 g__item"><div class="ph__block">Three Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 </div>
 ```
@@ -278,8 +302,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 <div class="l__wrapper">
   <div class="g--centered">
-    <div class="w--3-6 g__item"><div class="#{$placeholder-el}block">Three Sixths</div></div>
-    <div class="w--1-6 g__item"><div class="#{$placeholder-el}block">One Sixth</div></div>
+    <div class="w--3-6 g__item"><div class="ph__block">Three Sixths</div></div>
+    <div class="w--1-6 g__item"><div class="ph__block">One Sixth</div></div>
   </div>
 </div>
 ```

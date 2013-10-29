@@ -1,5 +1,34 @@
+/*
+
+### Box
+
+#### Box Round
+
+```
+<div class="bx--round">
+  <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
+</div>
+```
+
+*/
+
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
+  .bx--round {
+    border-radius: 1000px; // Use of % here will distort box if it is not square
+    @include inline-block;
+    overflow: hidden;
+    img {
+      display: block;
+    }
+  }
+}
 
+.bx--table {
+  display: table;
+}
+
+.bx--table__cell {
+  display: table-cell;
 }

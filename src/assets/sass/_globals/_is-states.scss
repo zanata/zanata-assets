@@ -17,6 +17,12 @@
   }
 }
 
+@include breakpoint($lte-medium) {
+  .is-hidden--m-down {
+    display: none !important;
+  }
+}
+
 @include breakpoint($gte-medium) {
   .is-hidden--m-up {
     display: none !important;
