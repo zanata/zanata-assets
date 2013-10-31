@@ -72,6 +72,7 @@
 
 .dropdown.is-active .dropdown__toggle {
   @extend .bg--pop-highest;
+  border-bottom-width: 1px;
 }
 
 .dropdown:hover .dropdown__toggle {
@@ -147,12 +148,15 @@
   background-color: $color-bg;
 }
 
+.dropdown__content {
+  @extend .bg--pop-highest;
+}
+
 .dropdown.is-active .dropdown__content {
-  visibility: visible;
   @include transform3d(translate3d(0,0,0));
   @include opacity(1);
+  visibility: visible;
   max-height: rhythm(10); // TODO: Set max-height with js
-  @extend .bg--pop-highest;
 }
 
 .dropdown--right {
@@ -181,7 +185,7 @@
   }
   .dropdown__content {
     width: auto;
-    margin: rhythm(.25) rhythm(-.25) 0;
+    margin: rhythm(.21) rhythm(-.25) 0;
     > li {
       white-space:nowrap;
       padding: rhythm(.25) rhythm(1) rhythm(.25) rhythm(.5);

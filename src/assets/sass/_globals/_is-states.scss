@@ -35,6 +35,12 @@
   }
 }
 
+@include breakpoint($gte-large) {
+  .is-hidden--l-up {
+    display: none !important;
+  }
+}
+
 @include breakpoint($gte-huge) {
   .is-hidden--h {
     display: none !important;

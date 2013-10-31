@@ -62,7 +62,7 @@
 
 .header__logo-only {
   text-align: center;
-  margin-top: rhythm(2);
+  margin-top: rhythm(1);
   .header__site-logo {
     @extend .is-transition;
     width: rhythm(3);
@@ -75,7 +75,7 @@
     }
   }
   @include breakpoint($gte-large) {
-    margin-top: rhythm(3);
+    margin-top: rhythm(2);
     .header__site-logo {
       width: rhythm(5);
       height: rhythm(5);

@@ -99,7 +99,7 @@
       </header>
 
 
-      <main role="main" class="l--pad-v-1">
+      <main role="main">
         <div class="l__wrapper">
           <div class="g">
   <div class="g__item w--1-2-m w--3-8-l w--1-3 l--push-bottom-1">
@@ -115,15 +115,17 @@
       </div>
     </div>
     <p class="d--top l--pad-top-half txt--mini">Total source contains: <strong>2,528,683 words / 101,147 messages</strong></p>
-    <ul class="g g--fit">
-      <li class="g__item"><span class="stats--large txt--state-success"><span class="stats__figure">65%</span> <span class="stats__unit">translated</span></span></li>
-      <li class="g__item"><span class="stats--large"><span class="stats__figure">138,066</span> <span class="stats__unit">total hours remaining</span></span></li>
-    </ul>
-    <div class="progress-bar__expander l--push-v-1">
-      <div class="progress-bar--large">
-        <span title="24% Untranslated" class="progress-bar__item"></span>
-        <span title="65% Translated" class="progress-bar__translated" style="width: 65%;"></span>
-        <span title="11% Fuzzy" class="progress-bar__fuzzy" style="width: 11%; margin-left: 65%;"></span>
+    <div class="progress-bar__expander">
+      <ul class="g g--fit">
+        <li class="g__item"><span class="stats--large txt--state-success"><span class="stats__figure">65%</span> <span class="stats__unit">translated</span></span></li>
+        <li class="g__item"><span class="stats--large"><span class="stats__figure">138,066</span> <span class="stats__unit">total hours remaining</span></span></li>
+      </ul>
+      <div class="l--push-v-1">
+        <div class="progress-bar--large">
+          <span title="24% Untranslated" class="progress-bar__item"></span>
+          <span title="65% Translated" class="progress-bar__translated" style="width: 65%;"></span>
+          <span title="11% Fuzzy" class="progress-bar__fuzzy" style="width: 11%; margin-left: 65%;"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -139,149 +141,151 @@
           <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i i--bell"></i><span class="is-invisible">Notifications</span></a></li>
         </ul>
       </nav>
-      <div class="tabs__content">
-        <div class="g--collapsed">
-          <div class="g__item w--1-m w--1-2">
-            <div class="bg--pop-high l--push-top-1">
-              <div class="bg--pop-highest l--pad-all-half">
-                <div class="g--tight">
-                  <div class="g__item w--1-2 w--1-2-s">
-                    <h2 class="heading--secondary delta"><i class="i i--language l--push-right-quarter"></i>Languages</h2>
-                  </div>
-                  <div class="g__item w--1-2 w--1-2-s txt--align-right txt--s-align-right">
-                    <div class="dropdown dropdown--small dropdown--right dropdown--inline">
-                      <a class="dropdown__toggle" href="#"><span class="dropdown__toggle__text">%</span> <i class="i i--arrow-down dropdown__toggle__icon"></i></a>
-                      <ul class="dropdown__content" role="content" aria-labelledby="dropdownContent">
-                        <li class="dropdown__header txt--uppercase">sort</li>
-                        <li><a class="is-active" tabindex="-1" href="#">%</a></li>
-                        <li><a tabindex="-1" href="#">hours</a></li>
-                        <li><a tabindex="-1" href="#">messages</a></li>
-                        <li><a tabindex="-1" href="#">words</a></li>
-                        <li><a tabindex="-1" href="#">alphabetical</a></li>
-                      </ul>
+      <div class="tabs__content panels__container l--push-top-1">
+        <div class="panels--2 panel__active-2">
+          <div class="g--collapsed">
+            <div class="g__item w--1-2 w--1-2-s panels__panel">
+              <div class="bg--pop-high">
+                <div class="panels__panel__header">
+                  <div class="g--tight">
+                    <div class="g__item w--1-2 w--1-2-s">
+                      <h2 class="heading--secondary epsilon"><i class="i i--language l--push-right-quarter"></i>Languages</h2>
+                    </div>
+                    <div class="g__item w--1-2 w--1-2-s txt--align-right txt--s-align-right">
+                      <div class="dropdown dropdown--small dropdown--right dropdown--inline">
+                        <a class="dropdown__toggle" href="#"><span>%</span> <i class="i i--arrow-down dropdown__toggle__icon"></i></a>
+                        <ul class="dropdown__content" role="content" aria-labelledby="dropdownContent">
+                          <li class="dropdown__header txt--uppercase">sort</li>
+                          <li><a class="is-active" tabindex="-1" href="#">%</a></li>
+                          <li><a tabindex="-1" href="#">hours</a></li>
+                          <li><a tabindex="-1" href="#">messages</a></li>
+                          <li><a tabindex="-1" href="#">words</a></li>
+                          <li><a tabindex="-1" href="#">alphabetical</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <ul class="list--stats">
+                  <li class="progress-bar__expander l--pad-top-quarter panels__panel__item is-active">
+                    <a href="#">
+                      <div class="list__item">
+                        <div class="list__item__info">
+                          <span class="list__title">Russian</span>
+                        </div>
+                        <div class="list__item__stats">
+                          <span class="stats--small txt--state-neutral">
+                            <span class="stats__figure">0%</span>
+                            <span class="stats__unit">translated</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="progress-bar">
+                        <span class="progress-bar__item"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="progress-bar__expander bg--highest--hover">
+                    <a href="#">
+                      <div class="list__item">
+                        <div class="list__item__info">
+                          <span class="list__title">Japanese</span>
+                        </div>
+                        <div class="list__item__stats">
+                          <span class="stats--small txt--state-neutral">
+                            <span class="stats__figure">0%</span>
+                            <span class="stats__unit">translated</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="progress-bar">
+                        <span class="progress-bar__item"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="progress-bar__expander bg--highest--hover">
+                    <a href="#">
+                      <div class="list__item">
+                        <div class="list__item__info">
+                          <span class="list__title">Spanish</span>
+                        </div>
+                        <div class="list__item__stats">
+                          <span class="stats--small txt--state-success">
+                            <span class="stats__figure">23%</span>
+                            <span class="stats__unit">translated</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="progress-bar">
+                        <span class="progress-bar__item"></span>
+                        <span class="progress-bar__translated" style="width: 23%"></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="list--stats">
-                <li class="progress-bar__expander bg--pop-higher l--pad-top-quarter">
-                  <a href="#">
-                    <div class="list__item">
-                      <div class="list__item__info">
-                        <span class="list__title">Russian</span>
-                      </div>
-                      <div class="list__item__stats">
-                        <span class="stats--small txt--state-neutral">
-                          <span class="stats__figure">0%</span>
-                          <span class="stats__unit">translated</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="progress-bar">
-                      <span class="progress-bar__item"></span>
-                    </div>
-                  </a>
-                </li>
-                <li class="progress-bar__expander">
-                  <a href="#">
-                    <div class="list__item">
-                      <div class="list__item__info">
-                        <span class="list__title">Japanese</span>
-                      </div>
-                      <div class="list__item__stats">
-                        <span class="stats--small txt--state-neutral">
-                          <span class="stats__figure">0%</span>
-                          <span class="stats__unit">translated</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="progress-bar">
-                      <span class="progress-bar__item"></span>
-                    </div>
-                  </a>
-                </li>
-                <li class="progress-bar__expander">
-                  <a href="#">
-                    <div class="list__item">
-                      <div class="list__item__info">
-                        <span class="list__title">Spanish</span>
-                      </div>
-                      <div class="list__item__stats">
-                        <span class="stats--small txt--state-success">
-                          <span class="stats__figure">23%</span>
-                          <span class="stats__unit">translated</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="progress-bar">
-                      <span class="progress-bar__item"></span>
-                      <span class="progress-bar__translated" style="width: 23%"></span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
             </div>
-          </div>
-          <div class="g__item w--1-m w--1-2">
-            <div class="bg--pop-higher l--push-top-1">
-              <div class="bg--pop-highest l--pad-all-half">
-                <div class="g--tight">
-                  <div class="g__item w--1-2 w--1-2-s">
-                    <h2 class="heading--secondary delta"><i class="i i--project l--push-right-quarter"></i>Russian Projects</h2>
-                  </div>
-                  <div class="g__item w--1-2 w--1-2-s txt--align-right txt--s-align-right">
-                    <div class="dropdown dropdown--small dropdown--right dropdown--inline">
-                      <a class="dropdown__toggle" href="#"><span class="dropdown__toggle__text">hours</span> <i class="i i--arrow-down dropdown__toggle__icon"></i></a>
-                      <ul class="dropdown__content" role="content" aria-labelledby="dropdownContent">
-                        <li class="dropdown__header txt--uppercase">sort</li>
-                        <li><a tabindex="-1" href="#">%</a></li>
-                        <li><a class="is-active" tabindex="-1" href="#">hours</a></li>
-                        <li><a tabindex="-1" href="#">messages</a></li>
-                        <li><a tabindex="-1" href="#">words</a></li>
-                        <li><a tabindex="-1" href="#">alphabetical</a></li>
-                      </ul>
+            <div class="g__item w--1-2 w--1-2-s panels__panel is-active">
+              <div class="bg--pop-higher">
+                <div class="panels__panel__header">
+                  <div class="g--tight">
+                    <div class="g__item w--1-2 w--1-2-s">
+                      <h2 class="heading--secondary epsilon"><span class="is-hidden--l-up"><a href="#">Languages</a> <i class="i i--arrow-right"></i> </span><i class="i i--project l--push-right-quarter"></i>Russian Projects</h2>
+                    </div>
+                    <div class="g__item w--1-2 w--1-2-s txt--align-right txt--s-align-right">
+                      <div class="dropdown dropdown--small dropdown--right dropdown--inline">
+                        <a class="dropdown__toggle" href="#"><span>hours</span> <i class="i i--arrow-down dropdown__toggle__icon"></i></a>
+                        <ul class="dropdown__content" role="content" aria-labelledby="dropdownContent">
+                          <li class="dropdown__header txt--uppercase">sort</li>
+                          <li><a tabindex="-1" href="#">%</a></li>
+                          <li><a class="is-active" tabindex="-1" href="#">hours</a></li>
+                          <li><a tabindex="-1" href="#">messages</a></li>
+                          <li><a tabindex="-1" href="#">words</a></li>
+                          <li><a tabindex="-1" href="#">alphabetical</a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <ul class="list--stats">
+                  <li class="progress-bar__expander l--pad-top-quarter bg--highest--hover">
+                    <a href="#">
+                      <div class="list__item">
+                        <div class="list__item__info">
+                          <span class="list__title">Project Name <i class="i i--version"></i> 10.0.1</span>
+                        </div>
+                        <div class="list__item__stats">
+                          <span class="stats--small">
+                            <span class="stats__figure">120.2</span>
+                            <span class="stats__unit">hours remaining</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="progress-bar">
+                        <span class="progress-bar__item"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="progress-bar__expander bg--highest--hover">
+                    <a href="#">
+                      <div class="list__item">
+                        <div class="list__item__info">
+                          <span class="list__title">Project Name <i class="i i--version"></i> 3.23</span>
+                        </div>
+                        <div class="list__item__stats">
+                          <span class="stats--small">
+                            <span class="stats__figure">103</span>
+                            <span class="stats__unit">hours remaining</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="progress-bar">
+                        <span class="progress-bar__item"></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <ul class="list--stats">
-                <li class="progress-bar__expander l--pad-top-quarter">
-                  <a href="#">
-                    <div class="list__item">
-                      <div class="list__item__info">
-                        <span class="list__title">Project Name <i class="i i--version"></i> 10.0.1</span>
-                      </div>
-                      <div class="list__item__stats">
-                        <span class="stats--small">
-                          <span class="stats__figure">120.2</span>
-                          <span class="stats__unit">hours remaining</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="progress-bar">
-                      <span class="progress-bar__item"></span>
-                    </div>
-                  </a>
-                </li>
-                <li class="progress-bar__expander">
-                  <a href="#">
-                    <div class="list__item">
-                      <div class="list__item__info">
-                        <span class="list__title">Project Name <i class="i i--version"></i> 3.23</span>
-                      </div>
-                      <div class="list__item__stats">
-                        <span class="stats--small">
-                          <span class="stats__figure">103</span>
-                          <span class="stats__unit">hours remaining</span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="progress-bar">
-                      <span class="progress-bar__item"></span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

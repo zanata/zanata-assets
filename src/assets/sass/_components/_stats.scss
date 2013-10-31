@@ -1,4 +1,5 @@
-
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
 
 .stats {
   color: $color-secondary;
@@ -30,4 +31,6 @@
   white-space: nowrap;
   font-weight: 300;
   line-height: 1em;
+}
+
 }

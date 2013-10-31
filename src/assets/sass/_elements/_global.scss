@@ -78,3 +78,14 @@ body.new-zanata,
   background: $color-body-background;
   -webkit-overflow-scrolling: touch;
 }
+
+.new-zanata {
+  main {
+    padding-top: rhythm(1);
+    padding-bottom: rhythm(1);
+    @include breakpoint($gte-large) {
+      padding-top: rhythm(2);
+      padding-bottom: rhytm(2);
+    }
+  }
+}

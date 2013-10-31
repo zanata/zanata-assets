@@ -47,14 +47,14 @@
 }
 
 .tabs--lined {
-  .tabs__nav {
+  > .tabs__nav {
     border-bottom: 2px solid $color-secondary-20;
     a {
       text-align: center;
-      padding: rhythm(.25) rhythm(.375);
+      padding: rhythm(.5) rhythm(.375);
       margin-bottom: -2px;
       border-bottom: 2px solid transparent;
-      max-height: rhythm(1.5);
+      max-height: rhythm(2);
       // FIXME: Probably should find a better way to keep the tabs lined up no
       // matter what content is included (e.g. icons, text etc)
     }
@@ -72,17 +72,9 @@
     }
   }
   @include breakpoint($gte-medium) {
-    .tabs__nav {
-      a {
-        padding: rhythm(.25) rhythm(.5);
-      }
-    }
-  }
-  @include breakpoint($gte-large) {
-    .tabs__nav {
+  >  .tabs__nav {
       a {
         padding: rhythm(.5);
-        max-height: rhythm(2);
       }
     }
   }
@@ -165,42 +157,51 @@
 .tabs--vertical {
   .tabs__nav {
     float: left;
-    width: 20%;
-    li {
+    width: 16%;
+    margin-right: -1px;
+    z-index: 5;
+    position: relative;
+    > li {
       display: block;
+      border: 1px solid transparent;
+      border-bottom-color: 2px;
+      z-index: 4;
       &.is-active {
-        background-color: $color-bg-lighter;
-        @include box-shadow($default-box-shadow);
+        @extend .bg--pop-highest;
+        border-right-width: 0;
       }
-    }
-    a {
-      padding: rhythm(.25) rhythm(.5);
-      display: block;
+      > a {
+        padding: rhythm(.5);
+        display: block;
+      }
     }
   }
   .tabs__content {
     float: left;
-    width: 80%;
-    li {
+    width: 84%;
+    > li {
       display: none;
+      @extend .bg--pop-highest;
+      padding: rhythm(.5);
+      min-height: rhythm(10);
       &.is-active {
-        @include box-shadow(2px 1px 2px 0 rgba($black, 0.1));
         display: block;
-        padding: rhythm(.5);
-        min-height: rhythm(4.5);
-        background-color: $color-bg-lighter;
       }
     }
   }
-  @include breakpoint($lte-small) {
-    .tabs__nav {
-      width: 10% !important;
-      a {
-        padding: rhythm(.25);
+  @include breakpoint($gte-medium) {
+    .tabs__content {
+      > li {
+        padding: rhythm(1);
       }
     }
+  }
+  @include breakpoint($gte-large) {
+    .tabs__nav {
+      width: 20% !important;
+    }
     .tabs__content {
-      width: 90% !important;
+      width: 80% !important;
     }
   }
 }

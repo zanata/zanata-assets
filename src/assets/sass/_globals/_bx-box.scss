@@ -32,3 +32,19 @@
 .bx--table__cell {
   display: table-cell;
 }
+
+
+/*
+
+#### Box Block
+
+Display an element with `display:block`
+
+<span class="bx--block ph__block">Box Block</span>
+
+*/
+
+
+.bx--block {
+  display: block !important;
+}

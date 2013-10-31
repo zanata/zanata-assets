@@ -1,0 +1,78 @@
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.panels__container {
+  position: relative;
+  overflow: hidden;
+}
+
+.panels {
+  @extend .is-transition;
+}
+
+.panels--2 {
+  @extend .panels;
+  width: 200%;
+  @include breakpoint($gte-large) {
+    width: 100%;
+  }
+  @include breakpoint($lte-medium) {
+    &.panel__active-2 {
+      @include transform3d(translate3d(-50%,0,0));
+    }
+  }
+}
+
+.panels--3 {
+  @extend .panels;
+  width: 300%;
+  @include breakpoint($gte-large) {
+    width: 150%;
+  }
+  &.panel__active-2 {
+
+  }
+  &.panel__active-3 {
+
+  }
+}
+
+.panels__panel {
+  margin-left: -1px;
+  position: relative;
+  &:first-child {
+    margin-left: 0;
+    z-index: 10;
+  }
+  &:nth-child(2) {
+    z-index: 9;
+  }
+  &:nth-child(3) {
+    z-index: 8;
+  }
+  &:nth-child(4) {
+    z-index: 7;
+  }
+  &.is-active {
+
+  }
+}
+
+.panels__panel__header {
+  border-bottom: 2px solid rgba($color-secondary, .1);
+  background-color: $color-bg-lightest;
+  padding: rhythm(.5);
+  z-index: 101;
+  position: relative;
+}
+
+.panels__panel__item {
+  &.is-active {
+    background-color: $color-bg-lighter;
+    position: relative;
+    z-index: 100;
+    margin-right: -1px;
+  }
+}
+
+}
