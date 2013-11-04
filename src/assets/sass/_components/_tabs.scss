@@ -52,29 +52,46 @@
     a {
       text-align: center;
       padding: rhythm(.5) rhythm(.375);
-      margin-bottom: -2px;
-      border-bottom: 2px solid transparent;
       max-height: rhythm(2);
-      // FIXME: Probably should find a better way to keep the tabs lined up no
-      // matter what content is included (e.g. icons, text etc)
+      position: relative;
+      &:after {
+        @extend .is-transition;
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: transparent;
+      }
     }
     .i {
       line-height: rhythm(1);
       padding: 0 0 rhythm(.075);
-      // FIXME: Probably should find a better way to keep the tabs lined up no
-      // matter what content is included (e.g. icons, text etc)
     }
     a:hover {
-      border-bottom-color: $color-secondary-30;
+      &:after {
+        background-color: $color-secondary-30;
+      }
     }
     a.is-active {
-      border-bottom-color: $color-secondary;
+      &:after {
+        background-color: $color-secondary;
+      }
     }
   }
   @include breakpoint($gte-medium) {
   >  .tabs__nav {
       a {
         padding: rhythm(.5);
+
+      }
+    }
+  }
+  @include breakpoint($gte-large) {
+    > .tabs__nav {
+      a {
+        max-height: rhythm(2);
       }
     }
   }

@@ -19,6 +19,10 @@
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
+.header {
+  position: relative;
+}
+
 .header__title {
   @include adjust-font-size-to(28px, 2);
   padding: 0;
@@ -58,6 +62,25 @@
   @include breakpoint($gte-large) {
     padding: rhythm(.25) rhythm(2) rhythm(.25) 0;;
   }
+}
+
+.header__user-menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: rhythm(.25);
+  @include breakpoint($gte-medium) {
+    right: rhythm(1);
+  }
+  @include breakpoint($gte-large) {
+    right: rhythm(2);
+  }
+}
+
+.header__avatar {
+  width: rhythm(1.5);
+  height: rhythm(1.5);
 }
 
 .header__logo-only {

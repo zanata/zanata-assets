@@ -4,7 +4,7 @@
 .progress-bar {
   background-color: $color-neutral;
   height: rhythm(.25);
-  margin-bottom: rhythm(.25);
+  // margin-bottom: rhythm(.25);
   width: 100%;
   position: relative;
   @include transition($default-transition);
@@ -16,11 +16,14 @@
   margin-bottom: 0;
 }
 
-.progress-bar__expander:hover .progress-bar {
-  .no-touch & {
-    @include transform3d(scale3d(1,2,1) translate3d(0,25%,0));
-    // height: rhythm(.5);
-    // margin-bottom: 0;
+.progress-bar__expander {
+  @include transform3d(translateZ(0));
+  &:hover .progress-bar {
+    .no-touch & {
+      @include transform3d(scaleY(2) translateY(25%));
+      // height: rhythm(.5);
+      // margin-bottom: 0;
+    }
   }
 }
 

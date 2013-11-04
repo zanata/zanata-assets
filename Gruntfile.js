@@ -62,7 +62,7 @@ var srcFolder = './src/',
       // Temporary, This will get moved and deleted from src
       dev: {
         options: {
-          require : ['compass', 'breakpoint', 'rgbapng'],
+          require : ['compass', 'breakpoint', 'rgbapng', 'animation'],
           basePath: srcFolder + assetsFolder,
           sassDir : 'sass',
           cssDir: 'css',
@@ -78,7 +78,7 @@ var srcFolder = './src/',
       styleguide: {
         // Temporary, This will get moved and deleted from src
         options: {
-          require : ['compass', 'breakpoint', 'rgbapng'],
+          require : ['compass', 'breakpoint', 'rgbapng', 'animation'],
           basePath: srcFolder + assetsFolder,
           sassDir : 'sass',
           cssDir: 'css-sg',
@@ -91,7 +91,7 @@ var srcFolder = './src/',
       },
       prod: {
         options: {
-          require : ['compass', 'breakpoint', 'rgbapng'],
+          require : ['compass', 'breakpoint', 'rgbapng', 'animation'],
           basePath: srcFolder + assetsFolder,
           sassDir : 'sass',
           cssDir: 'css',

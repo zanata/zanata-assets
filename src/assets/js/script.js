@@ -1,4 +1,4 @@
-/*! zanata-proto - v0.1.0 - 2013-11-01
+/*! zanata-proto - v0.1.0 - 2013-11-05
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Luke Brooker; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07
@@ -2381,7 +2381,7 @@ $(function() {
   });
 
   $(document).bind('click', collapseActiveDropdowns);
-  $('.dropdown__toggle').bind('click', toggleThisCollapseOthers);
+  $(document).on('click', '.dropdown__toggle', toggleThisCollapseOthers);
 
 });
 

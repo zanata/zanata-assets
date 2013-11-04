@@ -21,6 +21,6 @@ $(function() {
   });
 
   $(document).bind('click', collapseActiveDropdowns);
-  $('.dropdown__toggle').bind('click', toggleThisCollapseOthers);
+  $(document).on('click', '.dropdown__toggle', toggleThisCollapseOthers);
 
 });

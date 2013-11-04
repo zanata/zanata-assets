@@ -12,22 +12,8 @@
         </ul>
       </nav>
     </div>
-    <div class="off-canvas__target off-canvas--right" id="off-canvas--right" data-off-canvas="under">
-      <header class="off-canvas__header">
-        <a href="#off-canvas--right" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
-      </header>
-      <nav id="nav-user">
-        <ul class="list--slat list--block-links txt--invert">
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}dashboard">Dashboard <span class="badge--highlight badge--inline l--float-right">4</span></a></li>
-<!--           <li><a href="#">Projects</a></li>
-          <li><a href="#">Groups</a></li> -->
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}settings">Settings</a></li>
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}index.html">Logout</a></li>
-        </ul>
-      </nav>
-    </div>
     <div class="off-canvas__inner">
-      <header role="banner" class="bg--pop-highest txt--s-align-center l--clearfix">
+      <header role="banner" class="header bg--pop-highest txt--s-align-center l--clearfix">
         <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
         {% include title.html %}
         <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half l--float-left">
@@ -38,11 +24,12 @@
             <li class="l--push-left-half"><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
           </ul>
         </nav>
-        <a href="#off-canvas--right" class="off-canvas__toggle--right l--float-right">
-          <i class="i i--huge i--list l--float-left l--pad-left-0"></i>
-          <span class="badge__container">
-            <span class="badge--bl">4</span>
-            <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
+        <a href="#off-canvas--right" class="header__user-menu">
+          <span class="badge__container header__avatar">
+            <span class="bx--round">
+              <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
+            </span>
+            <span class="badge--br" title="4 Notifications">4</span>
           </span>
         </a>
       </header>

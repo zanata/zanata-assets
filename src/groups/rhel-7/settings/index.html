@@ -37,7 +37,7 @@ root: "../../../"
       <nav class="tabs__nav">
         <ul>
           <li><a href="#"><i class="i i--clock"></i> <span class="is-hidden--m-down">Activity</span></a></li>
-          <li><a href="#"><i class="i i--language"></i> <span class="is-hidden--m-down">Languages</span><span class="txt--neutral"> 21</span></a></li>
+          <li><a href="../"><i class="i i--language"></i> <span class="is-hidden--m-down">Languages</span><span class="txt--neutral"> 21</span></a></li>
           <li><a href="#"><i class="i i--project"></i> <span class="is-hidden--m-down">Projects</span><span class="txt--neutral"> 102</span></a></li>
           <li><a href="#"><i class="i i--users"></i> <span class="is-hidden--m-down">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
           <li><a href="#" class="is-active"><i class="i i--settings"></i> <span class="is-hidden--m-down">Settings</span></a></li>
@@ -45,6 +45,7 @@ root: "../../../"
         </ul>
       </nav>
       <div class="tabs__content panels__container l--push-top-1">
+        <h1>Settings</h1>
         <div class="tabs--vertical js-tabs">
           <ul class="tabs__nav js-tabs-nav">
             <li class="is-active"><a href="#tab-vertical-1"><i class="i i--settings"></i> <span class="is-hidden--m-down">General</span></a></li>
@@ -54,38 +55,41 @@ root: "../../../"
           </ul>
           <ul class="tabs__content js-tabs-content">
             <li class="is-active" id="tab-vertical-1">
-              <h2 class="l--push-all-0 gamma d--bottom">General Settings</h2>
-              <div class="l--push-top-half form__item">
-                <label for="name">Group Name</label>
-                <input type="text" id="name" value="RHEL 7">
-              </div>
-              <div class="l--push-top-half form__item">
-                <label for="id">Group ID</label>
-                <input type="text" id="id" value="RHEL7" disabled>
-              </div>
-              <div class="l--push-top-half form__item">
-                <label for="id">Group Description</label>
-                <textarea>Translations of Software and Documentation projects related to RHEL7</textarea>
-              </div>
-              <div class="txt--align-right l--push-top-1">
-                <input type="submit" value="Save changes" class="l--push-right-half button--primary">
-                <a href="#">Cancel</a>
-              </div>
+              <h2 class="l--push-all-0 gamma d--bottom">General</h2>
+              <form action="" class="l--constrain-medium">
+                <div class="l--push-top-half form__item">
+                  <label for="name">Group Name</label>
+                  <input type="text" id="name" value="RHEL 7">
+                </div>
+                <div class="l--push-top-half form__item">
+                  <label for="id">Group ID</label>
+                  <input type="text" id="id" value="RHEL7" disabled>
+                </div>
+                <div class="l--push-top-half form__item">
+                  <label for="id">Group Description</label>
+                  <textarea>Translations of Software and Documentation projects related to RHEL7</textarea>
+                </div>
+                <div class="l--push-top-1">
+                  <input type="submit" value="Save changes" class="l--push-right-half button--primary">
+                  <a href="#">Cancel</a>
+                </div>
+              </form>
             </li>
             <li id="tab-vertical-2">
-              <h2 class="l--push-all-0 gamma d--bottom l--push-bottom-half">Language Settings</h2>
-              <ul class="list--slat">
-                <li>Language 1</li>
-                <li>Language 2</li>
-                <li>Language 3</li>
-                <li>Language 4</li>
-                <li>Language 5</li>
-                <li>Language 6</li>
-                <li>Language 7</li>
-                <li>Language 8</li>
-                <li>Language 9</li>
-                <li>Language 10</li>
-                <input type="text" placeholder="Add a Language" class="w--7-10 l--push-top-half"><button>Add</button>
+              <h2 class="l--push-all-0 gamma d--bottom l--push-bottom-half">Languages</h2>
+              <h3 class="delta">Active Languages</h3>
+              <ul class="list--slat l--push-top-half">
+                <li class="reveal">Assamese <span class="txt--meta">[as]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+                <li class="reveal">Chinese (Simplified Han) <span class="txt--meta">[zh-Hans]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+                <li class="reveal">Chinese (Traditional Han) <span class="txt--meta">[zh-Hant]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+                <li class="reveal">English (United States) <span class="txt--meta">[en-US]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+
+                <li>
+                  <div class="g--tight">
+                    <div class="g__item w--7-10"><input type="text" placeholder="Add a Language"></div>
+                    <div class="g__item w--3-10"><button class="button--full">Add</button></div>
+                  </div>
+                </li>
               </ul>
             </li>
             <li id="tab-vertical-3">Tab content here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. more tab content and maybe some more.</li>

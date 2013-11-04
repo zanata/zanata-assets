@@ -236,9 +236,10 @@ nav ol {
 
 .list--stats {
   @extend .list--no-bullets;
+  padding-bottom: rhythm(.25);
   .list__item {
     display: table;
-    padding: rhythm(.25) rhythm(.5);
+    padding: rhythm(.5) rhythm(.5) rhythm(.25);
     min-height: rhythm(2.25);
   }
   .list__item__info {

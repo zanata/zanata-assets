@@ -404,6 +404,7 @@ Used to section content and create hierarchy
   color: #4e9fdd;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -417,7 +418,11 @@ Used to section content and create hierarchy
 }
 .new-zanata a:focus,
 .new-zanata .\3A focus {
-  outline: thin dotted;
+  -webkit-box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
+  -moz-box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
+  box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
+  outline: none;
+  border-radius: 2px;
 }
 .new-zanata a:active,
 .new-zanata .\3A active
@@ -667,12 +672,6 @@ a:hover,
   -webkit-appearance: none;
   outline: none;
 }
-.new-zanata button:focus,
-.new-zanata html input[type="button"]:focus,
-.new-zanata input[type="reset"]:focus,
-.new-zanata input[type="submit"]:focus {
-  outline: 1px dotted #416988;
-}
 .new-zanata button[disabled],
 .new-zanata input[disabled] {
   cursor: default;
@@ -746,7 +745,7 @@ a:hover,
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   outline: none !important;
-  border: 2px solid #7c96ac;
+  border: 1px solid #7c96ac;
   background: white;
 }
 .new-zanata input[type="text"][disabled],
@@ -760,7 +759,7 @@ a:hover,
 .new-zanata input[type="time"][disabled],
 .new-zanata input[type="url"][disabled],
 .new-zanata textarea[disabled] {
-  background-color: #cccccc;
+  background-color: #e8eaec;
 }
 .new-zanata textarea {
   overflow: auto;
@@ -1975,7 +1974,17 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .dropdown__toggle, .no-touch .new-zanata .reveal__target, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3, .new-zanata .header__logo-only .header__site-logo {
+.new-zanata .bg--lowest--hover:hover, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .dropdown__toggle, .new-zanata input[type="submit"],
+.new-zanata button,
+.new-zanata .button,
+.new-zanata .button--large,
+.new-zanata .button--huge,
+.new-zanata .button--full,
+.new-zanata .button--inline-right,
+.new-zanata .button--inline-left,
+.new-zanata .button--primary,
+.new-zanata .button--secondary,
+.new-zanata .button--danger, .no-touch .new-zanata .reveal__target, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3, .new-zanata .header__logo-only .header__site-logo {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2884,9 +2893,12 @@ Sub-headings can be used when placing a heading under another heading.
   background-color: #2d3338 !important;
 }
 
+.new-zanata .list--stats {
+  padding-bottom: 0.40625em;
+}
 .new-zanata .list--stats .list__item {
   display: table;
-  padding: 0.40625em 0.8125em;
+  padding: 0.8125em 0.8125em 0.40625em;
   min-height: 3.65625em;
 }
 .new-zanata .list--stats .list__item__info {
@@ -3282,22 +3294,33 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs--lined > .tabs__nav a {
   text-align: center;
   padding: 0.8125em 0.60938em;
-  margin-bottom: -2px;
-  border-bottom: 2px solid transparent;
   max-height: 3.25em;
+  position: relative;
+}
+.new-zanata .tabs--lined > .tabs__nav a:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
 }
 .new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .i--huge {
   line-height: 1.625em;
   padding: 0 0 0.12188em;
 }
-.new-zanata .tabs--lined > .tabs__nav a:hover {
-  border-bottom-color: #c6d2db;
+.new-zanata .tabs--lined > .tabs__nav a:hover:after {
+  background-color: #c6d2db;
 }
-.new-zanata .tabs--lined > .tabs__nav a.is-active {
-  border-bottom-color: #416988;
+.new-zanata .tabs--lined > .tabs__nav a.is-active:after {
+  background-color: #416988;
 }
 .new-zanata .tabs--lined > .tabs__nav a {
   padding: 0.8125em;
+}
+.new-zanata .tabs--lined > .tabs__nav a {
+  max-height: 3.25em;
 }
 .new-zanata .tabs--accent .tabs__nav {
   z-index: 1;
@@ -3435,7 +3458,6 @@ Keep focus while showing and hiding a password field
 .new-zanata .progress-bar, .new-zanata .progress-bar--large {
   background-color: #c6d2db;
   height: 0.40625em;
-  margin-bottom: 0.40625em;
   width: 100%;
   position: relative;
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -3447,12 +3469,19 @@ Keep focus while showing and hiding a password field
   height: 0.8125em;
   margin-bottom: 0;
 }
+.new-zanata .progress-bar__expander {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
 .no-touch .new-zanata .progress-bar__expander:hover .progress-bar, .no-touch .new-zanata .progress-bar__expander:hover .progress-bar--large {
-  -webkit-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
-  -moz-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
-  -ms-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
-  -o-transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
-  transform: scale3d(1, 2, 1) translate3d(0, 25%, 0);
+  -webkit-transform: scaleY(2) translateY(25%);
+  -moz-transform: scaleY(2) translateY(25%);
+  -ms-transform: scaleY(2) translateY(25%);
+  -o-transform: scaleY(2) translateY(25%);
+  transform: scaleY(2) translateY(25%);
 }
 .new-zanata .progress-bar__item, .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
   position: absolute;
@@ -3842,7 +3871,7 @@ Keep focus while showing and hiding a password field
 .new-zanata input.button--primary {
   padding: 0.40625em 0.8125em;
   border: none;
-  background-color: white;
+  background-color: #fbfbfb;
   color: #565d65;
   font-weight: 600;
   display: -moz-inline-stack;
@@ -3851,27 +3880,15 @@ Keep focus while showing and hiding a password field
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(65, 105, 136, 0.2);
+  -webkit-box-shadow: 0 1px 0 rgba(65, 105, 136, 0.09);
+  -moz-box-shadow: 0 1px 0 rgba(65, 105, 136, 0.09);
+  box-shadow: 0 1px 0 rgba(65, 105, 136, 0.09);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-}
-.new-zanata input[type="submit"]:focus,
-.new-zanata button:focus,
-.new-zanata .button:focus,
-.new-zanata .button--large:focus,
-.new-zanata .button--huge:focus,
-.new-zanata .button--full:focus,
-.new-zanata .button--inline-right:focus,
-.new-zanata .button--inline-left:focus,
-.new-zanata .button--primary:focus,
-.new-zanata .button--secondary:focus,
-.new-zanata .button--danger:focus {
-  outline: 1px dotted #416988;
 }
 .new-zanata input[type="submit"]:hover, .new-zanata input[type="submit"]:focus,
 .new-zanata button:hover,
@@ -3894,11 +3911,13 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--primary:focus,
 .new-zanata .button--secondary:focus,
 .new-zanata .button--danger:focus {
-  background-color: #f5f7f8;
+  background-color: white;
+  border-color: rgba(65, 105, 136, 0.27);
+  -webkit-box-shadow: 0 1px 0 rgba(65, 105, 136, 0.27);
+  -moz-box-shadow: 0 1px 0 rgba(65, 105, 136, 0.27);
+  box-shadow: 0 1px 0 rgba(65, 105, 136, 0.27);
   color: black;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 .new-zanata input[type="submit"]:active, .new-zanata input[type="submit"].is-active,
 .new-zanata button:active,
@@ -3921,21 +3940,31 @@ Keep focus while showing and hiding a password field
 .new-zanata .is-active.button--primary,
 .new-zanata .is-active.button--secondary,
 .new-zanata .is-active.button--danger {
-  background-color: #e4e5e7;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #e8eaec;
+  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.2);
+  -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.2);
+  box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.2);
 }
-.new-zanata button[disabled]:hover, .new-zanata button[disabled]:focus, .new-zanata button[disabled]:active, .new-zanata button[disabled].is-active,
+.new-zanata .button[disbaled], .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--danger,
+.new-zanata button[disabled],
+.new-zanata input[type="submit"][disabled] {
+  pointer-events: none;
+}
+.new-zanata .button[disbaled]:hover, .new-zanata [disbaled].button--large:hover, .new-zanata [disbaled].button--huge:hover, .new-zanata [disbaled].button--full:hover, .new-zanata [disbaled].button--inline-right:hover, .new-zanata [disbaled].button--inline-left:hover, .new-zanata [disbaled].button--primary:hover, .new-zanata [disbaled].button--secondary:hover, .new-zanata [disbaled].button--danger:hover, .new-zanata .button[disbaled]:focus, .new-zanata [disbaled].button--large:focus, .new-zanata [disbaled].button--huge:focus, .new-zanata [disbaled].button--full:focus, .new-zanata [disbaled].button--inline-right:focus, .new-zanata [disbaled].button--inline-left:focus, .new-zanata [disbaled].button--primary:focus, .new-zanata [disbaled].button--secondary:focus, .new-zanata [disbaled].button--danger:focus, .new-zanata .button[disbaled]:active, .new-zanata [disbaled].button--large:active, .new-zanata [disbaled].button--huge:active, .new-zanata [disbaled].button--full:active, .new-zanata [disbaled].button--inline-right:active, .new-zanata [disbaled].button--inline-left:active, .new-zanata [disbaled].button--primary:active, .new-zanata [disbaled].button--secondary:active, .new-zanata [disbaled].button--danger:active, .new-zanata .button[disbaled].is-active, .new-zanata [disbaled].is-active.button--large, .new-zanata [disbaled].is-active.button--huge, .new-zanata [disbaled].is-active.button--full, .new-zanata [disbaled].is-active.button--inline-right, .new-zanata [disbaled].is-active.button--inline-left, .new-zanata [disbaled].is-active.button--primary, .new-zanata [disbaled].is-active.button--secondary, .new-zanata [disbaled].is-active.button--danger,
+.new-zanata button[disabled]:hover,
+.new-zanata button[disabled]:focus,
+.new-zanata button[disabled]:active,
+.new-zanata button[disabled].is-active,
 .new-zanata input[type="submit"][disabled]:hover,
 .new-zanata input[type="submit"][disabled]:focus,
 .new-zanata input[type="submit"][disabled]:active,
 .new-zanata input[type="submit"][disabled].is-active {
-  background-color: #fefefe !important;
-  color: #565d65 !important;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  background-color: inherit !important;
+  color: inherit !important;
+  -webkit-box-shadow: inherit !important;
+  -moz-box-shadow: inherit !important;
+  box-shadow: inherit !important;
+  pointer-events: none;
 }
 .new-zanata .button--large {
   font-size: 1.25em;
@@ -3970,10 +3999,11 @@ Keep focus while showing and hiding a password field
 .new-zanata input.button--primary,
 .new-zanata input.button--secondary,
 .new-zanata input.button--danger {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  background-color: #4e9fdd;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+  background-color: #4a97d1;
   color: #f2f2f2;
 }
 .new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--danger:hover, .new-zanata .button--primary:focus, .new-zanata .button--secondary:focus, .new-zanata .button--danger:focus,
@@ -3983,7 +4013,11 @@ Keep focus while showing and hiding a password field
 .new-zanata input.button--primary:focus,
 .new-zanata input.button--secondary:focus,
 .new-zanata input.button--danger:focus {
-  background-color: #4a97d1;
+  -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #4e9fdd;
   color: white;
 }
 .new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--danger:active, .new-zanata .button--primary.is-active, .new-zanata .is-active.button--secondary, .new-zanata .is-active.button--danger,
@@ -3994,18 +4028,18 @@ Keep focus while showing and hiding a password field
 .new-zanata input.is-active.button--secondary,
 .new-zanata input.is-active.button--danger {
   background-color: #3e7fb0;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 .new-zanata .button--secondary,
 .new-zanata input.button--secondary {
-  background-color: #416988;
+  background-color: #3d6381;
 }
 .new-zanata .button--secondary:hover, .new-zanata .button--secondary:focus,
 .new-zanata input.button--secondary:hover,
 .new-zanata input.button--secondary:focus {
-  background-color: #3d6381;
+  background-color: #416988;
 }
 .new-zanata .button--secondary:active, .new-zanata .button--secondary.is-active,
 .new-zanata input.button--secondary:active,
@@ -4014,12 +4048,12 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .button--danger,
 .new-zanata input.button--danger {
-  background-color: #e0575b;
+  background-color: #d45256;
 }
 .new-zanata .button--danger:hover, .new-zanata .button--danger:focus,
 .new-zanata input.button--danger:hover,
 .new-zanata input.button--danger:focus {
-  background-color: #d45256;
+  background-color: #e0575b;
 }
 .new-zanata .button--danger:active, .new-zanata .button--danger.is-active,
 .new-zanata input.button--danger:active,
@@ -4066,88 +4100,222 @@ Used to show extra information on hover of the parent element
   opacity: 0;
 }
 
-.loader, .loader__label, .loader__spinner {
+/*
+
+### Loader
+
+```
+<a href="#" class="loader"><span class="loader__label">Loader Label</span></a>
+
+<a href="#" class="loader is-active">
+  <span class="loader__label">
+    (Active) Loader Label
+    <span class="loader__spinner">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </span>
+</a>
+
+<div class="loader--large is-active">
+  <span class="loader__spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+
+<div class="loader--huge is-active">
+  <span class="loader__spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+```
+
+*/
+.loader, .loader--large, .loader--huge, .loader__label, .loader__spinner {
   -webkit-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
-.loader {
+.loader, .loader--large, .loader--huge {
+  position: relative;
   display: block;
-  line-height: 2.4375em;
   text-align: center;
+  margin: 0 auto;
+  line-height: 2.4375em;
+  min-height: 2.4375em;
 }
-.loader:hover {
+
+a.loader:hover, a.loader--large:hover, a.loader--huge:hover {
   background-color: rgba(65, 105, 136, 0.03);
 }
-.loader:active {
+a.loader:active, a.loader--large:active, a.loader--huge:active {
   background-color: rgba(65, 105, 136, 0.03);
 }
-.loader.is-active {
-  cursor: default;
-  background-color: rgba(65, 105, 136, 0.03);
+a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
+  background-color: rgba(65, 105, 136, 0.03);
+  cursor: default;
 }
 
 .loader__label {
   position: relative;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
 }
-.loader.is-active .loader__label {
-  padding-left: 2.4375em;
-  color: #416988;
+.loader.is-active .loader__label, .is-active.loader--large .loader__label, .is-active.loader--huge .loader__label {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
+  padding-left: 2.4375em;
+  color: #416988;
 }
 
 .loader__spinner {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
   position: absolute;
   left: 0;
   padding: 1.01563em 0;
   width: 1.625em;
   height: 1.625em;
   text-align: center;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
 }
-.loader.is-active .loader__spinner {
+.loader.is-active .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 .loader__spinner span {
-  display: inline-block;
+  -webkit-animation-name: loading;
+  -moz-animation-name: loading;
+  -ms-animation-name: loading;
+  -o-animation-name: loading;
+  animation-name: loading;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -ms-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  position: absolute;
   width: 0.40625em;
   height: 0.40625em;
-  margin-left: 0.20313em;
   border-radius: 1.625em;
   background-color: #416988;
-  -webkit-animation-name: loading;
-  -webkit-animation-duration: .5s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-function: linear;
 }
 .loader__spinner span:nth-child(1) {
-  margin-left: 0;
-  -webkit-animation-delay: 0.15s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  left: 0;
 }
 .loader__spinner span:nth-child(2) {
-  -webkit-animation-delay: 0.25s;
+  -webkit-animation-delay: -0.15s;
+  -moz-animation-delay: -0.15s;
+  -ms-animation-delay: -0.15s;
+  -o-animation-delay: -0.15s;
+  animation-delay: -0.15s;
+  left: 0.60938em;
 }
 .loader__spinner span:nth-child(3) {
-  -webkit-animation-delay: 0.35s;
+  -webkit-animation-delay: -0.3s;
+  -moz-animation-delay: -0.3s;
+  -ms-animation-delay: -0.3s;
+  -o-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+  left: 1.21875em;
+}
+
+.loader > .loader__spinner, .loader--large > .loader__spinner, .loader--huge > .loader__spinner {
+  left: 50%;
+  margin-left: -0.8125em;
+}
+
+.loader--large {
+  font-size: 1.5em;
+  line-height: 1.625em;
+}
+
+.loader--huge {
+  font-size: 2.25em;
+  line-height: 1.44444em;
+}
+
+@-moz-keyframes loading {
+  0% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+
+  50% {
+    background-color: #416988;
+  }
+
+  100% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
 }
 
 @-webkit-keyframes loading {
+  0% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+
+  50% {
+    background-color: #416988;
+  }
+
+  100% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+}
+
+@-o-keyframes loading {
+  0% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+
+  50% {
+    background-color: #416988;
+  }
+
+  100% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+}
+
+@-ms-keyframes loading {
+  0% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+
+  50% {
+    background-color: #416988;
+  }
+
+  100% {
+    background-color: rgba(65, 105, 136, 0.2);
+  }
+}
+
+@keyframes loading {
   0% {
     background-color: rgba(65, 105, 136, 0.2);
   }
@@ -4201,7 +4369,7 @@ Used to show extra information on hover of the parent element
   width: 150%;
 }
 .new-zanata .panels__panel {
-  margin-left: -1px;
+  margin-left: 1px;
   position: relative;
 }
 .new-zanata .panels__panel:first-child {
@@ -4226,9 +4394,6 @@ Used to show extra information on hover of the parent element
 }
 .new-zanata .panels__panel__item.is-active {
   background-color: #fefefe;
-  position: relative;
-  z-index: 100;
-  margin-right: -1px;
 }
 
 /*
@@ -4248,6 +4413,9 @@ Used to show extra information on hover of the parent element
 ```
 
 */
+.new-zanata .header {
+  position: relative;
+}
 .new-zanata .header__title {
   font-size: 1.75em;
   line-height: 1.85714em;
@@ -4297,6 +4465,19 @@ Used to show extra information on hover of the parent element
   padding: 0.40625em 0.40625em 0.40625em 0;
   padding: 0.40625em 1.625em 0.40625em 0;
   padding: 0.40625em 3.25em 0.40625em 0;
+}
+.new-zanata .header__user-menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.40625em;
+  right: 1.625em;
+  right: 3.25em;
+}
+.new-zanata .header__avatar {
+  width: 2.4375em;
+  height: 2.4375em;
 }
 .new-zanata .header__logo-only {
   text-align: center;

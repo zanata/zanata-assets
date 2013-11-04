@@ -110,9 +110,6 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: none;
   outline: none;
-  &:focus {
-    outline: 1px dotted $color-secondary;
-  }
 }
 
 
@@ -169,11 +166,11 @@ textarea {
   &:focus {
     @include transition($default-transition);
     outline: none !important;
-    border: 2px solid $form-input-focus-border-color;
+    border: 1px solid $form-input-focus-border-color;
     background: $form-input-focus-background-color;
   }
   &[disabled] {
-    background-color: $light-grey;
+    background-color: $color-bg-dark;
   }
 }
 

@@ -21,6 +21,7 @@ a {
   color: $color-link;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
   @include transition($default-transition);
 }
 
@@ -36,7 +37,9 @@ a:focus,
 
 a:focus,
 .\3A focus {
-  outline: thin dotted;
+  @include box-shadow(0 0 0 4px rgba($color-link, .3));
+  outline: none;
+  border-radius: $default-border-radius;
 }
 
 a:active,

@@ -38,7 +38,7 @@
 }
 
 .panels__panel {
-  margin-left: -1px;
+  margin-left: 1px;
   position: relative;
   &:first-child {
     margin-left: 0;
@@ -69,9 +69,17 @@
 .panels__panel__item {
   &.is-active {
     background-color: $color-bg-lighter;
-    position: relative;
-    z-index: 100;
-    margin-right: -1px;
+    // position: relative;
+    // z-index: 100;
+    // &:after {
+    //   content: "";
+    //   width: 1px;
+    //   height: 100%;
+    //   background-color: $color-bg-lighter;
+    //   position: absolute;
+    //   right: -1px;
+    //   top: 0;
+    // }
   }
 }
 
