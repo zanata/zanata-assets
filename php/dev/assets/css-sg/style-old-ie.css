@@ -4196,7 +4196,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   height: 4.875em;
 }
 
-.new-zanata .auto-complete, .new-zanata .auto-complete input {
+.new-zanata .auto-complete {
   border-width: initial;
   border-style: initial;
   border-color: initial;
@@ -4206,6 +4206,9 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   background-position: 0%;
   background-color: initial;
   font-size: inherit;
+}
+.new-zanata .auto-complete input {
+  background-image: none;
 }
 .new-zanata *.rf-au-fnt {
   color: inherit;
