@@ -357,7 +357,7 @@ td.RejectedStateDecoration div div div {
 }
 
 .DocumentListTable tr:hover {
-  background: #fdfdfd;
+  background: #fefefe;
 }
 
 .DocumentListTable td.sortable {
@@ -824,7 +824,7 @@ a.downloadLink {
   text-align: center;
 }
 .gwt-DialogBox-CloseButton:hover {
-  background-color: #fdfdfd;
+  background-color: #fefefe;
 }
 .gwt-DialogBox-CloseButton:active {
   background-color: #e8eaec;

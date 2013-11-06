@@ -685,7 +685,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
 }
 
 .rich-table tbody tr:hover {
-  background-color: #fdfdfd;
+  background-color: #fefefe;
 }
 
 .rich-table-cell {
