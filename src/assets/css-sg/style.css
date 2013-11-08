@@ -636,13 +636,11 @@ a:hover,
   line-height: 1.625em;
 }
 .new-zanata fieldset {
-  border-style: solid;
   border-width: 0.0625em;
+  border-style: solid;
   padding: 0.75em;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   margin: 1.21875em 0;
   padding-bottom: 0;
@@ -722,8 +720,6 @@ a:hover,
 .new-zanata textarea {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2341,7 +2337,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .is-transition, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high:hover,
-.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__content,
+.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .dropdown__content,
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li,
 .new-zanata .bg--highest:hover,
@@ -3485,8 +3481,6 @@ Keep focus while showing and hiding a password field
 .off-canvas__toggle img, .off-canvas__toggle--left img, .off-canvas__toggle--right img, .new-zanata .off-canvas__close img {
   -webkit-border-radius: 3.25em;
   -moz-border-radius: 3.25em;
-  -ms-border-radius: 3.25em;
-  -o-border-radius: 3.25em;
   border-radius: 3.25em;
   max-width: 2.4375em;
 }
@@ -3764,11 +3758,10 @@ Keep focus while showing and hiding a password field
   line-height: 1.08333em;
 }
 .new-zanata .tabs--accent .tabs__nav a.is-active {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(10%, rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.05)));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
   position: relative;
   padding-bottom: 0.975em;
   margin-bottom: -0.1625em;
@@ -3782,18 +3775,16 @@ Keep focus while showing and hiding a password field
   height: 3px;
 }
 .new-zanata .tabs--accent .tabs__nav li:first-child a.is-active {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.05)));
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
 }
 .new-zanata .tabs--accent .tabs__nav .tab__end a.is-active {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(10%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
 }
 .new-zanata .tabs--accent .tabs__content {
   z-index: 0;
@@ -4251,8 +4242,6 @@ Keep focus while showing and hiding a password field
   line-height: 1.39286em;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   display: inline-block;
   padding: 0 0.37143em;
@@ -4331,8 +4320,6 @@ Keep focus while showing and hiding a password field
   box-shadow: 0 1px 0 rgba(65, 105, 136, 0.09);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
 }
 .new-zanata input[type="submit"]:hover, .new-zanata input[type="submit"]:focus,
@@ -4425,17 +4412,13 @@ Keep focus while showing and hiding a password field
   text-align: center;
 }
 .new-zanata .button--inline-right {
-  -webkit-border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0;
   -moz-border-radius: 0 2px 2px 0;
-  -ms-border-radius: 0 2px 2px 0;
-  -o-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
 }
 .new-zanata .button--inline-left {
-  -webkit-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px;
   -moz-border-radius: 2px 0 0 2px;
-  -ms-border-radius: 2px 0 0 2px;
-  -o-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
 }
 .new-zanata .button--primary, .new-zanata .button--secondary,
@@ -4606,8 +4589,6 @@ a.loader:active, a.loader--large:active, a.loader--huge:active {
 a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   background-color: rgba(65, 105, 136, 0.03);
   cursor: default;
@@ -4998,4 +4979,38 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     width: 8.125em;
     height: 8.125em;
   }
+}
+
+.new-zanata .auto-complete {
+  border-width: initial;
+  border-style: initial;
+  border-color: initial;
+  display: initial;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-color: initial;
+  font-size: inherit;
+}
+.new-zanata .auto-complete input {
+  background-image: none;
+}
+.new-zanata *.rf-au-fnt {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+.new-zanata *.rf-au-shdw {
+  border: none;
+}
+.new-zanata *.rf-au-itm-sel {
+  border-style: none;
+}
+.new-zanata .rf-au-shdw-t, .new-zanata .rf-au-shdw-l, .new-zanata .rf-au-shdw-r, .new-zanata .rf-au-shdw-b {
+  background-image: none;
+  background-position: 0%;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
