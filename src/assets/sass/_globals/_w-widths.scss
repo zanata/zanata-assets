@@ -1,11 +1,4 @@
 //
-// Width Component - Default Settings
-// ----------------------------------
-// Change in _settings.scss
-
-$width-prefix : "w"                       !default;
-$width-mod    : "#{$width-prefix}#{$mod}" !default;
-
 // Setup for widths
 
 @mixin width-setup($namespace: "") {
@@ -175,6 +168,14 @@ $width-mod    : "#{$width-prefix}#{$mod}" !default;
 // Huge and up Widths
 @include breakpoint($gte-huge) {
   @include width-setup('-h');
+}
+
+.w--r-1 {
+  width: rhythm(1);
+}
+
+.w--r-2 {
+  width: rhythm(2);
 }
 
 }

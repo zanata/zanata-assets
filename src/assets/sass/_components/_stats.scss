@@ -7,7 +7,7 @@
 
 .stats--small {
   @extend .stats;
-  @include adjust-font-size-to(11px);
+  @include adjust-font-size-to(12px);
 }
 
 .stats--large {
@@ -19,14 +19,14 @@
 }
 
 .stats__figure {
-  @include font-size(46px);
+  @include font-size(42px);
   display: block;
   font-weight: 300;
   line-height: 1em;
 }
 
 .stats__unit {
-  @include font-size(20px);
+  @include font-size(18px);
   display: block;
   white-space: nowrap;
   font-weight: 300;

@@ -37,10 +37,10 @@ root: "../../../"
       <nav class="tabs__nav">
         <ul>
           <li><a href="#"><i class="i i--clock"></i> <span class="is-hidden--m-down">Activity</span></a></li>
-          <li><a href="../"><i class="i i--language"></i> <span class="is-hidden--m-down">Languages</span><span class="txt--neutral"> 21</span></a></li>
-          <li><a href="#"><i class="i i--project"></i> <span class="is-hidden--m-down">Projects</span><span class="txt--neutral"> 102</span></a></li>
-          <li><a href="#"><i class="i i--users"></i> <span class="is-hidden--m-down">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
-          <li><a href="#" class="is-active"><i class="i i--settings"></i> <span class="is-hidden--m-down">Settings</span></a></li>
+          <li><a href="../languages"><i class="i i--language"></i> <span class="is-hidden--m-down">Languages</span><span class="txt--neutral"> 21</span></a></li>
+          <li><a href="../projects"><i class="i i--project"></i> <span class="is-hidden--m-down">Projects</span><span class="txt--neutral"> 102</span></a></li>
+          <li><a href="../maintainers"><i class="i i--users"></i> <span class="is-hidden--m-down">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
+          <li><a href="../settings" class="is-active"><i class="i i--settings"></i> <span class="is-hidden--m-down">Settings</span></a></li>
           <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i i--bell"></i><span class="is-invisible">Notifications</span></a></li>
         </ul>
       </nav>
@@ -51,7 +51,7 @@ root: "../../../"
             <li class="is-active"><a href="#tab-vertical-1"><i class="i i--settings"></i> <span class="is-hidden--m-down">General</span></a></li>
             <li><a href="#tab-vertical-2"><i class="i i--language"></i> <span class="is-hidden--m-down">Languages</span></a></li>
             <li><a href="#tab-vertical-3"><i class="i i--project"></i> <span class="is-hidden--m-down">Projects</span></a></li>
-            <li><a href="#tab-vertical-3"><i class="i i--users"></i> <span class="is-hidden--m-down">Maintainers</span></a></li>
+            <li><a href="#tab-vertical-4"><i class="i i--users"></i> <span class="is-hidden--m-down">Maintainers</span></a></li>
           </ul>
           <ul class="tabs__content js-tabs-content">
             <li class="is-active" id="tab-vertical-1">
@@ -70,14 +70,13 @@ root: "../../../"
                   <textarea>Translations of Software and Documentation projects related to RHEL7</textarea>
                 </div>
                 <div class="l--push-top-1">
-                  <input type="submit" value="Save changes" class="l--push-right-half button--primary">
-                  <a href="#">Cancel</a>
+                  <input type="submit" value="Update general settings" class="l--push-right-half button--primary">
                 </div>
               </form>
             </li>
             <li id="tab-vertical-2">
               <h2 class="l--push-all-0 gamma d--bottom l--push-bottom-half">Languages</h2>
-              <h3 class="delta">Active Languages</h3>
+              <!-- <h3 class="delta">Active Languages</h3> -->
               <ul class="list--slat l--push-top-half">
                 <li class="reveal">Assamese <span class="txt--meta">[as]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
                 <li class="reveal">Chinese (Simplified Han) <span class="txt--meta">[zh-Hans]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
@@ -85,14 +84,43 @@ root: "../../../"
                 <li class="reveal">English (United States) <span class="txt--meta">[en-US]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
 
                 <li>
+                  <label for="settings-project">Add a Language</label>
                   <div class="g--tight">
-                    <div class="g__item w--7-10"><input type="text" placeholder="Add a Language"></div>
+                    <div class="g__item w--7-10"><input type="text" placeholder="Search Languages"></div>
                     <div class="g__item w--3-10"><button class="button--full">Add</button></div>
                   </div>
                 </li>
               </ul>
             </li>
-            <li id="tab-vertical-3">Tab content here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. more tab content and maybe some more.</li>
+            <li id="tab-vertical-3">
+              <h2 class="l--push-all-0 gamma d--bottom l--push-bottom-half">Projects</h2>
+              <ul class="list--slat l--push-top-half">
+                <li class="reveal"><a href="#">Project Name <i class="i i--version"></i> 10.0.2 <i class="i i--document"></i> 23</a><a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+                <li class="reveal"><a href="#">Project Name <i class="i i--version"></i> 10.0.2 <i class="i i--document"></i> 23</a><a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+
+                <li>
+                  <label for="settings-project">Add a Project</label>
+                  <div class="g--tight">
+                    <div class="g__item w--7-10"><input type="text" placeholder="Search projects" id="settings-project"></div>
+                    <div class="g__item w--3-10"><button class="button--full">Add</button></div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li id="tab-vertical-4">
+              <h2 class="l--push-all-0 gamma d--bottom l--push-bottom-half">Maintainers</h2>
+              <ul class="list--slat l--push-top-half">
+                <li class="reveal"><span class="w--r-1 bx--round l--push-right-quarter"><img src="http://placehold.it/48"></span>Ankit Patel <span class="txt--meta">@ankitpatel</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+                <li class="reveal"><span class="w--r-1 bx--round l--push-right-quarter"><img src="http://placehold.it/48"></span>Another Person <span class="txt--meta">@beachchick253</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+                <li>
+                  <label for="settings-project">Add a Maintainer</label>
+                  <div class="g--tight">
+                    <div class="g__item w--7-10"><input type="text" placeholder="Search users"></div>
+                    <div class="g__item w--3-10"><button class="button--full">Add</button></div>
+                  </div>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>

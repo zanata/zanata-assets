@@ -1,19 +1,10 @@
-//
-// Lists Component - Default Settings
-// ----------------------------------
-// Change in _settings.scss
-
-$list-prefix : "list";
-$list-el     : #{$list-prefix}#{$el};
-$list-mod    : #{$list-prefix}#{$mod};
-
 /*
 ### Lists
 
 #### No Bullet List
 
 ```
-<ul class="#{$list-mod}no-bullets">
+<ul class="list--no-bullets">
   <li>List item</li>
   <li>List item</li>
   <li>List item</li>
@@ -27,7 +18,7 @@ $list-mod    : #{$list-prefix}#{$mod};
 .new-zanata {
 
 //ul
-.#{$list-mod}no-bullets {
+.list--no-bullets {
   @include no-bullets;
   margin: 0;
   padding: 0;
@@ -57,7 +48,7 @@ $list-mod    : #{$list-prefix}#{$mod};
 
 nav ul,
 nav ol {
-  @extend .#{$list-mod}no-bullets;
+  @extend .list--no-bullets;
 }
 
 }
@@ -67,7 +58,7 @@ nav ol {
 #### Horizontal List
 
 ```
-<ul class="#{$list-mod}horizontal">
+<ul class="list--horizontal">
   <li>List item</li>
   <li>List item</li>
   <li>List item</li>
@@ -81,8 +72,8 @@ nav ol {
 .new-zanata {
 
 //ul
-.#{$list-mod}horizontal {
-  @extend .#{$list-mod}no-bullets;
+.list--horizontal {
+  @extend .list--no-bullets;
   li {
     display: inline-block;
     margin-right: rhythm(.25);
@@ -99,7 +90,7 @@ nav ol {
 #### List Slat
 
 ```
-<ul class="#{$list-mod}slat">
+<ul class="list--slat">
   <li>Standard</li>
   <li><a href="#">Link</a></li>
   <li><span class="list__title">Title</span></li>
@@ -112,8 +103,8 @@ nav ol {
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$list-mod}slat {
-  @extend .#{$list-mod}no-bullets;
+.list--slat {
+  @extend .list--no-bullets;
   > li {
     @include old-ie {
       border-top: 1px solid $color-secondary-20;
@@ -142,7 +133,7 @@ nav ol {
 #### List Slat Horizontal
 
 ```
-<ul class="#{$list-mod}slat-horizontal">
+<ul class="list--slat-horizontal">
   <li>Standard</li>
   <li><a href="#">Link</a></li>
   <li><span class="list__title">Title</span></li>
@@ -155,8 +146,8 @@ nav ol {
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$list-mod}slat-horizontal {
-  @extend .#{$list-mod}no-bullets;
+.list--slat-horizontal {
+  @extend .list--no-bullets;
   > li {
     @include old-ie {
       border-left: 1px solid $color-secondary-20;
@@ -194,7 +185,7 @@ nav ol {
 #### List Block Links
 
 ```
-<ul class="#{$list-mod}block-links">
+<ul class="list--block-links">
   <li><a href="#">Link</a></li>
   <li><a href="#">Link</a></li>
   <li><a href="#">Link</a></li>
@@ -207,7 +198,7 @@ nav ol {
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$list-mod}block-links {
+.list--block-links {
   li {
     padding: 0;
     > a {
@@ -220,7 +211,7 @@ nav ol {
   }
 }
 
-.txt--invert.#{$list-mod}block-links li > a {
+.txt--invert.list--block-links li > a {
   &:hover {
     background-color: darken($color-base-font, 5%) !important;
   }

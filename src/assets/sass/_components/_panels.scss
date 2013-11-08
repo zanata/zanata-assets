@@ -12,6 +12,9 @@
 
 .panels--2 {
   @extend .panels;
+  @include backface-visibility(hidden);
+  position: relative;
+  left: 0;
   width: 200%;
   @include breakpoint($gte-large) {
     width: 100%;
