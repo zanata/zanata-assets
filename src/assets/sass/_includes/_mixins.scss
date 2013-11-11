@@ -30,3 +30,14 @@
   $font-size: $font-size / 1px;
   max-width: ($characters / $font-size) * 8em; // This just seems to get good estimates
 }
+
+@mixin ellipsis($no-wrap: true) {
+  @if $no-wrap {
+    white-space: nowrap;
+  }
+  overflow: hidden;
+  @include experimental(text-overflow, ellipsis, not -moz, not -webkit, -o, -ms, not -khtml, official);
+  @if $experimental-support-for-mozilla and $use-mozilla-ellipsis-binding {
+    -moz-binding: stylesheet-url(unquote("xml/ellipsis.xml#ellipsis"));
+  }
+}

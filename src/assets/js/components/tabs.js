@@ -30,7 +30,7 @@ $(function () {
   // Search for hash in url and change to that tab
   if (window.location.hash && $('.js-tabs')) {
     var targetHash = window.location.hash,
-        $target = $(targetHash);
+        $target = $(targetHash),
         $parent = $target.parents('.js-tabs');
     $parent
       .find('.js-tabs-content li, .js-tabs-nav li')

@@ -2497,15 +2497,16 @@ $(function () {
   $('.js-tabs').on('click', '.js-tabs-nav a', function(e) {
     e.preventDefault();
     if (!$(this).parent().hasClass('is-active')) {
-      var $parent = $(this).parents('.js-tabs'),
-          targetHash = $(this).attr('href'),
-          targetID = targetHash.replace('#', '');
+      var $this = $(this),
+          targetHash = $this.attr('href'),
+          targetID = targetHash.replace('#', ''),
+          $parent = $this.parents('.js-tabs');
       // Remove all is-active classes
       $parent
         .find('.js-tabs-content li, .js-tabs-nav li')
         .removeClass('is-active');
       // Add relevant is-active classes
-      $(this).parent().addClass('is-active');
+      $this.parent().addClass('is-active');
       // Add hashed class so we can remove ID to change the hash
       $(targetHash)
         .addClass('is-active is-hashed')
@@ -2523,12 +2524,13 @@ $(function () {
   // Search for hash in url and change to that tab
   if (window.location.hash && $('.js-tabs')) {
     var targetHash = window.location.hash,
-        $parent = $(targetHash).parents('.js-tabs');
+        $target = $(targetHash),
+        $parent = $target.parents('.js-tabs');
     $parent
       .find('.js-tabs-content li, .js-tabs-nav li')
       .removeClass('is-active');
     $('a[href="' + targetHash + '"]').parent().addClass('is-active');
-    $(targetHash).addClass('is-active');
+    $target.addClass('is-active');
   }
 
 });
