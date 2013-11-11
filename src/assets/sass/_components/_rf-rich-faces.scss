@@ -25,8 +25,8 @@
       <div class="rf-au-lst-scrl">
         <ul id="settings-projects-form:newVersionField:newVersionItems" class="rf-au-lst-ul">
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp rf-au-itm-sel rf-au-opt-sel">Test Project (ignore) <span class="txt--meta">1.0</span></li>
-          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">Test Project (ignore) - 1.1</li>
-          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - <span class="txt--meta">5.1.0</span></li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">Test Project (ignore) 1.1</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes <span class="txt--meta">5.1.0</span></li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.0</li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.1</li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">ZTESTING - Python Test Project (ignore) - 1.0</li>
@@ -109,149 +109,149 @@
 
 // Old Stuff
 
-*.rf-au-fnt {
-  color: #000000;
-  font-size: 11px;
-  font-family: Arial, Verdana, sans-serif ;
-}
-input.rf-au-inp {
-  background-color: #ffffff;
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/inputBackgroundImage.png.seam?v=4.3.4.Final&db=eAFjZL!AyMDN-P8!4!9XH34A6f!!GZgAYigKtQ__&ln=org.richfaces.images");
-  background-position: 1px 1px;
-  background-repeat: no-repeat;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-  vertical-align: top;
-  width: 182px;
-}
-*.rf-au {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #C0C0C0;
-  display: inline-block;
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/autocompleteFieldGradient.png.seam?v=4.3.4.Final&db=eAFj!P!qw4!!QAAAIt4Hzw__&ln=org.richfaces.images");
-  background-repeat: repeat-x;
-  background-position: top left;
-  background-color: #ffffff;
-  font-size: 1px;
-}
-*.rf-au-fld-btn {
-  display: inline-block;
-  font-size: 1px;
-  white-space: nowrap;
-  vertical-align: top;
-}
-*.rf-au-btn {
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/autocompleteButtonGradient.png.seam?v=4.3.4.Final&db=eAFj!D!5yNP!XqVbARuZBbA_&ln=org.richfaces.images");
-  background-repeat: repeat-x;
-  background-position: top left;
-  background-color: #4A75B5;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #C0C0C0;
-  display: inline-block;
-  vertical-align: top;
-}
-*.rf-au-btn-arrow, *.rf-au-btn-arrow-dis {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/comboDownButton.png.seam?v=4.3.4.Final&db=eAH7z8DAAAAEAAEA&ln=org.richfaces.images");
-  cursor: pointer;
-  width: 15px;
-  height: 16px;
-  display: inline-block;
-}
-*.rf-au-btn-arrow-dis {
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/comboDisabledDownButton.png.seam?v=4.3.4.Final&db=eAH7f-DAAQAIgANA&ln=org.richfaces.images");
-  cursor: default;
-}
-*.rf-au-lst-cord {
-  position: absolute;
-  z-index: 10000;
-  display: none;
-}
-*.rf-au-lst-dcrtn {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #C0C0C0;
-  padding: 0px;
-  background-color: #FFFFFF;
-}
-*.rf-au-lst-scrl {
-  overflow: auto;
-  overflow-x: hidden;
-  width: 200px;
-  max-height: 100px;
-  min-height: 20px;
-}
-*.rf-au-itm {
-  cursor: default;
-  padding: 2px;
-}
-*.rf-au-itm-sel {
-  background-color: #4A75B5;
-  border-width: 1px;
-  border-style: dotted;
-  border-color: #000000;
-  padding: 1px;
-}
-*.rf-au-opt {
-  white-space: nowrap;
-  list-style-type: none;
-}
-*.rf-au-opt-sel {
-  width: 100%;
-}
-*.rf-au-shdw {
-  border: 0px solid red;
-  display: inline-block;
-  position: absolute;
-  float: left;
-  padding: 6px 6px 6px 6px;
-  top: -6px;
-  left: -7px;
-}
-*.rf-au-shdw-t {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: top left;
-  position: absolute;
-  width: 6px;
-  top: 0px;
-  bottom: 6px;
-  left: 0px;
-}
-*.rf-au-shdw-l {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: bottom left;
-  position: absolute;
-  height: 6px;
-  bottom: 0px;
-  left: 0px;
-  right: 6px;
-}
-*.rf-au-shdw-r {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: bottom right;
-  position: absolute;
-  width: 6px;
-  top: 6px;
-  bottom: 0px;
-  right: 0px;
-}
-*.rf-au-shdw-b {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: right top;
-  position: absolute;
-  height: 6px;
-  top: 0px;
-  left: 6px;
-  right: 0px;
-}
-*.rf-au-lst-ul {
-  margin: 0px;
-  padding: 0px;
-}
-*.rf-au-tbl {
-  border-spacing: 0px;
-}
+// *.rf-au-fnt {
+//   color: #000000;
+//   font-size: 11px;
+//   font-family: Arial, Verdana, sans-serif ;
+// }
+// input.rf-au-inp {
+//   background-color: #ffffff;
+//   background-image: url("http://10.64.40.17:8080/zanata/rfRes/inputBackgroundImage.png.seam?v=4.3.4.Final&db=eAFjZL!AyMDN-P8!4!9XH34A6f!!GZgAYigKtQ__&ln=org.richfaces.images");
+//   background-position: 1px 1px;
+//   background-repeat: no-repeat;
+//   border: 0px;
+//   margin: 0px;
+//   padding: 0px;
+//   vertical-align: top;
+//   width: 182px;
+// }
+// *.rf-au {
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: #C0C0C0;
+//   display: inline-block;
+//   background-image: url("http://10.64.40.17:8080/zanata/rfRes/autocompleteFieldGradient.png.seam?v=4.3.4.Final&db=eAFj!P!qw4!!QAAAIt4Hzw__&ln=org.richfaces.images");
+//   background-repeat: repeat-x;
+//   background-position: top left;
+//   background-color: #ffffff;
+//   font-size: 1px;
+// }
+// *.rf-au-fld-btn {
+//   display: inline-block;
+//   font-size: 1px;
+//   white-space: nowrap;
+//   vertical-align: top;
+// }
+// *.rf-au-btn {
+//   background-image: url("http://10.64.40.17:8080/zanata/rfRes/autocompleteButtonGradient.png.seam?v=4.3.4.Final&db=eAFj!D!5yNP!XqVbARuZBbA_&ln=org.richfaces.images");
+//   background-repeat: repeat-x;
+//   background-position: top left;
+//   background-color: #4A75B5;
+//   border-left-width: 1px;
+//   border-left-style: solid;
+//   border-left-color: #C0C0C0;
+//   display: inline-block;
+//   vertical-align: top;
+// }
+// *.rf-au-btn-arrow, *.rf-au-btn-arrow-dis {
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-image: url("http://10.64.40.17:8080/zanata/rfRes/comboDownButton.png.seam?v=4.3.4.Final&db=eAH7z8DAAAAEAAEA&ln=org.richfaces.images");
+//   cursor: pointer;
+//   width: 15px;
+//   height: 16px;
+//   display: inline-block;
+// }
+// *.rf-au-btn-arrow-dis {
+//   background-image: url("http://10.64.40.17:8080/zanata/rfRes/comboDisabledDownButton.png.seam?v=4.3.4.Final&db=eAH7f-DAAQAIgANA&ln=org.richfaces.images");
+//   cursor: default;
+// }
+// *.rf-au-lst-cord {
+//   position: absolute;
+//   z-index: 10000;
+//   display: none;
+// }
+// *.rf-au-lst-dcrtn {
+//   border-width: 1px;
+//   border-style: solid;
+//   border-color: #C0C0C0;
+//   padding: 0px;
+//   background-color: #FFFFFF;
+// }
+// *.rf-au-lst-scrl {
+//   overflow: auto;
+//   overflow-x: hidden;
+//   width: 200px;
+//   max-height: 100px;
+//   min-height: 20px;
+// }
+// *.rf-au-itm {
+//   cursor: default;
+//   padding: 2px;
+// }
+// *.rf-au-itm-sel {
+//   background-color: #4A75B5;
+//   border-width: 1px;
+//   border-style: dotted;
+//   border-color: #000000;
+//   padding: 1px;
+// }
+// *.rf-au-opt {
+//   white-space: nowrap;
+//   list-style-type: none;
+// }
+// *.rf-au-opt-sel {
+//   width: 100%;
+// }
+// *.rf-au-shdw {
+//   border: 0px solid red;
+//   display: inline-block;
+//   position: absolute;
+//   float: left;
+//   padding: 6px 6px 6px 6px;
+//   top: -6px;
+//   left: -7px;
+// }
+// *.rf-au-shdw-t {
+//   background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
+//   background-position: top left;
+//   position: absolute;
+//   width: 6px;
+//   top: 0px;
+//   bottom: 6px;
+//   left: 0px;
+// }
+// *.rf-au-shdw-l {
+//   background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
+//   background-position: bottom left;
+//   position: absolute;
+//   height: 6px;
+//   bottom: 0px;
+//   left: 0px;
+//   right: 6px;
+// }
+// *.rf-au-shdw-r {
+//   background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
+//   background-position: bottom right;
+//   position: absolute;
+//   width: 6px;
+//   top: 6px;
+//   bottom: 0px;
+//   right: 0px;
+// }
+// *.rf-au-shdw-b {
+//   background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
+//   background-position: right top;
+//   position: absolute;
+//   height: 6px;
+//   top: 0px;
+//   left: 6px;
+//   right: 0px;
+// }
+// *.rf-au-lst-ul {
+//   margin: 0px;
+//   padding: 0px;
+// }
+// *.rf-au-tbl {
+//   border-spacing: 0px;
+// }

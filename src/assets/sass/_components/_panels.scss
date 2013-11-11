@@ -20,8 +20,17 @@
     width: 100%;
   }
   @include breakpoint($lte-medium) {
+    .panels__panel:nth-child(2) {
+      visibility: hidden;
+    }
     &.panel__active-2 {
       @include transform3d(translate3d(-50%,0,0));
+      .panels__panel:first-child {
+        visibility: hidden;
+      }
+      .panels__panel:nth-child(2) {
+        visibility: visible;
+      }
     }
   }
 }

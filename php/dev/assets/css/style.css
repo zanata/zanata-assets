@@ -5566,6 +5566,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 @media (max-width: 79.3125em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000323}}
+  .new-zanata .panels--2 .panels__panel:nth-child(2) {
+    visibility: hidden;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000326}}
   .new-zanata .panels--2.panel__active-2 {
     -webkit-transform: translate3d(-50%, 0, 0);
     -moz-transform: translate3d(-50%, 0, 0);
@@ -5573,40 +5577,48 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     -o-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000328}}
+  .new-zanata .panels--2.panel__active-2 .panels__panel:first-child {
+    visibility: hidden;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000331}}
+  .new-zanata .panels--2.panel__active-2 .panels__panel:nth-child(2) {
+    visibility: visible;
+  }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000338}}
 .new-zanata .panels--3 {
   width: 300%;
 }
 @media (min-width: 79.375em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000338}}
   .new-zanata .panels--3 {
     width: 150%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000352}}
 .new-zanata .panels__panel {
   margin-left: 1px;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000355}}
 .new-zanata .panels__panel:first-child {
   margin-left: 0;
   z-index: 10;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000359}}
 .new-zanata .panels__panel:nth-child(2) {
   z-index: 9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000362}}
 .new-zanata .panels__panel:nth-child(3) {
   z-index: 8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000365}}
 .new-zanata .panels__panel:nth-child(4) {
   z-index: 7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000373}}
 .new-zanata .panels__panel__header {
   border-bottom: 2px solid rgba(65, 105, 136, 0.1);
   background-color: white;
@@ -5614,7 +5626,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   z-index: 101;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000382}}
 .new-zanata .panels__panel__item.is-active {
   background-color: #fefefe;
 }
@@ -5663,8 +5675,8 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
       <div class="rf-au-lst-scrl">
         <ul id="settings-projects-form:newVersionField:newVersionItems" class="rf-au-lst-ul">
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp rf-au-itm-sel rf-au-opt-sel">Test Project (ignore) <span class="txt--meta">1.0</span></li>
-          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">Test Project (ignore) - 1.1</li>
-          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - <span class="txt--meta">5.1.0</span></li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">Test Project (ignore) 1.1</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes <span class="txt--meta">5.1.0</span></li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.0</li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.1</li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">ZTESTING - Python Test Project (ignore) - 1.0</li>
@@ -5732,194 +5744,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .new-zanata .rf-au-lst-scrl {
   max-height: 10.5625em;
   min-height: 1.625em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003112}}
-*.rf-au-fnt {
-  color: #000000;
-  font-size: 11px;
-  font-family: Arial, Verdana, sans-serif;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003117}}
-input.rf-au-inp {
-  background-color: #ffffff;
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/inputBackgroundImage.png.seam?v=4.3.4.Final&db=eAFjZL!AyMDN-P8!4!9XH34A6f!!GZgAYigKtQ__&ln=org.richfaces.images");
-  background-position: 1px 1px;
-  background-repeat: no-repeat;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-  vertical-align: top;
-  width: 182px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003128}}
-*.rf-au {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #C0C0C0;
-  display: inline-block;
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/autocompleteFieldGradient.png.seam?v=4.3.4.Final&db=eAFj!P!qw4!!QAAAIt4Hzw__&ln=org.richfaces.images");
-  background-repeat: repeat-x;
-  background-position: top left;
-  background-color: #ffffff;
-  font-size: 1px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003139}}
-*.rf-au-fld-btn {
-  display: inline-block;
-  font-size: 1px;
-  white-space: nowrap;
-  vertical-align: top;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003145}}
-*.rf-au-btn {
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/autocompleteButtonGradient.png.seam?v=4.3.4.Final&db=eAFj!D!5yNP!XqVbARuZBbA_&ln=org.richfaces.images");
-  background-repeat: repeat-x;
-  background-position: top left;
-  background-color: #4A75B5;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #C0C0C0;
-  display: inline-block;
-  vertical-align: top;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003156}}
-*.rf-au-btn-arrow, *.rf-au-btn-arrow-dis {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/comboDownButton.png.seam?v=4.3.4.Final&db=eAH7z8DAAAAEAAEA&ln=org.richfaces.images");
-  cursor: pointer;
-  width: 15px;
-  height: 16px;
-  display: inline-block;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003165}}
-*.rf-au-btn-arrow-dis {
-  background-image: url("http://10.64.40.17:8080/zanata/rfRes/comboDisabledDownButton.png.seam?v=4.3.4.Final&db=eAH7f-DAAQAIgANA&ln=org.richfaces.images");
-  cursor: default;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003169}}
-*.rf-au-lst-cord {
-  position: absolute;
-  z-index: 10000;
-  display: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003174}}
-*.rf-au-lst-dcrtn {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #C0C0C0;
-  padding: 0px;
-  background-color: #FFFFFF;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003181}}
-*.rf-au-lst-scrl {
-  overflow: auto;
-  overflow-x: hidden;
-  width: 200px;
-  max-height: 100px;
-  min-height: 20px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003188}}
-*.rf-au-itm {
-  cursor: default;
-  padding: 2px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003192}}
-*.rf-au-itm-sel {
-  background-color: #4A75B5;
-  border-width: 1px;
-  border-style: dotted;
-  border-color: #000000;
-  padding: 1px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003199}}
-*.rf-au-opt {
-  white-space: nowrap;
-  list-style-type: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003203}}
-*.rf-au-opt-sel {
-  width: 100%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003206}}
-*.rf-au-shdw {
-  border: 0px solid red;
-  display: inline-block;
-  position: absolute;
-  float: left;
-  padding: 6px 6px 6px 6px;
-  top: -6px;
-  left: -7px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003215}}
-*.rf-au-shdw-t {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: top left;
-  position: absolute;
-  width: 6px;
-  top: 0px;
-  bottom: 6px;
-  left: 0px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003224}}
-*.rf-au-shdw-l {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: bottom left;
-  position: absolute;
-  height: 6px;
-  bottom: 0px;
-  left: 0px;
-  right: 6px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003233}}
-*.rf-au-shdw-r {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: bottom right;
-  position: absolute;
-  width: 6px;
-  top: 6px;
-  bottom: 0px;
-  right: 0px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003242}}
-*.rf-au-shdw-b {
-  background-image: url("http://10.64.40.17:8080/zanata/javax.faces.resource/combo_list_shadow.png.seam?ln=org.richfaces");
-  background-position: right top;
-  position: absolute;
-  height: 6px;
-  top: 0px;
-  left: 6px;
-  right: 0px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003251}}
-*.rf-au-lst-ul {
-  margin: 0px;
-  padding: 0px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_rf-rich-faces\.scss}line{font-family:\00003255}}
-*.rf-au-tbl {
-  border-spacing: 0px;
 }
 
 /*
