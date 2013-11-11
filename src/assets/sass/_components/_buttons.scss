@@ -29,21 +29,21 @@ button,
   color: tint($color-base-font, 10%);
   font-weight: 600;
   @include inline-block;
-  border: 1px solid rgba($color-secondary, .2);
-  @include box-shadow(0 1px 0 rgba($color-secondary, .09));
+  border: 1px solid rgba($color-secondary, .15);
+  @include box-shadow(inset 0 -1px 0 rgba($color-secondary, .09));
   @include border-radius($default-border-radius);
   &:hover,
   &:focus {
     background-color: $white;
-    border-color: rgba($color-secondary, .27);
-    @include box-shadow(0 1px 0 rgba($color-secondary, .27));
+    border-color: rgba($color-secondary, .25);
+    @include box-shadow(inset 0 -2px 0 rgba($color-secondary, .17));
     color: $black;
     outline: none;
   }
   &:active,
   &.is-active {
     background-color: shade($color-bg, 3%);
-    @include box-shadow(inset 0 2px 0 rgba($color-secondary, .2));
+    @include box-shadow(inset 0 2px 0 rgba($color-secondary, .17));
   }
 }
 

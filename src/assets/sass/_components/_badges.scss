@@ -1,22 +1,20 @@
-//
-// Badge Component - Default Settings
-// ----------------------------------
-// Change in _settings.scss
-
-$badge-prefix : "badge";
-$badge-el     : #{$badge-prefix}#{$el};
-$badge-mod    : #{$badge-prefix}#{$mod};
-
 /*
 
 ### Badges
+
+```example
+<span class="badge">6</span>
+<span class="badge--highlight">highlight</span>
+<span class="badge--warning">3</span>
+<span class="badge--danger">missing</span>
+```
 
 */
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$badge-prefix} {
+.badge {
   @include adjust-font-size-to(14px, 0.75);
   @include border-radius($default-border-radius);
   display: inline-block;
@@ -25,37 +23,49 @@ $badge-mod    : #{$badge-prefix}#{$mod};
   font-weight: 400;
 }
 
-.#{$badge-el}container {
+.badge__container {
   position: relative;
   z-index: 1;
   display: inline-block;
 }
 
-.#{$badge-mod}inline {
+.badge--inline {
   position: relative;
   margin-top: rhythm(.125,14px);
 }
 
-.#{$badge-mod}highlight {
-  @extend .#{$badge-prefix};
+.badge--highlight {
+  @extend .badge;
   background-color: $color-highlight;
   color: $white;
 }
 
-%#{$badge-mod}position {
-  @extend .#{$badge-prefix};
+.badge--danger {
+  @extend .badge;
+  background-color: $color-danger;
+  color: $white;
+}
+
+.badge--warning {
+  @extend .badge;
+  background-color: $color-warning;
+  color: $white;
+}
+
+%badge--position {
+  @extend .badge;
   position: absolute;
   z-index: 2;
 }
 
-.#{$badge-mod}bl {
-  @extend %#{$badge-mod}position;
+.badge--bl {
+  @extend %badge--position;
   bottom: rhythm(-.125, 14px);
   left: rhythm(-.125, 14px);
 }
 
-.#{$badge-mod}br {
-  @extend %#{$badge-mod}position;
+.badge--br {
+  @extend %badge--position;
   bottom: rhythm(-.125, 14px);
   right: rhythm(-.125, 14px);
 }

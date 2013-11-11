@@ -9,6 +9,13 @@ Used to show extra information on hover of the parent element
   <p class="reveal__target">Look at me!</p>
 </div>
 
+<ul>
+  <li class="reveal--list-item">
+    <p>Hover over this area to show the hidden items</p>
+    <span class="reveal__target"><i class="i i--remove"></i></span>
+  </li>
+</ul>
+
 ```
 
 */
@@ -30,6 +37,16 @@ Used to show extra information on hover of the parent element
   .no-touch & {
     @extend .is-transition;
     @include opacity(0);
+  }
+}
+
+.reveal--list-item {
+  @extend .reveal;
+  position: relative;
+  padding-right: rhythm(1) !important;
+  .reveal__target {
+    position: absolute;
+    right: 0;
   }
 }
 

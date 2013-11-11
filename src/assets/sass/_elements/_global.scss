@@ -67,9 +67,9 @@ html.new-zanata,
   // @include breakpoint($gte-large) {
   //   font-size: $large-font-size;
   // }
-  // @include breakpoint($gte-huge) {
-  //   font-size: $huge-font-size;
-  // }
+  @include breakpoint($gte-huge) {
+    font-size: $huge-font-size;
+  }
 }
 
 body.new-zanata,

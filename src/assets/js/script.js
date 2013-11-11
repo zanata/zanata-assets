@@ -1,4 +1,4 @@
-/*! zanata-proto - v0.1.0 - 2013-11-08
+/*! zanata-proto - v0.1.0 - 2013-11-11
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Luke Brooker; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07
@@ -2493,17 +2493,42 @@ $(function () {
 });
 
 $(function () {
+
   $('.js-tabs').on('click', '.js-tabs-nav a', function(e) {
     e.preventDefault();
     if (!$(this).parent().hasClass('is-active')) {
+      var $parent = $(this).parents('.js-tabs'),
+          targetHash = $(this).attr('href'),
+          targetID = targetHash.replace('#', '');
       // Remove all is-active classes
-      $(this).parents('.js-tabs')
+      $parent
         .find('.js-tabs-content li, .js-tabs-nav li')
         .removeClass('is-active');
       // Add relevant is-active classes
       $(this).parent().addClass('is-active');
-      $($(this).attr('href'))
-        .addClass('is-active');
+      // Add hashed class so we can remove ID to change the hash
+      $(targetHash)
+        .addClass('is-active is-hashed')
+        .removeAttr('id');
+      // Change URL hash
+      window.location.hash = targetHash;
+      // Add ID back
+      $parent
+        .find('.is-hashed')
+        .attr('id', targetID)
+        .removeClass('is-hashed');
     }
   });
+
+  // Search for hash in url and change to that tab
+  if (window.location.hash && $('.js-tabs')) {
+    var targetHash = window.location.hash,
+        $parent = $(targetHash).parents('.js-tabs');
+    $parent
+      .find('.js-tabs-content li, .js-tabs-nav li')
+      .removeClass('is-active');
+    $('a[href="' + targetHash + '"]').parent().addClass('is-active');
+    $(targetHash).addClass('is-active');
+  }
+
 });
