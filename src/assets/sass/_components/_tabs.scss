@@ -99,7 +99,7 @@
 
 .tabs--accent {
   .tabs__nav {
-    @extend .bg--pop-highest;
+    @extend .bg--highest;
     z-index: 1;
     position: relative;
     a {
@@ -114,14 +114,13 @@
       }
     }
     a:hover {
-      @extend .bg--higher;
+      @extend .bg--high;
     }
     a.is-active {
       @extend .bg--higher;
-      @include background-image(linear-gradient(left, rgba(0,0,0,0.05) 0%,rgba(255,255,255,0) 10%,rgba(255,255,255,0) 90%,rgba(0,0,0,0.05) 100%));
+      border-left: 1px solid rgba($color-secondary, .15);
+      border-right: 1px solid rgba($color-secondary, .15);
       position: relative;
-      padding-bottom: rhythm(0.6);
-      margin-bottom: rhythm(-0.1);
       &:after {
         @extend .bg--higher;
         content: "";
@@ -133,11 +132,11 @@
       }
     }
     li:first-child a.is-active {
-      @include background-image(linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(0,0,0,0.05) 100%));
+      border-left: none;
     }
     // li
     .tab__end a.is-active {
-      @include background-image(linear-gradient(left, rgba(0,0,0,0.05) 0%,rgba(255,255,255,0) 10%,rgba(255,255,255,0) 100%));
+      border-right: none;
     }
   }
   .tabs__content {

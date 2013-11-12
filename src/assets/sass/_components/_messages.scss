@@ -3,7 +3,7 @@
 ### Messages
 
 ```
-<div class="message--danger l--push-bottom-half">Oh noes! Don't do that.</div>
+<div class="message--danger l--push-bottom-half">Oh noes! Don't do that.<a href="#" class="message__remove"><i class="i i--remove"></i></a></div>
 
 <div class="message--warning l--push-bottom-half">Ooooh that looks risky…</div>
 
@@ -14,12 +14,66 @@
 <div class="message--highlight l--push-bottom-half">Oh look, a squirrel!</div>
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
+
+<div class="message--danger message--removable message--global l--push-bottom-half">Oh noes! Don't do that.<a href="#" class="message__remove"><i class="i i--remove"></i></a></div>
 ```
 
 */
 
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
 .message {
   padding: rhythm(.25) rhythm(.5);
+  position: relative;
+}
+
+.message--removable {
+  padding-right: rhythm(2);
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    right: rhythm(1.5);
+    top: 0;
+    border-left: 1px solid rgba($black, 0.03);
+  }
+}
+
+.message__remove {
+  @include opacity(.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: rhythm(.25);
+  width: rhythm(1.5);
+  color: inherit;
+  text-align: center;
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+  }
+  &:hover {
+    @include opacity(1);
+  }
+}
+
+.message--global {
+  @extend .is-transition;
+  position: fixed;
+  z-index: 9999;
+  top: rhythm(.5);
+  left: rhythm(.5);
+  right: rhythm(.5);
+  margin: 0 auto;
+  max-width: rhythm(20);
+  @include box-shadow($default-box-shadow);
+  @include transform3d(translateY(rhythm(-3)));
+  &.is-active {
+    @include transform3d(translateY(0));
+  }
 }
 
 .message--danger {
@@ -58,3 +112,4 @@
   @extend .txt--neutral;
 }
 
+}

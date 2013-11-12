@@ -35,7 +35,7 @@ $(function () {
     $parent
       .find('.js-tabs-content li, .js-tabs-nav li')
       .removeClass('is-active');
-    $('a[href="' + targetHash + '"]').parent().addClass('is-active');
+    $('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
     $target.addClass('is-active');
   }
 

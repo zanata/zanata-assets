@@ -33,18 +33,51 @@
   display: table-cell;
 }
 
-
 /*
 
 #### Box Block
 
-Display an element with `display:block`
+Display an element with `display: block`
 
+```example
 <span class="bx--block ph__block">Box Block</span>
+```
+
+*/
+
+.bx--block {
+  display: block !important;
+}
+
+/*
+
+#### Box Inline
+
+Display an element with `display: inline`
+
+```example
+<span class="bx--inline ph__block">Box Inline</span>
+```
+
+*/
+
+.bx--inline {
+  display: inline !important;
+}
+
+/*
+
+#### Box Inline Block
+
+Display an element with `display: inline-block`
+
+```example
+<span class="bx--inline-block ph__block">Box Inline Block</span>
+```
 
 */
 
 
-.bx--block {
-  display: block !important;
+.bx--inline-block {
+  display: inline-block !important;
 }

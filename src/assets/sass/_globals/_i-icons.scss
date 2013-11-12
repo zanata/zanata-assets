@@ -83,7 +83,7 @@ $icons: list, code, review, language, star, notification, project, document, clo
 }
 .i--clipboard,
 .i--project {
-	// margin-top: rhythm(-.12);
+	margin-top: rhythm(-.08);
 	&:before {
 		content: "\e005";
 	}
@@ -141,10 +141,13 @@ $icons: list, code, review, language, star, notification, project, document, clo
  {
 	content: "\e014";
 }
-.i--cross:before,
-.i--remove:before,
-.i--cancel:before {
-	content: "\e006";
+.i--cross,
+.i--remove,
+.i--cancel {
+	margin-top: rhythm(-.06);
+	&:before {
+		content: "\e006";
+	}
 }
 .i--checkmark:before {
 	content: "\e00d";

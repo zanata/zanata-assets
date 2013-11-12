@@ -4,6 +4,7 @@
 .panels__container {
   position: relative;
   overflow: hidden;
+  min-height: rhythm(12);
 }
 
 .panels {
@@ -65,9 +66,6 @@
   &:nth-child(4) {
     z-index: 7;
   }
-  &.is-active {
-
-  }
 }
 
 .panels__panel__header {
@@ -78,20 +76,17 @@
   position: relative;
 }
 
+.panels__panel__sub-header {
+  border-bottom: 2px solid rgba($color-secondary, .1);
+  background-color: $color-bg-lighter;
+  padding: rhythm(.5);
+  z-index: 101;
+  position: relative;
+}
+
 .panels__panel__item {
   &.is-active {
     background-color: $color-bg-lighter;
-    // position: relative;
-    // z-index: 100;
-    // &:after {
-    //   content: "";
-    //   width: 1px;
-    //   height: 100%;
-    //   background-color: $color-bg-lighter;
-    //   position: absolute;
-    //   right: -1px;
-    //   top: 0;
-    // }
   }
 }
 

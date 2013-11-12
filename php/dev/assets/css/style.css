@@ -2712,16 +2712,16 @@ Centered grids align grid items centrally without needing to use push or pull cl
   left: -9999px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_is-states\.scss}line{font-family:\0000356}}
-.new-zanata .is-transition, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .no-touch .new-zanata .dropdown__content > li:hover,
+.new-zanata .is-transition, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .panel, .new-zanata .tabs--accent .tabs__nav a:hover, .no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high:hover,
-.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__content,
+.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .panel__sub-header, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__content,
 .new-zanata .bg--higher:hover,
-.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .rf-au-lst-dcrtn,
+.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .panel__header, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .dropdown__toggle, .new-zanata input[type="submit"],
+.new-zanata .bg--lowest--hover:hover, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--large,
@@ -3043,33 +3043,37 @@ Centered grids align grid items centrally without needing to use push or pull cl
   opacity: 1;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\0000357}}
-.new-zanata .bg--high, .new-zanata .bg--pop-high, .no-touch .new-zanata .dropdown__content > li:hover,
+.new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .panel, .new-zanata .tabs--accent .tabs__nav a:hover, .no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--pop-high:hover,
+.new-zanata .panel:hover,
+.new-zanata .tabs--accent .tabs__nav a:hover,
 .no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high--hover:hover {
   background-color: #f5f7f8;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\0000364}}
-.new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__content,
+.new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .panel__sub-header, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__content,
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
-.new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .panel__sub-header:hover,
+.new-zanata .tabs--accent .tabs__nav a.is-active:hover,
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .dropdown__content:hover,
 .new-zanata .bg--higher--hover:hover {
   background-color: #fefefe;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\0000371}}
-.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown__content, .new-zanata .rf-au-lst-dcrtn,
+.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown__content, .new-zanata .panel__header, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
 .new-zanata .bg--pop-highest:hover,
-.new-zanata .tabs--accent .tabs__nav:hover,
 .new-zanata .tabs--vertical .tabs__nav > li.is-active:hover,
 .new-zanata .tabs--vertical .tabs__content > li:hover,
 .new-zanata .dropdown.is-active .dropdown__toggle:hover,
 .new-zanata .dropdown__content:hover,
+.new-zanata .panel__header:hover,
 .new-zanata .rf-au-lst-dcrtn:hover,
+.new-zanata .tabs--accent .tabs__nav:hover,
 .new-zanata .bg--highest--hover:hover {
   background-color: white;
 }
@@ -3089,21 +3093,21 @@ Centered grids align grid items centrally without needing to use push or pull cl
   background-color: #7a8c9e;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\0000394}}
-.new-zanata .bg--pop-high {
+.new-zanata .bg--pop-high, .new-zanata .panel {
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
   position: relative;
   z-index: 2;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\00003102}}
-.new-zanata .bg--pop-higher {
+.new-zanata .bg--pop-higher, .new-zanata .panel__sub-header {
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
   position: relative;
   z-index: 3;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bg-background\.scss}line{font-family:\00003110}}
-.new-zanata .bg--pop-highest, .new-zanata .tabs--accent .tabs__nav, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown__content, .new-zanata .rf-au-lst-dcrtn {
+.new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .dropdown__content, .new-zanata .panel__header, .new-zanata .rf-au-lst-dcrtn {
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
   position: relative;
@@ -3208,14 +3212,48 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Box Block
 
-Display an element with `display:block`
+Display an element with `display: block`
 
+```example
 <span class="bx--block ph__block">Box Block</span>
+```
 
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bx-box\.scss}line{font-family:\0000348}}
 .bx--block {
   display: block !important;
+}
+
+/*
+
+#### Box Inline
+
+Display an element with `display: inline`
+
+```example
+<span class="bx--inline ph__block">Box Inline</span>
+```
+
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bx-box\.scss}line{font-family:\0000364}}
+.bx--inline {
+  display: inline !important;
+}
+
+/*
+
+#### Box Inline Block
+
+Display an element with `display: inline-block`
+
+```example
+<span class="bx--inline-block ph__block">Box Inline Block</span>
+```
+
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_bx-box\.scss}line{font-family:\0000381}}
+.bx--inline-block {
+  display: inline-block !important;
 }
 
 @-webkit-keyframes pulse {
@@ -3431,6 +3469,11 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--notification:before {
   content: "\e004";
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\0000385}}
+.new-zanata .i--clipboard,
+.new-zanata .i--project {
+  margin-top: -0.13em;
+}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\0000387}}
 .new-zanata .i--clipboard:before,
 .new-zanata .i--project:before {
@@ -3492,49 +3535,55 @@ All icons also need the class `.i` added to them.
   content: "\e014";
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003146}}
+.new-zanata .i--cross,
+.new-zanata .i--remove,
+.new-zanata .i--cancel {
+  margin-top: -0.0975em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003148}}
 .new-zanata .i--cross:before,
 .new-zanata .i--remove:before,
 .new-zanata .i--cancel:before {
   content: "\e006";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003152}}
 .new-zanata .i--checkmark:before {
   content: "\e00d";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003155}}
 .new-zanata .i--arrow-left:before {
   content: "\e010";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003158}}
 .new-zanata .i--arrow-down:before {
   content: "\e012";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003161}}
 .new-zanata .i--arrow-up:before {
   content: "\e013";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003164}}
 .new-zanata .i--arrow-right:before {
   content: "\e015";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003168}}
 .new-zanata .i--star-2:before,
 .new-zanata .i--star-outline:before {
   content: "\e016";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003168}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003171}}
 .new-zanata .i--search:before {
   content: "\e017";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003174}}
 .new-zanata .i--keyboard:before {
   content: "\e018";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003177}}
 .new-zanata .i--comment:before {
   content: "\e019";
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_globals\/_i-icons\.scss}line{font-family:\00003182}}
 .new-zanata .i--version:before {
   content: "\e01a";
 }
@@ -4334,16 +4383,11 @@ Keep focus while showing and hiding a password field
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003119}}
 .new-zanata .tabs--accent .tabs__nav a.is-active {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(10%, rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.05)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  border-left: 1px solid rgba(65, 105, 136, 0.15);
+  border-right: 1px solid rgba(65, 105, 136, 0.15);
   position: relative;
-  padding-bottom: 0.975em;
-  margin-bottom: -0.1625em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003124}}
 .new-zanata .tabs--accent .tabs__nav a.is-active:after {
   content: "";
   position: absolute;
@@ -4352,23 +4396,15 @@ Keep focus while showing and hiding a password field
   width: 100%;
   height: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003134}}
 .new-zanata .tabs--accent .tabs__nav li:first-child a.is-active {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.05)));
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
-  background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(0, 0, 0, 0.05) 100%);
+  border-left: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003138}}
 .new-zanata .tabs--accent .tabs__nav .tab__end a.is-active {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(10%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 100%);
+  border-right: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003142}}
 .new-zanata .tabs--accent .tabs__content {
   z-index: 0;
 }
@@ -4393,7 +4429,7 @@ Keep focus while showing and hiding a password field
 ```
 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003174}}
 .new-zanata .tabs--vertical .tabs__nav {
   float: left;
   width: 16%;
@@ -4401,49 +4437,49 @@ Keep focus while showing and hiding a password field
   z-index: 5;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003181}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003180}}
 .new-zanata .tabs--vertical .tabs__nav > li {
   display: block;
   border: 1px solid transparent;
   border-bottom-color: 2px;
   z-index: 4;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003186}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003185}}
 .new-zanata .tabs--vertical .tabs__nav > li.is-active {
   border-right-width: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003189}}
 .new-zanata .tabs--vertical .tabs__nav > li > a {
   padding: 0.8125em;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003196}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003195}}
 .new-zanata .tabs--vertical .tabs__content {
   float: left;
   width: 84%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003199}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003198}}
 .new-zanata .tabs--vertical .tabs__content > li {
   display: none;
   padding: 0.8125em;
   min-height: 16.25em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003203}}
 .new-zanata .tabs--vertical .tabs__content > li.is-active {
   display: block;
 }
 @media (min-width: 46.25em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003210}}
   .new-zanata .tabs--vertical .tabs__content > li {
     padding: 1.625em;
   }
 }
 @media (min-width: 79.375em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003217}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003216}}
   .new-zanata .tabs--vertical .tabs__nav {
     width: 20% !important;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_tabs\.scss}line{font-family:\00003219}}
   .new-zanata .tabs--vertical .tabs__content {
     width: 80% !important;
   }
@@ -4856,7 +4892,7 @@ Keep focus while showing and hiding a password field
 ### Messages
 
 ```
-<div class="message--danger l--push-bottom-half">Oh noes! Don't do that.</div>
+<div class="message--danger l--push-bottom-half">Oh noes! Don't do that.<a href="#" class="message__remove"><i class="i i--remove"></i></a></div>
 
 <div class="message--warning l--push-bottom-half">Ooooh that looks risky…</div>
 
@@ -4867,12 +4903,76 @@ Keep focus while showing and hiding a password field
 <div class="message--highlight l--push-bottom-half">Oh look, a squirrel!</div>
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
+
+<div class="message--danger message--removable message--global l--push-bottom-half">Oh noes! Don't do that.<a href="#" class="message__remove"><i class="i i--remove"></i></a></div>
 ```
 
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000321}}
-.message, .message--danger, .message--warning, .message--unsure, .message--success, .message--highlight, .message--neutral {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000326}}
+.new-zanata .message, .new-zanata .message--danger, .new-zanata .message--warning, .new-zanata .message--unsure, .new-zanata .message--success, .new-zanata .message--highlight, .new-zanata .message--neutral {
   padding: 0.40625em 0.8125em;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000331}}
+.new-zanata .message--removable {
+  padding-right: 3.25em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000333}}
+.new-zanata .message--removable:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  right: 2.4375em;
+  top: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.03);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000344}}
+.new-zanata .message__remove {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.40625em;
+  width: 2.4375em;
+  color: inherit;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000355}}
+.new-zanata .message__remove:hover, .new-zanata .message__remove:active, .new-zanata .message__remove:focus {
+  color: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000358}}
+.new-zanata .message__remove:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000363}}
+.new-zanata .message--global {
+  position: fixed;
+  z-index: 9999;
+  top: 0.8125em;
+  left: 0.8125em;
+  right: 0.8125em;
+  margin: 0 auto;
+  max-width: 32.5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-4.875em);
+  -moz-transform: translateY(-4.875em);
+  -ms-transform: translateY(-4.875em);
+  -o-transform: translateY(-4.875em);
+  transform: translateY(-4.875em);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_messages\.scss}line{font-family:\0000374}}
+.new-zanata .message--global.is-active {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
 }
 
 /*
@@ -5542,12 +5642,233 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   line-height: 1em;
 }
 
+/*
+
+### Panels
+
+```example
+<div class="g">
+  <div class="g__item w--1-2-h l--push-v-1">
+    <div class="panel">
+      <div class="tabs--accent">
+        <nav class="tabs__nav panel__header">
+          <ul>
+            <li>
+              <a href="#" class="is-active"><i aria-hidden="true" class="i i--infinity"></i><span class="is-invisible">All</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--star"></i><span class="is-invisible">Starred</span></a>
+            </li>
+            <li class="tab__end">
+              <a href="#"><i aria-hidden="true" class="i i--plus i i--large"></i><span class="is-invisible">New Project</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="tabs__content">
+          <header class="l--pad-all-half panel__sub-header">
+            <div class="g--tight">
+              <div class="g__item w--6-10 w--6-10-s">
+                <h2 class="delta heading--secondary">All Projects</h2>
+              </div>
+              <div class="g__item w--4-10 w--4-10-s txt--align-right txt--s-align-right">
+                <span class="txt--meta">5 of 12 <i aria-hidden="true" class="i i--clipboard"></i></span>
+                <div class="dropdown dropdown--inline dropdown--right">
+                  <div class="dropdown__toggle" href="#">
+                    <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li class="dropdown__header">Sort by:</li>
+                    <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
+                    <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <ul class="list--no-bullets">
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panel\.scss}line{font-family:\00003220}}
+.new-zanata .panel__header {
+  border-width: 0 0 2px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panel\.scss}line{font-family:\00003225}}
+.new-zanata .panel__sub-header {
+  border-width: 0 0 2px 0;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\000034}}
 .new-zanata .panels__container {
   position: relative;
   overflow: hidden;
+  min-height: 19.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000314}}
 .new-zanata .panels--2 {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -5559,17 +5880,17 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   width: 200%;
 }
 @media (min-width: 79.375em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000314}}
   .new-zanata .panels--2 {
     width: 100%;
   }
 }
 @media (max-width: 79.3125em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000324}}
   .new-zanata .panels--2 .panels__panel:nth-child(2) {
     visibility: hidden;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000327}}
   .new-zanata .panels--2.panel__active-2 {
     -webkit-transform: translate3d(-50%, 0, 0);
     -moz-transform: translate3d(-50%, 0, 0);
@@ -5577,48 +5898,48 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     -o-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000329}}
   .new-zanata .panels--2.panel__active-2 .panels__panel:first-child {
     visibility: hidden;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000332}}
   .new-zanata .panels--2.panel__active-2 .panels__panel:nth-child(2) {
     visibility: visible;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000339}}
 .new-zanata .panels--3 {
   width: 300%;
 }
 @media (min-width: 79.375em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000339}}
   .new-zanata .panels--3 {
     width: 150%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000353}}
 .new-zanata .panels__panel {
   margin-left: 1px;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000356}}
 .new-zanata .panels__panel:first-child {
   margin-left: 0;
   z-index: 10;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000360}}
 .new-zanata .panels__panel:nth-child(2) {
   z-index: 9;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000363}}
 .new-zanata .panels__panel:nth-child(3) {
   z-index: 8;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000366}}
 .new-zanata .panels__panel:nth-child(4) {
   z-index: 7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000371}}
 .new-zanata .panels__panel__header {
   border-bottom: 2px solid rgba(65, 105, 136, 0.1);
   background-color: white;
@@ -5626,7 +5947,15 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   z-index: 101;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000379}}
+.new-zanata .panels__panel__sub-header {
+  border-bottom: 2px solid rgba(65, 105, 136, 0.1);
+  background-color: #fefefe;
+  padding: 0.8125em;
+  z-index: 101;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/lukebrooker\/Sites\/zanata-assets\/src\/assets\/sass\/_components\/_panels\.scss}line{font-family:\0000388}}
 .new-zanata .panels__panel__item.is-active {
   background-color: #fefefe;
 }
@@ -5744,6 +6073,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .new-zanata .rf-au-lst-scrl {
   max-height: 10.5625em;
   min-height: 1.625em;
+  overflow: hidden;
 }
 
 /*
