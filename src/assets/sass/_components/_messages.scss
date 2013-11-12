@@ -15,7 +15,7 @@
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
 
-<div class="message--danger message--removable message--global l--push-bottom-half">Oh noes! Don't do that.<a href="#" class="message__remove"><i class="i i--remove"></i></a></div>
+<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable">Oh noes! Don't do that.<a href="#" class="message__remove js-message-remove"><i class="i i--remove"></i></a></div>
 ```
 
 */
@@ -48,6 +48,8 @@
   right: 0;
   padding: rhythm(.25);
   width: rhythm(1.5);
+  height: rhythm(1.5);
+  line-height: rhythm(1.5);
   color: inherit;
   text-align: center;
   &:hover,
@@ -58,19 +60,23 @@
   &:hover {
     @include opacity(1);
   }
+  .i {
+    line-height: rhythm(1);
+  }
 }
 
 .message--global {
   @extend .is-transition;
-  position: fixed;
-  z-index: 9999;
-  top: rhythm(.5);
-  left: rhythm(.5);
-  right: rhythm(.5);
-  margin: 0 auto;
-  max-width: rhythm(20);
+  @include opacity(.95);
   @include box-shadow($default-box-shadow);
   @include transform3d(translateY(rhythm(-3)));
+  position: fixed;
+  top: rhythm(.25);
+  right: rhythm(.5);
+  left: rhythm(.5);
+  z-index: 9999;
+  margin: 0 auto;
+  max-width: rhythm(20);
   &.is-active {
     @include transform3d(translateY(0));
   }

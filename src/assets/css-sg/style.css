@@ -2349,7 +2349,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   top: -9999px;
   left: -9999px;
 }
-.new-zanata .is-transition, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .panel, .new-zanata .tabs--accent .tabs__nav a:hover, .no-touch .new-zanata .dropdown__content > li:hover,
+.new-zanata .is-transition, .new-zanata .is-removed, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .panel, .new-zanata .tabs--accent .tabs__nav a:hover, .no-touch .new-zanata .dropdown__content > li:hover,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .panel__sub-header, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after, .new-zanata .dropdown__content,
 .new-zanata .bg--higher:hover,
@@ -2375,6 +2375,15 @@ Centered grids align grid items centrally without needing to use push or pull cl
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+}
+.new-zanata .is-removed {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transform: scale3d(1, 0, 1);
+  -moz-transform: scale3d(1, 0, 1);
+  -ms-transform: scale3d(1, 0, 1);
+  -o-transform: scale3d(1, 0, 1);
+  transform: scale3d(1, 0, 1);
 }
 
 /*
@@ -3085,11 +3094,6 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--pencil:before,
 .new-zanata .i--edit:before {
   content: "\e014";
-}
-.new-zanata .i--cross,
-.new-zanata .i--remove,
-.new-zanata .i--cancel {
-  margin-top: -0.0975em;
 }
 .new-zanata .i--cross:before,
 .new-zanata .i--remove:before,
@@ -4280,7 +4284,7 @@ Keep focus while showing and hiding a password field
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
 
-<div class="message--danger message--removable message--global l--push-bottom-half">Oh noes! Don't do that.<a href="#" class="message__remove"><i class="i i--remove"></i></a></div>
+<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable">Oh noes! Don't do that.<a href="#" class="message__remove js-message-remove"><i class="i i--remove"></i></a></div>
 ```
 
 */
@@ -4308,6 +4312,8 @@ Keep focus while showing and hiding a password field
   right: 0;
   padding: 0.40625em;
   width: 2.4375em;
+  height: 2.4375em;
+  line-height: 2.4375em;
   color: inherit;
   text-align: center;
 }
@@ -4318,14 +4324,12 @@ Keep focus while showing and hiding a password field
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+.new-zanata .message__remove .i, .new-zanata .message__remove .i--large, .new-zanata .message__remove .i--huge {
+  line-height: 1.625em;
+}
 .new-zanata .message--global {
-  position: fixed;
-  z-index: 9999;
-  top: 0.8125em;
-  left: 0.8125em;
-  right: 0.8125em;
-  margin: 0 auto;
-  max-width: 32.5em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+  opacity: 0.95;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -4334,6 +4338,13 @@ Keep focus while showing and hiding a password field
   -ms-transform: translateY(-4.875em);
   -o-transform: translateY(-4.875em);
   transform: translateY(-4.875em);
+  position: fixed;
+  top: 0.40625em;
+  right: 0.8125em;
+  left: 0.8125em;
+  z-index: 9999;
+  margin: 0 auto;
+  max-width: 32.5em;
 }
 .new-zanata .message--global.is-active {
   -webkit-transform: translateY(0);

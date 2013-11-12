@@ -144,7 +144,6 @@ $icons: list, code, review, language, star, notification, project, document, clo
 .i--cross,
 .i--remove,
 .i--cancel {
-	margin-top: rhythm(-.06);
 	&:before {
 		content: "\e006";
 	}

@@ -57,4 +57,10 @@
   @include transition($default-transition);
 }
 
+.is-removed {
+  @extend .is-transition;
+  @include opacity(0);
+  @include transform(scale3d(1,0,1));
+}
+
 }
