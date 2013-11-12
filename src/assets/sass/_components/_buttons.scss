@@ -11,6 +11,8 @@
 <p><a class="button--inline-left">Button Inline Left</a></p>
 <p><a class="button--primary">Button Primary</a></p>
 <p><a class="button--secondary">Button Secondary</a></p>
+<p><a class="button--success">Button Success</a></p>
+<p><a class="button--warning">Button Warning</a></p>
 <p><a class="button--danger">Button Danger</a></p>
 ```
 
@@ -121,6 +123,34 @@ input.button--secondary, {
   &:active,
   &.is-active {
     background-color: shade($color-secondary, 20%);
+  }
+}
+
+.button--success,
+input.button--success, {
+  @extend .button--primary;
+  background-color: shade($color-success, 5%);
+  &:hover,
+  &:focus {
+    background-color: $color-success;
+  }
+  &:active,
+  &.is-active {
+    background-color: shade($color-success, 20%);
+  }
+}
+
+.button--warning,
+input.button--warning, {
+  @extend .button--primary;
+  background-color: shade($color-warning, 5%);
+  &:hover,
+  &:focus {
+    background-color: $color-warning;
+  }
+  &:active,
+  &.is-active {
+    background-color: shade($color-warning, 20%);
   }
 }
 

@@ -824,9 +824,10 @@ a:hover,
 
 */
 .new-zanata hr {
-  height: 1.625em;
+  height: 0;
   width: 100%;
   border: 0;
+  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
   margin: 1.625em 0;
   background: transparent;
 }
@@ -2367,6 +2368,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .button--inline-left,
 .new-zanata .button--primary,
 .new-zanata .button--secondary,
+.new-zanata .button--success,
+.new-zanata .button--warning,
 .new-zanata .button--danger, .no-touch .new-zanata .reveal__target, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3, .new-zanata .header__logo-only .header__site-logo {
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -3361,9 +3364,6 @@ Sub-headings can be used when placing a heading under another heading.
   margin-left: 0.8125em;
   text-align: right;
   color: #416988;
-}
-.new-zanata .list--stats a {
-  display: block;
 }
 
 /*
@@ -4415,6 +4415,8 @@ Keep focus while showing and hiding a password field
 <p><a class="button--inline-left">Button Inline Left</a></p>
 <p><a class="button--primary">Button Primary</a></p>
 <p><a class="button--secondary">Button Secondary</a></p>
+<p><a class="button--success">Button Success</a></p>
+<p><a class="button--warning">Button Warning</a></p>
 <p><a class="button--danger">Button Danger</a></p>
 ```
 
@@ -4429,6 +4431,8 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--inline-left,
 .new-zanata .button--primary,
 .new-zanata .button--secondary,
+.new-zanata .button--success,
+.new-zanata .button--warning,
 .new-zanata .button--danger,
 .new-zanata input.button--primary {
   padding: 0.40625em 0.8125em;
@@ -4463,6 +4467,8 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--inline-left:hover,
 .new-zanata .button--primary:hover,
 .new-zanata .button--secondary:hover,
+.new-zanata .button--success:hover,
+.new-zanata .button--warning:hover,
 .new-zanata .button--danger:hover,
 .new-zanata .button:focus,
 .new-zanata .button--large:focus,
@@ -4472,6 +4478,8 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--inline-left:focus,
 .new-zanata .button--primary:focus,
 .new-zanata .button--secondary:focus,
+.new-zanata .button--success:focus,
+.new-zanata .button--warning:focus,
 .new-zanata .button--danger:focus {
   background-color: white;
   border-color: rgba(65, 105, 136, 0.25);
@@ -4492,6 +4500,8 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--inline-left:active,
 .new-zanata .button--primary:active,
 .new-zanata .button--secondary:active,
+.new-zanata .button--success:active,
+.new-zanata .button--warning:active,
 .new-zanata .button--danger:active,
 .new-zanata .button.is-active,
 .new-zanata .is-active.button--large,
@@ -4501,18 +4511,20 @@ Keep focus while showing and hiding a password field
 .new-zanata .is-active.button--inline-left,
 .new-zanata .is-active.button--primary,
 .new-zanata .is-active.button--secondary,
+.new-zanata .is-active.button--success,
+.new-zanata .is-active.button--warning,
 .new-zanata .is-active.button--danger {
   background-color: #e8eaec;
   -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
 }
-.new-zanata .button[disbaled], .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--danger,
+.new-zanata .button[disbaled], .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--success, .new-zanata [disbaled].button--warning, .new-zanata [disbaled].button--danger,
 .new-zanata button[disabled],
 .new-zanata input[type="submit"][disabled] {
   pointer-events: none;
 }
-.new-zanata .button[disbaled]:hover, .new-zanata [disbaled].button--large:hover, .new-zanata [disbaled].button--huge:hover, .new-zanata [disbaled].button--full:hover, .new-zanata [disbaled].button--inline-right:hover, .new-zanata [disbaled].button--inline-left:hover, .new-zanata [disbaled].button--primary:hover, .new-zanata [disbaled].button--secondary:hover, .new-zanata [disbaled].button--danger:hover, .new-zanata .button[disbaled]:focus, .new-zanata [disbaled].button--large:focus, .new-zanata [disbaled].button--huge:focus, .new-zanata [disbaled].button--full:focus, .new-zanata [disbaled].button--inline-right:focus, .new-zanata [disbaled].button--inline-left:focus, .new-zanata [disbaled].button--primary:focus, .new-zanata [disbaled].button--secondary:focus, .new-zanata [disbaled].button--danger:focus, .new-zanata .button[disbaled]:active, .new-zanata [disbaled].button--large:active, .new-zanata [disbaled].button--huge:active, .new-zanata [disbaled].button--full:active, .new-zanata [disbaled].button--inline-right:active, .new-zanata [disbaled].button--inline-left:active, .new-zanata [disbaled].button--primary:active, .new-zanata [disbaled].button--secondary:active, .new-zanata [disbaled].button--danger:active, .new-zanata .button[disbaled].is-active, .new-zanata [disbaled].is-active.button--large, .new-zanata [disbaled].is-active.button--huge, .new-zanata [disbaled].is-active.button--full, .new-zanata [disbaled].is-active.button--inline-right, .new-zanata [disbaled].is-active.button--inline-left, .new-zanata [disbaled].is-active.button--primary, .new-zanata [disbaled].is-active.button--secondary, .new-zanata [disbaled].is-active.button--danger,
+.new-zanata .button[disbaled]:hover, .new-zanata [disbaled].button--large:hover, .new-zanata [disbaled].button--huge:hover, .new-zanata [disbaled].button--full:hover, .new-zanata [disbaled].button--inline-right:hover, .new-zanata [disbaled].button--inline-left:hover, .new-zanata [disbaled].button--primary:hover, .new-zanata [disbaled].button--secondary:hover, .new-zanata [disbaled].button--success:hover, .new-zanata [disbaled].button--warning:hover, .new-zanata [disbaled].button--danger:hover, .new-zanata .button[disbaled]:focus, .new-zanata [disbaled].button--large:focus, .new-zanata [disbaled].button--huge:focus, .new-zanata [disbaled].button--full:focus, .new-zanata [disbaled].button--inline-right:focus, .new-zanata [disbaled].button--inline-left:focus, .new-zanata [disbaled].button--primary:focus, .new-zanata [disbaled].button--secondary:focus, .new-zanata [disbaled].button--success:focus, .new-zanata [disbaled].button--warning:focus, .new-zanata [disbaled].button--danger:focus, .new-zanata .button[disbaled]:active, .new-zanata [disbaled].button--large:active, .new-zanata [disbaled].button--huge:active, .new-zanata [disbaled].button--full:active, .new-zanata [disbaled].button--inline-right:active, .new-zanata [disbaled].button--inline-left:active, .new-zanata [disbaled].button--primary:active, .new-zanata [disbaled].button--secondary:active, .new-zanata [disbaled].button--success:active, .new-zanata [disbaled].button--warning:active, .new-zanata [disbaled].button--danger:active, .new-zanata .button[disbaled].is-active, .new-zanata [disbaled].is-active.button--large, .new-zanata [disbaled].is-active.button--huge, .new-zanata [disbaled].is-active.button--full, .new-zanata [disbaled].is-active.button--inline-right, .new-zanata [disbaled].is-active.button--inline-left, .new-zanata [disbaled].is-active.button--primary, .new-zanata [disbaled].is-active.button--secondary, .new-zanata [disbaled].is-active.button--success, .new-zanata [disbaled].is-active.button--warning, .new-zanata [disbaled].is-active.button--danger,
 .new-zanata button[disabled]:hover,
 .new-zanata button[disabled]:focus,
 .new-zanata button[disabled]:active,
@@ -4556,10 +4568,14 @@ Keep focus while showing and hiding a password field
   border-radius: 2px 0 0 2px;
 }
 .new-zanata .button--primary, .new-zanata .button--secondary,
-.new-zanata input.button--secondary, .new-zanata .button--danger,
+.new-zanata input.button--secondary, .new-zanata .button--success,
+.new-zanata input.button--success, .new-zanata .button--warning,
+.new-zanata input.button--warning, .new-zanata .button--danger,
 .new-zanata input.button--danger,
 .new-zanata input.button--primary,
 .new-zanata input.button--secondary,
+.new-zanata input.button--success,
+.new-zanata input.button--warning,
 .new-zanata input.button--danger {
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
@@ -4568,12 +4584,16 @@ Keep focus while showing and hiding a password field
   background-color: #4a97d1;
   color: #f2f2f2;
 }
-.new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--danger:hover, .new-zanata .button--primary:focus, .new-zanata .button--secondary:focus, .new-zanata .button--danger:focus,
+.new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--success:hover, .new-zanata .button--warning:hover, .new-zanata .button--danger:hover, .new-zanata .button--primary:focus, .new-zanata .button--secondary:focus, .new-zanata .button--success:focus, .new-zanata .button--warning:focus, .new-zanata .button--danger:focus,
 .new-zanata input.button--primary:hover,
 .new-zanata input.button--secondary:hover,
+.new-zanata input.button--success:hover,
+.new-zanata input.button--warning:hover,
 .new-zanata input.button--danger:hover,
 .new-zanata input.button--primary:focus,
 .new-zanata input.button--secondary:focus,
+.new-zanata input.button--success:focus,
+.new-zanata input.button--warning:focus,
 .new-zanata input.button--danger:focus {
   -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
@@ -4582,12 +4602,16 @@ Keep focus while showing and hiding a password field
   background-color: #4e9fdd;
   color: white;
 }
-.new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--danger:active, .new-zanata .button--primary.is-active, .new-zanata .is-active.button--secondary, .new-zanata .is-active.button--danger,
+.new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--success:active, .new-zanata .button--warning:active, .new-zanata .button--danger:active, .new-zanata .button--primary.is-active, .new-zanata .is-active.button--secondary, .new-zanata .is-active.button--success, .new-zanata .is-active.button--warning, .new-zanata .is-active.button--danger,
 .new-zanata input.button--primary:active,
 .new-zanata input.button--secondary:active,
+.new-zanata input.button--success:active,
+.new-zanata input.button--warning:active,
 .new-zanata input.button--danger:active,
 .new-zanata input.button--primary.is-active,
 .new-zanata input.is-active.button--secondary,
+.new-zanata input.is-active.button--success,
+.new-zanata input.is-active.button--warning,
 .new-zanata input.is-active.button--danger {
   background-color: #3e7fb0;
   -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
@@ -4607,6 +4631,34 @@ Keep focus while showing and hiding a password field
 .new-zanata input.button--secondary:active,
 .new-zanata input.button--secondary.is-active {
   background-color: #34546c;
+}
+.new-zanata .button--success,
+.new-zanata input.button--success {
+  background-color: #6aa084;
+}
+.new-zanata .button--success:hover, .new-zanata .button--success:focus,
+.new-zanata input.button--success:hover,
+.new-zanata input.button--success:focus {
+  background-color: #70a98b;
+}
+.new-zanata .button--success:active, .new-zanata .button--success.is-active,
+.new-zanata input.button--success:active,
+.new-zanata input.button--success.is-active {
+  background-color: #59876f;
+}
+.new-zanata .button--warning,
+.new-zanata input.button--warning {
+  background-color: #d77b4a;
+}
+.new-zanata .button--warning:hover, .new-zanata .button--warning:focus,
+.new-zanata input.button--warning:hover,
+.new-zanata input.button--warning:focus {
+  background-color: #e3824e;
+}
+.new-zanata .button--warning:active, .new-zanata .button--warning.is-active,
+.new-zanata input.button--warning:active,
+.new-zanata input.button--warning.is-active {
+  background-color: #b5683e;
 }
 .new-zanata .button--danger,
 .new-zanata input.button--danger {
