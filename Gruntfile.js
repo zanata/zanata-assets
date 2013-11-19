@@ -59,49 +59,18 @@ var srcFolder = './src/',
       },
     },
     compass: {
-      // Temporary, This will get moved and deleted from src
-      dev: {
-        options: {
-          require : ['compass', 'breakpoint', 'rgbapng', 'animation'],
-          basePath: srcFolder + assetsFolder,
-          sassDir : 'sass',
-          cssDir: 'css',
-          imagesDir: 'img',
-          fontsDir: 'fonts',
-          javascriptsPath: 'js',
-          outputStyle: 'expanded',
-          noLineComments: false,
-          debugInfo: true,
-          raw: 'enable_sourcemaps = true'
-        }
-      },
-      styleguide: {
+      expanded: {
         // Temporary, This will get moved and deleted from src
         options: {
           require : ['compass', 'breakpoint', 'rgbapng', 'animation'],
           basePath: srcFolder + assetsFolder,
           sassDir : 'sass',
-          cssDir: 'css-sg',
+          cssDir: 'css',
           imagesDir: 'img',
           fontsDir: 'fonts',
           javascriptsPath: 'js',
           outputStyle: 'expanded',
           noLineComments: true
-        }
-      },
-      prod: {
-        options: {
-          require : ['compass', 'breakpoint', 'rgbapng', 'animation'],
-          basePath: srcFolder + assetsFolder,
-          sassDir : 'sass',
-          cssDir: 'css',
-          imagesDir: 'img',
-          fontsDir: 'fonts',
-          javascriptsPath: 'js',
-          outputStyle: 'compressed',
-          noLineComments: true,
-          environment: 'production',
-          debugInfo: false
         }
       },
       clean: {
@@ -119,6 +88,18 @@ var srcFolder = './src/',
           debugInfo: false
         }
       }
+    },
+    cssmin: {
+      prod: {
+        options: {
+          banner: '/* This is a minified css file compiled from Sass. Remove .min in this file name to see expanded css */'
+        },
+        expand: true,
+        cwd: srcFolder + assetsFolder + 'css/',
+        src: ['*.css', '!*.min.css'],
+        dest: srcFolder + assetsFolder + 'css/',
+        ext: '.min.css'
+      },
     },
     // Only used for watching, thus copies to dev folder
     // Except for assets copy
@@ -232,7 +213,7 @@ var srcFolder = './src/',
       },
       sass: {
         files: srcFolder + assetsFolder + 'sass/**/*.scss',
-        tasks: ['compass:dev', 'compass:styleguide', 'copy:css', 'copy:cssSg']
+        tasks: ['compass:expanded', 'copy:css', 'copy:cssSg']
       },
       js: {
         files: ['<%= jshint.vendors.src %>', '<%= jshint.components.src %>'],
@@ -262,18 +243,20 @@ var srcFolder = './src/',
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-open');
+  grunt.loadNpmTasks('grunt-newer');
 
   // Default task.
   grunt.registerTask('default', '-----------------------------------------\nYou should only use tasks from here down.\n-----------------------------------------\n', function() {
     grunt.log.writeln("\n---\nThis does nothing.\nUse `grunt -h` to list available tasks.\n---");
   });
 
-  grunt.registerTask('init', 'The initial tasks need by most others.\nYou shouldn\'t need to run this separately.\n', ['jshint:components', 'concat', 'uglify', 'compass:clean', 'compass:styleguide', 'compass:prod']);
+  grunt.registerTask('init', 'The initial tasks need by most others.\nYou shouldn\'t need to run this separately.\n', ['jshint:components', 'concat', 'uglify', 'compass:expanded']);
 
   // Dev
   grunt.registerTask('dev', 'Build a dev version without watching or running a server.\n', ['init', 'shell:jekyllDev']);
@@ -291,7 +274,7 @@ var srcFolder = './src/',
       grunt.task.run(['init', 'shell:jekyllProd', 'copy:assets']);
     }
     else {
-      grunt.task.run(['init', 'shell:jekyllProd']);
+      grunt.task.run(['compass:clean', 'init', 'cssmin:prod', 'shell:jekyllProd']);
     }
   });
 

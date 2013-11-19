@@ -1,6 +1,6 @@
-/*! zanata-proto - v0.1.0 - 2013-11-07
+/*! zanata-assets - v0.1.0 - 2013-11-19
 * https://github.com/lukebrooker/zanata-proto
-* Copyright (c) 2013 Luke Brooker; Licensed MIT */
+* Copyright (c) 2013 Red Hat; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07
  * http://eightmedia.github.com/hammer.js
  *
@@ -2417,6 +2417,26 @@ $(function () {
   });
 });
 
+$(function () {
+  $(document).on('click', '.js-message-remove', function(e) {
+    var $this = $(this),
+        $parent = $this.parents('.message--removable');
+    e.preventDefault();
+    if($parent.hasClass('is-active')) {
+      $parent.removeClass('is-active');
+      setTimeout(function() {
+        $parent.remove();
+      }, 300);
+    }
+    else {
+      $parent.addClass('is-removed');
+      setTimeout(function() {
+        $parent.remove();
+      }, 300);
+    }
+  });
+});
+
 $(function() {
   var offCanvasToggle = $('[class^=off-canvas__toggle], .off-canvas__close');
 
@@ -2493,17 +2513,44 @@ $(function () {
 });
 
 $(function () {
+
   $('.js-tabs').on('click', '.js-tabs-nav a', function(e) {
     e.preventDefault();
     if (!$(this).parent().hasClass('is-active')) {
+      var $this = $(this),
+          targetHash = $this.attr('href'),
+          targetID = targetHash.replace('#', ''),
+          $parent = $this.parents('.js-tabs');
       // Remove all is-active classes
-      $(this).parents('.js-tabs')
+      $parent
         .find('.js-tabs-content li, .js-tabs-nav li')
         .removeClass('is-active');
       // Add relevant is-active classes
-      $(this).parent().addClass('is-active');
-      $($(this).attr('href'))
-        .addClass('is-active');
+      $this.parent().addClass('is-active');
+      // Add hashed class so we can remove ID to change the hash
+      $(targetHash)
+        .addClass('is-active is-hashed')
+        .removeAttr('id');
+      // Change URL hash
+      window.location.hash = targetHash;
+      // Add ID back
+      $parent
+        .find('.is-hashed')
+        .attr('id', targetID)
+        .removeClass('is-hashed');
     }
   });
+
+  // Search for hash in url and change to that tab
+  if (window.location.hash && $('.js-tabs')) {
+    var targetHash = window.location.hash,
+        $target = $(targetHash),
+        $parent = $target.parents('.js-tabs');
+    $parent
+      .find('.js-tabs-content li, .js-tabs-nav li')
+      .removeClass('is-active');
+    $('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
+    $target.addClass('is-active');
+  }
+
 });

@@ -50,8 +50,7 @@ $grid-padding : rhythm(2)                     !default;
   margin-left: - $grid-padding/4;
   padding: 0;
   list-style: none;
-  letter-spacing: -0.31em; // Testing new measurement
-  // letter-spacing: -0.31em; // Inline block spacing hack - See https://github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+  letter-spacing: -0.31em; // Inline block spacing hack - See https://github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
   @include breakpoint($gte-medium) {
     margin-left: - $grid-padding/2;
   }
