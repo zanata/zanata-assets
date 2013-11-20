@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2013-11-19
+/*! zanata-assets - v0.1.0 - 2013-11-21
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Red Hat; Licensed MIT */
 /*! Hammer.JS - v1.0.5 - 2013-04-07

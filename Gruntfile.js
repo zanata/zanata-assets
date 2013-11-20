@@ -271,7 +271,7 @@ var srcFolder = './src/',
   // Use --rel=<release number> for a specific release
   grunt.registerTask('build', 'Builds a production release.\nUse --rel=<#> to add a release number.', function() {
     if (assetsRelease) {
-      grunt.task.run(['init', 'shell:jekyllProd', 'copy:assets']);
+      grunt.task.run(['compass:clean', 'init', 'cssmin:prod', 'shell:jekyllProd', 'copy:assets']);
     }
     else {
       grunt.task.run(['compass:clean', 'init', 'cssmin:prod', 'shell:jekyllProd']);
