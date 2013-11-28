@@ -12,7 +12,7 @@
   
   <meta name="description" content="">
   <meta name="author" content="">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cleartype" content="on">
 
   <!-- Prefetch DNS for external assets (Twitter widgets etc). -->
@@ -56,33 +56,50 @@
           <li><a href="projects-old.html">Projects</a></li>
           <li><a href="#">Groups</a></li>
           <li><a href="#">Languages</a></li>
+          <li><a href="#">Glossary</a></li>
           <li><a href="#">Help</a></li>
         </ul>
       </nav>
     </div>
     <div class="off-canvas__inner">
-      <header role="banner" class="header bg--pop-highest txt--s-align-center l--clearfix">
-        <a href="#off-canvas--left" class="off-canvas__toggle--left is-hidden--m-up l--float-left"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+      <header role="banner" class="header">
         
-<h1 class="header__title heading--sub"><a href="/"><img class="header__site-logo" src="../../logo.svg"> Zanata</a></h1>
+<h1 class="header__title"><a href="/"><img class="header__site-logo" src="../../logo.svg"> Zanata</a></h1>
 
 
-        <nav id="nav-main" class="header__menu is-hidden--s l--push-left-half l--float-left">
-          <ul class="list--horizontal">
-            <li class="l--push-left-half"><a href="../../projects-old.html">Projects</a></li>
-            <li class="l--push-left-half"><a href="../../groups">Groups</a></li>
-            <li class="l--push-left-half"><a href="../../languages">Languages</a></li>
-            <li class="l--push-left-half"><a href="../../help">Help</a></li>
+        <nav id="nav-main" class="header__main-nav">
+          <a href="#nav-main" class="header__main-nav__toggle is-hidden--m-up header__main-nav__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+          <div class="header__main-nav__group">
+            <form action="" class="form--search header__search js-form--search">
+              <label class="form--search__label" for="form--search">Search Projects</label>
+              <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
+              <button class="form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
+            </form>
+            <ul class="header__main-nav__menu">
+              <li><a href="../../projects-old.html">Projects</a></li>
+              <li><a href="../../groups">Groups</a></li>
+              <li><a href="../../languages">Languages</a></li>
+              <li><a href="../../languages">Glossary</a></li>
+              <li><a href="../../help">Help</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="header__user-nav js-dropdown">
+          <a href="#nav-user" class="header__user-nav__toggle js-dropdown__toggle">
+            <div class="badge__container">
+              <div class="bx--round header__avatar">
+                <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
+              </div>
+              <span class="badge--br badge--highlight" title="4 Notifications">4</span>
+            </div>
+          </a>
+          <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
+            <li><a href="dashboard"><i class="i i--user"></i> Dashboard</a></li>
+            <li><a href="#"><i class="i i--settings"></i> Settings</a></li>
+            <li><a href="#"><i class="i i--user"></i> Admin</a></li>
+            <li><a href="#"><i class="i i--cancel"></i> Logout</a></li>
           </ul>
         </nav>
-        <a href="#off-canvas--right" class="header__user-menu">
-          <span class="badge__container header__avatar">
-            <span class="bx--round">
-              <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
-            </span>
-            <span class="badge--br" title="4 Notifications">4</span>
-          </span>
-        </a>
       </header>
 
 

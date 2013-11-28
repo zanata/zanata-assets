@@ -12,7 +12,7 @@ $(function () {
         .find('.js-tabs-content li, .js-tabs-nav li')
         .removeClass('is-active');
       // Add relevant is-active classes
-      $this.parent().addClass('is-active');
+      $this.blur().parent().addClass('is-active');
       // Add hashed class so we can remove ID to change the hash
       $(targetHash)
         .addClass('is-active is-hashed')
