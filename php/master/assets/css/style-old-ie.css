@@ -2856,13 +2856,13 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--no-bullets, .new-zanata nav ul,
-.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .header__main-nav__menu, .new-zanata .list--slat, .new-zanata .list--slat-horizontal, .new-zanata .list--stats, .new-zanata .rf-au-lst-ul {
+.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .list--slat, .new-zanata .list--slat-horizontal, .new-zanata .list--stats, .new-zanata .rf-au-lst-ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .new-zanata .list--no-bullets li, .new-zanata nav ul li,
-.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .header__main-nav__menu li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li, .new-zanata .list--stats li, .new-zanata .rf-au-lst-ul li {
+.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li, .new-zanata .list--stats li, .new-zanata .rf-au-lst-ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -2898,11 +2898,11 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 
 */
-.new-zanata .list--horizontal li, .new-zanata .header__main-nav__menu li {
+.new-zanata .list--horizontal li {
   display: inline-block;
   margin-right: 0.40625em;
 }
-.new-zanata .list--horizontal li:last-child, .new-zanata .header__main-nav__menu li:last-child {
+.new-zanata .list--horizontal li:last-child {
   margin-right: 0;
 }
 
@@ -5088,7 +5088,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1;
   width: 100%;
   height: 3.25em;
   background-color: white;
@@ -5145,8 +5145,9 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   zoom: 1;
   *display: inline;
   position: relative;
-  z-index: 101;
+  min-height: 3.25em;
   margin-left: 0.8125em;
+  z-index: 101;
   margin-left: 1.625em;
 }
 .new-zanata .header__main-nav__toggle {
@@ -5162,6 +5163,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   height: 2.6em;
   text-align: center;
   padding: 0.4875em 0;
+  display: none;
 }
 .new-zanata .header__main-nav__toggle:hover, .new-zanata .header__main-nav__toggle:focus {
   background-color: #f5f7f8;
@@ -5174,6 +5176,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   margin: 0;
   height: 3.25em;
+  padding: 0.40625em 0.8125em;
   padding: 0.40625em 0;
   position: absolute;
   top: 0;
@@ -5196,6 +5199,14 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   margin-left: 0.40625em;
   margin-left: 0.8125em;
 }
+.new-zanata .header__main-nav__menu a {
+  padding: 0.8125em;
+  height: 3.25em;
+  display: block;
+}
+.new-zanata .header__main-nav__menu a:hover {
+  background-color: white;
+}
 .new-zanata .header__main-nav__menu li,
 .new-zanata .header__main-nav__menu a {
   display: -moz-inline-stack;
@@ -5206,24 +5217,32 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   *display: inline;
 }
 .new-zanata .header__main-nav__menu li {
+  display: inline-block;
   margin: 0 -.3em 0 0;
 }
 .new-zanata .header__main-nav__menu a {
-  padding: 0.8125em 0.40625em;
   border-bottom: 2px solid transparent;
-  height: 3.25em;
+  padding: 0.8125em 0.40625em;
 }
-.new-zanata .header__main-nav__menu a:hover {
+.new-zanata .header__main-nav__menu a:hover, .new-zanata .header__main-nav__menu a:focus {
+  border-bottom-color: rgba(65, 105, 136, 0.15);
   background-color: #f5f7f8;
+}
+.new-zanata .header__main-nav__menu a:active {
+  background-color: #f0f2f4;
   border-bottom-color: rgba(65, 105, 136, 0.15);
 }
 .new-zanata .header__main-nav__menu a {
   padding: 0.8125em;
 }
 .new-zanata .header__login {
-  padding: 0.40625em 0.40625em 0.40625em 0;
-  padding: 0.40625em 1.625em 0.40625em 0;
-  padding: 0.40625em 3.25em 0.40625em 0;
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.325em 0.40625em 0.325em 0;
+  padding: 0.325em 1.625em 0.325em 0;
+  padding: 0.325em 3.25em 0.325em 0;
 }
 .new-zanata .header__avatar {
   width: 2.03125em;

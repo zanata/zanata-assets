@@ -67,13 +67,13 @@
 <h1 class="header__title"><a href="/"><img class="header__site-logo" src="logo.svg"> Zanata</a></h1>
 
 
-        <nav id="nav-main" class="header__main-nav">
-          <a href="#nav-main" class="header__main-nav__toggle is-hidden--m-up header__main-nav__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
-          <div class="header__main-nav__group">
+        <nav id="nav-main" class="header__main-nav js-dropdown">
+          <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+          <div class="header__main-nav__group js-dropdown__content">
             <form action="" class="form--search header__search js-form--search">
               <label class="form--search__label" for="form--search">Search Projects</label>
               <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
-              <button class="form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
+              <button class="header__search__submit form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
             </form>
             <ul class="header__main-nav__menu">
               <li><a href="projects-old.html">Projects</a></li>

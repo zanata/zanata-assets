@@ -46,16 +46,6 @@ $darker-grey                       : lighten($black, 10);
 $darkest-grey                      : lighten($black, 5);
 
 //
-// CSS3 Defaults
-// -------------
-
-$default-border-radius             : 2px;
-$default-box-shadow                : 0 1px 2px rgba($black, 0.1);
-$default-box-shadow-inset          : inset 0 1px 2px rgba($black, 0.1);
-$default-text-shadow               : 0 1px 2px rgba($black, 0.1);
-$default-transition                : 0.3s cubic-bezier(.26, .47, .36, .94);
-
-//
 // Transitions
 // -----------
 
@@ -116,6 +106,18 @@ $font-family-base                  : 'Source Sans Pro', $font-sans-serif;
 $font-family-heading               : 'Source Sans Pro', $font-sans-serif;
 
 //
+// CSS3 Defaults
+// -------------
+
+$default-border-color              : rgba($color-secondary, .15);
+$default-border                    : 1px solid $default-border-color;
+$default-border-radius             : 2px;
+$default-box-shadow                : 0 1px 2px rgba($black, 0.1);
+$default-box-shadow-inset          : inset 0 1px 2px rgba($black, 0.1);
+$default-text-shadow               : 0 1px 2px rgba($black, 0.1);
+$default-transition                : 0.3s cubic-bezier(.26, .47, .36, .94);
+
+//
 // Vendor Variables
 // ================
 
@@ -169,6 +171,7 @@ $breakpoint-base-font-size         : false;
 
 $breakpoint-small                  : 0;
 $breakpoint-medium                 : 740px;
+$breakpoint-m-l                    : 930px;
 $breakpoint-large                  : 1270px;
 $breakpoint-huge                   : 1540px;
 $breakpoint-hi-res                 : 2 device-pixel-ratio;
@@ -186,11 +189,13 @@ $breakpoint-print                  : print;
 
 $lte-small                         : max-width ($breakpoint-medium - 1px);
 $lte-medium                        : max-width ($breakpoint-large - 1px);
+$lt-m-l                            : max-width ($breakpoint-m-l - 1px);
 $lte-large                         : max-width ($breakpoint-huge - 1px), 'no-query' true;
 $e-medium                          : $breakpoint-medium ($breakpoint-large - 1px);
 $e-large                           : $breakpoint-large ($breakpoint-huge - 1px), 'no-query' true;
 $gte-small                         : $breakpoint-small, 'no-query' true;
 $gte-medium                        : $breakpoint-medium, 'no-query' true;
+$gte-m-l                           : $breakpoint-m-l, 'no-query' true;
 $gte-large                         : $breakpoint-large, 'no-query' true;
 $gte-huge                          : $breakpoint-huge;
 $high-res                          : $breakpoint-hi-res;

@@ -1552,8 +1552,8 @@ $(function () {
 $(function() {
 
   var collapseActiveDropdowns,
-      toggleThisCollapseOthers,
-      mouseOutTimer;
+      toggleThisCollapseOthers;
+      // mouseOutTimer;
 
   collapseActiveDropdowns = function () {
     $('.js-dropdown.is-active .js-dropdown__toggle').click();
@@ -1578,16 +1578,16 @@ $(function() {
   $(document).bind('click', collapseActiveDropdowns);
   $(document).on('click touchstart', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
-  $(document).on('mouseenter', '.js-dropdown', function() {
-    clearTimeout(mouseOutTimer);
-    $(this).addClass('is-hover');
-  });
-  $(document).on('mouseleave', '.js-dropdown', function() {
-    var that = $(this);
-    mouseOutTimer = setTimeout(function(){
-               that.removeClass('is-hover');
-             },300);
-  });
+  // $(document).on('mouseenter', '.js-dropdown', function() {
+  //   clearTimeout(mouseOutTimer);
+  //   $(this).addClass('is-hover');
+  // });
+  // $(document).on('mouseleave', '.js-dropdown', function() {
+  //   var that = $(this);
+  //   mouseOutTimer = setTimeout(function(){
+  //              that.removeClass('is-hover');
+  //            },300);
+  // });
 
 });
 

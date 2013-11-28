@@ -93,7 +93,7 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
 
 .bg--pop-high {
   @extend .bg--high;
-  border: 1px solid rgba($color-secondary, .15);
+  border: $default-border;
   border-bottom-width: 2px;
   position: relative;
   z-index: 2;
@@ -101,7 +101,7 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
 
 .bg--pop-higher {
   @extend .bg--higher;
-  border: 1px solid rgba($color-secondary, .15);
+  border: $default-border;
   border-bottom-width: 2px;
   position: relative;
   z-index: 3;
@@ -109,7 +109,7 @@ $bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
 
 .bg--pop-highest {
   @extend .bg--highest;
-  border: 1px solid rgba($color-secondary, .15);
+  border: $default-border;
   border-bottom-width: 2px;
   position: relative;
   z-index: 4;
