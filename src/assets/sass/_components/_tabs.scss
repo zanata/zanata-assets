@@ -48,7 +48,7 @@
 
 .tabs--lined {
   > .tabs__nav {
-    border-bottom: 2px solid $color-secondary-20;
+    border-bottom: emCalc(2px) solid $color-secondary-20;
     a {
       text-align: center;
       padding: rhythm(.5) rhythm(.375);
@@ -58,9 +58,9 @@
         @extend .is-transition;
         content: "";
         position: absolute;
-        bottom: -2px;
+        bottom: emCalc(-2px);
         left: 0;
-        height: 2px;
+        height: emCalc(2px);
         width: 100%;
         background-color: transparent;
       }

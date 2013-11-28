@@ -1601,6 +1601,7 @@ $(function() {
   };
 
   toggleThisCollapseOthers = function (e) {
+    e.preventDefault();
     var dropdown = $(this).parent('.dropdown');
     $('.dropdown.is-active').not(dropdown).removeClass('is-active')
                             .parents('.dropdown__container').removeClass('is-active');
@@ -1734,7 +1735,7 @@ $(function () {
 
 $(function () {
 
-  $('.js-tabs').on('click', '.js-tabs-nav a', function(e) {
+  $('.js-tabs').on('click touchstart', '.js-tabs-nav a', function(e) {
     e.preventDefault();
     if (!$(this).parent().hasClass('is-active')) {
       var $this = $(this),

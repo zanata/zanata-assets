@@ -57,17 +57,17 @@
       <form action="" class="form--search header__search js-form--search">
         <label class="form--search__label" for="form--search">Search Projects</label>
         <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
-        <button class="header__search__submit form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
       </form>
       <ul class="header__main-nav__menu">
-        <li><a href="../projects-old.html">Projects</a></li>
-        <li><a href="../groups">Groups</a></li>
-        <li><a href="../languages">Languages</a></li>
-        <li><a href="../languages">Glossary</a></li>
-        <li><a href="../help">Help</a></li>
+        <li><a href="../projects-old.html">Projects <i class="is-hidden--m-up l--float-right i--inline i--project"></i></a></li>
+        <li><a href="../groups">Groups <i class="is-hidden--m-up l--float-right i--inline i--group"></i></a></li>
+        <li><a href="../languages">Languages <i class="is-hidden--m-up l--float-right i--inline i--language"></i></a></li>
+        <li><a href="../languages">Glossary <i class="is-hidden--m-up l--float-right i--inline i--glossary"></i></a></li>
+        <li><a href="../help">Help <i class="is-hidden--m-up l--float-right i--inline i--help"></i></a></li>
       </ul>
     </div>
   </nav>
+  <a href="#" class="header__user-admin">Admin <i class="i--right i--large i--admin"></i></a>
   <nav class="header__user-nav js-dropdown">
     <a href="#nav-user" class="header__user-nav__toggle js-dropdown__toggle">
       <div class="badge__container">
@@ -78,10 +78,10 @@
       </div>
     </a>
     <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
-      <li><a href="dashboard"><i class="i i--user"></i> Dashboard</a></li>
-      <li><a href="#"><i class="i i--settings"></i> Settings</a></li>
-      <li><a href="#"><i class="i i--user"></i> Admin</a></li>
-      <li><a href="#"><i class="i i--cancel"></i> Logout</a></li>
+      <li><a href="dashboard">Dashboard <i class="l--float-right i--inline i--dashboard"></i></a></li>
+      <li><a href="#">Settings <i class="l--float-right i--inline i--settings"></i></a></li>
+      <li class="header__user-nav__admin"><a href="#">Admin <i class="l--float-right i--inline i--admin"></i></a></li>
+      <li><a href="#">Logout <i class="l--float-right i--inline i--logout"></i></a></li>
     </ul>
   </nav>
 </header>

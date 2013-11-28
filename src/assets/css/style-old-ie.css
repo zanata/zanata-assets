@@ -627,19 +627,19 @@ a:hover,
   line-height: 1.625em;
 }
 .new-zanata ::-webkit-input-placeholder {
-  color: #b3c3cf;
+  color: #a2b4c3;
   font-weight: 300;
 }
 .new-zanata :-moz-placeholder {
-  color: #b3c3cf;
+  color: #a2b4c3;
   font-weight: 300;
 }
 .new-zanata ::-moz-placeholder {
-  color: #b3c3cf;
+  color: #a2b4c3;
   font-weight: 300;
 }
 .new-zanata :-ms-input-placeholder {
-  color: #b3c3cf;
+  color: #a2b4c3;
   font-weight: 300;
 }
 .new-zanata fieldset {
@@ -2006,7 +2006,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
+.new-zanata .bg--lowest--hover:hover, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--large,
@@ -2563,8 +2563,8 @@ All icons also need the class `.i` added to them.
 */
 @font-face {
   font-family: 'Zanata';
-  src: url("../fonts/zanata-v2/zanata.eot");
-  src: url("../fonts/zanata-v2/zanata.eot?#iefix") format("embedded-opentype"), url("../fonts/zanata-v2/zanata.woff") format("woff"), url("../fonts/zanata-v2/zanata.ttf") format("truetype"), url("../fonts/zanata-v2/zanata.svg#zanata") format("svg");
+  src: url("../fonts/zanata-v3/zanata.eot");
+  src: url("../fonts/zanata-v3/zanata.eot?#iefix") format("embedded-opentype"), url("../fonts/zanata-v3/zanata.woff") format("woff"), url("../fonts/zanata-v3/zanata.ttf") format("truetype"), url("../fonts/zanata-v3/zanata.svg#zanata") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2659,8 +2659,7 @@ All icons also need the class `.i` added to them.
 /*
 <pre><i class="i i--comment"></i> .i--comment</pre>
 */
-.new-zanata .i, .new-zanata .i--large, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge {
-  position: relative;
+.new-zanata .i, .new-zanata .i--inline:before, .new-zanata .i--left, .new-zanata .i--right, .new-zanata .i--large, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge, .new-zanata .form--search:before {
   display: inline-block;
   vertical-align: middle;
   text-transform: none;
@@ -2668,9 +2667,20 @@ All icons also need the class `.i` added to them.
   font-style: normal;
   font-variant: normal;
   font-family: 'Zanata';
-  line-height: 1em;
+  line-height: 1;
   speak: none;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.new-zanata .i--inline:before {
+  line-height: 1.625em;
+}
+.new-zanata .i--left {
+  margin-right: 0.20313em;
+}
+.new-zanata .i--right {
+  margin-left: 0.20313em;
 }
 .new-zanata .i--large, .new-zanata .header__user-nav__toggle:before {
   font-size: 1.25em;
@@ -2702,10 +2712,6 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--bell:before,
 .new-zanata .i--notification:before {
   content: "\e004";
-}
-.new-zanata .i--clipboard,
-.new-zanata .i--project {
-  margin-top: -0.13em;
 }
 .new-zanata .i--clipboard:before,
 .new-zanata .i--project:before {
@@ -2778,7 +2784,7 @@ All icons also need the class `.i` added to them.
 .new-zanata .i--star-outline:before {
   content: "\e016";
 }
-.new-zanata .i--search:before {
+.new-zanata .i--search:before, .new-zanata .form--search:before {
   content: "\e017";
 }
 .new-zanata .i--keyboard:before {
@@ -2789,6 +2795,33 @@ All icons also need the class `.i` added to them.
 }
 .new-zanata .i--version:before {
   content: "\e01a";
+}
+.new-zanata .i--dashboard:before {
+  content: "\e600";
+}
+.new-zanata .i--group:before {
+  content: "\e601";
+}
+.new-zanata .i--glossary:before {
+  content: "\e602";
+}
+.new-zanata .i--info:before {
+  content: "\e603";
+}
+.new-zanata .i--help:before {
+  content: "\e604";
+}
+.new-zanata .i--logout:before {
+  content: "\e605";
+}
+.new-zanata .i--archive:before {
+  content: "\e606";
+}
+.new-zanata .i--attach:before {
+  content: "\e607";
+}
+.new-zanata .i--admin:before {
+  content: "\e608";
 }
 
 /*
@@ -3085,9 +3118,19 @@ Sub-headings can be used when placing a heading under another heading.
   zoom: 1;
   *display: inline;
 }
+.new-zanata .form--search:before {
+  position: absolute;
+  left: 0.40625em;
+  top: 0.8125em;
+  line-height: 1.625em;
+  color: #a2b4c3;
+}
+.new-zanata .form--search.is-active:before {
+  color: #416988;
+}
 .new-zanata input.form--search__input {
   margin: 0;
-  padding-right: 1.625em;
+  padding-left: 1.625em;
   height: 2.35625em;
   border-radius: 2px;
 }
@@ -3247,7 +3290,7 @@ Keep focus while showing and hiding a password field
   border-radius: 3.25em;
   max-width: 2.4375em;
 }
-.off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge {
+.off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--inline:before, .new-zanata .off-canvas__toggle .i--inline:before, .off-canvas__toggle--left .new-zanata .i--inline:before, .new-zanata .off-canvas__toggle--left .i--inline:before, .off-canvas__toggle--right .new-zanata .i--inline:before, .new-zanata .off-canvas__toggle--right .i--inline:before, .new-zanata .off-canvas__close .i--inline:before, .off-canvas__toggle .new-zanata .i--left, .new-zanata .off-canvas__toggle .i--left, .off-canvas__toggle--left .new-zanata .i--left, .new-zanata .off-canvas__toggle--left .i--left, .off-canvas__toggle--right .new-zanata .i--left, .new-zanata .off-canvas__toggle--right .i--left, .new-zanata .off-canvas__close .i--left, .off-canvas__toggle .new-zanata .i--right, .new-zanata .off-canvas__toggle .i--right, .off-canvas__toggle--left .new-zanata .i--right, .new-zanata .off-canvas__toggle--left .i--right, .off-canvas__toggle--right .new-zanata .i--right, .new-zanata .off-canvas__toggle--right .i--right, .new-zanata .off-canvas__close .i--right, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge, .off-canvas__toggle .new-zanata .form--search:before, .new-zanata .off-canvas__toggle .form--search:before, .off-canvas__toggle--left .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--left .form--search:before, .off-canvas__toggle--right .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--right .form--search:before, .new-zanata .off-canvas__close .form--search:before {
   padding: 0.20313em;
 }
 .off-canvas__toggle .i--large, .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before {
@@ -3379,7 +3422,7 @@ Keep focus while showing and hiding a password field
   color: #5b6670;
   float: right;
 }
-.new-zanata .off-canvas__close .i, .new-zanata .off-canvas__close .i--large, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .new-zanata .off-canvas__close .i--huge {
+.new-zanata .off-canvas__close .i, .new-zanata .off-canvas__close .i--inline:before, .new-zanata .off-canvas__close .i--left, .new-zanata .off-canvas__close .i--right, .new-zanata .off-canvas__close .i--large, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .new-zanata .off-canvas__close .i--huge, .new-zanata .off-canvas__close .form--search:before {
   vertical-align: top;
   line-height: 1em;
   padding: 0;
@@ -3452,7 +3495,7 @@ Keep focus while showing and hiding a password field
   margin-left: 0;
 }
 .new-zanata .tabs--lined > .tabs__nav {
-  border-bottom: 2px solid #d9e1e7;
+  border-bottom: 0.125em solid #d9e1e7;
 }
 .new-zanata .tabs--lined > .tabs__nav a {
   text-align: center;
@@ -3463,13 +3506,13 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs--lined > .tabs__nav a:after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -0.125em;
   left: 0;
-  height: 2px;
+  height: 0.125em;
   width: 100%;
   background-color: transparent;
 }
-.new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .header__user-nav__toggle:before, .new-zanata .tabs--lined > .tabs__nav .i--huge {
+.new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--inline:before, .new-zanata .tabs--lined > .tabs__nav .i--left, .new-zanata .tabs--lined > .tabs__nav .i--right, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .header__user-nav__toggle:before, .new-zanata .tabs--lined > .tabs__nav .i--huge, .new-zanata .tabs--lined > .tabs__nav .form--search:before {
   line-height: 1.625em;
   padding: 0 0 0.12188em;
 }
@@ -3494,7 +3537,7 @@ Keep focus while showing and hiding a password field
   line-height: 1.625em;
   min-width: 3.25em;
 }
-.new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .header__user-nav__toggle:before, .new-zanata .tabs--accent .tabs__nav a .i--huge {
+.new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--inline:before, .new-zanata .tabs--accent .tabs__nav a .i--left, .new-zanata .tabs--accent .tabs__nav a .i--right, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .header__user-nav__toggle:before, .new-zanata .tabs--accent .tabs__nav a .i--huge, .new-zanata .tabs--accent .tabs__nav a .form--search:before {
   font-size: 1em;
   line-height: 1.625em;
 }
@@ -3989,7 +4032,7 @@ Keep focus while showing and hiding a password field
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-.new-zanata .message__remove .i, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge {
+.new-zanata .message__remove .i, .new-zanata .message__remove .i--inline:before, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form--search:before {
   line-height: 1.625em;
 }
 .new-zanata .message--global {
@@ -5178,8 +5221,9 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   -o-transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   margin: 0;
+  height: 3.65625em;
+  padding: 0.8125em 0.8125em 0.40625em;
   height: 3.25em;
-  padding: 0.40625em 0.8125em;
   padding: 0.40625em 0;
   position: absolute;
   top: 0;
@@ -5340,6 +5384,26 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .no-touch .new-zanata .header__user-nav__menu a:hover, .no-touch .new-zanata .header__user-nav__menu a:focus {
   background-color: white;
+}
+.new-zanata .header__user-nav__admin {
+  display: none;
+}
+.new-zanata .header__user-admin {
+  display: none;
+  position: absolute;
+  right: 6.29688em;
+  top: 0;
+  display: inline-block;
+  z-index: 101;
+  line-height: 2.4375em;
+  height: 3.25em;
+  padding: 0.40625em 0.60938em;
+  border-bottom: 2px solid transparent;
+  right: 7.92188em;
+}
+.new-zanata .header__user-admin:hover {
+  background-color: #f5f7f8;
+  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle,
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle {

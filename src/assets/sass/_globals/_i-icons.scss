@@ -8,11 +8,11 @@ All icons also need the class `.i` added to them.
 
 @font-face {
 	font-family: 'Zanata';
-	src:url('../fonts/zanata-v2/zanata.eot');
-	src:url('../fonts/zanata-v2/zanata.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/zanata-v2/zanata.woff') format('woff'),
-		url('../fonts/zanata-v2/zanata.ttf') format('truetype'),
-		url('../fonts/zanata-v2/zanata.svg#zanata') format('svg');
+	src:url('../fonts/zanata-v3/zanata.eot');
+	src:url('../fonts/zanata-v3/zanata.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/zanata-v3/zanata.woff') format('woff'),
+		url('../fonts/zanata-v3/zanata.ttf') format('truetype'),
+		url('../fonts/zanata-v3/zanata.svg#zanata') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -29,7 +29,7 @@ $icons: list, code, review, language, star, notification, project, document, clo
 .new-zanata {
 
 .i {
-	position: relative;
+	// position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	text-transform: none;
@@ -37,12 +37,33 @@ $icons: list, code, review, language, star, notification, project, document, clo
 	font-style: normal;
 	font-variant: normal;
 	font-family: 'Zanata';
-	line-height: 1em;
+	line-height: 1;
 	speak: none;
+
+	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
 	// .list--horizontal & {
 	// 	margin-top: rhythm(-.12);
 	// }
+}
+
+.i--inline {
+	&:before {
+		@extend .i;
+		line-height: rhythm(1);
+	}
+}
+
+.i--left {
+	@extend .i;
+	margin-right: rhythm(.125);
+}
+
+.i--right {
+	@extend .i;
+	margin-left: rhythm(.125);
 }
 
 .i--large {
@@ -83,7 +104,7 @@ $icons: list, code, review, language, star, notification, project, document, clo
 }
 .i--clipboard,
 .i--project {
-	margin-top: rhythm(-.08);
+	// margin-top: rhythm(-.08);
 	&:before {
 		content: "\e005";
 	}
@@ -181,6 +202,33 @@ $icons: list, code, review, language, star, notification, project, document, clo
 	&:before {
 		content: "\e01a";
 	}
+}
+.i--dashboard:before {
+	content: "\e600";
+}
+.i--group:before {
+	content: "\e601";
+}
+.i--glossary:before {
+	content: "\e602";
+}
+.i--info:before {
+	content: "\e603";
+}
+.i--help:before {
+	content: "\e604";
+}
+.i--logout:before {
+	content: "\e605";
+}
+.i--archive:before {
+	content: "\e606";
+}
+.i--attach:before {
+	content: "\e607";
+}
+.i--admin:before {
+	content: "\e608";
 }
 
 }

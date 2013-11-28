@@ -70,6 +70,21 @@
 .form--search {
   position: relative;
   @include inline-block;
+  &:before {
+    @extend .is-transition;
+    @extend .i;
+    @extend .i--search:before;
+    position: absolute;
+    left: rhythm(.25);
+    top: rhythm(.5);
+    line-height: rhythm(1);
+    color: $color-secondary-50;
+  }
+  &.is-active {
+    &:before {
+      color: $color-secondary;
+    }
+  }
 }
 
 .form--search__label {
@@ -78,8 +93,8 @@
 
 input.form--search__input {
   margin: 0;
-  padding-right: rhythm(1);
-  // padding-left: rhythm(.25);
+  // padding-right: rhythm(1);
+  padding-left: rhythm(1);
   height: rhythm(1.45);
   border-radius: $default-border-radius;
   &:hover {

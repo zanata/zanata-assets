@@ -8,6 +8,7 @@ $(function() {
   };
 
   toggleThisCollapseOthers = function (e) {
+    e.preventDefault();
     var dropdown = $(this).parent('.dropdown');
     $('.dropdown.is-active').not(dropdown).removeClass('is-active')
                             .parents('.dropdown__container').removeClass('is-active');

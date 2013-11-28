@@ -57,17 +57,17 @@
       <form action="" class="form--search header__search js-form--search">
         <label class="form--search__label" for="form--search">Search Projects</label>
         <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
-        <button class="header__search__submit form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
       </form>
       <ul class="header__main-nav__menu">
-        <li><a href="../../projects-old.html">Projects</a></li>
-        <li><a href="../../groups">Groups</a></li>
-        <li><a href="../../languages">Languages</a></li>
-        <li><a href="../../languages">Glossary</a></li>
-        <li><a href="../../help">Help</a></li>
+        <li><a href="../../projects-old.html">Projects <i class="is-hidden--m-up l--float-right i--inline i--project"></i></a></li>
+        <li><a href="../../groups">Groups <i class="is-hidden--m-up l--float-right i--inline i--group"></i></a></li>
+        <li><a href="../../languages">Languages <i class="is-hidden--m-up l--float-right i--inline i--language"></i></a></li>
+        <li><a href="../../languages">Glossary <i class="is-hidden--m-up l--float-right i--inline i--glossary"></i></a></li>
+        <li><a href="../../help">Help <i class="is-hidden--m-up l--float-right i--inline i--help"></i></a></li>
       </ul>
     </div>
   </nav>
+  <a href="#" class="header__user-admin">Admin <i class="i--right i--large i--admin"></i></a>
   <nav class="header__user-nav js-dropdown">
     <a href="#nav-user" class="header__user-nav__toggle js-dropdown__toggle">
       <div class="badge__container">
@@ -78,10 +78,10 @@
       </div>
     </a>
     <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
-      <li><a href="dashboard"><i class="i i--user"></i> Dashboard</a></li>
-      <li><a href="#"><i class="i i--settings"></i> Settings</a></li>
-      <li><a href="#"><i class="i i--user"></i> Admin</a></li>
-      <li><a href="#"><i class="i i--cancel"></i> Logout</a></li>
+      <li><a href="dashboard">Dashboard <i class="l--float-right i--inline i--dashboard"></i></a></li>
+      <li><a href="#">Settings <i class="l--float-right i--inline i--settings"></i></a></li>
+      <li class="header__user-nav__admin"><a href="#">Admin <i class="l--float-right i--inline i--admin"></i></a></li>
+      <li><a href="#">Logout <i class="l--float-right i--inline i--logout"></i></a></li>
     </ul>
   </nav>
 </header>
@@ -121,12 +121,12 @@
     <div class="tabs--lined">
       <nav class="tabs__nav">
         <ul>
-          <li><a href="#"><i class="i i--clock"></i> <span class="is-hidden--m-down">Activity</span></a></li>
-          <li><a href="languages" class="is-active"><i class="i i--language"></i> <span class="is-hidden--m-down">Languages</span><span class="txt--neutral"> 21</span></a></li>
-          <li><a href="projects"><i class="i i--project"></i> <span class="is-hidden--m-down">Projects</span><span class="txt--neutral"> 102</span></a></li>
-          <li><a href="maintainers"><i class="i i--users"></i> <span class="is-hidden--m-down">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
-          <li><a href="settings"><i class="i i--settings"></i> <span class="is-hidden--m-down">Settings</span></a></li>
-          <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i i--bell"></i><span class="is-invisible">Notifications</span></a></li>
+          <li><a href="#"><i class="i--left i--clock"></i><span class="is-hidden--m-down">Activity</span></a></li>
+          <li><a href="languages" class="is-active"><i class="i--left i--language"></i><span class="is-hidden--m-down">Languages</span><span class="txt--neutral"> 21</span></a></li>
+          <li><a href="projects"><i class="i--left i--project"></i><span class="is-hidden--m-down">Projects</span><span class="txt--neutral"> 102</span></a></li>
+          <li><a href="maintainers"><i class="i--left i--users"></i><span class="is-hidden--m-down">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
+          <li><a href="settings"><i class="i--left i--settings"></i><span class="is-hidden--m-down">Settings</span></a></li>
+          <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i--left i--bell"></i><span class="is-invisible">Notifications</span></a></li>
         </ul>
       </nav>
       <div class="tabs__content panels__container l--push-top-1">

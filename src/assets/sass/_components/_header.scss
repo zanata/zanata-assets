@@ -144,15 +144,20 @@
 .header__search {
   @include transition(width 0.3s cubic-bezier(.26, .47, .36, .94));
   margin: 0;
-  height: rhythm(2);
-  padding: rhythm(.25) rhythm(.5);
+  height: rhythm(2.25);
+  padding: rhythm(.5) rhythm(.5) rhythm(.25);
   @include breakpoint($lt-m-l) {
     width: 100%;
     .header__search__submit {
       right: rhythm(.75);
     }
+    &:before {
+      top: rhythm(.75);
+      left: rhythm(.75);
+    }
   }
   @include breakpoint($gte-m-l) {
+    height: rhythm(2);
     padding: rhythm(.25) 0;
     position: absolute;
     top: 0;
@@ -364,6 +369,37 @@
     a {
       min-width: emCalc(320px);
     }
+  }
+}
+
+// Used to show the admin link in the menu on big screens
+
+//li
+.header__user-nav__admin {
+  @include breakpoint($gte-medium) {
+    display: none;
+  }
+}
+
+.header__user-admin {
+  display: none;
+  @include breakpoint($gte-medium) {
+    position: absolute;
+    right: rhythm(3.875);
+    top: 0;
+    display: inline-block;
+    z-index: 101;
+    line-height: rhythm(1.5);
+    height: rhythm(2);
+    padding: rhythm(.25) rhythm(.375);
+    border-bottom: 2px solid transparent;
+    &:hover {
+      background-color: $color-bg-light;
+      border-bottom: 2px solid $default-border-color;
+    }
+  }
+  @include breakpoint($gte-large) {
+    right: rhythm(4.875);
   }
 }
 
