@@ -20,13 +20,34 @@
 .new-zanata {
 
 .header {
+  @extend .l--cf-of;
   position: relative;
+  height: rhythm(2);
+  z-index: 100;
+  background-color: $color-bg-lightest;
+  border-bottom: 2px solid rgba($color-secondary, .15);
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: rhythm(2);
+    background-color: $color-bg-lightest;
+    border-bottom: 2px solid rgba($color-secondary, .15);
+    content: "";
+  }
 }
 
 .header__title {
   @include adjust-font-size-to(28px, 2);
-  padding: 0;
+  position: relative;
+  z-index: 101;
   margin: 0;
+  padding: 0;
+  font-weight: 400;
+  display: block;
+  text-align: center;
   min-height: rhythm(2, 28px);
   @include breakpoint($gte-medium) {
     margin: 0 0 0 rhythm(1,28px);
@@ -49,9 +70,92 @@
   }
 }
 
-.header__menu {
+.header__menu,
+.header__main-nav {
   @include inline-block;
-  line-height: rhythm(2);
+  position: relative;
+  z-index: 101;
+  @include breakpoint($lte-small) {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  @include breakpoint($gte-medium) {
+    margin-left: rhythm(.5);
+  }
+  @include breakpoint($gte-large) {
+    margin-left: rhythm(1);
+  }
+}
+
+.header__main-nav__group {
+  @include breakpoint($lte-small) {
+    visibility: hidden;
+  }
+}
+
+.header__main-nav__toggle {
+  @include adjust-font-size-to(20px);
+  border-right: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 102;
+  width: rhythm(2, 20px);
+  height: rhythm(2, 20px);
+  text-align: center;
+  padding: rhythm(.375, 20px) 0;
+  &:hover,
+  &:focus {
+    background-color: $color-bg-light;
+    border-bottom: 2px solid rgba($color-secondary, .15);
+  }
+}
+
+.header__search {
+  @include transition(width 0.3s cubic-bezier(.26, .47, .36, .94));
+  margin: 0;
+  height: rhythm(2);
+  padding: rhythm(.25) 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  left: 0;
+  z-index: 150;
+  &.is-active {
+    width: 150%;
+  }
+}
+
+.header__main-nav__menu {
+  @include inline-block;
+  @extend .list--horizontal;
+  position: relative;
+  left: 50%;
+  margin-left: rhythm(.25);
+  li,
+  a {
+    @include inline-block;
+  }
+  li {
+    margin: 0 -.3em 0 0;
+  }
+  a {
+    padding: rhythm(.5) rhythm(.25);
+    border-bottom: 2px solid transparent;
+    height: rhythm(2);
+    &:hover {
+      background-color: $color-bg-light;
+      border-bottom-color: rgba($color-secondary, .15);
+    }
+  }
+  @include breakpoint($gte-large) {
+    margin-left: rhythm(.5);
+    a {
+      padding: rhythm(.5);
+    }
+  }
 }
 
 .header__login {
@@ -64,23 +168,9 @@
   }
 }
 
-.header__user-menu {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: rhythm(.25);
-  @include breakpoint($gte-medium) {
-    right: rhythm(1);
-  }
-  @include breakpoint($gte-large) {
-    right: rhythm(2);
-  }
-}
-
 .header__avatar {
-  width: rhythm(1.5);
-  height: rhythm(1.5);
+  width: rhythm(1.25);
+  height: rhythm(1.25);
 }
 
 .header__logo-only {
@@ -102,6 +192,117 @@
     .header__site-logo {
       width: rhythm(5);
       height: rhythm(5);
+    }
+  }
+}
+
+.header__user-nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include breakpoint($gte-medium) {
+    right: rhythm(1);
+  }
+  @include breakpoint($gte-large) {
+    right: rhythm(2);
+  }
+}
+
+.header__user-nav__toggle {
+  @extend .is-transition;
+  @include backface-visibility(hidden);
+  position: relative;
+  display: block;
+  right: 0;
+  height: rhythm(2);
+  padding: rhythm(.375) rhythm(.5) rhythm(.375) rhythm(1);
+  z-index: 101;
+  border-left: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  &:hover,
+  &:focus {
+    background-color: $color-bg-light;
+    border-bottom: 2px solid rgba($color-secondary, .15);
+  }
+  &:before {
+    @extend .is-transition;
+    position: absolute;
+    left: rhythm(.125, 20px);
+    line-height: rhythm(1.25, 20px);
+    @extend .i--large;
+    @extend .i--arrow-down:before;
+  }
+  @include breakpoint($gte-medium) {
+    border-right: 1px solid transparent;
+  }
+}
+
+.header__user-nav__menu {
+  @extend .bg--pop-high;
+  @include backface-visibility(hidden);
+  @include transition($transition-bounce-ease);
+  visibility: hidden;
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  border-top: none;
+  padding-top: rhythm(2);
+  margin-top: rhythm(-2);
+  @include transform(translateY(-100%));
+  .csstransforms3d & {
+    bottom: auto;
+    top: 100%;
+  }
+  li {
+    padding: 0;
+  }
+  a {
+    padding: rhythm(.5);
+    display: block;
+    white-space: nowrap;
+    min-width: emCalc(200px);
+    &:hover,
+    &:focus {
+      .no-touch & {
+        background-color: $color-bg-lightest;
+      }
+    }
+  }
+  @include breakpoint($lte-small) {
+    border-right: none;
+    a {
+      min-width: emCalc(320px);
+    }
+  }
+}
+
+// Active State
+
+.header__user-nav.is-hover,
+.header__user-nav.is-active {
+  .header__user-nav__toggle {
+    border-left: 1px solid rgba($color-secondary, .15);
+    background-color: $color-bg-light;
+    border-bottom: 2px solid transparent;
+    &:before {
+      @include transform(rotate(180deg));
+    }
+  }
+  .header__user-nav__menu {
+    visibility: visible;
+    .no-csstransforms3d & {
+      top: 100%;
+      bottom: auto;
+    }
+    .csstransforms3d & {
+      @include transform(translateY(0));
+    }
+  }
+  @include breakpoint($gte-medium) {
+    .header__user-nav__toggle {
+      border-right: 1px solid rgba($color-secondary, .15);
     }
   }
 }

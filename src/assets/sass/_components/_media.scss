@@ -29,6 +29,7 @@
 // Deprecated
 .media--circle {
   @extend .bx--round;
+  @extend .bx--inline-block;
 }
 
 }

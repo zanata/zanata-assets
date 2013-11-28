@@ -19,4 +19,11 @@ $(function () {
     }
     $passwordInput.focus();
   });
+
+  $('.js-form--search').on('focus', '.js-form--search__input, .js-form--search__button', function() {
+    $(this).parents('.js-form--search').addClass('is-active');
+  });
+  $('.js-form--search').on('blur', '.js-form--search__input, .js-form--search__button', function() {
+    $(this).parents('.js-form--search').removeClass('is-active');
+  });
 });

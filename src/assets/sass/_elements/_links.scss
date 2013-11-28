@@ -35,11 +35,14 @@ a:focus,
   color: $color-link-hover;
 }
 
-a:focus,
-.\3A focus {
+a:focus {
   @include box-shadow(0 0 0 4px rgba($color-link, .3));
-  outline: none;
+  outline: 0;
   border-radius: $default-border-radius;
+}
+
+a:active:focus {
+  @include box-shadow(none);
 }
 
 a:active,

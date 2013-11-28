@@ -1,5 +1,5 @@
 $(function() {
-  var offCanvasToggle = $('[class^=off-canvas__toggle], .off-canvas__close');
+  var $offCanvasToggle = $('[class^=off-canvas__toggle], .off-canvas__close');
 
   function offCanvasAction(offCanvasTarget) {
     var offCanvasMethod = $(offCanvasTarget).attr('data-off-canvas'),
@@ -18,7 +18,7 @@ $(function() {
   // TODO: Figure out how to use hammer.js properly
   // TODO: Implement drag instead of swipe but with a high threshold
 
-  offCanvasToggle.on('click', function(e) {
+  $offCanvasToggle.on('click touchstart', function(e) {
     e.preventDefault();
   });
 
@@ -30,18 +30,11 @@ $(function() {
   //   }
   // });
 
-  offCanvasToggle.hammer().on('swipe', function() {
-    offCanvasAction($(this).attr('href'));
-  });
 
-  offCanvasToggle.hammer().on('release', function(e) {
+  $offCanvasToggle.on('click touchstart', function(e) {
     e.stopPropagation();
     e.preventDefault();
     offCanvasAction($(this).attr('href'));
-  });
-
-  $('.off-canvas__target').hammer().on('swipe', function() {
-    offCanvasAction('#' + $(this).attr('id'));
   });
 
 });

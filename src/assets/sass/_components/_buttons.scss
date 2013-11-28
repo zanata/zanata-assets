@@ -7,6 +7,7 @@
 <p><a class="button--large">Button Large</a></p>
 <p><a class="button--huge">Button Huge</a></p>
 <p><a class="button--full">Button Full</a></p>
+<p><a class="button--link">Button Link</a></p>
 <p><a class="button--inline-right">Button Inline Right</a></p>
 <p><a class="button--inline-left">Button Inline Left</a></p>
 <p><a class="button--primary">Button Primary</a></p>
@@ -79,6 +80,30 @@ input[type="submit"][disabled] {
   display: block;
   width: 100%;
   text-align: center;
+}
+
+.button--link,
+.button--link:hover,
+.button--link:focus,
+.button--link:active,
+.button--link.is-active {
+  background: none;
+  border-radius: none;
+  border: none;
+  @include box-shadow(none);
+  color: $color-link;
+  padding: 0;
+}
+
+.button--link {
+  &:hover,
+  &:focus {
+    color: $color-link-hover;
+  }
+  &:active,
+  &.is-active {
+    color: $color-link-active;
+  }
 }
 
 .button--inline-right {

@@ -51,6 +51,68 @@
 
 /*
 
+#### Form search
+
+```example
+<form action="" class="form--search">
+  <label class="form--search__label">Search Projects</label>
+  <input type="text" class="form--search__input" placeholder="Search projects">
+  <button class="form--search__submit" type="submit"><i class="i i--search"></i></button>
+</form>
+```
+
+*/
+
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.form--search {
+  position: relative;
+  @include inline-block;
+}
+
+.form--search__label {
+  @extend .is-invisible;
+}
+
+input.form--search__input {
+  margin: 0;
+  padding-right: rhythm(1);
+  // padding-left: rhythm(.25);
+  height: rhythm(1.45);
+  border-radius: $default-border-radius;
+  &:hover {
+    border-color: $color-secondary-50;
+  }
+}
+
+
+.form--search .form--search__submit {
+  position: absolute;
+  right: rhythm(.25);
+  top: rhythm(.5);
+  color: tint($color-secondary, 60%);
+  height: rhythm(1);
+}
+
+.form--search.is-active {
+  .form--search__submit {
+    color: $color-link;
+    &:hover,
+    &:focus {
+      color: $color-link-hover;
+    }
+    &:active {
+      color: $color-link-active;
+    }
+  }
+}
+
+}
+
+/*
+
 #### Form Password Show/Hide
 
 Keep focus while showing and hiding a password field

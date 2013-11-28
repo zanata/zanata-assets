@@ -18,6 +18,13 @@
 <p class="txt--align-center">Align Center</p>
 ```
 
+#### Text No Wrap
+
+```
+<p class="txt--nowrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+```
+
+
 */
 
 // TODO: Remove namespacing when old zanata removed
@@ -33,6 +40,10 @@
 
 .txt--capitalize {
   text-transform: capitalize;
+}
+
+.txt--nowrap {
+  white-space: nowrap;
 }
 
 @include breakpoint($lte-small) {

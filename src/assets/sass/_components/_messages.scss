@@ -24,6 +24,7 @@
 .new-zanata {
 
 .message {
+  @extend .bx--break-word;
   padding: rhythm(.25) rhythm(.5);
   position: relative;
 }

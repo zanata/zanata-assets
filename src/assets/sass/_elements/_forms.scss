@@ -63,6 +63,27 @@ form {
   @include adjust-font-size-to($form-input-font-size);
 }
 
+::-webkit-input-placeholder {
+  // WebKit browsers
+  color: tint($color-secondary, 60%);
+  font-weight: 300;
+}
+:-moz-placeholder {
+  // Mozilla Firefox 4 to 18
+  color: tint($color-secondary, 60%);
+  font-weight: 300;
+}
+::-moz-placeholder {
+  // Mozilla Firefox 19+
+  color: tint($color-secondary, 60%);
+  font-weight: 300;
+}
+:-ms-input-placeholder {
+  // Internet Explorer 10+
+  color: tint($color-secondary, 60%);
+  font-weight: 300;
+}
+
 fieldset {
   @include rhythm-borders(1px, $form-spacing, $form-input-font-size);
   @include border-radius($form-border-radius);

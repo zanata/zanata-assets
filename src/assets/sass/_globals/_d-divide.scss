@@ -1,11 +1,3 @@
-//
-// Divide Component - Default Settings
-// -----------------------------------
-// Change in _settings.scss
-
-$divide-prefix : "d"                        !default;
-$divide-mod    : "#{$divide-prefix}#{$mod}" !default;
-
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
@@ -18,21 +10,22 @@ $divide-mod    : "#{$divide-prefix}#{$mod}" !default;
   border-color: rgba($color-secondary, .15);
 }
 
-.#{$divide-mod}right {
+.d--right {
+  @extend .divide;
   border-right-width: 1px;
 }
 
-.#{$divide-mod}left {
+.d--left {
   @extend .divide;
   border-left-width: 1px;
 }
 
-.#{$divide-mod}bottom {
+.d--bottom {
   @extend .divide;
   border-bottom-width: 1px;
 }
 
-.#{$divide-mod}top {
+.d--top {
   @extend .divide;
   border-top-width: 1px;
 }
