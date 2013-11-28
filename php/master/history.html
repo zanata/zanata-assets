@@ -46,61 +46,45 @@
 
 
 
-<div class="off-canvas__outer new-zanata">
-    <div class="off-canvas__target off-canvas--left" id="off-canvas--left" data-off-canvas="over">
-      <header class="off-canvas__header">
-        <a href="#off-canvas--left" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
-      </header>
-      <nav id="nav-main-side">
-        <ul class="list--slat list--block-links">
-          <li><a href="projects-old.html">Projects</a></li>
-          <li><a href="#">Groups</a></li>
-          <li><a href="#">Languages</a></li>
-          <li><a href="#">Glossary</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="off-canvas__inner">
-      <header role="banner" class="header">
-        
+<header role="banner" class="header">
+  
 <h1 class="header__title"><a href="/"><img class="header__site-logo" src="logo.svg"> Zanata</a></h1>
 
 
-        <nav id="nav-main" class="header__main-nav js-dropdown">
-          <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
-          <div class="header__main-nav__group js-dropdown__content">
-            <form action="" class="form--search header__search js-form--search">
-              <label class="form--search__label" for="form--search">Search Projects</label>
-              <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
-              <button class="header__search__submit form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
-            </form>
-            <ul class="header__main-nav__menu">
-              <li><a href="projects-old.html">Projects</a></li>
-              <li><a href="groups">Groups</a></li>
-              <li><a href="languages">Languages</a></li>
-              <li><a href="languages">Glossary</a></li>
-              <li><a href="help">Help</a></li>
-            </ul>
-          </div>
-        </nav>
-        <nav class="header__user-nav js-dropdown">
-          <a href="#nav-user" class="header__user-nav__toggle js-dropdown__toggle">
-            <div class="badge__container">
-              <div class="bx--round header__avatar">
-                <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
-              </div>
-              <span class="badge--br badge--highlight" title="4 Notifications">4</span>
-            </div>
-          </a>
-          <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
-            <li><a href="dashboard"><i class="i i--user"></i> Dashboard</a></li>
-            <li><a href="#"><i class="i i--settings"></i> Settings</a></li>
-            <li><a href="#"><i class="i i--user"></i> Admin</a></li>
-            <li><a href="#"><i class="i i--cancel"></i> Logout</a></li>
-          </ul>
-        </nav>
-      </header>
+  <nav id="nav-main" class="header__main-nav js-dropdown">
+    <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+    <div class="header__main-nav__group js-dropdown__content">
+      <form action="" class="form--search header__search js-form--search">
+        <label class="form--search__label" for="form--search">Search Projects</label>
+        <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
+        <button class="header__search__submit form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
+      </form>
+      <ul class="header__main-nav__menu">
+        <li><a href="projects-old.html">Projects</a></li>
+        <li><a href="groups">Groups</a></li>
+        <li><a href="languages">Languages</a></li>
+        <li><a href="languages">Glossary</a></li>
+        <li><a href="help">Help</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="header__user-nav js-dropdown">
+    <a href="#nav-user" class="header__user-nav__toggle js-dropdown__toggle">
+      <div class="badge__container">
+        <div class="bx--round header__avatar">
+          <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
+        </div>
+        <span class="badge--br badge--highlight" title="4 Notifications">4</span>
+      </div>
+    </a>
+    <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
+      <li><a href="dashboard"><i class="i i--user"></i> Dashboard</a></li>
+      <li><a href="#"><i class="i i--settings"></i> Settings</a></li>
+      <li><a href="#"><i class="i i--user"></i> Admin</a></li>
+      <li><a href="#"><i class="i i--cancel"></i> Logout</a></li>
+    </ul>
+  </nav>
+</header>
 
 
       <main role="main">
@@ -178,28 +162,26 @@
         </div>
       </main>
 
-      <footer role="contentinfo" class="l--push-top-2">
-        <div class="l__wrapper">
-          <div class="l--pad-v-1 d--top">
-            <div class="g">
-              <div class="g__item w--1-2 l--push-bottom-quarter">
-                <ul class="list--horizontal txt--meta">
-                  <li><a href="http://zanata.org/terms">Terms</a></li>
-                  <li><a href="http://zanata.org/about">About</a></li>
-                  <li><a href="http://zanata.org/blog">Blog</a></li>
-                  <li><a href="http://zanata.org/help">Help</a></li>
-                  <li><a href="https://bugzilla.redhat.com/enter_bug.cgi?format=guided&product=Zanata">Report a problem</a></li>
-                </ul>
-              </div>
-              <div class="g__item w--1-2 txt--align-right">
-                <p class="txt--meta">Copyright &copy; 2008-2013 Red Hat</p>
-              </div>
-            </div>
+  <footer role="contentinfo" class="l--push-top-2">
+    <div class="l__wrapper">
+      <div class="l--pad-v-1 d--top">
+        <div class="g">
+          <div class="g__item w--1-2 l--push-bottom-quarter">
+            <ul class="list--horizontal txt--meta">
+              <li><a href="http://zanata.org/terms">Terms</a></li>
+              <li><a href="http://zanata.org/about">About</a></li>
+              <li><a href="http://zanata.org/blog">Blog</a></li>
+              <li><a href="http://zanata.org/help">Help</a></li>
+              <li><a href="https://bugzilla.redhat.com/enter_bug.cgi?format=guided&product=Zanata">Report a problem</a></li>
+            </ul>
+          </div>
+          <div class="g__item w--1-2 txt--align-right">
+            <p class="txt--meta">Copyright &copy; 2008-2013 Red Hat</p>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
-  </div>
+  </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>

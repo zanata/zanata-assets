@@ -1,41 +1,25 @@
-<div class="off-canvas__outer new-zanata">
-    <div class="off-canvas__target off-canvas--left" id="off-canvas--left" data-off-canvas="over">
-      <header class="off-canvas__header">
-        <a href="#off-canvas--left" class="off-canvas__close"><i class="i i--cross"></i><span class="is-invisible">Close</span></a>
-      </header>
-      <nav id="nav-main-side">
-        <ul class="list--slat list--block-links">
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}projects">Projects</a></li>
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups</a></li>
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}languagess">Languages</a></li>
-          <li><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
-        </ul>
-        <div class="l--push-all-half"><a href="{% if page.root %}{{ page.root }}{% endif %}signup" class="button--primary button--full">Sign up</a></div>
-      </nav>
+<header role="banner" class="header">
+  {% include title.html %}
+  <nav id="nav-main" class="header__main-nav js-dropdown">
+    <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+    <div class="header__main-nav__group js-dropdown__content">
+      <form action="" class="form--search header__search js-form--search">
+        <label class="form--search__label" for="form--search">Search Projects</label>
+        <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
+        <button class="header__search__submit form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
+      </form>
+      <ul class="header__main-nav__menu">
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}projects-old.html">Projects</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Languages</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Glossary</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
+      </ul>
     </div>
-    <div class="off-canvas__inner">
-      <header role="banner" class="header">
-        {% include title.html %}
-        <nav id="nav-main" class="header__main-nav js-dropdown">
-          <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
-          <div class="header__main-nav__group js-dropdown__content">
-            <form action="" class="form--search header__search js-form--search">
-              <label class="form--search__label" for="form--search">Search Projects</label>
-              <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
-              <button class="header__search__submit form--search__submit button--link js-form--search__button" type="submit"><i class="i i--search"></i></button>
-            </form>
-            <ul class="header__main-nav__menu">
-              <li><a href="{% if page.root %}{{ page.root }}{% endif %}projects-old.html">Projects</a></li>
-              <li><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups</a></li>
-              <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Languages</a></li>
-              <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Glossary</a></li>
-              <li><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
-            </ul>
-          </div>
-        </nav>
-        <!-- Alternative -->
-        <div class="header__login l--float-right">
-          <a href="{% if page.root %}{{ page.root }}{% endif %}signup" class="is-hidden--s button">Sign Up</a>
-          <a href="{% if page.root %}{{ page.root }}{% endif %}login" class="l--push-left-half button--primary">Log In</a>
-        </div>
-      </header>
+  </nav>
+  <!-- Alternative -->
+  <div class="header__login l--float-right">
+    <a href="{% if page.root %}{{ page.root }}{% endif %}signup" class="is-hidden--s button">Sign Up</a>
+    <a href="{% if page.root %}{{ page.root }}{% endif %}login" class="l--push-left-half button--primary">Log In</a>
+  </div>
+</header>

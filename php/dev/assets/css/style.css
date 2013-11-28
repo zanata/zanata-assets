@@ -4844,13 +4844,17 @@ Used to show extra information on hover of the parent element
 ```
 
 */
-.no-touch .new-zanata .reveal:hover .reveal__target, .no-touch .new-zanata .reveal--list-item:hover .reveal__target {
+.no-touch .new-zanata .reveal:hover .reveal__target, .no-touch .new-zanata .reveal--list-item:hover .reveal__target, .no-touch .new-zanata .reveal:focus .reveal__target, .no-touch .new-zanata .reveal--list-item:focus .reveal__target {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 .no-touch .new-zanata .reveal__target {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+}
+.no-touch .new-zanata .reveal__target:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 .new-zanata .reveal--list-item {
   position: relative;
@@ -5637,14 +5641,8 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 @media (min-width: 58.125em) {
   .new-zanata .header__menu,
   .new-zanata .header__main-nav {
-    margin-left: 0.8125em;
-    z-index: 101;
-  }
-}
-@media (min-width: 79.375em) {
-  .new-zanata .header__menu,
-  .new-zanata .header__main-nav {
     margin-left: 1.625em;
+    z-index: 101;
   }
 }
 @media (max-width: 58.0625em) {

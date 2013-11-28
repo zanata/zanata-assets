@@ -24,7 +24,8 @@ Used to show extra information on hover of the parent element
 .new-zanata {
 
 .reveal {
-  &:hover {
+  &:hover,
+  &:focus {
     .reveal__target {
       .no-touch & {
         @include opacity(1);
@@ -37,6 +38,9 @@ Used to show extra information on hover of the parent element
   .no-touch & {
     @extend .is-transition;
     @include opacity(0);
+    &:focus {
+      @include opacity(1);
+    }
   }
 }
 
