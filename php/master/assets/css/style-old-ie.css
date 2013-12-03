@@ -1986,6 +1986,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .is-hidden--m-up {
   display: none !important;
 }
+.new-zanata .is-hidden--m-l-up {
+  display: none !important;
+}
 .new-zanata .is-hidden--l {
   display: none !important;
 }
@@ -3198,6 +3201,76 @@ Keep focus while showing and hiding a password field
   display: block;
   width: 100%;
   margin: 0;
+}
+
+/*
+
+#### Form Inline
+
+```example
+<div class="form--inline l--push-bottom-1">
+  <div class="form--inline__prefix">
+    <button class="form--inline__addon">Submit</button>
+  </div>
+  <input type="text" class="form--inline__input" placeholder="Search projects">
+</div>
+
+<div class="form--inline">
+  <input type="text" class="form--inline__input" placeholder="Search projects">
+  <div class="form--inline__suffix">
+    <button class="form--inline__addon button--primary">Submit</button>
+  </div>
+</div>
+```
+
+*/
+.new-zanata .form--inline {
+  display: table !important;
+  border-collapse: separate;
+  position: relative;
+  width: 100%;
+}
+.new-zanata .form--inline__input {
+  margin: 0 !important;
+  display: table-cell !important;
+  width: 100% !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.new-zanata .form--inline__prefix,
+.new-zanata .form--inline__suffix {
+  display: table-cell !important;
+  width: 1%;
+}
+.new-zanata .form--inline__prefix .form--inline__addon,
+.new-zanata .form--inline__suffix .form--inline__addon {
+  height: 2.4375em;
+  white-space: nowrap;
+  display: block;
+}
+.new-zanata .form--inline__prefix .form--inline__addon {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right: none !important;
+}
+.new-zanata .form--inline__suffix .form--inline__addon {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none !important;
+}
+
+/*
+
+#### Form Placeholder
+
+```example
+<input type="text" class="form__placeholder" value="Placeholder text">
+```
+
+*/
+.new-zanata .form__placeholder {
+  color: #a2b4c3 !important;
+  font-weight: 300 !important;
 }
 
 .off-canvas__outer {
@@ -5379,31 +5452,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .new-zanata .header__user-nav__menu a {
   padding: 0.8125em;
   display: block;
-  white-space: nowrap;
   min-width: 12.5em;
 }
 .no-touch .new-zanata .header__user-nav__menu a:hover, .no-touch .new-zanata .header__user-nav__menu a:focus {
   background-color: white;
-}
-.new-zanata .header__user-nav__admin {
-  display: none;
-}
-.new-zanata .header__user-admin {
-  display: none;
-  position: absolute;
-  right: 6.29688em;
-  top: 0;
-  display: inline-block;
-  z-index: 101;
-  line-height: 2.4375em;
-  height: 3.25em;
-  padding: 0.40625em 0.60938em;
-  border-bottom: 2px solid transparent;
-  right: 7.92188em;
-}
-.new-zanata .header__user-admin:hover {
-  background-color: #f5f7f8;
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle,
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle {

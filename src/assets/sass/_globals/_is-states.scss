@@ -29,6 +29,12 @@
   }
 }
 
+@include breakpoint($gte-m-l) {
+  .is-hidden--m-l-up {
+    display: none !important;
+  }
+}
+
 @include breakpoint($e-large) {
   .is-hidden--l {
     display: none !important;
