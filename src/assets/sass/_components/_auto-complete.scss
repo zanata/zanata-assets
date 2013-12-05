@@ -18,3 +18,45 @@
 }
 
 }
+
+/*
+
+### Autocomplete
+
+
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//div
+.autocomplete {
+  position: relative;
+}
+
+//input
+.autocomplete__input {
+
+}
+
+//ul
+.autocomplete__results {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+//li
+.autocomplete__result {
+
+  &.is-selected {
+    color: $lightest-grey;
+    background-color: $color-link;
+    a {
+      color: $lightest-grey;
+    }
+  }
+}
+
+}

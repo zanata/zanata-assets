@@ -178,8 +178,8 @@ textarea {
   @include box-shadow($form-input-box-shadow-inset);
   padding: rhythm($form-spacing / 2, $form-input-font-size);
   display: block;
-  height: rhythm(1.5);
   width: 100%;
+  font-weight: 400;
   border: 1px solid $form-input-border-color;
   background-color: $form-input-background-color;
   color: $form-input-color;

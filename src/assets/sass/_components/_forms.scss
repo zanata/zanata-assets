@@ -79,6 +79,7 @@
     top: rhythm(.5);
     line-height: rhythm(1);
     color: $color-secondary-50;
+    pointer-events: none;
   }
   &.is-active {
     &:before {
@@ -226,7 +227,6 @@ Keep focus while showing and hiding a password field
   display: table-cell !important;
   width: 1%;
   .form--inline__addon {
-    height: rhythm(1.5);
     white-space: nowrap;
     display: block;
   }

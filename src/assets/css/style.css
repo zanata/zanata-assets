@@ -761,8 +761,8 @@ a:hover,
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   padding: 0.40625em;
   display: block;
-  height: 2.4375em;
   width: 100%;
+  font-weight: 400;
   border: 1px solid #c6d2db;
   background-color: #fefefe;
   color: #333333;
@@ -2385,7 +2385,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
+.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--large,
@@ -3441,6 +3441,52 @@ Sub-headings can be used when placing a heading under another heading.
   background-color: #2d3338 !important;
 }
 
+/*
+
+### List Stats
+
+```example
+<ul class="list--stats">
+  <li class="progress-bar__expander panels__panel__item is-active">
+    <a href="#">
+      <div class="list__item">
+        <div class="list__item__info">
+          <span class="list__title">Russian</span>
+        </div>
+        <div class="list__item__stats">
+          <span class="stats--small txt--state-neutral">
+            <span class="stats__figure">0%</span>
+            <span class="stats__unit">translated</span>
+          </span>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <span class="progress-bar__item"></span>
+      </div>
+    </a>
+  </li>
+  <li class="progress-bar__expander bg--highest--hover">
+    <a href="#">
+      <div class="list__item">
+        <div class="list__item__info">
+          <span class="list__title">Japanese</span>
+        </div>
+        <div class="list__item__stats">
+          <span class="stats--small txt--state-neutral">
+            <span class="stats__figure">0%</span>
+            <span class="stats__unit">translated</span>
+          </span>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <span class="progress-bar__item"></span>
+      </div>
+    </a>
+  </li>
+</ul>
+```
+
+*/
 .new-zanata .list--stats {
   padding-bottom: 0.40625em;
 }
@@ -3458,6 +3504,32 @@ Sub-headings can be used when placing a heading under another heading.
   margin-left: 0.8125em;
   text-align: right;
   color: #416988;
+}
+
+/*
+
+#### List Highlight
+
+```example
+<ul class="list--slat list--highlight">
+  <li class="reveal--list-item">Assamese<span class="txt--understated l--push-left-quarter">[as]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+  <li class="reveal--list-item">Chinese (Simplified Han)<span class="txt--understated l--push-left-quarter">[zh-Hans]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+  <li class="reveal--list-item">Chinese (Traditional Han)<span class="txt--understated l--push-left-quarter">[zh-Hant]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+  <li class="reveal--list-item">English (United States)<span class="txt--understated l--push-left-quarter">[en-US]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
+
+  <li>
+    <label for="settings-project">Add a Language</label>
+    <input type="text" placeholder="Search Languages">
+  </li>
+</ul>
+```
+
+*/
+.new-zanata .list--highlight li:hover {
+  background-color: rgba(65, 105, 136, 0.05);
+}
+.new-zanata .list--highlight__item--none:hover {
+  background-color: inherit !important;
 }
 
 /*
@@ -3524,6 +3596,7 @@ Sub-headings can be used when placing a heading under another heading.
   top: 0.8125em;
   line-height: 1.625em;
   color: #a2b4c3;
+  pointer-events: none;
 }
 .new-zanata .form--search.is-active:before {
   color: #416988;
@@ -3641,7 +3714,6 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .form--inline__prefix .form--inline__addon,
 .new-zanata .form--inline__suffix .form--inline__addon {
-  height: 2.4375em;
   white-space: nowrap;
   display: block;
 }
@@ -5558,6 +5630,29 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 
 /*
 
+### Autocomplete
+
+
+
+*/
+.new-zanata .autocomplete {
+  position: relative;
+}
+.new-zanata .autocomplete__results {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+.new-zanata .autocomplete__result.is-selected {
+  color: #f2f2f2;
+  background-color: #4e9fdd;
+}
+.new-zanata .autocomplete__result.is-selected a {
+  color: #f2f2f2;
+}
+
+/*
+
 ### Rich Faces Components
 
 #### RF - Autocomplete
@@ -5582,8 +5677,8 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     <div class="rf-au-lst-dcrtn auto-complete-list">
       <div class="rf-au-lst-scrl">
         <ul id="settings-projects-form:newVersionField:newVersionItems" class="rf-au-lst-ul">
-          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp rf-au-itm-sel rf-au-opt-sel">Test Project (ignore) <span class="txt--meta">1.0</span></li>
-          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">Test Project (ignore) 1.1</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp rf-au-itm-sel rf-au-opt-sel"><a href="#">Test Project</a> (ignore)<span class="txt--understated l--push-left-quarter">1.0</span></li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">Test Project (ignore)<span class="txt--understated l--push-left-quarter">1.1</span></li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes <span class="txt--meta">5.1.0</span></li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.0</li>
           <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.1</li>
@@ -5626,7 +5721,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   font-size: 0.875em;
   line-height: 1.85714em;
   padding: 0.23214em 1.85714em 0.23214em 0.46429em;
-  max-width: 22.28571em;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -5638,8 +5732,12 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   background-color: #4e9fdd !important;
   color: white;
 }
-.new-zanata .rf-au-itm-sel .txt--meta {
-  color: #e6e6e6;
+.new-zanata .rf-au-itm-sel a {
+  color: #f2f2f2;
+}
+.new-zanata .rf-au-itm-sel .txt--meta,
+.new-zanata .rf-au-itm-sel .txt--understated {
+  color: #c6d2db;
 }
 .new-zanata .rf-au-lst-scrl {
   max-height: 10.5625em;
