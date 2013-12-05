@@ -88,6 +88,7 @@
   @include adjust-font-size-to(14px);
   padding: rhythm(.125, 14px) rhythm(1, 14px) rhythm(.125, 14px) rhythm(.25, 14px);
   @include ellipsis;
+  cursor: pointer;
 }
 
 .rf-au-itm-sel {

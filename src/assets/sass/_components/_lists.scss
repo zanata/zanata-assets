@@ -77,7 +77,7 @@ nav ol {
   li {
     display: inline-block;
     margin-right: rhythm(.25);
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
@@ -224,7 +224,7 @@ nav ol {
 
 /*
 
-### List Stats
+#### List Stats
 
 ```example
 <ul class="list--stats">
@@ -300,11 +300,22 @@ nav ol {
 
 ```example
 <ul class="list--slat list--highlight">
-  <li class="reveal--list-item">Assamese<span class="txt--understated l--push-left-quarter">[as]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-  <li class="reveal--list-item">Chinese (Simplified Han)<span class="txt--understated l--push-left-quarter">[zh-Hans]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-  <li class="reveal--list-item">Chinese (Traditional Han)<span class="txt--understated l--push-left-quarter">[zh-Hant]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-  <li class="reveal--list-item">English (United States)<span class="txt--understated l--push-left-quarter">[en-US]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-
+  <li class="reveal--list-item">
+    Assamese<span class="txt--understated l--push-left-quarter">&#91;as&#93;</span>
+    <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
+  <li class="reveal--list-item">
+    Chinese (Simplified Han)<span class="txt--understated l--push-left-quarter">&#91;zh-Hans&#93;</span>
+    <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
+  <li class="reveal--list-item">
+    Chinese (Traditional Han)<span class="txt--understated l--push-left-quarter">&#91;zh-Hant&#93;</span>
+    <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
+  <li class="reveal--list-item">
+    English (United States)<span class="txt--understated l--push-left-quarter">&#91;en-US&#93;</span>
+    <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
   <li>
     <label for="settings-project">Add a Language</label>
     <input type="text" placeholder="Search Languages">
