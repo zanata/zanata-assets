@@ -357,7 +357,7 @@ td.RejectedStateDecoration div div div {
 }
 
 .DocumentListTable tr:hover {
-  background: #fefefe;
+  background: #fdfdfe;
 }
 
 .DocumentListTable td.sortable {
@@ -616,7 +616,7 @@ td.RejectedStateDecoration div div div {
 }
 
 #gwt-debug-TMMerge-caption, #gwt-debug-transHistory-caption {
-  background: #f5f7f8;
+  background: #f5f6f7;
   color: #416988;
   text-align: center;
 }
@@ -635,7 +635,7 @@ td.RejectedStateDecoration div div div {
   cursor: default;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  background: #f5f7f8;
+  background: #f5f6f7;
   color: #416988;
   font-weight: 700;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -647,7 +647,7 @@ td.RejectedStateDecoration div div div {
   border-top: none;
   border-radius: 2px;
   border-top-left-radius: 0;
-  background: #f5f7f8;
+  background: #f5f6f7;
 }
 
 /* end translation history style*/
@@ -824,10 +824,10 @@ a.downloadLink {
   text-align: center;
 }
 .gwt-DialogBox-CloseButton:hover {
-  background-color: #fefefe;
+  background-color: #fdfdfe;
 }
 .gwt-DialogBox-CloseButton:active {
-  background-color: #e8eaec;
+  background-color: #e5e7e9;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -851,7 +851,7 @@ a.downloadLink {
 }
 
 #container > div {
-  background: #f0f2f4 !important;
+  background: #edeff1 !important;
   margin-top: 0.40625em !important;
 }
 #container > div > div:nth-of-type(3),
@@ -887,7 +887,7 @@ a.downloadLink {
 }
 
 .DocumentListTable {
-  background: #f5f7f8 !important;
+  background: #f5f6f7 !important;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);

@@ -22,7 +22,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  @include transition($default-transition);
+  @include transition($transition-fast-ease);
 }
 
 // Use .\3A so style guide can reference pseudo classes

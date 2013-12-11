@@ -12,10 +12,13 @@ $(function() {
     e.preventDefault();
     $(this).blur();
     var $dropdown = $(this).parent('.js-dropdown');
-    $dropdown.removeClass('is-hover');
-    $('.js-dropdown.is-active').not($dropdown).removeClass('is-active')
-                            .parents('.js-dropdown__container').removeClass('is-active');
-    $dropdown.toggleClass('is-active').parents('.js-dropdown__container').toggleClass('is-active');
+    // $dropdown.removeClass('is-hover');
+    $('.js-dropdown.is-active').not($dropdown)
+                               .removeClass('is-active')
+                               .parents('.js-dropdown__container')
+                               .removeClass('is-active');
+    $dropdown.toggleClass('is-active').parents('.js-dropdown__container')
+                                      .toggleClass('is-active');
     e.stopPropagation();
   };
 

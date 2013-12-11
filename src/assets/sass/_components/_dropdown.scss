@@ -32,7 +32,7 @@
 }
 
 .dropdown {
-  @include transition($default-transition);
+  @extend .is-transition-bounce;
   position: relative;
   z-index: 10;
   margin: 0 rhythm(-.25);
@@ -61,12 +61,15 @@
   //   @extend .bg--pop-highest;
   //   color: $color-link-active;
   // }
+  .i {
+    @include adjust-font-size-to(16px, 1);
+  }
 }
 
 .dropdown__container.is-active .dropdown__toggle {
   // margin: rhythm(-.125) 0;
   // padding: rhythm(.25) rhythm(.25) rhythm(.25) 0;
-  @include transform3d(scale3d(1,1,1));
+  @include transform3d(translateZ(0));
   color: $color-link-active;
 }
 
@@ -80,12 +83,15 @@
 }
 
 .dropdown__toggle__icon {
-  @include transition($default-transition);
+  @extend .is-transition;
   @include adjust-font-size-to(18px,1);
   position: relative;
   float: left;
   padding: 0 rhythm(.25, 18px);
   margin-top: rhythm(.06);
+  &:before {
+    @extend .is-transition;
+  }
   @include breakpoint($gte-medium) {
     padding: 0 rhythm(.125, 18px);
   }
@@ -96,7 +102,8 @@
 }
 
 .dropdown__content {
-  @extend .bg--higher;
+  @extend .is-transition-bounce;
+  @extend .bg--pop-higher;
   @include opacity(0);
   position: absolute !important;
   top: 100%;
@@ -106,21 +113,21 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  max-height: 0;
   width: 100%;
   float: left;
   min-width: rhythm(4);
-  @include transform3d(translate3d(0,rhythm(-1),0));
+  @include transform3d(translateY(-50%));
   > li {
     list-style: none;
     margin: 0;
-    padding: rhythm(.25) rhythm(.25) rhythm(.25) rhythm(1.3);
+    padding: 0;
     &:hover {
       .no-touch & {
-        @extend .bg--high;
+        background-color: $color-bg-light;
       }
     }
     > a {
+      padding: rhythm(.25) rhythm(.25) rhythm(.25) rhythm(1.3);
       display: block;
       margin: 0;
     }
@@ -130,11 +137,8 @@
   }
   .dropdown__header {
     border-bottom: 1px solid $color-bg;
-    &:hover {
-      .no-touch & {
-        background-color: transparent;
-      }
-    }
+    text-transform: uppercase;
+    background-color: $color-bg-lightest !important;
   }
 }
 
@@ -148,20 +152,15 @@
   background-color: $color-bg;
 }
 
-.dropdown__content {
-  @extend .bg--pop-highest;
-}
-
 .dropdown.is-active .dropdown__content {
   @include transform3d(translate3d(0,0,0));
   @include opacity(1);
   visibility: visible;
-  max-height: rhythm(10); // TODO: Set max-height with js
 }
 
 .dropdown--right {
   .dropdown__toggle__icon {
-    float: right;
+    right: 0;
   }
   .dropdown__content {
     left: auto;
@@ -175,21 +174,39 @@
   margin-left: rhythm(.375);
   .dropdown__toggle {
     margin: rhythm(-.25);
-    padding: rhythm(.125) rhythm(.25) rhythm(.125) rhythm(.5);
+    padding: rhythm(.125) rhythm(1) rhythm(.125) rhythm(.5);
+    position: relative;
   }
   .dropdown__toggle__icon {
-    float: none;
+    position: absolute;
     padding: 0;
     margin-left: rhythm(-.125, 18px);
-    margin-top: 0;
+    right: rhythm(.25);
   }
   .dropdown__content {
     width: auto;
     margin: rhythm(.21) rhythm(-.25) 0;
     > li {
+      padding: 0;
       white-space:nowrap;
-      padding: rhythm(.25) rhythm(1) rhythm(.25) rhythm(.5);
+      &:hover {
+        .no-touch & {
+          background-color: transparent;
+        }
+      }
+      > a {
+        padding: rhythm(.25) rhythm(.5);
+        &:hover {
+          .no-touch & {
+            background-color: $color-link;
+            color: $color-bg-lighter;
+          }
+        }
+      }
     }
+  }
+  .dropdown__header {
+    padding: 0 rhythm(.5)!important;
   }
 }
 

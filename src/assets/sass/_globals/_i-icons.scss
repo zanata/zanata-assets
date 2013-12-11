@@ -29,53 +29,71 @@ $icons: list, code, review, language, star, notification, project, document, clo
 .new-zanata {
 
 .i {
-	// position: relative;
-	display: inline-block;
 	vertical-align: middle;
 	text-transform: none;
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
-	font-family: 'Zanata';
 	line-height: 1;
 	speak: none;
-
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	// .list--horizontal & {
-	// 	margin-top: rhythm(-.12);
-	// }
+	&:before {
+		font-family: 'Zanata';
+	}
 }
 
 .i--inline {
+	@extend .i;
 	&:before {
-		@extend .i;
 		line-height: rhythm(1);
 	}
 }
 
 .i--left {
 	@extend .i;
-	margin-right: rhythm(.125);
+	&:before {
+		margin-right: rhythm(.125);
+	}
 }
 
 .i--right {
 	@extend .i;
-	margin-left: rhythm(.125);
+	&:before {
+		margin-left: rhythm(.125);
+	}
+}
+
+.i--understated {
+	@extend .i;
+	&:before {
+		@extend .txt--understated;
+	}
 }
 
 .i--large {
 	@extend .i;
-	@include adjust-font-size-to(20px,1);
+	&:before {
+		@include adjust-font-size-to(20px,1);
+	}
 }
 
 .i--huge {
 	@extend .i;
-	@include adjust-font-size-to(24px,1);
+	&:before {
+		@include adjust-font-size-to(24px,1);
+	}
 }
 
+.i__text--right {
+	margin-left: rhythm(.125);
+}
+
+.i__text--left {
+	margin-right: rhythm(.125);
+}
 
 .i--list:before,
 .i--menu:before {

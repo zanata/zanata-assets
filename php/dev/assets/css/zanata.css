@@ -11,7 +11,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #f0f2f4;
+  background-color: #edeff1;
   font: 14px "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
@@ -121,7 +121,7 @@ input[disabled] {
 button[disabled]:hover, button[disabled]:active,
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:active {
-  background-color: #fefefe !important;
+  background-color: #fdfdfe !important;
   color: #565d65 !important;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
@@ -154,11 +154,11 @@ input[type="submit"][disabled]:active {
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .button:hover, button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, a.action_link:hover, span.action_link:hover {
-  background-color: #f5f7f8;
+  background-color: #f5f6f7;
   color: black;
 }
 .button:active, button:active, input[type="reset"]:active, input[type="submit"]:active, input[type="button"]:active, a.action_link:active, span.action_link:active {
-  background-color: #e6e8ea;
+  background-color: #e3e5e7;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -604,7 +604,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
 .footer {
   width: 100%;
   min-width: 960px;
-  background: #e8eaec;
+  background: #e5e7e9;
   color: #777777;
   font-size: 13px;
   padding-top: 3px;
@@ -692,7 +692,7 @@ table.rf-dt {
   width: 100%;
   empty-cells: show;
   border: 0;
-  background-color: #f5f7f8;
+  background-color: #f5f6f7;
   margin-top: 1.625em;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -726,7 +726,7 @@ th.rf-dt-shdr-c {
 }
 
 .rf-dt tbody tr:hover {
-  background-color: #fefefe;
+  background-color: #fdfdfe;
 }
 
 /* Table cell */
@@ -844,14 +844,14 @@ div.rf-p {
 }
 .rf-tbp td.rf-tab-hdr-inact.rf-tab-hdr-top {
   color: #4e9fdd;
-  background: #f5f7f8;
+  background: #f5f6f7;
   border: none;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   padding: 6px 16px;
 }
 .rf-tbp td.rf-tab-hdr-inact.rf-tab-hdr-top:hover {
-  background: #fefefe;
+  background: #fdfdfe;
 }
 .rf-tbp div.rf-tab-cnt {
   border: none;
@@ -1107,7 +1107,7 @@ a.version_link:hover {
 }
 
 .highlighted_datatable_row {
-  background-color: #fefefe;
+  background-color: #fdfdfe;
 }
 
 .maintainer {

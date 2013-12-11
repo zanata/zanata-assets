@@ -48,7 +48,8 @@
 
 .tabs--lined {
   > .tabs__nav {
-    border-bottom: emCalc(2px) solid $color-secondary-20;
+    border-bottom: 2px solid $default-border-color;
+    max-height: rhythm(2);
     a {
       text-align: center;
       padding: rhythm(.5) rhythm(.375);
@@ -58,9 +59,9 @@
         @extend .is-transition;
         content: "";
         position: absolute;
-        bottom: emCalc(-2px);
+        bottom: 0;
         left: 0;
-        height: emCalc(2px);
+        height: 2px;
         width: 100%;
         background-color: transparent;
       }
@@ -106,11 +107,12 @@
       text-align: center;
       line-height: rhythm(1);
       min-width: rhythm(2);
+      max-height: rhythm(2);
       .i {
         @include adjust-font-size-to(16px);
       }
       .i--large {
-        @include adjust-font-size-to(24px,1);
+        @include adjust-font-size-to(20px,1);
       }
     }
     a:hover {

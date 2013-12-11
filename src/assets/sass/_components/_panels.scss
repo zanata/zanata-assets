@@ -3,12 +3,14 @@
 
 .panels__container {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   min-height: rhythm(12);
 }
 
 .panels {
-  @extend .is-transition;
+  @extend .is-transition-bounce;
+  display: table;
+  table-layout: fixed;
 }
 
 .panels--2 {
@@ -17,21 +19,30 @@
   position: relative;
   left: 0;
   width: 200%;
-  @include breakpoint($gte-large) {
-    width: 100%;
+  .panels__panel {
+    width: 50%;
   }
   @include breakpoint($lte-medium) {
     .panels__panel:nth-child(2) {
       visibility: hidden;
+      @include opacity(0);
     }
     &.panel__active-2 {
       @include transform3d(translate3d(-50%,0,0));
       .panels__panel:first-child {
         visibility: hidden;
+        @include opacity(0);
       }
       .panels__panel:nth-child(2) {
         visibility: visible;
+        @include opacity(1);
       }
+    }
+  }
+  @include breakpoint($gte-large) {
+    width: 100%;
+    .panels__panel:first-child {
+      border-right: none;
     }
   }
 }
@@ -51,7 +62,11 @@
 }
 
 .panels__panel {
+  display: table-cell;
   position: relative;
+  &.is-active {
+    @extend .bg--pop-higher;
+  }
   &:first-child {
     margin-left: 0;
     z-index: 10;
@@ -67,21 +82,21 @@
   }
 }
 
-.panels__panel__header {
-  border-bottom: 2px solid rgba($color-secondary, .1);
-  background-color: $color-bg-lightest;
-  padding: rhythm(.5);
-  z-index: 101;
-  position: relative;
-}
+// .panels__panel__header {
+//   border-bottom: 2px solid rgba($color-secondary, .1);
+//   background-color: $color-bg-lightest;
+//   padding: rhythm(.5);
+//   z-index: 101;
+//   position: relative;
+// }
 
-.panels__panel__sub-header {
-  border-bottom: 2px solid rgba($color-secondary, .1);
-  background-color: $color-bg-lighter;
-  padding: rhythm(.5);
-  z-index: 101;
-  position: relative;
-}
+// .panels__panel__sub-header {
+//   border-bottom: 2px solid rgba($color-secondary, .1);
+//   background-color: $color-bg-lighter;
+//   padding: rhythm(.5);
+//   z-index: 101;
+//   position: relative;
+// }
 
 .panels__panel__item {
   &.is-active {

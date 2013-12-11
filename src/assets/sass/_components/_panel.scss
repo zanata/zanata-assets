@@ -220,11 +220,62 @@
 .panel__header {
   @extend .bg--pop-highest;
   border-width: 0 0 2px 0;
+  // display: table;
+  width: 100%;
+  position: relative;
 }
 
 .panel__sub-header {
   @extend .bg--pop-higher;
   border-width: 0 0 2px 0;
+}
+
+.panel__heading {
+  @include adjust-font-size-to(16px);
+  @include ellipsis;
+  padding: rhythm(.5, 16px);
+  font-weight: 400;
+  overflow: hidden;
+  margin: 0;
+  @include breakpoint($gte-medium) {
+    @include adjust-font-size-to(18px);
+    padding: rhythm(.5, 18px);
+  }
+}
+
+.panel__header__sort {
+  float: right;
+  white-space: nowrap;
+  margin: rhythm(.5);
+  margin-left: 0;
+}
+
+.panel__header__back {
+  height: rhythm(2);
+  width: rhythm(1.5);
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: rhythm(.5) 0;
+  i:before {
+    height: rhythm(2);
+  }
+  + .panel__heading {
+    padding-left: rhythm(1.5, 16px);
+  }
+  @include breakpoint($gte-medium) {
+    + .panel__heading {
+      padding-left: rhythm(1.5, 18px);
+    }
+  }
+  @include breakpoint($gte-large) {
+    display: none;
+    + .panel__heading {
+      padding-left: rhythm(.5, 18px);
+    }
+  }
 }
 
 }

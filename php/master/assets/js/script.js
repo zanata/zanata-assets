@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2013-12-05
+/*! zanata-assets - v0.1.0 - 2013-12-11
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2013 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1563,10 +1563,13 @@ $(function() {
     e.preventDefault();
     $(this).blur();
     var $dropdown = $(this).parent('.js-dropdown');
-    $dropdown.removeClass('is-hover');
-    $('.js-dropdown.is-active').not($dropdown).removeClass('is-active')
-                            .parents('.js-dropdown__container').removeClass('is-active');
-    $dropdown.toggleClass('is-active').parents('.js-dropdown__container').toggleClass('is-active');
+    // $dropdown.removeClass('is-hover');
+    $('.js-dropdown.is-active').not($dropdown)
+                               .removeClass('is-active')
+                               .parents('.js-dropdown__container')
+                               .removeClass('is-active');
+    $dropdown.toggleClass('is-active').parents('.js-dropdown__container')
+                                      .toggleClass('is-active');
     e.stopPropagation();
   };
 
@@ -1591,33 +1594,33 @@ $(function() {
 
 });
 
-$(function() {
+// $(function() {
 
-  var collapseActiveDropdowns,
-      toggleThisCollapseOthers;
+//   var collapseActiveDropdowns,
+//       toggleThisCollapseOthers;
 
-  collapseActiveDropdowns = function () {
-    $('.dropdown.is-active .dropdown__toggle').click();
-  };
+//   collapseActiveDropdowns = function () {
+//     $('.dropdown.is-active .dropdown__toggle').click();
+//   };
 
-  toggleThisCollapseOthers = function (e) {
-    e.preventDefault();
-    var dropdown = $(this).parent('.dropdown');
-    $('.dropdown.is-active').not(dropdown).removeClass('is-active')
-                            .parents('.dropdown__container').removeClass('is-active');
-    dropdown.toggleClass('is-active').parents('.dropdown__container').toggleClass('is-active');
-    e.stopPropagation();
-  };
+//   toggleThisCollapseOthers = function (e) {
+//     e.preventDefault();
+//     var dropdown = $(this).parent('.dropdown');
+//     $('.dropdown.is-active').not(dropdown).removeClass('is-active')
+//                             .parents('.dropdown__container').removeClass('is-active');
+//     dropdown.toggleClass('is-active').parents('.dropdown__container').toggleClass('is-active');
+//     e.stopPropagation();
+//   };
 
-  // Don't toggle dropdown when clicking links inside it
-  $('.dropdown__toggle a, .dropdown__content').bind('click', function(e) {
-    e.stopPropagation();
-  });
+//   // Don't toggle dropdown when clicking links inside it
+//   $('.dropdown__toggle a, .dropdown__content').bind('click', function(e) {
+//     e.stopPropagation();
+//   });
 
-  $(document).bind('click', collapseActiveDropdowns);
-  $(document).on('click', '.dropdown__toggle', toggleThisCollapseOthers);
+//   $(document).bind('click', collapseActiveDropdowns);
+//   $(document).on('click', '.dropdown__toggle', toggleThisCollapseOthers);
 
-});
+// });
 
 $(function () {
   $('.js-form-password-parent').on('click', '.js-form-password-toggle', function(e) {

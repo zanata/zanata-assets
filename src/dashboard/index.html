@@ -122,26 +122,23 @@ root: "../"
               </ul>
             </nav>
             <div class="tabs__content">
-              <header class="panel__sub-header l--pad-all-half">
-                <div class="g--tight">
-                  <div class="g__item w--6-10 w--6-10-s">
-                    <h2 class="delta heading--secondary">All Projects</h2>
-                  </div>
-                  <div class="g__item w--4-10 w--4-10-s txt--align-right txt--s-align-right">
-                    <span class="txt--meta">5 of 12 <i aria-hidden="true" class="i i--clipboard"></i></span>
-                    <div class="dropdown dropdown--inline dropdown--right">
-                      <div class="dropdown__toggle" href="#">
-                        <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
-                        <i class="i i--arrow-down dropdown__toggle__icon"></i>
-                      </div>
-                      <ul class="dropdown__content">
-                        <li class="dropdown__header">Sort by:</li>
-                        <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
-                        <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
-                      </ul>
-                    </div>
+              <header class="panel__sub-header">
+                <div class="panel__header__sort">
+                  <span class="txt--meta">5 of 12 <i aria-hidden="true" class="i i--clipboard"></i></span>
+                  <div class="dropdown dropdown--inline dropdown--right js-dropdown">
+                    <a class="dropdown__toggle js-dropdown__toggle" href="#">
+                      <span class="is-invisible">Recent </span>
+                      <i aria-hidden="true" class="i i--clock"></i>
+                      <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    </a>
+                    <ul class="dropdown__content js-dropdown__content">
+                      <li class="dropdown__header">Sort by:</li>
+                      <li><a href="#">Recent</a></li>
+                      <li><a href="#">Alphabetically</a></li>
+                    </ul>
                   </div>
                 </div>
+                <h2 class="panel__heading">All Projects</h2>
               </header>
               <ul class="list--no-bullets">
                 <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
@@ -301,9 +298,9 @@ root: "../"
         </div>
       </div>
       <div class="g__item w--1-2-h l--push-v-1">
-        <div class="bg--pop-high">
+        <div class="panel">
           <div class="tabs--accent">
-            <nav class="tabs__nav bg--highest">
+            <nav class="tabs__nav panel__header">
               <ul>
                 <li>
                   <a href="#" class="is-active"><i aria-hidden="true" class="i i--infinity"></i><span class="is-invisible">All</span></a>
@@ -326,26 +323,22 @@ root: "../"
               </ul>
             </nav>
             <div class="tabs__content">
-              <header class="bg--pop-higher l--pad-all-half">
-                <div class="g--tight">
-                  <div class="g__item w--6-10 w--6-10-s">
-                    <h2 class="delta heading--secondary">All Groups</h2>
-                  </div>
-                  <div class="g__item w--4-10 w--4-10-s txt--align-right txt--s-align-right">
-                    <span class="txt--meta">2 of 2 <i aria-hidden="true" class="i i--clipboard"></i></span>
-                    <div class="dropdown dropdown--inline dropdown--right">
-                      <div class="dropdown__toggle" href="#">
-                        <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
-                        <i class="i i--arrow-down dropdown__toggle__icon"></i>
-                      </div>
-                      <ul class="dropdown__content">
-                        <li class="dropdown__header">Sort by:</li>
-                        <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
-                        <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
-                      </ul>
+              <header class="panel__sub-header">
+                <div class="panel__header__sort">
+                  <span class="txt--meta">2 of 2 <i aria-hidden="true" class="i i--clipboard"></i></span>
+                  <div class="dropdown js-dropdown dropdown--inline dropdown--right">
+                    <div class="dropdown__toggle js-dropdown__toggle" href="#">
+                      <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
+                      <i class="i i--arrow-down dropdown__toggle__icon"></i>
                     </div>
+                    <ul class="dropdown__content js-dropdown__content">
+                      <li class="dropdown__header">Sort by:</li>
+                      <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
+                      <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
+                    </ul>
                   </div>
                 </div>
+                <h2 class="panel__heading">All Groups</h2>
               </header>
               <ul class="list--no-bullets">
                 <li class="bg--faint l--pad-v-half bg--highest--hover progress-bar__expander">

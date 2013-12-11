@@ -50,6 +50,7 @@ $darkest-grey                      : lighten($black, 5);
 // -----------
 
 $transition-bounce-ease: 0.3s cubic-bezier(.55,-0.38,.22,1.01);
+$transition-fast-ease: 0.1s cubic-bezier(.26, .47, .36, .94);;
 
 //
 // Theme - Global Variables
@@ -74,10 +75,10 @@ $color-secondary-30                : #c6d2db;
 $color-secondary-20                : #d9e1e7;
 $color-secondary-10                : #ecf0f3;
 
-$color-bg                          : #f0f2f4;
+$color-bg                          : shade(#f0f2f4, 1%);
 $color-bg-lightest                 : $white;
-$color-bg-lighter                  : #fefefe;
-$color-bg-light                    : #f5f7f8;
+$color-bg-lighter                  : tint($color-bg, 93%);
+$color-bg-light                    : tint($color-bg, 46%);
 $color-bg-dark                     : shade($color-bg, 3%);
 $color-bg-darker                   : shade($color-bg, 6%);
 $color-bg-darkest                  : shade($color-bg, 9%);
