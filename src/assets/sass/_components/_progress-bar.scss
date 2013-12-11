@@ -2,9 +2,9 @@
 .new-zanata {
 
 .progress-bar {
-  @include transition($default-transition);
+  @extend .is-transition;
+  // @include backface-visibility(hidden);
   @include transition-delay(.2s);
-  @include backface-visibility(hidden);
   position: relative;
   width: 100%;
   height: rhythm(.25);

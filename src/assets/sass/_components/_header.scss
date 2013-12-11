@@ -91,7 +91,7 @@
 
 .header__main-nav__group {
   @include breakpoint($lt-m-l) {
-    @include backface-visibility(hidden);
+    // @include backface-visibility(hidden);
     @include transition($transition-bounce-ease);
     @include transform(translateY(-100%));
     position: absolute;
@@ -306,7 +306,7 @@
 
 .header__user-nav__toggle {
   @extend .is-transition;
-  @include backface-visibility(hidden);
+  // @include backface-visibility(hidden);
   position: relative;
   display: block;
   right: 0;
@@ -335,7 +335,7 @@
 
 .header__user-nav__menu {
   @extend .bg--pop-high;
-  @include backface-visibility(hidden);
+  // @include backface-visibility(hidden);
   @include transition($transition-bounce-ease);
   visibility: hidden;
   position: absolute;

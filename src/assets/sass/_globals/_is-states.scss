@@ -61,17 +61,17 @@
 
 .is-transition {
   @include transition($default-transition);
-  @include backface-visibility(hidden);
+  // @include backface-visibility(hidden);
 }
 
 .is-transition-fast {
   @include transition($transition-fast-ease);
-  @include backface-visibility(hidden);
+  // @include backface-visibility(hidden);
 }
 
 .is-transition-bounce {
   @include transition($transition-bounce-ease);
-  @include backface-visibility(hidden);
+  // @include backface-visibility(hidden);
 }
 
 .is-removed {
