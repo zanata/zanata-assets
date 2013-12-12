@@ -172,12 +172,6 @@ nav ol {
   }
 }
 
-.list__title {
-  margin: 0;
-  font-weight: 600;
-  @include adjust-font-size-to($base-font-size);
-}
-
 }
 
 /*
@@ -289,6 +283,17 @@ nav ol {
     margin-left: rhythm(.5);
     text-align: right;
     color: $color-secondary;
+  }
+  .list__title {
+    line-height: 1em;
+  }
+  .list__item__meta {
+    @include font-size(14px);
+    line-height: 1em;
+    color: $color-secondary-50;
+    // border-top: 1px solid rgba($color-secondary, .05);
+    margin: rhythm(.25,14px) 0 0;
+    // padding: 0 rhythm(.5);
   }
 }
 

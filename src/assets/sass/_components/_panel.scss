@@ -231,23 +231,23 @@
 }
 
 .panel__heading {
-  @include adjust-font-size-to(16px);
+  @include adjust-font-size-to(16px, 2);
   @include ellipsis;
-  padding: rhythm(.5, 16px);
+  padding: 0 rhythm(.5, 16px);
   font-weight: 400;
   overflow: hidden;
   margin: 0;
   @include breakpoint($gte-medium) {
-    @include adjust-font-size-to(18px);
-    padding: rhythm(.5, 18px);
+    @include adjust-font-size-to(18px, 2);
+    padding: 0 rhythm(.5, 18px);
   }
 }
 
-.panel__header__sort {
+.panel__header__sort,
+.panel__header__actions {
   float: right;
   white-space: nowrap;
-  margin: rhythm(.5);
-  margin-left: 0;
+  margin: rhythm(.45) rhythm(.5) 0 0;
 }
 
 .panel__header__back {

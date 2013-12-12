@@ -4,6 +4,8 @@
 
 ```
 <p><a class="button">Button</a></p>
+<p><a class="button--snug">Button Snug</a></p>
+<p><a class="button--small">Button Small</a></p>
 <p><a class="button--large">Button Large</a></p>
 <p><a class="button--huge">Button Huge</a></p>
 <p><a class="button--full">Button Full</a></p>
@@ -26,15 +28,16 @@ input[type="submit"],
 button,
 .button {
   @extend .is-transition;
-  padding: rhythm(.25) rhythm(.5);
-  border: none;
-  background-color: shade($color-bg-lighter, 1%);
-  color: tint($color-base-font, 10%);
-  font-weight: 600;
   @include inline-block;
-  border: 1px solid rgba($color-secondary, .15);
   @include box-shadow(inset 0 -1px 0 rgba($color-secondary, .09));
   @include border-radius($default-border-radius);
+  padding: rhythm(.25) rhythm(.5);
+  border: none;
+  border: 1px solid rgba($color-secondary, .15);
+  background-color: shade($color-bg-lighter, 1%);
+  color: tint($color-base-font, 10%);
+  text-align: center;
+  font-weight: 600;
   &:hover,
   &:focus {
     background-color: $white;
@@ -63,6 +66,17 @@ input[type="submit"][disabled] {
   	@include box-shadow(inherit !important);
     pointer-events: none;
   }
+}
+
+.button--snug {
+  @extend .button;
+  padding: rhythm(.25);
+}
+
+.button--small {
+  @extend .button;
+  @include adjust-font-size-to(14px);
+  padding: rhythm(.25, 14px);
 }
 
 .button--large {

@@ -25,6 +25,7 @@ $label-mod    : #{$label-prefix}#{$mod};
   background-color: $color-secondary-20;
   padding: 0 rhythm(.25);
   @include inline-block;
+  @include adjust-font-size-to(14px, .75);
 }
 
 .#{$label-mod}highlight {

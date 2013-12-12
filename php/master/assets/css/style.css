@@ -424,10 +424,48 @@ Used to section content and create hierarchy
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
+.new-zanata a h1,
+.new-zanata a h2,
+.new-zanata a h3,
+.new-zanata a h4,
+.new-zanata a h5,
+.new-zanata a h6 {
+  color: #4e9fdd;
+  -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+}
 .new-zanata a:hover,
 .new-zanata .\3A hover,
 .new-zanata a:focus,
 .new-zanata .\3A focus {
+  color: #2479bb;
+}
+.new-zanata a:hover h1,
+.new-zanata a:hover h2,
+.new-zanata a:hover h3,
+.new-zanata a:hover h4,
+.new-zanata a:hover h5,
+.new-zanata a:hover h6,
+.new-zanata .\3A hover h1,
+.new-zanata .\3A hover h2,
+.new-zanata .\3A hover h3,
+.new-zanata .\3A hover h4,
+.new-zanata .\3A hover h5,
+.new-zanata .\3A hover h6,
+.new-zanata a:focus h1,
+.new-zanata a:focus h2,
+.new-zanata a:focus h3,
+.new-zanata a:focus h4,
+.new-zanata a:focus h5,
+.new-zanata a:focus h6,
+.new-zanata .\3A focus h1,
+.new-zanata .\3A focus h2,
+.new-zanata .\3A focus h3,
+.new-zanata .\3A focus h4,
+.new-zanata .\3A focus h5,
+.new-zanata .\3A focus h6 {
   color: #2479bb;
 }
 .new-zanata a:focus {
@@ -451,6 +489,26 @@ a:hover,
 .new-zanata a:active,
 .new-zanata a.is-active,
 .new-zanata .\3A active {
+  color: #416988;
+}
+.new-zanata a:active h1,
+.new-zanata a:active h2,
+.new-zanata a:active h3,
+.new-zanata a:active h4,
+.new-zanata a:active h5,
+.new-zanata a:active h6,
+.new-zanata a.is-active h1,
+.new-zanata a.is-active h2,
+.new-zanata a.is-active h3,
+.new-zanata a.is-active h4,
+.new-zanata a.is-active h5,
+.new-zanata a.is-active h6,
+.new-zanata .\3A active h1,
+.new-zanata .\3A active h2,
+.new-zanata .\3A active h3,
+.new-zanata .\3A active h4,
+.new-zanata .\3A active h5,
+.new-zanata .\3A active h6 {
   color: #416988;
 }
 
@@ -2388,6 +2446,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .dropdown__toggle__icon, .new-zanata .dropdown__toggle__icon:before, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
+.new-zanata .button--snug,
+.new-zanata .button--small,
 .new-zanata .button--large,
 .new-zanata .button--huge,
 .new-zanata .button--full,
@@ -3077,6 +3137,7 @@ All icons also need the class `.i` added to them.
 }
 .new-zanata .i:before, .new-zanata .i--inline:before, .new-zanata .i--left:before, .new-zanata .i--right:before, .new-zanata .i--understated:before, .new-zanata .i--large:before, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge:before, .new-zanata .form--search:before {
   font-family: 'Zanata';
+  text-align: center;
 }
 .new-zanata .i--inline:before {
   line-height: 1.625em;
@@ -3416,12 +3477,6 @@ Sub-headings can be used when placing a heading under another heading.
     float: right;
   }
 }
-.new-zanata .list__title {
-  margin: 0;
-  font-weight: 600;
-  font-size: 1em;
-  line-height: 1.625em;
-}
 
 /*
 
@@ -3517,6 +3572,15 @@ Sub-headings can be used when placing a heading under another heading.
   margin-left: 0.8125em;
   text-align: right;
   color: #416988;
+}
+.new-zanata .list--stats .list__title {
+  line-height: 1em;
+}
+.new-zanata .list--stats .list__item__meta {
+  font-size: 0.875em;
+  line-height: 1em;
+  color: #a2b4c3;
+  margin: 0.46429em 0 0;
 }
 
 /*
@@ -4482,7 +4546,7 @@ Keep focus while showing and hiding a password field
   background-color: transparent;
 }
 .new-zanata .dropdown--inline .dropdown__content > li > a {
-  padding: 0.40625em 0.8125em;
+  padding: 0.40625em 1.625em 0.40625em 0.8125em;
 }
 .no-touch .new-zanata .dropdown--inline .dropdown__content > li > a:hover {
   background-color: #4e9fdd;
@@ -4516,6 +4580,8 @@ Keep focus while showing and hiding a password field
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  font-size: 0.875em;
+  line-height: 1.39286em;
 }
 .new-zanata .label--highlight {
   background-color: #4e9fdd;
@@ -4737,6 +4803,8 @@ Keep focus while showing and hiding a password field
 
 ```
 <p><a class="button">Button</a></p>
+<p><a class="button--snug">Button Snug</a></p>
+<p><a class="button--small">Button Small</a></p>
 <p><a class="button--large">Button Large</a></p>
 <p><a class="button--huge">Button Huge</a></p>
 <p><a class="button--full">Button Full</a></p>
@@ -4754,6 +4822,8 @@ Keep focus while showing and hiding a password field
 .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
+.new-zanata .button--snug,
+.new-zanata .button--small,
 .new-zanata .button--large,
 .new-zanata .button--huge,
 .new-zanata .button--full,
@@ -4765,18 +4835,12 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--warning,
 .new-zanata .button--danger,
 .new-zanata input.button--primary {
-  padding: 0.40625em 0.8125em;
-  border: none;
-  background-color: #fafafb;
-  color: #565d65;
-  font-weight: 600;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  border: 1px solid rgba(65, 105, 136, 0.15);
   -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   -moz-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
@@ -4785,11 +4849,20 @@ Keep focus while showing and hiding a password field
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
+  padding: 0.40625em 0.8125em;
+  border: none;
+  border: 1px solid rgba(65, 105, 136, 0.15);
+  background-color: #fafafb;
+  color: #565d65;
+  text-align: center;
+  font-weight: 600;
 }
 .new-zanata input[type="submit"]:hover, .new-zanata input[type="submit"]:focus,
 .new-zanata button:hover,
 .new-zanata button:focus,
 .new-zanata .button:hover,
+.new-zanata .button--snug:hover,
+.new-zanata .button--small:hover,
 .new-zanata .button--large:hover,
 .new-zanata .button--huge:hover,
 .new-zanata .button--full:hover,
@@ -4801,6 +4874,8 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--warning:hover,
 .new-zanata .button--danger:hover,
 .new-zanata .button:focus,
+.new-zanata .button--snug:focus,
+.new-zanata .button--small:focus,
 .new-zanata .button--large:focus,
 .new-zanata .button--huge:focus,
 .new-zanata .button--full:focus,
@@ -4823,6 +4898,8 @@ Keep focus while showing and hiding a password field
 .new-zanata button:active,
 .new-zanata button.is-active,
 .new-zanata .button:active,
+.new-zanata .button--snug:active,
+.new-zanata .button--small:active,
 .new-zanata .button--large:active,
 .new-zanata .button--huge:active,
 .new-zanata .button--full:active,
@@ -4834,6 +4911,8 @@ Keep focus while showing and hiding a password field
 .new-zanata .button--warning:active,
 .new-zanata .button--danger:active,
 .new-zanata .button.is-active,
+.new-zanata .is-active.button--snug,
+.new-zanata .is-active.button--small,
 .new-zanata .is-active.button--large,
 .new-zanata .is-active.button--huge,
 .new-zanata .is-active.button--full,
@@ -4849,12 +4928,12 @@ Keep focus while showing and hiding a password field
   -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
 }
-.new-zanata .button[disbaled], .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--success, .new-zanata [disbaled].button--warning, .new-zanata [disbaled].button--danger,
+.new-zanata .button[disbaled], .new-zanata [disbaled].button--snug, .new-zanata [disbaled].button--small, .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--success, .new-zanata [disbaled].button--warning, .new-zanata [disbaled].button--danger,
 .new-zanata button[disabled],
 .new-zanata input[type="submit"][disabled] {
   pointer-events: none;
 }
-.new-zanata .button[disbaled]:hover, .new-zanata [disbaled].button--large:hover, .new-zanata [disbaled].button--huge:hover, .new-zanata [disbaled].button--full:hover, .new-zanata [disbaled].button--inline-right:hover, .new-zanata [disbaled].button--inline-left:hover, .new-zanata [disbaled].button--primary:hover, .new-zanata [disbaled].button--secondary:hover, .new-zanata [disbaled].button--success:hover, .new-zanata [disbaled].button--warning:hover, .new-zanata [disbaled].button--danger:hover, .new-zanata .button[disbaled]:focus, .new-zanata [disbaled].button--large:focus, .new-zanata [disbaled].button--huge:focus, .new-zanata [disbaled].button--full:focus, .new-zanata [disbaled].button--inline-right:focus, .new-zanata [disbaled].button--inline-left:focus, .new-zanata [disbaled].button--primary:focus, .new-zanata [disbaled].button--secondary:focus, .new-zanata [disbaled].button--success:focus, .new-zanata [disbaled].button--warning:focus, .new-zanata [disbaled].button--danger:focus, .new-zanata .button[disbaled]:active, .new-zanata [disbaled].button--large:active, .new-zanata [disbaled].button--huge:active, .new-zanata [disbaled].button--full:active, .new-zanata [disbaled].button--inline-right:active, .new-zanata [disbaled].button--inline-left:active, .new-zanata [disbaled].button--primary:active, .new-zanata [disbaled].button--secondary:active, .new-zanata [disbaled].button--success:active, .new-zanata [disbaled].button--warning:active, .new-zanata [disbaled].button--danger:active, .new-zanata .button[disbaled].is-active, .new-zanata [disbaled].is-active.button--large, .new-zanata [disbaled].is-active.button--huge, .new-zanata [disbaled].is-active.button--full, .new-zanata [disbaled].is-active.button--inline-right, .new-zanata [disbaled].is-active.button--inline-left, .new-zanata [disbaled].is-active.button--primary, .new-zanata [disbaled].is-active.button--secondary, .new-zanata [disbaled].is-active.button--success, .new-zanata [disbaled].is-active.button--warning, .new-zanata [disbaled].is-active.button--danger,
+.new-zanata .button[disbaled]:hover, .new-zanata [disbaled].button--snug:hover, .new-zanata [disbaled].button--small:hover, .new-zanata [disbaled].button--large:hover, .new-zanata [disbaled].button--huge:hover, .new-zanata [disbaled].button--full:hover, .new-zanata [disbaled].button--inline-right:hover, .new-zanata [disbaled].button--inline-left:hover, .new-zanata [disbaled].button--primary:hover, .new-zanata [disbaled].button--secondary:hover, .new-zanata [disbaled].button--success:hover, .new-zanata [disbaled].button--warning:hover, .new-zanata [disbaled].button--danger:hover, .new-zanata .button[disbaled]:focus, .new-zanata [disbaled].button--snug:focus, .new-zanata [disbaled].button--small:focus, .new-zanata [disbaled].button--large:focus, .new-zanata [disbaled].button--huge:focus, .new-zanata [disbaled].button--full:focus, .new-zanata [disbaled].button--inline-right:focus, .new-zanata [disbaled].button--inline-left:focus, .new-zanata [disbaled].button--primary:focus, .new-zanata [disbaled].button--secondary:focus, .new-zanata [disbaled].button--success:focus, .new-zanata [disbaled].button--warning:focus, .new-zanata [disbaled].button--danger:focus, .new-zanata .button[disbaled]:active, .new-zanata [disbaled].button--snug:active, .new-zanata [disbaled].button--small:active, .new-zanata [disbaled].button--large:active, .new-zanata [disbaled].button--huge:active, .new-zanata [disbaled].button--full:active, .new-zanata [disbaled].button--inline-right:active, .new-zanata [disbaled].button--inline-left:active, .new-zanata [disbaled].button--primary:active, .new-zanata [disbaled].button--secondary:active, .new-zanata [disbaled].button--success:active, .new-zanata [disbaled].button--warning:active, .new-zanata [disbaled].button--danger:active, .new-zanata .button[disbaled].is-active, .new-zanata [disbaled].is-active.button--snug, .new-zanata [disbaled].is-active.button--small, .new-zanata [disbaled].is-active.button--large, .new-zanata [disbaled].is-active.button--huge, .new-zanata [disbaled].is-active.button--full, .new-zanata [disbaled].is-active.button--inline-right, .new-zanata [disbaled].is-active.button--inline-left, .new-zanata [disbaled].is-active.button--primary, .new-zanata [disbaled].is-active.button--secondary, .new-zanata [disbaled].is-active.button--success, .new-zanata [disbaled].is-active.button--warning, .new-zanata [disbaled].is-active.button--danger,
 .new-zanata button[disabled]:hover,
 .new-zanata button[disabled]:focus,
 .new-zanata button[disabled]:active,
@@ -4869,6 +4948,14 @@ Keep focus while showing and hiding a password field
   -moz-box-shadow: inherit !important;
   box-shadow: inherit !important;
   pointer-events: none;
+}
+.new-zanata .button--snug {
+  padding: 0.40625em;
+}
+.new-zanata .button--small {
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  padding: 0.46429em;
 }
 .new-zanata .button--large {
   font-size: 1.25em;
@@ -5564,13 +5651,13 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .new-zanata .panel__heading {
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 3.25em;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  padding: 0.8125em;
+  padding: 0 0.8125em;
   font-weight: 400;
   overflow: hidden;
   margin: 0;
@@ -5578,15 +5665,15 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 @media (min-width: 46.25em) {
   .new-zanata .panel__heading {
     font-size: 1.125em;
-    line-height: 1.44444em;
-    padding: 0.72222em;
+    line-height: 2.88889em;
+    padding: 0 0.72222em;
   }
 }
-.new-zanata .panel__header__sort {
+.new-zanata .panel__header__sort,
+.new-zanata .panel__header__actions {
   float: right;
   white-space: nowrap;
-  margin: 0.8125em;
-  margin-left: 0;
+  margin: 0.73125em 0.8125em 0 0;
 }
 .new-zanata .panel__header__back {
   height: 3.25em;

@@ -195,7 +195,7 @@
         }
       }
       > a {
-        padding: rhythm(.25) rhythm(.5);
+        padding: rhythm(.25) rhythm(1) rhythm(.25) rhythm(.5);
         &:hover {
           .no-touch & {
             background-color: $color-link;

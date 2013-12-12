@@ -23,6 +23,15 @@ a {
   cursor: pointer;
   outline: none;
   @include transition($transition-fast-ease);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-link;
+    @include transition($transition-fast-ease);
+  }
 }
 
 // Use .\3A so style guide can reference pseudo classes
@@ -33,6 +42,14 @@ a:hover,
 a:focus,
 .\3A focus {
   color: $color-link-hover;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-link-hover;
+  }
 }
 
 a:focus {
@@ -56,6 +73,14 @@ a:active,
 a.is-active,
 .\3A active {
   color: $color-link-active;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-link-active;
+  }
 }
 
 }
