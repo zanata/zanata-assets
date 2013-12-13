@@ -34,7 +34,8 @@
     "grunt-contrib-csslint": "~0.1.2",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-newer": "~0.6.0",
-    "grunt-webfont": "~0.2.1"
+    "grunt-webfont": "~0.2.1",
+    "grunt-browser-sync": "~0.3.0"
   },
   "keywords": []
 }

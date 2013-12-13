@@ -2093,7 +2093,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
-.new-zanata .is-transition-bounce, .new-zanata .dropdown, .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
+.new-zanata .is-transition-bounce, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
   -webkit-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -moz-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -o-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
@@ -4017,8 +4017,6 @@ Keep focus while showing and hiding a password field
   transform: rotate(180deg);
 }
 .new-zanata .dropdown__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
   position: absolute !important;
   top: 100%;
   left: 0;
@@ -4030,6 +4028,10 @@ Keep focus while showing and hiding a password field
   width: 100%;
   float: left;
   min-width: 6.5em;
+}
+.csstransforms3d .new-zanata .dropdown__content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -4065,14 +4067,16 @@ Keep focus while showing and hiding a password field
   background-color: #edeff1;
 }
 .new-zanata .dropdown.is-active .dropdown__content {
+  visibility: visible;
+}
+.csstransforms3d .new-zanata .dropdown.is-active .dropdown__content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  visibility: visible;
 }
 .new-zanata .dropdown--right .dropdown__toggle__icon {
   right: 0;
@@ -5686,10 +5690,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   line-height: 1.625em;
 }
 .new-zanata .header__user-nav__menu {
-  -webkit-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  -moz-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  -o-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   visibility: hidden;
   position: absolute;
   z-index: 0;
@@ -5698,13 +5698,17 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   border-top: none;
   padding-top: 3.25em;
   margin-top: -3.25em;
+}
+.csstransforms3d .new-zanata .header__user-nav__menu {
+  -webkit-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -moz-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -o-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
-}
-.csstransforms3d .new-zanata .header__user-nav__menu {
   bottom: auto;
   top: 100%;
 }

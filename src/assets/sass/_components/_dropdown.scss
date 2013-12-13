@@ -102,9 +102,7 @@
 }
 
 .dropdown__content {
-  @extend .is-transition-bounce;
   @extend .bg--pop-higher;
-  @include opacity(0);
   position: absolute !important;
   top: 100%;
   left: 0;
@@ -116,7 +114,11 @@
   width: 100%;
   float: left;
   min-width: rhythm(4);
-  @include transform3d(translateY(-50%));
+  .csstransforms3d & {
+    @extend .is-transition-bounce;
+    @include opacity(0);
+    @include transform3d(translateY(-50%));
+  }
   > li {
     list-style: none;
     margin: 0;
@@ -153,9 +155,11 @@
 }
 
 .dropdown.is-active .dropdown__content {
-  @include transform3d(translate3d(0,0,0));
-  @include opacity(1);
   visibility: visible;
+  .csstransforms3d & {
+    @include opacity(1);
+    @include transform3d(translate3d(0,0,0));
+  }
 }
 
 .dropdown--right {

@@ -203,6 +203,19 @@ var srcFolder = './src/',
         path: 'http://localhost:5000'
       }
     },
+    browser_sync: {
+      files: {
+        src : buildFolder + '/*',
+      },
+      options: {
+        watchTask: true,
+        ghostMode: {
+            scroll: true,
+            links: true,
+            forms: true
+        }
+      },
+    },
     watch: {
       options: {
         livereload: true,
@@ -245,6 +258,7 @@ var srcFolder = './src/',
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -262,7 +276,7 @@ var srcFolder = './src/',
   grunt.registerTask('dev', 'Build a dev version without watching or running a server.\n', ['init', 'shell:jekyllDev']);
 
   // Watch
-  grunt.registerTask('w', 'Start a server and watch all files.\nIf a file changes re-compile and reload browser.\n', ['dev', 'connect', 'watch']);
+  grunt.registerTask('w', 'Start a server and watch all files.\nIf a file changes re-compile and reload browser.\n', ['dev', 'connect', 'browser_sync', 'watch']);
 
   // Watch and open server in browser
   grunt.registerTask('wo', 'The same as `w` but also opens the project in your browser.\n', ['dev', 'connect', 'open:server', 'watch']);
