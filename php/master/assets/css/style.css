@@ -2443,7 +2443,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .dropdown__toggle__icon, .new-zanata .dropdown__toggle__icon:before, .new-zanata .message--global, .new-zanata input[type="submit"],
+.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .dropdown__toggle__icon, .new-zanata .dropdown__toggle__icon:before, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--snug,
@@ -3613,7 +3613,7 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 
 */
-.new-zanata .list--highlight li:hover {
+.new-zanata .list--highlight > li:hover {
   background-color: rgba(65, 105, 136, 0.05);
 }
 .new-zanata .list--highlight__item--none:hover {
@@ -5807,12 +5807,16 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 
 ```example
 <div class="autocomplete">
-  <input type="text" class="autocomplete__input">
+  <input type="text" class="autocomplete__input" placeholder="Search…">
   <ul class="autocomplete__results">
     <li class="autocomplete__result">Result 1</li>
-    <li class="autocomplete__result">Result 2</li>
-    <li class="autocomplete__result">Result 3</li>
+    <li class="autocomplete__result">Result 2 <span class="txt--understated">Understated</span></li>
+    <li class="autocomplete__result is-selected">Result 3 <span class="txt--understated">Understated</span></li>
     <li class="autocomplete__result">Result 4</li>
+    <li class="autocomplete__result"><a href="#">Result 5</a></li>
+    <li class="autocomplete__result">Result 6</li>
+    <li class="autocomplete__result">Result 7</li>
+    <li class="autocomplete__result">Result 8</li>
   </ul>
 </div>
 ```
@@ -5824,20 +5828,30 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .new-zanata .autocomplete__results {
   position: absolute;
-  z-index: 200;
   top: 100%;
+  z-index: 200;
+  overflow: auto;
+  max-height: 14.625em;
   width: 100%;
   border-radius: 2px;
+  -webkit-overflow-scrolling: touch;
 }
 .new-zanata .autocomplete__result {
   padding: 0.40625em;
+  cursor: pointer;
+}
+.new-zanata .autocomplete__result a {
+  color: #444c54;
 }
 .new-zanata .autocomplete__result.is-selected {
-  color: #f2f2f2;
+  color: white;
   background-color: #4e9fdd;
 }
 .new-zanata .autocomplete__result.is-selected a {
-  color: #f2f2f2;
+  color: white;
+}
+.new-zanata .autocomplete__result.is-selected .txt--understated, .new-zanata .autocomplete__result.is-selected .i--understated:before {
+  color: #d9e1e7;
 }
 
 /*

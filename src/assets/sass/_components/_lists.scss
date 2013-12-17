@@ -335,7 +335,7 @@ nav ol {
 
 //ul
 .list--highlight {
-  li {
+  > li {
     @extend .is-transition;
     &:hover {
       background-color: rgba($color-secondary, .05);
