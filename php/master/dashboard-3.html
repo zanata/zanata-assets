@@ -78,10 +78,10 @@
       </div>
     </a>
     <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
-      <li><a href="dashboard">Dashboard <i class="l--float-right i--inline i--dashboard"></i></a></li>
-      <li><a href="#">Settings <i class="l--float-right i--inline i--settings"></i></a></li>
-      <li class="header__user-nav__admin"><a href="#">Admin <i class="l--float-right i--inline i--admin"></i></a></li>
-      <li><a href="#">Logout <i class="l--float-right i--inline i--logout"></i></a></li>
+      <li><a href="dashboard" class="i__item--right">Dashboard <i class="i i--dashboard i__item__icon"></i></a></li>
+      <li><a href="#" class="i__item--right">Settings <i class="i__item__icon i i--settings"></i></a></li>
+      <li class="header__user-nav__admin"><a href="#" class="i__item--right">Admin <i class="i__item__icon i i--admin"></i></a></li>
+      <li><a href="#" class="i__item--right">Logout <i class="i__item__icon i i--logout"></i></a></li>
     </ul>
   </nav>
 </header>
@@ -180,7 +180,7 @@
               </div>
             </header>
             <ul class="list--no-bullets">
-              <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container d--bottom">
+              <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container js-dropdown__container d--bottom">
                 <div class="g--tight l--pad-h-half">
                   <div class="g__item w--3-4 w--3-4-s">
                     <h3 class="epsilon"><a href="#">Zanata</a></h3>
@@ -197,10 +197,10 @@
                   </div>
                 </div>
                 <div class="l--pad-h-half l--pad-bottom-half">
-                  <div class="dropdown" ng-class="{is-active: is-active}">
-                    <div class="dropdown__toggle" href="#" ng-click="is-active=!is-active">
-                      <i class="i i--arrow-down dropdown__toggle__icon"></i>
-                      <ul class="dropdown__toggle__content list--horizontal ">
+                  <div class="dropdown js-dropdown" ng-class="{is-active: is-active}">
+                    <div class="dropdown__toggle js-dropdown__toggle" href="#" ng-click="is-active=!is-active">
+                      <i class="i i--arrow-down dropdown__toggle__icon js-dropdown__toggle__icon"></i>
+                      <ul class="dropdown__toggle__content js-dropdown__toggle__content list--horizontal ">
                         <li>
                           <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--version"></i><span class="is-invisible">Version</span> 3.0</a>
                         </li>
@@ -212,7 +212,7 @@
                         </li>
                       </ul>
                     </div>
-                    <ul class="dropdown__content">
+                    <ul class="dropdown__content js-dropdown__content">
                       <li>
                         <ul class="list--horizontal">
                           <li>
@@ -324,8 +324,6 @@
   </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <script src='http://10.215.4.61:3000/socket.io/socket.io.js'></script>
-  <script src='http://10.215.4.61:3001/browser-sync-client.min.js'></script>
 </body>
 </html>
 

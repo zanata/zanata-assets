@@ -243,11 +243,21 @@
   }
 }
 
+.panel__heading--small {
+  @include adjust-font-size-to(14px);
+  @include ellipsis;
+  padding: 0 rhythm(.5, 14px);
+  font-weight: 400;
+  overflow: hidden;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .panel__header__sort,
 .panel__header__actions {
   float: right;
   white-space: nowrap;
-  margin: rhythm(.45) rhythm(.5) 0 0;
+  // margin: rhythm(.45) rhythm(.5) 0 0;
 }
 
 .panel__header__back {

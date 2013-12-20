@@ -74,6 +74,7 @@
     @extend .is-transition;
     @extend .i;
     @extend .i--search:before;
+    z-index: 11;
     position: absolute;
     left: rhythm(.25);
     top: rhythm(.5);

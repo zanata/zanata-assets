@@ -8,11 +8,11 @@ All icons also need the class `.i` added to them.
 
 @font-face {
 	font-family: 'Zanata';
-	src:url('../fonts/zanata-v3/zanata.eot');
-	src:url('../fonts/zanata-v3/zanata.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/zanata-v3/zanata.woff') format('woff'),
-		url('../fonts/zanata-v3/zanata.ttf') format('truetype'),
-		url('../fonts/zanata-v3/zanata.svg#zanata') format('svg');
+	src:url('../fonts/zanata-v4/zanata.eot');
+	src:url('../fonts/zanata-v4/zanata.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/zanata-v4/zanata.woff') format('woff'),
+		url('../fonts/zanata-v4/zanata.ttf') format('truetype'),
+		url('../fonts/zanata-v4/zanata.svg#zanata') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -74,17 +74,71 @@ $icons: list, code, review, language, star, notification, project, document, clo
 	}
 }
 
+.i--small {
+	@extend .i;
+	&:before {
+		@include font-size(14px);
+	}
+}
+
 .i--large {
 	@extend .i;
 	&:before {
-		@include adjust-font-size-to(20px,1);
+		@include font-size(20px);
 	}
 }
 
 .i--huge {
 	@extend .i;
 	&:before {
-		@include adjust-font-size-to(24px,1);
+		@include font-size(24px);
+	}
+}
+
+}
+
+/*
+
+#### Icon Item
+
+Use to display icons to the far side of text, either left or right. Usually used in a list.
+
+<ul class="list--no-bullets">
+	<li class="i__item--left">Text <i class="i i__item__icon i--export"></i></li>
+	<li class="i__item--right">Text <i class="i i__item__icon i--export"></i></li>
+	<li>
+		<a href="" class="i__item--left">Text <i class="i i__item__icon i--export"></i></a>
+	</li>
+</ul>
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+%i__item {
+	white-space: nowrap;
+	.i__item__icon {
+		line-height: rhythm(1);
+	}
+}
+
+.i__item--left {
+	@extend %i__item;
+	text-align: right;
+	padding-left: rhythm(1.5) !important;
+	.i__item__icon {
+		float: left;
+		margin-left: rhythm(-1);
+	}
+}
+
+.i__item--right {
+	@extend %i__item;
+	padding-right: rhythm(1.5) !important;
+	.i__item__icon {
+		float: right;
+		margin-right: rhythm(-1);
 	}
 }
 
@@ -248,6 +302,24 @@ $icons: list, code, review, language, star, notification, project, document, clo
 }
 .i--admin:before {
 	content: "\e608";
+}
+.i--import:before {
+	content: "\e609";
+}
+.i--export:before {
+	content: "\e60a";
+}
+.i--external-link:before {
+	content: "\e60b";
+}
+.i--lock:before {
+	content: "\e60d";
+}
+.i--unlock:before {
+	content: "\e60e";
+}
+.i--ellipsis:before {
+	content: "\e60c";
 }
 
 }

@@ -18,7 +18,7 @@
 }
 
 .progress-bar__expander {
-  @include transform3d(translateZ(0));
+  // @include transform3d(translateZ(0));
   &:hover .progress-bar,
   &.is-active .progress-bar {
     .no-touch & {

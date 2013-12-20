@@ -34,8 +34,9 @@
 .dropdown {
   @extend .is-transition-bounce;
   position: relative;
-  z-index: 10;
-  margin: 0 rhythm(-.25);
+  &.is-active {
+    z-index: 900;
+  }
 }
 
 .dropdown__toggle {
@@ -43,10 +44,10 @@
   position: relative;
   z-index: 12;
   display: block;
-  // margin: rhythm(-.25) 0;
-  padding: rhythm(.125) rhythm(.25) rhythm(.125) 0;
+  padding: rhythm(.125) rhythm(.375) rhythm(.125) rhythm(1);
   cursor: pointer;
   color: $color-link;
+  min-height: rhythm(1);
   border: 1px solid transparent;
   &:hover {
     background-color: rgba($color-secondary, 0.03);
@@ -55,27 +56,23 @@
     background-color: $white;
     border: 1px solid rgba($color-secondary, 0.15);
   }
-  // &.is-active {
-  //   margin: rhythm(-.125) 0;
-  //   padding: rhythm(.25) rhythm(.25) rhythm(.25) 0;
-  //   @extend .bg--pop-highest;
-  //   color: $color-link-active;
-  // }
-  .i {
-    @include adjust-font-size-to(16px, 1);
+  &:before {
+    @extend .i:before;
+    @extend .i--arrow-down:before;
+    @include transition($default-transition);
+    position: absolute;
+    left: rhythm(.25);
   }
 }
 
 .dropdown__container.is-active .dropdown__toggle {
-  // margin: rhythm(-.125) 0;
-  // padding: rhythm(.25) rhythm(.25) rhythm(.25) 0;
   @include transform3d(translateZ(0));
   color: $color-link-active;
 }
 
 .dropdown.is-active .dropdown__toggle {
   @extend .bg--pop-highest;
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
 }
 
 .dropdown:hover .dropdown__toggle {
@@ -83,21 +80,10 @@
 }
 
 .dropdown__toggle__icon {
-  @extend .is-transition;
-  @include adjust-font-size-to(18px,1);
-  position: relative;
-  float: left;
-  padding: 0 rhythm(.25, 18px);
-  margin-top: rhythm(.06);
-  &:before {
-    @extend .is-transition;
-  }
-  @include breakpoint($gte-medium) {
-    padding: 0 rhythm(.125, 18px);
-  }
+  display: none;
 }
 
-.dropdown.is-active .dropdown__toggle__icon {
+.dropdown.is-active .dropdown__toggle:before {
   @include rotate(180deg);
 }
 
@@ -132,16 +118,21 @@
       padding: rhythm(.25) rhythm(.25) rhythm(.25) rhythm(1.3);
       display: block;
       margin: 0;
+      &.is-active {
+        font-weight: 600;
+      }
     }
     @include breakpoint($gte-medium) {
       padding-left: rhythm(1);
     }
   }
-  .dropdown__header {
-    border-bottom: 1px solid $color-bg;
-    text-transform: uppercase;
-    background-color: $color-bg-lightest !important;
-  }
+}
+
+.dropdown__header {
+  border-bottom: 1px solid $color-bg;
+  text-transform: uppercase;
+  background-color: $color-bg-lightest !important;
+  padding: 0 rhythm(.5) !important;
 }
 
 .dropdown__divider {
@@ -173,33 +164,21 @@
   }
 }
 
+// Alternates
+
 .dropdown--inline {
   display: inline-block;
-  margin-left: rhythm(.375);
-  .dropdown__toggle {
-    margin: rhythm(-.25);
-    padding: rhythm(.125) rhythm(1) rhythm(.125) rhythm(.5);
-    position: relative;
-  }
-  .dropdown__toggle__icon {
-    position: absolute;
-    padding: 0;
-    margin-left: rhythm(-.125, 18px);
-    right: rhythm(.25);
-  }
+  // margin-left: rhythm(.125);
   .dropdown__content {
     width: auto;
-    margin: rhythm(.21) rhythm(-.25) 0;
     > li {
       padding: 0;
-      white-space:nowrap;
+      white-space: nowrap;
       &:hover {
-        .no-touch & {
-          background-color: transparent;
-        }
+        background-color: transparent;
       }
       > a {
-        padding: rhythm(.25) rhythm(1) rhythm(.25) rhythm(.5);
+        padding: rhythm(.25) rhythm(.5);
         &:hover {
           .no-touch & {
             background-color: $color-link;
@@ -209,14 +188,85 @@
       }
     }
   }
-  .dropdown__header {
-    padding: 0 rhythm(.5)!important;
-  }
 }
 
 .dropdown--small {
-  @include adjust-font-size-to(14px);
-  margin-top: rhythm(.125, 14px);
+  .dropdown__content {
+    @include adjust-font-size-to(14px);
+  }
+}
+
+}
+
+/*
+
+#### Dropdown Header
+
+Used in panel headers to match the header layout
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.dropdown--header {
+  margin: 0;
+  vertical-align: top;
+  margin-right: -1px;
+  .dropdown__toggle {
+    @include adjust-font-size-to(14px);
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: rhythm(.5, 14px);
+    border: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    line-height: rhythm(2, 14px);
+    text-transform: uppercase;
+    // &:hover {
+    //   border-bottom: 2px solid $default-border-color;
+    // }
+    i {
+      line-height: rhythm(2, 14px);
+      vertical-align: inherit;
+    }
+  }
+  &.is-active .dropdown__toggle{
+    border: none;
+    border-left: $default-border;
+    border-right: $default-border;
+    border-bottom: 2px solid $default-border-color;
+    background-color: $color-bg-light;
+    &:hover {
+      background-color: $color-bg-light;
+    }
+  }
+  .dropdown__content {
+    border-top: none;
+  }
+}
+
+}
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.dropdown--single {
+  .dropdown__toggle {
+    @include font-size(16px);
+    padding: 0;
+    width: rhythm(1);
+    text-align: center;
+    &:before {
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .dropdown__content {
+    margin-top: -1px;
+  }
 }
 
 }

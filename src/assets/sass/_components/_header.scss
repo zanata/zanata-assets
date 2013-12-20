@@ -23,7 +23,7 @@
   @extend .l--cf-of;
   position: relative;
   height: rhythm(2);
-  z-index: 100;
+  z-index: 1000;
   background-color: $color-bg-lightest;
   border-bottom: 2px solid $default-border-color;
   &:before {
@@ -42,7 +42,7 @@
 .header__title {
   @include adjust-font-size-to(28px, 2);
   position: relative;
-  z-index: 101;
+  z-index: 1001;
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -85,7 +85,7 @@
   }
   @include breakpoint($gte-m-l) {
     margin-left: rhythm(1);
-    z-index: 101;
+    z-index: 1001;
   }
 }
 
@@ -123,7 +123,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 102;
+  z-index: 1002;
   width: rhythm(2, 20px);
   height: rhythm(2, 20px);
   text-align: center;
@@ -163,7 +163,7 @@
     top: 0;
     width: 50%;
     left: 0;
-    z-index: 150;
+    z-index: 1050;
     &.is-active {
       width: 150%;
     }
@@ -176,7 +176,8 @@
     height: rhythm(2);
     display: block;
     &:hover {
-      background-color: $color-bg-lightest;
+      background-color: $color-link;
+      color: $white;
     }
   }
   @include breakpoint($gte-m-l) {
@@ -199,6 +200,7 @@
       &:focus {
         border-bottom-color: $default-border-color;
         background-color: $color-bg-light;
+        color: $color-link-hover;
       }
       &:active {
         background-color: $color-bg;
@@ -250,7 +252,7 @@
 }
 
 .header__login {
-  z-index: 101;
+  z-index: 1001;
   position: absolute;
   top: 0;
   right: 0;
@@ -312,7 +314,7 @@
   right: 0;
   height: rhythm(2);
   padding: rhythm(.375) rhythm(.5) rhythm(.375) rhythm(1);
-  z-index: 101;
+  z-index: 1001;
   border-left: 1px solid transparent;
   border-bottom: 2px solid transparent;
   &:hover,
@@ -359,9 +361,8 @@
     min-width: emCalc(200px);
     &:hover,
     &:focus {
-      .no-touch & {
-        background-color: $color-bg-lightest;
-      }
+      background-color: $color-link;
+      color: $white;
     }
   }
   @include breakpoint($lte-small) {

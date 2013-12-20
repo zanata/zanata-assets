@@ -78,10 +78,10 @@
       </div>
     </a>
     <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
-      <li><a href="dashboard">Dashboard <i class="l--float-right i--inline i--dashboard"></i></a></li>
-      <li><a href="#">Settings <i class="l--float-right i--inline i--settings"></i></a></li>
-      <li class="header__user-nav__admin"><a href="#">Admin <i class="l--float-right i--inline i--admin"></i></a></li>
-      <li><a href="#">Logout <i class="l--float-right i--inline i--logout"></i></a></li>
+      <li><a href="dashboard" class="i__item--right">Dashboard <i class="i i--dashboard i__item__icon"></i></a></li>
+      <li><a href="#" class="i__item--right">Settings <i class="i__item__icon i i--settings"></i></a></li>
+      <li class="header__user-nav__admin"><a href="#" class="i__item--right">Admin <i class="i__item__icon i i--admin"></i></a></li>
+      <li><a href="#" class="i__item--right">Logout <i class="i__item__icon i i--logout"></i></a></li>
     </ul>
   </nav>
 </header>
@@ -90,7 +90,7 @@
       <main role="main">
         <div class="l__wrapper">
           <div class="g">
-  <div class="g__item w--1-2-m w--3-8-l w--1-3 l--push-bottom-1">
+  <div class="g__item w--1-2-m w--3-8-l w--1-3 l--push-bottom-half">
     <p class="txt--meta l--push-all-0"><a href="#">Projects</a></p>
     <div class="media l--push-bottom-half">
       <div class="media__item--right bx--round">
@@ -99,12 +99,47 @@
       <div class="media__body">
         <h1 class="l--push-all-0">Mortal Kombat</h1>
         <p class="txt--understated">Test your might</p>
-        <p><a href="#">MK website</a></p>
+        <p><a href="#">mortalkombat.com<i class="i--small i--right i--external-link txt--neutral"></i></a></p>
       </div>
     </div>
-    <ul class="list--slat">
-      <li><a href="#">Export Project to TMX</a></li>
+    <ul class="d--top l--push-top-half l--pad-top-half list--slat">
+      <!-- <li><a href="#"><i class="i i--translate"></i> Translation Instructions</a></li> -->
+      <li><a href="#"><i class="i i--export"></i> Export Project to TMX</a></li>
     </ul>
+    <!-- <div class="panel l--push-top-half l--pad-top-half">
+      <div class="panel__header">
+        <h2 class="panel__heading--small">Lastest Activity</h2>
+      </div>
+      <div class="l--pad-all-half">
+        <div class="txt--meta">
+          <p class="l--float-right txt--neutral l--push-left-half"><i aria-hidden="true" class="i--large i--translate" title="Translation"></i><span class="is-invisible">Translation</span></p>
+          <p class="l--push-all-0"><a href="#">Alex Eng</a> translated <strong>846 words</strong>, finishing on &#8220;<a href="#">Finish Him!</a>&#8221;</p>
+          <ul class="list--horizontal txt--meta">
+            <li><i aria-hidden="true" class="i i--clock txt--neutral" title="Time"></i><span class="is-invisible">Time</span> 1h</li>
+            <li><i aria-hidden="true" class="i i--document txt--neutral" title="Document"></i><span class="is-invisible">Document</span> <a href="#">Messages</a></li>
+            <li><i aria-hidden="true" class="i i--language txt--neutral" title="Language"></i><span class="is-invisible">Language</span> <a href="#">Japanese</a></li>
+            <li><i aria-hidden="true" class="i i--version txt--neutral" title="Version"><span class="is-invisible">Version</span></i> <a href="#">master</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="panel l--push-top-half">
+      <div class="panel__header">
+        <h2 class="panel__heading--small">Your Lastest Activity</h2>
+      </div>
+      <div class="l--pad-all-half">
+        <div class="txt--meta">
+          <p class="l--float-right txt--neutral l--push-left-half"><i aria-hidden="true" class="i--large i--translate" title="Translation"></i><span class="is-invisible">Translation</span></p>
+          <p class="l--push-all-0">You translated <strong>537 words</strong>, finishing on &#8220;<a href="#">Determines how the project is treated for upload…</a>&#8221;</p>
+          <ul class="list--horizontal txt--meta">
+            <li><i aria-hidden="true" class="i i--clock txt--neutral" title="Time"></i><span class="is-invisible">Time</span> 6d</li>
+            <li><i aria-hidden="true" class="i i--document txt--neutral" title="Document"></i><span class="is-invisible">Document</span> <a href="#">Messages</a></li>
+            <li><i aria-hidden="true" class="i i--language txt--neutral" title="Language"></i><span class="is-invisible">Language</span> <a href="#">Japanese</a></li>
+            <li><i aria-hidden="true" class="i i--version txt--neutral" title="Version"><span class="is-invisible">Version</span></i> <a href="#">2.0</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="g__item w--1-2-m w--5-8-l w--2-3">
     <div class="tabs--lined">
@@ -113,33 +148,48 @@
           <li><a href="#"><i class="i i--clock"></i><span class="is-hidden--m-down i__text--right">Activity</span></a></li>
           <li><a href="languages" class="is-active"><i class="i i--version"></i><span class="is-hidden--m-down i__text--right">Versions</span><span class="txt--neutral"> 3</span></a></li>
           <li><a href="maintainers"><i class="i i--users"></i><span class="is-hidden--m-down i__text--right">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
-          <li><a href="settings"><i class="i i--settings"></i><span class="is-hidden--m-down i__text--right">Settings</span></a></li>
-          <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i--left i--bell"></i><span class="is-invisible">Notifications</span></a></li>
+          <li><a href="instructions" title="Translation Instructions"><i class="i i--info"></i><span class="is-hidden--m-down i__text--right">Instructions</span></a></li>
+          <li class="tab__end"><a href="settings" title="Project Settings"><span class="is-hidden--m-down i__text--left">Settings</span><i class="i i--settings" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
       <div class="tabs__content panels__container l--push-top-1">
         <div class="panel">
           <div class="panel__header">
             <div class="panel__header__actions">
-              <a href="#" title="Add new version" class="button--snug l--push-left-quarter"><i class="i i--plus"></i></a>
-              <div class="dropdown dropdown--small dropdown--right dropdown--inline js-dropdown">
-                <a class="dropdown__toggle js-dropdown__toggle" href="#"><span class="is-invisible">Percentage </span><span>%</span> <i class="i i--arrow-down dropdown__toggle__icon"></i></a>
+              <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
+                <a class="dropdown__toggle js-dropdown__toggle" href="#">Sort</a>
                 <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
-                  <li class="dropdown__header">sort</li>
-                  <li><a class="is-active" tabindex="-1" href="#"><span class="is-invisible">Percentage </span> %</a></li>
-                  <li><a tabindex="-1" href="#">hours</a></li>
-                  <li><a tabindex="-1" href="#">messages</a></li>
-                  <li><a tabindex="-1" href="#">words</a></li>
-                  <li><a tabindex="-1" href="#">alphabetical</a></li>
+                  <li><a class="is-active" tabindex="-1" href="#">Percent Translated</a></li>
+                  <li><a tabindex="-1" href="#">Hours</a></li>
+                  <li><a tabindex="-1" href="#">Messages</a></li>
+                  <li><a tabindex="-1" href="#">Words</a></li>
+                  <li><a tabindex="-1" href="#">Alphabetically</a></li>
+                </ul>
+              </div>
+              <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
+                <a class="dropdown__toggle js-dropdown__toggle" href="#"><i class="i i--ellipsis" title="More Actions"></i></a>
+                <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+                  <li><a href="#"class="i__item--right">Add Version <i class="i i--plus i__item__icon"></i></a></li>
+                  <li><a href="#" class="i__item--right" title="Export project to translation memory">Export Project to TMX<i class="i i--export i__item__icon"></i></a></li>
                 </ul>
               </div>
             </div>
             <h2 class="panel__heading"><i class="i--left i--version"></i>Versions</h2>
           </div>
           <ul class="list--stats">
-            <li class="progress-bar__expander panels__panel__item">
+            <li class="progress-bar__expander panels__panel__item list__item--actionable">
+              <div class="list__item__action">
+                <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                  <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                  <ul class="dropdown__content js-dropdown__content">
+                    <li><a href="#"class="i__item--right">Translate in Spanish <i class="i i--translate i__item__icon"></i></a></li>
+                    <li><a href="#" class="i__item--right">Translate in Italian<i class="i i--translate i__item__icon"></i></a></li>
+                    <li><a href="#" class="i__item--right">Export Version to TMX<i class="i i--export i__item__icon"></i></a></li>
+                  </ul>
+                </div>
+              </div>
               <a href="master">
-                <div class="list__item">
+                <div class="list__item__content">
                   <div class="list__item__info">
                     <h3 class="list__title">master <span class="label--highlight">Latest</span></h3>
                     <p class="list__item__meta">6h lukebrooker</p>
@@ -156,9 +206,19 @@
                 </div>
               </a>
             </li>
-            <li class="progress-bar__expander bg--highest--hover">
+            <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+              <div class="list__item__action">
+                <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                  <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                  <ul class="dropdown__content js-dropdown__content">
+                    <li><a href="#"class="i__item--right">Translate in Spanish <i class="i i--translate i__item__icon"></i></a></li>
+                    <li><a href="#" class="i__item--right">Translate in Italian<i class="i i--translate i__item__icon"></i></a></li>
+                    <li><a href="#" class="i__item--right">Export Version to TMX<i class="i i--export i__item__icon"></i></a></li>
+                  </ul>
+                </div>
+              </div>
               <a href="#">
-                <div class="list__item">
+                <div class="list__item__content">
                   <div class="list__item__info">
                     <h3 class="list__title">2.0</h3>
                     <p class="list__item__meta">35d aeng</p>
@@ -175,9 +235,19 @@
                 </div>
               </a>
             </li>
-            <li class="progress-bar__expander bg--highest--hover">
+            <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+              <div class="list__item__action">
+                <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                  <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                  <ul class="dropdown__content js-dropdown__content">
+                    <li><a href="#"class="i__item--right">Translate in Spanish <i class="i i--translate i__item__icon"></i></a></li>
+                    <li><a href="#" class="i__item--right">Translate in Italian<i class="i i--translate i__item__icon"></i></a></li>
+                    <li><a href="#" class="i__item--right">Export Version to TMX<i class="i i--export i__item__icon"></i></a></li>
+                  </ul>
+                </div>
+              </div>
               <a href="#">
-                <div class="list__item">
+                <div class="list__item__content">
                   <div class="list__item__info">
                     <h3 class="list__title">1.0</h3>
                     <p class="list__item__meta">124d djansen</p>
@@ -227,8 +297,6 @@
   </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="../../assets/js/script.js"></script>
-  <script src='http://10.215.4.61:3000/socket.io/socket.io.js'></script>
-  <script src='http://10.215.4.61:3001/browser-sync-client.min.js'></script>
 </body>
 </html>
 

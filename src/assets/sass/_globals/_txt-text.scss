@@ -152,7 +152,7 @@
     font-weight: 600;
   }
   @include breakpoint($gte-medium) {
-    @include adjust-font-size-to(28px);
+    @include adjust-font-size-to(28px, 1.25);
   }
 }
 
@@ -172,7 +172,7 @@
 .new-zanata {
 
 .txt--mini {
-  @include adjust-font-size-to(14px);
+  @include adjust-font-size-to(14px, .75);
 }
 
 }
@@ -191,7 +191,7 @@
 .new-zanata {
 
 .txt--meta {
-  @include adjust-font-size-to(14px);
+  @include adjust-font-size-to(14px, .75);
   color: $color-secondary-70;
 }
 

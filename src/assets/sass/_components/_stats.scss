@@ -22,12 +22,13 @@
   @include font-size(42px);
   display: block;
   font-weight: 300;
-  line-height: 1em;
+  line-height: .7em;
 }
 
 .stats__unit {
   @include font-size(18px);
   display: block;
+  margin-top: .3em;
   white-space: nowrap;
   font-weight: 300;
   line-height: 1em;

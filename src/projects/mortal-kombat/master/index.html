@@ -5,10 +5,10 @@ root: "../../../"
 ---
 
 <div class="g">
-  <div class="g__item w--1-2-m w--3-8-l w--1-3 l--push-bottom-1">
+  <div class="g__item w--1-2-m w--3-8-l w--1-3 l--push-bottom-half">
     <p class="txt--meta l--push-all-0"><a href="#">Projects</a> <i class="i i--arrow-right"></i> <a href="../">Mortal Kombat</a></p>
     <div class="l--push-bottom-half">
-      <h1 class="l--push-all-0">master</h1>
+      <h1 class="l--push-all-0"><i class="i--small i--version txt--neutral i--left"></i>master</h1>
     </div>
     <p class="d--top l--pad-top-half txt--mini">Total source contains: <strong>2,528,683 words / 101,147 messages</strong></p>
     <div class="progress-bar__expander">
@@ -16,7 +16,7 @@ root: "../../../"
         <li class="g__item"><span class="stats--large txt--state-success"><span class="stats__figure">65%</span> <span class="stats__unit">translated</span></span></li>
         <li class="g__item"><span class="stats--large"><span class="stats__figure">138,066</span> <span class="stats__unit">total hours remaining</span></span></li>
       </ul>
-      <div class="l--push-v-1">
+      <div class="l--push-v-half">
         <div class="progress-bar--large">
           <span title="24% Untranslated" class="progress-bar__item"></span>
           <span title="65% Translated" class="progress-bar__translated" style="width: 65%;"></span>
@@ -32,9 +32,9 @@ root: "../../../"
           <li><a href="#"><i class="i i--clock"></i><span class="is-hidden--m-down i__text--right">Activity</span></a></li>
           <li><a href="languages" class="is-active"><i class="i i--language"></i><span class="is-hidden--m-down i__text--right">Languages</span><span class="txt--neutral"> 21</span></a></li>
           <li><a href="documents"><i class="i i--document"></i><span class="is-hidden--m-down i__text--right">Documents</span><span class="txt--neutral"> 102</span></a></li>
-          <li><a href="maintainers"><i class="i i--users"></i><span class="is-hidden--m-down i__text--right">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
-          <li><a href="settings"><i class="i i--settings"></i><span class="is-hidden--m-down i__text--right">Settings</span></a></li>
-          <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i--left i--bell"></i><span class="is-invisible">Notifications</span></a></li>
+          <li><a href="documents"><i class="i i--group"></i><span class="is-hidden--m-down i__text--right">Groups</span><span class="txt--neutral"> 1</span></a></li>
+          <li class="tab__end"><a href="settings" title="Version Settings"><span class="is-hidden--m-down i__text--left">Settings</span><i class="i i--settings" aria-hidden="true"></i></a></li>
+          <!-- <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i--left i--bell"></i><span class="is-invisible">Notifications</span></a></li> -->
         </ul>
       </nav>
       <div class="tabs__content panels__container l--push-top-1">
@@ -42,16 +42,21 @@ root: "../../../"
             <div class="panels__panel panel">
               <div class="panel__header">
                 <div class="panel__header__actions">
-                  <a href="#" title="Add new language" class="button--snug l--push-left-quarter"><i class="i i--plus"></i></a>
-                  <div class="dropdown dropdown--small dropdown--right dropdown--inline js-dropdown">
-                    <a class="dropdown__toggle js-dropdown__toggle" href="#"><span class="is-invisible">Percentage </span><span>%</span> <i class="i i--arrow-down dropdown__toggle__icon"></i></a>
+                  <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
+                    <a class="dropdown__toggle js-dropdown__toggle" href="#">Sort</a>
                     <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
-                      <li class="dropdown__header">sort</li>
-                      <li><a class="is-active" tabindex="-1" href="#"><span class="is-invisible">Percentage </span> %</a></li>
-                      <li><a tabindex="-1" href="#">hours</a></li>
-                      <li><a tabindex="-1" href="#">messages</a></li>
-                      <li><a tabindex="-1" href="#">words</a></li>
-                      <li><a tabindex="-1" href="#">alphabetical</a></li>
+                      <li><a class="is-active" tabindex="-1" href="#">Percent Translated</a></li>
+                      <li><a tabindex="-1" href="#">Hours</a></li>
+                      <li><a tabindex="-1" href="#">Messages</a></li>
+                      <li><a tabindex="-1" href="#">Words</a></li>
+                      <li><a tabindex="-1" href="#">Alphabetically</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
+                    <a class="dropdown__toggle js-dropdown__toggle" href="#"><i class="i i--ellipsis" title="More Actions"></i></a>
+                    <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+                      <li><a href="#"class="i__item--right">Add Language <i class="i i--plus i__item__icon"></i></a></li>
+                      <li><a href="#" class="i__item--right" title="Export project to translation memory">Export Version to TMX<i class="i i--export i__item__icon"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -59,7 +64,7 @@ root: "../../../"
               </div>
               <ul class="list--stats">
                 <li class="progress-bar__expander panels__panel__item is-active">
-                  <a href="#">
+                  <a href="#" class="is-active">
                     <div class="list__item">
                       <div class="list__item__info">
                         <h3 class="list__title">Russian</h3>
@@ -121,15 +126,21 @@ root: "../../../"
             <div class="panels__panel panel is-active loader__container">
               <div class="panel__header">
                 <div class="panel__header__actions">
-                  <div class="dropdown dropdown--small dropdown--right dropdown--inline js-dropdown">
-                    <a class="dropdown__toggle js-dropdown__toggle" href="#"><span>hours</span> <i class="i i--arrow-down dropdown__toggle__icon"></i></a>
+                  <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
+                    <a class="dropdown__toggle js-dropdown__toggle" href="#">Sort</a>
                     <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
-                      <li class="dropdown__header txt--uppercase">sort</li>
-                      <li><a tabindex="-1" href="#">%</a></li>
-                      <li><a class="is-active" tabindex="-1" href="#">hours</a></li>
-                      <li><a tabindex="-1" href="#">messages</a></li>
-                      <li><a tabindex="-1" href="#">words</a></li>
-                      <li><a tabindex="-1" href="#">alphabetical</a></li>
+                      <li><a tabindex="-1" href="#">Percent Translated</a></li>
+                      <li><a class="is-active" tabindex="-1" href="#">Hours</a></li>
+                      <li><a tabindex="-1" href="#">Messages</a></li>
+                      <li><a tabindex="-1" href="#">Words</a></li>
+                      <li><a tabindex="-1" href="#">Alphabetically</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
+                    <a class="dropdown__toggle js-dropdown__toggle" href="#"><i class="i i--ellipsis" title="More Actions"></i></a>
+                    <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+                      <li><a href="#"class="i__item--right">Download All for Offline Translation<i class="i i--export i__item__icon"></i></a></li>
+                      <li><a href="#" class="i__item--right" title="Export language to translation memory">Export Language to TMX<i class="i i--export i__item__icon"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -140,12 +151,22 @@ root: "../../../"
                 <h2 class="panel__heading" title="Russian Documents"><i class="i i--document"></i><span class="i__text--right">Russian Documents</span></h2>
               </div>
               <ul class="list--stats">
-                <li class="progress-bar__expander bg--highest--hover">
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable is-active">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
                   <a href="#">
-                    <div class="list__item">
+                    <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name is really really super freakin long</h3>
-                        <p class="list__item__meta">6h lukebrooker</p>
+                        <span class="list__item__meta">6h lukebrooker</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -159,12 +180,22 @@ root: "../../../"
                     </div>
                   </a>
                 </li>
-                <li class="progress-bar__expander bg--highest--hover">
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
                   <a href="#">
-                    <div class="list__item">
+                    <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name</h3>
-                        <p class="list__item__meta">5d djansen</p>
+                        <span class="list__item__meta">5d djansen</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -178,12 +209,22 @@ root: "../../../"
                     </div>
                   </a>
                 </li>
-                <li class="progress-bar__expander bg--highest--hover">
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
                   <a href="#">
-                    <div class="list__item">
+                    <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 2</h3>
-                        <p class="list__item__meta">3h lukebrooker</p>
+                        <span class="list__item__meta">3h lukebrooker</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -197,12 +238,22 @@ root: "../../../"
                     </div>
                   </a>
                 </li>
-                <li class="progress-bar__expander bg--highest--hover">
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
                   <a href="#">
-                    <div class="list__item">
+                    <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <p class="list__item__meta">5m djansen</p>
+                        <span class="list__item__meta">5m djansen</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -216,8 +267,212 @@ root: "../../../"
                     </div>
                   </a>
                 </li>
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="list__item__content">
+                      <div class="list__item__info">
+                        <h3 class="list__title">Document Name 3</h3>
+                        <span class="list__item__meta">5m djansen</span>
+                      </div>
+                      <div class="list__item__stats">
+                        <span class="stats--small">
+                          <span class="stats__figure">103</span>
+                          <span class="stats__unit">hours remaining</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <span class="progress-bar__item"></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="list__item__content">
+                      <div class="list__item__info">
+                        <h3 class="list__title">Document Name 3</h3>
+                        <span class="list__item__meta">5m djansen</span>
+                      </div>
+                      <div class="list__item__stats">
+                        <span class="stats--small">
+                          <span class="stats__figure">103</span>
+                          <span class="stats__unit">hours remaining</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <span class="progress-bar__item"></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="list__item__content">
+                      <div class="list__item__info">
+                        <h3 class="list__title">Document Name 3</h3>
+                        <span class="list__item__meta">5m djansen</span>
+                      </div>
+                      <div class="list__item__stats">
+                        <span class="stats--small">
+                          <span class="stats__figure">103</span>
+                          <span class="stats__unit">hours remaining</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <span class="progress-bar__item"></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="list__item__content">
+                      <div class="list__item__info">
+                        <h3 class="list__title">Document Name 3</h3>
+                        <span class="list__item__meta">5m djansen</span>
+                      </div>
+                      <div class="list__item__stats">
+                        <span class="stats--small">
+                          <span class="stats__figure">103</span>
+                          <span class="stats__unit">hours remaining</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <span class="progress-bar__item"></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="list__item__content">
+                      <div class="list__item__info">
+                        <h3 class="list__title">Document Name 3</h3>
+                        <span class="list__item__meta">5m djansen</span>
+                      </div>
+                      <div class="list__item__stats">
+                        <span class="stats--small">
+                          <span class="stats__figure">103</span>
+                          <span class="stats__unit">hours remaining</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <span class="progress-bar__item"></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="list__item__content">
+                      <div class="list__item__info">
+                        <h3 class="list__title">Document Name 3</h3>
+                        <span class="list__item__meta">5m djansen</span>
+                      </div>
+                      <div class="list__item__stats">
+                        <span class="stats--small">
+                          <span class="stats__figure">103</span>
+                          <span class="stats__unit">hours remaining</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <span class="progress-bar__item"></span>
+                    </div>
+                  </a>
+                </li>
+                <li class="progress-bar__expander bg--highest--hover list__item--actionable">
+                  <div class="list__item__action">
+                    <div class="dropdown dropdown--small dropdown--inline dropdown--single list__item__dropdown js-dropdown">
+                      <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Translate Options" href="#"><span class="is-invisible">Translate Options</span></a>
+                      <ul class="dropdown__content js-dropdown__content">
+                        <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+                        <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <div class="list__item__content">
+                      <div class="list__item__info">
+                        <h3 class="list__title">Document Name 3</h3>
+                        <span class="list__item__meta">5m djansen</span>
+                      </div>
+                      <div class="list__item__stats">
+                        <span class="stats--small">
+                          <span class="stats__figure">103</span>
+                          <span class="stats__unit">hours remaining</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <span class="progress-bar__item"></span>
+                    </div>
+                  </a>
+                </li>
+
               </ul>
-              <a href="#" class="loader"><span class="loader__label">all documents</span></a>
+              <a href="#" class="loader"><span class="loader__label">all documents <span class="txt--neutral">102</span></span></a>
             </div>
           </div>
         </div>
