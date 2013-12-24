@@ -41,9 +41,14 @@
 }
 
 .tabs__content {
-  @include no-bullets;
+  list-style: none;
   margin: 0;
   padding: 0;
+  > li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+  }
 }
 
 .tabs--lined {

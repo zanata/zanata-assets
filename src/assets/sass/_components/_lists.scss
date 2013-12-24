@@ -272,13 +272,14 @@ nav ol {
   .list__item, // Don't use this class
   .list__item__content {
     display: table;
+    table-layout: fixed;
     padding: rhythm(.5) rhythm(.5) rhythm(.25);
-    min-height: rhythm(2.25);
+    min-height: rhythm(2);
   }
   .list__item__info {
     display: table-cell;
     width: 100%;
-    vertical-align: top;
+    vertical-align: middle;
   }
   .list__item--actionable {
     position: relative;
@@ -288,16 +289,16 @@ nav ol {
   }
   .list__item__action {
     position: absolute;
-    left: rhythm(.25);
-    top: 0;
-    margin-top: rhythm(.375);
+    left: rhythm(.2);
+    top: 50%;
+    margin-top: rhythm(-.425);
     width: rhythm(.5);
   }
   .list__item__stats {
     margin-left: rhythm(.5);
     text-align: right;
     color: $color-secondary;
-    vertical-align: bottom;
+    vertical-align: middle;
   }
   .list__title {
     line-height: 1em;
@@ -309,6 +310,7 @@ nav ol {
     color: $color-secondary-50;
     font-weight: 400;
     line-height: 1em;
+    @include hyphenation;
   }
 }
 

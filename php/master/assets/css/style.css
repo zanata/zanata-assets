@@ -809,14 +809,17 @@ a:hover,
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   font-size: 1em;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0.40625em;
   display: block;
   width: 100%;
@@ -837,10 +840,10 @@ a:hover,
 .new-zanata input[type="time"]:focus,
 .new-zanata input[type="url"]:focus,
 .new-zanata textarea:focus {
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   outline: none !important;
   border: 1px solid #7c96ac;
   background: white;
@@ -941,12 +944,14 @@ These are components that can be utilised or are depended on by other components
 .new-zanata .l--clearfix-overflow,
 .new-zanata .l--cf-of,
 .new-zanata .media,
+.new-zanata .panel__results,
 .new-zanata .header {
   *zoom: 1;
 }
 .new-zanata .l--clearfix-overflow:after,
 .new-zanata .l--cf-of:after,
 .new-zanata .media:after,
+.new-zanata .panel__results:after,
 .new-zanata .header:after {
   content: "";
   display: table;
@@ -2457,11 +2462,11 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .button--secondary,
 .new-zanata .button--success,
 .new-zanata .button--warning,
-.new-zanata .button--danger, .no-touch .new-zanata .reveal__target, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+.new-zanata .button--danger, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .new-zanata .is-transition-fast {
   -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2470,10 +2475,10 @@ Centered grids align grid items centrally without needing to use push or pull cl
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .new-zanata .is-transition-bounce, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
-  -webkit-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  -moz-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  -o-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
 }
 .new-zanata .is-removed {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -3272,7 +3277,18 @@ Use to display icons to the far side of text, either left or right. Usually used
 }
 .new-zanata .i--cross:before,
 .new-zanata .i--remove:before,
-.new-zanata .i--cancel:before {
+.new-zanata .i--cancel:before,
+.new-zanata .panel__search__button.is-active .i:before,
+.new-zanata .panel__search__button.is-active .i--inline:before,
+.new-zanata .panel__search__button.is-active .i--left:before,
+.new-zanata .panel__search__button.is-active .i--right:before,
+.new-zanata .panel__search__button.is-active .i--understated:before,
+.new-zanata .panel__search__button.is-active .i--small:before,
+.new-zanata .panel__search__button.is-active .i--large:before,
+.new-zanata .panel__search__button.is-active .header__user-nav__toggle:before,
+.new-zanata .panel__search__button.is-active .i--huge:before,
+.new-zanata .panel__search__button.is-active .form--search:before,
+.new-zanata .panel__search__button.is-active .dropdown__toggle:before {
   content: "\e006";
 }
 .new-zanata .i--checkmark:before {
@@ -3417,13 +3433,13 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--no-bullets, .new-zanata nav ul,
-.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .list--slat, .new-zanata .list--slat-horizontal, .new-zanata .list--stats, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-ul {
+.new-zanata nav ol, .new-zanata .list--horizontal, .new-zanata .panel__pager, .new-zanata .list--slat, .new-zanata .list--slat-horizontal, .new-zanata .list--stats, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .new-zanata .list--no-bullets li, .new-zanata nav ul li,
-.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li, .new-zanata .list--stats li, .new-zanata .autocomplete__results li, .new-zanata .rf-au-lst-ul li {
+.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .panel__pager li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li, .new-zanata .list--stats li, .new-zanata .autocomplete__results li, .new-zanata .rf-au-lst-ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -3459,11 +3475,11 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 
 */
-.new-zanata .list--horizontal li {
+.new-zanata .list--horizontal li, .new-zanata .panel__pager li {
   display: inline-block;
   margin-right: 0.40625em;
 }
-.new-zanata .list--horizontal li:last-child {
+.new-zanata .list--horizontal li:last-child, .new-zanata .panel__pager li:last-child {
   margin-right: 0;
 }
 
@@ -3617,13 +3633,14 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list--stats .list__item,
 .new-zanata .list--stats .list__item__content {
   display: table;
+  table-layout: fixed;
   padding: 0.8125em 0.8125em 0.40625em;
-  min-height: 3.65625em;
+  min-height: 3.25em;
 }
 .new-zanata .list--stats .list__item__info {
   display: table-cell;
   width: 100%;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .new-zanata .list--stats .list__item--actionable {
   position: relative;
@@ -3633,16 +3650,16 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .list--stats .list__item__action {
   position: absolute;
-  left: 0.40625em;
-  top: 0;
-  margin-top: 0.60938em;
+  left: 0.325em;
+  top: 50%;
+  margin-top: -0.69063em;
   width: 0.8125em;
 }
 .new-zanata .list--stats .list__item__stats {
   margin-left: 0.8125em;
   text-align: right;
   color: #416988;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 .new-zanata .list--stats .list__title {
   line-height: 1em;
@@ -3654,6 +3671,12 @@ Sub-headings can be used when placing a heading under another heading.
   color: #a2b4c3;
   font-weight: 400;
   line-height: 1em;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 /*
@@ -3912,10 +3935,10 @@ Keep focus while showing and hiding a password field
   background-color: #444c54;
   z-index: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3929,10 +3952,10 @@ Keep focus while showing and hiding a password field
   height: 100%;
   overflow: auto;
   background-color: #edeff1;
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -3947,10 +3970,10 @@ Keep focus while showing and hiding a password field
   content: "";
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
 @media (max-width: 96.1875em) {
@@ -4043,10 +4066,10 @@ Keep focus while showing and hiding a password field
   height: 100%;
   position: absolute;
   top: 0;
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
@@ -4217,7 +4240,7 @@ Keep focus while showing and hiding a password field
   margin: 0;
   padding: 0;
 }
-.new-zanata .tabs__content li {
+.new-zanata .tabs__content > li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
@@ -4481,10 +4504,10 @@ Keep focus while showing and hiding a password field
   border: 1px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .dropdown__toggle:before {
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   position: absolute;
   left: 0.40625em;
 }
@@ -4640,6 +4663,10 @@ Used in panel headers to match the header layout
   line-height: 3.71429em;
   text-transform: uppercase;
 }
+.new-zanata .dropdown--header .dropdown__toggle:active {
+  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
+  background-color: #f5f6f7;
+}
 .new-zanata .dropdown--header .dropdown__toggle i {
   line-height: 3.71429em;
   vertical-align: inherit;
@@ -4685,15 +4712,11 @@ Used in panel headers to match the header layout
 */
 .new-zanata .label, .new-zanata .label--highlight {
   background-color: #d9e1e7;
-  padding: 0 0.40625em;
-  display: -moz-inline-stack;
+  padding: 0 0.25em;
+  margin: 0.075em 0.25em 0;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  font-size: 0.875em;
-  line-height: 1.39286em;
+  font-size: 0.8125em;
+  vertical-align: top;
 }
 .new-zanata .label--highlight {
   background-color: #4e9fdd;
@@ -5273,6 +5296,22 @@ Used to show extra information on hover of the parent element
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+.new-zanata .reveal__target--slide {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  max-height: 0;
+}
+.new-zanata .reveal__target--slide.is-active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  max-height: 4.875em;
+}
+.new-zanata .reveal__target--appear {
+  display: none !important;
+}
+.new-zanata .reveal__target--appear.is-active {
+  display: block !important;
+}
 .new-zanata .reveal--list-item {
   position: relative;
   padding-right: 1.625em !important;
@@ -5537,7 +5576,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .new-zanata .stats__unit {
   font-size: 1.125em;
   display: block;
-  margin-top: .3em;
+  margin-top: .15em;
   white-space: nowrap;
   font-weight: 300;
   line-height: 1em;
@@ -5829,6 +5868,75 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   .new-zanata .panel__header__back + .panel__heading {
     padding-left: 0.72222em;
   }
+}
+.new-zanata .panel__search {
+  display: block;
+}
+.new-zanata .panel__search:before {
+  left: 0.69063em;
+  top: 0em;
+  line-height: 1.625em;
+}
+.new-zanata .panel__search input {
+  font-size: 0.875em;
+  line-height: 1.48571em;
+  padding: 0.23214em 0.92857em 0.23214em 2.55357em;
+  height: 1.95em;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  margin: 0;
+}
+.new-zanata .panel__search input:focus, .new-zanata .panel__search input:hover {
+  border: none;
+  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+}
+.new-zanata .panel__results {
+  position: relative;
+  padding: 0 0.8125em 0 2.23438em;
+}
+.new-zanata .panel__results .txt--meta {
+  line-height: inherit;
+}
+.new-zanata .panel__results__type {
+  position: absolute;
+  top: 0.46429em;
+  left: 0.92857em;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+}
+.new-zanata .panel__search__button {
+  margin-top: -0.08125em;
+}
+.new-zanata .panel__pager {
+  height: 1.625em;
+  float: right;
+}
+.new-zanata .panel__pager li {
+  vertical-align: top;
+  margin: 0 0 0 -0.20313em;
+}
+.new-zanata .panel__pager__button {
+  line-height: 1.625em;
+  height: 1.625em;
+  width: 1.625em;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #4e9fdd;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.new-zanata .panel__pager__button:hover, .new-zanata .panel__pager__button:focus, .new-zanata .panel__pager__button:active {
+  color: #2479bb;
+  background-color: #f5f6f7;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.new-zanata .panel__pager__button:active {
+  color: #416988;
 }
 
 .new-zanata .panels__container {
@@ -6207,10 +6315,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     background-color: #f5f6f7;
   }
   .csstransforms3d .new-zanata .header__main-nav__group {
-    -webkit-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-    -moz-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-    -o-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-    transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+    -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+    -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+    -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+    transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
@@ -6478,10 +6586,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   margin-top: -3.25em;
 }
 .csstransforms3d .new-zanata .header__user-nav__menu {
-  -webkit-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  -moz-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  -o-transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  transition: 0.3s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);

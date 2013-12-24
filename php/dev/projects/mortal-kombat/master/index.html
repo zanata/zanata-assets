@@ -134,6 +134,7 @@
                       <li><a tabindex="-1" href="#">Hours</a></li>
                       <li><a tabindex="-1" href="#">Messages</a></li>
                       <li><a tabindex="-1" href="#">Words</a></li>
+                      <li><a tabindex="-1" href="#">Last Updated</a></li>
                       <li><a tabindex="-1" href="#">Alphabetically</a></li>
                     </ul>
                   </div>
@@ -145,7 +146,15 @@
                     </ul>
                   </div>
                 </div>
-                <h2 class="panel__heading"><i class="i--left i--language"></i>Languages</h2>
+                <h2 class="panel__heading">Languages</h2>
+              </div>
+              <div class="panel__sub-header">
+                <div class="panel__results">
+                  <div class="panel__results__type">
+                    <i class="i i--language txt--neutral"></i>
+                  </div>
+                  <span class="txt--meta"><strong>3</strong></span>
+                </div>
               </div>
               <ul class="list--stats">
                 <li class="progress-bar__expander panels__panel__item is-active">
@@ -153,7 +162,6 @@
                     <div class="list__item">
                       <div class="list__item__info">
                         <h3 class="list__title">Russian</h3>
-                        <p class="list__item__meta">6h lukebrooker</p>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small txt--state-neutral">
@@ -171,8 +179,7 @@
                   <a href="#">
                     <div class="list__item">
                       <div class="list__item__info">
-                        <h3 class="list__title">Japanese</h3>
-                        <p class="list__item__meta">9h lukebrooker</p>
+                        <h3 class="list__title">Japanese<i class="i--right i--translate txt--neutral"></i></h3>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small txt--state-neutral">
@@ -191,7 +198,6 @@
                     <div class="list__item">
                       <div class="list__item__info">
                         <h3 class="list__title">Spanish</h3>
-                        <p class="list__item__meta">5d aeng</p>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small txt--state-success">
@@ -218,6 +224,7 @@
                       <li><a class="is-active" tabindex="-1" href="#">Hours</a></li>
                       <li><a tabindex="-1" href="#">Messages</a></li>
                       <li><a tabindex="-1" href="#">Words</a></li>
+                      <li><a tabindex="-1" href="#">Last Updated</a></li>
                       <li><a tabindex="-1" href="#">Alphabetically</a></li>
                     </ul>
                   </div>
@@ -233,7 +240,24 @@
                   <i class="i--huge i--arrow-left" aria-hidden="true"></i>
                   <span class="is-invisible">Back</span>
                 </a>
-                <h2 class="panel__heading" title="Russian Documents"><i class="i i--document"></i><span class="i__text--right">Russian Documents</span></h2>
+                <h2 class="panel__heading" title="Russian Documents">Russian Documents</h2>
+              </div>
+              <div class="panel__sub-header">
+                <div class="form--search panel__search reveal__target--appear" id="document-search">
+                  <label for="document-search__input" class="form--search__label"></label>
+                  <input id="document-search__input" type="search" placeholder="Search document names…" class="form--search__input js-reveal__target__input">
+                </div>
+                <div class="panel__results">
+                  <div class="panel__results__type">
+                    <i class="i i--document txt--neutral"></i>
+                  </div>
+                  <ul class="panel__pager">
+                    <li><button title="Previous (10201-10300)" class="panel__pager__button"><i class="i--huge i--arrow-left"></i></button></li>
+                    <li><button title="Next (10401-10500)" class="panel__pager__button"><i class="i--huge i--arrow-right"></i></button></li>
+                  </ul>
+                  <span class="txt--meta"><strong>10301-10400</strong> of 10786 <button class="button--link panel__search__button js-reveal__click" data-target="#document-search"><i class="i--right i--search"></i></button></span>
+
+                </div>
               </div>
               <ul class="list--stats">
                 <li class="progress-bar__expander bg--highest--hover list__item--actionable is-active">
@@ -251,7 +275,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name is really really super freakin long</h3>
-                        <span class="list__item__meta">6h lukebrooker</span>
+                        <span class="list__item__meta">frontend/webadmin/modules/webadmin/src/main/resources/org/ovirt/engine/ui/frontend/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -280,7 +304,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name</h3>
-                        <span class="list__item__meta">5d djansen</span>
+                        <span class="list__item__meta">frontend/webadmin/modules/webadmin/src/main/resources/org/ovirt/engine/ui/frontend/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -309,7 +333,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 2</h3>
-                        <span class="list__item__meta">3h lukebrooker</span>
+                        <span class="list__item__meta">frontend/webadmin/modules/webadmin/src/main/resources/org/ovirt/engine/ui/frontend/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -338,7 +362,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">frontend/webadmin</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -367,7 +391,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">src/main/resources/org/ovirt/engine/ui/frontend/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -396,7 +420,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">src/main/resources/org/ovirt/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -425,7 +449,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">src/main/resources/org/ovirt/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -454,7 +478,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">src/main/resources/org/ovirt/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -483,7 +507,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -512,7 +536,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -541,7 +565,7 @@
                     <div class="list__item__content">
                       <div class="list__item__info">
                         <h3 class="list__title">Document Name 3</h3>
-                        <span class="list__item__meta">5m djansen</span>
+                        <span class="list__item__meta">src/main/resources/org/ovirt/</span>
                       </div>
                       <div class="list__item__stats">
                         <span class="stats--small">
@@ -557,7 +581,16 @@
                 </li>
 
               </ul>
-              <a href="#" class="loader"><span class="loader__label">all documents <span class="txt--neutral">102</span></span></a>
+              <div class="panel__results">
+                <div class="panel__results__type">
+                  <i class="i i--document txt--neutral"></i>
+                </div>
+                <ul class="panel__pager">
+                  <li><button title="Previous (10201-10300)" class="panel__pager__button"><i class="i--huge i--arrow-left"></i></button></li>
+                  <li><button title="Next (10401-10500)" class="panel__pager__button"><i class="i--huge i--arrow-right"></i></button></li>
+                </ul>
+                <span class="txt--meta"><strong>10301-10400</strong> of 10786</span>
+              </div>
             </div>
           </div>
         </div>

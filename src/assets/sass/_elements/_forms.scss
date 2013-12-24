@@ -176,6 +176,7 @@ textarea {
   @include transition($default-transition);
   @include font-size($form-input-font-size);
   @include box-shadow($form-input-box-shadow-inset);
+  @include box-sizing(border-box);
   padding: rhythm($form-spacing / 2, $form-input-font-size);
   display: block;
   width: 100%;

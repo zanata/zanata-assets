@@ -224,9 +224,10 @@ Used in panel headers to match the header layout
     border-bottom: 2px solid transparent;
     line-height: rhythm(2, 14px);
     text-transform: uppercase;
-    // &:hover {
-    //   border-bottom: 2px solid $default-border-color;
-    // }
+    &:active {
+      border-bottom: 2px solid $default-border-color;
+      background-color: $color-bg-light;
+    }
     i {
       line-height: rhythm(2, 14px);
       vertical-align: inherit;

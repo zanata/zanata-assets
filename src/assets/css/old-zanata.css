@@ -27,10 +27,10 @@ a {
   color: #4e9fdd;
   text-decoration: none;
   cursor: pointer;
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
 a:hover,
@@ -135,10 +135,10 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .button:hover, button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, a.action_link:hover {
   background-color: #f5f6f7;

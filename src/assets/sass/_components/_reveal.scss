@@ -44,6 +44,23 @@ Used to show extra information on hover of the parent element
   }
 }
 
+.reveal__target--slide {
+  @extend .is-transition;
+  @include opacity(0);
+  max-height: 0;
+  &.is-active {
+    @include opacity(1);
+    max-height: rhythm(3);
+  }
+}
+
+.reveal__target--appear {
+  display: none !important;
+  &.is-active {
+    display: block !important;
+  }
+}
+
 .reveal--list-item {
   @extend .reveal;
   position: relative;
