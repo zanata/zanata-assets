@@ -123,6 +123,7 @@ nav ol {
 .list__title {
   margin: 0;
   font-weight: 600;
+  @include hyphenation;
   @include adjust-font-size-to($base-font-size);
 }
 

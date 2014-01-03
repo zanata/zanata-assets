@@ -22,7 +22,7 @@
   .panels__panel {
     width: 50%;
   }
-  @include breakpoint($lte-medium) {
+  @include breakpoint($lte-small) {
     .panels__panel:nth-child(2) {
       visibility: hidden;
       @include opacity(0);
@@ -39,7 +39,7 @@
       }
     }
   }
-  @include breakpoint($gte-large) {
+  @include breakpoint($gte-medium) {
     width: 100%;
     .panels__panel:first-child {
       border-right: none;

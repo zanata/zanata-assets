@@ -235,6 +235,25 @@
 
 /*
 
+#### Text Hyphenate
+
+<p class="txt--hyphen">https://access.redhat.com/site/products/Red_Hat_Enterprise_Linux/Get-Beta</p>
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--hyphenate {
+  @include hyphenation;
+}
+
+}
+
+
+
+/*
+
 #### Text States
 
 ```

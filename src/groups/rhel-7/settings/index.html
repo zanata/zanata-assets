@@ -43,8 +43,15 @@ root: "../../../"
           <li><a href="../languages"><i class="i i--language"></i> <span class="is-hidden--m-down">Languages</span><span class="txt--neutral"> 21</span></a></li>
           <li><a href="../projects"><i class="i i--project"></i> <span class="is-hidden--m-down">Projects</span><span class="txt--neutral"> 102</span></a></li>
           <li><a href="../maintainers"><i class="i i--users"></i> <span class="is-hidden--m-down">Maintainers</span><span class="txt--neutral"> 5</span></a></li>
-          <li><a href="../settings" class="is-active"><i class="i i--settings"></i> <span class="is-hidden--m-down">Settings</span></a></li>
-          <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i i--bell"></i><span class="is-invisible">Notifications</span></a></li>
+          <li class="tab__end">
+            <div class="dropdown dropdown--tab dropdown--small dropdown--right dropdown--inline js-dropdown">
+              <a class="dropdown__toggle js-dropdown__toggle" href="#"><i class="i i--ellipsis" title="More Actions"></i></a>
+              <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+                <li><a href="#"class="i__item--right">Request to add a project to RHEL 7 <i class="i i--project i__item__icon"></i></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="tab__end"><a href="../settings" class="is-active"><i class="i i--settings"></i> <span class="is-hidden--m-down">Settings</span></a></li>
         </ul>
       </nav>
       <div class="tabs__content panels__container l--push-top-1">
@@ -76,7 +83,7 @@ root: "../../../"
                   <input type="submit" value="Update general settings" class="l--push-right-half button--primary">
                 </div>
                 <hr>
-                <p><a href="#" class="button--danger">Archive this Group</a></p>
+                <p><a href="#" class="button--danger"><i class="i--left i--archive"></i>Archive this Group</a></p>
                 <p class="txt--meta">This will disable this group and remove it from the public groups list, you will still be able to access it and unarchive it later.</p>
               </form>
             </li>

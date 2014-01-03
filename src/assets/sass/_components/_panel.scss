@@ -275,12 +275,12 @@
   + .panel__heading {
     padding-left: rhythm(1.5, 16px);
   }
-  @include breakpoint($gte-medium) {
+  @include breakpoint($gte-small) {
     + .panel__heading {
       padding-left: rhythm(1.5, 18px);
     }
   }
-  @include breakpoint($gte-large) {
+  @include breakpoint($gte-medium) {
     display: none;
     + .panel__heading {
       padding-left: rhythm(.5, 18px);
@@ -297,7 +297,7 @@
   }
   input {
     @include adjust-font-size-to(14px, .8);
-    padding: rhythm(.125, 14px) rhythm(.5, 14px) rhythm(.125, 14px) rhythm(1.375, 14px);
+    padding: rhythm(.125, 14px) rhythm(2, 14px) rhythm(.125, 14px) rhythm(1.375, 14px);
     height: rhythm(1.05, 14px);
     border-radius: 0;
     border: none;
@@ -334,6 +334,14 @@
       @extend .i--cancel;
     }
   }
+}
+
+.panel__search__cancel {
+  @include adjust-font-size-to(14px);
+  position: absolute;
+  top: 0;
+  right: rhythm(.5,14px);
+  font-weight: 400;
 }
 
 .panel__pager {

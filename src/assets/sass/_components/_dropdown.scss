@@ -44,7 +44,8 @@
   position: relative;
   z-index: 12;
   display: block;
-  padding: rhythm(.125) rhythm(.375) rhythm(.125) rhythm(1);
+  padding: rhythm(.125) rhythm(.375);
+  padding-left: rhythm(1) !important;
   cursor: pointer;
   color: $color-link;
   min-height: rhythm(1);
@@ -267,6 +268,19 @@ Used in panel headers to match the header layout
   }
   .dropdown__content {
     margin-top: -1px;
+  }
+}
+
+}
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.dropdown--tab {
+  .dropdown__toggle {
+    padding-top: rhythm(.5);
+    padding-bottom: rhythm(.5);
+    max-height: rhythm(2);
   }
 }
 

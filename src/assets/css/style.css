@@ -778,12 +778,6 @@ a:hover,
 .new-zanata input[type="radio"] {
   padding: 0;
 }
-.new-zanata input[type="search"] {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-appearance: textfield;
-}
 .new-zanata input[type="search"]::-webkit-search-cancel-button,
 .new-zanata input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -828,6 +822,7 @@ a:hover,
   background-color: #fdfdfe;
   color: #333333;
   margin: 0 0 0.8125em;
+  -webkit-appearance: none;
 }
 .new-zanata input[type="text"]:focus,
 .new-zanata input[type="password"]:focus,
@@ -2448,7 +2443,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--highest--hover:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
+.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
+.new-zanata .tabs--lined > .tabs__nav > li > a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--snug,
@@ -2671,6 +2667,22 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--important {
   font-weight: 700;
+}
+
+/*
+
+#### Text Hyphenate
+
+<p class="txt--hyphen">https://access.redhat.com/site/products/Red_Hat_Enterprise_Linux/Get-Beta</p>
+
+*/
+.new-zanata .txt--hyphenate {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 /*
@@ -3510,6 +3522,12 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list__title {
   margin: 0;
   font-weight: 600;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
   font-size: 1em;
   line-height: 1.625em;
 }
@@ -4204,7 +4222,8 @@ Keep focus while showing and hiding a password field
   margin: 0;
   padding: 0;
 }
-.new-zanata .tabs__nav li {
+.new-zanata .tabs__nav > ul > li,
+.new-zanata .tabs__nav > li {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -4213,11 +4232,13 @@ Keep focus while showing and hiding a password field
   *display: inline;
   letter-spacing: normal;
 }
-.new-zanata .tabs__nav li.is-active a {
+.new-zanata .tabs__nav > ul > li.is-active > a,
+.new-zanata .tabs__nav > li.is-active > a {
   color: #416988;
   cursor: default;
 }
-.new-zanata .tabs__nav a {
+.new-zanata .tabs__nav > ul > li > a,
+.new-zanata .tabs__nav > li > a {
   padding: 0.40625em;
   display: -moz-inline-stack;
   display: inline-block;
@@ -4231,7 +4252,8 @@ Keep focus while showing and hiding a password field
   float: right;
 }
 @media (min-width: 46.25em) {
-  .new-zanata .tabs__nav a {
+  .new-zanata .tabs__nav > ul > li > a,
+  .new-zanata .tabs__nav > li > a {
     padding: 0.8125em;
   }
 }
@@ -4249,13 +4271,15 @@ Keep focus while showing and hiding a password field
   border-bottom: 2px solid rgba(65, 105, 136, 0.15);
   max-height: 3.25em;
 }
-.new-zanata .tabs--lined > .tabs__nav a {
+.new-zanata .tabs--lined > .tabs__nav > ul > li > a,
+.new-zanata .tabs--lined > .tabs__nav > li > a {
   text-align: center;
   padding: 0.8125em 0.60938em;
   max-height: 3.25em;
   position: relative;
 }
-.new-zanata .tabs--lined > .tabs__nav a:after {
+.new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
+.new-zanata .tabs--lined > .tabs__nav > li > a:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -4264,23 +4288,27 @@ Keep focus while showing and hiding a password field
   width: 100%;
   background-color: transparent;
 }
+.new-zanata .tabs--lined > .tabs__nav > ul > li > a :hover:after,
+.new-zanata .tabs--lined > .tabs__nav > li > a :hover:after {
+  background-color: #c6d2db;
+}
+.new-zanata .tabs--lined > .tabs__nav > ul > li > a.is-active:after,
+.new-zanata .tabs--lined > .tabs__nav > li > a.is-active:after {
+  background-color: #416988;
+}
 .new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--inline, .new-zanata .tabs--lined > .tabs__nav .i--left, .new-zanata .tabs--lined > .tabs__nav .i--right, .new-zanata .tabs--lined > .tabs__nav .i--understated, .new-zanata .tabs--lined > .tabs__nav .i--small, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .header__user-nav__toggle:before, .new-zanata .tabs--lined > .tabs__nav .i--huge, .new-zanata .tabs--lined > .tabs__nav .form--search:before {
   line-height: 1.625em;
   padding: 0 0 0.12188em;
 }
-.new-zanata .tabs--lined > .tabs__nav a:hover:after {
-  background-color: #c6d2db;
-}
-.new-zanata .tabs--lined > .tabs__nav a.is-active:after {
-  background-color: #416988;
-}
 @media (min-width: 46.25em) {
-  .new-zanata .tabs--lined > .tabs__nav a {
+  .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
+  .new-zanata .tabs--lined > .tabs__nav > li > a {
     padding: 0.8125em;
   }
 }
 @media (min-width: 79.375em) {
-  .new-zanata .tabs--lined > .tabs__nav a {
+  .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
+  .new-zanata .tabs--lined > .tabs__nav > li > a {
     max-height: 3.25em;
   }
 }
@@ -4490,7 +4518,8 @@ Keep focus while showing and hiding a password field
   position: relative;
   z-index: 12;
   display: block;
-  padding: 0.20313em 0.60938em 0.20313em 1.625em;
+  padding: 0.20313em 0.60938em;
+  padding-left: 1.625em !important;
   cursor: pointer;
   color: #4e9fdd;
   min-height: 1.625em;
@@ -4698,6 +4727,12 @@ Used in panel headers to match the header layout
 }
 .new-zanata .dropdown--single .dropdown__content {
   margin-top: -1px;
+}
+
+.new-zanata .dropdown--tab .dropdown__toggle {
+  padding-top: 0.8125em;
+  padding-bottom: 0.8125em;
+  max-height: 3.25em;
 }
 
 /*
@@ -5856,12 +5891,12 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .new-zanata .panel__header__back + .panel__heading {
   padding-left: 2.4375em;
 }
-@media (min-width: 46.25em) {
+@media (min-width: 0) {
   .new-zanata .panel__header__back + .panel__heading {
     padding-left: 2.16667em;
   }
 }
-@media (min-width: 79.375em) {
+@media (min-width: 46.25em) {
   .new-zanata .panel__header__back {
     display: none;
   }
@@ -5880,7 +5915,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .new-zanata .panel__search input {
   font-size: 0.875em;
   line-height: 1.48571em;
-  padding: 0.23214em 0.92857em 0.23214em 2.55357em;
+  padding: 0.23214em 3.71429em 0.23214em 2.55357em;
   height: 1.95em;
   border-radius: 0;
   border: none;
@@ -5907,6 +5942,14 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .new-zanata .panel__search__button {
   margin-top: -0.08125em;
+}
+.new-zanata .panel__search__cancel {
+  font-size: 0.875em;
+  line-height: 1.85714em;
+  position: absolute;
+  top: 0;
+  right: 0.92857em;
+  font-weight: 400;
 }
 .new-zanata .panel__pager {
   height: 1.625em;
@@ -5955,7 +5998,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .new-zanata .panels--2 .panels__panel {
   width: 50%;
 }
-@media (max-width: 79.3125em) {
+@media (max-width: 46.1875em) {
   .new-zanata .panels--2 .panels__panel:nth-child(2) {
     visibility: hidden;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -5979,7 +6022,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     opacity: 1;
   }
 }
-@media (min-width: 79.375em) {
+@media (min-width: 46.25em) {
   .new-zanata .panels--2 {
     width: 100%;
   }

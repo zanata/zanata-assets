@@ -15,26 +15,29 @@
   letter-spacing: -0.2em;
   margin: 0;
   padding: 0;
-  li {
+  > ul > li,
+  > li {
     @include inline-block;
     letter-spacing: normal;
     &.is-active {
-      a {
+      > a {
         color: $color-link-active;
         cursor: default;
       }
     }
+    > a {
+      padding: rhythm(.25);
+      @include inline-block;
+      font-weight: 600;
+    }
   }
-  a {
-    padding: rhythm(.25);
-    @include inline-block;
-    font-weight: 600;
-  }
+
   .tab__end {
     float: right;
   }
   @include breakpoint($gte-medium) {
-    a {
+    > ul > li > a,
+    > li > a {
       padding: rhythm(.5);
     }
   }
@@ -55,7 +58,8 @@
   > .tabs__nav {
     border-bottom: 2px solid $default-border-color;
     max-height: rhythm(2);
-    a {
+    > ul > li > a,
+    > li > a {
       text-align: center;
       padding: rhythm(.5) rhythm(.375);
       max-height: rhythm(2);
@@ -70,33 +74,34 @@
         width: 100%;
         background-color: transparent;
       }
+      :hover {
+        &:after {
+          background-color: $color-secondary-30;
+        }
+      }
+      &.is-active {
+        &:after {
+          background-color: $color-secondary;
+        }
+      }
     }
     .i {
       line-height: rhythm(1);
       padding: 0 0 rhythm(.075);
     }
-    a:hover {
-      &:after {
-        background-color: $color-secondary-30;
-      }
-    }
-    a.is-active {
-      &:after {
-        background-color: $color-secondary;
-      }
-    }
   }
   @include breakpoint($gte-medium) {
-  >  .tabs__nav {
-      a {
+  > .tabs__nav {
+      > ul > li > a,
+      > li > a {
         padding: rhythm(.5);
-
       }
     }
   }
   @include breakpoint($gte-large) {
     > .tabs__nav {
-      a {
+      > ul > li > a,
+      > li > a {
         max-height: rhythm(2);
       }
     }
