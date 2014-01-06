@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-01-03
+/*! zanata-assets - v0.1.0 - 2014-01-06
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1578,52 +1578,13 @@ $(function() {
     e.stopPropagation();
   });
 
-  $(document).bind('click', collapseActiveDropdowns);
-  $(document).on('click touchstart', '.js-dropdown__toggle', toggleThisCollapseOthers);
-
-  // $(document).on('mouseenter', '.js-dropdown', function() {
-  //   clearTimeout(mouseOutTimer);
-  //   $(this).addClass('is-hover');
-  // });
-  // $(document).on('mouseleave', '.js-dropdown', function() {
-  //   var that = $(this);
-  //   mouseOutTimer = setTimeout(function(){
-  //              that.removeClass('is-hover');
-  //            },300);
-  // });
+  $(document).bind('click touchend', collapseActiveDropdowns);
+  $(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
 });
 
-// $(function() {
-
-//   var collapseActiveDropdowns,
-//       toggleThisCollapseOthers;
-
-//   collapseActiveDropdowns = function () {
-//     $('.dropdown.is-active .dropdown__toggle').click();
-//   };
-
-//   toggleThisCollapseOthers = function (e) {
-//     e.preventDefault();
-//     var dropdown = $(this).parent('.dropdown');
-//     $('.dropdown.is-active').not(dropdown).removeClass('is-active')
-//                             .parents('.dropdown__container').removeClass('is-active');
-//     dropdown.toggleClass('is-active').parents('.dropdown__container').toggleClass('is-active');
-//     e.stopPropagation();
-//   };
-
-//   // Don't toggle dropdown when clicking links inside it
-//   $('.dropdown__toggle a, .dropdown__content').bind('click', function(e) {
-//     e.stopPropagation();
-//   });
-
-//   $(document).bind('click', collapseActiveDropdowns);
-//   $(document).on('click', '.dropdown__toggle', toggleThisCollapseOthers);
-
-// });
-
 $(function () {
-  $('.js-form-password-parent').on('click', '.js-form-password-toggle', function(e) {
+  $('.js-form-password-parent').on('click touchend', '.js-form-password-toggle', function(e) {
     var $passwordInput = $(this).parents('.js-form-password-parent')
                                 .find('.js-form-password-input');
     e.preventDefault();
@@ -1662,7 +1623,7 @@ $(function () {
 });
 
 $(function () {
-  $(document).on('click', '.js-message-remove', function(e) {
+  $(document).on('click touchend', '.js-message-remove', function(e) {
     var $this = $(this),
         $parent = $this.parents('.message--removable');
     e.preventDefault();
@@ -1723,7 +1684,7 @@ $(function() {
 });
 
 $(function() {
-  $('.js-reveal__show').on('click', function() {
+  $('.js-reveal__show').on('click touchend', function() {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal');
@@ -1734,13 +1695,13 @@ $(function() {
       $revealTargetInput.focus();
     }, 100);
   });
-  $('.js-reveal__reset').on('click', function() {
+  $('.js-reveal__reset').on('click touchend', function() {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');
     $revealTargetInput.val('').focus();
     $(this).addClass('is-hidden');
   });
-  $('.js-reveal__cancel').on('click', function() {
+  $('.js-reveal__cancel').on('click touchend', function() {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal');
@@ -1782,7 +1743,7 @@ $(function () {
 
 $(function () {
 
-  $('.js-tabs').on('click touchstart', '.js-tabs-nav a', function(e) {
+  $('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
     e.preventDefault();
     if (!$(this).parent().hasClass('is-active')) {
       var $this = $(this),

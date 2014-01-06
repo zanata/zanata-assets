@@ -327,13 +327,14 @@
   @include adjust-font-size-to(14px);
 }
 
+.panel__search__reset,
 .panel__search__button {
-  margin-top: rhythm(-.05);
-  &.is-active {
-    .i:before {
-      @extend .i--cancel;
-    }
-  }
+  vertical-align: inherit;
+}
+
+.panel__search__button {
+  margin-left: rhythm(.125, 14px);
+  font-weight: 400;
 }
 
 .panel__search__cancel {

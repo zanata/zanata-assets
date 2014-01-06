@@ -61,7 +61,7 @@
     > ul > li > a,
     > li > a {
       text-align: center;
-      padding: rhythm(.5) rhythm(.375);
+      padding: rhythm(.5);
       max-height: rhythm(2);
       position: relative;
       &:after {
@@ -91,14 +91,6 @@
     }
   }
   @include breakpoint($gte-medium) {
-  > .tabs__nav {
-      > ul > li > a,
-      > li > a {
-        padding: rhythm(.5);
-      }
-    }
-  }
-  @include breakpoint($gte-large) {
     > .tabs__nav {
       > ul > li > a,
       > li > a {

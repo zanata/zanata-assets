@@ -3289,18 +3289,7 @@ Use to display icons to the far side of text, either left or right. Usually used
 }
 .new-zanata .i--cross:before,
 .new-zanata .i--remove:before,
-.new-zanata .i--cancel:before,
-.new-zanata .panel__search__button.is-active .i:before,
-.new-zanata .panel__search__button.is-active .i--inline:before,
-.new-zanata .panel__search__button.is-active .i--left:before,
-.new-zanata .panel__search__button.is-active .i--right:before,
-.new-zanata .panel__search__button.is-active .i--understated:before,
-.new-zanata .panel__search__button.is-active .i--small:before,
-.new-zanata .panel__search__button.is-active .i--large:before,
-.new-zanata .panel__search__button.is-active .header__user-nav__toggle:before,
-.new-zanata .panel__search__button.is-active .i--huge:before,
-.new-zanata .panel__search__button.is-active .form--search:before,
-.new-zanata .panel__search__button.is-active .dropdown__toggle:before {
+.new-zanata .i--cancel:before {
   content: "\e006";
 }
 .new-zanata .i--checkmark:before {
@@ -4274,7 +4263,7 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
 .new-zanata .tabs--lined > .tabs__nav > li > a {
   text-align: center;
-  padding: 0.8125em 0.60938em;
+  padding: 0.8125em;
   max-height: 3.25em;
   position: relative;
 }
@@ -4301,12 +4290,6 @@ Keep focus while showing and hiding a password field
   padding: 0 0 0.12188em;
 }
 @media (min-width: 46.25em) {
-  .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
-  .new-zanata .tabs--lined > .tabs__nav > li > a {
-    padding: 0.8125em;
-  }
-}
-@media (min-width: 79.375em) {
   .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
   .new-zanata .tabs--lined > .tabs__nav > li > a {
     max-height: 3.25em;
@@ -5940,8 +5923,13 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   font-size: 0.875em;
   line-height: 1.85714em;
 }
+.new-zanata .panel__search__reset,
 .new-zanata .panel__search__button {
-  margin-top: -0.08125em;
+  vertical-align: inherit;
+}
+.new-zanata .panel__search__button {
+  margin-left: 0.23214em;
+  font-weight: 400;
 }
 .new-zanata .panel__search__cancel {
   font-size: 0.875em;

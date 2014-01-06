@@ -1,5 +1,5 @@
 $(function () {
-  $(document).on('click', '.js-message-remove', function(e) {
+  $(document).on('click touchend', '.js-message-remove', function(e) {
     var $this = $(this),
         $parent = $this.parents('.message--removable');
     e.preventDefault();

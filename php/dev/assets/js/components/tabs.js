@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.js-tabs').on('click touchstart', '.js-tabs-nav a', function(e) {
+  $('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
     e.preventDefault();
     if (!$(this).parent().hasClass('is-active')) {
       var $this = $(this),
