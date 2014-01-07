@@ -271,3 +271,33 @@ Keep focus while showing and hiding a password field
 }
 
 }
+
+/*
+
+#### Form Input Copyable
+
+```example
+<input type="text" class="form__input--copyable" value="Copy this text">
+```
+
+*/
+
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+input.form__input--copyable {
+  line-height: rhythm(1);
+  height: rhythm(1);
+  padding: rhythm(.125);
+  margin: 0;
+  background-color: $color-bg-light;
+  border-color: transparent;
+  @include box-shadow(none);
+  color: $color-link;
+  &:focus {
+    color: $color-base-font;
+  }
+}
+
+}

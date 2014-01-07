@@ -269,7 +269,21 @@ nav ol {
 
 .list--stats {
   @extend .list--no-bullets;
-  padding-bottom: rhythm(.25);
+  > li {
+    margin-top: rhythm(-.25);
+    &:hover {
+      @extend .bg--highest--hover;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    &.is-active {
+      background-color: $color-bg-lightest;
+      > a {
+        color: $color-link-active;
+      }
+    }
+  }
   .list__item, // Don't use this class
   .list__item__content {
     display: table;
@@ -292,7 +306,7 @@ nav ol {
     position: absolute;
     left: rhythm(.2);
     top: 50%;
-    margin-top: rhythm(-.425);
+    margin-top: rhythm(-.56);
     width: rhythm(.5);
   }
   .list__item__stats {

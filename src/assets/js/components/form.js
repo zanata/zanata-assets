@@ -26,4 +26,7 @@ $(function () {
   $('.js-form--search').on('blur', '.js-form--search__input, .js-form--search__button', function() {
     $(this).parents('.js-form--search').removeClass('is-active');
   });
+  $('.js-form__input--copyable').on('click touchend', function() {
+    $(this).select();
+  });
 });

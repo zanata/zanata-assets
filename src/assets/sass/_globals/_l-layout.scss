@@ -251,7 +251,7 @@ $max-site-width is assigned to this
   @include breakpoint($gte-medium) {
     padding: 0 $grid-padding / 2;
   }
-  @include breakpoint($gte-large) {
+  @include breakpoint($gte-huge) {
     padding: 0 $grid-padding;
   }
   @include no-mqueries {

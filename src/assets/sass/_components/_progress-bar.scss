@@ -5,24 +5,43 @@
   @extend .is-transition;
   // @include backface-visibility(hidden);
   @include transition-delay(.2s);
-  position: relative;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: rhythm(-.5);
   width: 100%;
   height: rhythm(.25);
-  background-color: $color-neutral;
 }
 
 .progress-bar--large {
   @extend .progress-bar;
   height: rhythm(.5);
-  margin-bottom: 0;
+  margin-top: rhythm(-.5);
 }
 
 .progress-bar__expander {
-  // @include transform3d(translateZ(0));
-  &:hover .progress-bar,
-  &.is-active .progress-bar {
+  position: relative;
+  padding-bottom: rhythm(.5);
+  &:hover,
+  &.is-active {
     .no-touch & {
-      @include transform(scaleY(2) translateY(25%));
+      // @include transform(scaleY(2) translateY(25%));
+      .progress-bar {
+        height: rhythm(.5);
+      }
+    }
+  }
+}
+.progress-bar--large__expander {
+  position: relative;
+  padding-bottom: rhythm(1);
+  &:hover ,
+  &.is-active {
+    .no-touch & {
+      // @include transform(scaleY(2) translateY(25%));
+      .progress-bar--large {
+        height: rhythm(1);
+      }
     }
   }
 }
@@ -30,8 +49,10 @@
 .progress-bar__item {
   position: absolute;
   height: 100%;
+  width: 100%;
   left: 0;
   z-index: 1;
+  background-color: $color-neutral;
 }
 
 .progress-bar__translated {

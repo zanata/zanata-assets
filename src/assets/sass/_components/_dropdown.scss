@@ -34,8 +34,9 @@
 .dropdown {
   @extend .is-transition-bounce;
   position: relative;
+  z-index: 90;
   &.is-active {
-    z-index: 900;
+    z-index: 901;
   }
 }
 
@@ -95,7 +96,6 @@
   left: 0;
   z-index: 11;
   visibility: hidden;
-  overflow: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -224,7 +224,7 @@ Used in panel headers to match the header layout
     border-right: 1px solid transparent;
     border-bottom: 2px solid transparent;
     line-height: rhythm(2, 14px);
-    text-transform: uppercase;
+    // text-transform: uppercase;
     &:active {
       border-bottom: 2px solid $default-border-color;
       background-color: $color-bg-light;

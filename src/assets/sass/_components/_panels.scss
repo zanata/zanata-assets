@@ -67,19 +67,6 @@
   &.is-active {
     @extend .bg--pop-higher;
   }
-  &:first-child {
-    margin-left: 0;
-    z-index: 10;
-  }
-  &:nth-child(2) {
-    z-index: 9;
-  }
-  &:nth-child(3) {
-    z-index: 8;
-  }
-  &:nth-child(4) {
-    z-index: 7;
-  }
 }
 
 // .panels__panel__header {
