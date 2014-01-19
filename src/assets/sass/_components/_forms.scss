@@ -14,6 +14,11 @@
   <label for="warning">Warning example</label>
   <input type="text" id="warning" value="form warning"/>
 </div>
+
+<div class="form__item--radio-vertical">
+  <input name="validation-1" id="validation-1-off" value="Off" type="radio">
+  <label for="validation-1-off">Off</label>
+</div>
 ```
 
 */
@@ -45,6 +50,112 @@
     @extend %form__item--alert;
     border: 2px solid $color-warning !important;
   }
+}
+
+.form__item--radio-vertical {
+  text-align: center;
+  display: inline-block;
+  .form__item__label,
+  .form__item__input {
+    margin: 0;
+  }
+  .form__item__label {
+    display: block;
+    padding: 0 rhythm(.25, 14px);
+    @include adjust-font-size-to(14px);
+  }
+  .form__item__input {
+    display: inline-block;
+  }
+}
+
+}
+
+/*
+
+#### Form Checkbox
+
+```example
+<div class="form__checkbox">
+  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
+  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+</div>
+
+<div class="form__checkbox form__checkbox--right">
+  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
+  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.form__checkbox {
+  position: relative;
+}
+
+.form__checkbox__label {
+  @extend .is-transition;
+  padding-left: rhythm(1.125);
+  position: relative;
+  cursor: pointer;
+  display: block;
+  &:before {
+    @extend .is-transition;
+    position: absolute;
+    top: rhythm(.19);
+    left: rhythm(.25);
+    width: rhythm(.625);
+    height: rhythm(.625);
+    border: 1px solid $color-secondary-50;
+    content: "";
+    @include box-shadow($default-box-shadow-inset);
+    background-color: lighten($lightest-grey, 2%);
+    border-radius: $default-border-radius;
+  }
+  &:after {
+    @extend .is-transition-bounce;
+    @extend .i;
+    @extend .i:before;
+    @extend .i--checkmark:before;
+    position: absolute;
+    top: rhythm(.19);
+    left: rhythm(.25);
+    @include transform(scale(0.1, 0.1));
+    color: $color-secondary;
+    @include opacity(0);
+  }
+  &:hover {
+    background-color: $color-bg;
+  }
+}
+
+.form__checkbox__input {
+  @include opacity(0);
+  // visibility: hidden;
+  position: absolute;
+  &:focus + .form__checkbox__label {
+    background-color: $color-bg;
+  }
+  &:checked {
+    + .form__checkbox__label {
+      background-color: $color-primary-20;
+      &:before {
+        border-color: $color-secondary;
+        background-color: $white;
+      }
+      &:after {
+        @include transform(scale(1, 1));
+        @include opacity(1);
+      }
+    }
+  }
+}
+
+.form__checkbox--right {
+
 }
 
 }

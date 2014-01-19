@@ -110,7 +110,7 @@
 .message--highlight {
   @extend .message;
   @extend .bg--highlight;
-  @extend .txt--highlight;
+  color: $color-secondary;
 }
 
 .message--neutral {

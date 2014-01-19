@@ -10,6 +10,16 @@ $(function() {
       $revealTargetInput.focus();
     }, 100);
   });
+  $('.js-reveal__toggle').on('click touchend', function() {
+    var $revealTarget = $($(this).attr('data-target')),
+        $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
+        $revealParent = $(this).parents('.js-reveal');
+    $revealParent.toggleClass('is-active');
+    $revealTarget.toggleClass('is-active is-hidden');
+    setTimeout(function() {
+      $revealTargetInput.focus();
+    }, 100);
+  });
   $('.js-reveal__reset').on('click touchend', function() {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');

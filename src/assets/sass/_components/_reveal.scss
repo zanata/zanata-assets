@@ -68,6 +68,12 @@ Used to show extra information on hover of the parent element
   .reveal__target {
     position: absolute;
     right: 0;
+    .i {
+      line-height: rhythm(1);
+    }
+    .i--large {
+      line-height: rhythm(1.25, 20px);
+    }
   }
 }
 

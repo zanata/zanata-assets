@@ -353,16 +353,18 @@ Used to section content and create hierarchy
 .new-zanata samp {
   padding: 0 0.23214em;
   font-family: "Monaco", Courier, "Courier New", monospace;
+  font-weight: 700;
   font-size: 0.875em;
   line-height: 1.85714em;
 }
+.new-zanata p code,
+.new-zanata p kbd,
+.new-zanata p pre,
+.new-zanata p samp {
+  line-height: 1;
+}
 .new-zanata code {
-  display: -moz-inline-stack;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   background-color: white;
 }
 .new-zanata pre {
@@ -747,7 +749,6 @@ a:hover,
   color: #444c54;
   font-weight: 600;
   font-family: inherit;
-  cursor: pointer;
 }
 .new-zanata button,
 .new-zanata input,
@@ -2409,6 +2410,11 @@ Centered grids align grid items centrally without needing to use push or pull cl
     display: none !important;
   }
 }
+@media (max-width: 58.0625em) {
+  .new-zanata .is-hidden--m-l-down {
+    display: none !important;
+  }
+}
 @media (min-width: 58.125em) {
   .new-zanata .is-hidden--m-l-up {
     display: none !important;
@@ -2444,7 +2450,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .list--stats > li:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
+.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form__checkbox__label, .new-zanata .form__checkbox__label:before, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
 .new-zanata .tabs--lined > .tabs__nav > li > a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
@@ -2459,7 +2465,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .button--secondary,
 .new-zanata .button--success,
 .new-zanata .button--warning,
-.new-zanata .button--danger, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
+.new-zanata .button--danger,
+.new-zanata .button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
   -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2471,7 +2478,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
-.new-zanata .is-transition-bounce, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
+.new-zanata .is-transition-bounce, .new-zanata .form__checkbox__label:after, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
   -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
@@ -2700,7 +2707,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 ```
 
 */
-.new-zanata .txt--highlight, .new-zanata .message--highlight,
+.new-zanata .txt--highlight,
 .new-zanata .txt--state-highlight {
   color: #4e9fdd !important;
 }
@@ -3142,7 +3149,7 @@ All icons also need the class `.i` added to them.
 /*
 <pre><i class="i i--comment"></i> .i--comment</pre>
 */
-.new-zanata .i, .new-zanata .i--inline, .new-zanata .i--left, .new-zanata .i--right, .new-zanata .i--understated, .new-zanata .i--small, .new-zanata .i--large, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge, .new-zanata .form--search:before {
+.new-zanata .i, .new-zanata .i--inline, .new-zanata .i--left, .new-zanata .i--right, .new-zanata .i--understated, .new-zanata .i--small, .new-zanata .i--large, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge, .new-zanata .form__checkbox__label:after, .new-zanata .form--search:before {
   vertical-align: middle;
   text-transform: none;
   font-weight: normal;
@@ -3154,7 +3161,7 @@ All icons also need the class `.i` added to them.
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.new-zanata .i:before, .new-zanata .i--inline:before, .new-zanata .i--left:before, .new-zanata .i--right:before, .new-zanata .i--understated:before, .new-zanata .i--small:before, .new-zanata .i--large:before, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge:before, .new-zanata .form--search:before, .new-zanata .dropdown__toggle:before {
+.new-zanata .i:before, .new-zanata .i--inline:before, .new-zanata .i--left:before, .new-zanata .i--right:before, .new-zanata .i--understated:before, .new-zanata .i--small:before, .new-zanata .i--large:before, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge:before, .new-zanata .form__checkbox__label:after, .new-zanata .form--search:before, .new-zanata .dropdown__toggle:before {
   font-family: 'Zanata';
   text-align: center;
 }
@@ -3294,7 +3301,7 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--cancel:before {
   content: "\e006";
 }
-.new-zanata .i--checkmark:before {
+.new-zanata .i--checkmark:before, .new-zanata .form__checkbox__label:after {
   content: "\e00d";
 }
 .new-zanata .i--arrow-left:before {
@@ -3750,6 +3757,11 @@ Sub-headings can be used when placing a heading under another heading.
   <label for="warning">Warning example</label>
   <input type="text" id="warning" value="form warning"/>
 </div>
+
+<div class="form__item--radio-vertical">
+  <input name="validation-1" id="validation-1-off" value="Off" type="radio">
+  <label for="validation-1-off">Off</label>
+</div>
 ```
 
 */
@@ -3768,6 +3780,104 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form__item--warning input,
 .new-zanata .form__item--warning textarea {
   border: 2px solid #e3824e !important;
+}
+.new-zanata .form__item--radio-vertical {
+  text-align: center;
+  display: inline-block;
+}
+.new-zanata .form__item--radio-vertical .form__item__label,
+.new-zanata .form__item--radio-vertical .form__item__input {
+  margin: 0;
+}
+.new-zanata .form__item--radio-vertical .form__item__label {
+  display: block;
+  padding: 0 0.46429em;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+}
+.new-zanata .form__item--radio-vertical .form__item__input {
+  display: inline-block;
+}
+
+/*
+
+#### Form Checkbox
+
+```example
+<div class="form__checkbox">
+  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
+  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+</div>
+
+<div class="form__checkbox form__checkbox--right">
+  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
+  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+</div>
+```
+
+*/
+.new-zanata .form__checkbox {
+  position: relative;
+}
+.new-zanata .form__checkbox__label {
+  padding-left: 1.82813em;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+.new-zanata .form__checkbox__label:before {
+  position: absolute;
+  top: 0.30875em;
+  left: 0.40625em;
+  width: 1.01563em;
+  height: 1.01563em;
+  border: 1px solid #a2b4c3;
+  content: "";
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  border-radius: 2px;
+}
+.new-zanata .form__checkbox__label:after {
+  position: absolute;
+  top: 0.30875em;
+  left: 0.40625em;
+  -webkit-transform: scale(0.1, 0.1);
+  -moz-transform: scale(0.1, 0.1);
+  -ms-transform: scale(0.1, 0.1);
+  -o-transform: scale(0.1, 0.1);
+  transform: scale(0.1, 0.1);
+  color: #416988;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.new-zanata .form__checkbox__label:hover {
+  background-color: #edeff1;
+}
+.new-zanata .form__checkbox__input {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+}
+.new-zanata .form__checkbox__input:focus + .form__checkbox__label {
+  background-color: #edeff1;
+}
+.new-zanata .form__checkbox__input:checked + .form__checkbox__label {
+  background-color: #dcecf7;
+}
+.new-zanata .form__checkbox__input:checked + .form__checkbox__label:before {
+  border-color: #416988;
+  background-color: white;
+}
+.new-zanata .form__checkbox__input:checked + .form__checkbox__label:after {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 /*
@@ -4070,7 +4180,7 @@ Keep focus while showing and hiding a password field
   border-radius: 3.25em;
   max-width: 2.4375em;
 }
-.off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--inline, .new-zanata .off-canvas__toggle .i--inline, .off-canvas__toggle--left .new-zanata .i--inline, .new-zanata .off-canvas__toggle--left .i--inline, .off-canvas__toggle--right .new-zanata .i--inline, .new-zanata .off-canvas__toggle--right .i--inline, .new-zanata .off-canvas__close .i--inline, .off-canvas__toggle .new-zanata .i--left, .new-zanata .off-canvas__toggle .i--left, .off-canvas__toggle--left .new-zanata .i--left, .new-zanata .off-canvas__toggle--left .i--left, .off-canvas__toggle--right .new-zanata .i--left, .new-zanata .off-canvas__toggle--right .i--left, .new-zanata .off-canvas__close .i--left, .off-canvas__toggle .new-zanata .i--right, .new-zanata .off-canvas__toggle .i--right, .off-canvas__toggle--left .new-zanata .i--right, .new-zanata .off-canvas__toggle--left .i--right, .off-canvas__toggle--right .new-zanata .i--right, .new-zanata .off-canvas__toggle--right .i--right, .new-zanata .off-canvas__close .i--right, .off-canvas__toggle .new-zanata .i--understated, .new-zanata .off-canvas__toggle .i--understated, .off-canvas__toggle--left .new-zanata .i--understated, .new-zanata .off-canvas__toggle--left .i--understated, .off-canvas__toggle--right .new-zanata .i--understated, .new-zanata .off-canvas__toggle--right .i--understated, .new-zanata .off-canvas__close .i--understated, .off-canvas__toggle .new-zanata .i--small, .new-zanata .off-canvas__toggle .i--small, .off-canvas__toggle--left .new-zanata .i--small, .new-zanata .off-canvas__toggle--left .i--small, .off-canvas__toggle--right .new-zanata .i--small, .new-zanata .off-canvas__toggle--right .i--small, .new-zanata .off-canvas__close .i--small, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge, .off-canvas__toggle .new-zanata .form--search:before, .new-zanata .off-canvas__toggle .form--search:before, .off-canvas__toggle--left .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--left .form--search:before, .off-canvas__toggle--right .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--right .form--search:before, .new-zanata .off-canvas__close .form--search:before {
+.off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--inline, .new-zanata .off-canvas__toggle .i--inline, .off-canvas__toggle--left .new-zanata .i--inline, .new-zanata .off-canvas__toggle--left .i--inline, .off-canvas__toggle--right .new-zanata .i--inline, .new-zanata .off-canvas__toggle--right .i--inline, .new-zanata .off-canvas__close .i--inline, .off-canvas__toggle .new-zanata .i--left, .new-zanata .off-canvas__toggle .i--left, .off-canvas__toggle--left .new-zanata .i--left, .new-zanata .off-canvas__toggle--left .i--left, .off-canvas__toggle--right .new-zanata .i--left, .new-zanata .off-canvas__toggle--right .i--left, .new-zanata .off-canvas__close .i--left, .off-canvas__toggle .new-zanata .i--right, .new-zanata .off-canvas__toggle .i--right, .off-canvas__toggle--left .new-zanata .i--right, .new-zanata .off-canvas__toggle--left .i--right, .off-canvas__toggle--right .new-zanata .i--right, .new-zanata .off-canvas__toggle--right .i--right, .new-zanata .off-canvas__close .i--right, .off-canvas__toggle .new-zanata .i--understated, .new-zanata .off-canvas__toggle .i--understated, .off-canvas__toggle--left .new-zanata .i--understated, .new-zanata .off-canvas__toggle--left .i--understated, .off-canvas__toggle--right .new-zanata .i--understated, .new-zanata .off-canvas__toggle--right .i--understated, .new-zanata .off-canvas__close .i--understated, .off-canvas__toggle .new-zanata .i--small, .new-zanata .off-canvas__toggle .i--small, .off-canvas__toggle--left .new-zanata .i--small, .new-zanata .off-canvas__toggle--left .i--small, .off-canvas__toggle--right .new-zanata .i--small, .new-zanata .off-canvas__toggle--right .i--small, .new-zanata .off-canvas__close .i--small, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge, .off-canvas__toggle .new-zanata .form__checkbox__label:after, .new-zanata .off-canvas__toggle .form__checkbox__label:after, .off-canvas__toggle--left .new-zanata .form__checkbox__label:after, .new-zanata .off-canvas__toggle--left .form__checkbox__label:after, .off-canvas__toggle--right .new-zanata .form__checkbox__label:after, .new-zanata .off-canvas__toggle--right .form__checkbox__label:after, .new-zanata .off-canvas__close .form__checkbox__label:after, .off-canvas__toggle .new-zanata .form--search:before, .new-zanata .off-canvas__toggle .form--search:before, .off-canvas__toggle--left .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--left .form--search:before, .off-canvas__toggle--right .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--right .form--search:before, .new-zanata .off-canvas__close .form--search:before {
   padding: 0.20313em;
 }
 .off-canvas__toggle .i--large, .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before {
@@ -4214,7 +4324,7 @@ Keep focus while showing and hiding a password field
   color: #5b6670;
   float: right;
 }
-.new-zanata .off-canvas__close .i, .new-zanata .off-canvas__close .i--inline, .new-zanata .off-canvas__close .i--left, .new-zanata .off-canvas__close .i--right, .new-zanata .off-canvas__close .i--understated, .new-zanata .off-canvas__close .i--small, .new-zanata .off-canvas__close .i--large, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .new-zanata .off-canvas__close .i--huge, .new-zanata .off-canvas__close .form--search:before {
+.new-zanata .off-canvas__close .i, .new-zanata .off-canvas__close .i--inline, .new-zanata .off-canvas__close .i--left, .new-zanata .off-canvas__close .i--right, .new-zanata .off-canvas__close .i--understated, .new-zanata .off-canvas__close .i--small, .new-zanata .off-canvas__close .i--large, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .new-zanata .off-canvas__close .i--huge, .new-zanata .off-canvas__close .form__checkbox__label:after, .new-zanata .off-canvas__close .form--search:before {
   vertical-align: top;
   line-height: 1em;
   padding: 0;
@@ -4321,7 +4431,7 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs--lined > .tabs__nav > li > a.is-active:after {
   background-color: #416988;
 }
-.new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--inline, .new-zanata .tabs--lined > .tabs__nav .i--left, .new-zanata .tabs--lined > .tabs__nav .i--right, .new-zanata .tabs--lined > .tabs__nav .i--understated, .new-zanata .tabs--lined > .tabs__nav .i--small, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .header__user-nav__toggle:before, .new-zanata .tabs--lined > .tabs__nav .i--huge, .new-zanata .tabs--lined > .tabs__nav .form--search:before {
+.new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--inline, .new-zanata .tabs--lined > .tabs__nav .i--left, .new-zanata .tabs--lined > .tabs__nav .i--right, .new-zanata .tabs--lined > .tabs__nav .i--understated, .new-zanata .tabs--lined > .tabs__nav .i--small, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .header__user-nav__toggle:before, .new-zanata .tabs--lined > .tabs__nav .i--huge, .new-zanata .tabs--lined > .tabs__nav .form__checkbox__label:after, .new-zanata .tabs--lined > .tabs__nav .form--search:before {
   line-height: 1.625em;
   padding: 0 0 0.12188em;
 }
@@ -4341,7 +4451,7 @@ Keep focus while showing and hiding a password field
   min-width: 3.25em;
   max-height: 3.25em;
 }
-.new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--inline, .new-zanata .tabs--accent .tabs__nav a .i--left, .new-zanata .tabs--accent .tabs__nav a .i--right, .new-zanata .tabs--accent .tabs__nav a .i--understated, .new-zanata .tabs--accent .tabs__nav a .i--small, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .header__user-nav__toggle:before, .new-zanata .tabs--accent .tabs__nav a .i--huge, .new-zanata .tabs--accent .tabs__nav a .form--search:before {
+.new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--inline, .new-zanata .tabs--accent .tabs__nav a .i--left, .new-zanata .tabs--accent .tabs__nav a .i--right, .new-zanata .tabs--accent .tabs__nav a .i--understated, .new-zanata .tabs--accent .tabs__nav a .i--small, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .header__user-nav__toggle:before, .new-zanata .tabs--accent .tabs__nav a .i--huge, .new-zanata .tabs--accent .tabs__nav a .form__checkbox__label:after, .new-zanata .tabs--accent .tabs__nav a .form--search:before {
   font-size: 1em;
   line-height: 1.625em;
 }
@@ -4907,7 +5017,7 @@ Used in panel headers to match the header layout
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-.new-zanata .message__remove .i, .new-zanata .message__remove .i--inline, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--understated, .new-zanata .message__remove .i--small, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form--search:before {
+.new-zanata .message__remove .i, .new-zanata .message__remove .i--inline, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--understated, .new-zanata .message__remove .i--small, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form__checkbox__label:after, .new-zanata .message__remove .form--search:before {
   line-height: 1.625em;
 }
 .new-zanata .message--global {
@@ -4935,6 +5045,9 @@ Used in panel headers to match the header layout
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+}
+.new-zanata .message--highlight {
+  color: #416988;
 }
 
 /*
@@ -5013,6 +5126,7 @@ Used in panel headers to match the header layout
 <p><a class="button--primary">Button Primary</a></p>
 <p><a class="button--secondary">Button Secondary</a></p>
 <p><a class="button--success">Button Success</a></p>
+<p><a class="button--unsure">Button Unsure</a></p>
 <p><a class="button--warning">Button Warning</a></p>
 <p><a class="button--danger">Button Danger</a></p>
 ```
@@ -5033,7 +5147,9 @@ Used in panel headers to match the header layout
 .new-zanata .button--success,
 .new-zanata .button--warning,
 .new-zanata .button--danger,
-.new-zanata input.button--primary {
+.new-zanata input.button--primary,
+.new-zanata .button--unsure,
+.new-zanata input.button--unsure {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -5055,6 +5171,8 @@ Used in panel headers to match the header layout
   color: #565d65;
   text-align: center;
   font-weight: 600;
+  cursor: pointer;
+  text-align: center;
 }
 .new-zanata input[type="submit"]:hover, .new-zanata input[type="submit"]:focus,
 .new-zanata button:hover,
@@ -5072,6 +5190,7 @@ Used in panel headers to match the header layout
 .new-zanata .button--success:hover,
 .new-zanata .button--warning:hover,
 .new-zanata .button--danger:hover,
+.new-zanata .button--unsure:hover,
 .new-zanata .button:focus,
 .new-zanata .button--snug:focus,
 .new-zanata .button--small:focus,
@@ -5084,7 +5203,8 @@ Used in panel headers to match the header layout
 .new-zanata .button--secondary:focus,
 .new-zanata .button--success:focus,
 .new-zanata .button--warning:focus,
-.new-zanata .button--danger:focus {
+.new-zanata .button--danger:focus,
+.new-zanata .button--unsure:focus {
   background-color: white;
   border-color: rgba(65, 105, 136, 0.25);
   -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
@@ -5109,6 +5229,7 @@ Used in panel headers to match the header layout
 .new-zanata .button--success:active,
 .new-zanata .button--warning:active,
 .new-zanata .button--danger:active,
+.new-zanata .button--unsure:active,
 .new-zanata .button.is-active,
 .new-zanata .is-active.button--snug,
 .new-zanata .is-active.button--small,
@@ -5121,18 +5242,21 @@ Used in panel headers to match the header layout
 .new-zanata .is-active.button--secondary,
 .new-zanata .is-active.button--success,
 .new-zanata .is-active.button--warning,
-.new-zanata .is-active.button--danger {
+.new-zanata .is-active.button--danger,
+.new-zanata .is-active.button--unsure {
   background-color: #e5e7e9;
   -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
 }
-.new-zanata .button[disbaled], .new-zanata [disbaled].button--snug, .new-zanata [disbaled].button--small, .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--success, .new-zanata [disbaled].button--warning, .new-zanata [disbaled].button--danger,
+.new-zanata .button[disbaled], .new-zanata [disbaled].button--snug, .new-zanata [disbaled].button--small, .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--success, .new-zanata [disbaled].button--warning, .new-zanata [disbaled].button--danger, .new-zanata [disbaled].button--unsure, .new-zanata .button--group[disabled] .button, .new-zanata .button--group[disabled] .button--snug, .new-zanata .button--group[disabled] .button--small, .new-zanata .button--group[disabled] .button--large, .new-zanata .button--group[disabled] .button--huge, .new-zanata .button--group[disabled] .button--full, .new-zanata .button--group[disabled] .button--inline-right, .new-zanata .button--group[disabled] .button--inline-left, .new-zanata .button--group[disabled] .button--primary, .new-zanata .button--group[disabled] .button--secondary, .new-zanata .button--group[disabled] .button--success, .new-zanata .button--group[disabled] .button--warning, .new-zanata .button--group[disabled] .button--danger, .new-zanata .button--group[disabled] .button--unsure,
 .new-zanata button[disabled],
 .new-zanata input[type="submit"][disabled] {
   pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
 }
-.new-zanata .button[disbaled]:hover, .new-zanata [disbaled].button--snug:hover, .new-zanata [disbaled].button--small:hover, .new-zanata [disbaled].button--large:hover, .new-zanata [disbaled].button--huge:hover, .new-zanata [disbaled].button--full:hover, .new-zanata [disbaled].button--inline-right:hover, .new-zanata [disbaled].button--inline-left:hover, .new-zanata [disbaled].button--primary:hover, .new-zanata [disbaled].button--secondary:hover, .new-zanata [disbaled].button--success:hover, .new-zanata [disbaled].button--warning:hover, .new-zanata [disbaled].button--danger:hover, .new-zanata .button[disbaled]:focus, .new-zanata [disbaled].button--snug:focus, .new-zanata [disbaled].button--small:focus, .new-zanata [disbaled].button--large:focus, .new-zanata [disbaled].button--huge:focus, .new-zanata [disbaled].button--full:focus, .new-zanata [disbaled].button--inline-right:focus, .new-zanata [disbaled].button--inline-left:focus, .new-zanata [disbaled].button--primary:focus, .new-zanata [disbaled].button--secondary:focus, .new-zanata [disbaled].button--success:focus, .new-zanata [disbaled].button--warning:focus, .new-zanata [disbaled].button--danger:focus, .new-zanata .button[disbaled]:active, .new-zanata [disbaled].button--snug:active, .new-zanata [disbaled].button--small:active, .new-zanata [disbaled].button--large:active, .new-zanata [disbaled].button--huge:active, .new-zanata [disbaled].button--full:active, .new-zanata [disbaled].button--inline-right:active, .new-zanata [disbaled].button--inline-left:active, .new-zanata [disbaled].button--primary:active, .new-zanata [disbaled].button--secondary:active, .new-zanata [disbaled].button--success:active, .new-zanata [disbaled].button--warning:active, .new-zanata [disbaled].button--danger:active, .new-zanata .button[disbaled].is-active, .new-zanata [disbaled].is-active.button--snug, .new-zanata [disbaled].is-active.button--small, .new-zanata [disbaled].is-active.button--large, .new-zanata [disbaled].is-active.button--huge, .new-zanata [disbaled].is-active.button--full, .new-zanata [disbaled].is-active.button--inline-right, .new-zanata [disbaled].is-active.button--inline-left, .new-zanata [disbaled].is-active.button--primary, .new-zanata [disbaled].is-active.button--secondary, .new-zanata [disbaled].is-active.button--success, .new-zanata [disbaled].is-active.button--warning, .new-zanata [disbaled].is-active.button--danger,
+.new-zanata .button[disbaled]:hover, .new-zanata [disbaled].button--snug:hover, .new-zanata [disbaled].button--small:hover, .new-zanata [disbaled].button--large:hover, .new-zanata [disbaled].button--huge:hover, .new-zanata [disbaled].button--full:hover, .new-zanata [disbaled].button--inline-right:hover, .new-zanata [disbaled].button--inline-left:hover, .new-zanata [disbaled].button--primary:hover, .new-zanata [disbaled].button--secondary:hover, .new-zanata [disbaled].button--success:hover, .new-zanata [disbaled].button--warning:hover, .new-zanata [disbaled].button--danger:hover, .new-zanata [disbaled].button--unsure:hover, .new-zanata .button--group[disabled] .button:hover, .new-zanata .button--group[disabled] .button--snug:hover, .new-zanata .button--group[disabled] .button--small:hover, .new-zanata .button--group[disabled] .button--large:hover, .new-zanata .button--group[disabled] .button--huge:hover, .new-zanata .button--group[disabled] .button--full:hover, .new-zanata .button--group[disabled] .button--inline-right:hover, .new-zanata .button--group[disabled] .button--inline-left:hover, .new-zanata .button--group[disabled] .button--primary:hover, .new-zanata .button--group[disabled] .button--secondary:hover, .new-zanata .button--group[disabled] .button--success:hover, .new-zanata .button--group[disabled] .button--warning:hover, .new-zanata .button--group[disabled] .button--danger:hover, .new-zanata .button--group[disabled] .button--unsure:hover, .new-zanata .button[disbaled]:focus, .new-zanata [disbaled].button--snug:focus, .new-zanata [disbaled].button--small:focus, .new-zanata [disbaled].button--large:focus, .new-zanata [disbaled].button--huge:focus, .new-zanata [disbaled].button--full:focus, .new-zanata [disbaled].button--inline-right:focus, .new-zanata [disbaled].button--inline-left:focus, .new-zanata [disbaled].button--primary:focus, .new-zanata [disbaled].button--secondary:focus, .new-zanata [disbaled].button--success:focus, .new-zanata [disbaled].button--warning:focus, .new-zanata [disbaled].button--danger:focus, .new-zanata [disbaled].button--unsure:focus, .new-zanata .button--group[disabled] .button:focus, .new-zanata .button--group[disabled] .button--snug:focus, .new-zanata .button--group[disabled] .button--small:focus, .new-zanata .button--group[disabled] .button--large:focus, .new-zanata .button--group[disabled] .button--huge:focus, .new-zanata .button--group[disabled] .button--full:focus, .new-zanata .button--group[disabled] .button--inline-right:focus, .new-zanata .button--group[disabled] .button--inline-left:focus, .new-zanata .button--group[disabled] .button--primary:focus, .new-zanata .button--group[disabled] .button--secondary:focus, .new-zanata .button--group[disabled] .button--success:focus, .new-zanata .button--group[disabled] .button--warning:focus, .new-zanata .button--group[disabled] .button--danger:focus, .new-zanata .button--group[disabled] .button--unsure:focus, .new-zanata .button[disbaled]:active, .new-zanata [disbaled].button--snug:active, .new-zanata [disbaled].button--small:active, .new-zanata [disbaled].button--large:active, .new-zanata [disbaled].button--huge:active, .new-zanata [disbaled].button--full:active, .new-zanata [disbaled].button--inline-right:active, .new-zanata [disbaled].button--inline-left:active, .new-zanata [disbaled].button--primary:active, .new-zanata [disbaled].button--secondary:active, .new-zanata [disbaled].button--success:active, .new-zanata [disbaled].button--warning:active, .new-zanata [disbaled].button--danger:active, .new-zanata [disbaled].button--unsure:active, .new-zanata .button--group[disabled] .button:active, .new-zanata .button--group[disabled] .button--snug:active, .new-zanata .button--group[disabled] .button--small:active, .new-zanata .button--group[disabled] .button--large:active, .new-zanata .button--group[disabled] .button--huge:active, .new-zanata .button--group[disabled] .button--full:active, .new-zanata .button--group[disabled] .button--inline-right:active, .new-zanata .button--group[disabled] .button--inline-left:active, .new-zanata .button--group[disabled] .button--primary:active, .new-zanata .button--group[disabled] .button--secondary:active, .new-zanata .button--group[disabled] .button--success:active, .new-zanata .button--group[disabled] .button--warning:active, .new-zanata .button--group[disabled] .button--danger:active, .new-zanata .button--group[disabled] .button--unsure:active, .new-zanata .button[disbaled].is-active, .new-zanata [disbaled].is-active.button--snug, .new-zanata [disbaled].is-active.button--small, .new-zanata [disbaled].is-active.button--large, .new-zanata [disbaled].is-active.button--huge, .new-zanata [disbaled].is-active.button--full, .new-zanata [disbaled].is-active.button--inline-right, .new-zanata [disbaled].is-active.button--inline-left, .new-zanata [disbaled].is-active.button--primary, .new-zanata [disbaled].is-active.button--secondary, .new-zanata [disbaled].is-active.button--success, .new-zanata [disbaled].is-active.button--warning, .new-zanata [disbaled].is-active.button--danger, .new-zanata [disbaled].is-active.button--unsure, .new-zanata .button--group[disabled] .is-active.button, .new-zanata .button--group[disabled] .is-active.button--snug, .new-zanata .button--group[disabled] .is-active.button--small, .new-zanata .button--group[disabled] .is-active.button--large, .new-zanata .button--group[disabled] .is-active.button--huge, .new-zanata .button--group[disabled] .is-active.button--full, .new-zanata .button--group[disabled] .is-active.button--inline-right, .new-zanata .button--group[disabled] .is-active.button--inline-left, .new-zanata .button--group[disabled] .is-active.button--primary, .new-zanata .button--group[disabled] .is-active.button--secondary, .new-zanata .button--group[disabled] .is-active.button--success, .new-zanata .button--group[disabled] .is-active.button--warning, .new-zanata .button--group[disabled] .is-active.button--danger, .new-zanata .button--group[disabled] .is-active.button--unsure,
 .new-zanata button[disabled]:hover,
 .new-zanata button[disabled]:focus,
 .new-zanata button[disabled]:active,
@@ -5154,7 +5278,7 @@ Used in panel headers to match the header layout
 .new-zanata .button--small {
   font-size: 0.875em;
   line-height: 1.85714em;
-  padding: 0.46429em;
+  padding: 0.46429em 0.92857em;
 }
 .new-zanata .button--large {
   font-size: 1.25em;
@@ -5167,7 +5291,6 @@ Used in panel headers to match the header layout
 .new-zanata .button--full {
   display: block;
   width: 100%;
-  text-align: center;
 }
 .new-zanata .button--link,
 .new-zanata .button--link:hover,
@@ -5282,6 +5405,20 @@ Used in panel headers to match the header layout
 .new-zanata input.button--success.is-active {
   background-color: #59876f;
 }
+.new-zanata .button--unsure,
+.new-zanata input.button--unsure {
+  background-color: #d4b94c;
+}
+.new-zanata .button--unsure:hover, .new-zanata .button--unsure:focus,
+.new-zanata input.button--unsure:hover,
+.new-zanata input.button--unsure:focus {
+  background-color: #e0c350;
+}
+.new-zanata .button--unsure:active, .new-zanata .button--unsure.is-active,
+.new-zanata input.button--unsure:active,
+.new-zanata input.button--unsure.is-active {
+  background-color: #b39c40;
+}
 .new-zanata .button--warning,
 .new-zanata input.button--warning {
   background-color: #d77b4a;
@@ -5325,6 +5462,95 @@ Used in panel headers to match the header layout
 }
 .new-zanata .button--yahoo {
   background-image: url(../img/yahoo-logo.svg);
+}
+
+/*
+
+#### Button Group
+
+```example
+<div class="button--group">
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button--primary">Button</button>
+</div>
+```
+
+*/
+.new-zanata .button--group .button, .new-zanata .button--group .button--snug, .new-zanata .button--group .button--small, .new-zanata .button--group .button--large, .new-zanata .button--group .button--huge, .new-zanata .button--group .button--full, .new-zanata .button--group .button--inline-right, .new-zanata .button--group .button--inline-left, .new-zanata .button--group .button--primary, .new-zanata .button--group .button--secondary, .new-zanata .button--group .button--success, .new-zanata .button--group .button--warning, .new-zanata .button--group .button--danger, .new-zanata .button--group .button--unsure {
+  position: relative;
+  margin: 0;
+  margin-left: -0.325em;
+  border-radius: 0;
+}
+.new-zanata .button--group .button:first-of-type, .new-zanata .button--group .button--snug:first-of-type, .new-zanata .button--group .button--small:first-of-type, .new-zanata .button--group .button--large:first-of-type, .new-zanata .button--group .button--huge:first-of-type, .new-zanata .button--group .button--full:first-of-type, .new-zanata .button--group .button--inline-right:first-of-type, .new-zanata .button--group .button--inline-left:first-of-type, .new-zanata .button--group .button--primary:first-of-type, .new-zanata .button--group .button--secondary:first-of-type, .new-zanata .button--group .button--success:first-of-type, .new-zanata .button--group .button--warning:first-of-type, .new-zanata .button--group .button--danger:first-of-type, .new-zanata .button--group .button--unsure:first-of-type {
+  margin-left: 0;
+  border-radius: 2px 0 0 2px;
+}
+.new-zanata .button--group .button:last-of-type, .new-zanata .button--group .button--snug:last-of-type, .new-zanata .button--group .button--small:last-of-type, .new-zanata .button--group .button--large:last-of-type, .new-zanata .button--group .button--huge:last-of-type, .new-zanata .button--group .button--full:last-of-type, .new-zanata .button--group .button--inline-right:last-of-type, .new-zanata .button--group .button--inline-left:last-of-type, .new-zanata .button--group .button--primary:last-of-type, .new-zanata .button--group .button--secondary:last-of-type, .new-zanata .button--group .button--success:last-of-type, .new-zanata .button--group .button--warning:last-of-type, .new-zanata .button--group .button--danger:last-of-type, .new-zanata .button--group .button--unsure:last-of-type {
+  border-radius: 0 2px 2px 0;
+}
+.new-zanata .button--group input[type="radio"] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.new-zanata .button--group input[type="radio"] + .button, .new-zanata .button--group input[type="radio"] + .button--snug, .new-zanata .button--group input[type="radio"] + .button--small, .new-zanata .button--group input[type="radio"] + .button--large, .new-zanata .button--group input[type="radio"] + .button--huge, .new-zanata .button--group input[type="radio"] + .button--full, .new-zanata .button--group input[type="radio"] + .button--inline-right, .new-zanata .button--group input[type="radio"] + .button--inline-left, .new-zanata .button--group input[type="radio"] + .button--primary, .new-zanata .button--group input[type="radio"] + .button--secondary, .new-zanata .button--group input[type="radio"] + .button--success, .new-zanata .button--group input[type="radio"] + .button--warning, .new-zanata .button--group input[type="radio"] + .button--danger, .new-zanata .button--group input[type="radio"] + .button--unsure {
+  -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
+  -moz-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
+  box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
+  border: none;
+  border: 1px solid rgba(65, 105, 136, 0.15);
+  background-color: #fafafb;
+  color: #565d65;
+}
+.new-zanata .button--group input[type="radio"] + .button:hover, .new-zanata .button--group input[type="radio"] + .button--snug:hover, .new-zanata .button--group input[type="radio"] + .button--small:hover, .new-zanata .button--group input[type="radio"] + .button--large:hover, .new-zanata .button--group input[type="radio"] + .button--huge:hover, .new-zanata .button--group input[type="radio"] + .button--full:hover, .new-zanata .button--group input[type="radio"] + .button--inline-right:hover, .new-zanata .button--group input[type="radio"] + .button--inline-left:hover, .new-zanata .button--group input[type="radio"] + .button--primary:hover, .new-zanata .button--group input[type="radio"] + .button--secondary:hover, .new-zanata .button--group input[type="radio"] + .button--success:hover, .new-zanata .button--group input[type="radio"] + .button--warning:hover, .new-zanata .button--group input[type="radio"] + .button--danger:hover, .new-zanata .button--group input[type="radio"] + .button--unsure:hover, .new-zanata .button--group input[type="radio"] + .button:focus, .new-zanata .button--group input[type="radio"] + .button--snug:focus, .new-zanata .button--group input[type="radio"] + .button--small:focus, .new-zanata .button--group input[type="radio"] + .button--large:focus, .new-zanata .button--group input[type="radio"] + .button--huge:focus, .new-zanata .button--group input[type="radio"] + .button--full:focus, .new-zanata .button--group input[type="radio"] + .button--inline-right:focus, .new-zanata .button--group input[type="radio"] + .button--inline-left:focus, .new-zanata .button--group input[type="radio"] + .button--primary:focus, .new-zanata .button--group input[type="radio"] + .button--secondary:focus, .new-zanata .button--group input[type="radio"] + .button--success:focus, .new-zanata .button--group input[type="radio"] + .button--warning:focus, .new-zanata .button--group input[type="radio"] + .button--danger:focus, .new-zanata .button--group input[type="radio"] + .button--unsure:focus {
+  background-color: white;
+  border-color: rgba(65, 105, 136, 0.25);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
+  -moz-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
+  box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
+  color: black;
+  outline: none;
+}
+.new-zanata .button--group input[type="radio"]:checked + .button, .new-zanata .button--group input[type="radio"]:checked + .button--snug, .new-zanata .button--group input[type="radio"]:checked + .button--small, .new-zanata .button--group input[type="radio"]:checked + .button--large, .new-zanata .button--group input[type="radio"]:checked + .button--huge, .new-zanata .button--group input[type="radio"]:checked + .button--full, .new-zanata .button--group input[type="radio"]:checked + .button--inline-right, .new-zanata .button--group input[type="radio"]:checked + .button--inline-left, .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger, .new-zanata .button--group input[type="radio"]:checked + .button--unsure {
+  background-color: #e5e7e9;
+  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
+  -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
+  box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
+  cursor: default;
+}
+.new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger,
+.new-zanata .button--group input[type="radio"]:checked + .button--secondary,
+.new-zanata .button--group input[type="radio"]:checked + .button--success,
+.new-zanata .button--group input[type="radio"]:checked + .button--warning,
+.new-zanata .button--group input[type="radio"]:checked + .button--danger {
+  color: #f2f2f2;
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+.new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger {
+  background-color: #4e9fdd;
+}
+.new-zanata .button--group input[type="radio"]:checked + .button--secondary {
+  background-color: #416988;
+}
+.new-zanata .button--group input[type="radio"]:checked + .button--success {
+  background-color: #70a98b;
+}
+.new-zanata .button--group input[type="radio"]:checked + .button--unsure {
+  background-color: #e0c350;
+  color: black;
+}
+.new-zanata .button--group input[type="radio"]:checked + .button--warning {
+  background-color: #e3824e;
+}
+.new-zanata .button--group input[type="radio"]:checked + .button--danger {
+  background-color: #e0575b;
 }
 
 /*
@@ -5383,6 +5609,12 @@ Used to show extra information on hover of the parent element
 .new-zanata .reveal--list-item .reveal__target {
   position: absolute;
   right: 0;
+}
+.new-zanata .reveal--list-item .reveal__target .i, .new-zanata .reveal--list-item .reveal__target .i--inline, .new-zanata .reveal--list-item .reveal__target .i--left, .new-zanata .reveal--list-item .reveal__target .i--right, .new-zanata .reveal--list-item .reveal__target .i--understated, .new-zanata .reveal--list-item .reveal__target .i--small, .new-zanata .reveal--list-item .reveal__target .i--large, .new-zanata .reveal--list-item .reveal__target .header__user-nav__toggle:before, .new-zanata .reveal--list-item .reveal__target .i--huge, .new-zanata .reveal--list-item .reveal__target .form__checkbox__label:after, .new-zanata .reveal--list-item .reveal__target .form--search:before {
+  line-height: 1.625em;
+}
+.new-zanata .reveal--list-item .reveal__target .i--large, .new-zanata .reveal--list-item .reveal__target .header__user-nav__toggle:before {
+  line-height: 1.625em;
 }
 
 .tooltip {

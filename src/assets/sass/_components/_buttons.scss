@@ -15,6 +15,7 @@
 <p><a class="button--primary">Button Primary</a></p>
 <p><a class="button--secondary">Button Secondary</a></p>
 <p><a class="button--success">Button Success</a></p>
+<p><a class="button--unsure">Button Unsure</a></p>
 <p><a class="button--warning">Button Warning</a></p>
 <p><a class="button--danger">Button Danger</a></p>
 ```
@@ -38,6 +39,8 @@ button,
   color: tint($color-base-font, 10%);
   text-align: center;
   font-weight: 600;
+  cursor: pointer;
+  text-align: center;
   &:hover,
   &:focus {
     background-color: $white;
@@ -57,6 +60,8 @@ button,
 button[disabled],
 input[type="submit"][disabled] {
   pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
   &:hover,
   &:focus,
   &:active,
@@ -76,7 +81,7 @@ input[type="submit"][disabled] {
 .button--small {
   @extend .button;
   @include adjust-font-size-to(14px);
-  padding: rhythm(.25, 14px);
+  padding: rhythm(.25, 14px) rhythm(.5, 14px);
 }
 
 .button--large {
@@ -93,7 +98,6 @@ input[type="submit"][disabled] {
   @extend .button;
   display: block;
   width: 100%;
-  text-align: center;
 }
 
 .button--link,
@@ -179,6 +183,20 @@ input.button--success, {
   }
 }
 
+.button--unsure,
+input.button--unsure, {
+  @extend .button;
+  background-color: shade($color-unsure, 5%);
+  &:hover,
+  &:focus {
+    background-color: $color-unsure;
+  }
+  &:active,
+  &.is-active {
+    background-color: shade($color-unsure, 20%);
+  }
+}
+
 .button--warning,
 input.button--warning, {
   @extend .button--primary;
@@ -229,4 +247,99 @@ input.button--danger, {
   background-image: url(../img/yahoo-logo.svg);
 }
 
+}
+
+
+/*
+
+#### Button Group
+
+```example
+<div class="button--group">
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button--primary">Button</button>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+  .button--group {
+    &[disabled] {
+      .button {
+        @extend .button[disbaled];
+      }
+    }
+    .button {
+      position: relative;
+      margin: 0;
+      margin-left: rhythm(-.2);
+      border-radius: 0;
+      &:first-of-type {
+        margin-left: 0;
+        border-radius: $default-border-radius 0 0 $default-border-radius;
+      }
+      &:last-of-type {
+        border-radius: 0 $default-border-radius $default-border-radius 0;
+      }
+    }
+    input[type="radio"] {
+      @include opacity(0);
+      visibility: hidden;
+      position: absolute;
+      + .button {
+        @include box-shadow(inset 0 -1px 0 rgba($color-secondary, .09));
+        border: none;
+        border: 1px solid rgba($color-secondary, .15);
+        background-color: shade($color-bg-lighter, 1%);
+        color: tint($color-base-font, 10%);
+        &:hover,
+        &:focus {
+          background-color: $white;
+          border-color: rgba($color-secondary, .25);
+          @include box-shadow(inset 0 -2px 0 rgba($color-secondary, .17));
+          color: $black;
+          outline: none;
+        }
+      }
+      &:checked {
+        + .button {
+          background-color: shade($color-bg, 3%);
+          @include box-shadow(inset 0 2px 0 rgba($color-secondary, .17));
+          cursor: default;
+        }
+        + .button--primary,
+        + .button--secondary,
+        + .button--success,
+        + .button--warning,
+        + .button--danger {
+          color: $lightest-grey;
+          @include box-shadow(inset 0 2px 0 rgba($black,0.2));
+        }
+        + .button--primary {
+          background-color: $color-primary;
+        }
+        + .button--secondary {
+          background-color: $color-secondary;
+        }
+        + .button--success {
+          background-color: $color-success;
+        }
+        + .button--unsure {
+          background-color: $color-unsure;
+          color: $black;
+        }
+        + .button--warning {
+          background-color: $color-warning;
+        }
+        + .button--danger {
+          background-color: $color-danger;
+        }
+      }
+    }
+  }
 }

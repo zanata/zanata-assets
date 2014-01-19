@@ -49,11 +49,21 @@ pre,
 samp {
   padding: 0 rhythm(.125, 14px);
   font-family: "Monaco", Courier, "Courier New", monospace;
+  font-weight: 700;
   @include adjust-font-size-to(14px);
 }
 
+p {
+  code,
+  kbd,
+  pre,
+  samp {
+    line-height: 1;
+  }
+}
+
 code {
-  @include inline-block;
+  display: inline-block;
   background-color: $white;
 }
 
