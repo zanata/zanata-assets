@@ -303,11 +303,14 @@ Use to display icons to the far side of text, either left or right. Usually used
 .i--admin:before {
 	content: "\e608";
 }
-.i--import:before {
+.i--notes:before {
 	content: "\e609";
 }
-.i--export:before {
+.i--import:before {
 	content: "\e60a";
+}
+.i--export:before {
+	content: "\e60f";
 }
 .i--external-link:before {
 	content: "\e60b";

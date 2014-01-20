@@ -73,17 +73,29 @@
 
 /*
 
-#### Form Checkbox
+#### Form Checkbox & Radio
 
 ```example
 <div class="form__checkbox">
-  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
-  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+  <input type="checkbox" id="form-checkbox-1" class="form__checkbox__input" name="form-checkbox" checked/>
+  <label for="form-checkbox-1" class="form__checkbox__label">Checkbox Label</label>
 </div>
 
 <div class="form__checkbox form__checkbox--right">
-  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
-  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+  <input type="checkbox" id="form-checkbox-2" class="form__checkbox__input" name="form-checkbox"/>
+  <label for="form-checkbox-2" class="form__checkbox__label">Checkbox Label</label>
+</div>
+```
+
+```example
+<div class="form__radio">
+  <input type="radio" id="form-radio-1" class="form__radio__input" name="form-radio" checked/>
+  <label for="form-radio-1" class="form__radio__label">Radio Label</label>
+</div>
+
+<div class="form__radio form__radio--right">
+  <input type="radio" id="form-radio-2" class="form__radio__input" name="form-radio"/>
+  <label for="form-radio-2" class="form__radio__label">Radio Label</label>
 </div>
 ```
 
@@ -92,37 +104,34 @@
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.form__checkbox {
+.form__checkbox,
+.form__radio {
   position: relative;
 }
 
-.form__checkbox__label {
+.form__checkbox__label,
+.form__radio__label {
   @extend .is-transition;
-  padding-left: rhythm(1.125);
   position: relative;
-  cursor: pointer;
   display: block;
+  margin: 0;
+  padding-left: rhythm(1.125);
+  cursor: pointer;
   &:before {
     @extend .is-transition;
     position: absolute;
-    top: rhythm(.19);
-    left: rhythm(.25);
-    width: rhythm(.625);
-    height: rhythm(.625);
+    top: .3em;
+    left: .43em;
+    width: 1em;
+    height: 1em;
     border: 1px solid $color-secondary-50;
     content: "";
     @include box-shadow($default-box-shadow-inset);
     background-color: lighten($lightest-grey, 2%);
-    border-radius: $default-border-radius;
   }
   &:after {
-    @extend .is-transition-bounce;
-    @extend .i;
-    @extend .i:before;
-    @extend .i--checkmark:before;
+    @extend .is-transition;
     position: absolute;
-    top: rhythm(.19);
-    left: rhythm(.25);
     @include transform(scale(0.1, 0.1));
     color: $color-secondary;
     @include opacity(0);
@@ -132,15 +141,57 @@
   }
 }
 
-.form__checkbox__input {
+.form__checkbox__label {
+  &:before {
+    border-radius: $default-border-radius;
+  }
+  &:after {
+    @extend .i;
+    @extend .i:before;
+    @extend .i--checkmark:before;
+    top: .3em;
+    left: .43em;
+  }
+}
+
+.form__radio__label {
+  &:before {
+    border-radius: 100px; // Makes it round
+    top: .33em;
+    left: .45em;
+    @include breakpoint($gte-huge) {
+      top: .27em;
+      width: 1.05em;
+      height: 1.05em;
+    }
+  }
+  &:after {
+    content: "";
+    width: .5em;
+    height: .5em;
+    top: .58em;
+    left: .69em;
+    background-color: $color-secondary;
+    border-radius: 100px;
+    @include breakpoint($gte-huge) {
+      top: .55em;
+      left: .72em;
+    }
+  }
+}
+
+.form__checkbox__input,
+.form__radio__input {
   @include opacity(0);
   // visibility: hidden;
   position: absolute;
-  &:focus + .form__checkbox__label {
+  &:focus + .form__checkbox__label,
+  &:focus + .form__radio__label {
     background-color: $color-bg;
   }
   &:checked {
-    + .form__checkbox__label {
+    + .form__checkbox__label,
+    + .form__radio__label {
       background-color: $color-primary-20;
       &:before {
         border-color: $color-secondary;
@@ -154,7 +205,8 @@
   }
 }
 
-.form__checkbox--right {
+.form__checkbox--right,
+.form__radio--right {
 
 }
 

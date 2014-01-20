@@ -54,7 +54,7 @@ root: "../../../"
           <li><a href="#"><i class="i i--clock"></i><span class="is-hidden--s i__text--right">Activity</span></a></li>
           <li><a href="languages"><i class="i i--version"></i><span class="is-hidden--s i__text--right">Versions <span class="txt--neutral"> 3</span></span></a></li>
           <li><a href="maintainers"><i class="i i--users"></i><span class="is-hidden--s i__text--right">Maintainers<span class="txt--neutral"> 5</span></span></a></li>
-          <li><a href="instructions" title="Project Notes"><i class="i i--info"></i><span class="is-hidden--s i__text--right">Notes</span></a></li>
+          <li><a href="instructions" title="Project Notes"><i class="i i--notes"></i><span class="is-hidden--s i__text--right">Notes</span></a></li>
           <li class="tab__end">
             <div class="dropdown dropdown--tab dropdown--small dropdown--right dropdown--inline js-dropdown">
               <a class="dropdown__toggle js-dropdown__toggle" href="#" title="More Actions"><i class="i i--ellipsis"></i></a>
@@ -74,12 +74,12 @@ root: "../../../"
             <li><a href="#tab-vertical-2"><i class="i i--language"></i> <span class="is-hidden--m-l-down">Languages</span></a></li>
             <li><a href="#tab-vertical-3"><i class="i i--translate"></i> <span class="is-hidden--m-l-down">Translation</span></a></li>
             <li><a href="#tab-vertical-4"><i class="i i--users"></i> <span class="is-hidden--m-l-down">Permissions</span></a></li>
-            <li><a href="#tab-vertical-5"><i class="i i--info"></i> <span class="is-hidden--m-l-down">Notes</span></a></li>
+            <li><a href="#tab-vertical-5"><i class="i i--notes"></i> <span class="is-hidden--m-l-down">Notes</span></a></li>
           </ul>
           <ul class="tabs__content js-tabs-content">
             <li class="is-active" id="tab-vertical-1">
               <h2 class="l--push-all-0 gamma d--bottom">General</h2>
-              <form action="" class="l--constrain-medium">
+              <form action="" class="l--constrain-large">
                 <div class="g--tight l--push-top-1">
                   <div class="g__item w--1-2">
                     <div class="form__item">
@@ -98,7 +98,40 @@ root: "../../../"
                   <label for="id">Project Description <span class="txt--meta">(optional)</span></label>
                   <textarea>Test your might.</textarea>
                 </div>
-                <h3 class="delta d--bottom">Source Code</h3>
+                <h3 class="heading--secondary l--push-all-0">Project Type</h3>
+                <p>Determines how the project is treated for upload and download by clients or through the website. <a href="http://zanata.org/help/projects/create-project/" title="Help: Creating a project and project types"><i class="i i--info"></i></a></p>
+                <ul class="list--slat l--push-bottom-1">
+                  <li class="form__radio">
+                    <input type="radio" name="project-type" id="project-type-1" class="form__radio__input">
+                    <label for="project-type-1" class="form__radio__label">File<span class="txt--meta"> For plain text, Libre Office, InDesign etc.</span></label>
+                  </li>
+                  <li class="form__radio">
+                    <input type="radio" name="project-type" id="project-type-2" class="form__radio__input">
+                    <label for="project-type-2" class="form__radio__label">Gettext <span class="txt--meta">For gettext software strings.</span></label>
+                  </li>
+                  <li class="form__radio">
+                    <input type="radio" name="project-type" id="project-type-3" class="form__radio__input">
+                    <label for="project-type-3" class="form__radio__label">Podir <span class="txt--meta">For Publican or Docbook strings.</span></label>
+                  </li>
+                  <li class="form__radio">
+                    <input type="radio" name="project-type" id="project-type-4" class="form__radio__input">
+                    <label for="project-type-4" class="form__radio__label">Properties <span class="txt--meta">For Java properties files.</span></label>
+                  </li>
+                  <li class="form__radio">
+                    <input type="radio" name="project-type" id="project-type-5" class="form__radio__input">
+                    <label for="project-type-5" class="form__radio__label">UTF8 Properties <span class="txt--meta">For UTF8-encoded Java properties.</span></label>
+                  </li>
+                  <li class="form__radio">
+                    <input type="radio" name="project-type" id="project-type-6" class="form__radio__input">
+                    <label for="project-type-6" class="form__radio__label">XLIFF <span class="txt--meta">For supported XLIFF files.</span></label>
+                  </li>
+                  <li class="form__radio">
+                    <input type="radio" name="project-type" id="project-type-7" class="form__radio__input">
+                    <label for="project-type-7" class="form__radio__label">XML <span class="txt--meta">For XML from the Zanata REST API.</span></label>
+                  </li>
+                </ul>
+
+                <h3 class="heading--secondary">Source Code</h3>
                 <div class="g--tight l--push-top-half">
                   <div class="g__item w--1-2">
                     <div class="form__item">
@@ -119,8 +152,16 @@ root: "../../../"
                   <input type="submit" value="Update general settings" class="l--push-right-half button--primary">
                 </div>
                 <hr>
-                <p><a href="#" class="button--danger"><i class="i--left i--archive"></i>Archive this project</a></p>
-                <p class="txt--meta">This will disable this project and remove it from the public projects list, you will still be able to access it and unarchive it later.</p>
+                <div class="g--tight">
+                  <div class="g__item w--1-2 l--push-bottom-1">
+                    <button class="button--warning l--push-bottom-half"><i class="i--left i--lock"></i>Make this project read only</a></button>
+                    <p class="txt--meta">Read only prevents translations being entered. Your project will still be viewable by the public but no new translations can be added.</p>
+                  </div>
+                  <div class="g__item w--1-2">
+                    <button href="#" class="button--danger l--push-bottom-half"><i class="i--left i--archive"></i>Archive this project</button>
+                    <p class="txt--meta">This will disable this project and remove it from the public projects list, you will still be able to access it and unarchive it later.</p>
+                  </div>
+                </div>
               </form>
             </li>
             <li id="tab-vertical-2">
@@ -147,7 +188,7 @@ root: "../../../"
               <p class="txt--meta">If review is required an extra &#8220;reviewed&#8221; state will be added to translations and will not be considered finalised until a translation has reached this state. <a href="http://zanata.org/help/review/review-activating/" title="Help: Turning review on or off"><i class="i i--info"></i></a></p>
               <hr>
               <h3 class="heading--secondary">Validation</h3>
-              <p class="message--highlight">Use these validations to keep translations consistent with the source text.</p>
+              <p>Use these validations to keep translations consistent with the source text.</p>
               <ul class="list--slat">
                 <li>
                   <div class="g--tight js-example">
@@ -413,7 +454,7 @@ root: "../../../"
             </li>
             <li id="tab-vertical-5">
               <h2 class="l--push-all-0 gamma d--bottom l--push-bottom-half">Project Notes</h2>
-              <p class="message--highlight">This section can be used to add notes for translators or other contributors to help answer questions or complete translations.</p>
+              <p>This section can be used to add notes for translators or other contributors to help answer questions or complete translations.</p>
               <textarea name="notes" id="notes" rows="10"></textarea>
               <p class="txt--meta">Notes are parsed with <a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavoured Markdown</a></p>
               <input type="submit" class="button button--primary" value="Save notes">

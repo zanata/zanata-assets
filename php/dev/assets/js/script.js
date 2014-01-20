@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-01-17
+/*! zanata-assets - v0.1.0 - 2014-01-20
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1560,7 +1560,11 @@ Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0));};
 function init() {
   $('[title]').tooltip({
     placement: 'auto top',
-    container: 'body'
+    container: 'body',
+    delay: {
+       show: '500',
+       hide: '100'
+    }
   });
 }
 

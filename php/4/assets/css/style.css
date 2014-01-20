@@ -2450,7 +2450,10 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .list--stats > li:hover, .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
-.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form__checkbox__label, .new-zanata .form__checkbox__label:before, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
+.new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form__checkbox__label,
+.new-zanata .form__radio__label, .new-zanata .form__checkbox__label:before,
+.new-zanata .form__radio__label:before, .new-zanata .form__checkbox__label:after,
+.new-zanata .form__radio__label:after, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
 .new-zanata .tabs--lined > .tabs__nav > li > a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
@@ -2478,7 +2481,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
-.new-zanata .is-transition-bounce, .new-zanata .form__checkbox__label:after, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
+.new-zanata .is-transition-bounce, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
   -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
@@ -3359,11 +3362,14 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--admin:before {
   content: "\e608";
 }
-.new-zanata .i--import:before {
+.new-zanata .i--notes:before {
   content: "\e609";
 }
-.new-zanata .i--export:before {
+.new-zanata .i--import:before {
   content: "\e60a";
+}
+.new-zanata .i--export:before {
+  content: "\e60f";
 }
 .new-zanata .i--external-link:before {
   content: "\e60b";
@@ -3801,48 +3807,62 @@ Sub-headings can be used when placing a heading under another heading.
 
 /*
 
-#### Form Checkbox
+#### Form Checkbox & Radio
 
 ```example
 <div class="form__checkbox">
-  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
-  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+  <input type="checkbox" id="form-checkbox-1" class="form__checkbox__input" name="form-checkbox" checked/>
+  <label for="form-checkbox-1" class="form__checkbox__label">Checkbox Label</label>
 </div>
 
 <div class="form__checkbox form__checkbox--right">
-  <input type="checkbox" id="form-checkbox" class="form__checkbox__input" name="form-checkbox"/>
-  <label for="form-checkbox" class="form__checkbox__label">Checkbox Label</label>
+  <input type="checkbox" id="form-checkbox-2" class="form__checkbox__input" name="form-checkbox"/>
+  <label for="form-checkbox-2" class="form__checkbox__label">Checkbox Label</label>
+</div>
+```
+
+```example
+<div class="form__radio">
+  <input type="radio" id="form-radio-1" class="form__radio__input" name="form-radio" checked/>
+  <label for="form-radio-1" class="form__radio__label">Radio Label</label>
+</div>
+
+<div class="form__radio form__radio--right">
+  <input type="radio" id="form-radio-2" class="form__radio__input" name="form-radio"/>
+  <label for="form-radio-2" class="form__radio__label">Radio Label</label>
 </div>
 ```
 
 */
-.new-zanata .form__checkbox {
+.new-zanata .form__checkbox,
+.new-zanata .form__radio {
   position: relative;
 }
-.new-zanata .form__checkbox__label {
-  padding-left: 1.82813em;
+.new-zanata .form__checkbox__label,
+.new-zanata .form__radio__label {
   position: relative;
-  cursor: pointer;
   display: block;
+  margin: 0;
+  padding-left: 1.82813em;
+  cursor: pointer;
 }
-.new-zanata .form__checkbox__label:before {
+.new-zanata .form__checkbox__label:before,
+.new-zanata .form__radio__label:before {
   position: absolute;
-  top: 0.30875em;
-  left: 0.40625em;
-  width: 1.01563em;
-  height: 1.01563em;
+  top: .3em;
+  left: .43em;
+  width: 1em;
+  height: 1em;
   border: 1px solid #a2b4c3;
   content: "";
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
-  border-radius: 2px;
 }
-.new-zanata .form__checkbox__label:after {
+.new-zanata .form__checkbox__label:after,
+.new-zanata .form__radio__label:after {
   position: absolute;
-  top: 0.30875em;
-  left: 0.40625em;
   -webkit-transform: scale(0.1, 0.1);
   -moz-transform: scale(0.1, 0.1);
   -ms-transform: scale(0.1, 0.1);
@@ -3852,25 +3872,72 @@ Sub-headings can be used when placing a heading under another heading.
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-.new-zanata .form__checkbox__label:hover {
+.new-zanata .form__checkbox__label:hover,
+.new-zanata .form__radio__label:hover {
   background-color: #edeff1;
 }
-.new-zanata .form__checkbox__input {
+.new-zanata .form__checkbox__label:before {
+  border-radius: 2px;
+}
+.new-zanata .form__checkbox__label:after {
+  top: .3em;
+  left: .43em;
+}
+.new-zanata .form__radio__label:before {
+  border-radius: 100px;
+  top: .33em;
+  left: .45em;
+}
+@media (min-width: 96.25em) {
+  .new-zanata .form__radio__label:before {
+    top: .27em;
+    width: 1.05em;
+    height: 1.05em;
+  }
+}
+.new-zanata .form__radio__label:after {
+  content: "";
+  width: .5em;
+  height: .5em;
+  top: .58em;
+  left: .69em;
+  background-color: #416988;
+  border-radius: 100px;
+}
+@media (min-width: 96.25em) {
+  .new-zanata .form__radio__label:after {
+    top: .55em;
+    left: .72em;
+  }
+}
+.new-zanata .form__checkbox__input,
+.new-zanata .form__radio__input {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   position: absolute;
 }
-.new-zanata .form__checkbox__input:focus + .form__checkbox__label {
+.new-zanata .form__checkbox__input:focus + .form__checkbox__label, .new-zanata .form__checkbox__input:focus + .form__radio__label,
+.new-zanata .form__radio__input:focus + .form__checkbox__label,
+.new-zanata .form__radio__input:focus + .form__radio__label {
   background-color: #edeff1;
 }
-.new-zanata .form__checkbox__input:checked + .form__checkbox__label {
+.new-zanata .form__checkbox__input:checked + .form__checkbox__label,
+.new-zanata .form__checkbox__input:checked + .form__radio__label,
+.new-zanata .form__radio__input:checked + .form__checkbox__label,
+.new-zanata .form__radio__input:checked + .form__radio__label {
   background-color: #dcecf7;
 }
-.new-zanata .form__checkbox__input:checked + .form__checkbox__label:before {
+.new-zanata .form__checkbox__input:checked + .form__checkbox__label:before,
+.new-zanata .form__checkbox__input:checked + .form__radio__label:before,
+.new-zanata .form__radio__input:checked + .form__checkbox__label:before,
+.new-zanata .form__radio__input:checked + .form__radio__label:before {
   border-color: #416988;
   background-color: white;
 }
-.new-zanata .form__checkbox__input:checked + .form__checkbox__label:after {
+.new-zanata .form__checkbox__input:checked + .form__checkbox__label:after,
+.new-zanata .form__checkbox__input:checked + .form__radio__label:after,
+.new-zanata .form__radio__input:checked + .form__checkbox__label:after,
+.new-zanata .form__radio__input:checked + .form__radio__label:after {
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);

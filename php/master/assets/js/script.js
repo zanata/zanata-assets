@@ -1560,7 +1560,11 @@ Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0));};
 function init() {
   $('[title]').tooltip({
     placement: 'auto top',
-    container: 'body'
+    container: 'body',
+    delay: {
+       show: '500',
+       hide: '100'
+    }
   });
 }
 
