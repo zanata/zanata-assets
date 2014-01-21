@@ -10,12 +10,27 @@ $(function() {
       $revealTargetInput.focus();
     }, 100);
   });
-  $('.js-reveal__toggle').on('click touchend', function() {
+  $('.js-reveal__toggle').on('click touchend', function(e) {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
-        $revealParent = $(this).parents('.js-reveal');
+        $revealParent = $(this).parents('.js-reveal'),
+        $revealText = $(this).find('.js-reveal__toggle__text'),
+        revealTextValue = $revealText.text(),
+        revealToggleValue = $revealText.attr('data-toggle-value'),
+        revealTitle = $(this).attr('title') || $(this).attr('data-original-title'),
+        revealToggleTitle = $(this).attr('data-toggle-title');
+    e.preventDefault();
+    $(this).toggleClass('is-active');
     $revealParent.toggleClass('is-active');
     $revealTarget.toggleClass('is-active is-hidden');
+    if (revealToggleTitle && revealTitle) {
+      $(this).attr('data-toggle-title', revealTitle);
+      zanata.tooltipRefresh($(this), revealToggleTitle);
+    }
+    if (revealTextValue && revealToggleValue) {
+      $revealText.text(revealToggleValue);
+      $revealText.attr('data-toggle-value', revealTextValue);
+    }
     setTimeout(function() {
       $revealTargetInput.focus();
     }, 100);

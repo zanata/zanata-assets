@@ -50,7 +50,9 @@ samp {
   padding: 0 rhythm(.125, 14px);
   font-family: "Monaco", Courier, "Courier New", monospace;
   font-weight: 700;
+  color: tint($color-base-font, 10%);
   @include adjust-font-size-to(14px);
+  margin: 0;
 }
 
 p {
@@ -69,11 +71,13 @@ code {
 
 pre {
   white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  // white-space: pre-wrap;
+  // word-wrap: break-word;
   padding: rhythm(.5);
-  border-top: 1px solid $lighter-grey;
-  border-bottom: 1px solid $lighter-grey;
+  margin: rhythm(.5, 14px) 0;
+  border-top: 1px solid $default-border-color;
+  border-bottom: 1px solid $default-border-color;
+  background-color: rgba($color-secondary, .05);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   code {

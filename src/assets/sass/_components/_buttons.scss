@@ -73,11 +73,6 @@ input[type="submit"][disabled] {
   }
 }
 
-.button--snug {
-  @extend .button;
-  padding: rhythm(.25);
-}
-
 .button--small {
   @extend .button;
   @include adjust-font-size-to(14px);
@@ -94,6 +89,11 @@ input[type="submit"][disabled] {
   @include adjust-font-size-to(24px);
 }
 
+.button--snug {
+  @extend .button;
+  padding: rhythm(.25);
+}
+
 .button--full {
   @extend .button;
   display: block;
@@ -105,12 +105,15 @@ input[type="submit"][disabled] {
 .button--link:focus,
 .button--link:active,
 .button--link.is-active {
-  background: none;
-  border-radius: none;
-  border: none;
   @include box-shadow(none);
-  color: $color-link;
+  margin: 0;
   padding: 0;
+  border: none;
+  border-radius: none;
+  background: none;
+  color: $color-link;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .button--link {

@@ -1,14 +1,27 @@
-function init() {
-  $('[title]').tooltip({
-    placement: 'auto top',
-    container: 'body',
-    delay: {
-       show: '500',
-       hide: '100'
-    }
-  });
-}
+var zanata = (function () {
+  var z = {};
+
+  z.tooltip = function(selector) {
+    $(selector).tooltip({
+      placement: 'auto top',
+      container: 'body',
+      delay: {
+         show: '500',
+         hide: '100'
+      }
+    });
+  };
+
+  z.tooltipRefresh = function(selector, newValue) {
+    $(selector).tooltip('hide')
+               .attr('data-original-title', newValue)
+               .tooltip('fixTitle')
+               .tooltip('show');
+  };
+
+  return z;
+}());
 
 $(function () {
-  init();
+  zanata.tooltip('[title]');
 });
