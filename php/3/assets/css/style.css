@@ -3459,7 +3459,6 @@ Keep focus while showing and hiding a password field
   height: 100%;
   background-color: #444c54;
   z-index: 0;
-  -webkit-backface-visibility: hidden;
   -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -3481,7 +3480,6 @@ Keep focus while showing and hiding a password field
   -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -3598,7 +3596,6 @@ Keep focus while showing and hiding a password field
   -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
-  -webkit-backface-visibility: hidden;
 }
 [data-off-canvas=over].off-canvas--left, [data-off-canvas=over].off-canvas--right {
   background-color: #fefefe;
@@ -3610,7 +3607,6 @@ Keep focus while showing and hiding a password field
 
 .off-canvas--left {
   left: 0;
-  -webkit-backface-visibility: hidden;
 }
 .off-canvas--left[data-off-canvas=over] {
   left: -270px;
@@ -3654,7 +3650,6 @@ Keep focus while showing and hiding a password field
 }
 .off-canvas--right {
   right: 0;
-  -webkit-backface-visibility: hidden;
 }
 .off-canvas--right[data-off-canvas=over] {
   right: -270px;
@@ -3941,7 +3936,6 @@ Keep focus while showing and hiding a password field
   -moz-transition-delay: 0.2s;
   -o-transition-delay: 0.2s;
   transition-delay: 0.2s;
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -5224,7 +5218,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   min-height: 19.5em;
 }
 .new-zanata .panels--2 {
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
