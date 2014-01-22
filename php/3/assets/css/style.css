@@ -3936,10 +3936,6 @@ Keep focus while showing and hiding a password field
   -moz-transition-delay: 0.2s;
   -o-transition-delay: 0.2s;
   transition-delay: 0.2s;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
   position: relative;
   width: 100%;
   height: 0.40625em;
@@ -5218,10 +5214,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   min-height: 19.5em;
 }
 .new-zanata .panels--2 {
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
   position: relative;
   left: 0;
   width: 200%;
