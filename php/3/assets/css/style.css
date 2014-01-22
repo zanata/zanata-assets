@@ -3928,35 +3928,42 @@ Keep focus while showing and hiding a password field
 }
 
 .new-zanata .progress-bar, .new-zanata .progress-bar--large {
-  -webkit-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -moz-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -o-transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  transition: 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   -o-transition-delay: 0.2s;
   transition-delay: 0.2s;
-  position: relative;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -0.8125em;
   width: 100%;
   height: 0.40625em;
-  background-color: #c6d2db;
 }
 .new-zanata .progress-bar--large {
   height: 0.8125em;
-  margin-bottom: 0;
+  margin-top: -0.8125em;
+}
+.new-zanata .progress-bar__expander {
+  position: relative;
+  padding-bottom: 0.8125em;
 }
 .no-touch .new-zanata .progress-bar__expander:hover .progress-bar, .no-touch .new-zanata .progress-bar__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar--large {
-  -webkit-transform: scaleY(2) translateY(25%);
-  -moz-transform: scaleY(2) translateY(25%);
-  -ms-transform: scaleY(2) translateY(25%);
-  -o-transform: scaleY(2) translateY(25%);
-  transform: scaleY(2) translateY(25%);
+  height: 0.8125em;
+}
+.new-zanata .progress-bar--large__expander {
+  position: relative;
+  padding-bottom: 1.625em;
+}
+.no-touch .new-zanata .progress-bar--large__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar--large__expander.is-active .progress-bar--large {
+  height: 1.625em;
 }
 .new-zanata .progress-bar__item, .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
   position: absolute;
   height: 100%;
+  width: 100%;
   left: 0;
   z-index: 1;
+  background-color: #c6d2db;
 }
 .new-zanata .progress-bar__translated {
   background-color: #70a98b;
