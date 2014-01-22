@@ -3945,13 +3945,6 @@ Keep focus while showing and hiding a password field
   height: 0.8125em;
   margin-bottom: 0;
 }
-.new-zanata .progress-bar__expander {
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-}
 .no-touch .new-zanata .progress-bar__expander:hover .progress-bar, .no-touch .new-zanata .progress-bar__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar--large {
   -webkit-transform: scaleY(2) translateY(25%);
   -moz-transform: scaleY(2) translateY(25%);
