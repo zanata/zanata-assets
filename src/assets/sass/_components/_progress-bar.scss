@@ -55,6 +55,10 @@
   background-color: $color-neutral;
 }
 
+.progress-bar__untranslated {
+  @extend .progress-bar__item;
+}
+
 .progress-bar__translated {
   @extend .progress-bar__item;
   background-color: $color-success;

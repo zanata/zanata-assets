@@ -3,7 +3,7 @@ var zanata = (function () {
 
   z.tooltip = function(selector) {
     $(selector).tooltip({
-      placement: 'auto top',
+      placement: 'auto bottom',
       container: 'body',
       delay: {
          show: '500',

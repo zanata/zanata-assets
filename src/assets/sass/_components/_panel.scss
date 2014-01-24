@@ -223,6 +223,7 @@
   // display: table;
   width: 100%;
   position: relative;
+  height: rhythm(2.05);
 }
 
 .panel__sub-header {
@@ -241,6 +242,13 @@
     @include adjust-font-size-to(18px, 2);
     padding: 0 rhythm(.5, 18px);
   }
+}
+
+.panel__header__info {
+  @include ellipsis;
+  padding: rhythm(.45) rhythm(.5);
+  overflow: hidden;
+  margin: 0;
 }
 
 .panel__heading--small {
@@ -314,7 +322,7 @@
 .panel__results {
   @extend .l--cf-of;
   position: relative;
-  padding: 0 rhythm(.5) 0 rhythm(1.375);
+  padding: 0 rhythm(.25) 0 rhythm(1.375);
   .txt--meta {
     line-height: inherit;
   }
@@ -368,7 +376,7 @@
   &:focus,
   &:active {
     color: $color-link-hover;
-    background-color: $color-bg-light;
+    background-color: $color-bg;
     @include box-shadow(none);
   }
   &:active {

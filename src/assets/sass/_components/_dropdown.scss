@@ -186,6 +186,16 @@
             color: $color-bg-lighter;
           }
         }
+        &.txt--danger:hover {
+          .no-touch & {
+            background-color: $color-danger;
+            color: $color-bg-lighter !important;
+          }
+        }
+        &[disabled] {
+          pointer-events: none;
+          @include opacity(.5);
+        }
       }
     }
   }
@@ -224,6 +234,7 @@ Used in panel headers to match the header layout
     border-right: 1px solid transparent;
     border-bottom: 2px solid transparent;
     line-height: rhythm(2, 14px);
+    max-height: rhythm(2.05, 14px);
     // text-transform: uppercase;
     &:active {
       border-bottom: 2px solid $default-border-color;

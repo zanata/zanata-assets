@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-01-21
+/*! zanata-assets - v0.1.0 - 2014-01-24
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1562,7 +1562,7 @@ var zanata = (function () {
 
   z.tooltip = function(selector) {
     $(selector).tooltip({
-      placement: 'auto top',
+      placement: 'auto bottom',
       container: 'body',
       delay: {
          show: '500',
@@ -1659,6 +1659,74 @@ $(function () {
   $('.js-form__input--copyable').on('click touchend', function() {
     $(this).select();
   });
+
+  // On load
+  $.each($('.js-form__checkbox'), function() {
+    $(this).append('<span class="form__checkbox__item js-form__checkbox__item"></span>');
+    setCheckRadioStatus($(this));
+  });
+
+  $.each($('.js-form__radio'), function() {
+    $(this).append('<span class="form__radio__item js-form__radio__item"></span>');
+    setCheckRadioStatus($(this));
+  });
+
+  $(document).on('click touchend', '.js-form__checkbox', function(e) {
+    setCheckRadio($(this));
+    setCheckRadioStatus($(this));
+    e.preventDefault();
+  });
+
+  $(document).on('click touchend', '.js-form__radio', function(e) {
+    setCheckRadio($(this));
+    removeRadioStatus($(this));
+    setCheckRadioStatus($(this));
+    e.preventDefault();
+  });
+
+  function setCheckRadio($this) {
+    var $input = $this.find('.js-form__checkbox__input, .js-form__radio__input');
+    if (!$input.is(':checked')) {
+      $input.prop('checked', true);
+    }
+    else if ($input.attr('type') === 'checkbox'){
+      $input.prop('checked', false);
+    }
+  }
+
+  function setCheckRadioStatus($this) {
+    var $input = $this.find('.js-form__checkbox__input, .js-form__radio__input'),
+        $item = $this.find('.js-form__checkbox__item, .js-form__radio__item');
+
+    // Wait until checkbox/radio change has propagated
+    setTimeout(function() {
+      if ($input.is(':checked')) {
+        $this.addClass('is-checked');
+        $item.addClass('is-checked');
+      }
+      else {
+        $this.removeClass('is-checked');
+        $item.removeClass('is-checked');
+      }
+    }, 0);
+  }
+
+  function removeRadioStatus($this) {
+    var $input = $this.find('.js-form__radio__input'),
+        $item = $this.find('.js-form__checkbox__item, .js-form__radio__item'),
+        $radios = $('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
+        $items = $radios.find('.js-form__radio__item');
+    setTimeout(function() {
+      console.log($input.is(':checked'));
+      $radios.removeClass('is-checked');
+      $items.removeClass('is-checked');
+      if ($input.is(':checked')) {
+        $this.addClass('is-checked');
+        $item.addClass('is-checked');
+      }
+    }, 0);
+  }
+
 });
 
 $(function () {
@@ -1690,6 +1758,22 @@ $(function () {
   });
 });
 
+$(function () {
+  $(document).on('click touchend', '.js-modal__show', function() {
+    var modalTarget = $(this).attr('data-target');
+    console.log($(modalTarget), modalTarget);
+    $(modalTarget).addClass('is-active');
+    $('#container').addClass('is-modal');
+  });
+  $(document).on('keyup', function(e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $('.modal').removeClass('is-active');
+      $('#container').removeClass('is-modal');
+    }
+  });
+});
+
 $(function() {
   $('.js-reveal__show').on('click touchend', function() {
     var $revealTarget = $($(this).attr('data-target')),
@@ -1711,7 +1795,11 @@ $(function() {
         revealToggleValue = $revealText.attr('data-toggle-value'),
         revealTitle = $(this).attr('title') || $(this).attr('data-original-title'),
         revealToggleTitle = $(this).attr('data-toggle-title');
-    e.preventDefault();
+    // Label need to register the click so it applies to the checkbox or radio
+    // it is attached to
+    if(!$(event.target).is('label')) {
+      e.preventDefault();
+    }
     $(this).toggleClass('is-active');
     $revealParent.toggleClass('is-active');
     $revealTarget.toggleClass('is-active is-hidden');
@@ -1727,6 +1815,8 @@ $(function() {
       $revealTargetInput.focus();
     }, 100);
   });
+
+
   $('.js-reveal__reset').on('click touchend', function() {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');

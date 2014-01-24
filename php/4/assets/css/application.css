@@ -980,6 +980,7 @@ html .gwt-DecoratorPanel .bottomRightInner {
   background: #fff;
   padding: .75em;
   cursor: default;
+  z-index: 3001;
 }
 
 .gwt-DialogBox .dialogMiddleCenter {
@@ -1276,6 +1277,7 @@ html .gwt-DialogBox .dialogBottomRightInner {
   background-color: #000;
   opacity: 0.3;
   filter: alpha(opacity=30);
+  z-index: 3000;
 }
 
 .gwt-PushButton-up,

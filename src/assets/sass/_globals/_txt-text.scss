@@ -193,6 +193,7 @@
 .txt--meta {
   @include adjust-font-size-to(14px, .75);
   color: $color-secondary-70;
+  font-weight: 400;
 }
 
 }

@@ -79,11 +79,13 @@
 <div class="form__checkbox">
   <input type="checkbox" id="form-checkbox-1" class="form__checkbox__input" name="form-checkbox" checked/>
   <label for="form-checkbox-1" class="form__checkbox__label">Checkbox Label</label>
+  <span class="form__checkbox__item"></span>
 </div>
 
 <div class="form__checkbox form__checkbox--right">
   <input type="checkbox" id="form-checkbox-2" class="form__checkbox__input" name="form-checkbox"/>
   <label for="form-checkbox-2" class="form__checkbox__label">Checkbox Label</label>
+  <span class="form__checkbox__item"></span>
 </div>
 ```
 
@@ -91,11 +93,13 @@
 <div class="form__radio">
   <input type="radio" id="form-radio-1" class="form__radio__input" name="form-radio" checked/>
   <label for="form-radio-1" class="form__radio__label">Radio Label</label>
+  <span class="form__radio__item"></span>
 </div>
 
 <div class="form__radio form__radio--right">
   <input type="radio" id="form-radio-2" class="form__radio__input" name="form-radio"/>
   <label for="form-radio-2" class="form__radio__label">Radio Label</label>
+  <span class="form__radio__item"></span>
 </div>
 ```
 
@@ -106,19 +110,28 @@
 
 .form__checkbox,
 .form__radio {
+  @extend .is-transition-fast;
   position: relative;
-}
-
-.form__checkbox__label,
-.form__radio__label {
-  @extend .is-transition;
-  position: relative;
-  display: block;
-  margin: 0;
   padding-left: rhythm(1.125);
   cursor: pointer;
+  &:hover {
+    background-color: $color-bg-lightest;
+  }
+  &.is-focused {
+    background-color: $color-bg;
+  }
+  &.is-checked {
+    background-color: tint($color-primary-20, 40%);
+  }
+}
+
+.form__checkbox__item,
+.form__radio__item {
+  position: absolute;
+  top: 0;
+  left: 0;
   &:before {
-    @extend .is-transition;
+    @extend .is-transition-fast;
     position: absolute;
     top: .3em;
     left: .43em;
@@ -130,18 +143,25 @@
     background-color: lighten($lightest-grey, 2%);
   }
   &:after {
-    @extend .is-transition;
+    @extend .is-transition-fast;
     position: absolute;
     @include transform(scale(0.1, 0.1));
     color: $color-secondary;
     @include opacity(0);
   }
-  &:hover {
-    background-color: $color-bg;
+  &.is-checked {
+    &:before {
+      border-color: $color-secondary;
+      background-color: $white;
+    }
+    &:after {
+      @include transform(scale(1, 1));
+      @include opacity(1);
+    }
   }
 }
 
-.form__checkbox__label {
+.form__checkbox__item {
   &:before {
     border-radius: $default-border-radius;
   }
@@ -154,7 +174,7 @@
   }
 }
 
-.form__radio__label {
+.form__radio__item {
   &:before {
     border-radius: 100px; // Makes it round
     top: .33em;
@@ -180,28 +200,51 @@
   }
 }
 
+.form__checkbox__label,
+.form__radio__label {
+  display: block;
+  margin: 0;
+  cursor: inherit;
+}
+
 .form__checkbox__input,
 .form__radio__input {
   @include opacity(0);
-  // visibility: hidden;
   position: absolute;
-  &:focus + .form__checkbox__label,
-  &:focus + .form__radio__label {
-    background-color: $color-bg;
-  }
-  &:checked {
+  height: 1px;
+  width: 1px;
+  left: -1px;
+  // visibility: hidden;
+  &:disabled {
+    @include opacity(0);
     + .form__checkbox__label,
     + .form__radio__label {
-      background-color: $color-primary-20;
-      &:before {
-        border-color: $color-secondary;
-        background-color: $white;
-      }
-      &:after {
-        @include transform(scale(1, 1));
-        @include opacity(1);
-      }
+      pointer-events: none;
+      @include opacity(.5);
+      cursor: default;
     }
+  }
+}
+
+.form__checkbox--spaced,
+.form__radio--spaced {
+  .form__checkbox__item,
+  .form__radio__item {
+    top: rhythm(.25);
+    left: rhythm(.125);
+  }
+}
+
+.form__checkbox--heading {
+  width: rhythm(1.5);
+  height: rhythm(2);
+  float: left;
+  margin-right: rhythm(-.625);
+  background-color: transparent !important;
+  .form__checkbox__item,
+  .form__radio__item {
+    top: rhythm(.5);
+    left: rhythm(.125);
   }
 }
 

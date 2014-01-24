@@ -219,6 +219,81 @@ nav ol {
 
 /*
 
+#### List Panel
+
+```example
+<ul class="list--panel">
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+</ul>
+```
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list--panel {
+  @extend .list--no-bullets;
+  > li {
+    background-color: $color-bg-lighter;
+    border-bottom: $default-border;
+    &:hover {
+      @extend .bg--highest--hover;
+    }
+    &.is-active {
+      background-color: $color-bg-lightest;
+      > a {
+        color: $color-link-active;
+      }
+    }
+  }
+  .list__item, // Don't use this class
+  .list__item__content {
+    display: table;
+    table-layout: fixed;
+    padding: rhythm(.25) rhythm(.5);
+  }
+  .list__item__info {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  .list__item--actionable {
+    position: relative;
+    .list__item__content {
+      padding-left: rhythm(1.375);
+    }
+  }
+  .list__item__action {
+    position: absolute;
+    left: rhythm(.2);
+    top: 50%;
+    margin-top: rhythm(-.56);
+    width: rhythm(.5);
+  }
+  .list__item__actions {
+    margin-left: rhythm(.5);
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .list__item__meta {
+    @include font-size(14px);
+    display: inline-block;
+    margin: 0 0 rhythm(.25,14px);
+    color: $color-secondary-50;
+    font-weight: 400;
+    line-height: 1em;
+    @include hyphenation;
+  }
+}
+
+}
+
+/*
+
 #### List Stats
 
 ```example
@@ -268,46 +343,17 @@ nav ol {
 .new-zanata {
 
 .list--stats {
-  @extend .list--no-bullets;
+  @extend .list--panel;
   > li {
     margin-top: rhythm(-.25);
-    &:hover {
-      @extend .bg--highest--hover;
-    }
     &:first-child {
       margin-top: 0;
-    }
-    &.is-active {
-      background-color: $color-bg-lightest;
-      > a {
-        color: $color-link-active;
-      }
     }
   }
   .list__item, // Don't use this class
   .list__item__content {
-    display: table;
-    table-layout: fixed;
     padding: rhythm(.5) rhythm(.5) rhythm(.25);
     min-height: rhythm(2);
-  }
-  .list__item__info {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
-  }
-  .list__item--actionable {
-    position: relative;
-    .list__item__content {
-      padding-left: rhythm(1.375);
-    }
-  }
-  .list__item__action {
-    position: absolute;
-    left: rhythm(.2);
-    top: 50%;
-    margin-top: rhythm(-.56);
-    width: rhythm(.5);
   }
   .list__item__stats {
     margin-left: rhythm(.5);
@@ -319,13 +365,7 @@ nav ol {
     line-height: 1em;
   }
   .list__item__meta {
-    @include font-size(14px);
-    display: inline-block;
     margin: rhythm(.25,14px) 0 0;
-    color: $color-secondary-50;
-    font-weight: 400;
-    line-height: 1em;
-    @include hyphenation;
   }
 }
 
@@ -361,6 +401,7 @@ nav ol {
 ```
 
 */
+
 
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
