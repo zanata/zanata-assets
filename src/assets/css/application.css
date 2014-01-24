@@ -976,11 +976,14 @@ html .gwt-DecoratorPanel .bottomRightInner {
   overflow: hidden;
 }
 
+.gwt-DialogBox {
+  z-index: 3001;
+}
+
 .gwt-DialogBox .Caption {
   background: #fff;
   padding: .75em;
   cursor: default;
-  z-index: 3001;
 }
 
 .gwt-DialogBox .dialogMiddleCenter {
