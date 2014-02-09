@@ -1,9 +1,9 @@
-$(function () {
+jQuery(function () {
 
-  $('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
+  jQuery('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
     e.preventDefault();
-    if (!$(this).parent().hasClass('is-active')) {
-      var $this = $(this),
+    if (!jQuery(this).parent().hasClass('is-active')) {
+      var $this = jQuery(this),
           targetHash = $this.attr('href'),
           targetID = targetHash.replace('#', ''),
           $parent = $this.parents('.js-tabs');
@@ -14,7 +14,7 @@ $(function () {
       // Add relevant is-active classes
       $this.blur().parent().addClass('is-active');
       // Add hashed class so we can remove ID to change the hash
-      $(targetHash)
+      jQuery(targetHash)
         .addClass('is-active is-hashed')
         .removeAttr('id');
       // Change URL hash
@@ -28,14 +28,14 @@ $(function () {
   });
 
   // Search for hash in url and change to that tab
-  if (window.location.hash && $('.js-tabs')) {
+  if (window.location.hash && jQuery('.js-tabs')) {
     var targetHash = window.location.hash,
-        $target = $(targetHash),
+        $target = jQuery(targetHash),
         $parent = $target.parents('.js-tabs');
     $parent
       .find('.js-tabs-content li, .js-tabs-nav li')
       .removeClass('is-active');
-    $('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
+    jQuery('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
     $target.addClass('is-active');
   }
 

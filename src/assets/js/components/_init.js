@@ -2,7 +2,7 @@ var zanata = (function () {
   var z = {};
 
   z.tooltip = function(selector) {
-    $(selector).tooltip({
+    jQuery(selector).tooltip({
       placement: 'auto bottom',
       container: 'body',
       delay: {
@@ -13,7 +13,7 @@ var zanata = (function () {
   };
 
   z.tooltipRefresh = function(selector, newValue) {
-    $(selector).tooltip('hide')
+    jQuery(selector).tooltip('hide')
                .attr('data-original-title', newValue)
                .tooltip('fixTitle')
                .tooltip('show');
@@ -22,6 +22,6 @@ var zanata = (function () {
   return z;
 }());
 
-$(function () {
+jQuery(function () {
   zanata.tooltip('[title]');
 });

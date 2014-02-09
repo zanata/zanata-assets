@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-01-24
+/*! zanata-assets - v0.1.0 - 2014-02-10
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1561,7 +1561,7 @@ var zanata = (function () {
   var z = {};
 
   z.tooltip = function(selector) {
-    $(selector).tooltip({
+    jQuery(selector).tooltip({
       placement: 'auto bottom',
       container: 'body',
       delay: {
@@ -1572,7 +1572,7 @@ var zanata = (function () {
   };
 
   z.tooltipRefresh = function(selector, newValue) {
-    $(selector).tooltip('hide')
+    jQuery(selector).tooltip('hide')
                .attr('data-original-title', newValue)
                .tooltip('fixTitle')
                .tooltip('show');
@@ -1581,26 +1581,26 @@ var zanata = (function () {
   return z;
 }());
 
-$(function () {
+jQuery(function () {
   zanata.tooltip('[title]');
 });
 
-$(function() {
+jQuery(function() {
 
   var collapseActiveDropdowns,
       toggleThisCollapseOthers;
       // mouseOutTimer;
 
   collapseActiveDropdowns = function () {
-    $('.js-dropdown.is-active .js-dropdown__toggle').click();
+    jQuery('.js-dropdown.is-active .js-dropdown__toggle').click();
   };
 
   toggleThisCollapseOthers = function (e) {
     e.preventDefault();
-    $(this).blur();
-    var $dropdown = $(this).parent('.js-dropdown');
+    jQuery(this).blur();
+    var $dropdown = jQuery(this).parent('.js-dropdown');
     // $dropdown.removeClass('is-hover');
-    $('.js-dropdown.is-active').not($dropdown)
+    jQuery('.js-dropdown.is-active').not($dropdown)
                                .removeClass('is-active')
                                .parents('.js-dropdown__container')
                                .removeClass('is-active');
@@ -1610,27 +1610,27 @@ $(function() {
   };
 
   // Don't toggle dropdown when clicking links inside it
-  $('.js-dropdown__toggle a, .js-dropdown__content').bind('click', function(e) {
+  jQuery('.js-dropdown__toggle a, .js-dropdown__content').bind('click', function(e) {
     e.stopPropagation();
   });
 
-  $(document).bind('click touchend', collapseActiveDropdowns);
-  $(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
+  jQuery(document).bind('click touchend', collapseActiveDropdowns);
+  jQuery(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
 });
 
-$(function () {
-  $(document).on('click touchend', '.js-example__setter', function() {
-    var exampleState = $(this).attr('data-example');
+jQuery(function () {
+  jQuery(document).on('click touchend', '.js-example__setter', function() {
+    var exampleState = jQuery(this).attr('data-example');
     // Reset class and apply new one
-    $(this).parents('.js-example').find('.js-example__target')
+    jQuery(this).parents('.js-example').find('.js-example__target')
            .attr('class', 'js-example__target').addClass(exampleState);
   });
 });
 
-$(function () {
-  $('.js-form-password-parent').on('click touchend', '.js-form-password-toggle', function(e) {
-    var $passwordInput = $(this).parents('.js-form-password-parent')
+jQuery(function () {
+  jQuery('.js-form-password-parent').on('click touchend', '.js-form-password-toggle', function(e) {
+    var $passwordInput = jQuery(this).parents('.js-form-password-parent')
                                 .find('.js-form-password-input');
     e.preventDefault();
     if ($passwordInput.attr('type') === 'password') {
@@ -1641,46 +1641,46 @@ $(function () {
         'autocorrect': 'off',
         'spellcheck': 'false'
       });
-      $(this).text('Hide');
+      jQuery(this).text('Hide');
     }
     else {
       $passwordInput.attr('type', 'password');
-      $(this).text('Show');
+      jQuery(this).text('Show');
     }
     $passwordInput.focus();
   });
 
-  $('.js-form--search').on('focus', '.js-form--search__input, .js-form--search__button', function() {
-    $(this).parents('.js-form--search').addClass('is-active');
+  jQuery('.js-form--search').on('focus', '.js-form--search__input, .js-form--search__button', function() {
+    jQuery(this).parents('.js-form--search').addClass('is-active');
   });
-  $('.js-form--search').on('blur', '.js-form--search__input, .js-form--search__button', function() {
-    $(this).parents('.js-form--search').removeClass('is-active');
+  jQuery('.js-form--search').on('blur', '.js-form--search__input, .js-form--search__button', function() {
+    jQuery(this).parents('.js-form--search').removeClass('is-active');
   });
-  $('.js-form__input--copyable').on('click touchend', function() {
-    $(this).select();
+  jQuery('.js-form__input--copyable').on('click touchend', function() {
+    jQuery(this).select();
   });
 
   // On load
-  $.each($('.js-form__checkbox'), function() {
-    $(this).append('<span class="form__checkbox__item js-form__checkbox__item"></span>');
-    setCheckRadioStatus($(this));
+  $.each(jQuery('.js-form__checkbox'), function() {
+    jQuery(this).append('<span class="form__checkbox__item js-form__checkbox__item"></span>');
+    setCheckRadioStatus(jQuery(this));
   });
 
-  $.each($('.js-form__radio'), function() {
-    $(this).append('<span class="form__radio__item js-form__radio__item"></span>');
-    setCheckRadioStatus($(this));
+  $.each(jQuery('.js-form__radio'), function() {
+    jQuery(this).append('<span class="form__radio__item js-form__radio__item"></span>');
+    setCheckRadioStatus(jQuery(this));
   });
 
-  $(document).on('click touchend', '.js-form__checkbox', function(e) {
-    setCheckRadio($(this));
-    setCheckRadioStatus($(this));
+  jQuery(document).on('click touchend', '.js-form__checkbox', function(e) {
+    setCheckRadio(jQuery(this));
+    setCheckRadioStatus(jQuery(this));
     e.preventDefault();
   });
 
-  $(document).on('click touchend', '.js-form__radio', function(e) {
-    setCheckRadio($(this));
-    removeRadioStatus($(this));
-    setCheckRadioStatus($(this));
+  jQuery(document).on('click touchend', '.js-form__radio', function(e) {
+    setCheckRadio(jQuery(this));
+    removeRadioStatus(jQuery(this));
+    setCheckRadioStatus(jQuery(this));
     e.preventDefault();
   });
 
@@ -1714,7 +1714,7 @@ $(function () {
   function removeRadioStatus($this) {
     var $input = $this.find('.js-form__radio__input'),
         $item = $this.find('.js-form__checkbox__item, .js-form__radio__item'),
-        $radios = $('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
+        $radios = jQuery('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
         $items = $radios.find('.js-form__radio__item');
     setTimeout(function() {
       console.log($input.is(':checked'));
@@ -1729,18 +1729,18 @@ $(function () {
 
 });
 
-$(function () {
-  $('.loader__container').on('click touchend', '.loader', function(){
-    if ($('.loader__spinner', this).length <= 0) {
-      $('.loader__label', this).append('<span class="loader__spinner"><span></span><span></span><span></span></span>');
-      $(this).addClass('is-active');
+jQuery(function () {
+  jQuery('.loader__container').on('click touchend', '.loader', function(){
+    if (jQuery('.loader__spinner', this).length <= 0) {
+      jQuery('.loader__label', this).append('<span class="loader__spinner"><span></span><span></span><span></span></span>');
+      jQuery(this).addClass('is-active');
     }
   });
 });
 
-$(function () {
-  $(document).on('click touchend', '.js-message-remove', function(e) {
-    var $this = $(this),
+jQuery(function () {
+  jQuery(document).on('click touchend', '.js-message-remove', function(e) {
+    var $this = jQuery(this),
         $parent = $this.parents('.message--removable');
     e.preventDefault();
     if($parent.hasClass('is-active')) {
@@ -1758,54 +1758,54 @@ $(function () {
   });
 });
 
-$(function () {
-  $(document).on('click touchend', '.js-modal__show', function() {
-    var modalTarget = $(this).attr('data-target');
-    console.log($(modalTarget), modalTarget);
-    $(modalTarget).addClass('is-active');
-    $('#container').addClass('is-modal');
+jQuery(function () {
+  jQuery(document).on('click touchend', '.js-modal__show', function() {
+    var modalTarget = jQuery(this).attr('data-target');
+    console.log(jQuery(modalTarget), modalTarget);
+    jQuery(modalTarget).addClass('is-active');
+    jQuery('#container').addClass('is-modal');
   });
-  $(document).on('keyup', function(e) {
+  jQuery(document).on('keyup', function(e) {
     if (e.keyCode === 27) {
       e.stopPropagation();
-      $('.modal').removeClass('is-active');
-      $('#container').removeClass('is-modal');
+      jQuery('.modal').removeClass('is-active');
+      jQuery('#container').removeClass('is-modal');
     }
   });
 });
 
-$(function() {
-  $('.js-reveal__show').on('click touchend', function() {
-    var $revealTarget = $($(this).attr('data-target')),
+jQuery(function() {
+  jQuery('.js-reveal__show').on('click touchend', function() {
+    var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
-        $revealParent = $(this).parents('.js-reveal');
-    $(this).addClass('is-hidden');
+        $revealParent = jQuery(this).parents('.js-reveal');
+    jQuery(this).addClass('is-hidden');
     $revealParent.addClass('is-active');
     $revealTarget.toggleClass('is-active');
     setTimeout(function() {
       $revealTargetInput.focus();
     }, 100);
   });
-  $('.js-reveal__toggle').on('click touchend', function(e) {
-    var $revealTarget = $($(this).attr('data-target')),
+  jQuery('.js-reveal__toggle').on('click touchend', function(e) {
+    var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
-        $revealParent = $(this).parents('.js-reveal'),
-        $revealText = $(this).find('.js-reveal__toggle__text'),
+        $revealParent = jQuery(this).parents('.js-reveal'),
+        $revealText = jQuery(this).find('.js-reveal__toggle__text'),
         revealTextValue = $revealText.text(),
         revealToggleValue = $revealText.attr('data-toggle-value'),
-        revealTitle = $(this).attr('title') || $(this).attr('data-original-title'),
-        revealToggleTitle = $(this).attr('data-toggle-title');
+        revealTitle = jQuery(this).attr('title') || jQuery(this).attr('data-original-title'),
+        revealToggleTitle = jQuery(this).attr('data-toggle-title');
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
-    if(!$(event.target).is('label')) {
+    if(!jQuery(event.target).is('label')) {
       e.preventDefault();
     }
-    $(this).toggleClass('is-active');
+    jQuery(this).toggleClass('is-active');
     $revealParent.toggleClass('is-active');
     $revealTarget.toggleClass('is-active is-hidden');
     if (revealToggleTitle && revealTitle) {
-      $(this).attr('data-toggle-title', revealTitle);
-      zanata.tooltipRefresh($(this), revealToggleTitle);
+      jQuery(this).attr('data-toggle-title', revealTitle);
+      zanata.tooltipRefresh(jQuery(this), revealToggleTitle);
     }
     if (revealTextValue && revealToggleValue) {
       $revealText.text(revealToggleValue);
@@ -1817,27 +1817,27 @@ $(function() {
   });
 
 
-  $('.js-reveal__reset').on('click touchend', function() {
-    var $revealTarget = $($(this).attr('data-target')),
+  jQuery('.js-reveal__reset').on('click touchend', function() {
+    var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');
     $revealTargetInput.val('').focus();
-    $(this).addClass('is-hidden');
+    jQuery(this).addClass('is-hidden');
   });
-  $('.js-reveal__cancel').on('click touchend', function() {
-    var $revealTarget = $($(this).attr('data-target')),
+  jQuery('.js-reveal__cancel').on('click touchend', function() {
+    var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
-        $revealParent = $(this).parents('.js-reveal');
+        $revealParent = jQuery(this).parents('.js-reveal');
     $revealTarget.removeClass('is-active');
     $revealTargetInput.blur();
     $revealTargetInput.val('');
     $revealParent.find('.js-reveal__reset').addClass('is-hidden');
     $revealParent.find('.js-reveal__show').removeClass('is-hidden').focus();
   });
-  $('.js-reveal__target__input').on('keyup', function(e) {
-    var $revealParent = $(this).parents('.js-reveal'),
+  jQuery('.js-reveal__target__input').on('keyup', function(e) {
+    var $revealParent = jQuery(this).parents('.js-reveal'),
         $revealReset = $revealParent.find('.js-reveal__reset'),
         $revealCancel = $revealParent.find('.js-reveal__cancel');
-    if ($(this).val() !== '') {
+    if (jQuery(this).val() !== '') {
       $revealReset.removeClass('is-hidden');
     }
     else {
@@ -1849,26 +1849,26 @@ $(function() {
   });
 });
 
-$(function () {
+jQuery(function () {
 
   var pathname = window.location.pathname;
 
   // Check the url, see which links match and make them active
-  $('#nav-user a, #nav-main a, #nav-main-side a, #nav-footer a').each(function () {
-    var navLink = $(this).attr('href').replace(/\//g, '').replace(/\./g, '');
+  jQuery('#nav-user a, #nav-main a, #nav-main-side a, #nav-footer a').each(function () {
+    var navLink = jQuery(this).attr('href').replace(/\//g, '').replace(/\./g, '');
     if (pathname.toLowerCase().indexOf(navLink) >= 0) {
-      $(this).addClass('is-active');
+      jQuery(this).addClass('is-active');
     }
   });
 
 });
 
-$(function () {
+jQuery(function () {
 
-  $('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
+  jQuery('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
     e.preventDefault();
-    if (!$(this).parent().hasClass('is-active')) {
-      var $this = $(this),
+    if (!jQuery(this).parent().hasClass('is-active')) {
+      var $this = jQuery(this),
           targetHash = $this.attr('href'),
           targetID = targetHash.replace('#', ''),
           $parent = $this.parents('.js-tabs');
@@ -1879,7 +1879,7 @@ $(function () {
       // Add relevant is-active classes
       $this.blur().parent().addClass('is-active');
       // Add hashed class so we can remove ID to change the hash
-      $(targetHash)
+      jQuery(targetHash)
         .addClass('is-active is-hashed')
         .removeAttr('id');
       // Change URL hash
@@ -1893,14 +1893,14 @@ $(function () {
   });
 
   // Search for hash in url and change to that tab
-  if (window.location.hash && $('.js-tabs')) {
+  if (window.location.hash && jQuery('.js-tabs')) {
     var targetHash = window.location.hash,
-        $target = $(targetHash),
+        $target = jQuery(targetHash),
         $parent = $target.parents('.js-tabs');
     $parent
       .find('.js-tabs-content li, .js-tabs-nav li')
       .removeClass('is-active');
-    $('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
+    jQuery('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
     $target.addClass('is-active');
   }
 

@@ -1,15 +1,15 @@
-$(function () {
-  $(document).on('click touchend', '.js-modal__show', function() {
-    var modalTarget = $(this).attr('data-target');
-    console.log($(modalTarget), modalTarget);
-    $(modalTarget).addClass('is-active');
-    $('#container').addClass('is-modal');
+jQuery(function () {
+  jQuery(document).on('click touchend', '.js-modal__show', function() {
+    var modalTarget = jQuery(this).attr('data-target');
+    console.log(jQuery(modalTarget), modalTarget);
+    jQuery(modalTarget).addClass('is-active');
+    jQuery('#container').addClass('is-modal');
   });
-  $(document).on('keyup', function(e) {
+  jQuery(document).on('keyup', function(e) {
     if (e.keyCode === 27) {
       e.stopPropagation();
-      $('.modal').removeClass('is-active');
-      $('#container').removeClass('is-modal');
+      jQuery('.modal').removeClass('is-active');
+      jQuery('#container').removeClass('is-modal');
     }
   });
 });

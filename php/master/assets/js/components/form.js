@@ -1,6 +1,6 @@
-$(function () {
-  $('.js-form-password-parent').on('click touchend', '.js-form-password-toggle', function(e) {
-    var $passwordInput = $(this).parents('.js-form-password-parent')
+jQuery(function () {
+  jQuery('.js-form-password-parent').on('click touchend', '.js-form-password-toggle', function(e) {
+    var $passwordInput = jQuery(this).parents('.js-form-password-parent')
                                 .find('.js-form-password-input');
     e.preventDefault();
     if ($passwordInput.attr('type') === 'password') {
@@ -11,46 +11,46 @@ $(function () {
         'autocorrect': 'off',
         'spellcheck': 'false'
       });
-      $(this).text('Hide');
+      jQuery(this).text('Hide');
     }
     else {
       $passwordInput.attr('type', 'password');
-      $(this).text('Show');
+      jQuery(this).text('Show');
     }
     $passwordInput.focus();
   });
 
-  $('.js-form--search').on('focus', '.js-form--search__input, .js-form--search__button', function() {
-    $(this).parents('.js-form--search').addClass('is-active');
+  jQuery('.js-form--search').on('focus', '.js-form--search__input, .js-form--search__button', function() {
+    jQuery(this).parents('.js-form--search').addClass('is-active');
   });
-  $('.js-form--search').on('blur', '.js-form--search__input, .js-form--search__button', function() {
-    $(this).parents('.js-form--search').removeClass('is-active');
+  jQuery('.js-form--search').on('blur', '.js-form--search__input, .js-form--search__button', function() {
+    jQuery(this).parents('.js-form--search').removeClass('is-active');
   });
-  $('.js-form__input--copyable').on('click touchend', function() {
-    $(this).select();
+  jQuery('.js-form__input--copyable').on('click touchend', function() {
+    jQuery(this).select();
   });
 
   // On load
-  $.each($('.js-form__checkbox'), function() {
-    $(this).append('<span class="form__checkbox__item js-form__checkbox__item"></span>');
-    setCheckRadioStatus($(this));
+  $.each(jQuery('.js-form__checkbox'), function() {
+    jQuery(this).append('<span class="form__checkbox__item js-form__checkbox__item"></span>');
+    setCheckRadioStatus(jQuery(this));
   });
 
-  $.each($('.js-form__radio'), function() {
-    $(this).append('<span class="form__radio__item js-form__radio__item"></span>');
-    setCheckRadioStatus($(this));
+  $.each(jQuery('.js-form__radio'), function() {
+    jQuery(this).append('<span class="form__radio__item js-form__radio__item"></span>');
+    setCheckRadioStatus(jQuery(this));
   });
 
-  $(document).on('click touchend', '.js-form__checkbox', function(e) {
-    setCheckRadio($(this));
-    setCheckRadioStatus($(this));
+  jQuery(document).on('click touchend', '.js-form__checkbox', function(e) {
+    setCheckRadio(jQuery(this));
+    setCheckRadioStatus(jQuery(this));
     e.preventDefault();
   });
 
-  $(document).on('click touchend', '.js-form__radio', function(e) {
-    setCheckRadio($(this));
-    removeRadioStatus($(this));
-    setCheckRadioStatus($(this));
+  jQuery(document).on('click touchend', '.js-form__radio', function(e) {
+    setCheckRadio(jQuery(this));
+    removeRadioStatus(jQuery(this));
+    setCheckRadioStatus(jQuery(this));
     e.preventDefault();
   });
 
@@ -84,7 +84,7 @@ $(function () {
   function removeRadioStatus($this) {
     var $input = $this.find('.js-form__radio__input'),
         $item = $this.find('.js-form__checkbox__item, .js-form__radio__item'),
-        $radios = $('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
+        $radios = jQuery('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
         $items = $radios.find('.js-form__radio__item');
     setTimeout(function() {
       console.log($input.is(':checked'));

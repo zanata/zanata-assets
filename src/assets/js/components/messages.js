@@ -1,6 +1,6 @@
-$(function () {
-  $(document).on('click touchend', '.js-message-remove', function(e) {
-    var $this = $(this),
+jQuery(function () {
+  jQuery(document).on('click touchend', '.js-message-remove', function(e) {
+    var $this = jQuery(this),
         $parent = $this.parents('.message--removable');
     e.preventDefault();
     if($parent.hasClass('is-active')) {
