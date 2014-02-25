@@ -1612,16 +1612,16 @@ jQuery(function() {
 
   // Add this back when old dropdowns are removed
 
-  // // Don't toggle dropdown when clicking links inside it
-  // jQuery('.js-dropdown__toggle a, .js-dropdown__content').bind('click', function(e) {
-  //   e.stopPropagation();
-  // });
+  // Don't toggle dropdown when clicking links inside it
+  jQuery('.js-dropdown__toggle a, .js-dropdown__content').bind('click', function(e) {
+    e.stopPropagation();
+  });
 
-  // jQuery(document).bind('click touchend', collapseActiveDropdowns);
-  // jQuery(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
+  jQuery(document).bind('click touchend', collapseActiveDropdowns);
+  jQuery(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
 
-  // All this can be deleted when old components are removed
+  // TODO: All this can be deleted when old components are removed - in 3.4
 
   collapseActiveDropdownsOld = function () {
     jQuery('.dropdown.is-active .dropdown__toggle').click();
@@ -1642,12 +1642,12 @@ jQuery(function() {
   };
 
   // Don't toggle dropdown when clicking links inside it
-  jQuery('.dropdown__toggle a, .dropdown__content').bind('click', function(e) {
+  jQuery('.dropdown__toggle a, .dropdown__content').not('.js-dropdown__toggle').bind('click', function(e) {
     e.stopPropagation();
   });
 
   jQuery(document).bind('click touchend', collapseActiveDropdownsOld);
-  jQuery(document).on('click touchend', '.dropdown__toggle', toggleThisCollapseOthersOld);
+  jQuery('.dropdown__toggle').not('.js-dropdown__toggle').on('click touchend', toggleThisCollapseOthersOld);
 
 });
 
