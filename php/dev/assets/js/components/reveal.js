@@ -21,7 +21,7 @@ jQuery(function() {
         revealToggleTitle = jQuery(this).attr('data-toggle-title');
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
-    if(!jQuery(event.target).is('label')) {
+    if(!jQuery(e.target).is('label')) {
       e.preventDefault();
     }
     jQuery(this).toggleClass('is-active');

@@ -5991,7 +5991,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   border-width: 0 0 2px 0;
   width: 100%;
   position: relative;
-  height: 3.33125em;
+  max-height: 3.33125em;
 }
 .new-zanata .panel__sub-header {
   border-width: 0 0 2px 0;

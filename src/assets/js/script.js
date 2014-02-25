@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-02-10
+/*! zanata-assets - v0.1.0 - 2014-02-25
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1588,8 +1588,9 @@ jQuery(function () {
 jQuery(function() {
 
   var collapseActiveDropdowns,
-      toggleThisCollapseOthers;
-      // mouseOutTimer;
+      toggleThisCollapseOthers,
+      collapseActiveDropdownsOld,
+      toggleThisCollapseOthersOld;
 
   collapseActiveDropdowns = function () {
     jQuery('.js-dropdown.is-active .js-dropdown__toggle').click();
@@ -1616,6 +1617,35 @@ jQuery(function() {
 
   jQuery(document).bind('click touchend', collapseActiveDropdowns);
   jQuery(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
+
+
+  // All this can be deleted when old components are removed
+
+  collapseActiveDropdownsOld = function () {
+    jQuery('.dropdown.is-active .dropdown__toggle').click();
+  };
+
+  toggleThisCollapseOthersOld = function (e) {
+    e.preventDefault();
+    jQuery(this).blur();
+    var $dropdown = jQuery(this).parent('.dropdown');
+    // $dropdown.removeClass('is-hover');
+    jQuery('.dropdown.is-active').not($dropdown)
+                               .removeClass('is-active')
+                               .parents('.dropdown__container')
+                               .removeClass('is-active');
+    $dropdown.toggleClass('is-active').parents('.dropdown__container')
+                                      .toggleClass('is-active');
+    e.stopPropagation();
+  };
+
+  // Don't toggle dropdown when clicking links inside it
+  jQuery('.dropdown__toggle a, .dropdown__content').bind('click', function(e) {
+    e.stopPropagation();
+  });
+
+  jQuery(document).bind('click touchend', collapseActiveDropdownsOld);
+  jQuery(document).on('click touchend', '.dropdown__toggle', toggleThisCollapseOthersOld);
 
 });
 
@@ -1717,7 +1747,6 @@ jQuery(function () {
         $radios = jQuery('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
         $items = $radios.find('.js-form__radio__item');
     setTimeout(function() {
-      console.log($input.is(':checked'));
       $radios.removeClass('is-checked');
       $items.removeClass('is-checked');
       if ($input.is(':checked')) {
@@ -1761,7 +1790,6 @@ jQuery(function () {
 jQuery(function () {
   jQuery(document).on('click touchend', '.js-modal__show', function() {
     var modalTarget = jQuery(this).attr('data-target');
-    console.log(jQuery(modalTarget), modalTarget);
     jQuery(modalTarget).addClass('is-active');
     jQuery('#container').addClass('is-modal');
   });
@@ -1797,7 +1825,7 @@ jQuery(function() {
         revealToggleTitle = jQuery(this).attr('data-toggle-title');
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
-    if(!jQuery(event.target).is('label')) {
+    if(!jQuery(e.target).is('label')) {
       e.preventDefault();
     }
     jQuery(this).toggleClass('is-active');

@@ -1,7 +1,6 @@
 jQuery(function () {
   jQuery(document).on('click touchend', '.js-modal__show', function() {
     var modalTarget = jQuery(this).attr('data-target');
-    console.log(jQuery(modalTarget), modalTarget);
     jQuery(modalTarget).addClass('is-active');
     jQuery('#container').addClass('is-modal');
   });

@@ -87,7 +87,6 @@ jQuery(function () {
         $radios = jQuery('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
         $items = $radios.find('.js-form__radio__item');
     setTimeout(function() {
-      console.log($input.is(':checked'));
       $radios.removeClass('is-checked');
       $items.removeClass('is-checked');
       if ($input.is(':checked')) {
