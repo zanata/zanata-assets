@@ -1610,13 +1610,15 @@ jQuery(function() {
     e.stopPropagation();
   };
 
-  // Don't toggle dropdown when clicking links inside it
-  jQuery('.js-dropdown__toggle a, .js-dropdown__content').bind('click', function(e) {
-    e.stopPropagation();
-  });
+  // Add this back when old dropdowns are removed
 
-  jQuery(document).bind('click touchend', collapseActiveDropdowns);
-  jQuery(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
+  // // Don't toggle dropdown when clicking links inside it
+  // jQuery('.js-dropdown__toggle a, .js-dropdown__content').bind('click', function(e) {
+  //   e.stopPropagation();
+  // });
+
+  // jQuery(document).bind('click touchend', collapseActiveDropdowns);
+  // jQuery(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
 
   // All this can be deleted when old components are removed
