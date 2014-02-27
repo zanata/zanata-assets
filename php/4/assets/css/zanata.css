@@ -29,9 +29,9 @@ a:visited {
   color: #4e9fdd;
   text-decoration: none;
   cursor: pointer;
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
@@ -123,8 +123,8 @@ input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:active {
   background-color: #fdfdfe !important;
   color: #565d65 !important;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -134,23 +134,20 @@ input[type="submit"][disabled]:active {
   background-color: white;
   color: #565d65;
   cursor: pointer;
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .button:hover, button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, a.action_link:hover, span.action_link:hover {
@@ -159,8 +156,8 @@ input[type="submit"][disabled]:active {
 }
 .button:active, button:active, input[type="reset"]:active, input[type="submit"]:active, input[type="button"]:active, a.action_link:active, span.action_link:active {
   background-color: #e3e5e7;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -345,10 +342,8 @@ a.breadcrumbs_link:hover {
   margin-left: 3px;
   margin-top: 2px;
   margin-bottom: 2px;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -694,8 +689,8 @@ table.rf-dt {
   border: 0;
   background-color: #f5f6f7;
   margin-top: 1.625em;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -718,8 +713,8 @@ th.rf-dt-shdr-c {
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   white-space: nowrap;
   background: white;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
@@ -785,8 +780,8 @@ div.rf-p {
   border-radius: 2px;
   margin-bottom: 1.625em;
   background-color: white;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border: none;
   padding: 0;
@@ -811,8 +806,8 @@ div.rf-p {
   font-size: 14px;
   border: none;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -838,8 +833,8 @@ div.rf-p {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   padding: 6px 16px;
-  -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
 }
 .rf-tbp td.rf-tab-hdr-inact.rf-tab-hdr-top {
@@ -860,8 +855,8 @@ div.rf-p {
   background-color: white;
   font-size: 14px;
   padding: 12px 16px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .rf-tbp div.rf-tab-hdr-brd {
@@ -1270,10 +1265,8 @@ a.admin_link:hover {
 
 .admin_link_div {
   border: 1px solid #4e9fdd;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 5px;
   margin-bottom: 3px;
@@ -1339,7 +1332,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
   background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
   background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
-  background: linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+  background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
   /* Text (previously on the a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1359,7 +1352,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, white 0%, #dddddd 100%);
   background: -o-linear-gradient(top, white 0%, #dddddd 100%);
   background: -ms-linear-gradient(top, white 0%, #dddddd 100%);
-  background: linear-gradient(top, #ffffff 0%, #dddddd 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
 }
 
 .genericButton:active {
@@ -1370,7 +1363,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #dddddd 0%, white 100%);
   background: -o-linear-gradient(top, #dddddd 0%, white 100%);
   background: -ms-linear-gradient(top, #dddddd 0%, white 100%);
-  background: linear-gradient(top, #dddddd 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #dddddd 0%, #ffffff 100%);
 }
 
 .greenBtn {
@@ -1382,7 +1375,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #5dbb73 0%, #2d9047 100%);
   background: -o-linear-gradient(top, #5dbb73 0%, #2d9047 100%);
   background: -ms-linear-gradient(top, #5dbb73 0%, #2d9047 100%);
-  background: linear-gradient(top, #5dbb73 0%, #2d9047 100%);
+  background: linear-gradient(to bottom, #5dbb73 0%, #2d9047 100%);
   /* Text (previously on an a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1405,7 +1398,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #68ce80 0%, #3cae5a 100%);
   background: -o-linear-gradient(top, #68ce80 0%, #3cae5a 100%);
   background: -ms-linear-gradient(top, #68ce80 0%, #3cae5a 100%);
-  background: linear-gradient(top, #68ce80 0%, #3cae5a 100%);
+  background: linear-gradient(to bottom, #68ce80 0%, #3cae5a 100%);
 }
 
 .greenBtn:active {
@@ -1415,7 +1408,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #2d9047 0%, #5dbb73 100%);
   background: -o-linear-gradient(top, #2d9047 0%, #5dbb73 100%);
   background: -ms-linear-gradient(top, #2d9047 0%, #5dbb73 100%);
-  background: linear-gradient(top, #2d9047 0%, #5dbb73 100%);
+  background: linear-gradient(to bottom, #2d9047 0%, #5dbb73 100%);
 }
 
 .redBtn {
@@ -1427,7 +1420,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #ef6638 0%, #b62918 100%);
   background: -o-linear-gradient(top, #ef6638 0%, #b62918 100%);
   background: -ms-linear-gradient(top, #ef6638 0%, #b62918 100%);
-  background: linear-gradient(top, #ef6638 0%, #b62918 100%);
+  background: linear-gradient(to bottom, #ef6638 0%, #b62918 100%);
   /* Text (previously on an a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1449,7 +1442,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #ed754e 0%, #c93e23 100%);
   background: -o-linear-gradient(top, #ed754e 0%, #c93e23 100%);
   background: -ms-linear-gradient(top, #ed754e 0%, #c93e23 100%);
-  background: linear-gradient(top, #ed754e 0%, #c93e23 100%);
+  background: linear-gradient(to bottom, #ed754e 0%, #c93e23 100%);
 }
 
 .redBtn:active {
@@ -1459,7 +1452,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #c93e23 0%, #ed754e 100%);
   background: -o-linear-gradient(top, #c93e23 0%, #ed754e 100%);
   background: -ms-linear-gradient(top, #c93e23 0%, #ed754e 100%);
-  background: linear-gradient(top, #c93e23 0%, #ed754e 100%);
+  background: linear-gradient(to bottom, #c93e23 0%, #ed754e 100%);
 }
 
 .blueBtn {
@@ -1471,7 +1464,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #4770b0 0%, #153e7e 100%);
   background: -o-linear-gradient(top, #4770b0 0%, #153e7e 100%);
   background: -ms-linear-gradient(top, #4770b0 0%, #153e7e 100%);
-  background: linear-gradient(top, #4770b0 0%, #153e7e 100%);
+  background: linear-gradient(to bottom, #4770b0 0%, #153e7e 100%);
   /* Text (previously on an a tag) */
   display: block;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
@@ -1493,7 +1486,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
   background: -o-linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
   background: -ms-linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
-  background: linear-gradient(top, #3d66a6 0%, #3d66a6 100%);
+  background: linear-gradient(to bottom, #3d66a6 0%, #3d66a6 100%);
 }
 
 .blueBtn:active {
@@ -1503,7 +1496,7 @@ a.admin_link:hover {
   background: -webkit-linear-gradient(top, #153e7e 0%, #4770b0 100%);
   background: -o-linear-gradient(top, #153e7e 0%, #4770b0 100%);
   background: -ms-linear-gradient(top, #153e7e 0%, #4770b0 100%);
-  background: linear-gradient(top, #153e7e 0%, #4770b0 100%);
+  background: linear-gradient(to bottom, #153e7e 0%, #4770b0 100%);
 }
 
 /* Button sizes */

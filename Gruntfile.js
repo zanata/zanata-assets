@@ -27,15 +27,9 @@ var srcFolder = './src/',
         src: 'Gruntfile.js'
       },
       vendors: {
-        options: {
-          jshintrc: srcFolder + assetsFolder + 'js/.jshintrc'
-        },
-        src: srcFolder + assetsFolder + 'js/vendors/**/*.js'
+        src: [srcFolder + assetsFolder + 'js/vendors/**/*.js']
       },
       components: {
-        options: {
-          jshintrc: srcFolder + assetsFolder + 'js/.jshintrc'
-        },
         src: [srcFolder + assetsFolder + 'js/components/**/*.js']
       }
     },

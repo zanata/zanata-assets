@@ -1,15 +1,35 @@
 {
-  "curly": true,
-  "eqeqeq": true,
-  "immed": true,
-  "latedef": true,
-  "newcap": true,
-  "noarg": true,
-  "sub": true,
-  "undef": true,
-  "unused": true,
-  "boss": true,
-  "eqnull": true,
+
+  "globals": { "zanata": true },
+
+  "browser": true,
+
+  "jquery": true,
+
   "node": true,
-  "es5": true
+
+  "camelcase": true,
+
+  "eqeqeq": true,
+
+  "eqnull": true,
+
+  "indent": 2,
+
+  "latedef": true,
+
+  "newcap": true,
+
+  "quotmark": "single",
+
+  "trailing": true,
+
+  "undef": true,
+
+  "unused": true,
+
+  "maxlen": 80,
+
+  "strict": true
+
 }

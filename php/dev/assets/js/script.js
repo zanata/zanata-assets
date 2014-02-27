@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-02-25
+/*! zanata-assets - v0.1.0 - 2014-02-27
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1557,25 +1557,28 @@ Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0));};
 
 +function(a){"use strict";var b=function(a,b){this.type=this.options=this.enabled=this.timeout=this.hoverState=this.$element=null,this.init("tooltip",a,b)};b.DEFAULTS={animation:!0,placement:"top",selector:!1,template:'<div class="tooltip"><div class="tooltip__arrow"></div><div class="tooltip__inner"></div></div>',trigger:"hover focus",title:"",delay:0,html:!1,container:!1},b.prototype.init=function(b,c,d){this.enabled=!0,this.type=b,this.$element=a(c),this.options=this.getOptions(d);var e=this.options.trigger.split(" ");for(var f=e.length;f--;){var g=e[f];if(g=="click")this.$element.on("click."+this.type,this.options.selector,a.proxy(this.toggle,this));else if(g!="manual"){var h=g=="hover"?"mouseenter":"focus",i=g=="hover"?"mouseleave":"blur";this.$element.on(h+"."+this.type,this.options.selector,a.proxy(this.enter,this)),this.$element.on(i+"."+this.type,this.options.selector,a.proxy(this.leave,this))}}this.options.selector?this._options=a.extend({},this.options,{trigger:"manual",selector:""}):this.fixTitle()},b.prototype.getDefaults=function(){return b.DEFAULTS},b.prototype.getOptions=function(b){return b=a.extend({},this.getDefaults(),this.$element.data(),b),b.delay&&typeof b.delay=="number"&&(b.delay={show:b.delay,hide:b.delay}),b},b.prototype.getDelegateOptions=function(){var b={},c=this.getDefaults();return this._options&&a.each(this._options,function(a,d){c[a]!=d&&(b[a]=d)}),b},b.prototype.enter=function(b){var c=b instanceof this.constructor?b:a(b.currentTarget)[this.type](this.getDelegateOptions()).data("bs."+this.type);clearTimeout(c.timeout),c.hoverState="in";if(!c.options.delay||!c.options.delay.show)return c.show();c.timeout=setTimeout(function(){c.hoverState=="in"&&c.show()},c.options.delay.show)},b.prototype.leave=function(b){var c=b instanceof this.constructor?b:a(b.currentTarget)[this.type](this.getDelegateOptions()).data("bs."+this.type);clearTimeout(c.timeout),c.hoverState="out";if(!c.options.delay||!c.options.delay.hide)return c.hide();c.timeout=setTimeout(function(){c.hoverState=="out"&&c.hide()},c.options.delay.hide)},b.prototype.show=function(){var b=a.Event("show.bs."+this.type);if(this.hasContent()&&this.enabled){this.$element.trigger(b);if(b.isDefaultPrevented())return;var c=this.tip();this.setContent(),this.options.animation&&c.addClass("fade");var d=typeof this.options.placement=="function"?this.options.placement.call(this,c[0],this.$element[0]):this.options.placement,e=/\s?auto?\s?/i,f=e.test(d);f&&(d=d.replace(e,"")||"top"),c.detach().css({top:0,left:0,display:"block"}).addClass(d),this.options.container?c.appendTo(this.options.container):c.insertAfter(this.$element);var g=this.getPosition(),h=c[0].offsetWidth,i=c[0].offsetHeight;if(f){var j=this.$element.parent(),k=d,l=document.documentElement.scrollTop||document.body.scrollTop,m=this.options.container=="body"?window.innerWidth:j.outerWidth(),n=this.options.container=="body"?window.innerHeight:j.outerHeight(),o=this.options.container=="body"?0:j.offset().left;d=d=="bottom"&&g.top+g.height+i-l>n?"top":d=="top"&&g.top-l-i<0?"bottom":d=="right"&&g.right+h>m?"left":d=="left"&&g.left-h<o?"right":d,c.removeClass(k).addClass(d)}var p=this.getCalculatedOffset(d,g,h,i);this.applyPlacement(p,d),this.$element.trigger("shown.bs."+this.type)}},b.prototype.applyPlacement=function(a,b){var c,d=this.tip(),e=d[0].offsetWidth,f=d[0].offsetHeight,g=parseInt(d.css("margin-top"),10),h=parseInt(d.css("margin-left"),10);isNaN(g)&&(g=0),isNaN(h)&&(h=0),a.top=a.top+g,a.left=a.left+h,d.offset(a).addClass("in");var i=d[0].offsetWidth,j=d[0].offsetHeight;b=="top"&&j!=f&&(c=!0,a.top=a.top+f-j);if(/bottom|top/.test(b)){var k=0;a.left<0&&(k=a.left*-2,a.left=0,d.offset(a),i=d[0].offsetWidth,j=d[0].offsetHeight),this.replaceArrow(k-e+i,i,"left")}else this.replaceArrow(j-f,j,"top");c&&d.offset(a)},b.prototype.replaceArrow=function(a,b,c){this.arrow().css(c,a?50*(1-a/b)+"%":"")},b.prototype.setContent=function(){var a=this.tip(),b=this.getTitle();a.find(".tooltip__inner")[this.options.html?"html":"text"](b),a.removeClass("fade in top bottom left right")},b.prototype.hide=function(){function e(){b.hoverState!="in"&&c.detach()}var b=this,c=this.tip(),d=a.Event("hide.bs."+this.type);this.$element.trigger(d);if(d.isDefaultPrevented())return;return c.removeClass("in"),a.support.transition&&this.$tip.hasClass("fade")?c.one(a.support.transition.end,e).emulateTransitionEnd(150):e(),this.$element.trigger("hidden.bs."+this.type),this},b.prototype.fixTitle=function(){var a=this.$element;(a.attr("title")||typeof a.attr("data-original-title")!="string")&&a.attr("data-original-title",a.attr("title")||"").attr("title","")},b.prototype.hasContent=function(){return this.getTitle()},b.prototype.getPosition=function(){var b=this.$element[0];return a.extend({},typeof b.getBoundingClientRect=="function"?b.getBoundingClientRect():{width:b.offsetWidth,height:b.offsetHeight},this.$element.offset())},b.prototype.getCalculatedOffset=function(a,b,c,d){return a=="bottom"?{top:b.top+b.height,left:b.left+b.width/2-c/2}:a=="top"?{top:b.top-d,left:b.left+b.width/2-c/2}:a=="left"?{top:b.top+b.height/2-d/2,left:b.left-c}:{top:b.top+b.height/2-d/2,left:b.left+b.width}},b.prototype.getTitle=function(){var a,b=this.$element,c=this.options;return a=b.attr("data-original-title")||(typeof c.title=="function"?c.title.call(b[0]):c.title),a},b.prototype.tip=function(){return this.$tip=this.$tip||a(this.options.template)},b.prototype.arrow=function(){return this.$arrow=this.$arrow||this.tip().find(".tooltip__arrow")},b.prototype.validate=function(){this.$element[0].parentNode||(this.hide(),this.$element=null,this.options=null)},b.prototype.enable=function(){this.enabled=!0},b.prototype.disable=function(){this.enabled=!1},b.prototype.toggleEnabled=function(){this.enabled=!this.enabled},b.prototype.toggle=function(b){var c=b?a(b.currentTarget)[this.type](this.getDelegateOptions()).data("bs."+this.type):this;c.tip().hasClass("in")?c.leave(c):c.enter(c)},b.prototype.destroy=function(){this.hide().$element.off("."+this.type).removeData("bs."+this.type)};var c=a.fn.tooltip;a.fn.tooltip=function(c){return this.each(function(){var d=a(this),e=d.data("bs.tooltip"),f=typeof c=="object"&&c;e||d.data("bs.tooltip",e=new b(this,f)),typeof c=="string"&&e[c]()})},a.fn.tooltip.Constructor=b,a.fn.tooltip.noConflict=function(){return a.fn.tooltip=c,this}}(jQuery)
 
+'use strict';
+
 var zanata = (function () {
   var z = {};
 
-  z.tooltip = function(selector) {
+  z.tooltip = function (selector) {
     jQuery(selector).tooltip({
       placement: 'auto bottom',
       container: 'body',
       delay: {
-         show: '500',
-         hide: '100'
+        show: '500',
+        hide: '100'
       }
     });
   };
 
-  z.tooltipRefresh = function(selector, newValue) {
-    jQuery(selector).tooltip('hide')
-               .attr('data-original-title', newValue)
-               .tooltip('fixTitle')
-               .tooltip('show');
+  z.tooltipRefresh = function (selector, newValue) {
+    jQuery(selector)
+      .tooltip('hide')
+      .attr('data-original-title', newValue)
+      .tooltip('fixTitle')
+      .tooltip('show');
   };
 
   return z;
@@ -1585,7 +1588,8 @@ jQuery(function () {
   zanata.tooltip('[title]');
 });
 
-jQuery(function() {
+jQuery(function () {
+  'use strict';
 
   var collapseActiveDropdowns,
       toggleThisCollapseOthers,
@@ -1601,24 +1605,30 @@ jQuery(function() {
     jQuery(this).blur();
     var $dropdown = jQuery(this).parent('.js-dropdown');
     // $dropdown.removeClass('is-hover');
-    jQuery('.js-dropdown.is-active').not($dropdown)
-                               .removeClass('is-active')
-                               .parents('.js-dropdown__container')
-                               .removeClass('is-active');
-    $dropdown.toggleClass('is-active').parents('.js-dropdown__container')
-                                      .toggleClass('is-active');
+    jQuery('.js-dropdown.is-active')
+      .not($dropdown)
+      .removeClass('is-active')
+      .parents('.js-dropdown__container')
+      .removeClass('is-active');
+    $dropdown.toggleClass('is-active')
+      .parents('.js-dropdown__container')
+      .toggleClass('is-active');
     e.stopPropagation();
   };
 
   // Add this back when old dropdowns are removed
 
   // Don't toggle dropdown when clicking links inside it
-  jQuery('.js-dropdown__toggle a, .js-dropdown__content').bind('click', function(e) {
-    e.stopPropagation();
-  });
+  jQuery('.js-dropdown__toggle a, .js-dropdown__content')
+    .bind('click', function (e) {
+      e.stopPropagation();
+    });
 
-  jQuery(document).bind('click touchend', collapseActiveDropdowns);
-  jQuery(document).on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
+  jQuery(document)
+    .bind('click touchend', collapseActiveDropdowns);
+
+  jQuery(document)
+    .on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
 
   // TODO: All this can be deleted when old components are removed - in 3.4
@@ -1628,31 +1638,43 @@ jQuery(function() {
   };
 
   toggleThisCollapseOthersOld = function (e) {
+
     e.preventDefault();
+
     jQuery(this).blur();
+
     var $dropdown = jQuery(this).parent('.dropdown');
-    // $dropdown.removeClass('is-hover');
-    jQuery('.dropdown.is-active').not($dropdown)
-                               .removeClass('is-active')
-                               .parents('.dropdown__container')
-                               .removeClass('is-active');
-    $dropdown.toggleClass('is-active').parents('.dropdown__container')
-                                      .toggleClass('is-active');
+
+    jQuery('.dropdown.is-active')
+      .not($dropdown)
+      .removeClass('is-active')
+      .parents('.dropdown__container')
+      .removeClass('is-active');
+
+    $dropdown.toggleClass('is-active')
+      .parents('.dropdown__container')
+      .toggleClass('is-active');
     e.stopPropagation();
   };
 
   // Don't toggle dropdown when clicking links inside it
-  jQuery('.dropdown__toggle a, .dropdown__content').not('.js-dropdown__toggle').bind('click', function(e) {
-    e.stopPropagation();
-  });
+  jQuery('.dropdown__toggle a, .dropdown__content')
+    .not('.js-dropdown__toggle')
+    .bind('click', function (e) {
+      e.stopPropagation();
+    });
 
-  jQuery(document).bind('click touchend', collapseActiveDropdownsOld);
-  jQuery('.dropdown__toggle').not('.js-dropdown__toggle').on('click touchend', toggleThisCollapseOthersOld);
+  jQuery(document)
+    .bind('click touchend', collapseActiveDropdownsOld);
+  jQuery('.dropdown__toggle')
+    .not('.js-dropdown__toggle')
+    .on('click touchend', toggleThisCollapseOthersOld);
 
 });
 
 jQuery(function () {
-  jQuery(document).on('click touchend', '.js-example__setter', function() {
+  'use strict';
+  jQuery(document).on('click touchend', '.js-example__setter', function () {
     var exampleState = jQuery(this).attr('data-example');
     // Reset class and apply new one
     jQuery(this).parents('.js-example').find('.js-example__target')
@@ -1661,55 +1683,74 @@ jQuery(function () {
 });
 
 jQuery(function () {
-  jQuery('.js-form-password-parent').on('click touchend', '.js-form-password-toggle', function(e) {
-    var $passwordInput = jQuery(this).parents('.js-form-password-parent')
-                                .find('.js-form-password-input');
-    e.preventDefault();
-    if ($passwordInput.attr('type') === 'password') {
-      $passwordInput.attr({
-        'type': 'text',
-        'autocapitalize': 'off',
-        'autocomplete': 'off',
-        'autocorrect': 'off',
-        'spellcheck': 'false'
-      });
-      jQuery(this).text('Hide');
-    }
-    else {
-      $passwordInput.attr('type', 'password');
-      jQuery(this).text('Show');
-    }
-    $passwordInput.focus();
-  });
+  'use strict';
+  jQuery('.js-form-password-parent')
+    .on('click touchend', '.js-form-password-toggle', function (e) {
 
-  jQuery('.js-form--search').on('focus', '.js-form--search__input, .js-form--search__button', function() {
-    jQuery(this).parents('.js-form--search').addClass('is-active');
-  });
-  jQuery('.js-form--search').on('blur', '.js-form--search__input, .js-form--search__button', function() {
-    jQuery(this).parents('.js-form--search').removeClass('is-active');
-  });
-  jQuery('.js-form__input--copyable').on('click touchend', function() {
-    jQuery(this).select();
-  });
+      var $passwordInput = jQuery(this)
+        .parents('.js-form-password-parent')
+        .find('.js-form-password-input');
+
+      e.preventDefault();
+
+      if ($passwordInput.attr('type') === 'password') {
+        $passwordInput.attr({
+          'type': 'text',
+          'autocapitalize': 'off',
+          'autocomplete': 'off',
+          'autocorrect': 'off',
+          'spellcheck': 'false'
+        });
+        jQuery(this).text('Hide');
+      }
+      else {
+        $passwordInput.attr('type', 'password');
+        jQuery(this).text('Show');
+      }
+
+      $passwordInput.focus();
+    });
+
+  jQuery('.js-form--search')
+    .on('focus', '.js-form--search__input, .js-form--search__button',
+      function () {
+        jQuery(this).parents('.js-form--search').addClass('is-active');
+      }
+    );
+
+  jQuery('.js-form--search')
+    .on('blur', '.js-form--search__input, .js-form--search__button',
+      function () {
+        jQuery(this).parents('.js-form--search').removeClass('is-active');
+      }
+    );
+
+  jQuery('.js-form__input--copyable')
+    .on('click touchend', function () {
+      jQuery(this).select();
+    });
 
   // On load
-  $.each(jQuery('.js-form__checkbox'), function() {
-    jQuery(this).append('<span class="form__checkbox__item js-form__checkbox__item"></span>');
+  $.each(jQuery('.js-form__checkbox'), function () {
+    jQuery(this)
+      .append('<span class="form__checkbox__item ' +
+        'js-form__checkbox__item"></span>');
     setCheckRadioStatus(jQuery(this));
   });
 
-  $.each(jQuery('.js-form__radio'), function() {
-    jQuery(this).append('<span class="form__radio__item js-form__radio__item"></span>');
+  $.each(jQuery('.js-form__radio'), function () {
+    jQuery(this)
+      .append('<span class="form__radio__item js-form__radio__item"></span>');
     setCheckRadioStatus(jQuery(this));
   });
 
-  jQuery(document).on('click touchend', '.js-form__checkbox', function(e) {
+  jQuery(document).on('click touchend', '.js-form__checkbox', function (e) {
     setCheckRadio(jQuery(this));
     setCheckRadioStatus(jQuery(this));
     e.preventDefault();
   });
 
-  jQuery(document).on('click touchend', '.js-form__radio', function(e) {
+  jQuery(document).on('click touchend', '.js-form__radio', function (e) {
     setCheckRadio(jQuery(this));
     removeRadioStatus(jQuery(this));
     setCheckRadioStatus(jQuery(this));
@@ -1717,21 +1758,22 @@ jQuery(function () {
   });
 
   function setCheckRadio($this) {
-    var $input = $this.find('.js-form__checkbox__input, .js-form__radio__input');
+    var $input = $this.find('.js-form__checkbox__input,.js-form__radio__input');
+
     if (!$input.is(':checked')) {
       $input.prop('checked', true);
     }
-    else if ($input.attr('type') === 'checkbox'){
+    else if ($input.attr('type') === 'checkbox') {
       $input.prop('checked', false);
     }
   }
 
   function setCheckRadioStatus($this) {
-    var $input = $this.find('.js-form__checkbox__input, .js-form__radio__input'),
+    var $input = $this.find('.js-form__checkbox__input,.js-form__radio__input'),
         $item = $this.find('.js-form__checkbox__item, .js-form__radio__item');
 
     // Wait until checkbox/radio change has propagated
-    setTimeout(function() {
+    setTimeout(function () {
       if ($input.is(':checked')) {
         $this.addClass('is-checked');
         $item.addClass('is-checked');
@@ -1746,9 +1788,10 @@ jQuery(function () {
   function removeRadioStatus($this) {
     var $input = $this.find('.js-form__radio__input'),
         $item = $this.find('.js-form__checkbox__item, .js-form__radio__item'),
-        $radios = jQuery('[name=' + $input.attr('name') + ']').parents('.js-form__radio'),
+        $radios = jQuery('[name=' + $input.attr('name') + ']')
+                    .parents('.js-form__radio'),
         $items = $radios.find('.js-form__radio__item');
-    setTimeout(function() {
+    setTimeout(function () {
       $radios.removeClass('is-checked');
       $items.removeClass('is-checked');
       if ($input.is(':checked')) {
@@ -1761,73 +1804,101 @@ jQuery(function () {
 });
 
 jQuery(function () {
-  jQuery('.loader__container').on('click touchend', '.loader', function(){
+  'use strict';
+
+  jQuery('.loader__container').on('click touchend', '.loader', function () {
     if (jQuery('.loader__spinner', this).length <= 0) {
-      jQuery('.loader__label', this).append('<span class="loader__spinner"><span></span><span></span><span></span></span>');
+      jQuery('.loader__label', this)
+        .append('<span class="loader__spinner"><span></span>' +
+          '<span></span><span></span></span>');
       jQuery(this).addClass('is-active');
     }
   });
+
 });
 
 jQuery(function () {
-  jQuery(document).on('click touchend', '.js-message-remove', function(e) {
+  'use strict';
+  jQuery(document).on('click touchend', '.js-message-remove', function (e) {
     var $this = jQuery(this),
         $parent = $this.parents('.message--removable');
     e.preventDefault();
-    if($parent.hasClass('is-active')) {
+    if ($parent.hasClass('is-active')) {
       $parent.removeClass('is-active');
-      setTimeout(function() {
+      setTimeout(function () {
         $parent.remove();
       }, 300);
     }
     else {
       $parent.addClass('is-removed');
-      setTimeout(function() {
+      setTimeout(function () {
         $parent.remove();
       }, 300);
     }
   });
 });
 
-jQuery(function () {
-  jQuery(document).on('click touchend', '.js-modal__show', function() {
-    var modalTarget = jQuery(this).attr('data-target');
-    jQuery(modalTarget).addClass('is-active');
-    jQuery('#container').addClass('is-modal');
+(function ($) {
+  'use strict';
+
+  var removeModal = function ($el) {
+    $el.removeClass('is-active');
+    $('body').removeClass('is-modal');
+  };
+
+  $(document).on('click touchend', '[data-toggle="modal"]', function () {
+    var modalTarget = $(this).attr('data-target');
+
+    $(modalTarget).addClass('is-active');
+    $('body').addClass('is-modal');
   });
-  jQuery(document).on('keyup', function(e) {
-    if (e.keyCode === 27) {
-      e.stopPropagation();
-      jQuery('.modal').removeClass('is-active');
-      jQuery('#container').removeClass('is-modal');
+
+  $(document).on('click touchend', '.is-modal', function (e) {
+    if ($(e.target).not('.modal__dialog') &&
+      !$(e.target).parents('.modal__dialog').length) {
+      removeModal($('.modal.is-active'));
     }
   });
-});
 
-jQuery(function() {
-  jQuery('.js-reveal__show').on('click touchend', function() {
+  $(document).on('keyup', function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      removeModal($('.modal.is-active'));
+    }
+  });
+
+  $(document).on('click touchend', '[data-dismiss="modal"]', function () {
+    removeModal($(this).parents('.modal.is-active'));
+  });
+
+})(jQuery);
+
+jQuery(function () {
+  'use strict';
+  jQuery('.js-reveal__show').on('click touchend', function () {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = jQuery(this).parents('.js-reveal');
     jQuery(this).addClass('is-hidden');
     $revealParent.addClass('is-active');
     $revealTarget.toggleClass('is-active');
-    setTimeout(function() {
+    setTimeout(function () {
       $revealTargetInput.focus();
     }, 100);
   });
-  jQuery('.js-reveal__toggle').on('click touchend', function(e) {
+  jQuery('.js-reveal__toggle').on('click touchend', function (e) {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = jQuery(this).parents('.js-reveal'),
         $revealText = jQuery(this).find('.js-reveal__toggle__text'),
         revealTextValue = $revealText.text(),
         revealToggleValue = $revealText.attr('data-toggle-value'),
-        revealTitle = jQuery(this).attr('title') || jQuery(this).attr('data-original-title'),
+        revealTitle = jQuery(this).attr('title') ||
+          jQuery(this).attr('data-original-title'),
         revealToggleTitle = jQuery(this).attr('data-toggle-title');
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
-    if(!jQuery(e.target).is('label')) {
+    if (!jQuery(e.target).is('label')) {
       e.preventDefault();
     }
     jQuery(this).toggleClass('is-active');
@@ -1841,19 +1912,19 @@ jQuery(function() {
       $revealText.text(revealToggleValue);
       $revealText.attr('data-toggle-value', revealTextValue);
     }
-    setTimeout(function() {
+    setTimeout(function () {
       $revealTargetInput.focus();
     }, 100);
   });
 
 
-  jQuery('.js-reveal__reset').on('click touchend', function() {
+  jQuery('.js-reveal__reset').on('click touchend', function () {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');
     $revealTargetInput.val('').focus();
     jQuery(this).addClass('is-hidden');
   });
-  jQuery('.js-reveal__cancel').on('click touchend', function() {
+  jQuery('.js-reveal__cancel').on('click touchend', function () {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = jQuery(this).parents('.js-reveal');
@@ -1863,7 +1934,7 @@ jQuery(function() {
     $revealParent.find('.js-reveal__reset').addClass('is-hidden');
     $revealParent.find('.js-reveal__show').removeClass('is-hidden').focus();
   });
-  jQuery('.js-reveal__target__input').on('keyup', function(e) {
+  jQuery('.js-reveal__target__input').on('keyup', function (e) {
     var $revealParent = jQuery(this).parents('.js-reveal'),
         $revealReset = $revealParent.find('.js-reveal__reset'),
         $revealCancel = $revealParent.find('.js-reveal__cancel');
@@ -1880,22 +1951,28 @@ jQuery(function() {
 });
 
 jQuery(function () {
+  'use strict';
 
   var pathname = window.location.pathname;
 
   // Check the url, see which links match and make them active
-  jQuery('#nav-user a, #nav-main a, #nav-main-side a, #nav-footer a').each(function () {
-    var navLink = jQuery(this).attr('href').replace(/\//g, '').replace(/\./g, '');
-    if (pathname.toLowerCase().indexOf(navLink) >= 0) {
-      jQuery(this).addClass('is-active');
-    }
-  });
+  jQuery('#nav-user a, #nav-main a, #nav-main-side a, #nav-footer a')
+    .each(function () {
+      var navLink = jQuery(this)
+        .attr('href')
+        .replace(/\//g, '')
+        .replace(/\./g, '');
+      if (pathname.toLowerCase().indexOf(navLink) >= 0) {
+        jQuery(this).addClass('is-active');
+      }
+    });
 
 });
 
 jQuery(function () {
+  'use strict';
 
-  jQuery('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
+  jQuery('.js-tabs').on('click touchend', '.js-tabs-nav a', function (e) {
     e.preventDefault();
     if (!jQuery(this).parent().hasClass('is-active')) {
       var $this = jQuery(this),
@@ -1930,7 +2007,9 @@ jQuery(function () {
     $parent
       .find('.js-tabs-content li, .js-tabs-nav li')
       .removeClass('is-active');
-    jQuery('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
+    jQuery('.js-tabs a[href="' + targetHash + '"]')
+      .parent()
+      .addClass('is-active');
     $target.addClass('is-active');
   }
 

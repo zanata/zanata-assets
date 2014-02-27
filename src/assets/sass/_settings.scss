@@ -12,8 +12,8 @@
 //
 // Based on BEM and [these guidelines](https://github.com/csswizardry/CSS-Guidelines)
 
-$modifier                          : "--";
-$element                           : "__";
+$modifier                          : '--';
+$element                           : '__';
 
 // Aliases
 $mod                               : $modifier;
@@ -203,7 +203,6 @@ $high-res                          : $breakpoint-hi-res;
 $portrait                          : $breakpoint-portrait;
 $landscape                         : $breakpoint-landscape;
 $mono                              : $breakpoint-monochrome;
-$print                             : $breakpoint-print;
 
 //
 // Theme - Element Variables

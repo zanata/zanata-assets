@@ -134,16 +134,14 @@ NOTE: No classes should go in element files
 @-ms-viewport {
   width: device-width;
 }
-
 @viewport {
   width: device-width;
 }
-
 .new-zanata *,
 .new-zanata *:before,
 .new-zanata *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .new-zanata article,
@@ -423,9 +421,9 @@ Used to section content and create hierarchy
   text-decoration: none;
   cursor: pointer;
   outline: none;
-  -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .new-zanata a h1,
@@ -435,9 +433,9 @@ Used to section content and create hierarchy
 .new-zanata a h5,
 .new-zanata a h6 {
   color: #4e9fdd;
-  -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .new-zanata a:hover,
@@ -473,15 +471,15 @@ Used to section content and create hierarchy
   color: #2479bb;
 }
 .new-zanata a:focus {
-  -webkit-box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
   -moz-box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
+  -webkit-box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
   box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
   outline: 0;
   border-radius: 2px;
 }
 .new-zanata a:active:focus {
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .new-zanata a:active,
@@ -724,13 +722,11 @@ a:hover,
   font-weight: 300;
 }
 .new-zanata fieldset {
-  border-style: solid;
   border-width: 0.0625em;
+  border-style: solid;
   padding: 0.75em;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   margin: 1.21875em 0;
   padding-bottom: 0;
@@ -801,21 +797,19 @@ a:hover,
 .new-zanata input[type="time"],
 .new-zanata input[type="url"],
 .new-zanata textarea {
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   font-size: 1em;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0.40625em;
   display: block;
@@ -838,9 +832,9 @@ a:hover,
 .new-zanata input[type="time"]:focus,
 .new-zanata input[type="url"]:focus,
 .new-zanata textarea:focus {
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   outline: none !important;
   border: 1px solid #7c96ac;
@@ -2442,12 +2436,23 @@ Centered grids align grid items centrally without needing to use push or pull cl
   top: -9999px;
   left: -9999px;
 }
-.new-zanata .is-transition, .new-zanata .is-removed, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .is-transition, .new-zanata .is-removed, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
 .new-zanata .bg--high:hover,
+.new-zanata .bg--pop-high:hover,
+.new-zanata .modal__dialog:hover,
+.new-zanata .panel:hover,
+.new-zanata .header__user-nav__menu:hover,
 .new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .panels__panel.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after,
 .new-zanata .bg--higher:hover,
-.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .panel__header, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
+.new-zanata .bg--pop-higher:hover,
+.new-zanata .dropdown__content:hover,
+.new-zanata .panel__sub-header:hover,
+.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
+.new-zanata .bg--pop-highest:hover,
+.new-zanata .panel__header:hover,
+.new-zanata .autocomplete__results:hover,
+.new-zanata .rf-au-lst-dcrtn:hover,
 .new-zanata .bg--highest--hover:hover,
 .new-zanata .list--panel > li:hover,
 .new-zanata .list--stats > li:hover, .new-zanata .bg--low,
@@ -2466,37 +2471,43 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .button--inline-left,
 .new-zanata .button--primary,
 .new-zanata .button--secondary,
+.new-zanata input.button--secondary,
 .new-zanata .button--success,
+.new-zanata input.button--success,
 .new-zanata .button--warning,
+.new-zanata input.button--warning,
 .new-zanata .button--danger,
-.new-zanata .button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .modal__content, .new-zanata .container, .new-zanata .container:before, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+.new-zanata input.button--danger,
+.new-zanata input.button--primary,
+.new-zanata .button--unsure,
+.new-zanata input.button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .new-zanata .is-transition-fast, .new-zanata .form__checkbox,
 .new-zanata .form__radio, .new-zanata .form__checkbox__item:before,
 .new-zanata .form__radio__item:before, .new-zanata .form__checkbox__item:after,
 .new-zanata .form__radio__item:after {
-  -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 .new-zanata .is-transition-bounce, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .modal, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
-  -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
 }
 .new-zanata .is-removed {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform: scale3d(1, 0, 1);
   -moz-transform: scale3d(1, 0, 1);
   -ms-transform: scale3d(1, 0, 1);
   -o-transform: scale3d(1, 0, 1);
+  -webkit-transform: scale3d(1, 0, 1);
   transform: scale3d(1, 0, 1);
 }
 
@@ -2692,11 +2703,11 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 */
 .new-zanata .txt--hyphenate {
-  -ms-word-break: break-all;
   word-break: break-all;
   word-break: break-word;
-  -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
 }
 
@@ -2793,12 +2804,13 @@ Centered grids align grid items centrally without needing to use push or pull cl
   opacity: 0.9;
 }
 .no-touch .new-zanata .bg--faint:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-.new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--pop-high:hover,
+.new-zanata .modal__dialog:hover,
 .new-zanata .panel:hover,
 .new-zanata .header__user-nav__menu:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
@@ -2843,7 +2855,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--lowest--hover:hover {
   background-color: #7a8998;
 }
-.new-zanata .bg--pop-high, .new-zanata .panel, .new-zanata .header__user-nav__menu {
+.new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu {
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
 }
@@ -3004,54 +3016,46 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
     -moz-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    -o-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
 
   50% {
-    -webkit-transform: scale3d(0.8, 0.8, 1);
     -moz-transform: scale3d(0.8, 0.8, 1);
-    -ms-transform: scale3d(0.8, 0.8, 1);
-    -o-transform: scale3d(0.8, 0.8, 1);
+    -webkit-transform: scale3d(0.8, 0.8, 1);
     transform: scale3d(0.8, 0.8, 1);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     opacity: 0.5;
   }
 
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
     -moz-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    -o-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
 }
-
 @-webkit-keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
-    -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-
 /*
 
 ### Icons
@@ -3066,7 +3070,6 @@ All icons also need the class `.i` added to them.
   font-weight: normal;
   font-style: normal;
 }
-
 /*
 <pre><i class="i i--list"></i> .i--list</pre>
 */
@@ -3531,11 +3534,11 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list__title {
   margin: 0;
   font-weight: 600;
-  -ms-word-break: break-all;
   word-break: break-all;
   word-break: break-word;
-  -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
   font-size: 1em;
   line-height: 1.625em;
@@ -3669,11 +3672,11 @@ Sub-headings can be used when placing a heading under another heading.
   color: #a2b4c3;
   font-weight: 400;
   line-height: 1em;
-  -ms-word-break: break-all;
   word-break: break-all;
   word-break: break-word;
-  -webkit-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
 }
 
@@ -3908,18 +3911,18 @@ Sub-headings can be used when placing a heading under another heading.
   height: 1em;
   border: 1px solid #a2b4c3;
   content: "";
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
 }
 .new-zanata .form__checkbox__item:after,
 .new-zanata .form__radio__item:after {
   position: absolute;
-  -webkit-transform: scale(0.1, 0.1);
   -moz-transform: scale(0.1, 0.1);
   -ms-transform: scale(0.1, 0.1);
   -o-transform: scale(0.1, 0.1);
+  -webkit-transform: scale(0.1, 0.1);
   transform: scale(0.1, 0.1);
   color: #416988;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -3932,12 +3935,12 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form__checkbox__item.is-checked:after,
 .new-zanata .form__radio__item.is-checked:after {
-  -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .new-zanata .form__checkbox__item:before {
@@ -4038,11 +4041,10 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .form--search {
   position: relative;
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
 }
 .new-zanata .form--search:before {
@@ -4214,8 +4216,8 @@ Keep focus while showing and hiding a password field
   margin: 0;
   background-color: #f5f6f7;
   border-color: transparent;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   color: #4e9fdd;
 }
@@ -4231,12 +4233,12 @@ Keep focus while showing and hiding a password field
   background-color: #444c54;
   z-index: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -4248,9 +4250,9 @@ Keep focus while showing and hiding a password field
   height: 100%;
   overflow: auto;
   background-color: #edeff1;
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
@@ -4266,9 +4268,9 @@ Keep focus while showing and hiding a password field
   content: "";
   z-index: 99;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
@@ -4277,10 +4279,8 @@ Keep focus while showing and hiding a password field
     left: 270px;
   }
   .csstransforms3d .off-canvas--left-under .off-canvas__inner {
-    -webkit-transform: translate3d(270px, 0, 0);
     -moz-transform: translate3d(270px, 0, 0);
-    -ms-transform: translate3d(270px, 0, 0);
-    -o-transform: translate3d(270px, 0, 0);
+    -webkit-transform: translate3d(270px, 0, 0);
     transform: translate3d(270px, 0, 0);
   }
 
@@ -4288,10 +4288,8 @@ Keep focus while showing and hiding a password field
     right: 270px;
   }
   .csstransforms3d .off-canvas--right-under .off-canvas__inner {
-    -webkit-transform: translate3d(-270px, 0, 0);
     -moz-transform: translate3d(-270px, 0, 0);
-    -ms-transform: translate3d(-270px, 0, 0);
-    -o-transform: translate3d(-270px, 0, 0);
+    -webkit-transform: translate3d(-270px, 0, 0);
     transform: translate3d(-270px, 0, 0);
   }
 }
@@ -4305,21 +4303,18 @@ Keep focus while showing and hiding a password field
   }
 }
 .off-canvas__toggle, .off-canvas__toggle--left, .off-canvas__toggle--right, .new-zanata .off-canvas__close {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   padding: 0.40625em;
   text-align: center;
   height: 3.25em;
 }
 .off-canvas__toggle img, .off-canvas__toggle--left img, .off-canvas__toggle--right img, .new-zanata .off-canvas__close img {
-  -webkit-border-radius: 3.25em;
   -moz-border-radius: 3.25em;
-  -ms-border-radius: 3.25em;
-  -o-border-radius: 3.25em;
+  -webkit-border-radius: 3.25em;
   border-radius: 3.25em;
   max-width: 2.4375em;
 }
@@ -4347,8 +4342,8 @@ Keep focus while showing and hiding a password field
 .off-canvas__header {
   background-color: #5b6670;
   height: 3.25em;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -4362,19 +4357,19 @@ Keep focus while showing and hiding a password field
   height: 100%;
   position: absolute;
   top: 0;
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
-  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
   -webkit-backface-visibility: hidden;
 }
 [data-off-canvas=over].off-canvas--left, [data-off-canvas=over].off-canvas--right {
   background-color: #fdfdfe;
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
@@ -4393,10 +4388,8 @@ Keep focus while showing and hiding a password field
   left: -270px;
 }
 .csstransforms3d .off-canvas--left[data-off-canvas=over] {
-  -webkit-transform: translate3d(-270px, 0, 0);
   -moz-transform: translate3d(-270px, 0, 0);
-  -ms-transform: translate3d(-270px, 0, 0);
-  -o-transform: translate3d(-270px, 0, 0);
+  -webkit-transform: translate3d(-270px, 0, 0);
   transform: translate3d(-270px, 0, 0);
 }
 
@@ -4404,10 +4397,8 @@ Keep focus while showing and hiding a password field
   left: 0;
 }
 .csstransforms3d .off-canvas--left-over .off-canvas--left {
-  -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -4416,10 +4407,8 @@ Keep focus while showing and hiding a password field
     left: 0;
   }
   .csstransforms3d .off-canvas--left-under .off-canvas--left {
-    -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
@@ -4437,10 +4426,8 @@ Keep focus while showing and hiding a password field
   right: -270px;
 }
 .csstransforms3d .off-canvas--right[data-off-canvas=over] {
-  -webkit-transform: translate3d(270px, 0, 0);
   -moz-transform: translate3d(270px, 0, 0);
-  -ms-transform: translate3d(270px, 0, 0);
-  -o-transform: translate3d(270px, 0, 0);
+  -webkit-transform: translate3d(270px, 0, 0);
   transform: translate3d(270px, 0, 0);
 }
 
@@ -4448,10 +4435,8 @@ Keep focus while showing and hiding a password field
   right: 270px;
 }
 .csstransforms3d .off-canvas--right-over .off-canvas--right {
-  -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -4502,11 +4487,10 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs__nav > ul > li,
 .new-zanata .tabs__nav > li {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   letter-spacing: normal;
 }
@@ -4518,11 +4502,10 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs__nav > ul > li > a,
 .new-zanata .tabs__nav > li > a {
   padding: 0.40625em;
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   font-weight: 600;
 }
@@ -4710,9 +4693,9 @@ Keep focus while showing and hiding a password field
 }
 
 .new-zanata .progress-bar, .new-zanata .progress-bar--large {
-  -webkit-transition-delay: 0.2s;
   -moz-transition-delay: 0.2s;
   -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
   position: absolute;
   top: 100%;
@@ -4788,7 +4771,7 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .dropdown__container.is-active {
   z-index: 2;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .new-zanata .dropdown {
@@ -4817,18 +4800,16 @@ Keep focus while showing and hiding a password field
   border: 1px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .dropdown__toggle:before {
-  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   position: absolute;
   left: 0.40625em;
 }
 .new-zanata .dropdown__container.is-active .dropdown__toggle {
-  -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
   color: #416988;
 }
@@ -4842,10 +4823,10 @@ Keep focus while showing and hiding a password field
   display: none;
 }
 .new-zanata .dropdown.is-active .dropdown__toggle:before {
-  -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .new-zanata .dropdown__content {
@@ -4863,10 +4844,8 @@ Keep focus while showing and hiding a password field
 .csstransforms3d .new-zanata .dropdown__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .new-zanata .dropdown__content > li {
@@ -4909,12 +4888,10 @@ Keep focus while showing and hiding a password field
   visibility: visible;
 }
 .csstransforms3d .new-zanata .dropdown.is-active .dropdown__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 .new-zanata .dropdown--right .dropdown__toggle__icon {
@@ -5071,8 +5048,8 @@ Used in panel headers to match the header layout
   margin-bottom: 0.8125em;
   text-align: center;
   background-color: #f5f6f7;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .new-zanata .alert__heading {
@@ -5167,7 +5144,7 @@ Used in panel headers to match the header layout
   color: inherit;
 }
 .new-zanata .message__remove:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .new-zanata .message__remove .i, .new-zanata .message__remove .i--inline, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--understated, .new-zanata .message__remove .i--small, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form__checkbox__item:after, .new-zanata .message__remove .form--search:before {
@@ -5176,13 +5153,11 @@ Used in panel headers to match the header layout
 .new-zanata .message--global {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
   opacity: 0.95;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-transform: translateY(-4.875em);
   -moz-transform: translateY(-4.875em);
-  -ms-transform: translateY(-4.875em);
-  -o-transform: translateY(-4.875em);
+  -webkit-transform: translateY(-4.875em);
   transform: translateY(-4.875em);
   position: fixed;
   top: 0.40625em;
@@ -5193,10 +5168,8 @@ Used in panel headers to match the header layout
   max-width: 32.5em;
 }
 .new-zanata .message--global.is-active {
-  -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 .new-zanata .message--highlight {
@@ -5218,10 +5191,8 @@ Used in panel headers to match the header layout
 .new-zanata .badge, .new-zanata .badge--highlight, .new-zanata .badge--danger, .new-zanata .badge--warning, .new-zanata .badge--bl, .new-zanata .badge--br {
   font-size: 0.875em;
   line-height: 1.39286em;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   display: inline-block;
   padding: 0 0.37143em;
@@ -5297,25 +5268,26 @@ Used in panel headers to match the header layout
 .new-zanata .button--inline-left,
 .new-zanata .button--primary,
 .new-zanata .button--secondary,
+.new-zanata input.button--secondary,
 .new-zanata .button--success,
+.new-zanata input.button--success,
 .new-zanata .button--warning,
+.new-zanata input.button--warning,
 .new-zanata .button--danger,
+.new-zanata input.button--danger,
 .new-zanata input.button--primary,
 .new-zanata .button--unsure,
 .new-zanata input.button--unsure {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   -moz-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.40625em 0.8125em;
   border: none;
@@ -5360,8 +5332,8 @@ Used in panel headers to match the header layout
 .new-zanata .button--unsure:focus {
   background-color: white;
   border-color: rgba(65, 105, 136, 0.25);
-  -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
   -moz-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
   box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
   color: black;
   outline: none;
@@ -5398,8 +5370,8 @@ Used in panel headers to match the header layout
 .new-zanata .is-active.button--danger,
 .new-zanata .is-active.button--unsure {
   background-color: #e5e7e9;
-  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
+  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
 }
 .new-zanata .button[disbaled], .new-zanata [disbaled].button--small, .new-zanata [disbaled].button--large, .new-zanata [disbaled].button--huge, .new-zanata [disbaled].button--snug, .new-zanata [disbaled].button--full, .new-zanata [disbaled].button--inline-right, .new-zanata [disbaled].button--inline-left, .new-zanata [disbaled].button--primary, .new-zanata [disbaled].button--secondary, .new-zanata [disbaled].button--success, .new-zanata [disbaled].button--warning, .new-zanata [disbaled].button--danger, .new-zanata [disbaled].button--unsure, .new-zanata .button--group[disabled] .button, .new-zanata .button--group[disabled] .button--small, .new-zanata .button--group[disabled] .button--large, .new-zanata .button--group[disabled] .button--huge, .new-zanata .button--group[disabled] .button--snug, .new-zanata .button--group[disabled] .button--full, .new-zanata .button--group[disabled] .button--inline-right, .new-zanata .button--group[disabled] .button--inline-left, .new-zanata .button--group[disabled] .button--primary, .new-zanata .button--group[disabled] .button--secondary, .new-zanata .button--group[disabled] .button--success, .new-zanata .button--group[disabled] .button--warning, .new-zanata .button--group[disabled] .button--danger, .new-zanata .button--group[disabled] .button--unsure,
@@ -5420,8 +5392,8 @@ Used in panel headers to match the header layout
 .new-zanata input[type="submit"][disabled].is-active {
   background-color: inherit !important;
   color: inherit !important;
-  -webkit-box-shadow: inherit !important;
   -moz-box-shadow: inherit !important;
+  -webkit-box-shadow: inherit !important;
   box-shadow: inherit !important;
   pointer-events: none;
 }
@@ -5450,8 +5422,8 @@ Used in panel headers to match the header layout
 .new-zanata .button--link:focus,
 .new-zanata .button--link:active,
 .new-zanata .button--link.is-active {
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   margin: 0;
   padding: 0;
@@ -5468,17 +5440,13 @@ Used in panel headers to match the header layout
   color: #416988;
 }
 .new-zanata .button--inline-right {
-  -webkit-border-radius: 0 2px 2px 0;
   -moz-border-radius: 0 2px 2px 0;
-  -ms-border-radius: 0 2px 2px 0;
-  -o-border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0;
   border-radius: 0 2px 2px 0;
 }
 .new-zanata .button--inline-left {
-  -webkit-border-radius: 2px 0 0 2px;
   -moz-border-radius: 2px 0 0 2px;
-  -ms-border-radius: 2px 0 0 2px;
-  -o-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px 0 0 2px;
 }
 .new-zanata .button--primary, .new-zanata .button--secondary,
@@ -5492,8 +5460,8 @@ Used in panel headers to match the header layout
 .new-zanata input.button--warning,
 .new-zanata input.button--danger {
   border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   background-color: #4a97d1;
   color: #f2f2f2;
@@ -5509,8 +5477,8 @@ Used in panel headers to match the header layout
 .new-zanata input.button--success:focus,
 .new-zanata input.button--warning:focus,
 .new-zanata input.button--danger:focus {
-  -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #4e9fdd;
@@ -5528,8 +5496,8 @@ Used in panel headers to match the header layout
 .new-zanata input.is-active.button--warning,
 .new-zanata input.is-active.button--danger {
   background-color: #3e7fb0;
-  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 .new-zanata .button--secondary,
@@ -5604,9 +5572,9 @@ Used in panel headers to match the header layout
 }
 .new-zanata .button--fedora, .new-zanata .button--google, .new-zanata .button--yahoo {
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
+  -webkit-background-size: contain;
   background-size: contain;
 }
 .new-zanata .button--fedora {
@@ -5654,8 +5622,8 @@ Used in panel headers to match the header layout
   position: absolute;
 }
 .new-zanata .button--group input[type="radio"] + .button, .new-zanata .button--group input[type="radio"] + .button--small, .new-zanata .button--group input[type="radio"] + .button--large, .new-zanata .button--group input[type="radio"] + .button--huge, .new-zanata .button--group input[type="radio"] + .button--snug, .new-zanata .button--group input[type="radio"] + .button--full, .new-zanata .button--group input[type="radio"] + .button--inline-right, .new-zanata .button--group input[type="radio"] + .button--inline-left, .new-zanata .button--group input[type="radio"] + .button--primary, .new-zanata .button--group input[type="radio"] + .button--secondary, .new-zanata .button--group input[type="radio"] + .button--success, .new-zanata .button--group input[type="radio"] + .button--warning, .new-zanata .button--group input[type="radio"] + .button--danger, .new-zanata .button--group input[type="radio"] + .button--unsure {
-  -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   -moz-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   border: none;
   border: 1px solid rgba(65, 105, 136, 0.15);
@@ -5665,16 +5633,16 @@ Used in panel headers to match the header layout
 .new-zanata .button--group input[type="radio"] + .button:hover, .new-zanata .button--group input[type="radio"] + .button--small:hover, .new-zanata .button--group input[type="radio"] + .button--large:hover, .new-zanata .button--group input[type="radio"] + .button--huge:hover, .new-zanata .button--group input[type="radio"] + .button--snug:hover, .new-zanata .button--group input[type="radio"] + .button--full:hover, .new-zanata .button--group input[type="radio"] + .button--inline-right:hover, .new-zanata .button--group input[type="radio"] + .button--inline-left:hover, .new-zanata .button--group input[type="radio"] + .button--primary:hover, .new-zanata .button--group input[type="radio"] + .button--secondary:hover, .new-zanata .button--group input[type="radio"] + .button--success:hover, .new-zanata .button--group input[type="radio"] + .button--warning:hover, .new-zanata .button--group input[type="radio"] + .button--danger:hover, .new-zanata .button--group input[type="radio"] + .button--unsure:hover, .new-zanata .button--group input[type="radio"] + .button:focus, .new-zanata .button--group input[type="radio"] + .button--small:focus, .new-zanata .button--group input[type="radio"] + .button--large:focus, .new-zanata .button--group input[type="radio"] + .button--huge:focus, .new-zanata .button--group input[type="radio"] + .button--snug:focus, .new-zanata .button--group input[type="radio"] + .button--full:focus, .new-zanata .button--group input[type="radio"] + .button--inline-right:focus, .new-zanata .button--group input[type="radio"] + .button--inline-left:focus, .new-zanata .button--group input[type="radio"] + .button--primary:focus, .new-zanata .button--group input[type="radio"] + .button--secondary:focus, .new-zanata .button--group input[type="radio"] + .button--success:focus, .new-zanata .button--group input[type="radio"] + .button--warning:focus, .new-zanata .button--group input[type="radio"] + .button--danger:focus, .new-zanata .button--group input[type="radio"] + .button--unsure:focus {
   background-color: white;
   border-color: rgba(65, 105, 136, 0.25);
-  -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
   -moz-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
   box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
   color: black;
   outline: none;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button, .new-zanata .button--group input[type="radio"]:checked + .button--small, .new-zanata .button--group input[type="radio"]:checked + .button--large, .new-zanata .button--group input[type="radio"]:checked + .button--huge, .new-zanata .button--group input[type="radio"]:checked + .button--snug, .new-zanata .button--group input[type="radio"]:checked + .button--full, .new-zanata .button--group input[type="radio"]:checked + .button--inline-right, .new-zanata .button--group input[type="radio"]:checked + .button--inline-left, .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger, .new-zanata .button--group input[type="radio"]:checked + .button--unsure {
   background-color: #e5e7e9;
-  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
+  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
   cursor: default;
 }
@@ -5684,8 +5652,8 @@ Used in panel headers to match the header layout
 .new-zanata .button--group input[type="radio"]:checked + .button--warning,
 .new-zanata .button--group input[type="radio"]:checked + .button--danger {
   color: #f2f2f2;
-  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger {
@@ -5730,7 +5698,7 @@ Used to show extra information on hover of the parent element
 
 */
 .no-touch .new-zanata .reveal:hover .reveal__target, .no-touch .new-zanata .reveal--list-item:hover .reveal__target, .no-touch .new-zanata .reveal:focus .reveal__target, .no-touch .new-zanata .reveal--list-item:focus .reveal__target {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .no-touch .new-zanata .reveal__target {
@@ -5738,7 +5706,7 @@ Used to show extra information on hover of the parent element
   opacity: 0;
 }
 .no-touch .new-zanata .reveal__target:focus {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .new-zanata .reveal__target--slide {
@@ -5747,7 +5715,7 @@ Used to show extra information on hover of the parent element
   max-height: 0;
 }
 .new-zanata .reveal__target--slide.is-active {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   max-height: 4.875em;
 }
@@ -5924,9 +5892,9 @@ Used to show extra information on hover of the parent element
 
 */
 .loader, .loader--large, .loader--huge, .loader__label, .loader__spinner {
-  -webkit-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
@@ -5946,10 +5914,8 @@ a.loader:active, a.loader--large:active, a.loader--huge:active {
   background-color: rgba(65, 105, 136, 0.03);
 }
 a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   background-color: rgba(65, 105, 136, 0.03);
   cursor: default;
@@ -5976,7 +5942,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   text-align: center;
 }
 .loader.is-active .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .loader__spinner span {
@@ -6059,7 +6025,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     background-color: rgba(65, 105, 136, 0.2);
   }
 }
-
 @-webkit-keyframes loading {
   0% {
     background-color: rgba(65, 105, 136, 0.2);
@@ -6073,7 +6038,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     background-color: rgba(65, 105, 136, 0.2);
   }
 }
-
 @-o-keyframes loading {
   0% {
     background-color: rgba(65, 105, 136, 0.2);
@@ -6087,7 +6051,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     background-color: rgba(65, 105, 136, 0.2);
   }
 }
-
 @-ms-keyframes loading {
   0% {
     background-color: rgba(65, 105, 136, 0.2);
@@ -6101,7 +6064,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     background-color: rgba(65, 105, 136, 0.2);
   }
 }
-
 @keyframes loading {
   0% {
     background-color: rgba(65, 105, 136, 0.2);
@@ -6115,7 +6077,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     background-color: rgba(65, 105, 136, 0.2);
   }
 }
-
 /*
 
 ### Modal
@@ -6129,73 +6090,74 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 ```
 
 */
-.modal {
-  -webkit-backface-visibility: hidden;
+.new-zanata .modal {
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 2000;
-  visibility: hidden;
-  min-width: 20em;
-  max-width: 39.375em;
-  width: 50%;
-  height: auto;
-  overflow: auto;
-}
-.modal.is-active {
-  visibility: visible;
-}
-
-.modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform: scale(1.3);
-  -moz-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  -o-transform: scale(1.3);
-  transform: scale(1.3);
-  padding: 0.8125em;
-}
-.modal.is-active .modal__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-
-.container:before {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  visibility: hidden;
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  z-index: 1999;
+  z-index: 2000;
+  display: block;
+  visibility: hidden;
+  overflow: auto;
+  overflow-y: scroll;
+  margin: 0 auto;
+  padding: 3.25em 1.625em;
   width: 100%;
   height: 100%;
-  background-color: white;
-  content: "";
+  background-color: rgba(229, 231, 233, 0.9);
+  -webkit-overflow-scrolling: touch;
 }
-.container.is-modal {
-  min-height: 100%;
-  overflow: auto;
-}
-.container.is-modal:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+.new-zanata .modal.is-active {
   visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.new-zanata .modal__dialog {
+  margin: 0 auto;
+  max-width: 56.25em;
+}
+.new-zanata .modal__header {
+  background-color: white;
+  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  position: relative;
+}
+.new-zanata .modal__title {
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 1.3em;
+  padding: 0.65em 1.3em;
+  padding-right: 4.0625em;
+}
+.new-zanata .modal__close {
+  position: absolute;
+  height: 3.25em;
+  width: 3.25em;
+  top: 0;
+  right: 0;
+  text-align: center;
+  border-left: 1px solid transparent;
+}
+.new-zanata .modal__close:hover {
+  border-left-color: rgba(65, 105, 136, 0.15);
+  background-color: rgba(65, 105, 136, 0.05);
+}
+.new-zanata .modal__close:active {
+  background-color: rgba(65, 105, 136, 0.1);
+}
+.new-zanata .modal__content {
+  padding: 1.625em;
+}
+.new-zanata .is-modal {
+  overflow: hidden;
+  height: 100%;
 }
 
 .new-zanata .stats, .new-zanata .stats--small, .new-zanata .stats--large {
@@ -6569,7 +6531,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   vertical-align: inherit;
 }
 .new-zanata .panel__search__button {
-  margin-left: 0.23214em;
+  margin-left: 0.23214em !important;
   font-weight: 400;
 }
 .new-zanata .panel__search__cancel {
@@ -6596,15 +6558,15 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   border: none;
   background-color: transparent;
   color: #4e9fdd;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .new-zanata .panel__pager__button:hover, .new-zanata .panel__pager__button:focus, .new-zanata .panel__pager__button:active {
   color: #2479bb;
   background-color: #edeff1;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .new-zanata .panel__pager__button:active {
@@ -6634,10 +6596,8 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     opacity: 0;
   }
   .new-zanata .panels--2.panel__active-2 {
-    -webkit-transform: translate3d(-50%, 0, 0);
     -moz-transform: translate3d(-50%, 0, 0);
-    -ms-transform: translate3d(-50%, 0, 0);
-    -o-transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
   }
   .new-zanata .panels--2.panel__active-2 .panels__panel:first-child {
@@ -6647,7 +6607,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   }
   .new-zanata .panels--2.panel__active-2 .panels__panel:nth-child(2) {
     visibility: visible;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
 }
@@ -6928,11 +6888,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .new-zanata .header__menu,
 .new-zanata .header__main-nav {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
   position: relative;
   min-height: 3.25em;
@@ -6974,14 +6933,14 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
     background-color: #f5f6f7;
   }
   .csstransforms3d .new-zanata .header__main-nav__group {
-    -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
     -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
     -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+    -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
     transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-    -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     -o-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     bottom: auto;
     top: 100%;
@@ -7021,9 +6980,9 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   }
 }
 .new-zanata .header__search {
-  -webkit-transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -moz-transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   margin: 0;
   height: 3.65625em;
@@ -7066,11 +7025,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 @media (min-width: 58.125em) {
   .new-zanata .header__main-nav__menu {
-    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    zoom: 1;
+    *zoom: 1;
     *display: inline;
     position: relative;
     left: 50%;
@@ -7078,11 +7036,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   }
   .new-zanata .header__main-nav__menu li,
   .new-zanata .header__main-nav__menu a {
-    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    zoom: 1;
+    *zoom: 1;
     *display: inline;
   }
   .new-zanata .header__main-nav__menu li {
@@ -7120,10 +7077,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   }
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle:before,
   .new-zanata .header__main-nav.is-active .header__main-nav__toggle:before {
-    -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
   .new-zanata .header__main-nav.is-hover .header__main-nav__group,
@@ -7137,10 +7094,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   }
   .csstransforms3d .new-zanata .header__main-nav.is-hover .header__main-nav__group, .csstransforms3d
   .new-zanata .header__main-nav.is-active .header__main-nav__group {
-    -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -7245,14 +7202,14 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   margin-top: -3.25em;
 }
 .csstransforms3d .new-zanata .header__user-nav__menu {
-  -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
-  -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   bottom: auto;
   top: 100%;
@@ -7285,10 +7242,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle:before,
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle:before {
-  -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__menu,
@@ -7302,10 +7259,10 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .csstransforms3d .new-zanata .header__user-nav.is-hover .header__user-nav__menu, .csstransforms3d
 .new-zanata .header__user-nav.is-active .header__user-nav__menu {
-  -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 @media (min-width: 46.25em) {

@@ -1,6 +1,7 @@
 jQuery(function () {
+  'use strict';
 
-  jQuery('.js-tabs').on('click touchend', '.js-tabs-nav a', function(e) {
+  jQuery('.js-tabs').on('click touchend', '.js-tabs-nav a', function (e) {
     e.preventDefault();
     if (!jQuery(this).parent().hasClass('is-active')) {
       var $this = jQuery(this),
@@ -35,7 +36,9 @@ jQuery(function () {
     $parent
       .find('.js-tabs-content li, .js-tabs-nav li')
       .removeClass('is-active');
-    jQuery('.js-tabs a[href="' + targetHash + '"]').parent().addClass('is-active');
+    jQuery('.js-tabs a[href="' + targetHash + '"]')
+      .parent()
+      .addClass('is-active');
     $target.addClass('is-active');
   }
 

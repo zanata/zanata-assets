@@ -12,58 +12,80 @@
 
 */
 
-.modal {
-  @extend .is-transition-bounce;
-  @include backface-visibility(hidden);
-  @include transform(translateX(-50%) translateY(-50%));
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 2000;
-  visibility: hidden;
-  min-width: emCalc(320px);
-  max-width: emCalc(630px);
-  width: 50%;
-  height: auto;
-  overflow: auto;
-  &.is-active {
-    visibility: visible;
-  }
-}
+.new-zanata {
 
-.modal__content {
-  @extend .is-transition;
-  @include opacity(0);
-  @include transform(scale(1.3));
-  padding: rhythm(.5);
-  .modal.is-active & {
-    @include opacity(1);
-    @include transform(scale(1));
-  }
-}
-
-.container {
-  @extend .is-transition;
-  &:before {
-    @extend .is-transition;
+  .modal {
+    @extend .is-transition-bounce;
+    @include backface-visibility(hidden);
     @include opacity(0);
-    visibility: hidden;
+    @include opacity(0);
     position: fixed;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    z-index: 1999;
+    z-index: 2000;
+    display: block;
+    visibility: hidden;
+    overflow: auto;
+    overflow-y: scroll;
+    margin: 0 auto;
+    padding: rhythm(2) rhythm(1);
     width: 100%;
     height: 100%;
-    background-color: $color-bg-lightest;
-    content: "";
-  }
-  &.is-modal {
-    min-height: 100%;
-    overflow: auto;
-    &:before {
-      @include opacity(1);
+    background-color: rgba($color-bg-dark, .9);
+    -webkit-overflow-scrolling: touch;
+
+    &.is-active {
       visibility: visible;
+      @include opacity(1);
     }
   }
-}
 
+  .modal__dialog {
+    @extend .bg--pop-high;
+    margin: 0 auto;
+    max-width: emCalc(900px);
+  }
+
+  .modal__header {
+    background-color: $color-bg-lightest;
+    border-bottom: $default-border;
+    position: relative;
+  }
+
+  .modal__title {
+    margin: 0;
+    @include adjust-font-size-to(20px);
+    padding: rhythm(.5, 20px) rhythm(1, 20px);
+    padding-right: rhythm(2.5);
+  }
+
+  .modal__close {
+    position: absolute;
+    height: rhythm(2);
+    width: rhythm(2);
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-left: 1px solid transparent;
+    &:hover {
+      border-left-color: $default-border-color;
+      background-color: rgba($color-secondary, .05);
+    }
+    &:active {
+      background-color: rgba($color-secondary, .1);
+    }
+  }
+
+  .modal__content {
+    padding: rhythm(1);
+  }
+
+    //body
+  .is-modal {
+    overflow: hidden;
+    height: 100%;
+  }
+
+}

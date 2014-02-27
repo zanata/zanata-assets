@@ -43,7 +43,6 @@
 </head>
 
 <body class="new-zanata">
-  <div class="container" id="container">
 
 
 <header role="banner" class="header">
@@ -216,7 +215,7 @@
               <div class="panel">
                 <div class="panel__header">
                   <div class="panel__header__actions">
-                    <button class="button button--snug l--push-top-half" title="Upload new source document"><i class="i i--plus"></i></button>
+                    <button class="button button--snug l--push-top-half" data-toggle="modal" data-target="#modal-1" title="Upload new source document"><i class="i i--plus"></i></button>
                     <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
                       <a class="dropdown__toggle js-dropdown__toggle" href="#">Sort</a>
                       <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
@@ -265,8 +264,8 @@
                       <div class="list__item__actions">
                         <ul class="list--horizontal">
                           <li><span class="txt--meta txt--neutral" title="2014-01-24 3:15pm">5<span class="is-hidden--s"> </span>m<span class="is-hidden--s">ins ago</span> <i class="i i--clock"></i></span></li>
-                          <li><a href="#" title="Upload a new version of the source document"><i class="i i--import"></i></a></li>
-                          <li><a href="#" class="txt--danger" title="Delete document"><i class="i i--remove"></i></a></li>
+                          <li><a href="#" title="Update this document"><i class="i i--import"></i></a></li>
+                          <li><a href="#" class="txt--danger" title="Delete this document"><i class="i i--remove"></i></a></li>
                         </ul>
                       </div>
                     </div>
@@ -280,8 +279,8 @@
                       <div class="list__item__actions">
                         <ul class="list--horizontal">
                           <li><span class="txt--meta txt--neutral" title="2013-12-22 1:02pm">32<span class="is-hidden--s"> </span>d<span class="is-hidden--s">ays ago</span> <i class="i i--clock"></i></span></li>
-                          <li><a href="#" title="Upload a new version of the source document"><i class="i i--import"></i></a></li>
-                          <li><a href="#" class="txt--danger" title="Delete document"><i class="i i--remove"></i></a></li>
+                          <li><a href="#" title="Update this document"><i class="i i--import"></i></a></li>
+                          <li><a href="#" class="txt--danger" title="Delete this document"><i class="i i--remove"></i></a></li>
                         </ul>
                       </div>
                     </div>
@@ -295,8 +294,8 @@
                       <div class="list__item__actions">
                         <ul class="list--horizontal">
                           <li><span class="txt--meta txt--neutral">32<span class="is-hidden--s"> </span>d<span class="is-hidden--s">ays ago</span> <i class="i i--clock"></i></span></li>
-                          <li><a href="#" title="Upload a new version of the source document"><i class="i i--import"></i></a></li>
-                          <li><a href="#" class="txt--danger" title="Delete document"><i class="i i--remove"></i></a></li>
+                          <li><a href="#" title="Update this document"><i class="i i--import"></i></a></li>
+                          <li><a href="#" class="txt--danger" title="Delete this document"><i class="i i--remove"></i></a></li>
                         </ul>
                       </div>
                     </div>
@@ -310,8 +309,8 @@
                       <div class="list__item__actions">
                         <ul class="list--horizontal">
                           <li><span class="txt--meta txt--neutral">46<span class="is-hidden--s"> </span>d<span class="is-hidden--s">ays ago</span> <i class="i i--clock"></i></span></li>
-                          <li><a href="#" title="Upload a new version of the source document"><i class="i i--import"></i></a></li>
-                          <li><a href="#" class="txt--danger" title="Delete document"><i class="i i--remove"></i></a></li>
+                          <li><a href="#" title="Update this document"><i class="i i--import"></i></a></li>
+                          <li><a href="#" class="txt--danger" title="Delete this document"><i class="i i--remove"></i></a></li>
                         </ul>
                       </div>
                     </div>
@@ -689,13 +688,18 @@
       </div>
     </div>
   </footer>
-  </div> <!-- Container -->
-  <div class="modal" id="modal-1">
-    <div class="modal__content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+  <div class="modal" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <h2 class="modal__title">Upload new document</h2>
+        <button class="modal__close button--link" data-dismiss="modal"><i class="i i--huge i--cancel"></i></button>
+      </div>
+      <div class="modal__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+      </div>
     </div>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

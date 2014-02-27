@@ -1,27 +1,29 @@
-jQuery(function() {
-  jQuery('.js-reveal__show').on('click touchend', function() {
+jQuery(function () {
+  'use strict';
+  jQuery('.js-reveal__show').on('click touchend', function () {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = jQuery(this).parents('.js-reveal');
     jQuery(this).addClass('is-hidden');
     $revealParent.addClass('is-active');
     $revealTarget.toggleClass('is-active');
-    setTimeout(function() {
+    setTimeout(function () {
       $revealTargetInput.focus();
     }, 100);
   });
-  jQuery('.js-reveal__toggle').on('click touchend', function(e) {
+  jQuery('.js-reveal__toggle').on('click touchend', function (e) {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = jQuery(this).parents('.js-reveal'),
         $revealText = jQuery(this).find('.js-reveal__toggle__text'),
         revealTextValue = $revealText.text(),
         revealToggleValue = $revealText.attr('data-toggle-value'),
-        revealTitle = jQuery(this).attr('title') || jQuery(this).attr('data-original-title'),
+        revealTitle = jQuery(this).attr('title') ||
+          jQuery(this).attr('data-original-title'),
         revealToggleTitle = jQuery(this).attr('data-toggle-title');
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
-    if(!jQuery(e.target).is('label')) {
+    if (!jQuery(e.target).is('label')) {
       e.preventDefault();
     }
     jQuery(this).toggleClass('is-active');
@@ -35,19 +37,19 @@ jQuery(function() {
       $revealText.text(revealToggleValue);
       $revealText.attr('data-toggle-value', revealTextValue);
     }
-    setTimeout(function() {
+    setTimeout(function () {
       $revealTargetInput.focus();
     }, 100);
   });
 
 
-  jQuery('.js-reveal__reset').on('click touchend', function() {
+  jQuery('.js-reveal__reset').on('click touchend', function () {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');
     $revealTargetInput.val('').focus();
     jQuery(this).addClass('is-hidden');
   });
-  jQuery('.js-reveal__cancel').on('click touchend', function() {
+  jQuery('.js-reveal__cancel').on('click touchend', function () {
     var $revealTarget = jQuery(jQuery(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = jQuery(this).parents('.js-reveal');
@@ -57,7 +59,7 @@ jQuery(function() {
     $revealParent.find('.js-reveal__reset').addClass('is-hidden');
     $revealParent.find('.js-reveal__show').removeClass('is-hidden').focus();
   });
-  jQuery('.js-reveal__target__input').on('keyup', function(e) {
+  jQuery('.js-reveal__target__input').on('keyup', function (e) {
     var $revealParent = jQuery(this).parents('.js-reveal'),
         $revealReset = $revealParent.find('.js-reveal__reset'),
         $revealCancel = $revealParent.find('.js-reveal__cancel');

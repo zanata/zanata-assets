@@ -1,14 +1,34 @@
-jQuery(function () {
-  jQuery(document).on('click touchend', '.js-modal__show', function() {
-    var modalTarget = jQuery(this).attr('data-target');
-    jQuery(modalTarget).addClass('is-active');
-    jQuery('#container').addClass('is-modal');
+(function ($) {
+  'use strict';
+
+  var removeModal = function ($el) {
+    $el.removeClass('is-active');
+    $('body').removeClass('is-modal');
+  };
+
+  $(document).on('click touchend', '[data-toggle="modal"]', function () {
+    var modalTarget = $(this).attr('data-target');
+
+    $(modalTarget).addClass('is-active');
+    $('body').addClass('is-modal');
   });
-  jQuery(document).on('keyup', function(e) {
-    if (e.keyCode === 27) {
-      e.stopPropagation();
-      jQuery('.modal').removeClass('is-active');
-      jQuery('#container').removeClass('is-modal');
+
+  $(document).on('click touchend', '.is-modal', function (e) {
+    if ($(e.target).not('.modal__dialog') &&
+      !$(e.target).parents('.modal__dialog').length) {
+      removeModal($('.modal.is-active'));
     }
   });
-});
+
+  $(document).on('keyup', function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      removeModal($('.modal.is-active'));
+    }
+  });
+
+  $(document).on('click touchend', '[data-dismiss="modal"]', function () {
+    removeModal($(this).parents('.modal.is-active'));
+  });
+
+})(jQuery);
