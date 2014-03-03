@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-02-27
+/*! zanata-assets - v0.1.0 - 2014-03-04
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1870,6 +1870,9 @@ jQuery(function () {
   $(document).on('click touchend', '[data-dismiss="modal"]', function () {
     removeModal($(this).parents('.modal.is-active'));
   });
+
+  // TODO: make sure modals are at the top level of them DOM
+  // If not, copy them there
 
 })(jQuery);
 

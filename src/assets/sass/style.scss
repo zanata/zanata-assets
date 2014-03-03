@@ -74,6 +74,7 @@ These are components that can be utilised or are depended on by other components
 // TODO: Remove namespacing when old zanata removed
 @import "_components/headings";
 @import "_components/lists";
+@import "_components/links";
 @import "_components/forms";
 @import "_components/off-canvas";
 @import "_components/tabs";
@@ -93,6 +94,7 @@ These are components that can be utilised or are depended on by other components
 @import "_components/panel";
 @import "_components/panels";
 @import "_components/auto-complete";
+@import "_components/drag-drop";
 @import "_components/rf-rich-faces";
 
 @import "_components/header";

@@ -792,7 +792,7 @@ a:hover,
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.40625em;
+  padding: 0.20313em 0.40625em;
   display: block;
   width: 100%;
   font-weight: 400;
@@ -2077,7 +2077,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
 .new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
-.new-zanata .tabs--lined > .tabs__nav > li > a:after, .new-zanata .progress-bar, .new-zanata .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
+.new-zanata .tabs--lined > .tabs__nav > li > a:after, .new-zanata .progress-bar__expander .progress-bar, .new-zanata .progress-bar__expander .progress-bar--large, .new-zanata .progress-bar--large__expander .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--small,
@@ -2098,7 +2098,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata input.button--danger,
 .new-zanata input.button--primary,
 .new-zanata .button--unsure,
-.new-zanata input.button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
+.new-zanata input.button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .modal, .new-zanata .drag-drop:after, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2113,7 +2113,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
-.new-zanata .is-transition-bounce, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .modal, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
+.new-zanata .is-transition-bounce, .new-zanata .dropdown, .csstransforms3d .new-zanata .dropdown__content, .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
   -moz-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -o-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -webkit-transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
@@ -2170,13 +2170,13 @@ Centered grids align grid items centrally without needing to use push or pull cl
   white-space: nowrap;
 }
 .new-zanata .txt--align-left {
-  text-align: left;
+  text-align: left !important;
 }
 .new-zanata .txt--align-right {
-  text-align: right;
+  text-align: right !important;
 }
 .new-zanata .txt--align-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 /*
@@ -3222,7 +3222,6 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 */
 .new-zanata .list--panel > li, .new-zanata .list--stats > li {
-  background-color: #fdfdfe;
   border-bottom: 1px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .list--panel > li.is-active, .new-zanata .list--stats > li.is-active {
@@ -3324,6 +3323,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--stats > li {
+  border-bottom: none;
   margin-top: -0.40625em;
 }
 .new-zanata .list--stats > li:first-child {
@@ -3382,6 +3382,51 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .list--highlight__item--none:hover {
   background-color: inherit !important;
+}
+
+_links.scss
+.link--success {
+  color: #70a98b !important;
+}
+_links.scss
+.link--success:hover, _links.scss
+.link--success:focus {
+  color: #4e7661 !important;
+}
+_links.scss
+.link--success:active, _links.scss
+.link--success.is-active {
+  color: #2c4337 !important;
+}
+
+.link--unsure {
+  color: #e0c350 !important;
+}
+.link--unsure:hover, .link--unsure:focus {
+  color: #9c8838 !important;
+}
+.link--unsure:active, .link--unsure.is-active {
+  color: #594e20 !important;
+}
+
+.link--warning {
+  color: #e3824e !important;
+}
+.link--warning:hover, .link--warning:focus {
+  color: #9e5b36 !important;
+}
+.link--warning:active, .link--warning.is-active {
+  color: #5a341f !important;
+}
+
+.link--danger, .new-zanata .message__remove {
+  color: #e0575b !important;
+}
+.link--danger:hover, .new-zanata .message__remove:hover, .link--danger:focus, .new-zanata .message__remove:focus {
+  color: #9c3c3f !important;
+}
+.link--danger:active, .new-zanata .message__remove:active, .link--danger.is-active, .new-zanata .is-active.message__remove {
+  color: #592224 !important;
 }
 
 /*
@@ -3491,7 +3536,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form__checkbox.is-checked,
 .new-zanata .form__radio.is-checked {
-  background-color: #eaf3fa;
+  background-color: #dcecf8;
 }
 .new-zanata .form__checkbox__item,
 .new-zanata .form__radio__item {
@@ -4249,20 +4294,12 @@ Keep focus while showing and hiding a password field
 }
 
 .new-zanata .progress-bar, .new-zanata .progress-bar--large {
-  -moz-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: -0.8125em;
+  position: relative;
   width: 100%;
   height: 0.40625em;
 }
 .new-zanata .progress-bar--large {
   height: 0.8125em;
-  margin-top: -0.8125em;
 }
 .new-zanata .progress-bar__expander {
   position: relative;
@@ -4271,6 +4308,16 @@ Keep focus while showing and hiding a password field
 .no-touch .new-zanata .progress-bar__expander:hover .progress-bar, .no-touch .new-zanata .progress-bar__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar--large {
   height: 0.8125em;
 }
+.new-zanata .progress-bar__expander .progress-bar, .new-zanata .progress-bar__expander .progress-bar--large {
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -0.8125em;
+}
 .new-zanata .progress-bar--large__expander {
   position: relative;
   padding-bottom: 1.625em;
@@ -4278,7 +4325,18 @@ Keep focus while showing and hiding a password field
 .no-touch .new-zanata .progress-bar--large__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar--large__expander.is-active .progress-bar--large {
   height: 1.625em;
 }
-.new-zanata .progress-bar__item, .new-zanata .progress-bar__untranslated, .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
+.new-zanata .progress-bar--large__expander .progress-bar--large {
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -0.8125em;
+}
+.new-zanata .progress-bar__item, .new-zanata .progress-bar__untranslated, .new-zanata .progress-bar__success,
+.new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -4286,6 +4344,7 @@ Keep focus while showing and hiding a password field
   z-index: 1;
   background-color: #c6d2db;
 }
+.new-zanata .progress-bar__success,
 .new-zanata .progress-bar__translated {
   background-color: #70a98b;
   z-index: 1;
@@ -4685,19 +4744,10 @@ Used in panel headers to match the header layout
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.40625em;
   width: 2.4375em;
   height: 2.4375em;
-  line-height: 2.4375em;
-  color: inherit;
   text-align: center;
-}
-.new-zanata .message__remove:hover, .new-zanata .message__remove:active, .new-zanata .message__remove:focus {
-  color: inherit;
-}
-.new-zanata .message__remove:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
+  line-height: 2.4375em;
 }
 .new-zanata .message__remove .i, .new-zanata .message__remove .i--inline, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--understated, .new-zanata .message__remove .i--small, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form__checkbox__item:after, .new-zanata .message__remove .form--search:before {
   line-height: 1.625em;
@@ -4841,7 +4891,7 @@ Used in panel headers to match the header layout
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  padding: 0.40625em 0.8125em;
+  padding: 0.20313em 0.8125em;
   border: none;
   border: 1px solid rgba(65, 105, 136, 0.15);
   background-color: #fafafb;
@@ -4952,7 +5002,7 @@ Used in panel headers to match the header layout
 .new-zanata .button--small {
   font-size: 0.875em;
   line-height: 1.85714em;
-  padding: 0.46429em 0.92857em;
+  padding: 0.23214em 0.92857em;
 }
 .new-zanata .button--large {
   font-size: 1.25em;
@@ -4969,11 +5019,15 @@ Used in panel headers to match the header layout
   display: block;
   width: 100%;
 }
-.new-zanata .button--link,
+.new-zanata .button--link, .new-zanata .message__remove,
 .new-zanata .button--link:hover,
+.new-zanata .message__remove:hover,
 .new-zanata .button--link:focus,
+.new-zanata .message__remove:focus,
 .new-zanata .button--link:active,
-.new-zanata .button--link.is-active {
+.new-zanata .message__remove:active,
+.new-zanata .button--link.is-active,
+.new-zanata .is-active.message__remove {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -4985,10 +5039,10 @@ Used in panel headers to match the header layout
   color: #4e9fdd;
   font-weight: 400;
 }
-.new-zanata .button--link:hover, .new-zanata .button--link:focus {
+.new-zanata .button--link:hover, .new-zanata .message__remove:hover, .new-zanata .button--link:focus, .new-zanata .message__remove:focus {
   color: #2479bb;
 }
-.new-zanata .button--link:active, .new-zanata .button--link.is-active {
+.new-zanata .button--link:active, .new-zanata .message__remove:active, .new-zanata .button--link.is-active, .new-zanata .is-active.message__remove {
   color: #416988;
 }
 .new-zanata .button--inline-right {
@@ -5648,8 +5702,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   backface-visibility: hidden;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -5665,6 +5717,9 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   width: 100%;
   height: 100%;
   background-color: rgba(229, 231, 233, 0.9);
+  -moz-perspective: 81.25em;
+  -webkit-perspective: 81.25em;
+  perspective: 81.25em;
   -webkit-overflow-scrolling: touch;
 }
 .new-zanata .modal.is-active {
@@ -5674,7 +5729,19 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .new-zanata .modal__dialog {
   margin: 0 auto;
-  max-width: 56.25em;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -moz-transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+}
+.new-zanata .modal.is-active .modal__dialog {
+  -moz-transform: rotateX(0) translateY(0);
+  -webkit-transform: rotateX(0) translateY(0);
+  transform: rotateX(0) translateY(0);
 }
 .new-zanata .modal__header {
   background-color: white;
@@ -5685,8 +5752,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   margin: 0;
   font-size: 1.25em;
   line-height: 1.3em;
-  padding: 0.65em 1.3em;
-  padding-right: 4.0625em;
+  padding: 0.65em 1.95em 0.65em 1.3em;
 }
 .new-zanata .modal__close {
   position: absolute;
@@ -5695,17 +5761,16 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   top: 0;
   right: 0;
   text-align: center;
-  border-left: 1px solid transparent;
+  border-left: 1px solid rgba(65, 105, 136, 0.15);
+  color: rgba(65, 105, 136, 0.3);
 }
 .new-zanata .modal__close:hover {
-  border-left-color: rgba(65, 105, 136, 0.15);
   background-color: rgba(65, 105, 136, 0.05);
+  border-left: 1px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .modal__close:active {
   background-color: rgba(65, 105, 136, 0.1);
-}
-.new-zanata .modal__content {
-  padding: 1.625em;
+  border-left: 1px solid rgba(65, 105, 136, 0.15);
 }
 .new-zanata .is-modal {
   overflow: hidden;
@@ -6213,6 +6278,50 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 
 /*
 
+### Drag and drop
+
+```example
+<div class="drag-drop l--push-all-1">
+  <p class="txt--lead l--push-bottom-0"><i class="i i--left i--document"></i>Drag and drop or <a href="#">browse files</a></p>
+  <small class="txt--meta">Maximum file size is 5mb</small>
+</div>
+```
+
+*/
+.drag-drop {
+  border: 2px dashed rgba(65, 105, 136, 0.15);
+  padding: 1.625em;
+  text-align: center;
+  position: relative;
+}
+.drag-drop:after {
+  font-size: 1.625em;
+  line-height: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: #7c96ac;
+  content: "Drop files";
+  font-weight: 300;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+.drag-drop.is-active {
+  border-color: #416988;
+}
+.drag-drop.is-active:after {
+  visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+/*
+
 ### Rich Faces Components
 
 #### RF - Autocomplete
@@ -6488,9 +6597,9 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.325em 0.40625em 0.325em 0;
-  padding: 0.325em 1.625em 0.325em 0;
-  padding: 0.325em 3.25em 0.325em 0;
+  padding: 0.52813em 0.40625em 0.52813em 0;
+  padding: 0.52813em 1.625em 0.52813em 0;
+  padding: 0.52813em 3.25em 0.52813em 0;
 }
 .new-zanata .header__avatar {
   width: 2.03125em;

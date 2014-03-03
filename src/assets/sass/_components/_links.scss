@@ -1,0 +1,59 @@
+_links.scss
+/*
+
+### Links
+
+<a class="link--success" href="#">Success Link</a>
+<a class="link--unsure" href="#">Unsure Link</a>
+<a class="link--warning" href="#">Warning Link</a>
+<a class="link--danger" href="#">Danger Link</a>
+
+*/
+
+.link--success {
+  color: $color-success !important;
+  &:hover,
+  &:focus {
+    color: shade($color-success, 30%) !important;
+  }
+  &:active,
+  &.is-active {
+    color: shade($color-success, 60%) !important;
+  }
+}
+
+.link--unsure {
+  color: $color-unsure !important;
+  &:hover,
+  &:focus {
+    color: shade($color-unsure, 30%) !important;
+  }
+  &:active,
+  &.is-active {
+    color: shade($color-unsure, 60%) !important;
+  }
+}
+
+.link--warning {
+  color: $color-warning !important;
+  &:hover,
+  &:focus {
+    color: shade($color-warning, 30%) !important;
+  }
+  &:active,
+  &.is-active {
+    color: shade($color-warning, 60%) !important;
+  }
+}
+
+.link--danger {
+  color: $color-danger !important;
+  &:hover,
+  &:focus {
+    color: shade($color-danger, 30%) !important;
+  }
+  &:active,
+  &.is-active {
+    color: shade($color-danger, 60%) !important;
+  }
+}

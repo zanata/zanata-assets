@@ -43,24 +43,16 @@
 }
 
 .message__remove {
+  @extend .button--link;
+  @extend .link--danger;
   @include opacity(.6);
   position: absolute;
   top: 0;
   right: 0;
-  padding: rhythm(.25);
   width: rhythm(1.5);
   height: rhythm(1.5);
-  line-height: rhythm(1.5);
-  color: inherit;
   text-align: center;
-  &:hover,
-  &:active,
-  &:focus {
-    color: inherit;
-  }
-  &:hover {
-    @include opacity(1);
-  }
+  line-height: rhythm(1.5);
   .i {
     line-height: rhythm(1);
   }

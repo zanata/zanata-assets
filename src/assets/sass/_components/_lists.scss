@@ -237,7 +237,7 @@ nav ol {
 .list--panel {
   @extend .list--no-bullets;
   > li {
-    background-color: $color-bg-lighter;
+    // background-color: $color-bg-lighter;
     border-bottom: $default-border;
     &:hover {
       @extend .bg--highest--hover;
@@ -345,6 +345,7 @@ nav ol {
 .list--stats {
   @extend .list--panel;
   > li {
+    border-bottom: none;
     margin-top: rhythm(-.25);
     &:first-child {
       margin-top: 0;

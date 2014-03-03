@@ -15,9 +15,8 @@
 .new-zanata {
 
   .modal {
-    @extend .is-transition-bounce;
+    @extend .is-transition;
     @include backface-visibility(hidden);
-    @include opacity(0);
     @include opacity(0);
     position: fixed;
     top: 0;
@@ -34,8 +33,8 @@
     width: 100%;
     height: 100%;
     background-color: rgba($color-bg-dark, .9);
+    @include perspective(rhythm(50));
     -webkit-overflow-scrolling: touch;
-
     &.is-active {
       visibility: visible;
       @include opacity(1);
@@ -45,7 +44,13 @@
   .modal__dialog {
     @extend .bg--pop-high;
     margin: 0 auto;
-    max-width: emCalc(900px);
+    // max-width: emCalc(900px);
+    @include transform-origin(0);
+    @include transform3d(translateY(50%));
+  }
+
+  .modal.is-active .modal__dialog {
+    @include transform3d(rotateX(0) translateY(0));
   }
 
   .modal__header {
@@ -57,8 +62,7 @@
   .modal__title {
     margin: 0;
     @include adjust-font-size-to(20px);
-    padding: rhythm(.5, 20px) rhythm(1, 20px);
-    padding-right: rhythm(2.5);
+    padding: rhythm(.5, 20px) rhythm(1.5, 20px) rhythm(.5, 20px) rhythm(1, 20px);
   }
 
   .modal__close {
@@ -68,18 +72,20 @@
     top: 0;
     right: 0;
     text-align: center;
-    border-left: 1px solid transparent;
+    border-left: $default-border;
+    color: rgba($color-secondary, .3);
     &:hover {
-      border-left-color: $default-border-color;
       background-color: rgba($color-secondary, .05);
+      border-left: $default-border;
     }
     &:active {
       background-color: rgba($color-secondary, .1);
+      border-left: $default-border;
     }
   }
 
   .modal__content {
-    padding: rhythm(1);
+
   }
 
     //body

@@ -2,13 +2,7 @@
 .new-zanata {
 
 .progress-bar {
-  @extend .is-transition;
-  // @include backface-visibility(hidden);
-  @include transition-delay(.2s);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: rhythm(-.5);
+  position: relative;
   width: 100%;
   height: rhythm(.25);
 }
@@ -16,7 +10,6 @@
 .progress-bar--large {
   @extend .progress-bar;
   height: rhythm(.5);
-  margin-top: rhythm(-.5);
 }
 
 .progress-bar__expander {
@@ -31,6 +24,14 @@
       }
     }
   }
+  .progress-bar {
+    @extend .is-transition;
+    @include transition-delay(.2s);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: rhythm(-.5);
+  }
 }
 .progress-bar--large__expander {
   position: relative;
@@ -43,6 +44,14 @@
         height: rhythm(1);
       }
     }
+  }
+  .progress-bar--large {
+    @extend .is-transition;
+    @include transition-delay(.2s);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: rhythm(-.5);
   }
 }
 
@@ -59,6 +68,7 @@
   @extend .progress-bar__item;
 }
 
+.progress-bar__success,
 .progress-bar__translated {
   @extend .progress-bar__item;
   background-color: $color-success;

@@ -65,15 +65,15 @@
 
 @include breakpoint($gte-medium) {
   .txt--align-left {
-    text-align: left;
+    text-align: left !important;
   }
 
   .txt--align-right {
-    text-align: right;
+    text-align: right !important;
   }
 
   .txt--align-center {
-    text-align: center;
+    text-align: center !important;
   }
 }
 

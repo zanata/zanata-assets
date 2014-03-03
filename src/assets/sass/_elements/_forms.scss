@@ -171,7 +171,7 @@ textarea {
   @include font-size($form-input-font-size);
   @include box-shadow($form-input-box-shadow-inset);
   @include box-sizing(border-box);
-  padding: rhythm($form-spacing / 2, $form-input-font-size);
+  padding: rhythm($form-spacing / 4, $form-input-font-size) rhythm($form-spacing / 2, $form-input-font-size);
   display: block;
   width: 100%;
   font-weight: 400;
