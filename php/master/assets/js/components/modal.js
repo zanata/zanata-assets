@@ -31,4 +31,7 @@
     removeModal($(this).parents('.modal.is-active'));
   });
 
+  // TODO: make sure modals are at the top level of them DOM
+  // If not, copy them there
+
 })(jQuery);
