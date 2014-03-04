@@ -541,6 +541,7 @@ td.RejectedStateDecoration div div div {
   color: #FFFFFF;
   border-radius: 12px;
   font-weight: bold;
+  z-index: 3;
 }
 
 .confirmationDialogPanel button {
