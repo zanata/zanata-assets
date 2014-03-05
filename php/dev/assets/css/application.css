@@ -533,6 +533,7 @@ td.RejectedStateDecoration div div div {
   padding: 20px 30px;
   opacity: 0.60;
   border-radius: 20px;
+  z-index: 1001;
 }
 
 .confirmationDialogPanel {
@@ -541,6 +542,7 @@ td.RejectedStateDecoration div div div {
   color: #FFFFFF;
   border-radius: 12px;
   font-weight: bold;
+  z-index: 1000;
 }
 
 .confirmationDialogPanel button {
@@ -608,6 +610,7 @@ td.RejectedStateDecoration div div div {
 
 .keyShortcutPanel {
   border: none;
+  z-index: 100;
 }
 
 #gwt-debug-TMMerge {
@@ -773,7 +776,7 @@ a.downloadLink {
   border-radius: 3px;
   padding: 5px;
   box-shadow: 1px 1px 3px #5C5C5C;
-  z-index: 3;
+  z-index: 1000;
 }
 
 .gwt-DialogBox-fixedSize .Caption {

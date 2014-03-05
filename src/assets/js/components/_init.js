@@ -3,8 +3,8 @@
 var zanata = (function () {
   var z = {};
 
-  z.tooltip = function (selector) {
-    jQuery(selector).tooltip({
+  z.tooltip = function (el) {
+    jQuery(el).tooltip({
       placement: 'auto bottom',
       container: 'body',
       delay: {
@@ -14,8 +14,8 @@ var zanata = (function () {
     });
   };
 
-  z.tooltipRefresh = function (selector, newValue) {
-    jQuery(selector)
+  z.tooltipRefresh = function (el, newValue) {
+    jQuery(el)
       .tooltip('hide')
       .attr('data-original-title', newValue)
       .tooltip('fixTitle')
@@ -27,4 +27,5 @@ var zanata = (function () {
 
 jQuery(function () {
   zanata.tooltip('[title]');
+  jQuery('body').zanataForm();
 });

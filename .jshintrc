@@ -1,6 +1,8 @@
 {
 
-  "globals": { "zanata": true },
+  "globals": {
+    "zanata": true
+  },
 
   "browser": true,
 
@@ -13,8 +15,6 @@
   "eqeqeq": true,
 
   "eqnull": true,
-
-  "indent": 2,
 
   "latedef": true,
 

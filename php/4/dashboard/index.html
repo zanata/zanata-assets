@@ -89,374 +89,225 @@
       <main role="main">
         <div class="l__wrapper">
           <div class="g">
-  <div class="g__item w--1-2 l--push-v-1">
-    <div class="l--float-left w--2-6-s l--push-right-1">
-      <div class="bx--round bx--inline-block">
-        <a href="../profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
+  <div class="g__item w--1-m w--3-8-l w--1-3 l--push-bottom-half">
+    <p class="txt--meta l--push-all-0">Dashboard</p>
+    <div class="media l--push-bottom-half">
+      <div class="media__item--right bx--round">
+        <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&r=g&s=100" alt="Luke Brooker">
+      </div>
+      <div class="media__body">
+        <h1 class="l--push-all-0">Luke Brooker</h1>
+        <ul class="list--no-bullets">
+          <li>lukebrooker</li>
+          <li>Brisbane, Australia</li>
+          <li class="txt--understated">UX Designer for Zanata, master of nothing. I'm getting lunch soon.</li>
+          <li class="txt--hyphenate"><a href="http://lukebrooker.com">lukebrooker.com<i class="i--small i--right i--external-link txt--neutral"></i></a></li>
+        </ul>
+      </div>
+      <div class="d--top l--push-top-half l--pad-top-half">
+        <div class="txt--hero">
+          <p>You have translated <strong>32,345 words</strong> across <strong>12 projects</strong> to <strong>2 languages</strong></p>
+        </div>
+        <!-- <h2 class="delta headding--secondary l--push-top-0"><i class="i--left i--language"></i>Languages</h2>
+        <ul class="list--no-bullets txt--meta l--push-top-quarter">
+          <li>English (Australian)</li>
+          <li>English (United States)</li>
+          <li>English (United Kingdom)</li>
+          <li>English (Bogan)</li>
+        </ul> -->
       </div>
     </div>
-    <div class="txt--s-align-right">
-      <h1 class="delta">Luke Brooker</h1>
-      <ul class="list--no-bullets">
-        <li>lukebrooker</li>
-        <li>Brisbane, Australia</li>
-        <li><a href="#">Settings <i aria-hidden="true" class="i i--cog"></i></a></li>
-      </ul>
-    </div>
   </div>
-  <div class="g__item w--1-2 l--push-v-1">
-    <div class="txt--hero txt--align-right">
-      <p>You have translated <strong>32,345 words</strong> across <strong>12 projects</strong> to <strong>2 languages</strong></p>
-    </div>
-  </div>
-</div>
-
-<div class="g">
-  <div class="g__item l--push-v-1 w--1-2 w--4-10-h">
+  <div class="g__item w--1-m w--5-8-l w--2-3">
     <div class="tabs--lined">
       <nav class="tabs__nav">
         <ul>
-          <li><a href="#" class="is-active">Your Activity</a></li>
-          <li><a href="#">All Activity</a></li>
-          <li class="tab__end"><a href="#"><span class="badge badge--message">4</span> <i aria-hidden="true" class="i i--bell"></i><span class="is-invisible">Notifications</span></a></li>
+          <li><a href="dashboard" class="is-active"><i class="i i--clock"></i><span class="is-hidden--s i__text--right">Activity</span></a></li>
+          <li><a href="/dashboard/projects"><i class="i i--project"></i><span class="is-hidden--s i__text--right">Projects <span class="txt--neutral"> 3</span></span></a></li>
+          <li><a href="/dashboard/groups"><i class="i i--group"></i><span class="is-hidden--s i__text--right">Groups<span class="txt--neutral"> 5</span></span></a></li>
+          <li><a href="/dashboard/languages"><i class="i i--language"></i><span class="is-hidden--s i__text--right">Languages</span></a></li>
+          <li class="tab__end">
+            <div class="dropdown dropdown--tab dropdown--small dropdown--right dropdown--inline js-dropdown">
+              <a class="dropdown__toggle js-dropdown__toggle" href="#" title="More Actions"><i class="i i--ellipsis"></i></a>
+              <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+                <li><a href="#"class="i__item--right">Export Project to TMX<i class="i i--export i__item__icon"></i></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="tab__end"><a href="settings" title="Account Settings"><span class="is-hidden--s i__text--left">Settings</span><i class="i i--settings" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
-      <div class="tabs__content">
-        <ul class="list--no-bullets loader__container">
-          <li class="l--pad-all-half bg--high--hover bg--faint">
-            <div class="g">
-              <div class="g__item w--2-3">
-                Reviewed <strong>537 words</strong> to Japanese in <a href="#">Zanata v3.0</a>, finishing on <a href="#">string #867</a>
-              </div>
-              <div class="g__item w--1-3">
-                <p class="txt--meta txt--align-right">10 mins ago <i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span></p>
-              </div>
-            </div>
+      <div class="tabs__content panels__container l--push-top-1">
+        <div class="l--push-left-half">
+          <h2 class="heading--secondary">Your Activity</h2>
+        </div>
+        <ul class="list--no-bullets list--slat loader__container">
+          <li class="l--pad-all-half bg--higher--hover bg--faint reveal">
+            <p class="l--float-right txt--neutral l--push-left-half"> <i aria-hidden="true" class="i--large i--review" title="Review"></i>
+              <span class="is-invisible">Review</span>
+            </p>
+            <p class="l--push-all-0">
+              You reviewed <strong>145 words</strong>
+              in
+              <a href="#">Spacewalk</a>
+              , finishing on &#8220;
+              <a href="#">(GMT+0800) Australia (Western)</a>
+              &#8221;
+            </p>
+            <ul class="list--horizontal txt--meta">
+              <li> <i aria-hidden="true" class="i i--clock txt--neutral" title="Time"></i>
+                <span class="is-invisible">Time</span>
+                10 mins ago
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--document txt--neutral" title="Document"></i>
+                <span class="is-invisible">Document</span>
+                <a href="#">StringResource</a>
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--language txt--neutral" title="Language"></i>
+                <span class="is-invisible">Language</span>
+                <a href="#">zh-Hant</a>
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--version txt--neutral" title="Version"><span class="is-invisible">Version</span></i>
+                <a href="#">master</a>
+              </li>
+            </ul>
           </li>
-          <li class="l--pad-all-half bg--high--hover bg--faint">
-            <div class="g">
-              <div class="g__item w--2-3">
-                Reviewed <strong>537 words</strong> to Japanese in <a href="#">Zanata v3.0</a>, finishing on <a href="#">string #867</a>
-              </div>
-              <div class="g__item w--1-3">
-                <p class="txt--meta txt--align-right">10 mins ago <i class="i i--eye"></i></p>
-              </div>
-            </div>
+          <li class="l--pad-all-half bg--higher--hover bg--faint reveal">
+            <p class="l--float-right txt--neutral l--push-left-half">
+              <i aria-hidden="true" class="i--large i--translate" title="Translation"></i>
+              <span class="is-invisible">Translation</span>
+            </p>
+            <p class="l--push-all-0">
+              You translated <strong>537 words</strong>
+              in
+              <a href="#">Zanata</a>
+              , finishing on &#8220;
+              <a href="#">Determines how the project is treated for upload…</a>
+              &#8221;
+            </p>
+            <ul class="list--horizontal txt--meta">
+              <li>
+                <i aria-hidden="true" class="i i--clock txt--neutral" title="Time"></i>
+                <span class="is-invisible">Time</span>
+                25 mins ago
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--document txt--neutral" title="Document"></i>
+                <span class="is-invisible">Document</span>
+                <a href="#">Messages</a>
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--language txt--neutral" title="Language"></i>
+                <span class="is-invisible">Language</span>
+                <a href="#">Japanese</a>
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--version txt--neutral" title="Version"><span class="is-invisible">Version</span></i>
+                <a href="#">3.0</a>
+              </li>
+            </ul>
           </li>
-          <li class="l--pad-all-half bg--high--hover bg--faint">
-            <div class="g">
-              <div class="g__item w--2-3">
-                Reviewed <strong>537 words</strong> to Japanese in <a href="#">Zanata v3.0</a>, finishing on <a href="#">string #867</a>
-              </div>
-              <div class="g__item w--1-3">
-                <p class="txt--meta txt--align-right">10 mins ago <i class="i i--eye"></i></p>
-              </div>
-            </div>
+          <li class="l--pad-all-half bg--higher--hover bg--faint reveal">
+            <p class="l--float-right txt--neutral l--push-left-half">
+              <i aria-hidden="true" class="i--large i--document" title="Uploaded source documents"></i>
+              <span class="is-invisible">Review</span>
+            </p>
+            <p class="l--push-all-0">
+              You uploaded source documents of
+              <strong>453 words</strong>
+              to
+              <a href="#">Spacewalk</a>
+            </p>
+            <ul class="list--horizontal txt--meta">
+              <li>
+                <i aria-hidden="true" class="i i--clock txt--neutral" title="Time"></i>
+                <span class="is-invisible">Time</span>
+                20 mins ago
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--document txt--neutral" title="Document"></i>
+                <span class="is-invisible">Document</span>
+                <a href="#">Messages</a>
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--version txt--neutral" title="Version">
+                  <span class="is-invisible">Version</span>
+                </i>
+                <a href="#">3.0</a>
+              </li>
+            </ul>
           </li>
-          <li class="l--pad-all-half bg--highest bg--high--hover bg--faint">
-            <div class="g">
-              <div class="g__item w--2-3">
-                Reviewed <strong>537 words</strong> to Japanese in <a href="#">Zanata v3.0</a>, finishing on <a href="#">string #867</a>
-              </div>
-              <div class="g__item w--1-3">
-                <p class="txt--meta txt--align-right">10 mins ago <i class="i i--eye"></i></p>
-              </div>
-            </div>
+          <li class="l--pad-all-half bg--higher--hover bg--faint reveal">
+            <p class="l--float-right txt--neutral l--push-left-half">
+              <i aria-hidden="true" class="i--large i--translate-up" title="Uploaded translations"></i>
+              <span class="is-invisible">Uploaded Translation</span>
+            </p>
+            <p class="l--push-all-0">
+              You uploaded translations of
+              <strong>2014 words</strong>
+              to
+              <a href="#">Zanata</a>
+              , finishing on &#8220;
+              <a href="#">If no project type is specified, the type from…</a>
+              &#8221;
+            </p>
+            <ul class="list--horizontal txt--meta">
+              <li>
+                <i aria-hidden="true" class="i i--clock txt--neutral" title="Time"></i>
+                <span class="is-invisible">Time</span>
+                2 hours ago
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--document txt--neutral" title="Document"></i>
+                <span class="is-invisible">Document</span>
+                <a href="#">Messages</a>
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--language txt--neutral" title="Language"></i>
+                <span class="is-invisible">Language</span>
+                <a href="#">Japanese</a>
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--version txt--neutral" title="Version">
+                  <span class="is-invisible">Version</span>
+                </i>
+                <a href="#">3.0</a>
+              </li>
+            </ul>
           </li>
-          <li class="l--pad-all-half bg--high--hover bg--faint">
-            <div class="g">
-              <div class="g__item w--2-3">
-                Reviewed <strong>537 words</strong> to Japanese in <a href="#">Zanata v3.0</a>, finishing on <a href="#">string #867</a>
-              </div>
-              <div class="g__item w--1-3">
-                <p class="txt--meta txt--align-right">10 mins ago <i class="i i--eye"></i></p>
-              </div>
-            </div>
+          <li class="l--pad-all-half bg--higher--hover bg--faint reveal">
+            <p class="l--float-right txt--neutral l--push-left-half">
+              <i aria-hidden="true" class="i--large i--maintain" title="Maintenance"></i>
+              <span class="is-invisible">Maintenance</span>
+            </p>
+            <p class="l--push-all-0">
+              You created a
+              <strong><a href="#">new version</a></strong>
+              of
+              <a href="#">Zanata</a>
+              .
+            </p>
+            <ul class="list--horizontal txt--meta">
+              <li>
+                <i aria-hidden="true" class="i i--clock txt--neutral" title="Time"></i>
+                <span class="is-invisible">Time</span>
+                1 day ago
+              </li>
+              <li class="reveal__target">
+                <i aria-hidden="true" class="i i--version txt--neutral" title="Version">
+                  <span class="is-invisible">Version</span>
+                </i>
+                <a href="#">3.0</a>
+              </li>
+            </ul>
           </li>
-          <a href="#" class="d--top loader"><span class="loader__label">more activity</span></a>
+          <a href="#" class="d--top loader">
+            <span class="loader__label">more activity</span>
+          </a>
         </ul>
-      </div>
-    </div>
-  </div>
-  <div class="g__item w--1-2 w--6-10-h">
-    <div class="g">
-      <div class="g__item w--1-2-h l--push-v-1">
-        <div class="panel">
-          <div class="tabs--accent">
-            <nav class="tabs__nav panel__header">
-              <ul>
-                <li>
-                  <a href="#" class="is-active"><i aria-hidden="true" class="i i--infinity"></i><span class="is-invisible">All</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--star"></i><span class="is-invisible">Starred</span></a>
-                </li>
-                <li class="tab__end">
-                  <a href="#"><i aria-hidden="true" class="i i--plus i i--large"></i><span class="is-invisible">New Project</span></a>
-                </li>
-              </ul>
-            </nav>
-            <div class="tabs__content">
-              <header class="panel__sub-header">
-                <div class="panel__header__sort">
-                  <span class="txt--meta">5 of 12 <i aria-hidden="true" class="i i--clipboard"></i></span>
-                  <div class="dropdown dropdown--inline dropdown--right js-dropdown">
-                    <a class="dropdown__toggle js-dropdown__toggle" href="#">
-                      <span class="is-invisible">Recent </span>
-                      <i aria-hidden="true" class="i i--clock"></i>
-                      <i class="i i--arrow-down dropdown__toggle__icon"></i>
-                    </a>
-                    <ul class="dropdown__content js-dropdown__content">
-                      <li class="dropdown__header">Sort by:</li>
-                      <li><a href="#">Recent</a></li>
-                      <li><a href="#">Alphabetically</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <h2 class="panel__heading">All Projects</h2>
-              </header>
-              <ul class="list--no-bullets">
-                <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
-                  <div class="g--tight l--pad-h-half">
-                    <div class="g__item w--3-4 w--3-4-s">
-                      <h3 class="epsilon"><a href="#">Zanata</a></h3>
-                    </div>
-                    <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
-                      <ul class=" list--horizontal">
-                        <li>
-                          <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
-                        </li>
-                        <li>
-                          <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="l--pad-h-half l--pad-bottom-half">
-                    <div class="dropdown">
-                      <div class="dropdown__toggle" href="#">
-                        <i class="i i--arrow-down dropdown__toggle__icon"></i>
-                        <ul class="dropdown__toggle__content list--horizontal ">
-                          <li>
-                            <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
-                          </li>
-                          <li>
-                            <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
-                          </li>
-                          <li>
-                            <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
-                          </li>
-                          <li>
-                            <a href="#" title="Go to Japanese translation">JP</a>
-                          </li>
-                          <li class="l--float-right">
-                            <span class="txt--state-success">73%</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <ul class="dropdown__content">
-                        <li>
-                          <ul class="list--horizontal">
-                            <li>
-                              <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
-                            </li>
-                            <li>
-                              <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
-                            </li>
-                            <li>
-                              <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="dropdown__divider"></li>
-                        <li>
-                          <span class="txt--meta">Last updated 2 days ago</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="progress-bar">
-                    <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
-                      <span class="is-invisible">Translated</span>
-                    </span>
-                    <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
-                      <span class="is-invisible">Fuzzy</span>
-                    </span>
-                    <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
-                      <span class="is-invisible">Rejected</span>
-                    </span>
-                    <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
-                      <span class="is-invisible">Approved</span>
-                    </span>
-                  </div>
-                </li>
-                <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
-                  <div class="g--tight l--pad-h-half">
-                    <div class="g__item w--3-4 w--3-4-s">
-                      <h3 class="epsilon"><a href="#">Zanata</a></h3>
-                    </div>
-                    <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
-                      <ul class=" list--horizontal">
-                        <li>
-                          <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
-                        </li>
-                        <li>
-                          <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="l--pad-h-half l--pad-bottom-half">
-                    <div class="dropdown">
-                      <div class="dropdown__toggle" href="#">
-                        <i class="i i--arrow-down dropdown__toggle__icon"></i>
-                        <ul class="dropdown__toggle__content list--horizontal ">
-                          <li>
-                            <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
-                          </li>
-                          <li>
-                            <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
-                          </li>
-                          <li>
-                            <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
-                          </li>
-                          <li>
-                            <a href="#" title="Go to Japanese translation">JP</a>
-                          </li>
-                          <li class="l--float-right">
-                            <span class="txt--state-success">73%</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <ul class="dropdown__content">
-                        <li>
-                          <ul class="list--horizontal">
-                            <li>
-                              <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
-                            </li>
-                            <li>
-                              <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
-                            </li>
-                            <li>
-                              <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="dropdown__divider"></li>
-                        <li>
-                          <span class="txt--meta">Last updated 2 days ago</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="progress-bar">
-                    <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
-                      <span class="is-invisible">Translated</span>
-                    </span>
-                    <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
-                      <span class="is-invisible">Fuzzy</span>
-                    </span>
-                    <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
-                      <span class="is-invisible">Rejected</span>
-                    </span>
-                    <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
-                      <span class="is-invisible">Approved</span>
-                    </span>
-                  </div>
-                </li>
-                <!-- <li class="l--pad-all-half"></li>
-                <li class="l--pad-all-half"></li>
-                <li class="l--pad-all-half"></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="g__item w--1-2-h l--push-v-1">
-        <div class="panel">
-          <div class="tabs--accent">
-            <nav class="tabs__nav panel__header">
-              <ul>
-                <li>
-                  <a href="#" class="is-active"><i aria-hidden="true" class="i i--infinity"></i><span class="is-invisible">All</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span></a>
-                </li>
-                <li>
-                  <a href="#"><i aria-hidden="true" class="i i--star"></i><span class="is-invisible">Starred</span></a>
-                </li>
-                <li class="tab__end">
-                  <a href="#"><i aria-hidden="true" class="i i--plus i i--large"></i><span class="is-invisible">New Group</span></a>
-                </li>
-              </ul>
-            </nav>
-            <div class="tabs__content">
-              <header class="panel__sub-header">
-                <div class="panel__header__sort">
-                  <span class="txt--meta">2 of 2 <i aria-hidden="true" class="i i--clipboard"></i></span>
-                  <div class="dropdown js-dropdown dropdown--inline dropdown--right">
-                    <div class="dropdown__toggle js-dropdown__toggle" href="#">
-                      <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
-                      <i class="i i--arrow-down dropdown__toggle__icon"></i>
-                    </div>
-                    <ul class="dropdown__content js-dropdown__content">
-                      <li class="dropdown__header">Sort by:</li>
-                      <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
-                      <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <h2 class="panel__heading">All Groups</h2>
-              </header>
-              <ul class="list--no-bullets">
-                <li class="bg--faint l--pad-v-half bg--highest--hover progress-bar__expander">
-                  <div class="g--tight l--pad-h-half">
-                    <div class="g__item w--3-4 w--3-4-s">
-                      <h3 class="epsilon"><a href="#">JBoss</a></h3>
-                    </div>
-                    <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
-                      <ul class="txt--meta list--horizontal">
-                        <li>
-                          <i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span>
-                        </li>
-                        <li>
-                          <i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <ul class="list--horizontal l--pad-h-half">
-                    <li>
-                      <a href="#" title="16 Projects"><i aria-hidden="true" class="i i--clipboard"></i><span class="is-invisible">Projects</span> 16</a>
-                    </li>
-                    <li>
-                      <a href="#" title="36 Members"><i aria-hidden="true" class="i i--users"></i><span class="is-invisible">Members</span> 36</a>
-                    </li>
-                    <li>
-                      <a href="#" title="21 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 21</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
