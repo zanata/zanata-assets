@@ -57,10 +57,15 @@ zanata.form = (function ($) {
     $elCheckboxes = $(el).find('.js-form__checkbox');
 
     $.each($elCheckboxes, function () {
-      $(this)
-        .append('<span class="form__checkbox__item ' +
-          'js-form__checkbox__item"/>');
-      setCheckRadioStatus($(this));
+      var $this = $(this);
+
+      if (!$this.find('.form__checkbox__item').length) {
+        $this
+          .append('<span class="form__checkbox__item ' +
+            'js-form__checkbox__item"/>');
+        setCheckRadioStatus($this);
+      }
+
     });
 
   };
@@ -73,9 +78,14 @@ zanata.form = (function ($) {
     $elRadios = $(el).find('.js-form__radio');
 
     $.each($elRadios, function () {
-      $(this)
-        .append('<span class="form__radio__item js-form__radio__item"/>');
-      setCheckRadioStatus($(this));
+      var $this = $(this);
+
+      if (!$this.find('.form__radio__item').length) {
+        $this
+          .append('<span class="form__radio__item js-form__radio__item"/>');
+        setCheckRadioStatus($this);
+      }
+
     });
 
   };

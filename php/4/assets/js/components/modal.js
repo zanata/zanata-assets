@@ -1,37 +1,83 @@
-(function ($) {
-  'use strict';
+'use strict';
 
-  var removeModal = function ($el) {
+zanata.createNS('zanata.modal');
+
+zanata.modal = (function ($) {
+
+  var show = function (el) {
+    var $el = $(el);
+    if ($el.parent().is('body')) {
+      $(el).addClass('is-active');
+    }
+    else {
+      var $newEl = $el.clone().appendTo('body');
+      $el.attr('id', $el.attr('id') + '-cloned');
+      // Allow this to animate in
+      setTimeout(function () {
+        $newEl.addClass('is-active is-clone');
+      }, 0);
+    }
+    $('body').addClass('is-modal');
+  };
+
+  var hide = function (el) {
+    var $el = $(el);
     $el.removeClass('is-active');
+
+    if ($el.hasClass('is-clone')) {
+      setTimeout(function () {
+        $('#' + $el.attr('id') + '-cloned').attr('id', $el.attr('id'));
+        $el.remove();
+      }, 300);
+    }
+
     $('body').removeClass('is-modal');
   };
 
-  $(document).on('click touchend', '[data-toggle="modal"]', function () {
-    var modalTarget = $(this).attr('data-target');
+  var init = function () {
 
-    $(modalTarget).addClass('is-active');
-    $('body').addClass('is-modal');
-  });
+    $(document).on('click touchend', '[data-toggle="modal"]', function () {
+      var modalTarget = $(this).attr('data-target');
+      $(modalTarget).trigger('show.zanata.modal');
+    });
 
-  $(document).on('click touchend', '.is-modal', function (e) {
-    if ($(e.target).not('.modal__dialog') &&
-      !$(e.target).parents('.modal__dialog').length) {
-      removeModal($('.modal.is-active'));
-    }
-  });
+    $(document).on('click touchend', '.is-modal', function (e) {
+      if ($(e.target).not('.modal__dialog') &&
+        !$(e.target).parents('.modal__dialog').length) {
+        $('.modal.is-active').trigger('hide.zanata.modal');
+      }
+    });
 
-  $(document).on('keyup', function (e) {
-    if (e.keyCode === 27) {
-      e.stopPropagation();
-      removeModal($('.modal.is-active'));
-    }
-  });
+    $(document).on('keyup', function (e) {
+      if (e.keyCode === 27) {
+        e.stopPropagation();
+        $('.modal.is-active').trigger('hide.zanata.modal');
+      }
+    });
 
-  $(document).on('click touchend', '[data-dismiss="modal"]', function () {
-    removeModal($(this).parents('.modal.is-active'));
-  });
+    $(document).on('click touchend', '[data-dismiss="modal"]', function () {
+      $(this).parents('.modal.is-active').trigger('hide.zanata.modal');
+    });
 
-  // TODO: make sure modals are at the top level of them DOM
-  // If not, copy them there
+    $(document).on('hide.zanata.modal', function (e) {
+      hide(e.target);
+    });
+
+    $(document).on('show.zanata.modal', function (e) {
+      show(e.target);
+    });
+
+  };
+
+  // public API
+  return {
+    init: init,
+    show: show,
+    hide: hide
+  };
 
 })(jQuery);
+
+jQuery(function () {
+  zanata.modal.init();
+});
