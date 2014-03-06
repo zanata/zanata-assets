@@ -31,7 +31,7 @@
     $revealTarget.toggleClass('is-active is-hidden');
     if (revealToggleTitle && revealTitle) {
       $(this).attr('data-toggle-title', revealTitle);
-      zanata.tooltipRefresh($(this), revealToggleTitle);
+      zanata.tooltip.refresh($(this), revealToggleTitle);
     }
     if (revealTextValue && revealToggleValue) {
       $revealText.text(revealToggleValue);
