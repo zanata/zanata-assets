@@ -2500,12 +2500,12 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .modal__dialog:hover,
 .new-zanata .panel:hover,
 .new-zanata .header__user-nav__menu:hover,
-.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .panels__panel.is-active,
+.new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header,
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .dropdown__content:hover,
 .new-zanata .panel__sub-header:hover,
-.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
+.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
 .new-zanata .bg--pop-highest:hover,
 .new-zanata .panel__header:hover,
@@ -2876,22 +2876,22 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--high--hover:hover {
   background-color: #f5f6f7;
 }
-.new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .panels__panel.is-active,
+.new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header,
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .dropdown__content:hover,
 .new-zanata .panel__sub-header:hover,
-.new-zanata .panels__panel.is-active:hover,
 .new-zanata .bg--higher--hover:hover {
   background-color: #fdfdfe;
 }
-.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
+.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
 .new-zanata .bg--pop-highest:hover,
 .new-zanata .tabs--vertical .tabs__nav > li.is-active:hover,
 .new-zanata .tabs--vertical .tabs__content > li:hover,
 .new-zanata .dropdown.is-active .dropdown__toggle:hover,
 .new-zanata .panel__header:hover,
+.new-zanata .panels__panel.is-active:hover,
 .new-zanata .autocomplete__results:hover,
 .new-zanata .rf-au-lst-dcrtn:hover,
 .new-zanata .tabs--accent .tabs__nav:hover,
@@ -2916,11 +2916,11 @@ Centered grids align grid items centrally without needing to use push or pull cl
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
 }
-.new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .panels__panel.is-active {
+.new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header {
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
 }
-.new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn {
+.new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn {
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
 }
@@ -3809,6 +3809,19 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list--stats > li:first-child {
   margin-top: 0;
 }
+.new-zanata .list--stats > li.is-active {
+  background-color: #416988;
+}
+.new-zanata .list--stats > li.is-active > a,
+.new-zanata .list--stats > li.is-active .dropdown__toggle,
+.new-zanata .list--stats > li.is-active .list__title,
+.new-zanata .list--stats > li.is-active .list__item__stats,
+.new-zanata .list--stats > li.is-active .list__item__stats span {
+  color: white;
+}
+.new-zanata .list--stats > li.is-active .list__item__meta {
+  color: #e6e6e6;
+}
 .new-zanata .list--stats .list__item,
 .new-zanata .list--stats .list__item__content {
   padding: 0.8125em 0.8125em 0.40625em;
@@ -3824,7 +3837,7 @@ Sub-headings can be used when placing a heading under another heading.
   line-height: 1em;
 }
 .new-zanata .list--stats .list__item__meta {
-  margin: 0.46429em 0 0;
+  margin: 0.37143em 0 0;
 }
 
 /*
@@ -4948,10 +4961,11 @@ Keep focus while showing and hiding a password field
   -moz-transform: translateZ(0);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  color: #416988;
+  color: #416988 !important;
 }
 .new-zanata .dropdown.is-active .dropdown__toggle {
   border-bottom-width: 2px;
+  color: #416988 !important;
 }
 .new-zanata .dropdown:hover .dropdown__toggle {
   color: #2479bb;
@@ -6733,6 +6747,12 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 }
 .new-zanata .panels--2 .panels__panel {
   width: 50%;
+}
+.new-zanata .panels--2.panel__active-2 .panels__panel:nth-child(2) {
+  background-color: white;
+}
+.new-zanata .panels--2 .panels__panel:nth-child(2) {
+  background-color: white;
 }
 @media (max-width: 46.1875em) {
   .new-zanata .panels--2 .panels__panel:nth-child(2) {

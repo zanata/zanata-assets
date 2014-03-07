@@ -376,6 +376,20 @@ nav ol {
     &:first-child {
       margin-top: 0;
     }
+    &.is-active {
+      // Inverted style needs to override a lot
+      background-color: $color-secondary;
+      > a,
+      .dropdown__toggle,
+      .list__title,
+      .list__item__stats,
+      .list__item__stats span {
+        color: $white;
+      }
+      .list__item__meta {
+        color: $lighter-grey;
+      }
+    }
   }
   .list__item, // Don't use this class
   .list__item__content {
@@ -392,7 +406,7 @@ nav ol {
     line-height: 1em;
   }
   .list__item__meta {
-    margin: rhythm(.25,14px) 0 0;
+    margin: rhythm(.2,14px) 0 0;
   }
 }
 

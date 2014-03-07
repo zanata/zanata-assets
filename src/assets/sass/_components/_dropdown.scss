@@ -69,12 +69,13 @@
 
 .dropdown__container.is-active .dropdown__toggle {
   @include transform3d(translateZ(0));
-  color: $color-link-active;
+  color: $color-link-active !important;
 }
 
 .dropdown.is-active .dropdown__toggle {
   @extend .bg--pop-highest;
   border-bottom-width: 2px;
+  color: $color-link-active !important;
 }
 
 .dropdown:hover .dropdown__toggle {
