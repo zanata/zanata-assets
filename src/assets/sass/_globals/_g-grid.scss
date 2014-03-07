@@ -47,18 +47,22 @@ $grid-padding : rhythm(2)                     !default;
 .g {
   @include pie-clearfix;
   margin: 0;
-  margin-left: - $grid-padding/4;
+  margin-left: - $grid-padding/8;
+  margin-right: - $grid-padding/8;
   padding: 0;
   list-style: none;
   letter-spacing: -0.31em; // Inline block spacing hack - See https://github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
   @include breakpoint($gte-medium) {
-    margin-left: - $grid-padding/2;
+    margin-left: - $grid-padding/4;
+    margin-right: - $grid-padding/4;
   }
   @include breakpoint($gte-large) {
-    margin-left: - $grid-padding;
+    margin-left: - $grid-padding/2;
+    margin-right: - $grid-padding/2;
   }
   > .g {
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -71,17 +75,20 @@ $grid-padding : rhythm(2)                     !default;
   display: inline-block;
   margin: 0;
   padding: 0;
-  padding-left: $grid-padding/4;
+  padding-left: $grid-padding/8;
+  padding-right: $grid-padding/8;
   width: 100%;
   vertical-align: top;
   word-spacing: normal; // Inline block spacing hack
   letter-spacing: normal; // Inline block spacing hack
   *zoom: 1;
   @include breakpoint($gte-medium) {
-    padding-left: $grid-padding/2;
+    padding-left: $grid-padding/4;
+    padding-right: $grid-padding/4;
   }
   @include breakpoint($gte-large) {
-    padding-left: $grid-padding;
+    padding-left: $grid-padding/2;
+    padding-right: $grid-padding/2;
   }
 }
 
@@ -109,6 +116,55 @@ Technically not a grid, but used when you want the grid spacing but no widths on
   > .g__item {
     width: auto !important; // This needs to override all other grids
   }
+}
+
+
+/*
+
+#### Loose Grid
+
+Loose grids have all the properties of regular grids, but with half the spacing.
+
+```
+<div class="l__wrapper">
+  <div class="g--loose">
+    <div class="g__item"><div class="ph__block">Five Sixths</div></div>
+    <div class="g__item"><div class="ph__block">One Sixth</div></div>
+  </div>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.g--loose {
+  @extend .g;
+  margin-left: - $grid-padding/4;
+  margin-right: - $grid-padding/4;
+  @include breakpoint($gte-medium) {
+    margin-left: - $grid-padding/2;
+    margin-right: - $grid-padding/2;
+  }
+  @include breakpoint($gte-large) {
+    margin-left: - $grid-padding;
+    margin-right: - $grid-padding;
+  }
+  > .g__item{
+    padding-left: $grid-padding/4;
+    padding-right: $grid-padding/4;
+    @include breakpoint($gte-medium) {
+      padding-left: $grid-padding/2;
+      padding-right: $grid-padding/2;
+    }
+    @include breakpoint($gte-large) {
+      padding-left: $grid-padding;
+      padding-right: $grid-padding;
+    }
+  }
+}
+
 }
 
 /*

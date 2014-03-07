@@ -195,10 +195,12 @@ textarea {
   overflow: auto;
   height: auto;
   vertical-align: top;
+  min-height: rhythm(3);
 }
 
 select {
   width: 100%;
+  margin: 0 0 rhythm($form-spacing, $form-input-font-size);
 }
 
 }

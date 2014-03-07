@@ -71,7 +71,7 @@
 
 //li
 .autocomplete__result {
-  padding: rhythm(.25);
+  padding: rhythm(.125) rhythm(.25);
   cursor: pointer;
   a {
     color: $color-base-font;

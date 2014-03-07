@@ -21,6 +21,8 @@
         revealTitle = $(this).attr('title') ||
           $(this).attr('data-original-title'),
         revealToggleTitle = $(this).attr('data-toggle-title');
+
+    console.log($revealTarget, $revealParent);
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
     if (!$(e.target).is('label')) {

@@ -11,7 +11,7 @@ zanata.modal = (function ($) {
     }
     else {
       var $newEl = $el.clone().appendTo('body');
-      $el.attr('id', $el.attr('id') + '-cloned');
+      $el.attr('id', $el.attr('id') + '-cloned').empty();
       // Allow this to animate in
       setTimeout(function () {
         $newEl.addClass('is-active is-clone');
@@ -25,9 +25,9 @@ zanata.modal = (function ($) {
     $el.removeClass('is-active');
 
     if ($el.hasClass('is-clone')) {
+      var elClone = '#' + $el.attr('id') + '-cloned';
       setTimeout(function () {
-        $('#' + $el.attr('id') + '-cloned').attr('id', $el.attr('id'));
-        $el.remove();
+        $el.appendTo(elClone).unwrap().removeClass('is-clone');
       }, 300);
     }
 

@@ -3,6 +3,7 @@
 
 .stats {
   color: $color-secondary;
+  @include adjust-font-size-to(14px);
 }
 
 .stats--small {

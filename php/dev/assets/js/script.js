@@ -1937,7 +1937,7 @@ zanata.modal = (function ($) {
     }
     else {
       var $newEl = $el.clone().appendTo('body');
-      $el.attr('id', $el.attr('id') + '-cloned');
+      $el.attr('id', $el.attr('id') + '-cloned').empty();
       // Allow this to animate in
       setTimeout(function () {
         $newEl.addClass('is-active is-clone');
@@ -1951,9 +1951,9 @@ zanata.modal = (function ($) {
     $el.removeClass('is-active');
 
     if ($el.hasClass('is-clone')) {
+      var elClone = '#' + $el.attr('id') + '-cloned';
       setTimeout(function () {
-        $('#' + $el.attr('id') + '-cloned').attr('id', $el.attr('id'));
-        $el.remove();
+        $el.appendTo(elClone).unwrap().removeClass('is-clone');
       }, 300);
     }
 
@@ -2031,6 +2031,8 @@ jQuery(function () {
         revealTitle = $(this).attr('title') ||
           $(this).attr('data-original-title'),
         revealToggleTitle = $(this).attr('data-toggle-title');
+
+    console.log($revealTarget, $revealParent);
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
     if (!$(e.target).is('label')) {
@@ -2041,7 +2043,7 @@ jQuery(function () {
     $revealTarget.toggleClass('is-active is-hidden');
     if (revealToggleTitle && revealTitle) {
       $(this).attr('data-toggle-title', revealTitle);
-      zanata.tooltipRefresh($(this), revealToggleTitle);
+      zanata.tooltip.refresh($(this), revealToggleTitle);
     }
     if (revealTextValue && revealToggleValue) {
       $revealText.text(revealToggleValue);
