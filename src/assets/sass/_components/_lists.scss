@@ -265,6 +265,7 @@ nav ol {
   > li {
     // background-color: $color-bg-lighter;
     border-bottom: $default-border;
+    position: relative;
     &:hover {
       @extend .bg--highest--hover;
     }
@@ -275,7 +276,9 @@ nav ol {
       }
     }
   }
-  .list__item, // Don't use this class
+  // Don't use legacy `list__item` class
+  // Use `list__item__content` *inside* an li
+  .list__item,
   .list__item__content {
     display: table;
     table-layout: fixed;

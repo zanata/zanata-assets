@@ -44,7 +44,6 @@
     }, 100);
   });
 
-
   $(document).on('click touchend', '.js-reveal__reset', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');

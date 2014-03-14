@@ -56,7 +56,7 @@ var srcFolder = './src/',
       expanded: {
         // Temporary, This will get moved and deleted from src
         options: {
-          require : ['compass', 'breakpoint', 'rgbapng', 'animation'],
+          require : ['compass', 'breakpoint', 'rgbapng'],
           basePath: srcFolder + assetsFolder,
           sassDir : 'sass',
           cssDir: 'css',
@@ -197,19 +197,6 @@ var srcFolder = './src/',
         path: 'http://localhost:5000'
       }
     },
-    browser_sync: {
-      files: {
-        src : buildFolder + '/*',
-      },
-      options: {
-        watchTask: true,
-        ghostMode: {
-            scroll: true,
-            links: true,
-            forms: true
-        }
-      },
-    },
     watch: {
       options: {
         livereload: true,
@@ -252,7 +239,6 @@ var srcFolder = './src/',
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');

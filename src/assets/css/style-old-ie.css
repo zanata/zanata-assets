@@ -3284,6 +3284,7 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list--panel > li, .new-zanata .list--stats > li {
   border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  position: relative;
 }
 .new-zanata .list--panel > li.is-active, .new-zanata .list--stats > li.is-active {
   background-color: white;
@@ -5628,25 +5629,17 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   opacity: 1;
 }
 .loader__spinner span {
-  -webkit-animation-name: loading;
   -moz-animation-name: loading;
-  -ms-animation-name: loading;
-  -o-animation-name: loading;
+  -webkit-animation-name: loading;
   animation-name: loading;
-  -webkit-animation-duration: 0.6s;
   -moz-animation-duration: 0.6s;
-  -ms-animation-duration: 0.6s;
-  -o-animation-duration: 0.6s;
+  -webkit-animation-duration: 0.6s;
   animation-duration: 0.6s;
-  -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   position: absolute;
   width: 0.40625em;
@@ -5655,26 +5648,20 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   background-color: #416988;
 }
 .loader__spinner span:nth-child(1) {
-  -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
-  -ms-animation-delay: 0s;
-  -o-animation-delay: 0s;
+  -webkit-animation-delay: 0s;
   animation-delay: 0s;
   left: 0;
 }
 .loader__spinner span:nth-child(2) {
-  -webkit-animation-delay: -0.15s;
   -moz-animation-delay: -0.15s;
-  -ms-animation-delay: -0.15s;
-  -o-animation-delay: -0.15s;
+  -webkit-animation-delay: -0.15s;
   animation-delay: -0.15s;
   left: 0.60938em;
 }
 .loader__spinner span:nth-child(3) {
-  -webkit-animation-delay: -0.3s;
   -moz-animation-delay: -0.3s;
-  -ms-animation-delay: -0.3s;
-  -o-animation-delay: -0.3s;
+  -webkit-animation-delay: -0.3s;
   animation-delay: -0.3s;
   left: 1.21875em;
 }
@@ -5708,32 +5695,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   }
 }
 @-webkit-keyframes loading {
-  0% {
-    background-color: rgba(65, 105, 136, 0.2);
-  }
-
-  50% {
-    background-color: #416988;
-  }
-
-  100% {
-    background-color: rgba(65, 105, 136, 0.2);
-  }
-}
-@-o-keyframes loading {
-  0% {
-    background-color: rgba(65, 105, 136, 0.2);
-  }
-
-  50% {
-    background-color: #416988;
-  }
-
-  100% {
-    background-color: rgba(65, 105, 136, 0.2);
-  }
-}
-@-ms-keyframes loading {
   0% {
     background-color: rgba(65, 105, 136, 0.2);
   }
@@ -6557,25 +6518,17 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   margin-bottom: -0.23214em;
 }
 .new-zanata .header__site-logo.header--loading {
-  -webkit-animation-name: rotate;
   -moz-animation-name: rotate;
-  -ms-animation-name: rotate;
-  -o-animation-name: rotate;
+  -webkit-animation-name: rotate;
   animation-name: rotate;
-  -webkit-animation-duration: 0.5s;
   -moz-animation-duration: 0.5s;
-  -ms-animation-duration: 0.5s;
-  -o-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 .new-zanata .header__menu,
