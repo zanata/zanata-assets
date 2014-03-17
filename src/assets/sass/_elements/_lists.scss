@@ -35,6 +35,7 @@ ol {
   padding: 0 0 0 rhythm(1);
   li {
     @include adjust-font-size-to($base-font-size);
+    list-style-type: disc;
   }
 }
 

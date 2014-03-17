@@ -536,6 +536,7 @@ a:hover,
 .new-zanata ol li {
   font-size: 1em;
   line-height: 1.625em;
+  list-style-type: disc;
 }
 
 /*
@@ -3102,8 +3103,8 @@ Sub-headings can be used when placing a heading under another heading.
   margin: 0;
   padding: 0;
 }
-.new-zanata .list--no-bullets li, .new-zanata nav ul li,
-.new-zanata nav ol li, .new-zanata .list--horizontal li, .new-zanata .panel__pager li, .new-zanata .list--slat li, .new-zanata .list--slat-horizontal li, .new-zanata .list--panel li, .new-zanata .list--stats li, .new-zanata .autocomplete__results li, .new-zanata .rf-au-lst-ul li {
+.new-zanata .list--no-bullets > li, .new-zanata nav ul > li,
+.new-zanata nav ol > li, .new-zanata .list--horizontal > li, .new-zanata .panel__pager > li, .new-zanata .list--slat > li, .new-zanata .list--slat-horizontal > li, .new-zanata .list--panel > li, .new-zanata .list--stats > li, .new-zanata .autocomplete__results > li, .new-zanata .rf-au-lst-ul > li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;

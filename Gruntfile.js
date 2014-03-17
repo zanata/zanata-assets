@@ -256,7 +256,7 @@ var srcFolder = './src/',
   grunt.registerTask('dev', 'Build a dev version without watching or running a server.\n', ['init', 'shell:jekyllDev']);
 
   // Watch
-  grunt.registerTask('w', 'Start a server and watch all files.\nIf a file changes re-compile and reload browser.\n', ['dev', 'connect', 'browser_sync', 'watch']);
+  grunt.registerTask('w', 'Start a server and watch all files.\nIf a file changes re-compile and reload browser.\n', ['dev', 'connect', 'watch']);
 
   // Watch and open server in browser
   grunt.registerTask('wo', 'The same as `w` but also opens the project in your browser.\n', ['dev', 'connect', 'open:server', 'watch']);
