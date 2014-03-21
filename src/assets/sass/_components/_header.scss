@@ -257,10 +257,10 @@
   top: 0;
   right: 0;
   padding: rhythm(.325) rhythm(.25) rhythm(.325) 0;
-  @include breakpoint($gte-medium) {
+  @include breakpoint($gte-m-l) {
     padding: rhythm(.325) rhythm(1) rhythm(.325) 0;
   }
-  @include breakpoint($gte-large) {
+  @include breakpoint($gte-huge) {
     padding: rhythm(.325) rhythm(2) rhythm(.325) 0;
   }
 }

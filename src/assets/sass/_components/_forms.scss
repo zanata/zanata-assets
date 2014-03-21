@@ -142,21 +142,9 @@
     @include box-shadow($default-box-shadow-inset);
     background-color: lighten($lightest-grey, 2%);
   }
-  &:after {
-    @extend .is-transition-fast;
-    position: absolute;
-    @include transform(scale(0.1, 0.1));
-    color: $color-secondary;
-    @include opacity(0);
-  }
   &.is-checked {
     &:before {
       border-color: $color-secondary;
-      background-color: $white;
-    }
-    &:after {
-      @include transform(scale(1, 1));
-      @include opacity(1);
     }
   }
 }
@@ -166,11 +154,25 @@
     border-radius: $default-border-radius;
   }
   &:after {
-    @extend .i;
     @extend .i:before;
     @extend .i--checkmark:before;
+    @extend .is-transition-fast;
+    @include transform(scale(0.1, 0.1));
+    @include opacity(0);
+    @extend .i;
+    position: absolute;
     top: .3em;
     left: .43em;
+    color: $color-secondary;
+  }
+  &.is-checked {
+    &:before {
+      background-color: $white;
+    }
+    &:after {
+      @include transform(scale(1, 1));
+      @include opacity(1);
+    }
   }
 }
 
@@ -179,23 +181,17 @@
     border-radius: 100px; // Makes it round
     top: .33em;
     left: .45em;
+    @include box-shadow($default-box-shadow-inset);
     @include breakpoint($gte-huge) {
       top: .27em;
       width: 1.05em;
       height: 1.05em;
     }
   }
-  &:after {
-    content: "";
-    width: .5em;
-    height: .5em;
-    top: .58em;
-    left: .69em;
-    background-color: $color-secondary;
-    border-radius: 100px;
-    @include breakpoint($gte-huge) {
-      top: .55em;
-      left: .72em;
+  &.is-checked {
+    &:before {
+      background-color: $color-secondary;
+      @include background-image(radial-gradient(ellipse at center, $color-secondary 37%, $white 42%));
     }
   }
 }

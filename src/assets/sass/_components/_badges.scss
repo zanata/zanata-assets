@@ -4,9 +4,12 @@
 
 ```example
 <span class="badge">6</span>
-<span class="badge--highlight">highlight</span>
-<span class="badge--warning">3</span>
-<span class="badge--danger">missing</span>
+<span class="badge--highlight">1</span>
+<span class="badge--success">2</span>
+<span class="badge--unsure">3</span>
+<span class="badge--warning">4</span>
+<span class="badge--danger">5</span>
+<span class="badge--neutral">6</span>
 ```
 
 */
@@ -16,7 +19,10 @@
 
 .badge {
   @include adjust-font-size-to(14px, 0.75);
-  @include border-radius($default-border-radius);
+  @include border-radius(100px);
+  min-width: rhythm(.75, 14px);
+  height: rhythm(.75, 14px);
+  text-align: center;
   display: inline-block;
   padding: 0 rhythm(.2, 14px);
   background-color: $color-secondary-20;
@@ -40,9 +46,15 @@
   color: $white;
 }
 
-.badge--danger {
+.badge--success {
   @extend .badge;
-  background-color: $color-danger;
+  background-color: $color-success;
+  color: $white;
+}
+
+.badge--unsure {
+  @extend .badge;
+  background-color: $color-unsure;
   color: $white;
 }
 
@@ -51,6 +63,19 @@
   background-color: $color-warning;
   color: $white;
 }
+
+.badge--danger {
+  @extend .badge;
+  background-color: $color-danger;
+  color: $white;
+}
+
+.badge--neutral {
+  @extend .badge;
+  background-color: $color-neutral;
+  color: $color-secondary-70;
+}
+
 
 %badge--position {
   @extend .badge;

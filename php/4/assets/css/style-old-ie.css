@@ -2149,8 +2149,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .is-transition-fast, .new-zanata .form__checkbox,
 .new-zanata .form__radio, .new-zanata .form__checkbox__item:before,
-.new-zanata .form__radio__item:before, .new-zanata .form__checkbox__item:after,
-.new-zanata .form__radio__item:after {
+.new-zanata .form__radio__item:before, .new-zanata .form__checkbox__item:after {
   -moz-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -3634,25 +3633,30 @@ _links.scss
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: #f7f7f7;
 }
-.new-zanata .form__checkbox__item:after,
-.new-zanata .form__radio__item:after {
-  position: absolute;
+.new-zanata .form__checkbox__item.is-checked:before,
+.new-zanata .form__radio__item.is-checked:before {
+  border-color: #416988;
+}
+.new-zanata .form__checkbox__item:before {
+  border-radius: 2px;
+}
+.new-zanata .form__checkbox__item:after {
   -moz-transform: scale(0.1, 0.1);
   -ms-transform: scale(0.1, 0.1);
   -o-transform: scale(0.1, 0.1);
   -webkit-transform: scale(0.1, 0.1);
   transform: scale(0.1, 0.1);
-  color: #416988;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+  position: absolute;
+  top: .3em;
+  left: .43em;
+  color: #416988;
 }
-.new-zanata .form__checkbox__item.is-checked:before,
-.new-zanata .form__radio__item.is-checked:before {
-  border-color: #416988;
+.new-zanata .form__checkbox__item.is-checked:before {
   background-color: white;
 }
-.new-zanata .form__checkbox__item.is-checked:after,
-.new-zanata .form__radio__item.is-checked:after {
+.new-zanata .form__checkbox__item.is-checked:after {
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
@@ -3661,26 +3665,20 @@ _links.scss
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-.new-zanata .form__checkbox__item:before {
-  border-radius: 2px;
-}
-.new-zanata .form__checkbox__item:after {
-  top: .3em;
-  left: .43em;
-}
 .new-zanata .form__radio__item:before {
   border-radius: 100px;
   top: .33em;
   left: .45em;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-.new-zanata .form__radio__item:after {
-  content: "";
-  width: .5em;
-  height: .5em;
-  top: .58em;
-  left: .69em;
+.new-zanata .form__radio__item.is-checked:before {
   background-color: #416988;
-  border-radius: 100px;
+  background-image: -moz-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
+  background-image: -o-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
+  background-image: -webkit-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
+  background-image: radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
 }
 .new-zanata .form__checkbox__label,
 .new-zanata .form__radio__label {
@@ -4698,21 +4696,44 @@ Used in panel headers to match the header layout
 ### Labels
 
 ```
-<p><span class="label">Label</span></p>
-<p><span class="label--highlight">Label Highlight</span></p>
+<span class="label">Label</span>
+<span class="label--highlight">Highlight</span>
+<span class="label--success">Success</span>
+<span class="label--unsure">Unsure</span>
+<span class="label--warning">Warning</span>
+<span class="label--danger">Danger</span>
+<span class="label--neutral">Neutral</span>
 ```
 
 */
-.new-zanata .label, .new-zanata .label--highlight {
+.new-zanata .label, .new-zanata .label--highlight, .new-zanata .label--success, .new-zanata .label--unsure, .new-zanata .label--warning, .new-zanata .label--danger, .new-zanata .label--neutral {
   background-color: #d9e1e7;
   padding: 0 0.25em;
-  margin: 0.075em 0.25em 0;
-  display: inline-block;
+  margin: 0 0.135em;
   font-size: 0.8125em;
-  vertical-align: top;
 }
 .new-zanata .label--highlight {
   background-color: #4e9fdd;
+  color: white;
+}
+.new-zanata .label--success {
+  background-color: #70a98b;
+  color: white;
+}
+.new-zanata .label--unsure {
+  background-color: #e0c350;
+  color: white;
+}
+.new-zanata .label--warning {
+  background-color: #e3824e;
+  color: white;
+}
+.new-zanata .label--danger {
+  background-color: #e0575b;
+  color: white;
+}
+.new-zanata .label--neutral {
+  background-color: #c6d2db;
   color: white;
 }
 
@@ -4862,18 +4883,24 @@ Used in panel headers to match the header layout
 
 ```example
 <span class="badge">6</span>
-<span class="badge--highlight">highlight</span>
-<span class="badge--warning">3</span>
-<span class="badge--danger">missing</span>
+<span class="badge--highlight">1</span>
+<span class="badge--success">2</span>
+<span class="badge--unsure">3</span>
+<span class="badge--warning">4</span>
+<span class="badge--danger">5</span>
+<span class="badge--neutral">6</span>
 ```
 
 */
-.new-zanata .badge, .new-zanata .badge--highlight, .new-zanata .badge--danger, .new-zanata .badge--warning, .new-zanata .badge--bl, .new-zanata .badge--br {
+.new-zanata .badge, .new-zanata .badge--highlight, .new-zanata .badge--success, .new-zanata .badge--unsure, .new-zanata .badge--warning, .new-zanata .badge--danger, .new-zanata .badge--neutral, .new-zanata .badge--bl, .new-zanata .badge--br {
   font-size: 0.875em;
   line-height: 1.39286em;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  min-width: 1.39286em;
+  height: 1.39286em;
+  text-align: center;
   display: inline-block;
   padding: 0 0.37143em;
   background-color: #d9e1e7;
@@ -4892,13 +4919,25 @@ Used in panel headers to match the header layout
   background-color: #4e9fdd;
   color: white;
 }
-.new-zanata .badge--danger {
-  background-color: #e0575b;
+.new-zanata .badge--success {
+  background-color: #70a98b;
+  color: white;
+}
+.new-zanata .badge--unsure {
+  background-color: #e0c350;
   color: white;
 }
 .new-zanata .badge--warning {
   background-color: #e3824e;
   color: white;
+}
+.new-zanata .badge--danger {
+  background-color: #e0575b;
+  color: white;
+}
+.new-zanata .badge--neutral {
+  background-color: #c6d2db;
+  color: #7c96ac;
 }
 .new-zanata .badge--bl, .new-zanata .badge--br {
   position: absolute;
@@ -6637,7 +6676,6 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   right: 0;
   padding: 0.52813em 0.40625em 0.52813em 0;
   padding: 0.52813em 1.625em 0.52813em 0;
-  padding: 0.52813em 3.25em 0.52813em 0;
 }
 .new-zanata .header__avatar {
   width: 2.03125em;
