@@ -862,7 +862,10 @@ a:hover,
 }
 .new-zanata select {
   width: 100%;
-  margin: 0 0 0.8125em;
+  margin: 0;
+  height: 2.03125em;
+  border: 1px solid #ccc;
+  color: #444c54;
 }
 
 .new-zanata audio,
@@ -3878,6 +3881,47 @@ Sub-headings can be used when placing a heading under another heading.
   background-color: inherit !important;
 }
 
+/*
+
+#### List Highlight
+
+```example
+<ul class="list--slat">
+  <li class="list__item--google">Google</li>
+  <li class="list__item--yahoo">Yahoo</li>
+  <li class="list__item--fedora">Fedora</li>
+</ul>
+```
+
+*/
+.new-zanata .list__item--fedora:before, .new-zanata .list__item--google:before, .new-zanata .list__item--yahoo:before, .new-zanata .list__item--openid:before {
+  background-repeat: no-repeat;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  margin-right: 0.40625em;
+  width: 1.21875em;
+  height: 1.21875em;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-top: -0.1625em;
+}
+.new-zanata .list__item--fedora:before {
+  background-image: url(../img/fedora-logo.svg);
+}
+.new-zanata .list__item--google:before {
+  background-image: url(../img/google-logo.svg);
+}
+.new-zanata .list__item--yahoo:before {
+  background-image: url(../img/yahoo-logo.svg);
+}
+.new-zanata .list__item--openid:before {
+  background-image: url(../img/openid-logo.svg);
+}
+
 _links.scss
 .link--success {
   color: #70a98b !important;
@@ -4785,7 +4829,7 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs--vertical .tabs__content > li {
   display: none;
   padding: 0.8125em;
-  min-height: 16.25em;
+  min-height: 17.875em;
 }
 .new-zanata .tabs--vertical .tabs__content > li.is-active {
   display: block;
@@ -5751,7 +5795,7 @@ Used in panel headers to match the header layout
 .new-zanata input.button--danger.is-active {
   background-color: #b34548;
 }
-.new-zanata .button--fedora, .new-zanata .button--google, .new-zanata .button--yahoo {
+.new-zanata .button--fedora, .new-zanata .button--google, .new-zanata .button--yahoo, .new-zanata .button--openid {
   background-repeat: no-repeat;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -5766,6 +5810,9 @@ Used in panel headers to match the header layout
 }
 .new-zanata .button--yahoo {
   background-image: url(../img/yahoo-logo.svg);
+}
+.new-zanata .button--openid {
+  background-image: url(../img/openid-logo.svg);
 }
 
 /*

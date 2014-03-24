@@ -200,7 +200,10 @@ textarea {
 
 select {
   width: 100%;
-  margin: 0 0 rhythm($form-spacing, $form-input-font-size);
+  margin: 0;
+  height: rhythm(1.25);
+  border: 1px solid #ccc;
+  color: $color-base-font;
 }
 
 }

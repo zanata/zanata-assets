@@ -249,6 +249,11 @@ input.button--danger, {
   background-image: url(../img/yahoo-logo.svg);
 }
 
+.button--openid {
+  @extend %button--brand;
+  background-image: url(../img/openid-logo.svg);
+}
+
 }
 
 

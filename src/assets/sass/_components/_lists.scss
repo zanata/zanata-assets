@@ -472,3 +472,68 @@ nav ol {
 }
 
 }
+
+/*
+
+#### List Highlight
+
+```example
+<ul class="list--slat">
+  <li class="list__item--google">Google</li>
+  <li class="list__item--yahoo">Yahoo</li>
+  <li class="list__item--fedora">Fedora</li>
+</ul>
+```
+
+*/
+
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+// Specific Branded Buttons
+
+%list__item--brand {
+  &:before {
+    background-repeat: no-repeat;
+    @include background-size(contain);
+    content: "";
+    display: inline-block;
+    margin-right: rhythm(.25);
+    width: rhythm(.75);
+    height: rhythm(.75);
+    border-radius: 50px; //Round
+    vertical-align: middle;
+    margin-top: rhythm(-.1);
+  }
+}
+
+.list__item--fedora {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/fedora-logo.svg);
+  }
+}
+
+.list__item--google {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/google-logo.svg);
+  }
+}
+
+.list__item--yahoo {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/yahoo-logo.svg);
+  }
+}
+
+.list__item--openid {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/openid-logo.svg);
+  }
+}
+
+}

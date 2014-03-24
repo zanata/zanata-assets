@@ -204,7 +204,7 @@
       display: none;
       @extend .bg--pop-highest;
       padding: rhythm(.5);
-      min-height: rhythm(10);
+      min-height: rhythm(11);
       &.is-active {
         display: block;
       }
