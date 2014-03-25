@@ -15,7 +15,7 @@
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
 
-<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable">Oh noes! Don't do that.<a href="#" class="message__remove js-message-remove"><i class="i i--remove"></i></a></div>
+<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable is-active">Oh noes! Don't do that.<button class="message__remove js-message-remove"><i class="i i--remove"></i></button></div>
 ```
 
 */
@@ -44,15 +44,13 @@
 
 .message__remove {
   @extend .button--link;
-  @extend .link--danger;
   @include opacity(.6);
   position: absolute;
   top: 0;
   right: 0;
   width: rhythm(1.5);
-  height: rhythm(1.5);
   text-align: center;
-  line-height: rhythm(1.5);
+  padding: rhythm(.25) !important;
   .i {
     line-height: rhythm(1);
   }
@@ -79,24 +77,36 @@
   @extend .message;
   @extend .bg--danger;
   @extend .txt--danger;
+  a {
+    @extend .link--danger;
+  }
 }
 
 .message--warning {
   @extend .message;
   @extend .bg--warning;
   @extend .txt--warning;
+  a {
+    @extend .link--warning;
+  }
 }
 
 .message--unsure {
   @extend .message;
   @extend .bg--unsure;
   @extend .txt--unsure;
+  a {
+    @extend .link--unsure;
+  }
 }
 
 .message--success {
   @extend .message;
   @extend .bg--success;
   @extend .txt--success;
+  a {
+    @extend .link--success;
+  }
 }
 
 .message--highlight {
@@ -109,6 +119,7 @@
   @extend .message;
   @extend .bg--neutral;
   @extend .txt--neutral;
+
 }
 
 }

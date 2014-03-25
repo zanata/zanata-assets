@@ -3504,47 +3504,47 @@ Sub-headings can be used when placing a heading under another heading.
 }
 
 _links.scss
-.link--success {
+.link--success, _links.scss .new-zanata .message--success a, .new-zanata .message--success _links.scss a {
   color: #70a98b !important;
 }
 _links.scss
-.link--success:hover, _links.scss
-.link--success:focus {
+.link--success:hover, _links.scss .new-zanata .message--success a:hover, .new-zanata .message--success _links.scss a:hover, _links.scss
+.link--success:focus, _links.scss .new-zanata .message--success a:focus, .new-zanata .message--success _links.scss a:focus {
   color: #4e7661 !important;
 }
 _links.scss
-.link--success:active, _links.scss
-.link--success.is-active {
+.link--success:active, _links.scss .new-zanata .message--success a:active, .new-zanata .message--success _links.scss a:active, _links.scss
+.link--success.is-active, _links.scss .new-zanata .message--success a.is-active, .new-zanata .message--success _links.scss a.is-active {
   color: #2c4337 !important;
 }
 
-.link--unsure {
+.link--unsure, .new-zanata .message--unsure a {
   color: #e0c350 !important;
 }
-.link--unsure:hover, .link--unsure:focus {
+.link--unsure:hover, .new-zanata .message--unsure a:hover, .link--unsure:focus, .new-zanata .message--unsure a:focus {
   color: #9c8838 !important;
 }
-.link--unsure:active, .link--unsure.is-active {
+.link--unsure:active, .new-zanata .message--unsure a:active, .link--unsure.is-active, .new-zanata .message--unsure a.is-active {
   color: #594e20 !important;
 }
 
-.link--warning {
+.link--warning, .new-zanata .message--warning a {
   color: #e3824e !important;
 }
-.link--warning:hover, .link--warning:focus {
+.link--warning:hover, .new-zanata .message--warning a:hover, .link--warning:focus, .new-zanata .message--warning a:focus {
   color: #9e5b36 !important;
 }
-.link--warning:active, .link--warning.is-active {
+.link--warning:active, .new-zanata .message--warning a:active, .link--warning.is-active, .new-zanata .message--warning a.is-active {
   color: #5a341f !important;
 }
 
-.link--danger, .new-zanata .message__remove {
+.link--danger, .new-zanata .message--danger a {
   color: #e0575b !important;
 }
-.link--danger:hover, .new-zanata .message__remove:hover, .link--danger:focus, .new-zanata .message__remove:focus {
+.link--danger:hover, .new-zanata .message--danger a:hover, .link--danger:focus, .new-zanata .message--danger a:focus {
   color: #9c3c3f !important;
 }
-.link--danger:active, .new-zanata .message__remove:active, .link--danger.is-active, .new-zanata .is-active.message__remove {
+.link--danger:active, .new-zanata .message--danger a:active, .link--danger.is-active, .new-zanata .message--danger a.is-active {
   color: #592224 !important;
 }
 
@@ -4861,7 +4861,7 @@ Used in panel headers to match the header layout
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
 
-<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable">Oh noes! Don't do that.<a href="#" class="message__remove js-message-remove"><i class="i i--remove"></i></a></div>
+<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable is-active">Oh noes! Don't do that.<button class="message__remove js-message-remove"><i class="i i--remove"></i></button></div>
 ```
 
 */
@@ -4888,9 +4888,8 @@ Used in panel headers to match the header layout
   top: 0;
   right: 0;
   width: 2.4375em;
-  height: 2.4375em;
   text-align: center;
-  line-height: 2.4375em;
+  padding: 0.40625em !important;
 }
 .new-zanata .message__remove .i, .new-zanata .message__remove .i--inline, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--understated, .new-zanata .message__remove .i--small, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form__checkbox__item:after, .new-zanata .message__remove .form--search:before {
   line-height: 1.625em;
