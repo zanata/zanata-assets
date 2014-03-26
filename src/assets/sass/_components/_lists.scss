@@ -293,6 +293,7 @@ nav ol {
     display: table-cell;
     width: 100%;
     vertical-align: middle;
+    line-height: 1em;
   }
   .list__item--actionable {
     position: relative;
@@ -313,9 +314,21 @@ nav ol {
     vertical-align: middle;
     white-space: nowrap;
   }
+  .list__item__list {
+    @extend .list--horizontal;
+    display: inline-block;
+    line-height: .75em;
+    > li {
+      margin-right: rhythm(.125);
+      line-height: 1em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
   .list__item__meta {
     @include font-size(14px);
-    display: inline-block;
+    display: block;
     margin: 0 0 rhythm(.25,14px);
     color: $color-secondary-50;
     font-weight: 400;
@@ -379,8 +392,7 @@ nav ol {
 .list--stats {
   @extend .list--panel;
   > li {
-    border-bottom: none;
-    margin-top: rhythm(-.25);
+    padding-bottom: rhythm(.25);
     &:first-child {
       margin-top: 0;
     }

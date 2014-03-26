@@ -121,13 +121,13 @@
       @extend .bg--high;
     }
     a.is-active {
-      @extend .bg--high;
+      @extend .bg--higher;
       border-left: 1px solid rgba($color-secondary, .15);
       border-right: 1px solid rgba($color-secondary, .15);
       position: relative;
       cursor: default;
       &:after {
-        @extend .bg--high;
+        @extend .bg--higher;
         content: "";
         position: absolute;
         bottom: -2px;

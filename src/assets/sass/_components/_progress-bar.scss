@@ -14,7 +14,9 @@
 
 .progress-bar__expander {
   position: relative;
-  padding-bottom: rhythm(.5);
+  margin-top: rhythm(-.25);
+  padding-bottom: rhythm(.5) !important;
+  border-bottom: none !important;
   &:hover,
   &.is-active {
     .no-touch & {
@@ -35,7 +37,8 @@
 }
 .progress-bar--large__expander {
   position: relative;
-  padding-bottom: rhythm(1);
+  padding-bottom: rhythm(1) !important;
+  border-bottom: none !important;
   &:hover ,
   &.is-active {
     .no-touch & {
