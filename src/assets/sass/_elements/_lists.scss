@@ -36,6 +36,8 @@ ol {
   li {
     @include adjust-font-size-to($base-font-size);
     list-style-type: disc;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 }
 

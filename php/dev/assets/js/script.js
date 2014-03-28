@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-03-26
+/*! zanata-assets - v0.1.0 - 2014-03-28
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1588,40 +1588,11 @@ zanata.createNS = function (namespace) {
   return parent;
 };
 
-zanata.createNS('zanata.tooltip');
-
-zanata.tooltip = (function ($) {
-
-  // Private methods
-  var init = function (el) {
-    $(el).tooltip({
-      placement: 'auto bottom',
-      container: 'body',
-      delay: {
-        show: '500',
-        hide: '100'
-      }
-    });
-  };
-
-  var refresh = function (el, newTitle) {
-    $(el)
-      .tooltip('hide')
-      .attr('data-original-title', newTitle)
-      .tooltip('fixTitle')
-      .tooltip('show');
-  };
-
-  // public API
-  return {
-    init: init,
-    refresh: refresh
-  };
-
-})(jQuery);
-
 jQuery(function () {
   zanata.tooltip.init('[title]');
+
+  // Make touches as fast as desktop clicks
+  FastClick.attach(document.body);
 });
 
 jQuery(function () {
@@ -1661,10 +1632,10 @@ jQuery(function () {
     });
 
   jQuery(document)
-    .bind('click touchend', collapseActiveDropdowns);
+    .bind('click', collapseActiveDropdowns);
 
   jQuery(document)
-    .on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
+    .on('click', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
 
   // TODO: All this can be deleted when old components are removed - in 3.4
@@ -1701,16 +1672,16 @@ jQuery(function () {
     });
 
   jQuery(document)
-    .bind('click touchend', collapseActiveDropdownsOld);
+    .bind('click', collapseActiveDropdownsOld);
   jQuery('.dropdown__toggle')
     .not('.js-dropdown__toggle')
-    .on('click touchend', toggleThisCollapseOthersOld);
+    .on('click', toggleThisCollapseOthersOld);
 
 });
 
 jQuery(function () {
   'use strict';
-  jQuery(document).on('click touchend', '.js-example__setter', function () {
+  jQuery(document).on('click', '.js-example__setter', function () {
     var exampleState = jQuery(this).attr('data-example');
     // Reset class and apply new one
     jQuery(this).parents('.js-example').find('.js-example__target')
@@ -1816,7 +1787,7 @@ zanata.form = (function ($) {
     appendRadios();
 
     $('.js-form-password-parent')
-      .on('click touchend', '.js-form-password-toggle', function (e) {
+      .on('click', '.js-form-password-toggle', function (e) {
 
         var $passwordInput = $(this)
           .parents('.js-form-password-parent')
@@ -1857,17 +1828,17 @@ zanata.form = (function ($) {
       );
 
     $('.js-form__input--copyable')
-      .on('click touchend', function () {
+      .on('click', function () {
         $(this).select();
       });
 
-    $(document).on('click touchend', '.js-form__checkbox', function (e) {
+    $(document).on('click', '.js-form__checkbox', function (e) {
       setCheckRadio($(this));
       setCheckRadioStatus($(this));
       e.preventDefault();
     });
 
-    $(document).on('click touchend', '.js-form__radio', function (e) {
+    $(document).on('click', '.js-form__radio', function (e) {
       setCheckRadio($(this));
       removeRadioStatus($(this));
       setCheckRadioStatus($(this));
@@ -1889,23 +1860,64 @@ jQuery(function () {
   zanata.form.init();
 });
 
-jQuery(function () {
-  'use strict';
+'use strict';
 
-  jQuery('.loader__container').on('click touchend', '.loader', function () {
-    if (jQuery('.loader__spinner', this).length <= 0) {
-      jQuery('.loader__label', this)
-        .append('<span class="loader__spinner"><span></span>' +
-          '<span></span><span></span></span>');
-      jQuery(this).addClass('is-active');
+zanata.createNS('zanata.loader');
+
+zanata.loader = (function ($) {
+
+  var activate = function (el) {
+    var $el = $(el),
+        $label = $el.find('.loader__label');
+
+    if ($label.length > 0) {
+      $label.append('<span class="loader__spinner"><span></span>' +
+        '<span></span><span></span></span>');
     }
-  });
+    else {
+      $el.append('<span class="loader__spinner"><span></span>' +
+        '<span></span><span></span></span>');
+    }
 
+    $el.addClass('is-active');
+  };
+
+  var deactivate = function (el) {
+    var $el = $(el);
+
+    $el.find('.loader__spinner').remove();
+    $el.removeClass('is-active');
+  };
+
+  var init = function () {
+
+    $(document).on('click', '.js-loader, .loader', function (e) {
+      // If it is not active
+      e.preventDefault();
+      if (!$(this).hasClass('is-active')) {
+        activate(this);
+      }
+    });
+
+  };
+
+  // public API
+  return {
+    init: init,
+    activate: activate,
+    deactivate: deactivate
+  };
+
+})(jQuery);
+
+jQuery(function () {
+  zanata.loader.init();
 });
 
+
 jQuery(function () {
   'use strict';
-  jQuery(document).on('click touchend', '.js-message-remove', function (e) {
+  jQuery(document).on('click', '.js-message-remove', function (e) {
     var $this = jQuery(this),
         $parent = $this.parents('.message--removable');
     e.preventDefault();
@@ -1962,12 +1974,12 @@ zanata.modal = (function ($) {
 
   var init = function () {
 
-    $(document).on('click touchend', '[data-toggle="modal"]', function () {
+    $(document).on('click', '[data-toggle="modal"]', function () {
       var modalTarget = $(this).attr('data-target');
       $(modalTarget).trigger('show.zanata.modal');
     });
 
-    $(document).on('click touchend', '.is-modal', function (e) {
+    $(document).on('click', '.is-modal', function (e) {
       if ($(e.target).not('.modal__dialog') &&
         !$(e.target).parents('.modal__dialog').length) {
         $('.modal.is-active').trigger('hide.zanata.modal');
@@ -1981,7 +1993,7 @@ zanata.modal = (function ($) {
       }
     });
 
-    $(document).on('click touchend', '[data-dismiss="modal"]', function () {
+    $(document).on('click', '[data-dismiss="modal"]', function () {
       $(this).parents('.modal.is-active').trigger('hide.zanata.modal');
     });
 
@@ -2010,7 +2022,7 @@ jQuery(function () {
 
 (function ($) {
   'use strict';
-  $(document).on('click touchend', '.js-reveal__show', function () {
+  $(document).on('click', '.js-reveal__show', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal');
@@ -2021,7 +2033,7 @@ jQuery(function () {
       $revealTargetInput.focus();
     }, 100);
   });
-  $(document).on('click touchend', '.js-reveal__toggle', function (e) {
+  $(document).on('click', '.js-reveal__toggle', function (e) {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal'),
@@ -2054,13 +2066,13 @@ jQuery(function () {
     }, 100);
   });
 
-  $(document).on('click touchend', '.js-reveal__reset', function () {
+  $(document).on('click', '.js-reveal__reset', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');
     $revealTargetInput.val('').focus();
     $(this).addClass('is-hidden');
   });
-  $(document).on('click touchend', '.js-reveal__cancel', function () {
+  $(document).on('click', '.js-reveal__cancel', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal');
@@ -2134,7 +2146,7 @@ zanata.tabs = (function ($) {
 
   var init = function () {
 
-    $('.js-tabs').on('click touchend', '.js-tabs-nav a', function (e) {
+    $('.js-tabs').on('click', '.js-tabs-nav a', function (e) {
       e.preventDefault();
       activate(this);
     });
@@ -2152,3 +2164,37 @@ zanata.tabs = (function ($) {
 jQuery(function () {
   zanata.tabs.init();
 });
+
+'use strict';
+
+zanata.createNS('zanata.tooltip');
+
+zanata.tooltip = (function ($) {
+
+  // Private methods
+  var init = function (el) {
+    $(el).tooltip({
+      placement: 'auto bottom',
+      container: 'body',
+      delay: {
+        show: '500',
+        hide: '100'
+      }
+    });
+  };
+
+  var refresh = function (el, newTitle) {
+    $(el)
+      .tooltip('hide')
+      .attr('data-original-title', newTitle)
+      .tooltip('fixTitle')
+      .tooltip('show');
+  };
+
+  // public API
+  return {
+    init: init,
+    refresh: refresh
+  };
+
+})(jQuery);

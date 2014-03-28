@@ -1,6 +1,6 @@
 (function ($) {
   'use strict';
-  $(document).on('click touchend', '.js-reveal__show', function () {
+  $(document).on('click', '.js-reveal__show', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal');
@@ -11,7 +11,7 @@
       $revealTargetInput.focus();
     }, 100);
   });
-  $(document).on('click touchend', '.js-reveal__toggle', function (e) {
+  $(document).on('click', '.js-reveal__toggle', function (e) {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal'),
@@ -44,13 +44,13 @@
     }, 100);
   });
 
-  $(document).on('click touchend', '.js-reveal__reset', function () {
+  $(document).on('click', '.js-reveal__reset', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input');
     $revealTargetInput.val('').focus();
     $(this).addClass('is-hidden');
   });
-  $(document).on('click touchend', '.js-reveal__cancel', function () {
+  $(document).on('click', '.js-reveal__cancel', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
         $revealParent = $(this).parents('.js-reveal');

@@ -29,38 +29,9 @@ zanata.createNS = function (namespace) {
   return parent;
 };
 
-zanata.createNS('zanata.tooltip');
-
-zanata.tooltip = (function ($) {
-
-  // Private methods
-  var init = function (el) {
-    $(el).tooltip({
-      placement: 'auto bottom',
-      container: 'body',
-      delay: {
-        show: '500',
-        hide: '100'
-      }
-    });
-  };
-
-  var refresh = function (el, newTitle) {
-    $(el)
-      .tooltip('hide')
-      .attr('data-original-title', newTitle)
-      .tooltip('fixTitle')
-      .tooltip('show');
-  };
-
-  // public API
-  return {
-    init: init,
-    refresh: refresh
-  };
-
-})(jQuery);
-
 jQuery(function () {
   zanata.tooltip.init('[title]');
+
+  // Make touches as fast as desktop clicks
+  FastClick.attach(document.body);
 });

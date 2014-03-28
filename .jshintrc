@@ -1,7 +1,8 @@
 {
 
   "globals": {
-    "zanata": true
+    "zanata": true,
+    "FastClick": true
   },
 
   "browser": true,

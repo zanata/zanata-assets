@@ -79,7 +79,6 @@ Display an element with `display: inline-block`
 
 */
 
-
 .bx--inline-block {
   display: inline-block !important;
   vertical-align: middle;
@@ -87,24 +86,37 @@ Display an element with `display: inline-block`
 
 /*
 
-#### Box Break Word
+#### Box Break All
 
 Wrap long words that expand the boundaries of their container.
+Beware this will break words at arbitary points.
 Also adds a hyphen to these words, except in Chrome, Opera and Android.
 
 ```example
-<div class="bx--break-word l--constrain-small">WowThisIsALongWordISureHopeItEndsSoonOtherwiseTHisLineIsGoingToBreak</div>
+<div class="bx--break-all l--constrain-small">WowThisIsALongWordISureHopeItEndsSoonOtherwiseTHisLineIsGoingToBreak</div>
+```
+
+*/
+
+.bx--break-all {
+  word-break: break-all;
+  hyphens: auto;
+}
+
+/*
+
+#### Box Break Word
+
+Wrap long words that expand the boundaries of their container. This wont break words with no breakable characters.
+Also adds a hyphen to these words, except in Chrome, Opera and Android.
+
+```example
+<div class="bx--break-word l--constrain-small">WowThisIsALongWordISureHopeItEnds-SoonOtherwiseTHisLineIsGoingToBreak</div>
 ```
 
 */
 
 .bx--break-word {
-  -ms-word-break: break-all;
-      word-break: break-all;
-  // Non standard for webkit
-  word-break: break-word;
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  word-wrap: break-word;
+  hyphens: auto;
 }

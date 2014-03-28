@@ -16,6 +16,8 @@
 
 p {
   margin: 0 0 rhythm(.5);
+  word-wrap: break-word;
+  hyphens: auto;
   &:last-child {
     margin-bottom: 0;
   }

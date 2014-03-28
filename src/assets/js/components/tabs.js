@@ -26,7 +26,7 @@ zanata.tabs = (function ($) {
 
   var init = function () {
 
-    $('.js-tabs').on('click touchend', '.js-tabs-nav a', function (e) {
+    $('.js-tabs').on('click', '.js-tabs-nav a', function (e) {
       e.preventDefault();
       activate(this);
     });

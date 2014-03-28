@@ -16,6 +16,22 @@
   </span>
 </a>
 
+<div class="loader--mini is-active">
+  <span class="loader__spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+
+<div class="loader--small is-active">
+  <span class="loader__spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+
 <div class="loader--large is-active">
   <span class="loader__spinner">
     <span></span>
@@ -115,6 +131,28 @@ a.loader {
 .loader > .loader__spinner {
   left: 50%;
   margin-left: rhythm(-.5);
+}
+
+.loader--inline {
+  min-height: rhythm(1);
+  display: inline-block;
+  // compensate for display inline-block space
+  margin-left: -0.3em;
+  &.is-active {
+    min-width: rhythm(1);
+    margin-left: rhythm(.125);
+    margin-right: rhythm(.125);
+  }
+}
+
+.loader--mini {
+  @extend .loader;
+  @include adjust-font-size-to(12px);
+}
+
+.loader--small {
+  @extend .loader;
+  @include adjust-font-size-to(14px);
 }
 
 .loader--large {

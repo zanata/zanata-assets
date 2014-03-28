@@ -15,7 +15,7 @@
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
 
-<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable is-active">Oh noes! Don't do that.<button class="message__remove js-message-remove"><i class="i i--remove"></i></button></div>
+<div class="message--highlight message--removable message--global l--push-bottom-half js-message-removable is-active">Use the menu on the left to naviagte.<button class="message__remove js-message-remove"><i class="i i--remove"></i></button></div>
 ```
 
 */
@@ -79,7 +79,8 @@
   @extend .message;
   @extend .bg--danger;
   @extend .txt--danger;
-  a {
+  a,
+  button {
     @extend .link--danger;
   }
 }
@@ -88,7 +89,8 @@
   @extend .message;
   @extend .bg--warning;
   @extend .txt--warning;
-  a {
+  a,
+  button {
     @extend .link--warning;
   }
 }
@@ -97,7 +99,8 @@
   @extend .message;
   @extend .bg--unsure;
   @extend .txt--unsure;
-  a {
+  a,
+  button {
     @extend .link--unsure;
   }
 }
@@ -106,7 +109,8 @@
   @extend .message;
   @extend .bg--success;
   @extend .txt--success;
-  a {
+  a,
+  button {
     @extend .link--success;
   }
 }

@@ -36,12 +36,12 @@ zanata.modal = (function ($) {
 
   var init = function () {
 
-    $(document).on('click touchend', '[data-toggle="modal"]', function () {
+    $(document).on('click', '[data-toggle="modal"]', function () {
       var modalTarget = $(this).attr('data-target');
       $(modalTarget).trigger('show.zanata.modal');
     });
 
-    $(document).on('click touchend', '.is-modal', function (e) {
+    $(document).on('click', '.is-modal', function (e) {
       if ($(e.target).not('.modal__dialog') &&
         !$(e.target).parents('.modal__dialog').length) {
         $('.modal.is-active').trigger('hide.zanata.modal');
@@ -55,7 +55,7 @@ zanata.modal = (function ($) {
       }
     });
 
-    $(document).on('click touchend', '[data-dismiss="modal"]', function () {
+    $(document).on('click', '[data-dismiss="modal"]', function () {
       $(this).parents('.modal.is-active').trigger('hide.zanata.modal');
     });
 

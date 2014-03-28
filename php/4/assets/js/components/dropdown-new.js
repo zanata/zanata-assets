@@ -35,10 +35,10 @@ jQuery(function () {
     });
 
   jQuery(document)
-    .bind('click touchend', collapseActiveDropdowns);
+    .bind('click', collapseActiveDropdowns);
 
   jQuery(document)
-    .on('click touchend', '.js-dropdown__toggle', toggleThisCollapseOthers);
+    .on('click', '.js-dropdown__toggle', toggleThisCollapseOthers);
 
 
   // TODO: All this can be deleted when old components are removed - in 3.4
@@ -75,9 +75,9 @@ jQuery(function () {
     });
 
   jQuery(document)
-    .bind('click touchend', collapseActiveDropdownsOld);
+    .bind('click', collapseActiveDropdownsOld);
   jQuery('.dropdown__toggle')
     .not('.js-dropdown__toggle')
-    .on('click touchend', toggleThisCollapseOthersOld);
+    .on('click', toggleThisCollapseOthersOld);
 
 });

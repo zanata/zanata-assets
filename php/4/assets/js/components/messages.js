@@ -1,6 +1,6 @@
 jQuery(function () {
   'use strict';
-  jQuery(document).on('click touchend', '.js-message-remove', function (e) {
+  jQuery(document).on('click', '.js-message-remove', function (e) {
     var $this = jQuery(this),
         $parent = $this.parents('.message--removable');
     e.preventDefault();

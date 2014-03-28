@@ -96,7 +96,7 @@ zanata.form = (function ($) {
     appendRadios();
 
     $('.js-form-password-parent')
-      .on('click touchend', '.js-form-password-toggle', function (e) {
+      .on('click', '.js-form-password-toggle', function (e) {
 
         var $passwordInput = $(this)
           .parents('.js-form-password-parent')
@@ -137,17 +137,17 @@ zanata.form = (function ($) {
       );
 
     $('.js-form__input--copyable')
-      .on('click touchend', function () {
+      .on('click', function () {
         $(this).select();
       });
 
-    $(document).on('click touchend', '.js-form__checkbox', function (e) {
+    $(document).on('click', '.js-form__checkbox', function (e) {
       setCheckRadio($(this));
       setCheckRadioStatus($(this));
       e.preventDefault();
     });
 
-    $(document).on('click touchend', '.js-form__radio', function (e) {
+    $(document).on('click', '.js-form__radio', function (e) {
       setCheckRadio($(this));
       removeRadioStatus($(this));
       setCheckRadioStatus($(this));

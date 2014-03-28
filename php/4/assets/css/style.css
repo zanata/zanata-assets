@@ -246,7 +246,8 @@ Used to section content and create hierarchy
   margin: 0;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-weight: 600;
-  letter-spacing: -0.05em;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 .new-zanata h1 a,
 .new-zanata .alpha a, .new-zanata h2 a,
@@ -261,6 +262,7 @@ Used to section content and create hierarchy
 .new-zanata .alpha {
   font-size: 2.25em;
   line-height: 1.08333em;
+  letter-spacing: -0.05em;
 }
 .new-zanata h1 {
   margin-bottom: 0.36111em;
@@ -269,6 +271,7 @@ Used to section content and create hierarchy
 .new-zanata .beta {
   font-size: 1.75em;
   line-height: 1.39286em;
+  letter-spacing: -0.05em;
 }
 .new-zanata h2 {
   margin-top: 0.92857em;
@@ -278,6 +281,7 @@ Used to section content and create hierarchy
 .new-zanata .gamma {
   font-size: 1.5em;
   line-height: 1.625em;
+  letter-spacing: -0.05em;
 }
 .new-zanata h3 {
   margin-top: 1.08333em;
@@ -324,6 +328,8 @@ Used to section content and create hierarchy
 */
 .new-zanata p {
   margin: 0 0 0.8125em;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 .new-zanata p:last-child {
   margin-bottom: 0;
@@ -421,6 +427,8 @@ Used to section content and create hierarchy
   text-decoration: none;
   cursor: pointer;
   outline: none;
+  word-wrap: break-word;
+  hyphens: auto;
   -moz-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-transition: 0.1s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -551,6 +559,8 @@ a:hover,
   font-size: 1em;
   line-height: 1.625em;
   list-style-type: disc;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /*
@@ -3055,23 +3065,36 @@ Display an element with `display: inline-block`
 
 /*
 
-#### Box Break Word
+#### Box Break All
 
 Wrap long words that expand the boundaries of their container.
+Beware this will break words at arbitary points.
 Also adds a hyphen to these words, except in Chrome, Opera and Android.
 
 ```example
-<div class="bx--break-word l--constrain-small">WowThisIsALongWordISureHopeItEndsSoonOtherwiseTHisLineIsGoingToBreak</div>
+<div class="bx--break-all l--constrain-small">WowThisIsALongWordISureHopeItEndsSoonOtherwiseTHisLineIsGoingToBreak</div>
+```
+
+*/
+.bx--break-all {
+  word-break: break-all;
+  hyphens: auto;
+}
+
+/*
+
+#### Box Break Word
+
+Wrap long words that expand the boundaries of their container. This wont break words with no breakable characters.
+Also adds a hyphen to these words, except in Chrome, Opera and Android.
+
+```example
+<div class="bx--break-word l--constrain-small">WowThisIsALongWordISureHopeItEnds-SoonOtherwiseTHisLineIsGoingToBreak</div>
 ```
 
 */
 .bx--break-word, .new-zanata .message, .new-zanata .message--danger, .new-zanata .message--warning, .new-zanata .message--unsure, .new-zanata .message--success, .new-zanata .message--highlight, .new-zanata .message--neutral {
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
+  word-wrap: break-word;
   hyphens: auto;
 }
 
@@ -3935,47 +3958,72 @@ Sub-headings can be used when placing a heading under another heading.
 }
 
 _links.scss
-.link--success, _links.scss .new-zanata .message--success a, .new-zanata .message--success _links.scss a {
+.link--success, _links.scss .new-zanata .message--success a, .new-zanata .message--success _links.scss a,
+_links.scss .new-zanata .message--success button,
+.new-zanata .message--success _links.scss button {
   color: #70a98b !important;
 }
 _links.scss
-.link--success:hover, _links.scss .new-zanata .message--success a:hover, .new-zanata .message--success _links.scss a:hover, _links.scss
-.link--success:focus, _links.scss .new-zanata .message--success a:focus, .new-zanata .message--success _links.scss a:focus {
+.link--success:hover, _links.scss .new-zanata .message--success a:hover, .new-zanata .message--success _links.scss a:hover,
+_links.scss .new-zanata .message--success button:hover,
+.new-zanata .message--success _links.scss button:hover, _links.scss
+.link--success:focus, _links.scss .new-zanata .message--success a:focus, .new-zanata .message--success _links.scss a:focus,
+_links.scss .new-zanata .message--success button:focus,
+.new-zanata .message--success _links.scss button:focus {
   color: #4e7661 !important;
 }
 _links.scss
-.link--success:active, _links.scss .new-zanata .message--success a:active, .new-zanata .message--success _links.scss a:active, _links.scss
-.link--success.is-active, _links.scss .new-zanata .message--success a.is-active, .new-zanata .message--success _links.scss a.is-active {
+.link--success:active, _links.scss .new-zanata .message--success a:active, .new-zanata .message--success _links.scss a:active,
+_links.scss .new-zanata .message--success button:active,
+.new-zanata .message--success _links.scss button:active, _links.scss
+.link--success.is-active, _links.scss .new-zanata .message--success a.is-active, .new-zanata .message--success _links.scss a.is-active,
+_links.scss .new-zanata .message--success button.is-active,
+.new-zanata .message--success _links.scss button.is-active {
   color: #2c4337 !important;
 }
 
-.link--unsure, .new-zanata .message--unsure a {
+.link--unsure, .new-zanata .message--unsure a,
+.new-zanata .message--unsure button {
   color: #e0c350 !important;
 }
-.link--unsure:hover, .new-zanata .message--unsure a:hover, .link--unsure:focus, .new-zanata .message--unsure a:focus {
+.link--unsure:hover, .new-zanata .message--unsure a:hover,
+.new-zanata .message--unsure button:hover, .link--unsure:focus, .new-zanata .message--unsure a:focus,
+.new-zanata .message--unsure button:focus {
   color: #9c8838 !important;
 }
-.link--unsure:active, .new-zanata .message--unsure a:active, .link--unsure.is-active, .new-zanata .message--unsure a.is-active {
+.link--unsure:active, .new-zanata .message--unsure a:active,
+.new-zanata .message--unsure button:active, .link--unsure.is-active, .new-zanata .message--unsure a.is-active,
+.new-zanata .message--unsure button.is-active {
   color: #594e20 !important;
 }
 
-.link--warning, .new-zanata .message--warning a {
+.link--warning, .new-zanata .message--warning a,
+.new-zanata .message--warning button {
   color: #e3824e !important;
 }
-.link--warning:hover, .new-zanata .message--warning a:hover, .link--warning:focus, .new-zanata .message--warning a:focus {
+.link--warning:hover, .new-zanata .message--warning a:hover,
+.new-zanata .message--warning button:hover, .link--warning:focus, .new-zanata .message--warning a:focus,
+.new-zanata .message--warning button:focus {
   color: #9e5b36 !important;
 }
-.link--warning:active, .new-zanata .message--warning a:active, .link--warning.is-active, .new-zanata .message--warning a.is-active {
+.link--warning:active, .new-zanata .message--warning a:active,
+.new-zanata .message--warning button:active, .link--warning.is-active, .new-zanata .message--warning a.is-active,
+.new-zanata .message--warning button.is-active {
   color: #5a341f !important;
 }
 
-.link--danger, .new-zanata .message--danger a {
+.link--danger, .new-zanata .message--danger a,
+.new-zanata .message--danger button {
   color: #e0575b !important;
 }
-.link--danger:hover, .new-zanata .message--danger a:hover, .link--danger:focus, .new-zanata .message--danger a:focus {
+.link--danger:hover, .new-zanata .message--danger a:hover,
+.new-zanata .message--danger button:hover, .link--danger:focus, .new-zanata .message--danger a:focus,
+.new-zanata .message--danger button:focus {
   color: #9c3c3f !important;
 }
-.link--danger:active, .new-zanata .message--danger a:active, .link--danger.is-active, .new-zanata .message--danger a.is-active {
+.link--danger:active, .new-zanata .message--danger a:active,
+.new-zanata .message--danger button:active, .link--danger.is-active, .new-zanata .message--danger a.is-active,
+.new-zanata .message--danger button.is-active {
   color: #592224 !important;
 }
 
@@ -5334,7 +5382,7 @@ Used in panel headers to match the header layout
 
 <div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
 
-<div class="message--danger message--removable message--global l--push-bottom-half js-message-removable is-active">Oh noes! Don't do that.<button class="message__remove js-message-remove"><i class="i i--remove"></i></button></div>
+<div class="message--highlight message--removable message--global l--push-bottom-half js-message-removable is-active">Use the menu on the left to naviagte.<button class="message__remove js-message-remove"><i class="i i--remove"></i></button></div>
 ```
 
 */
@@ -6119,6 +6167,22 @@ Used to show extra information on hover of the parent element
   </span>
 </a>
 
+<div class="loader--mini is-active">
+  <span class="loader__spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+
+<div class="loader--small is-active">
+  <span class="loader__spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+
 <div class="loader--large is-active">
   <span class="loader__spinner">
     <span></span>
@@ -6137,14 +6201,14 @@ Used to show extra information on hover of the parent element
 ```
 
 */
-.loader, .loader--large, .loader--huge, .loader__label, .loader__spinner {
+.loader, .loader--mini, .loader--small, .loader--large, .loader--huge, .loader__label, .loader__spinner {
   -moz-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
-.loader, .loader--large, .loader--huge {
+.loader, .loader--mini, .loader--small, .loader--large, .loader--huge {
   position: relative;
   display: block;
   text-align: center;
@@ -6153,13 +6217,13 @@ Used to show extra information on hover of the parent element
   min-height: 2.4375em;
 }
 
-a.loader:hover, a.loader--large:hover, a.loader--huge:hover {
+a.loader:hover, a.loader--mini:hover, a.loader--small:hover, a.loader--large:hover, a.loader--huge:hover {
   background-color: rgba(65, 105, 136, 0.03);
 }
-a.loader:active, a.loader--large:active, a.loader--huge:active {
+a.loader:active, a.loader--mini:active, a.loader--small:active, a.loader--large:active, a.loader--huge:active {
   background-color: rgba(65, 105, 136, 0.03);
 }
-a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
+a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-active.loader--large, a.is-active.loader--huge {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -6170,7 +6234,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
 .loader__label {
   position: relative;
 }
-.loader.is-active .loader__label, .is-active.loader--large .loader__label, .is-active.loader--huge .loader__label {
+.loader.is-active .loader__label, .is-active.loader--mini .loader__label, .is-active.loader--small .loader__label, .is-active.loader--large .loader__label, .is-active.loader--huge .loader__label {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   padding-left: 2.4375em;
@@ -6187,7 +6251,7 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   height: 1.625em;
   text-align: center;
 }
-.loader.is-active .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
+.loader.is-active .loader__spinner, .is-active.loader--mini .loader__spinner, .is-active.loader--small .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
@@ -6229,9 +6293,30 @@ a.loader.is-active, a.is-active.loader--large, a.is-active.loader--huge {
   left: 1.21875em;
 }
 
-.loader > .loader__spinner, .loader--large > .loader__spinner, .loader--huge > .loader__spinner {
+.loader > .loader__spinner, .loader--mini > .loader__spinner, .loader--small > .loader__spinner, .loader--large > .loader__spinner, .loader--huge > .loader__spinner {
   left: 50%;
   margin-left: -0.8125em;
+}
+
+.loader--inline {
+  min-height: 1.625em;
+  display: inline-block;
+  margin-left: -0.3em;
+}
+.loader--inline.is-active {
+  min-width: 1.625em;
+  margin-left: 0.20313em;
+  margin-right: 0.20313em;
+}
+
+.loader--mini {
+  font-size: 0.75em;
+  line-height: 2.16667em;
+}
+
+.loader--small {
+  font-size: 0.875em;
+  line-height: 1.85714em;
 }
 
 .loader--large {

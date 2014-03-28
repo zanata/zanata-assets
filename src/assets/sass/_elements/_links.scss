@@ -22,6 +22,8 @@ a {
   text-decoration: none;
   cursor: pointer;
   outline: none;
+  word-wrap: break-word;
+  hyphens: auto;
   @include transition($transition-fast-ease);
   h1,
   h2,
