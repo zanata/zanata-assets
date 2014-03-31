@@ -186,7 +186,7 @@ body.new-zanata,
 .new-zanata-base-inner {
   margin: 0;
   background: #edeff1;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 .new-zanata main {
@@ -545,6 +545,8 @@ a:hover,
   font-size: 1em;
   line-height: 1.625em;
   list-style-type: disc;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /*
@@ -2131,7 +2133,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--low--hover:hover, .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover, .new-zanata .bg--lowest,
 .new-zanata .bg--lowest--hover:hover, .new-zanata .list--highlight > li, .new-zanata .form--search:before, .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
-.new-zanata .tabs--lined > .tabs__nav > li > a:after, .new-zanata .progress-bar__expander .progress-bar, .new-zanata .progress-bar__expander .progress-bar--large, .new-zanata .progress-bar--large__expander .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata .message--global, .new-zanata input[type="submit"],
+.new-zanata .tabs--lined > .tabs__nav > li > a:after, .new-zanata .progress-bar__expander .progress-bar, .new-zanata .progress-bar__expander .progress-bar--large, .new-zanata .progress-bar--large__expander .progress-bar--large, .new-zanata .dropdown__toggle, .new-zanata input[type="submit"],
 .new-zanata button,
 .new-zanata .button,
 .new-zanata .button--small,
@@ -2674,8 +2676,7 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
 ```
 
 */
-.bx--break-word, .new-zanata ul li,
-.new-zanata ol li, .new-zanata .message, .new-zanata .message--danger, .new-zanata .message--warning, .new-zanata .message--unsure, .new-zanata .message--success, .new-zanata .message--highlight, .new-zanata .message--neutral {
+.bx--break-word, .new-zanata .message, .new-zanata .message--danger, .new-zanata .message--warning, .new-zanata .message--unsure, .new-zanata .message--success, .new-zanata .message--highlight, .new-zanata .message--neutral {
   word-wrap: break-word;
   hyphens: auto;
 }
@@ -2731,8 +2732,8 @@ All icons also need the class `.i` added to them.
 */
 @font-face {
   font-family: 'Zanata';
-  src: url("../fonts/zanata-v4/zanata.eot");
-  src: url("../fonts/zanata-v4/zanata.eot?#iefix") format("embedded-opentype"), url("../fonts/zanata-v4/zanata.woff") format("woff"), url("../fonts/zanata-v4/zanata.ttf") format("truetype"), url("../fonts/zanata-v4/zanata.svg#zanata") format("svg");
+  src: url("../fonts/zanata-v5/zanata.eot");
+  src: url("../fonts/zanata-v5/zanata.eot?#iefix") format("embedded-opentype"), url("../fonts/zanata-v5/zanata.woff") format("woff"), url("../fonts/zanata-v5/zanata.ttf") format("truetype"), url("../fonts/zanata-v5/zanata.svg#zanata") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -3056,6 +3057,9 @@ Use to display icons to the far side of text, either left or right. Usually used
 }
 .new-zanata .i--ellipsis:before {
   content: "\e60c";
+}
+.new-zanata .i--location:before {
+  content: "\e611";
 }
 
 /*
@@ -4957,16 +4961,22 @@ Used in panel headers to match the header layout
   line-height: 1.625em;
 }
 .new-zanata .message--global {
+  -moz-transition: opacity 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01), -moz-transform 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -o-transition: opacity 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01), -o-transform 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  -webkit-transition: opacity 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01), -webkit-transform 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
+  transition: opacity 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01), transform 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
   opacity: 0.95;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-transform: translateY(-4.875em);
-  -webkit-transform: translateY(-4.875em);
-  transform: translateY(-4.875em);
-  position: fixed;
-  top: 0.40625em;
+  -moz-transform: translateY(-250%);
+  -ms-transform: translateY(-250%);
+  -o-transform: translateY(-250%);
+  -webkit-transform: translateY(-250%);
+  transform: translateY(-250%);
+  position: absolute;
+  top: 3.25em;
   right: 0.8125em;
   left: 0.8125em;
   z-index: 9999;
@@ -4975,12 +4985,21 @@ Used in panel headers to match the header layout
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
+.new-zanata .message--global.is-fixed {
+  -moz-transform: translateY(-150%);
+  -ms-transform: translateY(-150%);
+  -o-transform: translateY(-150%);
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
+  position: fixed;
+  top: 0;
+}
 .new-zanata .message--global.is-active {
   -moz-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
 }
 .new-zanata .message--highlight {
   color: #416988;

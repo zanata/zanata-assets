@@ -76,7 +76,7 @@ body.new-zanata,
 .new-zanata-base-inner {
   margin: 0;
   background: $color-body-background;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 .new-zanata {

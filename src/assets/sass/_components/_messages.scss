@@ -57,21 +57,26 @@
 }
 
 .message--global {
-  @extend .is-transition;
+  @include transition(opacity 0.25s cubic-bezier(.55,-0.38,.22,1.01), transform 0.25s cubic-bezier(.55,-0.38,.22,1.01));
   @include opacity(.95);
   @include box-shadow($default-box-shadow);
-  @include transform3d(translateY(rhythm(-3)));
-  position: fixed;
-  top: rhythm(.25);
+  @include transform(translateY(-250%));
+  position: absolute;
+  top: rhythm(2);
   right: rhythm(.5);
   left: rhythm(.5);
   z-index: 9999;
   margin: 0 auto;
   max-width: rhythm(20);
   @include opacity(0);
+  &.is-fixed {
+    @include transform(translateY(-150%));
+    position: fixed;
+    top: 0;
+  }
   &.is-active {
     @include transform3d(translateY(0));
-    @include opacity(1);
+    @include opacity(.9);
   }
 }
 
