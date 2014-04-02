@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-03-31
+/*! zanata-assets - v0.1.0 - 2014-04-02
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1949,8 +1949,18 @@ zanata.messages = (function ($) {
 
   var updatePosition = function (el, elPositionFromTop) {
     var $el = $(el),
-        elPosFromTop = (typeof elPositionFromTop !== 'undefined') ?
-          elPositionFromTop : $el.offset().top;
+        elPosFromTop = '';
+
+    if (typeof elPositionFromTop !== 'undefined') {
+      elPosFromTop = elPositionFromTop;
+    }
+    else if($el.length > 0) {
+      elPosFromTop = $el.offset().top;
+    }
+    else {
+      return;
+    }
+
     // Stop negative values setting the position to fixed
     if (elPosFromTop < 0) elPosFromTop = 0;
 
@@ -1962,7 +1972,10 @@ zanata.messages = (function ($) {
   };
 
   var init = function () {
-    var messageGlobalTop = $('.message--global').offset().top;
+
+    if ($('.message--global').length > 0) {
+      var messageGlobalTop = $('.message--global').offset().top;
+    }
 
     $(document).on('click', '.js-message-remove', function (e) {
       var $el = $(this).parents('.message--removable');

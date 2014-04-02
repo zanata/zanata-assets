@@ -3061,6 +3061,9 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--location:before {
   content: "\e611";
 }
+.new-zanata .i--trash:before {
+  content: "\e612";
+}
 
 /*
 
