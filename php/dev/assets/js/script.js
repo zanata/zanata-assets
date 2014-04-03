@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-04-02
+/*! zanata-assets - v0.1.0 - 2014-04-03
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -2195,6 +2195,11 @@ zanata.tabs = (function ($) {
         targetHash = $this.attr('href'),
         targetID = targetHash.replace('#', ''),
         $parent = $this.parents('.js-tabs');
+    // data-content attribute should have a selector for the
+    // content container for the tab
+    if($this.is('[data-content]')) {
+      targetHash = $this.attr('data-content');
+    }
     if (!$this.parent().hasClass('is-active')) {
       // Remove all is-active classes
       $parent
