@@ -1952,7 +1952,8 @@ zanata.messages = (function ($) {
     init: init,
     hide: hide,
     activate: activate,
-    deactivate: deactivate
+    deactivate: deactivate,
+    updatePosition: updatePosition
   };
 
 })(jQuery);
