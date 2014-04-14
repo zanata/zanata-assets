@@ -2155,6 +2155,11 @@ zanata.tabs = (function ($) {
         targetHash = $this.attr('href'),
         targetID = targetHash.replace('#', ''),
         $parent = $this.parents('.js-tabs');
+    // data-content attribute should have a selector for the
+    // content container for the tab
+    if($this.is('[data-content]')) {
+      targetHash = $this.attr('data-content');
+    }
     if (!$this.parent().hasClass('is-active')) {
       // Remove all is-active classes
       $parent

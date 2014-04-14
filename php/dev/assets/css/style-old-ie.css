@@ -2184,7 +2184,6 @@ Centered grids align grid items centrally without needing to use push or pull cl
   opacity: 0;
   -moz-transform: scale3d(1, 0, 1);
   -ms-transform: scale3d(1, 0, 1);
-  -o-transform: scale3d(1, 0, 1);
   -webkit-transform: scale3d(1, 0, 1);
   transform: scale3d(1, 0, 1);
 }
@@ -2716,7 +2715,6 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
   0% {
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
@@ -2724,7 +2722,6 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
   100% {
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -3762,7 +3759,6 @@ _links.scss .new-zanata .message--success button.is-active,
 .new-zanata .form__checkbox__item:after {
   -moz-transform: scale(0.1, 0.1);
   -ms-transform: scale(0.1, 0.1);
-  -o-transform: scale(0.1, 0.1);
   -webkit-transform: scale(0.1, 0.1);
   transform: scale(0.1, 0.1);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -3778,7 +3774,6 @@ _links.scss .new-zanata .message--success button.is-active,
 .new-zanata .form__checkbox__item.is-checked:after {
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -3795,7 +3790,6 @@ _links.scss .new-zanata .message--success button.is-active,
 .new-zanata .form__radio__item.is-checked:before {
   background-color: #416988;
   background-image: -moz-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
-  background-image: -o-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
   background-image: -webkit-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
   background-image: radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
 }
@@ -4705,7 +4699,6 @@ Keep focus while showing and hiding a password field
 .new-zanata .dropdown.is-active .dropdown__toggle:after {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -5091,7 +5084,6 @@ Used in panel headers to match the header layout
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-transform: translateY(-250%);
   -ms-transform: translateY(-250%);
-  -o-transform: translateY(-250%);
   -webkit-transform: translateY(-250%);
   transform: translateY(-250%);
   position: absolute;
@@ -5107,7 +5099,6 @@ Used in panel headers to match the header layout
 .new-zanata .message--global.is-fixed {
   -moz-transform: translateY(-150%);
   -ms-transform: translateY(-150%);
-  -o-transform: translateY(-150%);
   -webkit-transform: translateY(-150%);
   transform: translateY(-150%);
   position: fixed;
@@ -6235,7 +6226,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   margin: 0 auto;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
-  -o-transform-origin: 0 50%;
   -webkit-transform-origin: 0 50%;
   transform-origin: 0 50%;
   -moz-transform: translateY(50%);
@@ -7180,7 +7170,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   bottom: auto;
@@ -7208,7 +7197,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle:before {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -7225,7 +7213,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .header__user-nav.is-active .header__user-nav__menu {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
