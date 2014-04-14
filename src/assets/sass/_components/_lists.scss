@@ -79,7 +79,7 @@ nav ol {
 //ul
 .list--horizontal {
   @extend .list--no-bullets;
-  li {
+  > li {
     display: inline-block;
     margin-right: rhythm(.25);
     &:last-child {
@@ -225,7 +225,7 @@ nav ol {
 .new-zanata {
 
 .list--block-links {
-  li {
+  > li {
     padding: 0;
     > a {
       display: block;
@@ -305,7 +305,7 @@ nav ol {
     position: absolute;
     left: rhythm(.2);
     top: 50%;
-    margin-top: rhythm(-.56);
+    margin-top: -1em;
     width: rhythm(.5);
   }
   .list__item__actions {

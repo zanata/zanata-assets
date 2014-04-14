@@ -5,14 +5,52 @@
 ### Dropdown
 
 ```
-<div class="dropdown">
-  <a class="dropdown__toggle" href="#"><i class="icon--arrow-down dropdown__toggle__icon"></i> Action</a>
-  <ul class="dropdown__content" role="content" aria-labelledby="dropdownContent">
-    <li><a tabindex="-1" href="#">Action </a></li>
-    <li><a tabindex="-1" href="#">Another action</a></li>
-    <li><a tabindex="-1" href="#">Something else here</a></li>
-    <li class="dropdown__divider"></li>
-    <li><a tabindex="-1" href="#">Separated link</a></li>
+<span class="dropdown dropdown--toggle-right js-dropdown">
+  <a class="dropdown__toggle dropdown__toggle--large js-dropdown__toggle" href="#">Most active projects</a>
+  <ul class="dropdown__content js-dropdown__content">
+    <li><a class="is-active" href="#">Most active projects</a></li>
+    <li><a href="#">Most starred projects</a></li>
+    <li><a href="#">Projects requiring the most help</a></li>
+  </ul>
+</span>
+<span class="dropdown js-dropdown">
+  <a class="dropdown__toggle js-dropdown__toggle" href="#"><span>Most active projects</span></a>
+  <ul class="dropdown__content js-dropdown__content">
+    <li><a class="is-active" href="#">Most active projects</a></li>
+    <li><a href="#">Most starred projects</a></li>
+    <li><a href="#">Projects requiring the most help</a></li>
+  </ul>
+</span>
+<span class="dropdown dropdown--inline dropdown--inline--initial dropdown--toggle-right js-dropdown">
+  <a class="dropdown__toggle dropdown__toggle--large js-dropdown__toggle" href="#">Most active projects</a>
+  <ul class="dropdown__content js-dropdown__content">
+    <li><a class="is-active" href="#">Most active projects</a></li>
+    <li><a href="#">Most starred projects</a></li>
+    <li><a href="#">Projects requiring the most help</a></li>
+  </ul>
+</span>
+<span class="dropdown dropdown--inline js-dropdown">
+  <a class="dropdown__toggle dropdown__toggle--large js-dropdown__toggle" href="#">Most active projects</a>
+  <ul class="dropdown__content js-dropdown__content">
+    <li><a class="is-active" href="#">Most active projects</a></li>
+    <li><a href="#">Most starred projects</a></li>
+    <li><a href="#">Projects requiring the most help</a></li>
+  </ul>
+</span>
+<div class="dropdown dropdown--small dropdown--inline dropdown--single js-dropdown">
+  <a class="dropdown__toggle js-dropdown__toggle txt--meta" title="Document Options" href="#"><span class="is-invisible">Document Options</span></a>
+  <ul class="dropdown__content js-dropdown__content">
+    <li><a href="#"class="i__item--right">Translate online <i class="i i--translate i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+  </ul>
+</div>
+<div class="dropdown dropdown--header dropdown--small dropdown--right js-dropdown">
+  <a class="dropdown__toggle js-dropdown__toggle" href="#" title="More Actions"><i class="i i--ellipsis" ></i></a>
+  <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+    <li><a href="#"class="i__item--right">Download All for Offline Translation<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right" title="Export Spanish Documents to translation memory">Export Spanish Documents to TMX<i class="i i--export i__item__icon"></i></a></li>
   </ul>
 </div>
 ```
@@ -33,8 +71,11 @@
 
 .dropdown {
   @extend .is-transition-bounce;
+  @include user-select(none);
   position: relative;
   z-index: 90;
+  display: inline-block;
+  width: 100%;
   &.is-active {
     z-index: 901;
   }
@@ -44,13 +85,16 @@
   @extend .is-transition;
   position: relative;
   z-index: 12;
-  display: block;
-  padding: rhythm(.125) rhythm(.375);
+  display: inline-block;
+  padding: rhythm(.25) rhythm(.375);
   padding-left: rhythm(1) !important;
-  cursor: pointer;
-  color: $color-link;
   min-height: rhythm(1);
   border: 1px solid transparent;
+  border-bottom-width: 2px;
+  color: $color-link;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 100%;
   &:hover {
     background-color: rgba($color-secondary, 0.03);
   }
@@ -58,12 +102,27 @@
     background-color: $white;
     border: 1px solid rgba($color-secondary, 0.15);
   }
-  &:before {
+  &:after {
     @extend .i:before;
     @extend .i--arrow-down:before;
     @include transition($default-transition);
     position: absolute;
     left: rhythm(.25);
+  }
+}
+
+.dropdown__toggle--large {
+  @include adjust-font-size-to(24px, 1);
+  padding: rhythm(.25, 24px) rhythm(.375, 24px);
+  padding-left: rhythm(1, 24px) !important;
+  &:after {
+    font-size: emCalc(12px);
+    left: rhythm(.125, 12px);
+  }
+  @include breakpoint($gte-medium) {
+    @include adjust-font-size-to(28px, 1.25);
+    padding: rhythm(.25, 28px) rhythm(.375, 28px);
+    padding-left: rhythm(1, 28px) !important;
   }
 }
 
@@ -74,7 +133,6 @@
 
 .dropdown.is-active .dropdown__toggle {
   @extend .bg--pop-highest;
-  border-bottom-width: 2px;
   color: $color-link-active !important;
 }
 
@@ -86,7 +144,7 @@
   display: none;
 }
 
-.dropdown.is-active .dropdown__toggle:before {
+.dropdown.is-active .dropdown__toggle:after {
   @include rotate(180deg);
 }
 
@@ -99,9 +157,8 @@
   visibility: hidden;
   margin: 0;
   padding: 0;
-  width: 100%;
   float: left;
-  min-width: rhythm(4);
+  min-width: 100%;
   .csstransforms3d & {
     @extend .is-transition-bounce;
     @include opacity(0);
@@ -111,23 +168,39 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    &:hover {
-      .no-touch & {
-        background-color: $color-bg-light;
-      }
+    line-height: rhythm(.75);
+    .i__item__icon {
+      line-height: rhythm(.75);
     }
     > a {
-      padding: rhythm(.25) rhythm(.25) rhythm(.25) rhythm(1.3);
+      padding: rhythm(.375);
       display: block;
       margin: 0;
       &.is-active {
         font-weight: 600;
       }
-    }
-    @include breakpoint($gte-medium) {
-      padding-left: rhythm(1);
+      &:hover {
+        .no-touch & {
+          background-color: $color-link;
+          color: $color-bg-lighter;
+        }
+      }
+      &.txt--danger:hover {
+        .no-touch & {
+          background-color: $color-danger;
+          color: $color-bg-lighter !important;
+        }
+      }
+      &[disabled] {
+        pointer-events: none;
+        @include opacity(.5);
+      }
     }
   }
+}
+
+.dropdown__content--full {
+  width: 100% !important;
 }
 
 .dropdown__header {
@@ -135,6 +208,7 @@
   text-transform: uppercase;
   background-color: $color-bg-lightest !important;
   padding: 0 rhythm(.5) !important;
+  width: auto;
 }
 
 .dropdown__divider {
@@ -170,38 +244,24 @@
 
 .dropdown--inline {
   display: inline-block;
-  // margin-left: rhythm(.125);
+  width: auto;
+  .dropdown__toggle:after {
+    display: inline-block;
+  }
   .dropdown__content {
     width: auto;
-    > li {
-      padding: 0;
-      white-space: nowrap;
-      &:hover {
-        background-color: transparent;
-      }
-      > a {
-        padding: rhythm(.25) rhythm(.5);
-        &:hover {
-          .no-touch & {
-            background-color: $color-link;
-            color: $color-bg-lighter;
-          }
-        }
-        &.txt--danger:hover {
-          .no-touch & {
-            background-color: $color-danger;
-            color: $color-bg-lighter !important;
-          }
-        }
-        &[disabled] {
-          pointer-events: none;
-          @include opacity(.5);
-        }
-      }
-    }
+    min-width: auto;
   }
 }
 
+.dropdown--inline--initial {
+  position: relative;
+  margin-left: rhythm(-.375);
+}
+
+
+// TODO: Make this a complete small module
+// replace current class with txt--mini on .dropdown__content
 .dropdown--small {
   .dropdown__content {
     @include adjust-font-size-to(14px);
@@ -225,6 +285,8 @@ Used in panel headers to match the header layout
   margin: 0;
   vertical-align: top;
   margin-right: -1px;
+  display: inline-block;
+  width: auto;
   .dropdown__toggle {
     @include adjust-font-size-to(14px);
     padding-top: 0;
@@ -236,11 +298,11 @@ Used in panel headers to match the header layout
     border-bottom: 2px solid transparent;
     line-height: rhythm(2, 14px);
     max-height: rhythm(2.05, 14px);
-    // text-transform: uppercase;
     &:active {
       border-bottom: 2px solid $default-border-color;
       background-color: $color-bg-light;
     }
+    &:after,
     i {
       line-height: rhythm(2, 14px);
       vertical-align: inherit;
@@ -257,7 +319,15 @@ Used in panel headers to match the header layout
     }
   }
   .dropdown__content {
+    width: auto;
     border-top: none;
+    margin-top: 1px;
+    > li {
+      padding: 0;
+      > a {
+        padding: rhythm(.375) rhythm(.5);
+      }
+    }
   }
 }
 
@@ -271,15 +341,27 @@ Used in panel headers to match the header layout
     @include font-size(16px);
     padding: 0;
     width: rhythm(1);
+    height: rhythm(1);
     text-align: center;
-    &:before {
-      left: 0;
-      width: 100%;
-      height: 100%;
+    &:after {
+      left: rhythm(.2);
+      line-height: rhythm(1);
     }
   }
   .dropdown__content {
     margin-top: -1px;
+    width: auto;
+    min-width: 0;
+    > li {
+      padding: 0;
+    }
+  }
+  &.is-active {
+    .dropdown__toggle {
+      &:after {
+        left: rhythm(.25);
+      }
+    }
   }
 }
 
@@ -293,6 +375,34 @@ Used in panel headers to match the header layout
     padding-top: rhythm(.5);
     padding-bottom: rhythm(.5);
     max-height: rhythm(2);
+  }
+}
+
+}
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.dropdown--toggle-right {
+  .dropdown__toggle {
+    padding-left: rhythm(.375) !important;
+    padding-right: rhythm(1) !important;
+    &:after {
+      left: auto !important;
+      right: rhythm(.25) !important;
+    }
+  }
+  .dropdown__toggle--large {
+    padding-left: rhythm(.375, 24px) !important;
+    padding-right: rhythm(1, 24px) !important;
+    &:after {
+      left: auto !important;
+      right: rhythm(.125, 12px) !important;
+    }
+    @include breakpoint($gte-medium) {
+      padding-left: rhythm(.375, 28px) !important;
+      padding-right: rhythm(1.125, 28px) !important;
+    }
   }
 }
 

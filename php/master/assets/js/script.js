@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-04-02
+/*! zanata-assets - v0.1.0 - 2014-04-14
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1636,46 +1636,6 @@ jQuery(function () {
 
   jQuery(document)
     .on('click', '.js-dropdown__toggle', toggleThisCollapseOthers);
-
-
-  // TODO: All this can be deleted when old components are removed - in 3.4
-
-  collapseActiveDropdownsOld = function () {
-    jQuery('.dropdown.is-active .dropdown__toggle').click();
-  };
-
-  toggleThisCollapseOthersOld = function (e) {
-
-    e.preventDefault();
-
-    jQuery(this).blur();
-
-    var $dropdown = jQuery(this).parent('.dropdown');
-
-    jQuery('.dropdown.is-active')
-      .not($dropdown)
-      .removeClass('is-active')
-      .parents('.dropdown__container')
-      .removeClass('is-active');
-
-    $dropdown.toggleClass('is-active')
-      .parents('.dropdown__container')
-      .toggleClass('is-active');
-    e.stopPropagation();
-  };
-
-  // Don't toggle dropdown when clicking links inside it
-  jQuery('.dropdown__toggle a, .dropdown__content')
-    .not('.js-dropdown__toggle')
-    .bind('click', function (e) {
-      e.stopPropagation();
-    });
-
-  jQuery(document)
-    .bind('click', collapseActiveDropdownsOld);
-  jQuery('.dropdown__toggle')
-    .not('.js-dropdown__toggle')
-    .on('click', toggleThisCollapseOthersOld);
 
 });
 

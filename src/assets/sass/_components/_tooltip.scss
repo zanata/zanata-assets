@@ -3,7 +3,7 @@
   z-index: 9999;
   display: block;
   visibility: visible;
-  font-size: 14px;
+  font-size: emCalc(14px);
   line-height: 1.4;
   @include opacity(0);
   text-transform: normal;
@@ -35,7 +35,7 @@
   color: $lightest-grey;
   text-align: center;
   text-decoration: none;
-  background-color: $darkest-grey;
+  background-color: $color-secondary;
   border-radius: $default-border-radius;
 }
 .tooltip__arrow {
@@ -50,50 +50,50 @@
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: $darkest-grey;
+  border-top-color: $color-secondary;
 }
 .tooltip.top-left .tooltip__arrow {
   bottom: 0;
   left: 5px;
   border-width: 5px 5px 0;
-  border-top-color: $darkest-grey;
+  border-top-color: $color-secondary;
 }
 .tooltip.top-right .tooltip__arrow {
   bottom: 0;
   right: 5px;
   border-width: 5px 5px 0;
-  border-top-color: $darkest-grey;
+  border-top-color: $color-secondary;
 }
 .tooltip.right .tooltip__arrow {
   top: 50%;
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: $darkest-grey;
+  border-right-color: $color-secondary;
 }
 .tooltip.left .tooltip__arrow {
   top: 50%;
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: $darkest-grey;
+  border-left-color: $color-secondary;
 }
 .tooltip.bottom .tooltip__arrow {
   top: 0;
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: $darkest-grey;
+  border-bottom-color: $color-secondary;
 }
 .tooltip.bottom-left .tooltip__arrow {
   top: 0;
   left: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: $darkest-grey;
+  border-bottom-color: $color-secondary;
 }
 .tooltip.bottom-right .tooltip__arrow {
   top: 0;
   right: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: $darkest-grey;
+  border-bottom-color: $color-secondary;
 }

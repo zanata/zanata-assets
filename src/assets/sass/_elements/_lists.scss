@@ -39,6 +39,10 @@ ol {
     word-wrap: break-word;
     hyphens: auto;
   }
+  // Hide empty lists
+  &:empty {
+    display: none;
+  }
 }
 
 }

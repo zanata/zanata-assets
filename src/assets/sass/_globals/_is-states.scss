@@ -59,7 +59,8 @@
   }
 }
 
-.is-invisible {
+.is-invisible,
+.is-sr-only {
   position: absolute;
   top: -9999px;
   left: -9999px;

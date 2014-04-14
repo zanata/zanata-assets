@@ -329,5 +329,8 @@ Use to display icons to the far side of text, either left or right. Usually used
 .i--trash:before {
 	content: "\e612";
 }
+.i--dot:before {
+	content: "\e613"
+}
 
 }

@@ -1,0 +1,548 @@
+/*
+# Kalei Themes
+
+To make sure the code demo's are un-affected by Kaleis own styles we only set a few global styles
+
+The menu is fixed and the page contained simply aligns itself 200px from the left.
+
+*/
+/* line 15, ../sass/theme.scss */
+html, body, .kalei {
+  height: 100% !important;
+  background: #f6f4f4;
+}
+
+/* line 19, ../sass/theme.scss */
+body {
+  background: #fff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 24, ../sass/theme.scss */
+.menu-items {
+  height: 100%;
+}
+
+/* line 27, ../sass/theme.scss */
+.kalei-style-menu-container {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: fixed;
+  background: #fff;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  width: 250px;
+  margin-left: -250px;
+  z-index: 10;
+}
+/* line 36, ../sass/theme.scss */
+.kalei-nav--is-active .kalei-style-menu-container {
+  margin-left: 0;
+}
+
+/* line 40, ../sass/theme.scss */
+.kalei-styleguide-menu {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* line 45, ../sass/theme.scss */
+.kalei-style-page {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-left: 0;
+  background: #fdfdfd;
+}
+/* line 50, ../sass/theme.scss */
+.kalei-nav--is-active .kalei-style-page {
+  margin-left: 250px;
+  margin-right: -250px;
+}
+@media all and (min-width: 70em) {
+  /* line 45, ../sass/theme.scss */
+  .kalei-style-page {
+    padding: 0 24px;
+  }
+}
+
+/* line 71, ../sass/theme.scss */
+.kalei-menu-toggle {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  top: 1.125em;
+  right: -2.25em;
+  overflow: hidden;
+  width: 2.25em;
+  height: 2.25em;
+  background-color: transparent;
+  text-indent: 100%;
+  border: 1px solid #cccccc;
+  white-space: nowrap;
+  z-index: 20;
+  background: #f2f2f2;
+}
+/* line 85, ../sass/theme.scss */
+.kalei-menu-toggle:hover {
+  background: #ebebeb;
+}
+/* line 88, ../sass/theme.scss */
+.kalei-menu-toggle:active {
+  background: #e6e6e6;
+}
+/* line 91, ../sass/theme.scss */
+.kalei-menu-toggle:after {
+  font-size: 1.875em;
+  line-height: 1.2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.2em;
+  height: 1.2em;
+  color: #0d0d0d;
+  content: "\2261";
+  text-align: center;
+  text-indent: 0;
+  font-family: Arial, sans-serif;
+}
+/* line 105, ../sass/theme.scss */
+.kalei-nav--is-active .kalei-menu-toggle:after {
+  color: #cccccc;
+}
+
+/*
+## Headings and paragraphs
+```
+<div class="kalei-comments">
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+  <p class="fixie"></p>
+  <ul>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+  </ul>
+</div>
+
+```
+*/
+/* line 133, ../sass/theme.scss */
+.kalei-comments > h1:first-child,
+.kalei-comments > h2:first-child {
+  margin: 0;
+}
+
+/* line 147, ../sass/theme.scss */
+.kalei-comments > p,
+.kalei-comments > ul,
+.kalei-comments > ol {
+  margin-bottom: 24px;
+}
+
+/* line 152, ../sass/theme.scss */
+.kalei-comments > p a,
+.kalei-comments > p a:visited {
+  padding: 0;
+}
+
+/* line 155, ../sass/theme.scss */
+.kalei-comments > iframe {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/*
+## CSS and Comments Layout
+
+These styles make sure the css code block is floated to the right correctly and the comments on the left
+
+```
+<div class="kalei-documentation">
+
+  <div class="kalei-comments-container ">
+    <div class="kalei-comments ">
+      <p>This is a test Kalei comment.</p>
+    </div>
+  </div>
+
+</div>
+```
+*/
+/* line 187, ../sass/theme.scss */
+.kalei-style-page > .kalei-documentation {
+  position: relative;
+}
+
+/* line 190, ../sass/theme.scss */
+.kalei-comments-container {
+  width: 100%;
+  position: relative;
+}
+
+/*
+## Code demos
+
+When you use Markdown code blocks ```, Kalei automatically renders the code as HTML and beneath it shows the code block with syntax highlighting.
+```
+<pre>
+  <code>
+    .kalei-comments > pre > code,
+    .kalei-css-container > pre > code {
+      font-size: 11px;
+      opacity: 0.7;
+      white-space: pre-wrap;
+      padding: 10px;
+    }
+  </code>
+</pre>
+```
+*/
+/* line 218, ../sass/theme.scss */
+.kalei-comments > pre > code,
+.kalei-comments > code,
+.kalei-comments > p > code,
+.kalei-css-container > pre > code {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  white-space: pre-wrap;
+  padding: 0.85714em;
+}
+
+/* line 226, ../sass/theme.scss */
+.kalei-comments > p > code,
+.kalei-comments > ul code,
+.kalei-comments > ol code {
+  background-color: rgba(0, 0, 0, 0.025);
+  padding: 0.42857em;
+}
+
+/* line 232, ../sass/theme.scss */
+.kalei-comments > ul code,
+.kalei-comments > ol code {
+  font-size: 0.875em;
+  line-height: 2.57143em;
+}
+
+/* line 236, ../sass/theme.scss */
+.kalei-comments > pre > code {
+  background: transparent;
+}
+
+/* line 241, ../sass/theme.scss */
+.kalei-css-container,
+.kalei-comments > pre > code {
+  opacity: 0.3;
+}
+
+/* line 246, ../sass/theme.scss */
+.kalei-comments > pre > code:hover,
+.kalei-css-container:hover {
+  opacity: 1;
+}
+
+/* line 249, ../sass/theme.scss */
+.kalei-css-container.kalei-no-css {
+  display: none;
+}
+
+/* line 252, ../sass/theme.scss */
+.kalei-comments > pre {
+  margin: 0;
+  border-bottom: 1px solid #ebebeb;
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 24px;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 265, ../sass/theme.scss */
+.kalei-comments > pre > code::before {
+  content: "Code";
+  opacity: 0.3;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #444;
+  color: #ebebeb;
+  -webkit-border-radius: 0px 0 4px 0;
+  -moz-border-radius: 0px 0 4px 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 0px 0 4px 0;
+}
+
+/* line 283, ../sass/theme.scss */
+.kalei-comments > pre > code:hover::before {
+  opacity: 1;
+}
+
+/* line 288, ../sass/theme.scss */
+.kalei-comments {
+  padding: 12px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e6e6e6;
+}
+@media all and (min-width: 70em) {
+  /* line 288, ../sass/theme.scss */
+  .kalei-comments {
+    padding: 24px;
+  }
+}
+
+/* line 302, ../sass/theme.scss */
+body .codedemo {
+  position: relative;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAAXNSR0IArs4c6QAAAAZQTFRF+vr6////+o8bnQAAABBJREFUCB1jYPjPgBXhEAYAfr8P8bm+jEoAAAAASUVORK5CYII=);
+  padding: 36px 12px;
+  border: 1px solid #ebebeb;
+  font-size: 100%;
+  margin-top: 12px;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+/* line 314, ../sass/theme.scss */
+*:not(.codedemo) .kalei-styleguide-menu-heading h1 {
+  font-size: 22px;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #444;
+  padding-left: 20px;
+}
+
+/* line 322, ../sass/theme.scss */
+*:not(.codedemo) .kalei-styleguide-menu-heading, .styleguide-menu-heading:visited {
+  text-decoration: none;
+}
+
+/* line 326, ../sass/theme.scss */
+*:not(.codedemo) .kalei-styleguide-menu-heading:hover {
+  color: #222;
+}
+
+/* line 330, ../sass/theme.scss */
+*:not(.codedemo) .kalei-styleguide-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 335, ../sass/theme.scss */
+body .codedemo::after {
+  content: "Example";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #444;
+  color: #ebebeb;
+  -webkit-border-radius: 0px 0 4px 0;
+  -moz-border-radius: 0px 0 4px 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-radius: 3px 0 3px 0;
+}
+
+/* line 352, ../sass/theme.scss */
+.kalei-styleguide-menu-stylesheets {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #75eb33;
+  text-shadow: 0px 0px 1px #777;
+}
+
+/* line 362, ../sass/theme.scss */
+.kalei-styleguide-menu > li > h3 {
+  color: #444;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+/* line 370, ../sass/theme.scss */
+.kalei-styleguide-menu-link {
+  padding: 10px 0px 10px 20px;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  position: relative;
+}
+
+/* line 384, ../sass/theme.scss */
+.kalei-styleguide-menu-link:hover,
+.kalei-styleguide-menu-link.active {
+  background: #444;
+  color: #ebebeb;
+}
+
+/* line 390, ../sass/theme.scss */
+.kalei-styleguide-menu-link:hover:after,
+.kalei-styleguide-menu-link.active:after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  /* value = - border-top-width - border-bottom-width */
+  right: 0;
+  /* value = (:before left) + (:before border-left) - (:after border-left) */
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+
+/* line 403, ../sass/theme.scss */
+.kalei-styleguide-menu-link:hover:before,
+.kalei-styleguide-menu-link.active:before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  /* value = - border-top-width - border-bottom-width */
+  right: 0;
+  /* value = (:before left) + (:before border-left) - (:after border-left) */
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+
+/* line 419, ../sass/theme.scss */
+.kalei-styleguide-menu-link:hover:before,
+.kalei-styleguide-menu-link.active:before {
+  top: 14px;
+  /* value = (:before top) + (:before border-top) - (:after border-top) */
+  bottom: auto;
+  right: -1px;
+  /* value = - border-left-width - border-right-width */
+  border-width: 6px 5px 6px 0px;
+  border-color: transparent #ccc;
+}
+
+/* line 427, ../sass/theme.scss */
+.kalei-styleguide-menu-link:hover:after,
+.kalei-styleguide-menu-link.active:after {
+  top: 15px;
+  /* value = (:before top) + (:before border-top) - (:after border-top) */
+  bottom: auto;
+  right: -2px;
+  /* value = - border-left-width - border-right-width */
+  border-width: 5px 5px 5px 0px;
+  border-color: transparent #f7f7f7;
+}
+
+/* line 435, ../sass/theme.scss */
+.sheet-submenu li.active {
+  background: #ebebeb;
+}
+
+/* line 439, ../sass/theme.scss */
+.sheet-submenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 443, ../sass/theme.scss */
+.sheet-submenu li {
+  padding: 10px 10px 10px 40px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* line 485, ../sass/theme.scss */
+[class*="sg-color"] {
+  margin-bottom: 1.5em;
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.875em;
+  line-height: 2.57143em;
+}
+/* line 490, ../sass/theme.scss */
+[class*="sg-color"]:before {
+  display: block;
+  content: "";
+  height: 3em;
+}
+/* line 495, ../sass/theme.scss */
+[class*="sg-color"]:after {
+  display: block;
+  padding: 0 0.75em;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+@media all and (min-width: 70em) {
+  /* line 485, ../sass/theme.scss */
+  [class*="sg-color"] {
+    line-height: 4.5em;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+  /* line 504, ../sass/theme.scss */
+  [class*="sg-color"]:before {
+    height: 4.5em;
+    float: left;
+    width: 20%;
+    margin-right: 0.75em;
+  }
+  /* line 510, ../sass/theme.scss */
+  [class*="sg-color"]:after {
+    float: right;
+    width: 20%;
+    text-align: center;
+    margin-left: 0.75em;
+  }
+}
+
+/* line 546, ../sass/theme.scss */
+[class*="sg-type"] {
+  margin-bottom: 1.71429em;
+  padding: 0 0.85714em;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.025);
+  font-family: monospace;
+  font-size: 0.875em;
+  line-height: 3.42857em;
+}
+/* line 553, ../sass/theme.scss */
+[class*="sg-type"]:before {
+  font-size: 1.28571em;
+  line-height: 2.66667em;
+  display: block;
+  margin: 0 -0.66667em;
+  padding: 0 0.66667em;
+  background-color: rgba(0, 0, 0, 0.025);
+  content: "";
+}
