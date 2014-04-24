@@ -4,7 +4,7 @@
 
 #### Text Transforms
 
-```
+```example
 <p class="txt--lowercase">Lowercase</p>
 <p class="txt--uppercase">Uppercase</p>
 <p class="txt--capitalize">capitalize</p>
@@ -12,7 +12,7 @@
 
 #### Text Alignment
 
-```
+```example
 <p class="txt--align-left">Align Left</p>
 <p class="txt--align-right">Align Right</p>
 <p class="txt--align-center">Align Center</p>
@@ -20,7 +20,7 @@
 
 #### Text No Wrap
 
-```
+```example
 <p class="txt--nowrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
 ```
 
@@ -83,7 +83,7 @@
 
 #### Text Invert
 
-```
+```example
 <p class="txt--invert">Invert text with <a href="#">a link</a></p>
 ```
 
@@ -222,7 +222,9 @@
 
 #### Text Important
 
+```example
 <p class="txt--important">Important</p>
+```
 
 */
 
@@ -239,7 +241,9 @@
 
 #### Text Hyphenate
 
+```example
 <p class="txt--hyphen">https://access.redhat.com/site/products/Red_Hat_Enterprise_Linux/Get-Beta</p>
+```
 
 */
 
@@ -258,7 +262,7 @@
 
 #### Text States
 
-```
+```example
 <p class="txt--highlight">State Highlight</p>
 <p class="txt--success">State Success</p>
 <p class="txt--unsure">State Unsure</p>

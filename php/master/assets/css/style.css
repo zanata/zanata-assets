@@ -2593,7 +2593,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Transforms
 
-```
+```example
 <p class="txt--lowercase">Lowercase</p>
 <p class="txt--uppercase">Uppercase</p>
 <p class="txt--capitalize">capitalize</p>
@@ -2601,7 +2601,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Alignment
 
-```
+```example
 <p class="txt--align-left">Align Left</p>
 <p class="txt--align-right">Align Right</p>
 <p class="txt--align-center">Align Center</p>
@@ -2609,7 +2609,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text No Wrap
 
-```
+```example
 <p class="txt--nowrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
 ```
 
@@ -2657,7 +2657,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Invert
 
-```
+```example
 <p class="txt--invert">Invert text with <a href="#">a link</a></p>
 ```
 
@@ -2765,7 +2765,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Important
 
+```example
 <p class="txt--important">Important</p>
+```
 
 */
 .new-zanata .txt--important {
@@ -2776,7 +2778,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Hyphenate
 
+```example
 <p class="txt--hyphen">https://access.redhat.com/site/products/Red_Hat_Enterprise_Linux/Get-Beta</p>
+```
 
 */
 .new-zanata .txt--hyphenate {
@@ -2792,7 +2796,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text States
 
-```
+```example
 <p class="txt--highlight">State Highlight</p>
 <p class="txt--success">State Success</p>
 <p class="txt--unsure">State Unsure</p>
@@ -7000,6 +7004,9 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 ```
 
 */
+.new-zanata .panel {
+  position: relative;
+}
 .new-zanata .panel__header {
   border-width: 0 0 2px 0;
   width: 100%;
@@ -7115,6 +7122,11 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .panel__results .txt--meta {
   line-height: inherit;
+}
+.new-zanata .panel__results--bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .new-zanata .panel__results__type {
   position: absolute;
