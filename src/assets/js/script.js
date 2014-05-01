@@ -2155,7 +2155,7 @@ zanata.tabs = (function ($) {
     var $this = $(el),
         targetHash = $this.attr('href'),
         targetID = targetHash.replace('#', ''),
-        $parent = $this.parents('.js-tabs');
+        $parent = $this.closest('.js-tabs');
     // data-content attribute should have a selector for the
     // content container for the tab
     if($this.is('[data-content]')) {

@@ -880,6 +880,7 @@ a:hover,
   height: 2.03125em;
   border: 1px solid #ccc;
   color: #444c54;
+  border-radius: 2px;
 }
 
 .new-zanata audio,
