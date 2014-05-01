@@ -17,11 +17,12 @@ zanata.tabs = (function ($) {
     }
     if (!$this.parent().hasClass('is-active')) {
       // Remove all is-active classes
+      console.log($this);
       $parent
-        .find('> .js-tabs-content > li, > .js-tabs-nav > li')
+        .find('> .js-tabs-content > li, > .js-tabs-nav > li > a')
         .removeClass('is-active');
       // Add relevant is-active classes
-      $this.blur().parent().addClass('is-active');
+      $this.blur().addClass('is-active');
       // Add hashed class so we can remove ID to change the hash
       $(targetHash)
         .addClass('is-active');
@@ -31,7 +32,7 @@ zanata.tabs = (function ($) {
 
   var init = function () {
 
-    $('.js-tabs').on('click', '.js-tabs-nav a', function (e) {
+    $('.js-tabs').on('click', '.js-tabs-nav > li > a', function (e) {
       e.preventDefault();
       activate(this);
     });

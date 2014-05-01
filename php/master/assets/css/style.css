@@ -2525,7 +2525,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--pop-higher:hover,
 .new-zanata .dropdown__content:hover,
 .new-zanata .panel__sub-header:hover,
-.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
+.new-zanata .bg--higher--hover:hover, .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active a,
+.new-zanata .tabs--vertical .tabs__nav > li > a.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
 .new-zanata .bg--pop-highest:hover,
 .new-zanata .panel__header:hover,
@@ -2909,10 +2910,12 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .bg--higher--hover:hover {
   background-color: #fdfdfe;
 }
-.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
+.new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active a,
+.new-zanata .tabs--vertical .tabs__nav > li > a.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
 .new-zanata .bg--highest:hover,
 .new-zanata .bg--pop-highest:hover,
-.new-zanata .tabs--vertical .tabs__nav > li.is-active:hover,
+.new-zanata .tabs--vertical .tabs__nav > li.is-active a:hover,
+.new-zanata .tabs--vertical .tabs__nav > li > a.is-active:hover,
 .new-zanata .tabs--vertical .tabs__content > li:hover,
 .new-zanata .dropdown.is-active .dropdown__toggle:hover,
 .new-zanata .panel__header:hover,
@@ -2945,7 +2948,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
 }
-.new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn {
+.new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active a,
+.new-zanata .tabs--vertical .tabs__nav > li > a.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn {
   border: 1px solid rgba(65, 105, 136, 0.15);
   border-bottom-width: 2px;
 }
@@ -4897,22 +4901,39 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs--vertical .tabs__nav {
   float: left;
   width: 16%;
-  margin-right: -1px;
   z-index: 5;
   position: relative;
 }
 .new-zanata .tabs--vertical .tabs__nav > li {
   display: block;
-  border: 1px solid transparent;
-  border-bottom-color: 2px;
   z-index: 4;
-}
-.new-zanata .tabs--vertical .tabs__nav > li.is-active {
-  border-right-width: 0;
 }
 .new-zanata .tabs--vertical .tabs__nav > li > a {
   padding: 0.8125em;
+  border: 1px solid transparent;
   display: block;
+}
+.new-zanata .tabs--vertical .tabs__nav > li > a:after {
+  -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 2px;
+  height: 100%;
+  background-color: transparent;
+  content: "";
+}
+.new-zanata .tabs--vertical .tabs__nav > li.is-active a,
+.new-zanata .tabs--vertical .tabs__nav > li > a.is-active {
+  border-right-width: 0;
+  position: relative;
+}
+.new-zanata .tabs--vertical .tabs__nav > li.is-active a:after,
+.new-zanata .tabs--vertical .tabs__nav > li > a.is-active:after {
+  background-color: white;
 }
 .new-zanata .tabs--vertical .tabs__content {
   float: left;
