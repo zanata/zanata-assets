@@ -48,9 +48,13 @@
   margin: 0;
   padding: 0;
   > li {
+    display: none;
     list-style-image: none;
     list-style-type: none;
     margin-left: 0;
+    &.is-active {
+      display: block;
+    }
   }
 }
 
@@ -201,13 +205,9 @@
     float: left;
     width: 84%;
     > li {
-      display: none;
       @extend .bg--pop-highest;
       padding: rhythm(.5);
       min-height: rhythm(11);
-      &.is-active {
-        display: block;
-      }
     }
   }
   @include breakpoint($gte-medium) {

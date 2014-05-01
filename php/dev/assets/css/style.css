@@ -2582,6 +2582,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   opacity: 0;
   -moz-transform: scale3d(1, 0, 1);
   -ms-transform: scale3d(1, 0, 1);
+  -o-transform: scale3d(1, 0, 1);
   -webkit-transform: scale3d(1, 0, 1);
   transform: scale3d(1, 0, 1);
 }
@@ -2592,7 +2593,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Transforms
 
-```
+```example
 <p class="txt--lowercase">Lowercase</p>
 <p class="txt--uppercase">Uppercase</p>
 <p class="txt--capitalize">capitalize</p>
@@ -2600,7 +2601,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Alignment
 
-```
+```example
 <p class="txt--align-left">Align Left</p>
 <p class="txt--align-right">Align Right</p>
 <p class="txt--align-center">Align Center</p>
@@ -2608,7 +2609,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text No Wrap
 
-```
+```example
 <p class="txt--nowrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
 ```
 
@@ -2656,7 +2657,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Invert
 
-```
+```example
 <p class="txt--invert">Invert text with <a href="#">a link</a></p>
 ```
 
@@ -2764,7 +2765,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Important
 
+```example
 <p class="txt--important">Important</p>
+```
 
 */
 .new-zanata .txt--important {
@@ -2775,7 +2778,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text Hyphenate
 
+```example
 <p class="txt--hyphen">https://access.redhat.com/site/products/Red_Hat_Enterprise_Linux/Get-Beta</p>
+```
 
 */
 .new-zanata .txt--hyphenate {
@@ -2791,7 +2796,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 #### Text States
 
-```
+```example
 <p class="txt--highlight">State Highlight</p>
 <p class="txt--success">State Success</p>
 <p class="txt--unsure">State Unsure</p>
@@ -3132,6 +3137,7 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
   0% {
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
@@ -3139,6 +3145,7 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
   100% {
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -4178,6 +4185,7 @@ _links.scss .new-zanata .message--success button.is-active,
 .new-zanata .form__checkbox__item:after {
   -moz-transform: scale(0.1, 0.1);
   -ms-transform: scale(0.1, 0.1);
+  -o-transform: scale(0.1, 0.1);
   -webkit-transform: scale(0.1, 0.1);
   transform: scale(0.1, 0.1);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -4193,6 +4201,7 @@ _links.scss .new-zanata .message--success button.is-active,
 .new-zanata .form__checkbox__item.is-checked:after {
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -4216,6 +4225,7 @@ _links.scss .new-zanata .message--success button.is-active,
 .new-zanata .form__radio__item.is-checked:before {
   background-color: #416988;
   background-image: -moz-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
+  background-image: -o-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
   background-image: -webkit-radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
   background-image: radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
 }
@@ -4766,9 +4776,13 @@ Keep focus while showing and hiding a password field
   padding: 0;
 }
 .new-zanata .tabs__content > li {
+  display: none;
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
+}
+.new-zanata .tabs__content > li.is-active {
+  display: block;
 }
 .new-zanata .tabs--lined > .tabs__nav {
   border-bottom: 2px solid rgba(65, 105, 136, 0.15);
@@ -4896,12 +4910,8 @@ Keep focus while showing and hiding a password field
   width: 84%;
 }
 .new-zanata .tabs--vertical .tabs__content > li {
-  display: none;
   padding: 0.8125em;
   min-height: 17.875em;
-}
-.new-zanata .tabs--vertical .tabs__content > li.is-active {
-  display: block;
 }
 @media (min-width: 46.25em) {
   .new-zanata .tabs--vertical .tabs__content > li {
@@ -5119,7 +5129,9 @@ Keep focus while showing and hiding a password field
   -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   position: absolute;
+  top: 0;
   left: 0.40625em;
+  line-height: 3.25em;
 }
 .new-zanata .dropdown__toggle--large {
   font-size: 1.5em;
@@ -5157,6 +5169,7 @@ Keep focus while showing and hiding a password field
 .new-zanata .dropdown.is-active .dropdown__toggle:after {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -5546,6 +5559,7 @@ Used in panel headers to match the header layout
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-transform: translateY(-250%);
   -ms-transform: translateY(-250%);
+  -o-transform: translateY(-250%);
   -webkit-transform: translateY(-250%);
   transform: translateY(-250%);
   position: absolute;
@@ -5561,6 +5575,7 @@ Used in panel headers to match the header layout
 .new-zanata .message--global.is-fixed {
   -moz-transform: translateY(-150%);
   -ms-transform: translateY(-150%);
+  -o-transform: translateY(-150%);
   -webkit-transform: translateY(-150%);
   transform: translateY(-150%);
   position: fixed;
@@ -6688,6 +6703,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   margin: 0 auto;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
   -webkit-transform-origin: 0 50%;
   transform-origin: 0 50%;
   -moz-transform: translateY(50%);
@@ -6990,6 +7006,9 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 ```
 
 */
+.new-zanata .panel {
+  position: relative;
+}
 .new-zanata .panel__header {
   border-width: 0 0 2px 0;
   width: 100%;
@@ -7105,6 +7124,11 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .panel__results .txt--meta {
   line-height: inherit;
+}
+.new-zanata .panel__results--bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .new-zanata .panel__results__type {
   position: absolute;
@@ -7568,6 +7592,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
     -moz-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
     bottom: auto;
@@ -7707,6 +7732,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   .new-zanata .header__main-nav.is-active .header__main-nav__toggle:before {
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
@@ -7723,6 +7749,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   .new-zanata .header__main-nav.is-active .header__main-nav__group {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
+    -o-transform: translateY(0);
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -7833,6 +7860,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   transition: 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   bottom: auto;
@@ -7868,6 +7896,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle:before {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -7884,6 +7913,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .header__user-nav.is-active .header__user-nav__menu {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
+  -o-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }

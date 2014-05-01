@@ -4328,9 +4328,13 @@ Keep focus while showing and hiding a password field
   padding: 0;
 }
 .new-zanata .tabs__content > li {
+  display: none;
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
+}
+.new-zanata .tabs__content > li.is-active {
+  display: block;
 }
 .new-zanata .tabs--lined > .tabs__nav {
   border-bottom: 2px solid rgba(65, 105, 136, 0.15);
@@ -4456,12 +4460,8 @@ Keep focus while showing and hiding a password field
   width: 84%;
 }
 .new-zanata .tabs--vertical .tabs__content > li {
-  display: none;
   padding: 0.8125em;
   min-height: 17.875em;
-}
-.new-zanata .tabs--vertical .tabs__content > li.is-active {
-  display: block;
 }
 .new-zanata .tabs--vertical .tabs__content > li {
   padding: 1.625em;
@@ -4675,7 +4675,9 @@ Keep focus while showing and hiding a password field
   -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   position: absolute;
+  top: 0;
   left: 0.40625em;
+  line-height: 3.25em;
 }
 .new-zanata .dropdown__toggle--large {
   font-size: 1.5em;

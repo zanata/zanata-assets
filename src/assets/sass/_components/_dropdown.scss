@@ -107,7 +107,9 @@
     @extend .i--arrow-down:before;
     @include transition($default-transition);
     position: absolute;
+    top: 0;
     left: rhythm(.25);
+    line-height: rhythm(2);
   }
 }
 
