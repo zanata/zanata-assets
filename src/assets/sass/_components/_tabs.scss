@@ -78,12 +78,22 @@
         width: 100%;
         background-color: transparent;
       }
-      :hover {
+      &.is-active {
+        &:after {
+          background-color: $color-secondary;
+        }
+      }
+    }
+    > ul > li,
+    > li {
+      &:hover > a,
+      > a:hover {
         &:after {
           background-color: $color-secondary-30;
         }
       }
-      &.is-active {
+      &.is-active > a,
+      > a.is-active {
         &:after {
           background-color: $color-secondary;
         }

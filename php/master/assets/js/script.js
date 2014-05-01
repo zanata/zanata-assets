@@ -2164,7 +2164,7 @@ zanata.tabs = (function ($) {
     if (!$this.parent().hasClass('is-active')) {
       // Remove all is-active classes
       $parent
-        .find('.js-tabs-content li, .js-tabs-nav li')
+        .find('> .js-tabs-content > li, > .js-tabs-nav > li')
         .removeClass('is-active');
       // Add relevant is-active classes
       $this.blur().parent().addClass('is-active');

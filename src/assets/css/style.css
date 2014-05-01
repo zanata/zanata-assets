@@ -4806,11 +4806,19 @@ Keep focus while showing and hiding a password field
   width: 100%;
   background-color: transparent;
 }
-.new-zanata .tabs--lined > .tabs__nav > ul > li > a :hover:after,
-.new-zanata .tabs--lined > .tabs__nav > li > a :hover:after {
+.new-zanata .tabs--lined > .tabs__nav > ul > li > a.is-active:after,
+.new-zanata .tabs--lined > .tabs__nav > li > a.is-active:after {
+  background-color: #416988;
+}
+.new-zanata .tabs--lined > .tabs__nav > ul > li:hover > a:after,
+.new-zanata .tabs--lined > .tabs__nav > ul > li > a:hover:after,
+.new-zanata .tabs--lined > .tabs__nav > li:hover > a:after,
+.new-zanata .tabs--lined > .tabs__nav > li > a:hover:after {
   background-color: #c6d2db;
 }
+.new-zanata .tabs--lined > .tabs__nav > ul > li.is-active > a:after,
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a.is-active:after,
+.new-zanata .tabs--lined > .tabs__nav > li.is-active > a:after,
 .new-zanata .tabs--lined > .tabs__nav > li > a.is-active:after {
   background-color: #416988;
 }
