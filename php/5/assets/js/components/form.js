@@ -137,8 +137,12 @@ zanata.form = (function ($) {
       );
 
     $('.js-form__input--copyable')
-      .on('click', function () {
-        $(this).select();
+      .on('mouseup', function () {
+        var $this = $(this),
+            thisItem = $this[0];
+        if (thisItem.selectionStart === thisItem.selectionEnd) {
+          $this.select();
+        }
       });
 
     $(document).on('click', '.js-form__checkbox', function (e) {

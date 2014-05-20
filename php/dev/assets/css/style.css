@@ -868,6 +868,9 @@ a:hover,
 .new-zanata textarea[disabled] {
   background-color: #e5e7e9;
 }
+.new-zanata [contenteditable]:focus {
+  outline: none !important;
+}
 .new-zanata textarea {
   overflow: auto;
   height: auto;
@@ -958,6 +961,7 @@ These are components that can be utilised or are depended on by other components
 .new-zanata .l--cf-of,
 .new-zanata .media,
 .new-zanata .panel__results,
+.new-zanata .edit-item,
 .new-zanata .header {
   *zoom: 1;
 }
@@ -965,6 +969,7 @@ These are components that can be utilised or are depended on by other components
 .new-zanata .l--cf-of:after,
 .new-zanata .media:after,
 .new-zanata .panel__results:after,
+.new-zanata .edit-item:after,
 .new-zanata .header:after {
   content: "";
   display: table;
@@ -2008,9 +2013,11 @@ Collapsed grids have all the properties of regular grids, minus any spacing.
 */
 .new-zanata .g--collapsed {
   margin-left: 0;
+  margin-right: 0;
 }
 .new-zanata .g--collapsed > .g__item {
   padding-left: 0;
+  padding-right: 0;
 }
 
 /*
@@ -2559,7 +2566,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata input.button--danger,
 .new-zanata input.button--primary,
 .new-zanata .button--unsure,
-.new-zanata input.button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .modal, .new-zanata .drag-drop:after, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
+.new-zanata input.button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .modal, .new-zanata .drag-drop:after, .new-zanata .edit-item, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
   -moz-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -o-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   -webkit-transition: 0.2s cubic-bezier(0.26, 0.47, 0.36, 0.94);
@@ -2832,6 +2839,22 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .txt--neutral, .new-zanata .message--neutral,
 .new-zanata .txt--state-neutral {
   color: #c6d2db !important;
+}
+
+/*
+
+#### Text Hyphenate
+
+```example
+<p class="txt--select-none">Don't let any text inside here be selected</p>
+```
+
+*/
+.new-zanata .txt--select-none {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .new-zanata .divide, .new-zanata .d--right, .new-zanata .d--left, .new-zanata .d--bottom, .new-zanata .d--top {
@@ -3153,6 +3176,15 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
     -o-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
   }
 }
 /*
@@ -7392,6 +7424,281 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
+}
+
+.new-zanata .edit-field {
+  position: relative;
+  border-top: 1px solid rgba(65, 105, 136, 0.15);
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.new-zanata .edit-field__underlay,
+.new-zanata .edit-field__overlay {
+  cursor: text;
+  width: 100%;
+  border: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  border: none;
+  min-height: 1.625em;
+}
+.new-zanata .edit-field__underlay {
+  box-shadow: none;
+  background-color: transparent;
+  color: transparent;
+  word-wrap: break-word;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.new-zanata .edit-field__underlay:focus {
+  background-color: transparent;
+}
+.new-zanata .edit-field__overlay,
+.new-zanata .edit-field__underlay,
+.new-zanata .edit-field__readonly {
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.625em;
+  padding: 1.625em 0.8125em;
+  margin: 0;
+  white-space: pre-wrap;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+.new-zanata .edit-field__underlay {
+  resize: none;
+}
+.new-zanata .edit-field__underlay:focus {
+  box-shadow: none;
+  border: none;
+}
+.new-zanata .edit-field__readonly pre,
+.new-zanata .edit-field__readonly code,
+.new-zanata .edit-field__overlay pre,
+.new-zanata .edit-field__overlay code {
+  font-weight: 400;
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.625em;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  display: block;
+}
+.new-zanata .edit-field__readonly span,
+.new-zanata .edit-field__overlay span {
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+.new-zanata .edit-field__readonly code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all;
+}
+.new-zanata .edit-field__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+}
+.new-zanata .edit-field__cursor {
+  position: absolute;
+  width: 2px;
+  height: 1.4625em;
+  margin-left: -1px;
+  background-color: #a2b4c3;
+}
+.new-zanata .edit-field__cursor.is-blinking {
+  -moz-animation: 1s blink step-end infinite;
+  -webkit-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+.new-zanata .edit-field__cursor-text {
+  color: transparent;
+}
+
+.new-zanata .edit-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.new-zanata .edit-item:hover {
+  cursor: text;
+}
+.new-zanata .edit-item.is-focused {
+  background-color: #fdfdfe;
+}
+.new-zanata .edit-item.is-unfocused {
+  opacity: 0.6;
+}
+.new-zanata .edit-item.is-unfocused:hover {
+  opacity: 0.8;
+}
+.new-zanata .edit-item__panel {
+  list-style: none;
+}
+.new-zanata .edit-item__panel:hover {
+  cursor: text;
+}
+@media (min-width: 46.25em) {
+  .new-zanata .edit-item__panel {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 46.25em) {
+  .new-zanata .edit-item__translation {
+    float: right;
+  }
+}
+.new-zanata .edit-item__status {
+  background-color: #c6d2db;
+  text-indent: -9999px;
+  height: 0.40625em;
+  width: 100%;
+}
+@media (min-width: 46.25em) {
+  .new-zanata .edit-item__status {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -0.20313em;
+    width: 0.40625em;
+    height: 100%;
+  }
+}
+.new-zanata .edit-item__header,
+.new-zanata .edit-item__footer {
+  position: absolute;
+  z-index: 2;
+  padding-right: 0.8125em;
+  padding-left: 0.8125em;
+  border-top: 1px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  background-color: white;
+  height: 1.625em;
+  width: 50%;
+}
+.new-zanata .edit-item__header:hover,
+.new-zanata .edit-item__footer:hover {
+  cursor: default;
+}
+.new-zanata .edit-item__header {
+  top: -0.8125em;
+}
+.new-zanata .edit-item__footer {
+  bottom: -0.8125em;
+}
+.new-zanata .edit-item__heading {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  vertical-align: top;
+}
+.new-zanata .edit-item--translated .edit-item__status {
+  background-color: #70a98b;
+}
+.new-zanata .edit-item--unsure .edit-item__status {
+  background-color: #e0c350;
+}
+.new-zanata .edit-item--highlight .edit-item__status {
+  background-color: #4e9fdd;
+}
+.new-zanata .edit-item--danger .edit-item__status {
+  background-color: #e0575b;
+}
+.new-zanata .edit-item--warning .edit-item__status {
+  background-color: #e3824e;
+}
+.new-zanata .edit-item__source--vertical {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 2;
+  float: none;
+  margin-bottom: 0.8125em;
+  width: 50%;
+  background-color: #fdfdfe;
+}
+.new-zanata .edit-item__source--vertical .edit-item__header {
+  width: 100%;
+}
+
+.new-zanata .toolbar__button,
+.new-zanata .toolbar__button:hover,
+.new-zanata .toolbar__button:focus,
+.new-zanata .toolbar__button:active,
+.new-zanata .toolbar__button.is-active {
+  box-shadow: none;
+  position: relative;
+  margin-top: -1px;
+  padding: 0 0.46429em;
+  height: 1.85714em;
+  border: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  background-clip: padding-box;
+  color: #4e9fdd;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+}
+.new-zanata .toolbar__button:hover {
+  background-color: #f5f6f7;
+}
+.new-zanata .toolbar__button.is-active {
+  background-color: #fdfdfe;
+  border-left-color: rgba(65, 105, 136, 0.15);
+  border-right-color: rgba(65, 105, 136, 0.15);
+}
+.new-zanata .toolbar__button--inline,
+.new-zanata .toolbar__button__toggle {
+  margin-left: -0.40625em;
+}
+.new-zanata .toolbar__button__toggle.is-active {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.new-zanata .toolbar__button--top.is-active {
+  border-top-color: #fdfdfe;
+}
+.new-zanata .toolbar__button--bottom.is-active {
+  border-bottom-color: #fdfdfe;
+}
+.new-zanata .toolbar__button--success {
+  background-color: #6aa084;
+  color: #f2f2f2;
+}
+.new-zanata .toolbar__button--success:hover, .new-zanata .toolbar__button--success:focus {
+  background-color: #70a98b;
+  color: white;
+}
+.new-zanata .toolbar__button--success:active, .new-zanata .toolbar__button--success.is-active {
+  background-color: #59876f;
 }
 
 /*

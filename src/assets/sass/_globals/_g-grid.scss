@@ -280,9 +280,11 @@ Collapsed grids have all the properties of regular grids, minus any spacing.
 .g--collapsed{
   @extend .g;
   margin-left:0;
+  margin-right:0;
 
   > .g__item{
     padding-left:0;
+    padding-right:0;
   }
 }
 

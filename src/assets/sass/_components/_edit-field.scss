@@ -1,0 +1,109 @@
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.edit-field {
+  position: relative;
+  border-top: $default-border;
+  @include user-select(none);
+}
+
+.edit-field__underlay,
+.edit-field__overlay {
+  cursor: text;
+  width: 100%;
+  border: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  border: none;
+  min-height: rhythm(1);
+}
+
+//textarea reset
+.edit-field__underlay {
+  box-shadow: none;
+  background-color: transparent;
+  color: transparent;
+  word-wrap: break-word;
+  @include user-select(none);
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.edit-field__overlay,
+.edit-field__underlay,
+.edit-field__readonly {
+  font-family: $font-family-base;
+  font-size: emCalc(16px);
+  line-height: rhythm(1, 16px);
+  padding: rhythm(1) rhythm(.5);
+  margin: 0;
+  white-space: pre-wrap;
+  -moz-tab-size:4;
+  -o-tab-size:4;
+  tab-size:4;
+}
+
+.edit-field__underlay {
+  resize: none;
+  &:focus {
+    box-shadow: none;
+    border: none;
+  }
+}
+
+// Reset styles
+.edit-field__readonly,
+.edit-field__overlay {
+  pre,
+  code {
+    font-weight: 400;
+    font-family: $font-family-base;
+    font-size: emCalc(16px);
+    line-height: rhythm(1, 16px);
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden;
+    background-color: transparent;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: block;
+  }
+  span {
+    // Override text highlighting changing text format
+    // otherwise it won't align
+    font-weight: 400 !important;
+    font-style: normal !important;
+  }
+}
+
+.edit-field__readonly code {
+  @include user-select(all);
+}
+
+.edit-field__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+}
+
+.edit-field__cursor {
+  position: absolute;
+  width: 2px;
+  height: rhythm(.9);
+  margin-left: -1px;
+  background-color: $color-secondary-50;
+  &.is-blinking {
+    @include animation(1s blink step-end infinite);
+  }
+}
+
+.edit-field__cursor-text {
+  color: transparent;
+}
+
+}

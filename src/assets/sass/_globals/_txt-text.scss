@@ -308,3 +308,22 @@
 }
 
 }
+
+/*
+
+#### Text Hyphenate
+
+```example
+<p class="txt--select-none">Don't let any text inside here be selected</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--select-none {
+  @include user-select(none);
+}
+
+}

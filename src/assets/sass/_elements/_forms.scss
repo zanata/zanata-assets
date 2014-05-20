@@ -191,6 +191,13 @@ textarea {
   }
 }
 
+// Reset
+[contenteditable] {
+  &:focus {
+    outline: none !important;
+  }
+}
+
 textarea {
   overflow: auto;
   height: auto;

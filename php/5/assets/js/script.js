@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-05-01
+/*! zanata-assets - v0.1.0 - 2014-05-20
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1788,8 +1788,12 @@ zanata.form = (function ($) {
       );
 
     $('.js-form__input--copyable')
-      .on('click', function () {
-        $(this).select();
+      .on('mouseup', function () {
+        var $this = $(this),
+            thisItem = $this[0];
+        if (thisItem.selectionStart === thisItem.selectionEnd) {
+          $this.select();
+        }
       });
 
     $(document).on('click', '.js-form__checkbox', function (e) {
@@ -1974,11 +1978,11 @@ zanata.modal = (function ($) {
       $(el).addClass('is-active');
     }
     else {
-      var $newEl = $el.clone().appendTo('body');
-      $el.attr('id', $el.attr('id') + '-cloned').empty();
+      $el.before('<div id="' + $el.attr('id') + '-placeholder"/>');
+      $el.appendTo('body');
       // Allow this to animate in
       setTimeout(function () {
-        $newEl.addClass('is-active is-clone');
+        $el.addClass('is-active is-moved');
       }, 0);
     }
     $('body').addClass('is-modal');
@@ -1988,10 +1992,10 @@ zanata.modal = (function ($) {
     var $el = $(el);
     $el.removeClass('is-active');
 
-    if ($el.hasClass('is-clone')) {
-      var elClone = '#' + $el.attr('id') + '-cloned';
+    if ($el.hasClass('is-moved')) {
+      var elPlaceholder = '#' + $el.attr('id') + '-placeholder';
       setTimeout(function () {
-        $el.appendTo(elClone).unwrap().removeClass('is-clone');
+        $el.appendTo(elPlaceholder).unwrap().removeClass('is-moved');
       }, 300);
     }
 
