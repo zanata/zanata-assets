@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-05-20
+/*! zanata-assets - v0.1.0 - 2014-05-27
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1655,6 +1655,9 @@ zanata.createNS('zanata.form');
 
 zanata.form = (function ($) {
 
+  var formSearchInProgress = false,
+      formSearchInputMouseDown = false;
+
   // Private methods
   function setCheckRadio ($this) {
     var $input = $this.find('.js-form__checkbox__input,.js-form__radio__input');
@@ -1698,6 +1701,17 @@ zanata.form = (function ($) {
         $item.addClass('is-checked');
       }
     }, 0);
+  }
+
+  function updateSearchProgressFlag(e) {
+    var $target = $(e.target);
+    formSearchInProgress =
+      $target.parents('.autocomplete').length > 0 ||
+      $target.hasClass('autocomplete');
+
+    if (!formSearchInProgress && !formSearchInputMouseDown) {
+      $('.js-form--search__input').blur();
+    }
   }
 
   var appendCheckboxes = function (el) {
@@ -1782,10 +1796,25 @@ zanata.form = (function ($) {
 
     $('.js-form--search')
       .on('blur', '.js-form--search__input, .js-form--search__button',
-        function () {
-          $(this).parents('.js-form--search').removeClass('is-active');
+        function (e) {
+          if (!formSearchInProgress) {
+            $(this).parents('.js-form--search').removeClass('is-active');
+          }
+          // console.log(e);
         }
       );
+
+    $('.js-form--search').on('mousedown', function(e) {
+      formSearchInputMouseDown =
+        $(e.target).hasClass('js-form--search__input');
+      updateSearchProgressFlag(e);
+    });
+
+    $(document).on('mouseup', function(e) {
+      updateSearchProgressFlag(e);
+      // Reset mouse down
+      formSearchInputMouseDown = false;
+    });
 
     $('.js-form__input--copyable')
       .on('mouseup', function () {
@@ -2074,7 +2103,6 @@ jQuery(function () {
           $(this).attr('data-original-title'),
         revealToggleTitle = $(this).attr('data-toggle-title');
 
-    console.log($revealTarget, $revealParent);
     // Label need to register the click so it applies to the checkbox or radio
     // it is attached to
     if (!$(e.target).is('label')) {

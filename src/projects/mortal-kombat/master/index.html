@@ -10,7 +10,71 @@ root: "../../../"
     <div class="l--push-bottom-half">
       <h1 class="l--push-all-0"><i class="i--small i--version txt--neutral i--left"></i>master</h1>
     </div>
-    <p class="d--top l--pad-top-half txt--mini">Total source contains: <strong>2,528,683 words / 101,147 messages</strong></p>
+    <div id="overall_statistic" class="d--top progress-bar--large__expander">
+
+      <ul class="l--pad-top-half g--tight g--fit">
+        <li class="g__item l--push-bottom-half">
+          <span class="stats">
+            <span class="stats__figure">2163</span>
+            <span class="stats__unit txt--lowercase">source words</span>
+          </span>
+        </li>
+        <li class="g__item l--push-bottom-half">
+          <span class="stats">
+            <span class="stats__figure">21</span>
+            <span class="stats__unit txt--lowercase">languages</span>
+          </span>
+        </li>
+
+        <li class="g__item l--push-bottom-half">
+          <span class="stats">
+            <span class="stats__figure">45423</span>
+            <span class="stats__unit txt--lowercase">source words &times; languages</span>
+          </span>
+        </li>
+      </ul>
+      <hr class="l--push-v-0">
+      <ul class="g--tight g--fit l--push-top-half js-reveal">
+        <li class="g__item l--push-bottom-half">
+          <span class="txt--state-success stats--large">
+            <span class="stats__figure">0.16%</span>
+            <span class="stats__unit txt--lowercase">Translated</span>
+          </span>
+        </li>
+        <li class="g__item l--push-bottom-half cursor--pointer js-reveal__toggle is-active" data-target="#total-hours, #total-words" id="total-words" title="Toggle hours remaining">
+          <span class="stats--large">
+            <span class="stats__figure">44788</span>
+            <span class="stats__unit txt--lowercase">total words remaining</span>
+          </span>
+        </li>
+        <li class="g__item l--push-bottom-half cursor--pointer js-reveal__toggle is-hidden" data-target="#total-words, #total-hours" id="total-hours" title="Toggle words remaining">
+          <span class="stats--large">
+            <span class="stats__figure">179.15</span>
+            <span class="stats__unit txt--lowercase">total hours remaining</span>
+          </span>
+        </li>
+      </ul>
+
+      <div class="progress-bar--large">
+        <span class="progress-bar__approved" title="" style="width: 0.0%;" data-original-title="0.0% Approved, 0 words">
+          <span class="is-invisible">Approved</span>
+        </span>
+        <span class="progress-bar__translated" title="" style="width: 0.16%; margin-left: 0.0%" data-original-title="0.16% Translated, 310 words">
+          <span class="is-invisible">Translated</span>
+        </span>
+        <span class="progress-bar__rejected" title="" style="width: 0.0%; margin-left: 0.16%;" data-original-title="0.0% Rejected, 0 words">
+          <span class="is-invisible">Rejected</span>
+        </span>
+        <span class="progress-bar__fuzzy" title="" style="width: 0.0%; margin-left: 0.16%;" data-original-title="0.0% Fuzzy, 0 words">
+          <span class="is-invisible">Fuzzy</span>
+        </span>
+        <span class="progress-bar__untranslated progress-bar__item" title="" style="width: 99.83%; margin-left: 0.16%" data-original-title="99.83% Untranslated, 183545 words">
+          <span class="is-invisible">Untranslated</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- <p class="d--top l--pad-top-half txt--mini">Total source contains: <strong>2,528,683 words / 101,147 messages</strong></p>
     <div class="progress-bar--large__expander l--push-bottom-half">
       <ul class="g g--fit">
         <li class="g__item"><span class="stats--large txt--state-success"><span class="stats__figure">65%</span> <span class="stats__unit">translated</span></span></li>
@@ -21,7 +85,7 @@ root: "../../../"
         <span title="65% Translated, 1643644 Words" class="progress-bar__translated" style="width: 65%;"></span>
         <span title="11% Fuzzy, 278156 Words" class="progress-bar__fuzzy" style="width: 11%; margin-left: 65%;"></span>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="g__item w--1-m w--5-8-l w--2-3">
     <div class="tabs--lined">

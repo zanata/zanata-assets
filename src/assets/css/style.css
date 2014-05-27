@@ -5040,7 +5040,7 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .progress-bar--large__expander {
   position: relative;
-  padding-bottom: 1.625em !important;
+  padding-bottom: 0.8125em !important;
   border-bottom: none !important;
 }
 .no-touch .new-zanata .progress-bar--large__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar--large__expander.is-active .progress-bar--large {
@@ -5557,6 +5557,10 @@ Used in panel headers to match the header layout
 }
 .new-zanata .alert--danger .alert__highlight {
   color: #e0575b;
+}
+
+.new-zanata .cursor--pointer {
+  cursor: pointer !important;
 }
 
 /*
