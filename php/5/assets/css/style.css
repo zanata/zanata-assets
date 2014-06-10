@@ -3985,7 +3985,7 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 
 */
-.new-zanata .list__item--fedora:before, .new-zanata .list__item--google:before, .new-zanata .list__item--yahoo:before, .new-zanata .list__item--openid:before {
+.new-zanata .list__item--fedora:before, .new-zanata .list__item--google:before, .new-zanata .list__item--yahoo:before, .new-zanata .list__item--openid:before, .new-zanata .list__item--zanata:before {
   background-repeat: no-repeat;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -4011,6 +4011,9 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .list__item--openid:before {
   background-image: url(../img/openid-logo.svg);
+}
+.new-zanata .list__item--zanata:before {
+  background-image: url(../img/logo/logo.svg);
 }
 
 _links.scss

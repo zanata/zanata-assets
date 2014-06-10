@@ -548,4 +548,11 @@ nav ol {
   }
 }
 
+.list__item--zanata {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/logo/logo.svg);
+  }
+}
+
 }
