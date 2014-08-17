@@ -60,69 +60,71 @@ Removes some of the styling on the page-level splitters
 }
 
 .THEMES_COMPACT .transUnitCol {
-  padding:0px 0px;
+  padding:0 0;
 }
 
 .THEMES_COMPACT .transUnitCol .buttons {
-  font-size:16px;
+  font-size:1.2em;
 }
 
 .THEMES_DEFAULT .transUnitCol {
-  padding:10px 0px;
+  padding:0.5em 0;
 }
 
 .THEMES_DEFAULT .transUnitCol .buttons {
-  font-size:18px;
+  font-size:1.3em;
 }
 
 .THEMES_LOOSE .transUnitCol {
-  padding:20px 0px;
+  padding:0.8em 0;
 }
 
 .THEMES_LOOSE .transUnitCol .buttons {
-  font-size:20px;
+  font-size:1.5em;
 }
 
 .transUnitTable {
-  border-collapse: collapse;
-  /* setting width to 99% to leave some space from the scroll bar */
-  width: 99%;
-  margin: 0 0.1em;
+  display: table !important;
   table-layout: fixed;
 }
 
 
+
 .transUnitTable tr.selected
 {
-  border-left: 2px dotted $color-primary;
-  border-right: 2px dotted $color-primary;
     background-color:#F3F7FB;
+    opacity: 1 !important;
 }
 
 
-.transUnitTable tr.selected .transUnitCol
+.transUnitTable>tbody>tr.selected>td
 {
-  border-top: 2px solid $color-primary;
-  border-bottom: 2px solid $color-primary;
+  box-shadow: 0 4px 3px rgba(211,211,211,0.7), 0 -4px 3px rgba(211,211,211,0.7);
 }
 
-.transUnitTable tr:hover
+.transUnitTable>tbody>tr:hover
 {
-  background-color:#F3F7FB;
+  opacity: 0.8;
 }
 
-.transUnitTable tr:hover .fadeElement, .transUnitTable tr.selected .fadeElement
+.transUnitTable>tbody>tr:hover .fadeElement, .transUnitTable tr.selected .fadeElement
 {
-  opacity:1;
-
+  opacity:0.965;
 }
-.transUnitTable tr .fadeElement
+
+.transUnitTable>tbody>tr
+{
+  opacity: 0.6;
+}
+
+.transUnitTable>tbody>tr .fadeElement
 {
   opacity:0;
 }
 
 .transUnitTable>tbody>tr>td {
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid;
+  border-color:rgba(211,211,211,0.4);
 }
 
 
@@ -155,22 +157,23 @@ tr.FuzzyStateDecoration td.TableEditorCell-Target div.TableEditorCell-Target {
   border-right: 3px solid $color-unsure;
 }
 
-table.ApprovedStateDecoration div.TableEditorCell-Target {
+table.ApprovedStateDecoration .TableEditorCell-Target {
     border-left: 3px solid $color-highlight;
     border-right: 3px solid $color-highlight;
 }
 
-table.FuzzyStateDecoration div.TableEditorCell-Target {
+table.FuzzyStateDecoration .TableEditorCell-Target {
     border-left: 3px solid $color-unsure;
     border-right: 3px solid $color-unsure;
 }
 
-table.TranslatedStateDecoration div.TableEditorCell-Target {
+table.TranslatedStateDecoration .TableEditorCell-Target {
     border-left: 3px solid $color-success;
     border-right: 3px solid $color-success;
 }
 
-table.RejectedStateDecoration div.TableEditorCell-Target {
+
+table.RejectedStateDecoration .TableEditorCell-Target {
     border-left: 3px solid $color-warning;
     border-right: 3px solid $color-warning;
 }
@@ -471,12 +474,6 @@ td.RejectedStateDecoration div div div
     color: $color-link-hover;
   }
 }
-
-.DocumentListTable .hasError {
-  color:#e0575b;
-  font-weight:bold;
-}
-
 
 .DocumentListTable td.statisticCol {
   text-align:center;
@@ -956,7 +953,6 @@ a.downloadLink
 // main container
 #container > div {
   background: $color-bg !important;
-  margin-top: rhythm(.25) !important;
   > div:nth-of-type(3),
   > div:nth-of-type(4) {
     top: 32px !important;
