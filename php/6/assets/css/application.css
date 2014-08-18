@@ -91,16 +91,16 @@ Removes some of the styling on the page-level splitters
   box-shadow: 0 4px 3px rgba(211, 211, 211, 0.7), 0 -4px 3px rgba(211, 211, 211, 0.7);
 }
 
-.transUnitTable > tbody > tr:hover {
-  opacity: 0.8;
+.transUnitTable > tbody > tr:hover, .transUnitTable > tbody > tr:hover .fadeElement {
+  opacity: 0.75;
 }
 
-.transUnitTable > tbody > tr:hover .fadeElement, .transUnitTable tr.selected .fadeElement {
-  opacity: 0.965;
+.transUnitTable tr.selected .fadeElement, .transUnitTable tr.selected:hover .fadeElement {
+  opacity: 1;
 }
 
 .transUnitTable > tbody > tr {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .transUnitTable > tbody > tr .fadeElement {
@@ -112,70 +112,25 @@ Removes some of the styling on the page-level splitters
   border-color: rgba(211, 211, 211, 0.4);
 }
 
-td.TableEditorCell {
-  border-top: 1px solid #e0e0e0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.TableEditorCell-Source-Table {
-  width: 100%;
-}
-
-.TableEditorCell-Target-Table {
-  width: 100%;
-}
-
 tr.TableEditorRow.content-filter-nomatch {
   filter: alpha(opacity=25);
   opacity: 0.25;
 }
 
-tr.FuzzyStateDecoration td.TableEditorCell-Target .TableEditorContent {
-  padding-left: 5px;
-  padding-right: 5px;
+.ApprovedStateDecoration .TableEditorCell-Target {
+  border-left: 4px solid #4e9fdd;
 }
 
-tr.FuzzyStateDecoration td.TableEditorCell-Target div.TableEditorCell-Target {
-  border-left: 3px solid #e0c350;
-  border-right: 3px solid #e0c350;
+.FuzzyStateDecoration .TableEditorCell-Target {
+  border-left: 4px solid #e0c350;
 }
 
-table.ApprovedStateDecoration .TableEditorCell-Target {
-  border-left: 3px solid #4e9fdd;
-  border-right: 3px solid #4e9fdd;
+.TranslatedStateDecoration .TableEditorCell-Target {
+  border-left: 4px solid #70a98b;
 }
 
-table.FuzzyStateDecoration .TableEditorCell-Target {
-  border-left: 3px solid #e0c350;
-  border-right: 3px solid #e0c350;
-}
-
-table.TranslatedStateDecoration .TableEditorCell-Target {
-  border-left: 3px solid #70a98b;
-  border-right: 3px solid #70a98b;
-}
-
-table.RejectedStateDecoration .TableEditorCell-Target {
-  border-left: 3px solid #e3824e;
-  border-right: 3px solid #e3824e;
-}
-
-tr.ApprovedStateDecoration td.TableEditorCell-Target .TableEditorContent {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-tr.ApprovedStateDecoration td.TableEditorCell-Target div.TableEditorCell-Target {
-  border-left: 3px solid #4e9fdd;
-  border-right: 3px solid #4e9fdd;
-}
-
-tr.ApprovedStateDecoration td.TableEditorCell-Target .TableEditorContent-Edit {
-  border-left: 3px solid #4e9fdd;
-  border-right: 3px solid #4e9fdd;
-  padding-left: 5px;
-  padding-right: 5px;
+.RejectedStateDecoration .TableEditorCell-Target {
+  border-left: 4px solid #e3824e;
 }
 
 /* Search-replace page
@@ -365,13 +320,10 @@ td.RejectedStateDecoration div div div {
 }
 
 .DocumentListTable th, .DocumentListTable td.docListHeader {
-  font-size: 13px;
-  font-weight: bold;
+  font-weight: 600;
   color: #416988;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   background-color: white;
-  border-bottom: none;
-  border-left: 1px solid #FFFFFF;
   text-align: center;
 }
 
@@ -379,17 +331,8 @@ td.RejectedStateDecoration div div div {
   color: #FFFFFF;
 }
 
-.DocumentListTable th:first-child, .DocumentListTable td.docListHeader:first-child {
-  border-top-left-radius: 5px;
-  border-left: none;
-}
-
-.DocumentListTable th:last-child, .DocumentListTable td.docListHeader:last-child {
-  border-top-right-radius: 5px;
-}
-
 .DocumentListTable td {
-  font-size: 16px;
+  font-size: 0.9em;
 }
 
 .THEMES_COMPACT .DocumentListTable td {
@@ -452,15 +395,6 @@ td.RejectedStateDecoration div div div {
   text-align: center;
 }
 
-.DocumentListTable td.actionCol .uploadButton {
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.DocumentListTable td.actionCol .uploadButton:hover {
-  color: #4e9fdd;
-}
-
 .pointer {
   cursor: pointer;
 }
@@ -484,8 +418,8 @@ td.RejectedStateDecoration div div div {
 }
 
 .translationContainer pre, .translationContainer textarea {
-  font-size: 14px !important;
-  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 1.1em !important;
+  font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif !important;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
@@ -493,9 +427,14 @@ td.RejectedStateDecoration div div div {
 .translationContainer pre {
   margin-top: 0;
   padding-top: 0;
+  font-weight: 500;
 }
 
 /* TM and Glossary result*/
+.resultTable {
+  display: table !important;
+}
+
 .resultTable tbody td {
   vertical-align: top;
 }
