@@ -7822,6 +7822,13 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .edit-item.is-unfocused {
   opacity: .6;
 }
+@media (min-width: 46.25em) {
+  .new-zanata .edit-item {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+}
 .new-zanata .edit-item__panel {
   position: relative;
   padding-left: 1.5em;
@@ -7829,9 +7836,9 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 @media (min-width: 46.25em) {
   .new-zanata .edit-item__panel {
-    float: left;
     width: 50%;
     padding-left: 0;
+    display: table-cell;
   }
 }
 .new-zanata .edit-item__source {
@@ -7856,7 +7863,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 @media (min-width: 46.25em) {
   .new-zanata .edit-item__translation {
     padding-left: 0.75em;
-    float: right;
   }
 }
 .new-zanata .edit-item__panel-header,
