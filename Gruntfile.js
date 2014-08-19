@@ -198,9 +198,6 @@ var srcFolder = './src/',
       }
     },
     watch: {
-      options: {
-        livereload: true,
-      },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
@@ -256,10 +253,12 @@ var srcFolder = './src/',
   grunt.registerTask('dev', 'Build a dev version without watching or running a server.\n', ['init', 'shell:jekyllDev']);
 
   // Watch
-  grunt.registerTask('w', 'Start a server and watch all files.\nIf a file changes re-compile and reload browser.\n', ['dev', 'connect', 'watch']);
+  grunt.registerTask('w', 'Watch all files.', ['dev', 'watch']);
+
+  grunt.registerTask('wc', 'Start a server and watch all files.\nIf a file changes re-compile and reload browser.\n', ['dev', 'connect', 'watch']);
 
   // Watch and open server in browser
-  grunt.registerTask('wo', 'The same as `w` but also opens the project in your browser.\n', ['dev', 'connect', 'open:server', 'watch']);
+  grunt.registerTask('wo', 'The same as `wc` but also opens the project in your browser.\n', ['dev', 'connect', 'open:server', 'watch']);
 
   // Build to webassets
   // Use --rel=<release number> for a specific release

@@ -856,7 +856,7 @@ a.downloadLink {
 
 #container > div {
   background: #edeff1 !important;
-  margin-top: 0.40625em !important;
+  margin-top: 0.375em !important;
 }
 #container > div > div:nth-of-type(3),
 #container > div > div:nth-of-type(4) {

@@ -1,0 +1,20 @@
+{
+  "name": "zanata-assets",
+  "version": "6.0.0",
+  "authors": [
+    "Luke Brooker <mail@lukebrooker.com>"
+  ],
+  "description": "All assets for Zanata",
+  "main": "./php/master/assets/css/style.css",
+  "license": "MIT",
+  "homepage": "https://github.com/zanata/zanata-assets",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "_site",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

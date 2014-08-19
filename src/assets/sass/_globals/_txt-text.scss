@@ -96,13 +96,17 @@
   $invert-base-font: contrast-color($color-base-font);
   color: $invert-base-font;
   a {
-    color: darken($invert-base-font, 15%) !important;
-    &:hover {
-      color: lighten($invert-base-font, 10%) !important;
+    color: #fff !important;
+    opacity: 0.8;
+    &:hover,
+    &:focus {
+      color: #fff !important;
+      opacity: 1;
     }
     &:active,
     &.is-active {
-      color: lighten($invert-base-font, 15%) !important;
+      color: #fff!important;
+      opacity: 0.6;
     }
   }
 }
@@ -172,7 +176,7 @@
 .new-zanata {
 
 .txt--mini {
-  @include adjust-font-size-to(14px, .75);
+  @include adjust-font-size-to(14px, 1);
 }
 
 }
@@ -191,10 +195,32 @@
 .new-zanata {
 
 .txt--meta {
-  @include adjust-font-size-to(14px, .75);
+  @include adjust-font-size-to(14px, 1);
   color: $color-secondary-70;
   font-weight: 400;
   letter-spacing: 0;
+}
+
+}
+
+/*
+
+#### Text Base
+
+Will reset text to the default base size and weight
+
+```
+<h1 class="txt--base">Base Text</h1>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--base {
+  font-size: emCalc($base-font-size);
+  font-weight: 400;
 }
 
 }
@@ -220,6 +246,27 @@
 
 /*
 
+#### Text Muted
+
+Makes text 50% opaque.
+
+```
+<p class="txt--muted">Muted text</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--muted {
+  opacity: .6;
+}
+
+}
+
+/*
+
 #### Text Important
 
 ```example
@@ -233,6 +280,25 @@
 
 .txt--important {
   font-weight: 700;
+}
+
+}
+
+/*
+
+#### Text Secondary
+
+```example
+<p class="txt--secondary">Secondary</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--secondary {
+  color: $color-secondary;
 }
 
 }
@@ -324,6 +390,44 @@
 
 .txt--select-none {
   @include user-select(none);
+}
+
+}
+
+/*
+
+#### Text Line Height Reset
+
+```example
+<p class="txt--reset-line-height">Reset this line height to 1</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--reset-line-height {
+  line-height: 1 !important;
+}
+
+}
+
+/*
+
+#### Text Ellipsis
+
+```example
+<p class="txt--ellipsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.txt--ellipsis {
+  @include ellipsis;
 }
 
 }

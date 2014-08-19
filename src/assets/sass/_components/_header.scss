@@ -266,8 +266,11 @@
 }
 
 .header__avatar {
+  margin-top: rhythm(.375);
+  margin-bottom: rhythm(.375);
   width: rhythm(1.25);
   height: rhythm(1.25);
+  display: inline-block;
 }
 
 .header__logo-only {

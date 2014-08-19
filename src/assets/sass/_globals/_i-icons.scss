@@ -7,12 +7,12 @@ All icons also need the class `.i` added to them.
 */
 
 @font-face {
-	font-family: 'Zanata';
-	src:url('../fonts/zanata-v5/zanata.eot');
-	src:url('../fonts/zanata-v5/zanata.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/zanata-v5/zanata.woff') format('woff'),
-		url('../fonts/zanata-v5/zanata.ttf') format('truetype'),
-		url('../fonts/zanata-v5/zanata.svg#zanata') format('svg');
+	font-family: 'zanata';
+	src:url('../fonts/zanata/zanata.eot?tdmqh3');
+	src:url('../fonts/zanata/zanata.eot?#iefixtdmqh3') format('embedded-opentype'),
+		url('../fonts/zanata/zanata.woff?tdmqh3') format('woff'),
+		url('../fonts/zanata/zanata.ttf?tdmqh3') format('truetype'),
+		url('../fonts/zanata/zanata.svg?tdmqh3#zanata') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -36,11 +36,12 @@ $icons: list, code, review, language, star, notification, project, document, clo
 	font-variant: normal;
 	line-height: 1;
 	speak: none;
-	/* Better Font Rendering =========== */
+	text-align: center;
+	// /* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	&:before {
-		font-family: 'Zanata';
+		font-family: 'zanata';
 		text-align: center;
 	}
 }
@@ -75,23 +76,17 @@ $icons: list, code, review, language, star, notification, project, document, clo
 
 .i--small {
 	@extend .i;
-	&:before {
-		@include font-size(14px);
-	}
+	@include font-size(14px);
 }
 
 .i--large {
 	@extend .i;
-	&:before {
-		@include font-size(20px);
-	}
+	@include font-size(20px);
 }
 
 .i--huge {
 	@extend .i;
-	&:before {
-		@include font-size(24px);
-	}
+	@include font-size(24px);
 }
 
 }
@@ -155,51 +150,53 @@ Use to display icons to the far side of text, either left or right. Usually used
 }
 .i--code:before,
 .i--source:before {
-	content: "\e000";
+	content: "\e605";
 }
 .i--eye:before,
 .i--review:before {
-	content: "\e002";
+	content: "\e000";
 }
-.i--globe,
 .i--language {
 	&:before {
-		content: "\e003";
+		content: "\e020";
 	}
 }
 .i--star:before {
-	content: "\e001";
+	content: "\e610";
+}
+.i--star-2:before,
+.i--star-outline:before {
+	content: "\e093";
 }
 .i--bell:before,
 .i--notification:before {
-	content: "\e004";
+	content: "\e006";
 }
 .i--clipboard,
 .i--project {
 	// margin-top: rhythm(-.08);
 	&:before {
-		content: "\e005";
+		content: "\e013";
 	}
 }
-.i--document-alt-fill,
 .i--document {
 	// margin-top: rhythm(-.06);
 	&:before {
-		content: "\e007";
+		content: "\e124";
 	}
 }
 .i--clock {
 	// margin-top: rhythm(-.06);
 	&:before {
-		content: "\e008";
+		content: "\e014";
 	}
 }
 .i--history:before {
-	content: "\e009";
+	content: "\e60f";
 }
 .i--infinity:before,
 .i--all:before {
-	content: "\e00a";
+	content: "\e027";
 }
 .i--maintain {
 	// margin-top: rhythm(-.06);
@@ -207,130 +204,192 @@ Use to display icons to the far side of text, either left or right. Usually used
 		content: "\e01c";
 	}
 }
-.i--network:before,
 .i--translate:before {
-	content: "\e00b";
+	content: "\e078";
 }
-.i--network-up:before,
+
+// May need to create a separate icon
 .i--translate-up:before {
-	content: "\e01b";
+	content: "\e078";
 }
 .i--users:before {
-	content: "\e00c";
+	content: "\e60a";
 }
 .i--user:before {
-	content: "\e00e";
+	content: "\e074";
 }
 .i--cog:before,
 .i--settings:before {
-	content: "\e00f";
+	content: "\e023";
 }
 .i--plus:before,
 .i--add:before {
-	content: "\e011";
+	content: "\e114";
+}
+.i--minus:before {
+	content: "\e115";
 }
 .i--pencil:before,
 .i--edit:before,
  {
-	content: "\e014";
+	content: "\e613";
 }
 .i--cross,
 .i--remove,
 .i--cancel {
 	&:before {
-		content: "\e006";
+		content: "\e117";
 	}
 }
+.i--circle-cross:before,
+.i--circle-cancel:before,
+.i--circle-remove:before {
+	content: "\e117";
+}
+.i--tick:before,
 .i--checkmark:before {
+	content: "\e116";
+}
+.i--circle-tick:before,
+.i--circle-checkmark:before {
 	content: "\e00d";
 }
+.i--chevron-left:before,
 .i--arrow-left:before {
-	content: "\e010";
+	content: "\e606";
 }
+.i--chevron-down:before,
 .i--arrow-down:before {
-	content: "\e012";
+	content: "\e609";
 }
+.i--chevron-up:before,
 .i--arrow-up:before {
-	content: "\e013";
+	content: "\e608";
 }
+.i--chevron-right:before,
 .i--arrow-right:before {
-	content: "\e015";
+	content: "\e607";
 }
-.i--star-2:before,
-.i--star-outline:before {
-	content: "\e016";
+.i--prev:before {
+	content: "\e050";
+}
+.i--next:before {
+	content: "\e057";
+}
+.i--hide-up:before {
+	content: "\e055";
+}
+.i--hide-down:before {
+	content: "\e056";
 }
 .i--search:before {
-	content: "\e017";
+	content: "\e036";
 }
 .i--keyboard:before {
-	content: "\e018";
+	content: "\f11c";
 }
 .i--comment:before {
-	content: "\e019";
+	content: "\e076";
 }
 .i--version {
 	// margin-top: rhythm(-.12);
 	&:before {
-		content: "\e01a";
+		content: "\e031";
 	}
 }
 .i--dashboard:before {
-	content: "\e600";
+	content: "\e611";
 }
 .i--group:before {
-	content: "\e601";
+	content: "\e059";
 }
+.i--book:before,
 .i--glossary:before {
-	content: "\e602";
+	content: "\e030";
 }
 .i--info:before {
-	content: "\e603";
-}
-.i--help:before {
 	content: "\e604";
 }
+.i--help:before {
+	content: "\e603";
+}
 .i--logout:before {
-	content: "\e605";
+	content: "\e089";
 }
 .i--archive:before {
-	content: "\e606";
+	content: "\e121";
 }
 .i--attach:before {
-	content: "\e607";
+	content: "\e001";
 }
 .i--admin:before {
-	content: "\e608";
+	content: "\e601";
 }
 .i--notes:before {
 	content: "\e609";
 }
 .i--import:before {
-	content: "\e60a";
-}
-.i--export:before {
-	content: "\e60f";
-}
-.i--external-link:before {
-	content: "\e60b";
-}
-.i--lock:before {
-	content: "\e60d";
-}
-.i--unlock:before {
-	content: "\e60e";
-}
-.i--ellipsis:before {
 	content: "\e60c";
 }
-.i--location:before {
-	content: "\e611";
+.i--export:before {
+	content: "\e60d";
 }
+.i--upload:before {
+	content: "\e60b";
+}
+.i--download:before {
+	content: "\e60e";
+}
+.i--link:before {
+	content: "\e005";
+}
+.i--external-link:before {
+	content: "\e128";
+}
+.i--lock:before {
+	content: "\e007";
+}
+.i--unlock:before {
+	content: "\e008";
+}
+.i--ellipsis:before {
+	content: "\e129";
+}
+.i--filter:before {
+	content: "\e614";
+}
+.i--location:before {
+	content: "\e600";
+}
+
+.i--delete:before,
 .i--trash:before {
-	content: "\e612";
+	content: "\e109";
 }
 .i--dot:before {
-	content: "\e613"
+	content: "\e627"
+}
+.i--dot-empty:before {
+	content: "\e049"
+}
+.i--suggestion:before {
+	content: "\e612"
+}
+.i--mail:before {
+	content: "\e002"
+}
+.i--copy:before {
+	content: "\e035"
+}
+.i--refresh:before,
+.i--update:before {
+	content: "\e080"
+}
+.i--stats:before {
+	content: "\e090"
+}
+.i--block:before {
+	content: "\e107"
 }
 
 }

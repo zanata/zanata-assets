@@ -18,7 +18,6 @@ Only apply to block level content, otherwise .bx--inline-block or bx--block is n
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
   .bx--round {
-    @extend .bx--inline-block;
     border-radius: 1000px !important; // Use of % here will distort box if it is not square
     overflow: hidden;
     img {
@@ -81,7 +80,7 @@ Display an element with `display: inline-block`
 
 .bx--inline-block {
   display: inline-block !important;
-  vertical-align: middle;
+  position: relative;
 }
 
 /*
@@ -120,3 +119,4 @@ Also adds a hyphen to these words, except in Chrome, Opera and Android.
   word-wrap: break-word;
   hyphens: auto;
 }
+

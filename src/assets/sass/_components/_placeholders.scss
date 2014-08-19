@@ -4,10 +4,6 @@
 // Change in _settings.scss
 // TODO: Move this to the styleguide css
 
-$placeholder-prefix : "ph"                                 !default;
-$placeholder-mod    : #{$placeholder-prefix}#{$mod}        !default;
-$placeholder-el     : #{$placeholder-prefix}#{$el}         !default;
-
 $placeholder-font   : (font-family-base, $font-family-base),
                       (font-family-heading, $font-family-heading) !default;
 $placeholder-color  : (color-primary, $color-primary),
@@ -21,11 +17,11 @@ $placeholder-color  : (color-primary, $color-primary),
 */
 @each $var in $placeholder-color {
 /*
-  <div class="#{$placeholder-el}#{nth($var,1)}">$#{nth($var,1)}</div>
+  <div class="ph_#{nth($var,1)}">$#{nth($var,1)}</div>
 */
 }
 
-[class*="#{$placeholder-el}color"] {
+[class*="ph_color"] {
   margin-bottom: rhythm(1);
   width: 100%;
   font-family: $font-monospace;
@@ -60,7 +56,7 @@ $placeholder-color  : (color-primary, $color-primary),
 }
 
 @each $var in $placeholder-color {
-  .#{$placeholder-el}#{nth($var,1)} {
+  .ph_#{nth($var,1)} {
     &:before {
       background-color: nth($var,2);
     }
@@ -76,11 +72,11 @@ $placeholder-color  : (color-primary, $color-primary),
 */
 @each $var in $placeholder-font {
 /*
-  <div class="#{$placeholder-el}#{nth($var,1)}">$#{nth($var,1)}</div>
+  <div class="ph_#{nth($var,1)}">$#{nth($var,1)}</div>
 */
 }
 
-[class*="#{$placeholder-el}font"] {
+[class*="ph_font"] {
   margin-bottom: rhythm(1);
   padding: 0 rhythm(.5);
   width: 100%;
@@ -99,7 +95,7 @@ $placeholder-color  : (color-primary, $color-primary),
 }
 
 @each $var in $placeholder-font {
-  .#{$placeholder-el}#{nth($var,1)} {
+  .ph_#{nth($var,1)} {
     &:before {
       font-family: nth($var,2);
       content: "#{nth($var,2)}";
@@ -107,14 +103,14 @@ $placeholder-color  : (color-primary, $color-primary),
   }
 }
 
-.#{$placeholder-el}block {
+.ph_block {
   line-height: rhythm(5);
   text-align: center;
   background-color: $lighter-grey;
   display: block;
 }
 
-.#{$placeholder-el}inline-block {
-  @extend .#{$placeholder-el}block;
+.ph_inline-block {
+  @extend .ph_block;
   display: inline-block;
 }

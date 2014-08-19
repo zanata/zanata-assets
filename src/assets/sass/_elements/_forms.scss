@@ -28,21 +28,21 @@ $form-legend-weight:                  bold                        !default;
 #### Basic Elements
 
 ```
-<div class="#{$layout-el}wrapper">
+<div class="l__wrapper">
   <form>
     <label for="basic-input">This is a label.</label>
     <input type="text" id="basic-input" name="basic-input" placeholder="Standard Input">
     <fieldset>
       <legend>Fieldset Name</legend>
       <input type="text" placeholder="Street">
-      <div class="#{$grid-mod}tight">
-        <div class="#{$width-mod}2-4 #{$width-mod}s-2-4 #{$grid-el}item">
+      <div class="g--tight">
+        <div class="w--2-4 w--s-2-4 g__item">
           <input type="text" placeholder="City">
         </div>
-        <div class="#{$width-mod}1-4 #{$width-mod}s-1-4 #{$grid-el}item">
+        <div class="w--1-4 w--s-1-4 g__item">
           <input type="text" placeholder="State">
         </div>
-        <div class="#{$width-mod}1-4 #{$width-mod}s-1-4 #{$grid-el}item">
+        <div class="w--1-4 w--s-1-4 g__item">
           <input type="text" placeholder="ZIP">
         </div>
       </div>

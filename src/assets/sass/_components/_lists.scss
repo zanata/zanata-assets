@@ -60,6 +60,36 @@ nav ol {
 
 /*
 
+#### Inline List
+
+```
+<ul class="list--inline">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//ul
+.list--inline {
+  @extend .list--no-bullets;
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: rhythm(-.066);
+  }
+}
+
+}
+
+/*
+
 #### Horizontal List
 
 ```

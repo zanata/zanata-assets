@@ -14,6 +14,7 @@
 *:before,
 *:after {
   @include box-sizing(border-box);
+  -webkit-font-smoothing: antialiased;
 }
 
 article,
@@ -59,7 +60,6 @@ html.new-zanata,
   font-family: $font-family-base;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
   min-width: (320px/$base-font-size)*1em;
   // @include breakpoint($gte-medium) {
   //   font-size: $medium-font-size;
@@ -67,9 +67,9 @@ html.new-zanata,
   // @include breakpoint($gte-large) {
   //   font-size: $large-font-size;
   // }
-  @include breakpoint($gte-huge) {
-    font-size: $huge-font-size;
-  }
+  // @include breakpoint($gte-huge) {
+  //   font-size: $huge-font-size;
+  // }
 }
 
 body.new-zanata,

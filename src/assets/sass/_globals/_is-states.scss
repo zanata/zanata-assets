@@ -81,6 +81,10 @@
   // @include backface-visibility(hidden);
 }
 
+.is-rotated {
+  @include transform(rotateX(180deg));
+}
+
 .is-removed {
   @extend .is-transition;
   @include opacity(0);

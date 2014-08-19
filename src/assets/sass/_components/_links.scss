@@ -1,14 +1,33 @@
-_links.scss
 /*
 
 ### Links
 
+<a class="link--inverted" href="#">Inverted Link</a>
 <a class="link--success" href="#">Success Link</a>
 <a class="link--unsure" href="#">Unsure Link</a>
+<a class="link--neutral" href="#">eutral Link</a>
 <a class="link--warning" href="#">Warning Link</a>
 <a class="link--danger" href="#">Danger Link</a>
 
 */
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.link--invert {
+  color: #fff !important;
+  opacity: 0.8;
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    opacity: 1;
+  }
+  &:active,
+  &.is-active {
+    color: #fff!important;
+    opacity: 0.6;
+  }
+}
 
 .link--success {
   color: $color-success !important;
@@ -34,6 +53,18 @@ _links.scss
   }
 }
 
+.link--neutral {
+  color: $color-neutral !important;
+  &:hover,
+  &:focus {
+    color: shade($color-neutral, 30%) !important;
+  }
+  &:active,
+  &.is-active {
+    color: shade($color-neutral, 60%) !important;
+  }
+}
+
 .link--warning {
   color: $color-warning !important;
   &:hover,
@@ -56,4 +87,6 @@ _links.scss
   &.is-active {
     color: shade($color-danger, 60%) !important;
   }
+}
+
 }

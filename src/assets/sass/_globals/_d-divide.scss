@@ -10,6 +10,11 @@
   border-color: $default-border-color;
 }
 
+.d--all {
+  @extend .divide;
+  border-width: 1px;
+}
+
 .d--right {
   @extend .divide;
   border-right-width: 1px;

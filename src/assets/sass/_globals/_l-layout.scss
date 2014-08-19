@@ -3,9 +3,6 @@
 // -----------------------------------
 // Change in _settings.scss
 
-$layout-prefix                  : "l"                             !default;
-$layout-mod                     : "#{$layout-prefix}#{$mod}"      !default;
-$layout-el                      : "#{$layout-prefix}#{el}"        !default;
 $layout-wrapper-max-width       : 48em                            !default;
 $layout-wrapper-min-ie-width    : 44em                            !default; // NOTE: old ie only
 $layout-spacing-increments      : 0 0.25 0.5 1 2                       !default;
@@ -243,7 +240,7 @@ $max-site-width is assigned to this
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.#{$layout-el}wrapper {
+.l__wrapper {
   max-width: $layout-wrapper-max-width;
   margin-left: auto;
   margin-right: auto;

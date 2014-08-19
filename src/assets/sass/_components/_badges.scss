@@ -40,6 +40,12 @@
   margin-top: rhythm(.125,14px);
 }
 
+.badge--secondary {
+  @extend .badge;
+  background-color: $color-secondary;
+  color: $white;
+}
+
 .badge--highlight {
   @extend .badge;
   background-color: $color-highlight;

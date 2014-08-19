@@ -1,0 +1,31 @@
+/*
+
+### Line Height Modifiers
+
+```example
+<p class="h--1">One line height</p>
+<p class="h--h">Half line height</p>
+<p class="h--1h">One and a half line height</p>
+<p class="h--2">2 Line heights</p>
+```
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+  .h--h {
+    height: rhythm(.5) !important;
+  }
+
+  .h--1 {
+    height: rhythm(1) !important;
+  }
+
+  .h--1h {
+    height: rhythm(1.5) !important;
+  }
+
+  .h--2 {
+    height: rhythm(2) !important;
+  }
+}

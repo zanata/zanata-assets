@@ -1,0 +1,56 @@
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+  .editor {
+    overflow: hidden;
+  }
+
+  .editor__content {
+    position: fixed;
+    top: rhythm(3.5);
+    bottom: 0;
+    overflow: auto;
+    padding: rhythm(.5) 0 rhythm(.5);
+    width: 100%;
+    -webkit-overlow-scrolling: touch;
+    @include breakpoint($gte-medium) {
+      background-image: url('../img/editor-bg.gif');
+      background-position: center center;
+      background-repeat: repeat-y;
+    }
+  }
+
+  .is-horizontal-editor .editor__content {
+
+    @include breakpoint($gte-medium) {
+
+      &:before {
+        left: 50%;
+        margin-left: rhythm(-.5);
+      }
+
+      &:after {
+        width: 50%;
+        right: 0;
+        background-color: #fff;
+        z-index: -1;
+      }
+    }
+
+  }
+
+  .editor__current-project {
+    @include breakpoint($lte-small) {
+      max-width: rhythm(3.5);
+    }
+  }
+
+  .editor__current-doc {
+    max-width: rhythm(3.5);
+  }
+
+  .editor__current-lang {
+    max-width: rhythm(3.5);
+  }
+
+}

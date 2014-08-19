@@ -1,0 +1,208 @@
+---
+title: Editor | Zanata
+layout: editor
+root: "../"
+body-classes:
+- is-horizontal-editor
+- editor
+phrases:
+-
+  status: untranslated
+  source: Somthing Something
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: translated
+  source: Somthing more translated
+  translation: Lorem ipsum dolor sit amet
+  comments: 3
+  errors: 1
+  classes:
+  - is-focused
+-
+  status: translated
+  source: Somthing Something a little bit longer
+  translation: Lorem ipsum dolor sit amet, consectetur
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: unsure
+  source: Somthing Something a little bit longer Somthing Something a little bit longer Somthing Something a little bit longer
+  translation: Lorem ipsum dolor sit amet, consectetur
+  comments: 2
+  errors: 1
+  classes:
+    - is-unfocused
+-
+  status: translated
+  source: Somthing Something a little bit longer
+  translation: Lorem ipsum dolor sit amet, consectetur
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: translated
+  source: Somthing Something a little bit longer Somthing Something a little bit longer Somthing Something a little bit longer
+  translation: Lorem ipsum dolor sit amet, consectetur
+  comments: 2
+  classes:
+    - is-unfocused
+-
+  status: translated
+  source: Somthing Something a little bit longer
+  translation: Lorem ipsum dolor sit amet, consectetur
+  comments: 123
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: Somthing Something a little bit longer Somthing Something a little bit longer Somthing Something a little bit longer
+  translation:
+  comments:
+  classes:
+    - is-unfocused
+-
+  status: translated
+  source: Somthing Something a little bit longer
+  translation: Lorem ipsum dolor sit amet, consectetur
+  comments:
+  errors: 1
+  classes:
+    - is-unfocused
+-
+  status: unsure
+  source: Somthing Something a little bit longer Somthing Something a little bit longer Somthing Something a little bit longer
+  translation: Lorem ipsum dolor sit amet, consectetur
+  comments: 2
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: Somthing Something
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: Somthing Something
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: Somthing Something
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: What
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: Somthing Curabitur sed est nec urna pretium
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+-
+  status: untranslated
+  source: consectetur adipiscing elit. Duis luctus nisi et eros Something
+  translation:
+  comments:
+  errors:
+  classes:
+    - is-unfocused
+
+
+---
+
+<ul class="list--no-bullets">
+  {% for phrase in page.phrases %}
+  <li class="edit-item edit-item--{{ phrase.status }} {{phrase.classes}}">
+    <div class="edit-item__panel edit-item__source">
+      <div class="edit-item__panel-header">
+        <h3 class="edit-item__heading">English <span class="txt--muted">EN-US</span></h3>
+        <ul class="edit-item__panel-header-actions list--inline">
+          <li><button class="button--link link--neutral h--1h w--r-1h" title="Do not translate"><i class="i i--large i--block"></i><span class="is-sr-only">Do not translate</span></button></li>
+        </ul>
+      </div>
+      <div class="edit-item__text">{{ phrase.source }}</div>
+      <div class="edit-item__panel-footer is-hidden--s">
+        <div class="h--1h">
+          <button class="button--link link--neutral h--1h w--r-1h" title="Details"><i class="i i--large i--info"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="edit-item__status">
+      <span class="is-sr-only">{{ phrase.status }}</span>
+      <ul class="list--no-bullets edit-item__meta-data">
+        {% if phrase.comments %}
+        <li class="edit-item__meta-data-item edit-item__meta-data-comments"><button tabindex="-1" class="edit-item__meta-data-button button--unstyled" title="{{phrase.comments}} comments"><i class="i i--comment"></i><br>{{phrase.comments}}</button></li>
+        {% endif %}
+        {% if phrase.errors %}
+        <li class="edit-item__meta-data-item edit-item__meta-data-errors"><button tabindex="-1" class="edit-item__meta-data-button button--unstyled" title="1 Error"><i class="i i--dot txt--danger"></i></li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="edit-item__panel edit-item__translation">
+      <div class="edit-item__panel-header">
+        <h3 class="edit-item__heading">French <span class="txt--muted">FR</span></h3>
+        <ul class="edit-item__panel-header-actions list--inline">
+          <li><button class="button--link link--neutral h--1h w--r-1h" title="Copy English (EN-US)"><i class="i i--large i--copy"></i><span class="is-sr-only">Copy English (EN-US)</span></button></li>
+          <li><button class="button--link link--neutral h--1h w--r-1h" title="Cancel edit"><i class="i i--large i--cancel"></i><span class="is-sr-only">Cancel edit</span></button></li>
+        </ul>
+      </div>
+      <textarea class="edit-item__text" rows="1" placeholder="Enter a translation…">{{ phrase.translation }}</textarea>
+      <div class="edit-item__panel-footer l--cf-of">
+        <div class="l--float-left h--1h">
+          <ul class="list--inline">
+            <li class="is-hidden--m-up"><button class="button--link link--neutral h--1h w--r-1h" title="Details"><i class="i i--large i--info"></i></button></li>
+            <li><button class="button--link link--neutral h--1h w--r-1h" title="Translation Memory"><i class="i i--large i--suggestion"></i><span class="is-sr-only">Translation Memory</span></button></li>
+          </ul>
+        </div>
+        <div class="l--float-right">
+          <div class="button--group">
+            <button class="button button--flat button--success h--1h" title="Ctrl + Enter">Save as translated</button>
+            <button class="button button--flat button--success h--1h " title="Save as…"><i class="i i--arrow-down"></i><span class="is-sr-only">Save as…</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

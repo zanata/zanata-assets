@@ -1,0 +1,30 @@
+.spinner {
+  border-radius: 100%;
+  margin: rhythm(.25);
+  width: rhythm(1.5);
+  height: rhythm(1.5);
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: rhythm(.125);
+    left: rhythm(.125);
+    width: rhythm(1.25);
+    height: rhythm(1.25);
+    border-radius: 100%;
+  }
+  &:before {
+    border: solid rhythm(.25) $color-primary;
+  }
+  &:after {
+    border-left: solid rhythm(.25) #fff;
+    opacity: .5;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-iteration-count: 30;
+    -webkit-animation-timing-function: linear;
+  }
+}

@@ -170,14 +170,22 @@
   @include width-setup('-h');
 }
 
+.w--r-1h,
+.w--r-1,
+.w--r-2 {
+  display: inline-block;
+}
 
-
-.w--r-1-2 {
+.w--r-h {
   width: rhythm(.5);
 }
 
 .w--r-1 {
   width: rhythm(1);
+}
+
+.w--r-1h {
+  width: rhythm(1.5);
 }
 
 .w--r-2 {

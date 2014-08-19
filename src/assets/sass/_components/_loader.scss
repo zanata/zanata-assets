@@ -16,6 +16,14 @@
   </span>
 </a>
 
+<div class="loader--inline is-active">
+  <span class="loader__spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</div>
+
 <div class="loader--mini is-active">
   <span class="loader__spinner">
     <span></span>
@@ -114,7 +122,7 @@ a.loader {
     border-radius: rhythm(1);
     background-color: rgba($color-secondary,1);
     &:nth-child(1){
-      @include animation-delay(0s);
+      @include animation-delay(0);
       left: 0;
     }
     &:nth-child(2){
@@ -138,6 +146,9 @@ a.loader {
   display: inline-block;
   // compensate for display inline-block space
   margin-left: -0.3em;
+  &.is-reserved-space {
+    // TODO: Add placeholder width
+  }
   &.is-active {
     min-width: rhythm(1);
     margin-left: rhythm(.125);

@@ -1,142 +1,304 @@
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-.edit-item {
-  @extend .l--cf-of;
-  @extend .is-transition;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  @include user-select(none);
-  &:hover {
-    // background-color: $color-bg-light;
+  .edit-item {
+    @extend .l--cf-of;
+    @extend .is-transition;
+    @include user-select(none);
+    position: relative;
+    margin: 0;
+    padding: 0;
     cursor: text;
-  }
-  &.is-focused {
-    background-color: $color-bg-lighter;
-  }
-  &.is-unfocused {
-    opacity: 0.6;
-    &:hover {
-      opacity: 0.8;
+
+    &.is-focused {
+      z-index: 5;
+    }
+
+    &.is-unfocused {
+      opacity: .6;
+
+      // This slows down the page, needs to only work when not scrolling
+      // &:hover {
+      //   opacity: 1;
+      // }
     }
   }
-}
 
-.edit-item__panel {
-  list-style: none;
-  &:hover {
+  // Panels
+
+  .edit-item__panel {
+    position: relative;
+    padding-left: rhythm(1);
+    list-style: none;
+
+    @include breakpoint($gte-medium) {
+      float: left;
+      width: 50%;
+      padding-left: 0;
+    }
+  }
+
+  .edit-item__source {
+    @include user-select(text);
+    cursor: pointer;
+
+    @include breakpoint($gte-medium) {
+      padding-right: rhythm(.5);
+    }
+  }
+
+  .edit-item.is-focused .edit-item__source {
     cursor: text;
   }
-  @include breakpoint($gte-medium) {
-    float: left;
-    width: 50%;
+
+  .edit-item__translation {
+    background-color: #fff;
+    cursor: text;
+
+    @include breakpoint($gte-medium) {
+      padding-left: rhythm(.5);
+      float: right;
+    }
   }
-}
 
-.edit-item__source {
+  //
+  // Panel Header and Footer
 
-}
+  .edit-item__panel-header,
+  .edit-item__panel-footer {
+    position: absolute;
+    left: rhythm(1);
+    right: 0;
+    z-index: 2;
+    visibility: hidden;
+    padding-right: rhythm(.5);
+    padding-left: rhythm(.5);
+    height: rhythm(1.5, 16px, -2px);
+    background-color: $color-bg-lightest;
+    opacity: 0;
+    cursor: default;
+    border-bottom: 1px solid rgba($color-secondary, .1);
+    border-top: 1px solid rgba($color-secondary, .1);
 
-.edit-item__translation {
-  @include breakpoint($gte-medium) {
+    @include breakpoint($gte-medium) {
+      left: 0;
+      right: 0;
+    }
+
+  }
+
+  .edit-item.is-focused .edit-item__panel-header,
+  .edit-item.is-focused .edit-item__panel-footer {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .edit-item__panel-header {
+    top: rhythm(-.75, 16px, 1px);
+    box-shadow: 0 rhythm(-.25) rhythm(1) rgba(0,0,0,0.06);
+  }
+
+  .edit-item__panel-footer {
+    bottom: rhythm(-.75, 16px, 1px);
+    box-shadow: 0 rhythm(.25) rhythm(1) rgba(0,0,0,0.06);
+  }
+
+  .edit-item__heading {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: emCalc(16px);
+    line-height: rhythm(1.5, 16px);
+    float: left;
+  }
+
+  .edit-item__panel-header-actions {
     float: right;
   }
-}
 
-.edit-item__status {
-  background-color: $color-neutral;
-  text-indent: -9999px;
-  height: rhythm(.25);
-  width: 100%;
+  // Cover the overlapping headers
+
   @include breakpoint($gte-medium) {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: rhythm(-.125);
-    width: rhythm(.25);
+    .edit-item__translation .edit-item__panel-header,
+    .edit-item__translation .edit-item__panel-footer {
+      padding-left: rhythm(1);
+      &:before {
+        position: absolute;
+        top: 0;
+        left: rhythm(-.5);
+        width: rhythm(1);
+        height: 100%;
+        background-color: #fff;
+        content: "";
+        background-clip: padding-box;
+      }
+    }
+    .edit-item__source .edit-item__panel-header {
+      padding-right: rhythm(1);
+    }
+  }
+
+  @include breakpoint($lte-small) {
+    .edit-item__translation .edit-item__panel-header {
+      box-shadow: 0 0 rhythm(.25) rgba(0,0,0,0.03);
+    }
+  }
+
+  .edit-item__text {
+    overflow: hidden;
+    margin: 0;
+    padding: rhythm(1.5, 16px) rhythm(.5, 16px);
+    min-height: rhythm(1);
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    color: $color-base-font;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    -moz-tab-size:4;
+    -o-tab-size:4;
+    tab-size:4;
+    font-size: emCalc(16px);
+    font-family: $font-family-base;
+    line-height: 1.5;
+    resize: none;
+    -webkit-appearance: none;
+
+    span {
+      // Override text highlighting changing text format
+      // otherwise it won't align
+      font-weight: 400 !important;
+      font-style: normal !important;
+    }
+
+    &:focus {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  // Status bar
+
+  .edit-item__status,
+  .edit-item__status:before,
+  .edit-item__status:after {
+    width: rhythm(1);
     height: 100%;
+    background-color: $color-neutral;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    @include breakpoint($gte-medium) {
+      left: 50%;
+      margin-left: rhythm(-.5);
+    }
   }
-}
 
-.edit-item__header,
-.edit-item__footer {
-  position: absolute;
-  z-index: 2;
-  padding-right: rhythm(.5);
-  padding-left: rhythm(.5);
-  border-top: $default-border;
-  border-bottom: $default-border;
-  background-color: $color-bg-lightest;
-  height: rhythm(1);
-  width: 50%;
-  &:hover {
-    cursor: default;
+  @include breakpoint($lte-small) {
+
+    .edit-item__status:before,
+    .edit-item__status:after {
+      content: "";
+      height: rhythm(1);
+      z-index: 2;
+      visibility: hidden;
+    }
+
+    .edit-item__status:before {
+      top: rhythm(-.75);
+      box-shadow: 0 rhythm(-.25) rhythm(1) rgba(0,0,0,0.06);
+    }
+
+    .edit-item__status:after {
+      top: auto;
+      box-shadow: 0 rhythm(.25) rhythm(1) rgba(0,0,0,0.06);
+      bottom: rhythm(-.75);
+    }
+
+    .edit-item.is-focused .edit-item__status:before,
+    .edit-item.is-focused .edit-item__status:after {
+      visibility: visible;
+    }
+
   }
-}
 
-.edit-item__header {
-  top: rhythm(-.5);
-}
+  //
+  // Status bar Modifiers
 
-.edit-item__footer {
-  bottom: rhythm(-.5);
-}
-
-.edit-item__heading {
-  font-size: emCalc(14px);
-  line-height: rhythm(1, 14px, 2px);
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 400;
-  display: inline-block;
-  vertical-align: top;
-}
-
-// Modifiers
-
-.edit-item--translated {
-  .edit-item__status {
+  .edit-item--translated .edit-item__status,
+  .edit-item--translated .edit-item__status:before,
+  .edit-item--translated .edit-item__status:after {
     background-color: $color-success;
   }
-}
 
-.edit-item--unsure {
-  .edit-item__status {
+  .edit-item--unsure .edit-item__status,
+  .edit-item--unsure .edit-item__status:before,
+  .edit-item--unsure .edit-item__status:after {
     background-color: $color-unsure;
   }
-}
 
-.edit-item--highlight {
-  .edit-item__status {
+  .edit-item--highlight .edit-item__status,
+  .edit-item--highlight .edit-item__status:before,
+  .edit-item--highlight .edit-item__status:after {
     background-color: $color-highlight;
   }
-}
 
-.edit-item--danger {
-  .edit-item__status {
+  .edit-item--danger .edit-item__status,
+  .edit-item--danger .edit-item__status:before,
+  .edit-item--danger .edit-item__status:after {
     background-color: $color-danger;
   }
-}
 
-.edit-item--warning {
-  .edit-item__status {
+  .edit-item--warning .edit-item__status,
+  .edit-item--warning .edit-item__status:before,
+  .edit-item--warning .edit-item__status:after {
     background-color: $color-warning;
   }
-}
 
-.edit-item__source--vertical {
-  position: absolute;
-  bottom: 100%;
-  right: 0;
-  z-index: 2;
-  float: none;
-  margin-bottom: rhythm(.5);
-  width: 50%;
-  background-color: $color-bg-lighter;
-  .edit-item__header {
-    width: 100%;
+  // Meta data
+
+  .edit-item__meta-data {
+    text-align: center;
+    position: relative;
+    height: 100%;
+    left: 0;
+    right: 0;
   }
-}
+
+  .edit-item__meta-data-item {
+    line-height: rhythm(.75);
+  }
+
+  .edit-item__meta-data-button {
+    font-size: emCalc(12px);
+    line-height: rhythm(.4, 12px);
+    opacity: .8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .edit-item__meta-data-comments,
+  .edit-item__meta-data-errors {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .edit-item__meta-data-comments {
+    top: rhythm(.75, 12px);
+  }
+
+  .edit-item__meta-data-errors {
+    top: rhythm(1.75, 12px);
+    .i {
+      text-shadow: 0 0 2px #fff;
+    }
+  }
 
 }

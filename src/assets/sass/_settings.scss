@@ -7,19 +7,6 @@
 // ==============
 
 //
-// Guidelines
-// ----------
-//
-// Based on BEM and [these guidelines](https://github.com/csswizardry/CSS-Guidelines)
-
-$modifier                          : '--';
-$element                           : '__';
-
-// Aliases
-$mod                               : $modifier;
-$el                                : $element;
-
-//
 // Fonts
 // -----
 
@@ -127,7 +114,7 @@ $default-transition                : 0.2s cubic-bezier(.26, .47, .36, .94);
 // -------------------------
 
 $base-font-size                    : 16px; //? Makes the font size usable by some compass mixins (it needs px)
-$base-line-height                  : 26px; //? The measurement for vertical rhythm, converts to ems
+$base-line-height                  : 24px; //? The measurement for vertical rhythm, converts to ems
 $font-unit                         : 1em;
 $relative-font-sizing              : true;
 $round-to-nearest-half-line        : true; //? eg. if line-height is 24px, it's allowed to make it 12px if needed
@@ -240,8 +227,6 @@ $form-legend-weight                : 600;
 // ----------------
 
 $layout-prefix                     : "l";
-$layout-mod                        : "#{$layout-prefix}#{$mod}";
-$layout-el                         : "#{$layout-prefix}#{$el}";
 $layout-wrapper-max-width          : 120em;
 $layout-wrapper-min-ie-width       : 44em; // NOTE: old ie only
 $layout-spacing-increments         : 0 0.25 0.5 1 2;
@@ -253,8 +238,6 @@ $layout-spacing-sides              : top bottom left right;
 // --------------
 
 $grid-prefix                       : "g";
-$grid-mod                          : "#{$grid-prefix}#{$mod}";
-$grid-el                           : "#{$grid-prefix}#{$el}";
 $grid-padding                      : rhythm(2);
 
 //
@@ -262,7 +245,6 @@ $grid-padding                      : rhythm(2);
 // ---------------
 
 $width-prefix                      : "w";
-$width-mod                         : "#{$width-prefix}#{$mod}";
 
 
 //
@@ -276,36 +258,9 @@ $width-mod                         : "#{$width-prefix}#{$mod}";
 // ---------------------
 
 $placeholder-prefix                : "ph";
-$placeholder-mod                   : #{$placeholder-prefix}#{$mod};
-$placeholder-el                    : #{$placeholder-prefix}#{$el};
 
 $placeholder-font                  : (font-family-base, $font-family-base),
                                      (font-family-heading, $font-family-heading);
 $placeholder-color                 : (color-primary, $color-primary),
                                      (color-secondary, $color-secondary),
                                      (color-base-font, $color-base-font);
-
-//
-// Lists Component
-// ---------------
-
-// $list-prefix                       : "list";
-// $list-el                           : #{$list-prefix}#{$el};
-// $list-mod                          : #{$list-prefix}#{$mod};
-
-//
-// Accent Component
-// ------------------
-
-// $accent-prefix                      : "accent";
-// $accent-el                          : #{$accent-prefix}#{$el};
-// $accent-mod                         : #{$accent-prefix}#{$mod};
-// $accent-pop-shadow                  : 0 1px 1px rgba($black, 0.1);
-
-//
-// Off Canvas Component
-// --------------------
-
-// $offcanvas-outer-bg-color           : $color-base-font;
-// $offcanvas-inner-bg-color           : $color-bg;
-// $offcanvas-target-width             : 10;

@@ -130,7 +130,7 @@ input[type="submit"][disabled]:active {
 
 .button, button, input[type="reset"], input[type="submit"], input[type="button"], input[type="submit"].projectSearchButton, a.button, a.action_link, span.action_link {
   border: none;
-  padding: 0.40625em 0.8125em;
+  padding: 0.375em 0.75em;
   background-color: white;
   color: #565d65;
   cursor: pointer;
@@ -187,7 +187,7 @@ label.readOnlyLabel {
   margin-top: 5px;
   min-height: 400px;
   min-width: 960px;
-  padding: 0 3.71429em 3.71429em;
+  padding: 0 3.42857em 3.42857em;
 }
 
 #main_body_content > h1, #main_body_content > h2 {
@@ -503,7 +503,7 @@ a.action_link, span.action_link {
   color: #f2f2f2;
   display: block;
   text-align: center;
-  margin-bottom: 0.40625em;
+  margin-bottom: 0.375em;
 }
 a.action_link:hover, span.action_link:hover {
   background-color: #2479bb;
@@ -593,7 +593,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  padding: 3em 4em;
+  padding: 2.76923em 3.69231em;
 }
 
 .footer {
@@ -688,7 +688,7 @@ table.rf-dt {
   empty-cells: show;
   border: 0;
   background-color: #f5f6f7;
-  margin-top: 1.625em;
+  margin-top: 1.5em;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -778,7 +778,7 @@ a.rf-ds-nmb-btn:hover {
 /* ====================== Rich Panel =========================== */
 div.rf-p {
   border-radius: 2px;
-  margin-bottom: 1.625em;
+  margin-bottom: 1.5em;
   background-color: white;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -866,7 +866,7 @@ div.rf-p {
 .rf-tbp .rf-dg-c {
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 .rf-tbp .rf-tab-hdr-spcr {
   display: none;
@@ -945,8 +945,8 @@ input[type="text"].loginForm_input, input[type="password"].loginForm_input {
   line-height: 1em;
   width: 250px;
   font-size: 1em;
-  line-height: 1.625em;
-  height: 2.4375em;
+  line-height: 1.5em;
+  height: 2.25em;
   font-weight: normal;
 }
 
