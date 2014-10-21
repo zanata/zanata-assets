@@ -926,4 +926,8 @@ a.downloadLink
   display: table !important;
 }
 
+.CodeMirror .cm-space {
+  padding:0 0.2em;
+}
+
 @import "standard";

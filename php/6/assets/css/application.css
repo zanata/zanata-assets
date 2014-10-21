@@ -831,6 +831,10 @@ a.downloadLink {
   display: table !important;
 }
 
+.CodeMirror .cm-space {
+  padding: 0 0.2em;
+}
+
 /**
  * The file contains styles for GWT widgets in the standard theme.
  *
