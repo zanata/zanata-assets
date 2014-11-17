@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-08-19
+/*! zanata-assets - v0.1.0 - 2014-11-18
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1626,7 +1626,7 @@ jQuery(function () {
   // Add this back when old dropdowns are removed
 
   // Don't toggle dropdown when clicking links inside it
-  jQuery('.js-dropdown__toggle a, .js-dropdown__content')
+  jQuery('.js-dropdown__toggle a')
     .bind('click', function (e) {
       e.stopPropagation();
     });

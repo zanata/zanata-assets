@@ -93,19 +93,16 @@ Removes some of the styling on the page-level splitters
     opacity: 1 !important;
 }
 
-.transUnitTable>tbody>tr.selected>td
-{
+.transUnitTable>tbody>tr.selected>td {
   box-shadow: 0 4px 3px rgba(211,211,211,0.7), 0 -4px 3px rgba(211,211,211,0.7);
 }
 
-.transUnitTable>tbody>tr:hover
-{
+.transUnitTable>tbody>tr:hover, .transUnitTable>tbody>tr:hover .fadeElement {
   opacity: 0.75;
 }
 
-.transUnitTable>tbody>tr:hover .fadeElement, .transUnitTable tr.selected .fadeElement
-{
-  opacity:0.75;
+.transUnitTable tr.selected .fadeElement, .transUnitTable tr.selected:hover .fadeElement {
+  opacity:1;
 }
 
 .transUnitTable>tbody>tr
@@ -366,13 +363,10 @@ td.RejectedStateDecoration div div div
 
 
 .DocumentListTable th, .DocumentListTable td.docListHeader {
-  font-size: 13px;
-  font-weight:bold;
+  font-weight:600;
   color: $color-secondary;
   font-family: $font-family-base;
   background-color: $color-bg-lightest;
-  border-bottom:none;
-  border-left:1px solid #FFFFFF;
   text-align:center;
 }
 
@@ -380,17 +374,8 @@ td.RejectedStateDecoration div div div
   color:#FFFFFF;
 }
 
-.DocumentListTable th:first-child, .DocumentListTable td.docListHeader:first-child {
-  border-top-left-radius: 5px;
-  border-left:none;
-}
-
-.DocumentListTable th:last-child, .DocumentListTable td.docListHeader:last-child {
-  border-top-right-radius: 5px;
-}
-
 .DocumentListTable td {
-  font-size: 16px;
+  font-size: 0.9em;
 }
 
 .THEMES_COMPACT .DocumentListTable td {
@@ -453,16 +438,6 @@ td.RejectedStateDecoration div div div
   text-align:center;
 }
 
-.DocumentListTable td.actionCol .uploadButton {
-  font-size:20px;
-  cursor:pointer
-
-}
-
-.DocumentListTable td.actionCol .uploadButton:hover {
-  color:$color-primary;
-}
-
 .pointer {
   cursor: pointer;
 }
@@ -487,8 +462,8 @@ td.RejectedStateDecoration div div div
 }
 
 .translationContainer pre, .translationContainer textarea {
-  font-size: 14px !important; // Stop code mirror css skipping this
-  font-family: $font-family-base;
+  font-size: 1.1em !important; // Stop code mirror css skipping this
+  font-family: $font-family-base !important;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
@@ -496,9 +471,14 @@ td.RejectedStateDecoration div div div
 .translationContainer pre {
   margin-top: 0;
   padding-top: 0;
+  font-weight: 500;
 }
 
 /* TM and Glossary result*/
+
+.resultTable {
+  display:table !important;
+}
 
 .resultTable tbody td {
     vertical-align: top;
@@ -944,6 +924,10 @@ a.downloadLink
   background: $color-bg-light !important;
   @include box-shadow($default-box-shadow);
   display: table !important;
+}
+
+.CodeMirror .cm-space {
+  padding:0 0.2em;
 }
 
 @import "standard";
