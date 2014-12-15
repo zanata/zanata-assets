@@ -98,7 +98,7 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitTable>tbody>tr:hover, .transUnitTable>tbody>tr:hover .fadeElement {
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .transUnitTable tr.selected .fadeElement, .transUnitTable tr.selected:hover .fadeElement {
@@ -107,7 +107,7 @@ Removes some of the styling on the page-level splitters
 
 .transUnitTable>tbody>tr
 {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .transUnitTable>tbody>tr .fadeElement

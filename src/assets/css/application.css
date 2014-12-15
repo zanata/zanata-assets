@@ -92,7 +92,7 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitTable > tbody > tr:hover, .transUnitTable > tbody > tr:hover .fadeElement {
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .transUnitTable tr.selected .fadeElement, .transUnitTable tr.selected:hover .fadeElement {
@@ -100,7 +100,7 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitTable > tbody > tr {
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .transUnitTable > tbody > tr .fadeElement {
@@ -323,7 +323,7 @@ td.RejectedStateDecoration div div div {
   font-weight: 600;
   color: #416988;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  background-color: white;
+  background-color: #fff;
   text-align: center;
 }
 
@@ -757,7 +757,7 @@ a.downloadLink {
   width: 5em;
   border: none !important;
   border-radius: 2px;
-  background-color: white;
+  background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
