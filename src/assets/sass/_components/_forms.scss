@@ -417,10 +417,12 @@ Keep focus while showing and hiding a password field
   position: relative;
   width: 100%;
 }
+
 .form--inline__input {
-  margin: 0 !important;
   display: table-cell !important;
   width: 100% !important;
+  margin: 0 !important;
+  vertical-align: top;
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
@@ -429,9 +431,10 @@ Keep focus while showing and hiding a password field
 .form--inline__suffix {
   display: table-cell !important;
   width: 1%;
+  vertical-align: top;
   .form--inline__addon {
-    white-space: nowrap;
     display: block;
+    white-space: nowrap;
   }
 }
 

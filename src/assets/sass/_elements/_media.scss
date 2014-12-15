@@ -7,10 +7,11 @@ video {
   display: inline-block;
 }
 
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
+// Sass is having problems with this
+// audio:not([controls]) {
+//   display: none;
+//   height: 0;
+// }
 
 img {
   max-width: 100%;
