@@ -29,7 +29,7 @@ jQuery(function () {
   // Add this back when old dropdowns are removed
 
   // Don't toggle dropdown when clicking links inside it
-  jQuery('.js-dropdown__toggle a, .js-dropdown__content')
+  jQuery('.js-dropdown__toggle a')
     .bind('click', function (e) {
       e.stopPropagation();
     });
