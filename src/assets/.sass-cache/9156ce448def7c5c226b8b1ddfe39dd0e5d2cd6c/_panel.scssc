@@ -1,0 +1,839 @@
+3.3.0 (Maptastic Maple)
+88260138bf22ec1bbf99519db9113e74b04f2d12
+o:Sass::Tree::RootNode:@children[o:Sass::Tree::CommentNode
+:@value[I"˙)/*
+
+### Panels
+
+```example
+<div class="g">
+  <div class="g__item w--1-2-h l--push-v-1">
+    <div class="panel">
+      <div class="tabs--accent">
+        <nav class="tabs__nav panel__header">
+          <ul>
+            <li>
+              <a href="#" class="is-active"><i aria-hidden="true" class="i i--infinity"></i><span class="is-invisible">All</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--star"></i><span class="is-invisible">Starred</span></a>
+            </li>
+            <li class="tab__end">
+              <a href="#"><i aria-hidden="true" class="i i--plus i i--large"></i><span class="is-invisible">New Project</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="tabs__content">
+          <header class="l--pad-all-half panel__sub-header">
+            <div class="g--tight">
+              <div class="g__item w--6-10 w--6-10-s">
+                <h2 class="delta heading--secondary">All Projects</h2>
+              </div>
+              <div class="g__item w--4-10 w--4-10-s txt--align-right txt--s-align-right">
+                <span class="txt--meta">5 of 12 <i aria-hidden="true" class="i i--clipboard"></i></span>
+                <div class="dropdown dropdown--inline dropdown--right">
+                  <div class="dropdown__toggle" href="#">
+                    <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li class="dropdown__header">Sort by:</li>
+                    <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
+                    <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <ul class="list--no-bullets">
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/:ET:
+@type:normal;[ :
+@linei:@options{ o;
+;[I";/* TODO: Remove namespacing when old zanata removed */;	T;
+:silent;[ ;i’;@o:Sass::Tree::RuleNode:
+@rule[I".new-zanata;	T:@selector_source_rangeo:Sass::Source::Range	:@start_poso:Sass::Source::Position;i÷:@offseti:@end_poso;;i÷;i:
+@fileI"S/Users/lukebrooker/Sites/zanata-assets/src/assets/sass/_components/_panel.scss;	T:@importero: Sass::Importers::Filesystem:
+@rootI";/Users/lukebrooker/Sites/zanata-assets/src/assets/sass;	F:@same_name_warningso:Set:
+@hash{ :
+@tabsi :@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;![o:#Sass::Selector::SimpleSequence;![o:Sass::Selector::Class:
+@name[I"new-zanata;	T;i÷:@filenameI" ;	T:@subject0:@sourceso;;{ :@source_rangeo;	;o;;i;i;o;;i;i;@$;0;i÷;&@$;i÷;&@$;[o;;[I".panel;	T;o;	;o;;iÿ;i;o;;iÿ;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"
+panel;	T;iÿ;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@:;0;iÿ;&@:;iÿ;&@:;[o:Sass::Tree::ExtendNode:@selector[I".;	TI"bg--pop-high;	T:@optionalF;o;	;o;;iŸ;i;o;;iŸ;i;@;@;[ ;iŸ;)o;	;o;;iŸ;i;o;;iŸ;i;@;@;@o:Sass::Tree::PropNode;%[I"position;	T;o: Sass::Script::Tree::Literal;o: Sass::Script::Value::String;I"relative;	T;
+:identifier;@;i⁄;)o;	;o;;i⁄;i;o;;i⁄;i;@;@;i :@prop_syntax:new;[ ;i⁄;)o;	;o;;i⁄;i;o;;i⁄;i;@;@:@name_source_rangeo;	;@W;o;;i⁄;i;@;@:@value_source_rangeo;	;o;;i⁄;i;@X;@;@;@;iÿ;)o;	;o;;iÿ;i;o;;iÿ;i;@;@:@has_childrenT;@o;;[I".panel__header;	T;o;	;o;;i›;i;o;;i›;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__header;	T;i›;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@o;0;i›;&@o;i›;&@o;[o;*;+[I".;	TI"bg--pop-highest;	T;,F;o;	;o;;iﬁ;i;o;;iﬁ;i ;@;@;[ ;iﬁ;)o;	;o;;iﬁ;i;o;;iﬁ;i ;@;@;@o;-;%[I"border-width;	T;o;.;o;/;I"0 0 2px 0;	T;
+;0;@;iﬂ;)o;	;o;;iﬂ;i;o;;iﬂ;i;@;@;i ;1;2;[ ;iﬂ;)o;	;o;;iﬂ;i;o;;iﬂ;i;@;@;3o;	;@á;o;;iﬂ;i;@;@;4o;	;o;;iﬂ;i;@à;@;@;@o;
+;[I"/* display: table; */;	T;
+;;[ ;i‡;@o;-;%[I"
+width;	T;o;.;o;/;I"	100%;	T;
+;0;@;i·;)o;	;o;;i·;i;o;;i·;i;@;@;i ;1;2;[ ;i·;)o;	;o;;i·;i;o;;i·;i;@;@;3o;	;@ú;o;;i·;i;@;@;4o;	;o;;i·;i;@ù;@;@;@o;-;%[I"position;	T;o;.;o;/;I"relative;	T;
+;0;@;i‚;)o;	;o;;i‚;i;o;;i‚;i;@;@;i ;1;2;[ ;i‚;)o;	;o;;i‚;i;o;;i‚;i;@;@;3o;	;@≠;o;;i‚;i;@;@;4o;	;o;;i‚;i;@Æ;@;@;@o;-;%[I"max-height;	T;o: Sass::Script::Tree::Funcall;%I"rhythm;	T:
+@args[o;.	;o: Sass::Script::Value::Number
+;f	2.05:@numerator_units[ :@denominator_units[ :@originalI"	2.05;	F;@;i„;)o;	;o;;i„;i;o;;i„;i;@;@;&@:@keywordso:Sass::Util::NormalizedMap:@key_strings{ :	@map{ :@splat0:@kwarg_splat0;i„;)o;	;o;;i„;i;o;;i„;i ;@;@;&@;@;i ;1;2;[ ;i„;)o;	;o;;i„;i;o;;i„;i ;@;@;3o;	;@ ;o;;i„;i;@;@;4o;	;o;;i„;i;@À;@;@;@;i›;)o;	;o;;i›;i;o;;i›;i;@;@;5T;@o;;[I".panel__sub-header;	T;o;	;o;;iÊ;i;o;;iÊ;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__sub-header;	T;iÊ;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@‚;0;iÊ;&@‚;iÊ;&@‚;[o;*;+[I".;	TI"bg--pop-higher;	T;,F;o;	;o;;iÁ;i;o;;iÁ;i;@;@;[ ;iÁ;)o;	;o;;iÁ;i;o;;iÁ;i;@;@;@o;-;%[I"border-width;	T;o;.;o;/;I"0 0 2px 0;	T;
+;0;@;iË;)o;	;o;;iË;i;o;;iË;i;@;@;i ;1;2;[ ;iË;)o;	;o;;iË;i;o;;iË;i;@;@;3o;	;@ˇ;o;;iË;i;@;@;4o;	;o;;iË;i;@ ;@;@;@;iÊ;)o;	;o;;iÊ;i;o;;iÊ;i;@;@;5T;@o;;[I".panel__heading;	T;o;	;o;;iÎ;i;o;;iÎ;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__heading;	T;iÎ;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@;0;iÎ;&@;iÎ;&@;[o:Sass::Tree::MixinNode;%I"adjust-font-size-to;	T;7[o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	16px;	F;@;iÏ;)o;	;o;;iÏ;i%;o;;iÏ;i);@;@;&@o;.	;o;8
+;i;9[ ;:@Ω;;I"2;	F;@;iÏ;)o;	;o;;iÏ;i+;o;;iÏ;i,;@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;iÏ;)o;	;o;;iÏ;i;o;;iÏ;i-;@;@;@o;B;%I"ellipsis;	T;7[ ;<{ ;@0;A0;[ ;iÌ;)o;	;o;;iÌ;i;o;;iÌ;i;@;@;@o;-;%[I"padding;	T;o:$Sass::Script::Tree::ListLiteral:@elements[o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;iÓ;)o;	;o;;iÓ;i;o;;iÓ;i;@;@;&@o;6;%I"rhythm;	T;7[o;.	;o;8
+;f0.5;9[ ;:@Ω;;I"0.5;	F;@;iÓ;)o;	;o;;iÓ;i;o;;iÓ;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	16px;	F;@;iÓ;)o;	;o;;iÓ;i;o;;iÓ;i";@;@;&@;<o;=;>{ ;?{ ;@0;A0;iÓ;)o;	;o;;iÓ;i;o;;iÓ;i#;@;@;&@;@:@separator:
+space;iÓ;)o;	;o;;iÓ;i;o;;iÓ;i#;@;@;&@;@;i ;1;2;[ ;iÓ;)o;	;o;;iÓ;i;o;;iÓ;i#;@;@;3o;	;@k;o;;iÓ;i;@;@;4o;	;o;;iÓ;i;@l;@;@;@o;-;%[I"font-weight;	T;o;.;o;/;I"400;	T;
+;0;@;iÔ;)o;	;o;;iÔ;i;o;;iÔ;i;@;@;i ;1;2;[ ;iÔ;)o;	;o;;iÔ;i;o;;iÔ;i;@;@;3o;	;@|;o;;iÔ;i;@;@;4o;	;o;;iÔ;i;@};@;@;@o;-;%[I"overflow;	T;o;.;o;/;I"hidden;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@ç;o;;i;i;@;@;4o;	;o;;i;i;@é;@;@;@o;-;%[I"margin;	T;o;.;o;/;I"0;	T;
+;0;@;iÒ;)o;	;o;;iÒ;i;o;;iÒ;i;@;@;i ;1;2;[ ;iÒ;)o;	;o;;iÒ;i;o;;iÒ;i;@;@;3o;	;@û;o;;iÒ;i;@;@;4o;	;o;;iÒ;i;@ü;@;@;@o;B;%I"breakpoint;	T;7[o:!Sass::Script::Tree::Variable;%I"gte-medium;	T:@underscored_nameI"gte_medium;	T;iÚ;)o;	;o;;iÚ;i;o;;iÚ;i';@;@;&@;@;<o;=;>{ ;?{ ;@0;A0;[o;B;%I"adjust-font-size-to;	T;7[o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	18px;	F;@;iÛ;)o;	;o;;iÛ;i';o;;iÛ;i+;@;@;&@o;.	;o;8
+;i;9[ ;:@Ω;;I"2;	F;@;iÛ;)o;	;o;;iÛ;i-;o;;iÛ;i.;@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;iÛ;)o;	;o;;iÛ;i
+;o;;iÛ;i/;@;@;@o;-;%[I"padding;	T;o;C;D[o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;iÙ;)o;	;o;;iÙ;i;o;;iÙ;i;@;@;&@o;6;%I"rhythm;	T;7[o;.	;o;8
+;@Q;9[ ;:@Ω;;I"0.5;	F;@;iÙ;)o;	;o;;iÙ;i;o;;iÙ;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	18px;	F;@;iÙ;)o;	;o;;iÙ;i ;o;;iÙ;i$;@;@;&@;<o;=;>{ ;?{ ;@0;A0;iÙ;)o;	;o;;iÙ;i;o;;iÙ;i%;@;@;&@;@;E;F;iÙ;)o;	;o;;iÙ;i;o;;iÙ;i%;@;@;&@;@;i ;1;2;[ ;iÙ;)o;	;o;;iÙ;i
+;o;;iÙ;i%;@;@;3o;	;@ı;o;;iÙ;i;@;@;4o;	;o;;iÙ;i;@ˆ;@;@;@;iÚ;)o;	;o;;iÚ;i;o;;iÚ;i);@;@;@;5T;iÎ;)o;	;o;;iÎ;i;o;;iÎ;i;@;@;5T;@o;;[I".panel__header__info;	T;o;	;o;;i¯;i;o;;i¯;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__header__info;	T;i¯;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@;0;i¯;&@;i¯;&@;[	o;B;%I"ellipsis;	T;7[ ;<{ ;@0;A0;[ ;i˘;)o;	;o;;i˘;i;o;;i˘;i;@;@;@o;-;%[I"padding;	T;o;C;D[o;6;%I"rhythm;	T;7[o;.	;o;8
+;f	0.45;9[ ;:@Ω;;I"	0.45;	F;@;i˙;)o;	;o;;i˙;i;o;;i˙;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i˙;)o;	;o;;i˙;i;o;;i˙;i;@;@;&@;@o;6;%I"rhythm;	T;7[o;.	;o;8
+;@Q;9[ ;:@Ω;;I"0.5;	F;@;i˙;)o;	;o;;i˙;i$;o;;i˙;i&;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i˙;)o;	;o;;i˙;i;o;;i˙;i';@;@;&@;@;E;F;i˙;)o;	;o;;i˙;i;o;;i˙;i';@;@;&@;@;i ;1;2;[ ;i˙;)o;	;o;;i˙;i;o;;i˙;i';@;@;3o;	;@J;o;;i˙;i;@;@;4o;	;o;;i˙;i;@K;@;@;@o;-;%[I"overflow;	T;o;.;o;/;I"hidden;	T;
+;0;@;i˚;)o;	;o;;i˚;i;o;;i˚;i;@;@;i ;1;2;[ ;i˚;)o;	;o;;i˚;i;o;;i˚;i;@;@;3o;	;@[;o;;i˚;i;@;@;4o;	;o;;i˚;i;@\;@;@;@o;-;%[I"margin;	T;o;.;o;/;I"0;	T;
+;0;@;i¸;)o;	;o;;i¸;i;o;;i¸;i;@;@;i ;1;2;[ ;i¸;)o;	;o;;i¸;i;o;;i¸;i;@;@;3o;	;@l;o;;i¸;i;@;@;4o;	;o;;i¸;i;@m;@;@;@;i¯;)o;	;o;;i¯;i;o;;i¯;i;@;@;5T;@o;;[I".panel__heading--small;	T;o;	;o;;iˇ;i;o;;iˇ;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__heading--small;	T;iˇ;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@Ñ;0;iˇ;&@Ñ;iˇ;&@Ñ;[o;B;%I"adjust-font-size-to;	T;7[o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i ;)o;	;o;;i ;i%;o;;i ;i);@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;i ;)o;	;o;;i ;i;o;;i ;i*;@;@;@o;B;%I"ellipsis;	T;7[ ;<{ ;@0;A0;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;@o;-;%[I"padding;	T;o;C;D[o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;i;)o;	;o;;i;i;o;;i;i;@;@;&@o;6;%I"rhythm;	T;7[o;.	;o;8
+;@Q;9[ ;:@Ω;;I"0.5;	F;@;i;)o;	;o;;i;i;o;;i;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i;)o;	;o;;i;i;o;;i;i";@;@;&@;<o;=;>{ ;?{ ;@0;A0;i;)o;	;o;;i;i;o;;i;i#;@;@;&@;@;E;F;i;)o;	;o;;i;i;o;;i;i#;@;@;&@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i#;@;@;3o;	;@–;o;;i;i;@;@;4o;	;o;;i;i;@—;@;@;@o;-;%[I"font-weight;	T;o;.;o;/;I"400;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@·;o;;i;i;@;@;4o;	;o;;i;i;@‚;@;@;@o;-;%[I"overflow;	T;o;.;o;/;I"hidden;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@Ú;o;;i;i;@;@;4o;	;o;;i;i;@Û;@;@;@o;-;%[I"margin;	T;o;.;o;/;I"0;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@;o;;i;i;@;@;4o;	;o;;i;i;@;@;@;@o;-;%[I"text-transform;	T;o;.;o;/;I"uppercase;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i!;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i!;@;@;3o;	;@;o;;i;i;@;@;4o;	;o;;i;i;@;@;@;@;iˇ;)o;	;o;;iˇ;i;o;;iˇ;i;@;@;5T;@o;;[I"2.panel__header__sort,
+.panel__header__actions;	T;o;	;o;;i	;i;o;;i
+;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__header__sort;	T;i	;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@,;0;i	;&@,o;";![I"
+;	To;#;![o;$;%[I"panel__header__actions;	T;i	;&@,;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@,;0;i	;&@,;i	;&@,;[o;-;%[I"
+float;	T;o;.;o;/;I"
+right;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@K;o;;i;i;@;@;4o;	;o;;i;i;@L;@;@;@o;-;%[I"white-space;	T;o;.;o;/;I"nowrap;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@\;o;;i;i;@;@;4o;	;o;;i;i;@];@;@;@o;
+;[I"./* margin: rhythm(.45) rhythm(.5) 0 0; */;	T;
+;;[ ;i;@;i	;)o;	;o;;i	;i;o;;i
+;i;@;@;5T;@o;;[I".panel__header__back;	T;o;	;o;;i;i;o;;i;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__header__back;	T;i;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@x;0;i;&@x;i;&@x;[o;-;%[I"height;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"2;	F;@;i;)o;	;o;;i;i;o;;i;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i;)o;	;o;;i;i;o;;i;i;@;@;&@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@î;o;;i;i;@;@;4o;	;o;;i;i;@ï;@;@;@o;-;%[I"
+width;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;f1.5;9[ ;:@Ω;;I"1.5;	F;@;i;)o;	;o;;i;i;o;;i;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i;)o;	;o;;i;i;o;;i;i;@;@;&@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@∞;o;;i;i;@;@;4o;	;o;;i;i;@±;@;@;@o;-;%[I"text-align;	T;o;.;o;/;I"center;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@¡;o;;i;i;@;@;4o;	;o;;i;i;@¬;@;@;@o;-;%[I"display;	T;o;.;o;/;I"inline-block;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@“;o;;i;i;@;@;4o;	;o;;i;i;@”;@;@;@o;-;%[I"position;	T;o;.;o;/;I"absolute;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@„;o;;i;i;@;@;4o;	;o;;i;i;@‰;@;@;@o;-;%[I"	left;	T;o;.;o;/;I"0;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@Ù;o;;i;i;@;@;4o;	;o;;i;i;@ı;@;@;@o;-;%[I"top;	T;o;.;o;/;I"0;	T;
+;0;@;i;)o;	;o;;i;i;o;;i;i;@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@;o;;i;i;@;@;4o;	;o;;i;i;@;@;@;@o;-;%[I"padding;	T;o;C;D[o;6;%I"rhythm;	T;7[o;.	;o;8
+;@Q;9[ ;:@Ω;;I"0.5;	F;@;i;)o;	;o;;i;i;o;;i;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i;)o;	;o;;i;i;o;;i;i;@;@;&@;@o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;i;)o;	;o;;i;i;o;;i;i;@;@;&@;E;F;i;)o;	;o;;i;i;o;;i;i;@;@;&@;@;i ;1;2;[ ;i;)o;	;o;;i;i;o;;i;i;@;@;3o;	;@,;o;;i;i;@;@;4o;	;o;;i;i;@-;@;@;@o;;[I"i:before;	T;o;	;o;;i;i;o;;i;i;@;@;i ;o; ;![o;";![o;#;![o:Sass::Selector::Element	;%[I"i;	T:@namespace0;i;&I" ;	To:Sass::Selector::Pseudo
+:@syntactic_type:
+class;%[I"before;	T:	@arg0;i;&@A;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@A;0;i;&@A;i;&@A;[o;-;%[I"height;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"2;	F;@;i;)o;	;o;;i;i;o;;i;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i;)o;	;o;;i;i;o;;i;i;@;@;&@;@;i ;1;2;[ ;i;)o;	;o;;i;i
+;o;;i;i;@;@;3o;	;@`;o;;i;i;@;@;4o;	;o;;i;i;@a;@;@;@;i;)o;	;o;;i;i;o;;i;i;@;@;5T;@o;;[I"+ .panel__heading;	T;o;	;o;;i;i;o;;i;i;@;@;i ;o; ;![o;";![I"+;	To;#;![o;$;%[I"panel__heading;	T;i;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@y;0;i;&@y;i;&@y;[o;-;%[I"padding-left;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;@¢;9[ ;:@Ω;;I"1.5;	F;@;i;)o;	;o;;i;i;o;;i;i";@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	16px;	F;@;i;)o;	;o;;i;i$;o;;i;i(;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i;)o;	;o;;i;i;o;;i;i);@;@;&@;@;i ;1;2;[ ;i;)o;	;o;;i;i
+;o;;i;i);@;@;3o;	;@û;o;;i;i;@;@;4o;	;o;;i;i;@ü;@;@;@;i;)o;	;o;;i;i;o;;i;i;@;@;5T;@o;B;%I"breakpoint;	T;7[o;G;%I"gte-small;	T;HI"gte_small;	T;i;)o;	;o;;i;i;o;;i;i&;@;@;&@;@;<o;=;>{ ;?{ ;@0;A0;[o;;[I"+ .panel__heading;	T;o;	;o;;i ;i
+;o;;i ;i;@;@;i ;o; ;![o;";![I"+;	To;#;![o;$;%[I"panel__heading;	T;i ;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@ƒ;0;i ;&@ƒ;i ;&@ƒ;[o;-;%[I"padding-left;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;@¢;9[ ;:@Ω;;I"1.5;	F;@;i!;)o;	;o;;i!;i!;o;;i!;i$;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	18px;	F;@;i!;)o;	;o;;i!;i&;o;;i!;i*;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i!;)o;	;o;;i!;i;o;;i!;i+;@;@;&@;@;i ;1;2;[ ;i!;)o;	;o;;i!;i;o;;i!;i+;@;@;3o;	;@È;o;;i!;i;@;@;4o;	;o;;i!;i;@Í;@;@;@;i ;)o;	;o;;i ;i
+;o;;i ;i;@;@;5T;@;i;)o;	;o;;i;i;o;;i;i(;@;@;@;5To;B;%I"breakpoint;	T;7[o;G;%I"gte-medium;	T;HI"gte_medium;	T;i$;)o;	;o;;i$;i;o;;i$;i';@;@;&@;@;<o;=;>{ ;?{ ;@0;A0;[o;-;%[I"display;	T;o;.;o;/;I"	none;	T;
+;0;@;i%;)o;	;o;;i%;i;o;;i%;i;@;@;i ;1;2;[ ;i%;)o;	;o;;i%;i
+;o;;i%;i;@;@;3o;	;@;o;;i%;i;@;@;4o;	;o;;i%;i;@;@;@;@o;;[I"+ .panel__heading;	T;o;	;o;;i&;i
+;o;;i&;i;@;@;i ;o; ;![o;";![I"+;	To;#;![o;$;%[I"panel__heading;	T;i&;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@#;0;i&;&@#;i&;&@#;[o;-;%[I"padding-left;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;@Q;9[ ;:@Ω;;I"0.5;	F;@;i';)o;	;o;;i';i!;o;;i';i#;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	18px;	F;@;i';)o;	;o;;i';i%;o;;i';i);@;@;&@;<o;=;>{ ;?{ ;@0;A0;i';)o;	;o;;i';i;o;;i';i*;@;@;&@;@;i ;1;2;[ ;i';)o;	;o;;i';i;o;;i';i*;@;@;3o;	;@H;o;;i';i;@;@;4o;	;o;;i';i;@I;@;@;@;i&;)o;	;o;;i&;i
+;o;;i&;i;@;@;5T;@;i$;)o;	;o;;i$;i;o;;i$;i);@;@;@;5T;i;)o;	;o;;i;i;o;;i;i;@;@;5T;@o;;[I".panel__search;	T;o;	;o;;i,;i;o;;i,;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__search;	T;i,;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@f;0;i,;&@f;i,;&@f;[o;-;%[I"display;	T;o;.;o;/;I"
+block;	T;
+;0;@;i-;)o;	;o;;i-;i;o;;i-;i;@;@;i ;1;2;[ ;i-;)o;	;o;;i-;i;o;;i-;i;@;@;3o;	;@x;o;;i-;i;@;@;4o;	;o;;i-;i;@y;@;@;@o;;[I"&:before;	T;o;	;o;;i.;i;o;;i.;i;@;@;i ;o; ;![o;";![o;#;![o:Sass::Selector::Parent:@suffix[ ;i.;&I" ;	To;K
+;L;M;%[I"before;	T;N0;i.;&@å;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@å;0;i.;&@å;i.;&@å;[o;-;%[I"	left;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;f
+0.425;9[ ;:@Ω;;I"
+0.425;	F;@;i/;)o;	;o;;i/;i;o;;i/;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i/;)o;	;o;;i/;i;o;;i/;i;@;@;&@;@;i ;1;2;[ ;i/;)o;	;o;;i/;i
+;o;;i/;i;@;@;3o;	;@¨;o;;i/;i;@;@;4o;	;o;;i/;i;@≠;@;@;@o;-;%[I"top;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;i0;)o;	;o;;i0;i;o;;i0;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i0;)o;	;o;;i0;i;o;;i0;i;@;@;&@;@;i ;1;2;[ ;i0;)o;	;o;;i0;i
+;o;;i0;i;@;@;3o;	;@«;o;;i0;i;@;@;4o;	;o;;i0;i;@»;@;@;@o;-;%[I"line-height;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"1;	F;@;i1;)o;	;o;;i1;i;o;;i1;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i1;)o;	;o;;i1;i;o;;i1;i ;@;@;&@;@;i ;1;2;[ ;i1;)o;	;o;;i1;i
+;o;;i1;i ;@;@;3o;	;@‚;o;;i1;i;@;@;4o;	;o;;i1;i;@„;@;@;@;i.;)o;	;o;;i.;i;o;;i.;i;@;@;5T;@o;;[I"
+input;	T;o;	;o;;i3;i;o;;i3;i;@;@;i ;o; ;![o;";![o;#;![o;I	;%[I"
+input;	T;J0;i3;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@˙;0;i3;&@˙;i3;&@˙;[o;B;%I"adjust-font-size-to;	T;7[o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i4;)o;	;o;;i4;i';o;;i4;i+;@;@;&@o;.	;o;8
+;f0.8;9[ ;:@Ω;;I"0.8;	F;@;i4;)o;	;o;;i4;i-;o;;i4;i/;@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;i4;)o;	;o;;i4;i
+;o;;i4;i0;@;@;@o;-;%[I"padding;	T;o;C;D[	o;6;%I"rhythm;	T;7[o;.	;o;8
+;f
+0.125;9[ ;:@Ω;;I"
+0.125;	F;@;i5;)o;	;o;;i5;i;o;;i5;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i5;)o;	;o;;i5;i ;o;;i5;i$;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i5;)o;	;o;;i5;i;o;;i5;i%;@;@;&@;@o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"2;	F;@;i5;)o;	;o;;i5;i-;o;;i5;i.;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i5;)o;	;o;;i5;i0;o;;i5;i4;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i5;)o;	;o;;i5;i&;o;;i5;i5;@;@;&@;@o;6;%I"rhythm;	T;7[o;.	;o;8
+;@&;9[ ;:@Ω;;I"
+0.125;	F;@;i5;)o;	;o;;i5;i=;o;;i5;iA;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i5;)o;	;o;;i5;iC;o;;i5;iG;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i5;)o;	;o;;i5;i6;o;;i5;iH;@;@;&@;@o;6;%I"rhythm;	T;7[o;.	;o;8
+;f
+1.375;9[ ;:@Ω;;I"
+1.375;	F;@;i5;)o;	;o;;i5;iP;o;;i5;iU;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i5;)o;	;o;;i5;iW;o;;i5;i[;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i5;)o;	;o;;i5;iI;o;;i5;i\;@;@;&@;@;E;F;i5;)o;	;o;;i5;i;o;;i5;i\;@;@;&@;@;i ;1;2;[ ;i5;)o;	;o;;i5;i
+;o;;i5;i\;@;@;3o;	;@å;o;;i5;i;@;@;4o;	;o;;i5;i;@ç;@;@;@o;-;%[I"height;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;f	1.05;9[ ;:@Ω;;I"	1.05;	F;@;i6;)o;	;o;;i6;i;o;;i6;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i6;)o;	;o;;i6;i;o;;i6;i#;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i6;)o;	;o;;i6;i;o;;i6;i$;@;@;&@;@;i ;1;2;[ ;i6;)o;	;o;;i6;i
+;o;;i6;i$;@;@;3o;	;@±;o;;i6;i;@;@;4o;	;o;;i6;i;@≤;@;@;@o;-;%[I"border-radius;	T;o;.;o;/;I"0;	T;
+;0;@;i7;)o;	;o;;i7;i;o;;i7;i;@;@;i ;1;2;[ ;i7;)o;	;o;;i7;i
+;o;;i7;i;@;@;3o;	;@¬;o;;i7;i;@;@;4o;	;o;;i7;i;@√;@;@;@o;-;%[I"border;	T;o;.;o;/;I"	none;	T;
+;0;@;i8;)o;	;o;;i8;i;o;;i8;i;@;@;i ;1;2;[ ;i8;)o;	;o;;i8;i
+;o;;i8;i;@;@;3o;	;@”;o;;i8;i;@;@;4o;	;o;;i8;i;@‘;@;@;@o;-;%[I"border-bottom;	T;o;G;%I"default-border;	T;HI"default_border;	T;i9;)o;	;o;;i9;i;o;;i9;i(;@;@;&@;@;i ;1;2;[ ;i9;)o;	;o;;i9;i
+;o;;i9;i(;@;@;3o;	;@‰;o;;i9;i;@;@;4o;	;o;;i9;i;@Â;@;@;@o;-;%[I"margin;	T;o;.;o;/;I"0;	T;
+;0;@;i:;)o;	;o;;i:;i;o;;i:;i;@;@;i ;1;2;[ ;i:;)o;	;o;;i:;i
+;o;;i:;i;@;@;3o;	;@ı;o;;i:;i;@;@;4o;	;o;;i:;i;@ˆ;@;@;@o;;[I"&:focus,
+    &:hover;	T;o;	;o;;i;;i
+;o;;i<;i;@;@;i ;o; ;![o;";![o;#;![o;O;P[ ;i;;&I" ;	To;K
+;L;M;%[I"
+focus;	T;N0;i;;&@	;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@	;0;i;;&@	o;";![I"
+;	To;#;![o;O;P[ ;i;;&@	o;K
+;L;M;%[I"
+hover;	T;N0;i;;&@	;'0;(o;;{ ;)o;	;o;;i;i
+;o;;i;i;@	;0;i;;&@	;i;;&@	;[o;-;%[I"border;	T;o;.;o;/;I"	none;	T;
+;0;@;i=;)o;	;o;;i=;i;o;;i=;i;@;@;i ;1;2;[ ;i=;)o;	;o;;i=;i;o;;i=;i;@;@;3o;	;@-;o;;i=;i;@;@;4o;	;o;;i=;i;@.;@;@;@o;-;%[I"border-bottom;	T;o;G;%I"default-border;	T;HI"default_border;	T;i>;)o;	;o;;i>;i;o;;i>;i*;@;@;&@;@;i ;1;2;[ ;i>;)o;	;o;;i>;i;o;;i>;i*;@;@;3o;	;@>;o;;i>;i;@;@;4o;	;o;;i>;i;@?;@;@;@;i;;)o;	;o;;i;;i
+;o;;i<;i;@;@;5T;@;i3;)o;	;o;;i3;i;o;;i3;i;@;@;5T;@;i,;)o;	;o;;i,;i;o;;i,;i;@;@;5T;@o;;[I".panel__results;	T;o;	;o;;iC;i;o;;iC;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__results;	T;iC;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@\;0;iC;&@\;iC;&@\;[	o;*;+[I".;	TI"l--cf-of;	T;,F;o;	;o;;iD;i;o;;iD;i;@;@;[ ;iD;)o;	;o;;iD;i;o;;iD;i;@;@;@o;-;%[I"position;	T;o;.;o;/;I"relative;	T;
+;0;@;iE;)o;	;o;;iE;i;o;;iE;i;@;@;i ;1;2;[ ;iE;)o;	;o;;iE;i;o;;iE;i;@;@;3o;	;@y;o;;iE;i;@;@;4o;	;o;;iE;i;@z;@;@;@o;-;%[I"padding;	T;o;C;D[	o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;iF;)o;	;o;;iF;i;o;;iF;i;@;@;&@o;6;%I"rhythm;	T;7[o;.	;o;8
+;f	0.25;9[ ;:@Ω;;I"	0.25;	F;@;iF;)o;	;o;;iF;i;o;;iF;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;iF;)o;	;o;;iF;i;o;;iF;i;@;@;&@;@o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;iF;)o;	;o;;iF;i;o;;iF;i ;@;@;&@o;6;%I"rhythm;	T;7[o;.	;o;8
+;@r;9[ ;:@Ω;;I"
+1.375;	F;@;iF;)o;	;o;;iF;i(;o;;iF;i-;@;@;&@;<o;=;>{ ;?{ ;@0;A0;iF;)o;	;o;;iF;i!;o;;iF;i.;@;@;&@;@;E;F;iF;)o;	;o;;iF;i;o;;iF;i.;@;@;&@;@;i ;1;2;[ ;iF;)o;	;o;;iF;i;o;;iF;i.;@;@;3o;	;@∏;o;;iF;i;@;@;4o;	;o;;iF;i;@π;@;@;@o;;[I".txt--meta;	T;o;	;o;;iG;i;o;;iG;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"txt--meta;	T;iG;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@Õ;0;iG;&@Õ;iG;&@Õ;[o;-;%[I"line-height;	T;o;.;o;/;I"inherit;	T;
+;0;@;iH;)o;	;o;;iH;i;o;;iH;i;@;@;i ;1;2;[ ;iH;)o;	;o;;iH;i
+;o;;iH;i;@;@;3o;	;@ﬂ;o;;iH;i;@;@;4o;	;o;;iH;i;@‡;@;@;@;iG;)o;	;o;;iG;i;o;;iG;i;@;@;5T;@;iC;)o;	;o;;iC;i;o;;iC;i;@;@;5T;@o;;[I".panel__results--bottom;	T;o;	;o;;iL;i;o;;iL;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__results--bottom;	T;iL;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@˙;0;iL;&@˙;iL;&@˙;[o;-;%[I"position;	T;o;.;o;/;I"absolute;	T;
+;0;@;iM;)o;	;o;;iM;i;o;;iM;i;@;@;i ;1;2;[ ;iM;)o;	;o;;iM;i;o;;iM;i;@;@;3o;	;@;o;;iM;i;@;@;4o;	;o;;iM;i;@;@;@;@o;-;%[I"bottom;	T;o;.;o;/;I"0;	T;
+;0;@;iN;)o;	;o;;iN;i;o;;iN;i;@;@;i ;1;2;[ ;iN;)o;	;o;;iN;i;o;;iN;i;@;@;3o;	;@;o;;iN;i;@;@;4o;	;o;;iN;i;@;@;@;@o;-;%[I"
+width;	T;o;.;o;/;I"	100%;	T;
+;0;@;iO;)o;	;o;;iO;i;o;;iO;i;@;@;i ;1;2;[ ;iO;)o;	;o;;iO;i;o;;iO;i;@;@;3o;	;@.;o;;iO;i;@;@;4o;	;o;;iO;i;@/;@;@;@;iL;)o;	;o;;iL;i;o;;iL;i;@;@;5T;@o;;[I".panel__results__type;	T;o;	;o;;iR;i;o;;iR;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__results__type;	T;iR;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@F;0;iR;&@F;iR;&@F;[	o;-;%[I"position;	T;o;.;o;/;I"absolute;	T;
+;0;@;iS;)o;	;o;;iS;i;o;;iS;i;@;@;i ;1;2;[ ;iS;)o;	;o;;iS;i;o;;iS;i;@;@;3o;	;@X;o;;iS;i;@;@;4o;	;o;;iS;i;@Y;@;@;@o;-;%[I"top;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;@ê;9[ ;:@Ω;;I"	0.25;	F;@;iT;)o;	;o;;iT;i;o;;iT;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;iT;)o;	;o;;iT;i;o;;iT;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;iT;)o;	;o;;iT;i;o;;iT;i;@;@;&@;@;i ;1;2;[ ;iT;)o;	;o;;iT;i;o;;iT;i;@;@;3o;	;@|;o;;iT;i;@;@;4o;	;o;;iT;i;@};@;@;@o;-;%[I"	left;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;@Q;9[ ;:@Ω;;I"0.5;	F;@;iU;)o;	;o;;iU;i;o;;iU;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;iU;)o;	;o;;iU;i;o;;iU;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;iU;)o;	;o;;iU;i;o;;iU;i;@;@;&@;@;i ;1;2;[ ;iU;)o;	;o;;iU;i;o;;iU;i;@;@;3o;	;@†;o;;iU;i;@;@;4o;	;o;;iU;i;@°;@;@;@o;B;%I"adjust-font-size-to;	T;7[o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;iV;)o;	;o;;iV;i%;o;;iV;i);@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;iV;)o;	;o;;iV;i;o;;iV;i*;@;@;@;iR;)o;	;o;;iR;i;o;;iR;i;@;@;5T;@o;;[I"2.panel__search__reset,
+.panel__search__button;	T;o;	;o;;iY;i;o;;iZ;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__search__reset;	T;iY;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@À;0;iY;&@Ào;";![I"
+;	To;#;![o;$;%[I"panel__search__button;	T;iY;&@À;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@À;0;iY;&@À;iY;&@À;[o;-;%[I"vertical-align;	T;o;.;o;/;I"inherit;	T;
+;0;@;i[;)o;	;o;;i[;i;o;;i[;i;@;@;i ;1;2;[ ;i[;)o;	;o;;i[;i;o;;i[;i;@;@;3o;	;@Í;o;;i[;i;@;@;4o;	;o;;i[;i;@Î;@;@;@;iY;)o;	;o;;iY;i;o;;iZ;i;@;@;5T;@o;;[I".panel__search__button;	T;o;	;o;;i^;i;o;;i^;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__search__button;	T;i^;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@	;0;i^;&@	;i^;&@	;[o;-;%[I"margin-left;	T;o;C;D[o;6;%I"rhythm;	T;7[o;.	;o;8
+;@&;9[ ;:@Ω;;I"
+0.125;	F;@;i_;)o;	;o;;i_;i;o;;i_;i ;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;i_;)o;	;o;;i_;i";o;;i_;i&;@;@;&@;<o;=;>{ ;?{ ;@0;A0;i_;)o;	;o;;i_;i;o;;i_;i';@;@;&@;@o;.	;o;/;I"!important;	T;
+;0;@;i_;)o;	;o;;i_;i(;o;;i_;i2;@;@;&@;E;F;i_;)o;	;o;;i_;i;o;;i_;i2;@;@;&@;@;i ;1;2;[ ;i_;)o;	;o;;i_;i;o;;i_;i2;@;@;3o;	;@2	;o;;i_;i;@;@;4o;	;o;;i_;i;@3	;@;@;@o;-;%[I"font-weight;	T;o;.;o;/;I"400;	T;
+;0;@;i`;)o;	;o;;i`;i;o;;i`;i;@;@;i ;1;2;[ ;i`;)o;	;o;;i`;i;o;;i`;i;@;@;3o;	;@C	;o;;i`;i;@;@;4o;	;o;;i`;i;@D	;@;@;@;i^;)o;	;o;;i^;i;o;;i^;i;@;@;5T;@o;;[I".panel__search__cancel;	T;o;	;o;;ic;i;o;;ic;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__search__cancel;	T;ic;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@[	;0;ic;&@[	;ic;&@[	;[
+o;B;%I"adjust-font-size-to;	T;7[o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;id;)o;	;o;;id;i%;o;;id;i);@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;id;)o;	;o;;id;i;o;;id;i*;@;@;@o;-;%[I"position;	T;o;.;o;/;I"absolute;	T;
+;0;@;ie;)o;	;o;;ie;i;o;;ie;i;@;@;i ;1;2;[ ;ie;)o;	;o;;ie;i;o;;ie;i;@;@;3o;	;@Ä	;o;;ie;i;@;@;4o;	;o;;ie;i;@Å	;@;@;@o;-;%[I"top;	T;o;.;o;/;I"0;	T;
+;0;@;if;)o;	;o;;if;i;o;;if;i;@;@;i ;1;2;[ ;if;)o;	;o;;if;i;o;;if;i;@;@;3o;	;@ë	;o;;if;i;@;@;4o;	;o;;if;i;@í	;@;@;@o;-;%[I"
+right;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;@Q;9[ ;:@Ω;;I"0.5;	F;@;ig;)o;	;o;;ig;i;o;;ig;i;@;@;&@o;.	;o;8
+;i;9[I"px;	T;:[ ;;I"	14px;	F;@;ig;)o;	;o;;ig;i;o;;ig;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;ig;)o;	;o;;ig;i;o;;ig;i;@;@;&@;@;i ;1;2;[ ;ig;)o;	;o;;ig;i;o;;ig;i;@;@;3o;	;@µ	;o;;ig;i;@;@;4o;	;o;;ig;i;@∂	;@;@;@o;-;%[I"font-weight;	T;o;.;o;/;I"400;	T;
+;0;@;ih;)o;	;o;;ih;i;o;;ih;i;@;@;i ;1;2;[ ;ih;)o;	;o;;ih;i;o;;ih;i;@;@;3o;	;@∆	;o;;ih;i;@;@;4o;	;o;;ih;i;@«	;@;@;@;ic;)o;	;o;;ic;i;o;;ic;i;@;@;5T;@o;;[I".panel__pager;	T;o;	;o;;ik;i;o;;ik;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__pager;	T;ik;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@ﬁ	;0;ik;&@ﬁ	;ik;&@ﬁ	;[	o;*;+[I".;	TI"list--horizontal;	T;,F;o;	;o;;il;i;o;;il;i!;@;@;[ ;il;)o;	;o;;il;i;o;;il;i!;@;@;@o;-;%[I"height;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"1;	F;@;im;)o;	;o;;im;i;o;;im;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;im;)o;	;o;;im;i;o;;im;i;@;@;&@;@;i ;1;2;[ ;im;)o;	;o;;im;i;o;;im;i;@;@;3o;	;@
+;o;;im;i;@;@;4o;	;o;;im;i;@
+;@;@;@o;-;%[I"
+float;	T;o;.;o;/;I"
+right;	T;
+;0;@;in;)o;	;o;;in;i;o;;in;i;@;@;i ;1;2;[ ;in;)o;	;o;;in;i;o;;in;i;@;@;3o;	;@
+;o;;in;i;@;@;4o;	;o;;in;i;@
+;@;@;@o;;[I"li;	T;o;	;o;;io;i;o;;io;i;@;@;i ;o; ;![o;";![o;#;![o;I	;%[I"li;	T;J0;io;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@+
+;0;io;&@+
+;io;&@+
+;[o;-;%[I"vertical-align;	T;o;.;o;/;I"top;	T;
+;0;@;ip;)o;	;o;;ip;i;o;;ip;i;@;@;i ;1;2;[ ;ip;)o;	;o;;ip;i
+;o;;ip;i;@;@;3o;	;@=
+;o;;ip;i;@;@;4o;	;o;;ip;i;@>
+;@;@;@o;-;%[I"margin;	T;o;C;D[	o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;iq;)o;	;o;;iq;i;o;;iq;i;@;@;&@o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;iq;)o;	;o;;iq;i;o;;iq;i;@;@;&@o;.	;o;8
+;i ;9[ ;:@Ω;;I"0;	F;@;iq;)o;	;o;;iq;i;o;;iq;i;@;@;&@o;6;%I"rhythm;	T;7[o:'Sass::Script::Tree::UnaryOperation:@operando;.	;o;8
+;@&;9[ ;:@Ω;;I"
+0.125;	F;@;iq;)o;	;o;;iq;i ;o;;iq;i$;@;@;&@:@operator:
+minus;iq;)o;	;o;;iq;i ;o;;iq;i$;@;@;&@;@;<o;=;>{ ;?{ ;@0;A0;iq;)o;	;o;;iq;i;o;;iq;i%;@;@;&@;@;E;F;iq;)o;	;o;;iq;i;o;;iq;i%;@;@;&@;@;i ;1;2;[ ;iq;)o;	;o;;iq;i
+;o;;iq;i%;@;@;3o;	;@v
+;o;;iq;i;@;@;4o;	;o;;iq;i;@w
+;@;@;@;io;)o;	;o;;io;i;o;;io;i;@;@;5T;@;ik;)o;	;o;;ik;i;o;;ik;i;@;@;5T;@o;;[I".panel__pager__button;	T;o;	;o;;iu;i;o;;iu;i;@;@;i ;o; ;![o;";![o;#;![o;$;%[I"panel__pager__button;	T;iu;&I" ;	T;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@ë
+;0;iu;&@ë
+;iu;&@ë
+;[o;-;%[I"line-height;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"1;	F;@;iv;)o;	;o;;iv;i;o;;iv;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;iv;)o;	;o;;iv;i;o;;iv;i;@;@;&@;@;i ;1;2;[ ;iv;)o;	;o;;iv;i;o;;iv;i;@;@;3o;	;@≠
+;o;;iv;i;@;@;4o;	;o;;iv;i;@Æ
+;@;@;@o;-;%[I"height;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"1;	F;@;iw;)o;	;o;;iw;i;o;;iw;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;iw;)o;	;o;;iw;i;o;;iw;i;@;@;&@;@;i ;1;2;[ ;iw;)o;	;o;;iw;i;o;;iw;i;@;@;3o;	;@»
+;o;;iw;i;@;@;4o;	;o;;iw;i;@…
+;@;@;@o;-;%[I"
+width;	T;o;6;%I"rhythm;	T;7[o;.	;o;8
+;i;9[ ;:@Ω;;I"1;	F;@;ix;)o;	;o;;ix;i;o;;ix;i;@;@;&@;<o;=;>{ ;?{ ;@0;A0;ix;)o;	;o;;ix;i;o;;ix;i;@;@;&@;@;i ;1;2;[ ;ix;)o;	;o;;ix;i;o;;ix;i;@;@;3o;	;@„
+;o;;ix;i;@;@;4o;	;o;;ix;i;@‰
+;@;@;@o;-;%[I"padding;	T;o;.;o;/;I"0;	T;
+;0;@;iy;)o;	;o;;iy;i;o;;iy;i;@;@;i ;1;2;[ ;iy;)o;	;o;;iy;i;o;;iy;i;@;@;3o;	;@Ù
+;o;;iy;i;@;@;4o;	;o;;iy;i;@ı
+;@;@;@o;-;%[I"border;	T;o;.;o;/;I"	none;	T;
+;0;@;iz;)o;	;o;;iz;i;o;;iz;i;@;@;i ;1;2;[ ;iz;)o;	;o;;iz;i;o;;iz;i;@;@;3o;	;@;o;;iz;i;@;@;4o;	;o;;iz;i;@;@;@;@o;-;%[I"background-color;	T;o;.;o;/;I"transparent;	T;
+;0;@;i{;)o;	;o;;i{;i;o;;i{;i%;@;@;i ;1;2;[ ;i{;)o;	;o;;i{;i;o;;i{;i%;@;@;3o;	;@;o;;i{;i;@;@;4o;	;o;;i{;i;@;@;@;@o;-;%[I"
+color;	T;o;G;%I"color-link;	T;HI"color_link;	T;i|;)o;	;o;;i|;i;o;;i|;i;@;@;&@;@;i ;1;2;[ ;i|;)o;	;o;;i|;i;o;;i|;i;@;@;3o;	;@';o;;i|;i;@;@;4o;	;o;;i|;i;@(;@;@;@o;B;%I"box-shadow;	T;7[o;.	;o;/;I"	none;	T;
+;0;@;i};)o;	;o;;i};i;o;;i};i ;@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;i};)o;	;o;;i};i;o;;i};i!;@;@;@o;;[I"#&:hover,
+  &:focus,
+  &:active;	T;o;	;o;;i~;i;o;;iÄ;i;@;@;i ;o; ;![o;";![o;#;![o;O;P[ ;i~;&I" ;	To;K
+;L;M;%[I"
+hover;	T;N0;i~;&@K;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@K;0;i~;&@Ko;";![I"
+;	To;#;![o;O;P[ ;i~;&@Ko;K
+;L;M;%[I"
+focus;	T;N0;i~;&@K;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@K;0;i~;&@Ko;";![I"
+;	To;#;![o;O;P[ ;i~;&@Ko;K
+;L;M;%[I"active;	T;N0;i~;&@K;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@K;0;i~;&@K;i~;&@K;[o;-;%[I"
+color;	T;o;G;%I"color-link-hover;	T;HI"color_link_hover;	T;iÅ;)o;	;o;;iÅ;i;o;;iÅ;i";@;@;&@;@;i ;1;2;[ ;iÅ;)o;	;o;;iÅ;i
+;o;;iÅ;i";@;@;3o;	;@~;o;;iÅ;i;@;@;4o;	;o;;iÅ;i;@;@;@;@o;-;%[I"background-color;	T;o;G;%I"color-bg;	T;HI"color_bg;	T;iÇ;)o;	;o;;iÇ;i;o;;iÇ;i%;@;@;&@;@;i ;1;2;[ ;iÇ;)o;	;o;;iÇ;i
+;o;;iÇ;i%;@;@;3o;	;@è;o;;iÇ;i;@;@;4o;	;o;;iÇ;i;@ê;@;@;@o;B;%I"box-shadow;	T;7[o;.	;o;/;I"	none;	T;
+;0;@;iÉ;)o;	;o;;iÉ;i;o;;iÉ;i";@;@;&@;<o;=;>{ ;?{ ;@0;A0;[ ;iÉ;)o;	;o;;iÉ;i
+;o;;iÉ;i#;@;@;@;i~;)o;	;o;;i~;i;o;;iÄ;i;@;@;5T;@o;;[I"&:active;	T;o;	;o;;iÖ;i;o;;iÖ;i;@;@;i ;o; ;![o;";![o;#;![o;O;P[ ;iÖ;&I" ;	To;K
+;L;M;%[I"active;	T;N0;iÖ;&@∂;'0;(o;;{ ;)o;	;o;;i;i;o;;i;i;@∂;0;iÖ;&@∂;iÖ;&@∂;[o;-;%[I"
+color;	T;o;G;%I"color-link-active;	T;HI"color_link_active;	T;iÜ;)o;	;o;;iÜ;i;o;;iÜ;i#;@;@;&@;@;i ;1;2;[ ;iÜ;)o;	;o;;iÜ;i
+;o;;iÜ;i#;@;@;3o;	;@À;o;;iÜ;i;@;@;4o;	;o;;iÜ;i;@Ã;@;@;@;iÖ;)o;	;o;;iÖ;i;o;;iÖ;i;@;@;5T;@;iu;)o;	;o;;iu;i;o;;iu;i;@;@;5T;@;i÷;)o;	;o;;i÷;i;o;;i÷;i;@;@;5T;@:@templateI"7/*
+
+### Panels
+
+```example
+<div class="g">
+  <div class="g__item w--1-2-h l--push-v-1">
+    <div class="panel">
+      <div class="tabs--accent">
+        <nav class="tabs__nav panel__header">
+          <ul>
+            <li>
+              <a href="#" class="is-active"><i aria-hidden="true" class="i i--infinity"></i><span class="is-invisible">All</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--star"></i><span class="is-invisible">Starred</span></a>
+            </li>
+            <li class="tab__end">
+              <a href="#"><i aria-hidden="true" class="i i--plus i i--large"></i><span class="is-invisible">New Project</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="tabs__content">
+          <header class="l--pad-all-half panel__sub-header">
+            <div class="g--tight">
+              <div class="g__item w--6-10 w--6-10-s">
+                <h2 class="delta heading--secondary">All Projects</h2>
+              </div>
+              <div class="g__item w--4-10 w--4-10-s txt--align-right txt--s-align-right">
+                <span class="txt--meta">5 of 12 <i aria-hidden="true" class="i i--clipboard"></i></span>
+                <div class="dropdown dropdown--inline dropdown--right">
+                  <div class="dropdown__toggle" href="#">
+                    <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li class="dropdown__header">Sort by:</li>
+                    <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
+                    <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <ul class="list--no-bullets">
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.panel {
+  @extend .bg--pop-high;
+  position: relative;
+}
+
+.panel__header {
+  @extend .bg--pop-highest;
+  border-width: 0 0 2px 0;
+  // display: table;
+  width: 100%;
+  position: relative;
+  max-height: rhythm(2.05);
+}
+
+.panel__sub-header {
+  @extend .bg--pop-higher;
+  border-width: 0 0 2px 0;
+}
+
+.panel__heading {
+  @include adjust-font-size-to(16px, 2);
+  @include ellipsis;
+  padding: 0 rhythm(.5, 16px);
+  font-weight: 400;
+  overflow: hidden;
+  margin: 0;
+  @include breakpoint($gte-medium) {
+    @include adjust-font-size-to(18px, 2);
+    padding: 0 rhythm(.5, 18px);
+  }
+}
+
+.panel__header__info {
+  @include ellipsis;
+  padding: rhythm(.45) rhythm(.5);
+  overflow: hidden;
+  margin: 0;
+}
+
+.panel__heading--small {
+  @include adjust-font-size-to(14px);
+  @include ellipsis;
+  padding: 0 rhythm(.5, 14px);
+  font-weight: 400;
+  overflow: hidden;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.panel__header__sort,
+.panel__header__actions {
+  float: right;
+  white-space: nowrap;
+  // margin: rhythm(.45) rhythm(.5) 0 0;
+}
+
+.panel__header__back {
+  height: rhythm(2);
+  width: rhythm(1.5);
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: rhythm(.5) 0;
+  i:before {
+    height: rhythm(2);
+  }
+  + .panel__heading {
+    padding-left: rhythm(1.5, 16px);
+  }
+  @include breakpoint($gte-small) {
+    + .panel__heading {
+      padding-left: rhythm(1.5, 18px);
+    }
+  }
+  @include breakpoint($gte-medium) {
+    display: none;
+    + .panel__heading {
+      padding-left: rhythm(.5, 18px);
+    }
+  }
+}
+
+.panel__search {
+  display: block;
+  &:before {
+    left: rhythm(.425);
+    top: rhythm(0);
+    line-height: rhythm(1);
+  }
+  input {
+    @include adjust-font-size-to(14px, .8);
+    padding: rhythm(.125, 14px) rhythm(2, 14px) rhythm(.125, 14px) rhythm(1.375, 14px);
+    height: rhythm(1.05, 14px);
+    border-radius: 0;
+    border: none;
+    border-bottom: $default-border;
+    margin: 0;
+    &:focus,
+    &:hover {
+      border: none;
+      border-bottom: $default-border;
+    }
+  }
+}
+
+.panel__results {
+  @extend .l--cf-of;
+  position: relative;
+  padding: 0 rhythm(.25) 0 rhythm(1.375);
+  .txt--meta {
+    line-height: inherit;
+  }
+}
+
+.panel__results--bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.panel__results__type {
+  position: absolute;
+  top: rhythm(.25, 14px);
+  left: rhythm(.5, 14px);
+  @include adjust-font-size-to(14px);
+}
+
+.panel__search__reset,
+.panel__search__button {
+  vertical-align: inherit;
+}
+
+.panel__search__button {
+  margin-left: rhythm(.125, 14px) !important;
+  font-weight: 400;
+}
+
+.panel__search__cancel {
+  @include adjust-font-size-to(14px);
+  position: absolute;
+  top: 0;
+  right: rhythm(.5,14px);
+  font-weight: 400;
+}
+
+.panel__pager {
+  @extend .list--horizontal;
+  height: rhythm(1);
+  float: right;
+  li {
+    vertical-align: top;
+    margin: 0 0 0 rhythm(-.125);
+  }
+}
+
+.panel__pager__button {
+  line-height: rhythm(1);
+  height: rhythm(1);
+  width: rhythm(1);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $color-link;
+  @include box-shadow(none);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-link-hover;
+    background-color: $color-bg;
+    @include box-shadow(none);
+  }
+  &:active {
+    color: $color-link-active;
+  }
+}
+
+}
+;	T;i;)o;	;o;;i;i;o;;i;i;@;@;5T;@
