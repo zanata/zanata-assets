@@ -1,4 +1,3 @@
-_links.scss
 /*
 
 ### Links
@@ -9,6 +8,8 @@ _links.scss
 <a class="link--danger" href="#">Danger Link</a>
 
 */
+
+.new-zanata {
 
 .link--success {
   color: $color-success !important;
@@ -56,4 +57,6 @@ _links.scss
   &.is-active {
     color: shade($color-danger, 60%) !important;
   }
+}
+
 }

@@ -114,14 +114,13 @@
   position: relative;
   padding-left: rhythm(1.125);
   cursor: pointer;
-  &:hover {
-    background-color: $color-bg-lightest;
-  }
+  &:hover,
   &.is-focused {
-    background-color: $color-bg;
+    background-color: rgba($color-primary, .06);
   }
-  &.is-checked {
-    background-color: tint($color-primary-50, 60%);
+  &.is-checked,
+  &.is-checked:hover {
+    background-color: rgba($color-primary, .12);
   }
 }
 
@@ -227,7 +226,7 @@
   .form__checkbox__item,
   .form__radio__item {
     top: rhythm(.25);
-    left: rhythm(.125);
+    // left: rhythm(.125);
   }
 }
 
@@ -279,7 +278,7 @@
     z-index: 11;
     position: absolute;
     left: rhythm(.25);
-    top: rhythm(.5);
+    margin-top: rhythm(.125);
     line-height: rhythm(1);
     color: $color-secondary-50;
     pointer-events: none;
@@ -297,7 +296,7 @@
 
 input.form--search__input {
   margin: 0;
-  // padding-right: rhythm(1);
+  padding-right: rhythm(1);
   padding-left: rhythm(1);
   height: rhythm(1.25);
   border-radius: $default-border-radius;
@@ -326,6 +325,13 @@ input.form--search__input {
       color: $color-link-active;
     }
   }
+}
+
+.form--search__clear {
+  position: absolute;
+  right: rhythm(.25);
+  top: 0;
+  height: rhythm(1.25);
 }
 
 }

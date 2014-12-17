@@ -244,8 +244,8 @@ $layout-mod                        : "#{$layout-prefix}#{$mod}";
 $layout-el                         : "#{$layout-prefix}#{$el}";
 $layout-wrapper-max-width          : 120em;
 $layout-wrapper-min-ie-width       : 44em; // NOTE: old ie only
-$layout-spacing-increments         : 0 0.25 0.5 1 2;
-$layout-spacing-increment-names    : 0 "quarter" "half" 1 2;
+$layout-spacing-increments         : 0 0.25 0.5 1 1.5 2;
+$layout-spacing-increment-names    : 0 "quarter" "half" 1 "1half" 2;
 $layout-spacing-sides              : top bottom left right;
 
 //

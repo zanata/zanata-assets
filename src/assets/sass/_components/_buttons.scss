@@ -29,9 +29,10 @@ input[type="submit"],
 button,
 .button {
   @extend .is-transition;
-  @include inline-block;
   @include box-shadow(inset 0 -1px 0 rgba($color-secondary, .09));
   @include border-radius($default-border-radius);
+  display: inline-block;
+  vertical-align: top;
   padding: rhythm(.125) rhythm(.5);
   border: none;
   border: 1px solid rgba($color-secondary, .15);
@@ -76,8 +77,9 @@ input[type="submit"][disabled] {
 
 .button--small {
   @extend .button;
-  @include adjust-font-size-to(14px);
-  padding: rhythm(.125, 14px) rhythm(.5, 14px);
+  @include adjust-font-size-to(14px, .7);
+  height: rhythm(1, 14px);
+  padding: rhythm(.125, 14px) rhythm(.25, 14px);
 }
 
 .button--large {
@@ -110,10 +112,12 @@ input[type="submit"][disabled] {
   margin: 0;
   padding: 0;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   background: none;
+  text-align: inherit;
   color: $color-link;
   font-weight: 400;
+  line-height: inherit;
 }
 
 .button--link {

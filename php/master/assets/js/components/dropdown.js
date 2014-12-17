@@ -13,7 +13,7 @@ jQuery(function () {
   toggleThisCollapseOthers = function (e) {
     e.preventDefault();
     jQuery(this).blur();
-    var $dropdown = jQuery(this).parent('.js-dropdown');
+    var $dropdown = jQuery(this).parents('.js-dropdown');
     // $dropdown.removeClass('is-hover');
     jQuery('.js-dropdown.is-active')
       .not($dropdown)

@@ -174,9 +174,11 @@
     .i__item__icon {
       line-height: rhythm(.75);
     }
-    > a {
+    > a,
+    > .dropdown__content__link {
       padding: rhythm(.375);
       display: block;
+      width: 100%;
       margin: 0;
       &.is-active {
         font-weight: 600;

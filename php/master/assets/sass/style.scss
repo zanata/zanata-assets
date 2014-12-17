@@ -57,6 +57,7 @@ These are components that can be utilised or are depended on by other components
 @import "_globals/l-layout";
 @import "_globals/g-grid";
 @import "_globals/w-widths"; // This needs to come after grids to beat specificity
+@import "_globals/h-height";
 @import "_globals/is-states";
 @import "_globals/txt-text";
 @import "_globals/d-divide";

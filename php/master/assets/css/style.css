@@ -1436,6 +1436,77 @@ Only use them if it does not make sense to add this styling to another element/c
 */
 /*
 ```
+<div class="ph__block l--push-top-1half">
+  .l--push-top-1half
+</div>
+
+<div class="ph__block l--pad-top-1half">
+  .l--pad-top-1half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-bottom-1half">
+  .l--push-bottom-1half
+</div>
+
+<div class="ph__block l--pad-bottom-1half">
+  .l--pad-bottom-1half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-left-1half">
+  .l--push-left-1half
+</div>
+
+<div class="ph__block l--pad-left-1half">
+  .l--pad-left-1half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-right-1half">
+  .l--push-right-1half
+</div>
+
+<div class="ph__block l--pad-right-1half">
+  .l--pad-right-1half
+</div>
+```
+*/
+/*
+```
+<div class="ph__block l--push-v-1half">
+  .l--push-v-1half
+</div>
+
+<div class="ph__block l--pad-v-1half">
+  .l--pad-v-1half
+</div>
+
+<div class="ph__block l--push-h-1half">
+  .l--push-h-1half
+</div>
+
+<div class="ph__block l--pad-h-1half">
+  .l--pad-h-1half
+</div>
+
+<div class="ph__block l--push-all-1half">
+  .l--push-v-1half
+</div>
+
+<div class="ph__block l--pad-all-1half">
+  .l--pad-v-1half
+</div>
+```
+*/
+/*
+```
 <div class="ph__block l--push-top-2">
   .l--push-top-2
 </div>
@@ -1688,6 +1759,52 @@ Only use them if it does not make sense to add this styling to another element/c
 }
 .new-zanata .l--pad-all-1 {
   padding: 1.625em !important;
+}
+.new-zanata .l--push-top-1half {
+  margin-top: 2.4375em !important;
+}
+.new-zanata .l--pad-top-1half {
+  padding-top: 2.4375em !important;
+}
+.new-zanata .l--push-bottom-1half {
+  margin-bottom: 2.4375em !important;
+}
+.new-zanata .l--pad-bottom-1half {
+  padding-bottom: 2.4375em !important;
+}
+.new-zanata .l--push-left-1half {
+  margin-left: 2.4375em !important;
+}
+.new-zanata .l--pad-left-1half {
+  padding-left: 2.4375em !important;
+}
+.new-zanata .l--push-right-1half {
+  margin-right: 2.4375em !important;
+}
+.new-zanata .l--pad-right-1half {
+  padding-right: 2.4375em !important;
+}
+.new-zanata .l--push-v-1half {
+  margin-top: 2.4375em !important;
+  margin-bottom: 2.4375em !important;
+}
+.new-zanata .l--pad-v-1half {
+  padding-top: 2.4375em !important;
+  padding-bottom: 2.4375em !important;
+}
+.new-zanata .l--push-h-1half {
+  margin-left: 2.4375em !important;
+  margin-right: 2.4375em !important;
+}
+.new-zanata .l--pad-h-1half {
+  padding-left: 2.4375em !important;
+  padding-right: 2.4375em !important;
+}
+.new-zanata .l--push-all-1half {
+  margin: 2.4375em !important;
+}
+.new-zanata .l--pad-all-1half {
+  padding: 2.4375em !important;
 }
 .new-zanata .l--push-top-2 {
   margin-top: 3.25em !important;
@@ -2461,6 +2578,29 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .w--r-2 {
   width: 3.25em;
+}
+
+.h--1-2,
+.h--1,
+.h--1-1-2,
+.h--2 {
+  vertical-align: middle;
+}
+
+.h--1-2 {
+  line-height: 0.8125em !important;
+}
+
+.h--1 {
+  line-height: 1.625em !important;
+}
+
+.h--1-1-2 {
+  line-height: 2.4375em !important;
+}
+
+.h--2 {
+  line-height: 3.25em !important;
 }
 
 .new-zanata .is-hidden {
@@ -4005,72 +4145,69 @@ Sub-headings can be used when placing a heading under another heading.
   background-image: url(../img/logo/logo.svg);
 }
 
-_links.scss
-.link--success, _links.scss .new-zanata .message--success a, .new-zanata .message--success _links.scss a,
-_links.scss .new-zanata .message--success button,
-.new-zanata .message--success _links.scss button {
+/*
+
+### Links
+
+<a class="link--success" href="#">Success Link</a>
+<a class="link--unsure" href="#">Unsure Link</a>
+<a class="link--warning" href="#">Warning Link</a>
+<a class="link--danger" href="#">Danger Link</a>
+
+*/
+.new-zanata .link--success, .new-zanata .message--success a,
+.new-zanata .message--success button {
   color: #70a98b !important;
 }
-_links.scss
-.link--success:hover, _links.scss .new-zanata .message--success a:hover, .new-zanata .message--success _links.scss a:hover,
-_links.scss .new-zanata .message--success button:hover,
-.new-zanata .message--success _links.scss button:hover, _links.scss
-.link--success:focus, _links.scss .new-zanata .message--success a:focus, .new-zanata .message--success _links.scss a:focus,
-_links.scss .new-zanata .message--success button:focus,
-.new-zanata .message--success _links.scss button:focus {
+.new-zanata .link--success:hover, .new-zanata .message--success a:hover,
+.new-zanata .message--success button:hover, .new-zanata .link--success:focus, .new-zanata .message--success a:focus,
+.new-zanata .message--success button:focus {
   color: #4e7661 !important;
 }
-_links.scss
-.link--success:active, _links.scss .new-zanata .message--success a:active, .new-zanata .message--success _links.scss a:active,
-_links.scss .new-zanata .message--success button:active,
-.new-zanata .message--success _links.scss button:active, _links.scss
-.link--success.is-active, _links.scss .new-zanata .message--success a.is-active, .new-zanata .message--success _links.scss a.is-active,
-_links.scss .new-zanata .message--success button.is-active,
-.new-zanata .message--success _links.scss button.is-active {
+.new-zanata .link--success:active, .new-zanata .message--success a:active,
+.new-zanata .message--success button:active, .new-zanata .link--success.is-active, .new-zanata .message--success a.is-active,
+.new-zanata .message--success button.is-active {
   color: #2c4337 !important;
 }
-
-.link--unsure, .new-zanata .message--unsure a,
+.new-zanata .link--unsure, .new-zanata .message--unsure a,
 .new-zanata .message--unsure button {
   color: #e0c350 !important;
 }
-.link--unsure:hover, .new-zanata .message--unsure a:hover,
-.new-zanata .message--unsure button:hover, .link--unsure:focus, .new-zanata .message--unsure a:focus,
+.new-zanata .link--unsure:hover, .new-zanata .message--unsure a:hover,
+.new-zanata .message--unsure button:hover, .new-zanata .link--unsure:focus, .new-zanata .message--unsure a:focus,
 .new-zanata .message--unsure button:focus {
   color: #9c8838 !important;
 }
-.link--unsure:active, .new-zanata .message--unsure a:active,
-.new-zanata .message--unsure button:active, .link--unsure.is-active, .new-zanata .message--unsure a.is-active,
+.new-zanata .link--unsure:active, .new-zanata .message--unsure a:active,
+.new-zanata .message--unsure button:active, .new-zanata .link--unsure.is-active, .new-zanata .message--unsure a.is-active,
 .new-zanata .message--unsure button.is-active {
   color: #594e20 !important;
 }
-
-.link--warning, .new-zanata .message--warning a,
+.new-zanata .link--warning, .new-zanata .message--warning a,
 .new-zanata .message--warning button {
   color: #e3824e !important;
 }
-.link--warning:hover, .new-zanata .message--warning a:hover,
-.new-zanata .message--warning button:hover, .link--warning:focus, .new-zanata .message--warning a:focus,
+.new-zanata .link--warning:hover, .new-zanata .message--warning a:hover,
+.new-zanata .message--warning button:hover, .new-zanata .link--warning:focus, .new-zanata .message--warning a:focus,
 .new-zanata .message--warning button:focus {
   color: #9e5b36 !important;
 }
-.link--warning:active, .new-zanata .message--warning a:active,
-.new-zanata .message--warning button:active, .link--warning.is-active, .new-zanata .message--warning a.is-active,
+.new-zanata .link--warning:active, .new-zanata .message--warning a:active,
+.new-zanata .message--warning button:active, .new-zanata .link--warning.is-active, .new-zanata .message--warning a.is-active,
 .new-zanata .message--warning button.is-active {
   color: #5a341f !important;
 }
-
-.link--danger, .new-zanata .message--danger a,
+.new-zanata .link--danger, .new-zanata .message--danger a,
 .new-zanata .message--danger button {
   color: #e0575b !important;
 }
-.link--danger:hover, .new-zanata .message--danger a:hover,
-.new-zanata .message--danger button:hover, .link--danger:focus, .new-zanata .message--danger a:focus,
+.new-zanata .link--danger:hover, .new-zanata .message--danger a:hover,
+.new-zanata .message--danger button:hover, .new-zanata .link--danger:focus, .new-zanata .message--danger a:focus,
 .new-zanata .message--danger button:focus {
   color: #9c3c3f !important;
 }
-.link--danger:active, .new-zanata .message--danger a:active,
-.new-zanata .message--danger button:active, .link--danger.is-active, .new-zanata .message--danger a.is-active,
+.new-zanata .link--danger:active, .new-zanata .message--danger a:active,
+.new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
 .new-zanata .message--danger button.is-active {
   color: #592224 !important;
 }
@@ -4172,17 +4309,15 @@ _links.scss .new-zanata .message--success button.is-active,
   padding-left: 1.82813em;
   cursor: pointer;
 }
-.new-zanata .form__checkbox:hover,
-.new-zanata .form__radio:hover {
-  background-color: #fff;
-}
-.new-zanata .form__checkbox.is-focused,
+.new-zanata .form__checkbox:hover, .new-zanata .form__checkbox.is-focused,
+.new-zanata .form__radio:hover,
 .new-zanata .form__radio.is-focused {
-  background-color: #edeff1;
+  background-color: rgba(78, 159, 221, 0.06);
 }
-.new-zanata .form__checkbox.is-checked,
-.new-zanata .form__radio.is-checked {
-  background-color: #dcecf8;
+.new-zanata .form__checkbox.is-checked, .new-zanata .form__checkbox.is-checked:hover,
+.new-zanata .form__radio.is-checked,
+.new-zanata .form__radio.is-checked:hover {
+  background-color: rgba(78, 159, 221, 0.12);
 }
 .new-zanata .form__checkbox__item,
 .new-zanata .form__radio__item {
@@ -4291,7 +4426,6 @@ _links.scss .new-zanata .message--success button.is-active,
 .new-zanata .form__radio--spaced .form__checkbox__item,
 .new-zanata .form__radio--spaced .form__radio__item {
   top: 0.40625em;
-  left: 0.20313em;
 }
 .new-zanata .form__checkbox--heading {
   width: 2.4375em;
@@ -4331,7 +4465,7 @@ _links.scss .new-zanata .message--success button.is-active,
   z-index: 11;
   position: absolute;
   left: 0.40625em;
-  top: 0.8125em;
+  margin-top: 0.20313em;
   line-height: 1.625em;
   color: #a2b4c3;
   pointer-events: none;
@@ -4341,6 +4475,7 @@ _links.scss .new-zanata .message--success button.is-active,
 }
 .new-zanata input.form--search__input {
   margin: 0;
+  padding-right: 1.625em;
   padding-left: 1.625em;
   height: 2.03125em;
   border-radius: 2px;
@@ -4363,6 +4498,12 @@ _links.scss .new-zanata .message--success button.is-active,
 }
 .new-zanata .form--search.is-active .form--search__submit:active {
   color: #416988;
+}
+.new-zanata .form--search__clear {
+  position: absolute;
+  right: 0.40625em;
+  top: 0;
+  height: 2.03125em;
 }
 
 /*
@@ -5254,23 +5395,30 @@ Keep focus while showing and hiding a password field
 .new-zanata .dropdown__content > li .i__item__icon {
   line-height: 1.21875em;
 }
-.new-zanata .dropdown__content > li > a {
+.new-zanata .dropdown__content > li > a,
+.new-zanata .dropdown__content > li > .dropdown__content__link {
   padding: 0.60938em;
   display: block;
+  width: 100%;
   margin: 0;
 }
-.new-zanata .dropdown__content > li > a.is-active {
+.new-zanata .dropdown__content > li > a.is-active,
+.new-zanata .dropdown__content > li > .dropdown__content__link.is-active {
   font-weight: 600;
 }
-.no-touch .new-zanata .dropdown__content > li > a:hover {
+.no-touch .new-zanata .dropdown__content > li > a:hover, .no-touch
+.new-zanata .dropdown__content > li > .dropdown__content__link:hover {
   background-color: #4e9fdd;
   color: #fdfdfe;
 }
-.no-touch .new-zanata .dropdown__content > li > a.txt--danger:hover, .no-touch .new-zanata .dropdown__content > li > a.message--danger:hover {
+.no-touch .new-zanata .dropdown__content > li > a.txt--danger:hover, .no-touch .new-zanata .dropdown__content > li > a.message--danger:hover, .no-touch
+.new-zanata .dropdown__content > li > .dropdown__content__link.txt--danger:hover, .no-touch
+.new-zanata .dropdown__content > li > .dropdown__content__link.message--danger:hover {
   background-color: #e0575b;
   color: #fdfdfe !important;
 }
-.new-zanata .dropdown__content > li > a[disabled] {
+.new-zanata .dropdown__content > li > a[disabled],
+.new-zanata .dropdown__content > li > .dropdown__content__link[disabled] {
   pointer-events: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
@@ -5768,17 +5916,14 @@ Used in panel headers to match the header layout
 .new-zanata input.button--primary,
 .new-zanata .button--unsure,
 .new-zanata input.button--unsure {
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   -moz-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  display: inline-block;
+  vertical-align: top;
   padding: 0.20313em 0.8125em;
   border: none;
   border: 1px solid rgba(65, 105, 136, 0.15);
@@ -6029,8 +6174,9 @@ Used in panel headers to match the header layout
 }
 .new-zanata .button--small {
   font-size: 0.875em;
-  line-height: 1.85714em;
-  padding: 0.23214em 0.92857em;
+  line-height: 1.3em;
+  height: 1.85714em;
+  padding: 0.23214em 0.46429em;
 }
 .new-zanata .button--large {
   font-size: 1.25em;
@@ -6062,10 +6208,12 @@ Used in panel headers to match the header layout
   margin: 0;
   padding: 0;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   background: none;
+  text-align: inherit;
   color: #4e9fdd;
   font-weight: 400;
+  line-height: inherit;
 }
 .new-zanata .button--link:hover, .new-zanata .message__remove:hover, .new-zanata .button--link:focus, .new-zanata .message__remove:focus {
   color: #2479bb;

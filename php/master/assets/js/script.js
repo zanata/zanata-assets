@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2014-12-15
+/*! zanata-assets - v0.1.0 - 2014-12-17
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2014 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1610,7 +1610,7 @@ jQuery(function () {
   toggleThisCollapseOthers = function (e) {
     e.preventDefault();
     jQuery(this).blur();
-    var $dropdown = jQuery(this).parent('.js-dropdown');
+    var $dropdown = jQuery(this).parents('.js-dropdown');
     // $dropdown.removeClass('is-hover');
     jQuery('.js-dropdown.is-active')
       .not($dropdown)
@@ -1801,6 +1801,26 @@ zanata.form = (function ($) {
             $(this).parents('.js-form--search').removeClass('is-active');
           }
           // console.log(e);
+        }
+      );
+
+    $('.js-form--search')
+      .on('click', '.js-form--search__clear', function () {
+        $(this).prev('.js-form--search__input').val('').focus();
+        $(this).addClass('is-hidden');
+      }
+    );
+
+    $('.js-form--search')
+      .on('keyup', '.js-form--search__input', function () {
+          var $this = $(this),
+              val = $this.val(),
+              $clearButton = $this.next('.js-form--search__clear');
+          if (val !== '') {
+            $clearButton.removeClass('is-hidden');
+          } else {
+            $clearButton.addClass('is-hidden');
+          }
         }
       );
 

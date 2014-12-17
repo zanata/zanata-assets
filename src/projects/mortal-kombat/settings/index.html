@@ -180,17 +180,146 @@ root: "../../../"
             </li>
             <li id="tab-vertical-2">
               <h2 class="l--push-all-0 gamma d--bottom l--push-bottom-half">Languages</h2>
-              <!-- <h3 class="delta">Active Languages</h3> -->
-              <ul class="list--slat list--highlight l--push-top-half">
-                <li class="reveal--list-item">Assamese<span class="txt--understated l--push-left-quarter">[as]</span> <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-                <li class="reveal--list-item">Chinese (Simplified Han)<span class="txt--understated l--push-left-quarter">[zh-Hans]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-                <li class="reveal--list-item">Chinese (Traditional Han)<span class="txt--understated l--push-left-quarter">[zh-Hant]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-                <li class="reveal--list-item">English (United States)<span class="txt--understated l--push-left-quarter">[en-US]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li>
-
-                <li class="list--highlight__item--none">
-                  <label for="settings-project">Add a Language</label>
-                  <input type="text" placeholder="Search Languages">
+              <h3 class="heading--secondary">Enabled</h3>
+              <div class="w--5-12 form--search js-form--search">
+                <label class="is-sr-only">Filter Languages</label>
+                <input type="search" placeholder="Filter languages" class="form--search__input js-form--search__input l--push-bottom-quarter">
+                <button class="button--link form--search__clear js-form--search__clear is-hidden"><i class="i i--remove"></i></button>
+              </div>
+              <div class="is-hidden--s l--pad-v-quarter">
+                <div class="form__checkbox js-form__checkbox">
+                  <input type="checkbox" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox"/>
+                </div>
+                <div class="l--pad-left-1half">
+                  <div class="g g--tight">
+                    <div class="g__item w--5-12"><h4 class="zeta">Name</h4></div>
+                    <div class="g__item w--2-12"><h4 class="zeta">Code</h4></div>
+                    <div class="g__item w--2-12"><h4 class="zeta">Alias <i class="i i--info" title="If you are using a different locale code to the default locale code"></i></h4></div>
+                    <div class="g__item w--3-12"></div>
+                  </div>
+                  <div class="is-hidden">
+                    <button class="button--link link--danger"><i class="i i--remove"></i> Disable</button>
+                    <button class="button--link link--danger l--push-left-half"><i class="i i--trash"></i> Delete Aliases</button>
+                  </div>
+                </div>
+              </div>
+              <ul class="list--slat list--highlight d--top">
+                <li class="reveal form__checkbox form__checkbox--spaced js-form__checkbox">
+                  <input type="checkbox" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox"/>
+                  <div class="js-form__checkbox__label l--pad-left-1half">
+                    <div class="g g--tight">
+                      <div class="g__item w--5-12 w--1-s">
+                        Assamese
+                      </div>
+                      <div class="g__item w--2-12 w--3-10-s">
+                        <span class="txt--understated">as</span>
+                      </div>
+                      <div class="g__item w--2-12 w--3-10-s">
+                        <span class="txt--understated">AS_as</span>
+                      </div>
+                      <div class="g__item w--3-12 w--4-10-s reveal__target txt--align-right txt--align-right-s">
+                        <div class="dropdown dropdown--small dropdown--right dropdown--single js-dropdown">
+                          <div class="button--group">
+                            <button class="button button--small">Disable</button>
+                            <button class="button button--small js-dropdown__toggle">
+                              <i class="i i--arrow-down"></i>
+                            </button>
+                          </div>
+                          <ul class="dropdown__content js-dropdown__content">
+                            <li><button class="dropdown__content__link button--link i__item--left"><i class="i i--edit i__item__icon"></i> Edit alias</button></li>
+                            <li><button class="dropdown__content__link button--link txt--danger i__item--left"><i class="i i--trash i__item__icon"></i> Delete alias</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
+                <li class="reveal form__checkbox form__checkbox--spaced js-form__checkbox">
+                  <input type="checkbox" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox"/>
+                  <div class="js-form__checkbox__label l--pad-left-1half">
+                    <div class="g g--tight">
+                      <div class="g__item w--5-12 w--1-s">
+                        Chinese (Simplified Han)
+                      </div>
+                      <div class="g__item w--2-12 w--3-10-s">
+                        <span class="txt--understated">zh-Hans</span>
+                      </div>
+                      <div class="g__item w--2-12 w--3-10-s">
+                        <span class="txt--understated"></span>
+                      </div>
+                      <div class="g__item w--3-12 w--4-10-s reveal__target txt--align-right txt--align-right-s">
+                        <div class="dropdown dropdown--small dropdown--right dropdown--single js-dropdown">
+                          <div class="button--group">
+                            <button class="button button--small">Disable</button>
+                            <button class="button button--small js-dropdown__toggle">
+                              <i class="i i--arrow-down"></i>
+                            </button>
+                          </div>
+                          <ul class="dropdown__content js-dropdown__content">
+                            <li><button class="dropdown__content__link button--link i__item--left"><i class="i i--plus i__item__icon"></i> Add alias</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <hr>
+              <h3 class="heading--secondary">Disabled</h3>
+              <div class="w--5-12 form--search js-form--search">
+                <label class="is-sr-only">Filter Languages</label>
+                <input type="search" placeholder="Filter languages" class="form--search__input js-form--search__input l--push-bottom-quarter">
+                <button class="button--link form--search__clear js-form--search__clear is-hidden"><i class="i i--remove"></i></button>
+              </div>
+              <div class="is-hidden--s l--pad-v-quarter">
+                <div class="form__checkbox js-form__checkbox">
+                  <input type="checkbox" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox"/>
+                </div>
+                <div class="l--pad-left-1half">
+                  <div class="g g--tight">
+                    <div class="g__item w--5-12"><h4 class="zeta">Name</h4></div>
+                    <div class="g__item w--2-12"><h4 class="zeta">Code</h4></div>
+                    <div class="g__item w--2-12"><h4 class="zeta">Alias <i class="i i--info" title="If you are using a different locale code to the default locale code"></i></h4></div>
+                    <div class="g__item w--3-12"></div>
+                  </div>
+                  <div class="is-hidden">
+                    <button class="button--link link--success"><i class="i i--checkmark"></i> Enable</button>
+                  </div>
+                </div>
+              </div>
+              <ul class="list--slat d--top">
+                <li class="reveal form__checkbox form__checkbox--spaced js-form__checkbox">
+                  <input type="checkbox" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox"/>
+                  <div class="js-form__checkbox__label l--pad-left-1half">
+                    <div class="g g--tight">
+                      <div class="g__item w--5-12 w--1-s">
+                        Chinese
+                      </div>
+                      <div class="g__item w--2-12 w--3-10-s">
+                        <span class="txt--understated">ch</span>
+                      </div>
+                      <div class="g__item w--2-12 w--3-10-s">
+                        <span class="txt--understated"></span>
+                      </div>
+                      <div class="g__item w--3-12 w--4-10-s reveal__target txt--align-right txt--align-right-s">
+                        <div class="dropdown dropdown--small dropdown--right dropdown--single js-dropdown">
+                          <div class="button--group">
+                            <button class="button button--small">Enable</button>
+                            <button class="button button--small js-dropdown__toggle">
+                              <i class="i i--arrow-down"></i>
+                            </button>
+                          </div>
+                          <ul class="dropdown__content js-dropdown__content">
+                            <li><button class="dropdown__content__link button--link i__item--left"><i class="i i--plus i__item__icon"></i> Add alias</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- <li class="reveal--list-item">Chinese (Simplified Han)<span class="txt--understated l--push-left-quarter">[zh-Hans]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li> -->
+                <!-- <li class="reveal--list-item">Chinese (Traditional Han)<span class="txt--understated l--push-left-quarter">[zh-Hant]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li> -->
+                <!-- <li class="reveal--list-item">English (United States)<span class="txt--understated l--push-left-quarter">[en-US]</span> <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a></li> -->
               </ul>
             </li>
             <li id="tab-vertical-3">

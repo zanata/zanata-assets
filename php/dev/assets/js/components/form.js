@@ -153,6 +153,26 @@ zanata.form = (function ($) {
         }
       );
 
+    $('.js-form--search')
+      .on('click', '.js-form--search__clear', function () {
+        $(this).prev('.js-form--search__input').val('').focus();
+        $(this).addClass('is-hidden');
+      }
+    );
+
+    $('.js-form--search')
+      .on('keyup', '.js-form--search__input', function () {
+          var $this = $(this),
+              val = $this.val(),
+              $clearButton = $this.next('.js-form--search__clear');
+          if (val !== '') {
+            $clearButton.removeClass('is-hidden');
+          } else {
+            $clearButton.addClass('is-hidden');
+          }
+        }
+      );
+
     $('.js-form--search').on('mousedown', function(e) {
       formSearchInputMouseDown =
         $(e.target).hasClass('js-form--search__input');
