@@ -4275,30 +4275,26 @@ Sub-headings can be used when placing a heading under another heading.
 #### Form Checkbox & Radio
 
 ```example
-<div class="form__checkbox">
-  <input type="checkbox" id="form-checkbox-1" class="form__checkbox__input" name="form-checkbox" checked/>
+<div class="form__checkbox js-form__checkbox">
+  <input type="checkbox" id="form-checkbox-1" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox" checked/>
   <label for="form-checkbox-1" class="form__checkbox__label">Checkbox Label</label>
-  <span class="form__checkbox__item"></span>
 </div>
 
-<div class="form__checkbox form__checkbox--right">
-  <input type="checkbox" id="form-checkbox-2" class="form__checkbox__input" name="form-checkbox"/>
+<div class="form__checkbox js-form__checkbox form__checkbox--right">
+  <input type="checkbox" id="form-checkbox-2" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox"/>
   <label for="form-checkbox-2" class="form__checkbox__label">Checkbox Label</label>
-  <span class="form__checkbox__item"></span>
 </div>
 ```
 
 ```example
-<div class="form__radio">
-  <input type="radio" id="form-radio-1" class="form__radio__input" name="form-radio" checked/>
+<div class="form__radio js-form__radio">
+  <input type="radio" id="form-radio-1" class="form__radio__input js-form__radio__input" name="form-radio" checked/>
   <label for="form-radio-1" class="form__radio__label">Radio Label</label>
-  <span class="form__radio__item"></span>
 </div>
 
-<div class="form__radio form__radio--right">
-  <input type="radio" id="form-radio-2" class="form__radio__input" name="form-radio"/>
+<div class="form__radio js-form__radio form__radio--right">
+  <input type="radio" id="form-radio-2" class="form__radio__input js-form__radio__input" name="form-radio"/>
   <label for="form-radio-2" class="form__radio__label">Radio Label</label>
-  <span class="form__radio__item"></span>
 </div>
 ```
 
@@ -4445,10 +4441,9 @@ Sub-headings can be used when placing a heading under another heading.
 #### Form search
 
 ```example
-<form action="" class="form--search">
+<form action="" class="form--search js-form--search">
   <label class="form--search__label">Search Projects</label>
-  <input type="text" class="form--search__input" placeholder="Search projects">
-  <button class="form--search__submit" type="submit"><i class="i i--search"></i></button>
+  <input type="text" class="form--search__input js-form--search__input js-form__input--load js-form__input--clear" placeholder="Search projects etc">
 </form>
 ```
 
@@ -4464,7 +4459,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form--search:before {
   z-index: 11;
   position: absolute;
-  left: 0.40625em;
+  left: 0.60938em;
   margin-top: 0.20313em;
   line-height: 1.625em;
   color: #a2b4c3;
@@ -4476,7 +4471,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata input.form--search__input {
   margin: 0;
   padding-right: 1.625em;
-  padding-left: 1.625em;
+  padding-left: 2.03125em;
   height: 2.03125em;
   border-radius: 2px;
 }
@@ -4499,11 +4494,87 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form--search.is-active .form--search__submit:active {
   color: #416988;
 }
-.new-zanata .form--search__clear {
+.new-zanata .form--search.is-loading:before {
+  opacity: 0;
+  visibility: hidden;
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.new-zanata .form--search.is-loading .form--search__loader {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*
+
+#### Form Load and Clear
+
+##### Load and Clear
+
+```example
+<label class="form__label">Search Projects</label>
+<div>
+  <input type="text" class="form__input js-form__input--clear" placeholder="Search projects etc">
+</div>
+```
+
+##### Just Load
+
+```example
+<label class="form__label">Search Projects</label>
+<div>
+  <input type="text" class="form__input" placeholder="Search projects etc">
+</div>
+```
+
+*/
+.new-zanata .form__clear,
+.new-zanata .form__load {
+  position: relative;
+}
+.new-zanata input.form__input--load,
+.new-zanata input.form__input--clear {
+  padding-right: 2.03125em;
+}
+.new-zanata .form__loader {
+  position: absolute;
+  right: 0.20313em;
+  top: 0;
+  width: 2.4375em;
+  height: 2.4375em;
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+}
+.new-zanata .form__loader.is-active {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.new-zanata .form__button--clear {
   position: absolute;
   right: 0.40625em;
   top: 0;
   height: 2.03125em;
+}
+.new-zanata .form__load.form--search .form__loader {
+  left: 0.20313em;
+  right: auto;
+}
+.new-zanata .form__load.form--search:not(.form__clear) .form--search__input {
+  padding-right: 0.40625em;
+}
+.new-zanata .form__load.is-loading .form__button--clear {
+  opacity: 0;
+  visibility: hidden;
+}
+.new-zanata .form--search.is-loading .form__button--clear {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*
@@ -6647,6 +6718,8 @@ Used to show extra information on hover of the parent element
 ```
 <a href="#" class="loader"><span class="loader__label">Loader Label</span></a>
 
+<button class="button loader"><span class="loader__label">Loader Button Label</span></button>
+
 <a href="#" class="loader is-active">
   <span class="loader__label">
     (Active) Loader Label
@@ -6693,10 +6766,10 @@ Used to show extra information on hover of the parent element
 
 */
 .loader, .loader--mini, .loader--small, .loader--large, .loader--huge, .loader__label, .loader__spinner {
-  -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.15s;
-  -o-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.15s;
-  -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.15s;
-  transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.15s;
+  -moz-transition: all 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -o-transition: all 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  -webkit-transition: all 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
+  transition: all 0.15s cubic-bezier(0.26, 0.47, 0.36, 0.94);
 }
 
 .loader, .loader--mini, .loader--small, .loader--large, .loader--huge {
@@ -6706,6 +6779,9 @@ Used to show extra information on hover of the parent element
   margin: 0 auto;
   line-height: 2.4375em;
   min-height: 2.4375em;
+}
+.loader.is-active, .is-active.loader--mini, .is-active.loader--small, .is-active.loader--large, .is-active.loader--huge {
+  min-width: 1.625em;
 }
 
 a.loader:hover, a.loader--mini:hover, a.loader--small:hover, a.loader--large:hover, a.loader--huge:hover {
@@ -6735,11 +6811,13 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .loader__spinner {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   position: absolute;
   left: 0;
-  padding: 1.01563em 0;
-  width: 1.625em;
-  height: 1.625em;
+  top: 50%;
   text-align: center;
 }
 .loader.is-active .loader__spinner, .is-active.loader--mini .loader__spinner, .is-active.loader--small .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
@@ -6822,35 +6900,35 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 
 @-moz-keyframes loading {
   0% {
-    background-color: rgba(65, 105, 136, 0.2);
+    opacity: 0.2;
   }
   50% {
-    background-color: #416988;
+    opacity: 1;
   }
   100% {
-    background-color: rgba(65, 105, 136, 0.2);
+    opacity: 0.2;
   }
 }
 @-webkit-keyframes loading {
   0% {
-    background-color: rgba(65, 105, 136, 0.2);
+    opacity: 0.2;
   }
   50% {
-    background-color: #416988;
+    opacity: 1;
   }
   100% {
-    background-color: rgba(65, 105, 136, 0.2);
+    opacity: 0.2;
   }
 }
 @keyframes loading {
   0% {
-    background-color: rgba(65, 105, 136, 0.2);
+    opacity: 0.2;
   }
   50% {
-    background-color: #416988;
+    opacity: 1;
   }
   100% {
-    background-color: rgba(65, 105, 136, 0.2);
+    opacity: 0.2;
   }
 }
 /*

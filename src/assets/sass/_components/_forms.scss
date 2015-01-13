@@ -76,30 +76,26 @@
 #### Form Checkbox & Radio
 
 ```example
-<div class="form__checkbox">
-  <input type="checkbox" id="form-checkbox-1" class="form__checkbox__input" name="form-checkbox" checked/>
+<div class="form__checkbox js-form__checkbox">
+  <input type="checkbox" id="form-checkbox-1" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox" checked/>
   <label for="form-checkbox-1" class="form__checkbox__label">Checkbox Label</label>
-  <span class="form__checkbox__item"></span>
 </div>
 
-<div class="form__checkbox form__checkbox--right">
-  <input type="checkbox" id="form-checkbox-2" class="form__checkbox__input" name="form-checkbox"/>
+<div class="form__checkbox js-form__checkbox form__checkbox--right">
+  <input type="checkbox" id="form-checkbox-2" class="form__checkbox__input js-form__checkbox__input" name="form-checkbox"/>
   <label for="form-checkbox-2" class="form__checkbox__label">Checkbox Label</label>
-  <span class="form__checkbox__item"></span>
 </div>
 ```
 
 ```example
-<div class="form__radio">
-  <input type="radio" id="form-radio-1" class="form__radio__input" name="form-radio" checked/>
+<div class="form__radio js-form__radio">
+  <input type="radio" id="form-radio-1" class="form__radio__input js-form__radio__input" name="form-radio" checked/>
   <label for="form-radio-1" class="form__radio__label">Radio Label</label>
-  <span class="form__radio__item"></span>
 </div>
 
-<div class="form__radio form__radio--right">
-  <input type="radio" id="form-radio-2" class="form__radio__input" name="form-radio"/>
+<div class="form__radio js-form__radio form__radio--right">
+  <input type="radio" id="form-radio-2" class="form__radio__input js-form__radio__input" name="form-radio"/>
   <label for="form-radio-2" class="form__radio__label">Radio Label</label>
-  <span class="form__radio__item"></span>
 </div>
 ```
 
@@ -255,10 +251,9 @@
 #### Form search
 
 ```example
-<form action="" class="form--search">
+<form action="" class="form--search js-form--search">
   <label class="form--search__label">Search Projects</label>
-  <input type="text" class="form--search__input" placeholder="Search projects">
-  <button class="form--search__submit" type="submit"><i class="i i--search"></i></button>
+  <input type="text" class="form--search__input js-form--search__input js-form__input--load js-form__input--clear" placeholder="Search projects etc">
 </form>
 ```
 
@@ -277,7 +272,7 @@
     @extend .i--search:before;
     z-index: 11;
     position: absolute;
-    left: rhythm(.25);
+    left: rhythm(.375);
     margin-top: rhythm(.125);
     line-height: rhythm(1);
     color: $color-secondary-50;
@@ -294,10 +289,11 @@
   @extend .is-invisible;
 }
 
+// input for specificity
 input.form--search__input {
   margin: 0;
   padding-right: rhythm(1);
-  padding-left: rhythm(1);
+  padding-left: rhythm(1.25);
   height: rhythm(1.25);
   border-radius: $default-border-radius;
   &:hover {
@@ -327,11 +323,97 @@ input.form--search__input {
   }
 }
 
-.form--search__clear {
+.form--search.is-loading {
+  &:before {
+    opacity: 0;
+    visibility: hidden;
+    @include transform(scale(0, 0));
+  }
+  .form--search__loader {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+}
+
+/*
+
+#### Form Load and Clear
+
+##### Load and Clear
+
+```example
+<label class="form__label">Search Projects</label>
+<div>
+  <input type="text" class="form__input js-form__input--clear" placeholder="Search projects etc">
+</div>
+```
+
+##### Just Load
+
+```example
+<label class="form__label">Search Projects</label>
+<div>
+  <input type="text" class="form__input" placeholder="Search projects etc">
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.form__clear,
+.form__load {
+  position: relative;
+}
+
+input.form__input--load,
+input.form__input--clear {
+  padding-right: rhythm(1.25);
+}
+
+.form__loader {
+  position: absolute;
+  right: rhythm(.125);
+  top: 0;
+  width: rhythm(1.5);
+  height: rhythm(1.5);
+  @include transform(scale(0,0));
+}
+
+.form__loader.is-active {
+  @include transform(scale(1,1));
+}
+
+.form__button--clear {
   position: absolute;
   right: rhythm(.25);
   top: 0;
   height: rhythm(1.25);
+}
+
+// If search form load on the left
+.form__load.form--search .form__loader {
+  left: rhythm(.125);
+  right: auto;
+}
+
+.form__load.form--search:not(.form__clear) .form--search__input {
+  padding-right: rhythm(.25);
+}
+
+// Hide clear button while loading
+.form__load.is-loading .form__button--clear {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Unless search
+.form--search.is-loading .form__button--clear {
+  opacity: 1;
+  visibility: visible;
 }
 
 }

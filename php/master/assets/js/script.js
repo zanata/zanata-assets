@@ -1,6 +1,6 @@
-/*! zanata-assets - v0.1.0 - 2014-12-17
+/*! zanata-assets - v0.1.0 - 2015-01-13
 * https://github.com/lukebrooker/zanata-proto
-* Copyright (c) 2014 Red Hat; Licensed MIT */
+* Copyright (c) 2015 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
 /*global define, Event, Node*/
 
@@ -1661,12 +1661,11 @@ zanata.form = (function ($) {
   // Private methods
   function setCheckRadio ($this) {
     var $input = $this.find('.js-form__checkbox__input,.js-form__radio__input');
-
     if (!$input.is(':checked')) {
-      $input.prop('checked', true);
+      $input.prop('checked', true).change();
     }
     else if ($input.attr('type') === 'checkbox') {
-      $input.prop('checked', false);
+      $input.prop('checked', false).change();
     }
   }
 
@@ -1706,8 +1705,8 @@ zanata.form = (function ($) {
   function updateSearchProgressFlag(e) {
     var $target = $(e.target);
     formSearchInProgress =
-      $target.parents('.autocomplete').length > 0 ||
-      $target.hasClass('autocomplete');
+      $target.parents('.js-form--search').length > 0 ||
+      $target.hasClass('js-form--search');
 
     if (!formSearchInProgress && !formSearchInputMouseDown) {
       $('.js-form--search__input').blur();
@@ -1755,10 +1754,86 @@ zanata.form = (function ($) {
 
   };
 
+  var enableInputLoading = function(el, callback) {
+    var $el = $(el),
+        $elParent = $(el).parent(),
+        $loader = $('<span />')
+          .addClass('js-loader form__loader loader loader--mini');
+
+    // Add a loader if there isn't one
+    if (!$elParent.find('.js-loader').length) {
+      $el.addClass('form__input--load');
+      $elParent.addClass('js-form__load form__load').append($loader);
+    }
+
+    if (typeof callback === 'function') {
+      callback();
+    }
+  };
+
+  var activateInputLoading = function(el) {
+    var $elParent = $(el).parent(),
+        $loader = $elParent.find('.js-loader');
+
+    enableInputLoading(el, function() {
+      zanata.loader.activate($loader);
+      $elParent.addClass('is-loading');
+    });
+  };
+
+  var deactivateInputLoading = function(el) {
+    var $elParent = $(el).parent(),
+        $loader = $elParent.find('.js-loader');
+
+    enableInputLoading(el, function() {
+      zanata.loader.deactivate($loader);
+      $elParent.removeClass('is-loading');
+    });
+  };
+
+
+  // Form Clear
+
+  var clearFormInit = function() {
+
+    $('.js-form__input--clear').addClass('form__input--clear')
+      .parent().addClass('form__clear js-form__clear')
+      .append('<button class="button--link ' +
+      'form__button--clear js-form__button--clear is-hidden">' +
+      '<i class="i i--remove"></i></button>');
+
+    clearFormBindings();
+  };
+
+  var clearFormBindings = function() {
+
+    $('.js-form__button--clear').on('click', function (e) {
+      e.preventDefault();
+      $(this).prev('.js-form__input--clear').val('').focus();
+      $(this).addClass('is-hidden');
+    });
+
+    $('.js-form__input--clear').on('keyup', function () {
+      var $this = $(this),
+          val = $this.val(),
+          $clearButton = $this.next('.js-form__button--clear');
+
+      if (val !== '') {
+        $clearButton.removeClass('is-hidden');
+      } else {
+        $clearButton.addClass('is-hidden');
+      }
+    });
+
+  };
+
   var init = function () {
 
     appendCheckboxes();
     appendRadios();
+    enableInputLoading();
+    clearFormInit();
+
 
     $('.js-form-password-parent')
       .on('click', '.js-form-password-toggle', function (e) {
@@ -1787,42 +1862,19 @@ zanata.form = (function ($) {
         $passwordInput.focus();
       });
 
-    $('.js-form--search')
-      .on('focus', '.js-form--search__input, .js-form--search__button',
-        function () {
-          $(this).parents('.js-form--search').addClass('is-active');
-        }
-      );
-
-    $('.js-form--search')
-      .on('blur', '.js-form--search__input, .js-form--search__button',
-        function (e) {
-          if (!formSearchInProgress) {
-            $(this).parents('.js-form--search').removeClass('is-active');
-          }
-          // console.log(e);
-        }
-      );
-
-    $('.js-form--search')
-      .on('click', '.js-form--search__clear', function () {
-        $(this).prev('.js-form--search__input').val('').focus();
-        $(this).addClass('is-hidden');
+    $('.js-form--search__input, .js-form--search__button').on('focus',
+      function () {
+        $(this).parents('.js-form--search').addClass('is-active');
       }
     );
 
-    $('.js-form--search')
-      .on('keyup', '.js-form--search__input', function () {
-          var $this = $(this),
-              val = $this.val(),
-              $clearButton = $this.next('.js-form--search__clear');
-          if (val !== '') {
-            $clearButton.removeClass('is-hidden');
-          } else {
-            $clearButton.addClass('is-hidden');
-          }
+    $('.js-form--search__input, .js-form--search__button').on('blur',
+      function (e) {
+        if (!formSearchInProgress) {
+          $(this).parents('.js-form--search').removeClass('is-active');
         }
-      );
+      }
+    );
 
     $('.js-form--search').on('mousedown', function(e) {
       formSearchInputMouseDown =
@@ -1845,17 +1897,25 @@ zanata.form = (function ($) {
         }
       });
 
-    $(document).on('click', '.js-form__checkbox', function (e) {
+    $('.js-form__checkbox').on('click', function (e) {
+      e.preventDefault();
       setCheckRadio($(this));
-      setCheckRadioStatus($(this));
+    });
+
+    $('.js-form__radio').on('click', function (e) {
+      setCheckRadio($(this));
       e.preventDefault();
     });
 
-    $(document).on('click', '.js-form__radio', function (e) {
-      setCheckRadio($(this));
-      removeRadioStatus($(this));
-      setCheckRadioStatus($(this));
-      e.preventDefault();
+    $('.js-form__checkbox__input').on('change', function (e) {
+      var $parent = $(this).parents('.js-form__checkbox');
+      setCheckRadioStatus($parent);
+    });
+
+    $('.js-form__radio__input').on('change', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      removeRadioStatus($parent);
+      setCheckRadioStatus($parent);
     });
 
   };
@@ -1864,7 +1924,9 @@ zanata.form = (function ($) {
   return {
     init: init,
     appendCheckboxes: appendCheckboxes,
-    appendRadios: appendRadios
+    appendRadios: appendRadios,
+    activateInputLoading: activateInputLoading,
+    deactivateInputLoading: deactivateInputLoading
   };
 
 })(jQuery);

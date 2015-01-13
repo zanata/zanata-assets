@@ -5,6 +5,8 @@
 ```
 <a href="#" class="loader"><span class="loader__label">Loader Label</span></a>
 
+<button class="button loader"><span class="loader__label">Loader Button Label</span></button>
+
 <a href="#" class="loader is-active">
   <span class="loader__label">
     (Active) Loader Label
@@ -52,7 +54,7 @@
 */
 
 %loader-transition {
-  @include transition(0.15s cubic-bezier(.26, .47, .36, .94));
+  @include transition(all 0.15s cubic-bezier(.26, .47, .36, .94));
 }
 
 .loader {
@@ -63,6 +65,9 @@
   margin: 0 auto;
   line-height: rhythm(1.5);
   min-height: rhythm(1.5);
+  &.is-active {
+    min-width: rhythm(1);
+  }
 }
 
 a.loader {
@@ -91,14 +96,11 @@ a.loader {
 
 .loader__spinner {
   @extend %loader-transition;
-  // @include border-radius($default-border-radius);
   @include opacity(0);
+  @include transform(translateY(-50%));
   position: absolute;
   left: 0;
-  padding: rhythm(.625) 0;
-  width: rhythm(1);
-  height: rhythm(1);
-  // background-color: rgba($color-secondary, 0.05);
+  top: 50%;
   text-align: center;
   .loader.is-active & {
     @include opacity(1);
@@ -112,7 +114,7 @@ a.loader {
     width: rhythm(.25);
     height: rhythm(.25);
     border-radius: rhythm(1);
-    background-color: rgba($color-secondary,1);
+    background-color: $color-secondary;
     &:nth-child(1){
       @include animation-delay(0s);
       left: 0;
@@ -167,12 +169,12 @@ a.loader {
 
 @include keyframes (loading) {
   0%{
-    background-color: rgba($color-secondary,0.2);
+    opacity: 0.2;
   }
   50%{
-    background-color: rgba($color-secondary,1);
+    opacity: 1;
   }
   100%{
-    background-color: rgba($color-secondary,0.2);
+    opacity: 0.2;
   }
 }
