@@ -1772,20 +1772,20 @@ zanata.form = (function ($) {
   };
 
   var activateInputLoading = function(el) {
-    var $elParent = $(el).parent(),
-        $loader = $elParent.find('.js-loader');
-
     enableInputLoading(el, function() {
+      var $elParent = $(el).parent(),
+          $loader = $elParent.find('.js-loader');
+
       zanata.loader.activate($loader);
       $elParent.addClass('is-loading');
     });
   };
 
   var deactivateInputLoading = function(el) {
-    var $elParent = $(el).parent(),
-        $loader = $elParent.find('.js-loader');
-
     enableInputLoading(el, function() {
+      var $elParent = $(el).parent(),
+          $loader = $elParent.find('.js-loader');
+
       zanata.loader.deactivate($loader);
       $elParent.removeClass('is-loading');
     });
