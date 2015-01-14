@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-01-13
+/*! zanata-assets - v0.1.0 - 2015-01-14
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1713,7 +1713,7 @@ zanata.form = (function ($) {
     }
   }
 
-  var appendCheckboxes = function (el) {
+  var appendCheckboxes = function (el, callback) {
 
     var $elCheckboxes;
 
@@ -1732,9 +1732,13 @@ zanata.form = (function ($) {
 
     });
 
+    if (typeof callback === 'function') {
+      callback();
+    }
+
   };
 
-  var appendRadios = function (el) {
+  var appendRadios = function (el, callback) {
 
     var $elRadios;
 
@@ -1751,6 +1755,10 @@ zanata.form = (function ($) {
       }
 
     });
+
+    if (typeof callback === 'function') {
+      callback();
+    }
 
   };
 
@@ -1827,12 +1835,39 @@ zanata.form = (function ($) {
 
   };
 
-  var init = function () {
+  var radioBindings = function() {
+    $('.js-form__radio').on('click', function (e) {
+      setCheckRadio($(this));
+      e.preventDefault();
+    });
 
-    appendCheckboxes();
-    appendRadios();
-    enableInputLoading();
-    clearFormInit();
+    $('.js-form__radio__input').on('change', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      removeRadioStatus($parent);
+      setCheckRadioStatus($parent);
+    });
+  };
+
+  var checkBindings = function() {
+    $('.js-form__checkbox').on('click', function (e) {
+      e.preventDefault();
+      setCheckRadio($(this));
+    });
+
+    $('.js-form__checkbox__input').on('change', function (e) {
+      var $parent = $(this).parents('.js-form__checkbox');
+      setCheckRadioStatus($parent);
+    });
+  };
+
+  var init = function (el) {
+
+    el = el || 'body';
+
+    appendCheckboxes(el, checkBindings);
+    appendRadios(el, radioBindings);
+    enableInputLoading(el);
+    clearFormInit(el);
 
 
     $('.js-form-password-parent')
@@ -1896,27 +1931,6 @@ zanata.form = (function ($) {
           $this.select();
         }
       });
-
-    $('.js-form__checkbox').on('click', function (e) {
-      e.preventDefault();
-      setCheckRadio($(this));
-    });
-
-    $('.js-form__radio').on('click', function (e) {
-      setCheckRadio($(this));
-      e.preventDefault();
-    });
-
-    $('.js-form__checkbox__input').on('change', function (e) {
-      var $parent = $(this).parents('.js-form__checkbox');
-      setCheckRadioStatus($parent);
-    });
-
-    $('.js-form__radio__input').on('change', function (e) {
-      var $parent = $(this).parents('.js-form__radio');
-      removeRadioStatus($parent);
-      setCheckRadioStatus($parent);
-    });
 
   };
 

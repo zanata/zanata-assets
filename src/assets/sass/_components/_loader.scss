@@ -63,8 +63,8 @@
   display: block;
   text-align: center;
   margin: 0 auto;
-  line-height: rhythm(1.5);
-  min-height: rhythm(1.5);
+  line-height: rhythm(1);
+  min-height: rhythm(1);
   &.is-active {
     min-width: rhythm(1);
   }
@@ -87,6 +87,7 @@ a.loader {
 .loader__label {
   @extend %loader-transition;
   position: relative;
+  transform-style: preserve-3d;
   .loader.is-active & {
     @include opacity(.5);
     padding-left: rhythm(1.5);
@@ -100,7 +101,7 @@ a.loader {
   @include transform(translateY(-50%));
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 40%;
   text-align: center;
   .loader.is-active & {
     @include opacity(1);

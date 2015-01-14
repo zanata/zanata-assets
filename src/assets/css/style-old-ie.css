@@ -6315,8 +6315,8 @@ Used to show extra information on hover of the parent element
   display: block;
   text-align: center;
   margin: 0 auto;
-  line-height: 2.4375em;
-  min-height: 2.4375em;
+  line-height: 1.625em;
+  min-height: 1.625em;
 }
 .loader.is-active, .is-active.loader--mini, .is-active.loader--small, .is-active.loader--large, .is-active.loader--huge {
   min-width: 1.625em;
@@ -6338,6 +6338,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 
 .loader__label {
   position: relative;
+  transform-style: preserve-3d;
 }
 .loader.is-active .loader__label, .is-active.loader--mini .loader__label, .is-active.loader--small .loader__label, .is-active.loader--large .loader__label, .is-active.loader--huge .loader__label {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
@@ -6355,7 +6356,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   transform: translateY(-50%);
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 40%;
   text-align: center;
 }
 .loader.is-active .loader__spinner, .is-active.loader--mini .loader__spinner, .is-active.loader--small .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
