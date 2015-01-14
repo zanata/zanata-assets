@@ -176,12 +176,14 @@ zanata.form = (function ($) {
 
   };
 
-  var init = function () {
+  var init = function (el) {
 
-    appendCheckboxes();
-    appendRadios();
-    enableInputLoading();
-    clearFormInit();
+    el = el || 'body';
+
+    appendCheckboxes(el);
+    appendRadios(el);
+    enableInputLoading(el);
+    clearFormInit(el);
 
 
     $('.js-form-password-parent')
