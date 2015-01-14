@@ -1835,26 +1835,28 @@ zanata.form = (function ($) {
 
   };
 
-  var radioBindings = function() {
-    $('.js-form__radio').on('click', function (e) {
+  var radioBindings = function(el) {
+    el = el || 'body';
+    $(el).on('click', '.js-form__radio', function (e) {
       setCheckRadio($(this));
       e.preventDefault();
     });
 
-    $('.js-form__radio__input').on('change', function (e) {
+    $(el).on('change', '.js-form__radio__input', function (e) {
       var $parent = $(this).parents('.js-form__radio');
       removeRadioStatus($parent);
       setCheckRadioStatus($parent);
     });
   };
 
-  var checkBindings = function() {
-    $('.js-form__checkbox').on('click', function (e) {
+  var checkBindings = function(el) {
+    el = el || 'body';
+    $(el).on('click', '.js-form__checkbox', function (e) {
       e.preventDefault();
       setCheckRadio($(this));
     });
 
-    $('.js-form__checkbox__input').on('change', function (e) {
+    $(el).on('change', '.js-form__checkbox__input', function (e) {
       var $parent = $(this).parents('.js-form__checkbox');
       setCheckRadioStatus($parent);
     });
@@ -1864,8 +1866,8 @@ zanata.form = (function ($) {
 
     el = el || 'body';
 
-    appendCheckboxes(el, checkBindings);
-    appendRadios(el, radioBindings);
+    appendCheckboxes(el, checkBindings(el));
+    appendRadios(el, radioBindings(el));
     enableInputLoading(el);
     clearFormInit(el);
 
