@@ -101,8 +101,8 @@ a.loader {
   @include transform(translateY(-50%));
   position: absolute;
   left: 0;
-  top: 40%;
-  text-align: center;
+  top: 50%;
+  height: rhythm(.25);
   .loader.is-active & {
     @include opacity(1);
   }
@@ -139,6 +139,7 @@ a.loader {
 .loader--inline {
   min-height: rhythm(1);
   display: inline-block;
+  vertical-align: middle;
   // compensate for display inline-block space
   margin-left: -0.3em;
   &.is-active {

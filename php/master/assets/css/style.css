@@ -6818,8 +6818,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   transform: translateY(-50%);
   position: absolute;
   left: 0;
-  top: 40%;
-  text-align: center;
+  top: 50%;
+  height: 0.40625em;
 }
 .loader.is-active .loader__spinner, .is-active.loader--mini .loader__spinner, .is-active.loader--small .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -6871,6 +6871,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .loader--inline {
   min-height: 1.625em;
   display: inline-block;
+  vertical-align: middle;
   margin-left: -0.3em;
 }
 .loader--inline.is-active {

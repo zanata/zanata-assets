@@ -198,7 +198,7 @@ zanata.form = (function ($) {
     });
   };
 
-  var checkBindings = function(el) {
+  var checkboxBindings = function(el) {
     el = el || 'body';
     $(el).on('click', '.js-form__checkbox', function (e) {
       e.preventDefault();
@@ -215,11 +215,10 @@ zanata.form = (function ($) {
 
     el = el || 'body';
 
-    appendCheckboxes(el, checkBindings(el));
+    appendCheckboxes(el, checkboxBindings(el));
     appendRadios(el, radioBindings(el));
     enableInputLoading(el);
     clearFormInit(el);
-
 
     $('.js-form-password-parent')
       .on('click', '.js-form-password-toggle', function (e) {
@@ -290,6 +289,8 @@ zanata.form = (function ($) {
     init: init,
     appendCheckboxes: appendCheckboxes,
     appendRadios: appendRadios,
+    checkboxBindings: checkboxBindings,
+    radioBindings: radioBindings,
     activateInputLoading: activateInputLoading,
     deactivateInputLoading: deactivateInputLoading
   };
