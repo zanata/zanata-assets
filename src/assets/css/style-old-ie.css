@@ -2259,6 +2259,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
   top: -9999px;
   left: -9999px;
 }
+.new-zanata .is-disabled {
+  opacity: 0.6;
+}
 .new-zanata .is-transition, .new-zanata .is-removed, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--pop-high:hover,

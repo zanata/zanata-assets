@@ -66,6 +66,10 @@
   left: -9999px;
 }
 
+.is-disabled {
+  opacity: 0.6;
+}
+
 .is-transition {
   @include transition($default-transition);
   // @include backface-visibility(hidden);
