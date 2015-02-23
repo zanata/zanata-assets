@@ -2657,6 +2657,9 @@ Centered grids align grid items centrally without needing to use push or pull cl
   top: -9999px;
   left: -9999px;
 }
+.new-zanata .is-disabled {
+  opacity: 0.6;
+}
 .new-zanata .is-transition, .new-zanata .is-removed, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--pop-high:hover,
@@ -5638,6 +5641,11 @@ Used in panel headers to match the header layout
   max-height: 3.25em;
 }
 
+.new-zanata {
+  /**
+   * Modifiers
+   */
+}
 .new-zanata .dropdown--toggle-right .dropdown__toggle {
   padding-left: 0.60938em !important;
   padding-right: 1.625em !important;
@@ -5659,6 +5667,86 @@ Used in panel headers to match the header layout
     padding-left: 0.34821em !important;
     padding-right: 1.04464em !important;
   }
+}
+.new-zanata .Dropdown--simple {
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  user-select: none;
+}
+.new-zanata .Dropdown--simple.is-active {
+  z-index: 900;
+}
+.new-zanata .Dropdown--simple .Dropdown-toggleIcon {
+  display: inline-block;
+  -moz-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+}
+.new-zanata .Dropdown--simple.is-active .Dropdown-toggleIcon {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.new-zanata .Dropdown--simple .Dropdown-content {
+  position: absolute;
+  z-index: 800;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  float: left;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  -moz-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(-50%);
+  text-align: left;
+  opacity: 0;
+  background-color: #fff;
+  background-clip: padding-box;
+  box-shadow: 0 0 1.625em rgba(0, 0, 0, 0.1);
+}
+.new-zanata .Dropdown--simple .Dropdown-content--Bordered {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom-width: 2px;
+}
+.new-zanata .Dropdown--simple.is-active > .Dropdown-content {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+.new-zanata .Dropdown--simple .Dropdown-title {
+  font-size: calc(14/16 * 1rem);
+  padding: 0.20313em 0.40625em;
+  background-color: #ecf0f3;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  color: #67879f;
+}
+.new-zanata .Dropdown--simple .Dropdown-item {
+  display: block;
+  padding: 0.20313em 0.40625em;
+  transition: all .2s ease-out;
+  color: #4e9fdd;
+}
+.new-zanata .Dropdown--simple .Dropdown-item:hover {
+  color: #fff;
+  background-color: #4e9fdd;
+}
+.new-zanata .Dropdown--simple .Dropdown-item button,
+.new-zanata .Dropdown--simple .Dropdown-item button:hover {
+  color: inherit !important;
+  background-color: transparent !important;
+  transition: none !important;
+}
+.new-zanata .Dropdown--simple.Dropdown--right .Dropdown-content {
+  left: auto;
+  right: 0;
 }
 
 /*

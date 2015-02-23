@@ -410,4 +410,93 @@ Used in panel headers to match the header layout
   }
 }
 
+// This is the new dropdown to use in the future
+
+.Dropdown--simple {
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  user-select: none;
+}
+
+.Dropdown--simple.is-active {
+  z-index: 900;
+}
+
+.Dropdown--simple .Dropdown-toggleIcon {
+  display: inline-block;
+  @include transition(all .2s cubic-bezier(.175, .885, .320, 1.275));
+  text-align: center;
+}
+
+.Dropdown--simple.is-active .Dropdown-toggleIcon {
+  @include transform(rotate(180deg));
+}
+
+.Dropdown--simple .Dropdown-content {
+  position: absolute;
+  z-index: 800;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  float: left;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  @include transition(all .2s cubic-bezier(.175, .885, .320, 1.275));
+  transform: translateY(-50%);
+  text-align: left;
+  opacity: 0;
+  background-color:#fff;
+  background-clip: padding-box;
+  box-shadow: 0 0 rhythm(1) rgba(0,0,0,0.1);
+}
+
+.Dropdown--simple .Dropdown-content--Bordered {
+  border: 1px solid rgba(0,0,0,.15);
+  border-bottom-width: 2px;
+}
+
+.Dropdown--simple.is-active > .Dropdown-content {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.Dropdown--simple .Dropdown-title {
+  font-size: calc(14/16 * 1rem);
+  padding: rhythm(.125) rhythm(.25);
+  background-color: tint($color-secondary, 90%);
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  color: tint($color-secondary, 20%);
+}
+
+.Dropdown--simple .Dropdown-item {
+  display: block;
+  padding: rhythm(.125) rhythm(.25);
+  transition: all .2s ease-out;
+  color: $color-link;
+}
+
+.Dropdown--simple .Dropdown-item:hover {
+  color: #fff;
+  background-color: $color-link;
+}
+
+.Dropdown--simple .Dropdown-item button,
+.Dropdown--simple .Dropdown-item button:hover {
+  color: inherit !important;
+  background-color: transparent !important;
+  transition: none !important;
+}
+
+/**
+ * Modifiers
+ */
+
+.Dropdown--simple.Dropdown--right .Dropdown-content {
+  left: auto;
+  right: 0;
+}
+
 }
