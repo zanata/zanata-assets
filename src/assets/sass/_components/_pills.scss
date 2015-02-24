@@ -4,8 +4,7 @@
 
 ```example
 <span class="pill">Pill</span>
-<span class="pill pill--link">Pill link</span>
-<span class="pill pill--highlight">Pill highlight</span>
+<span class="pill pill--highlight is-active">Pill highlight</span>
 <span class="pill pill--success">Pill Success</span>
 <span class="pill pill--unsure">Pill unsure</span>
 <span class="pill pill--warning">Pill warning</span>
@@ -26,52 +25,73 @@
   padding: 0 rhythm(.5);
   background-color: $color-secondary-20;
   font-weight: 400;
-}
-
-.pill--highlight {
-  background-color: $color-highlight;
-  color: $white;
-}
-
-.pill--success {
-  background-color: $color-success;
-  color: $white;
-}
-
-.pill--unsure {
-  background-color: $color-unsure;
-  color: $white;
-}
-
-.pill--warning {
-  background-color: $color-warning;
-  color: $white;
-}
-
-.pill--danger {
-  background-color: $color-danger;
-  color: $white;
-}
-
-.pill--neutral {
-  background-color: $color-neutral;
-  color: $color-secondary-70;
-}
-
-.pill--secondary {
-  background-color: $color-secondary;
-  color: $white;
-}
-
-// Needs to go last for overrides
-
-.pill--link {
   background-color: transparent;
   cursor: pointer;
-  color: $color-link;
+  @include transition($default-transition);
   &:hover,
   &:focus {
     background-color: #eee;
+  }
+  &.is-active {
+    cursor: default;
+    color: $white;
+  }
+}
+
+.pill--highlight {
+  color: $color-highlight;
+  &:active,
+  &.is-active {
+    background-color: $color-highlight;
+  }
+}
+
+.pill--success {
+  color: $color-success;
+  &:active,
+  &.is-active {
+    background-color: $color-success;
+  }
+}
+
+.pill--unsure {
+  color: $color-unsure;
+  &:active,
+  &.is-active {
+    background-color: $color-unsure;
+  }
+}
+
+.pill--warning {
+  color: $color-warning;
+  &:active,
+  &.is-active {
+    background-color: $color-warning;
+  }
+}
+
+.pill--danger {
+  color: $color-danger;
+  &:active,
+  &.is-active {
+    background-color: $color-danger;
+  }
+}
+
+.pill--neutral {
+  color: $color-neutral;
+  &:active,
+  &.is-active {
+    background-color: $color-neutral;
+    color: $color-secondary-70;
+  }
+}
+
+.pill--secondary {
+  color: $color-secondary;
+  &:active,
+  &.is-active {
+    background-color: $color-secondary;
   }
 }
 

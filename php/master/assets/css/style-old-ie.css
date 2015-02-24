@@ -5514,8 +5514,7 @@ Used in panel headers to match the header layout
 
 ```example
 <span class="pill">Pill</span>
-<span class="pill pill--link">Pill link</span>
-<span class="pill pill--highlight">Pill highlight</span>
+<span class="pill pill--highlight is-active">Pill highlight</span>
 <span class="pill pill--success">Pill Success</span>
 <span class="pill pill--unsure">Pill unsure</span>
 <span class="pill pill--warning">Pill warning</span>
@@ -5534,42 +5533,62 @@ Used in panel headers to match the header layout
   padding: 0 0.8125em;
   background-color: #d9e1e7;
   font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+  -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
+  -o-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
+  -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
+  transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
+}
+.new-zanata .pill:hover, .new-zanata .pill:focus {
+  background-color: #eee;
+}
+.new-zanata .pill.is-active {
+  cursor: default;
+  color: #fff;
 }
 .new-zanata .pill--highlight {
+  color: #4e9fdd;
+}
+.new-zanata .pill--highlight:active, .new-zanata .pill--highlight.is-active {
   background-color: #4e9fdd;
-  color: #fff;
 }
 .new-zanata .pill--success {
+  color: #70a98b;
+}
+.new-zanata .pill--success:active, .new-zanata .pill--success.is-active {
   background-color: #70a98b;
-  color: #fff;
 }
 .new-zanata .pill--unsure {
+  color: #e0c350;
+}
+.new-zanata .pill--unsure:active, .new-zanata .pill--unsure.is-active {
   background-color: #e0c350;
-  color: #fff;
 }
 .new-zanata .pill--warning {
+  color: #e3824e;
+}
+.new-zanata .pill--warning:active, .new-zanata .pill--warning.is-active {
   background-color: #e3824e;
-  color: #fff;
 }
 .new-zanata .pill--danger {
+  color: #e0575b;
+}
+.new-zanata .pill--danger:active, .new-zanata .pill--danger.is-active {
   background-color: #e0575b;
-  color: #fff;
 }
 .new-zanata .pill--neutral {
+  color: #c6d2db;
+}
+.new-zanata .pill--neutral:active, .new-zanata .pill--neutral.is-active {
   background-color: #c6d2db;
   color: #7c96ac;
 }
 .new-zanata .pill--secondary {
+  color: #416988;
+}
+.new-zanata .pill--secondary:active, .new-zanata .pill--secondary.is-active {
   background-color: #416988;
-  color: #fff;
-}
-.new-zanata .pill--link {
-  background-color: transparent;
-  cursor: pointer;
-  color: #4e9fdd;
-}
-.new-zanata .pill--link:hover, .new-zanata .pill--link:focus {
-  background-color: #eee;
 }
 
 /*
