@@ -6,6 +6,7 @@
 <a class="link--unsure" href="#">Unsure Link</a>
 <a class="link--warning" href="#">Warning Link</a>
 <a class="link--danger" href="#">Danger Link</a>
+<a class="link--secondary" href="#">Secondary Link</a>
 
 */
 
@@ -56,6 +57,18 @@
   &:active,
   &.is-active {
     color: shade($color-danger, 60%) !important;
+  }
+}
+
+.link--danger {
+  color: $color-secondary !important;
+  &:hover,
+  &:focus {
+    color: shade($color-secondary, 30%) !important;
+  }
+  &:active,
+  &.is-active {
+    color: shade($color-secondary, 60%) !important;
   }
 }
 

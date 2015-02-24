@@ -1,0 +1,78 @@
+/*
+
+### Pills
+
+```example
+<span class="pill">Pill</span>
+<span class="pill pill--link">Pill link</span>
+<span class="pill pill--highlight">Pill highlight</span>
+<span class="pill pill--success">Pill Success</span>
+<span class="pill pill--unsure">Pill unsure</span>
+<span class="pill pill--warning">Pill warning</span>
+<span class="pill pill--danger">Pill danger</span>
+<span class="pill pill--neutral">Pill Neutral</span>
+<span class="pill pill--secondary">Pill Secondary</span>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.pill {
+  @include border-radius(100px);
+  text-align: center;
+  display: inline-block;
+  padding: 0 rhythm(.5);
+  background-color: $color-secondary-20;
+  font-weight: 400;
+}
+
+.pill--highlight {
+  background-color: $color-highlight;
+  color: $white;
+}
+
+.pill--success {
+  background-color: $color-success;
+  color: $white;
+}
+
+.pill--unsure {
+  background-color: $color-unsure;
+  color: $white;
+}
+
+.pill--warning {
+  background-color: $color-warning;
+  color: $white;
+}
+
+.pill--danger {
+  background-color: $color-danger;
+  color: $white;
+}
+
+.pill--neutral {
+  background-color: $color-neutral;
+  color: $color-secondary-70;
+}
+
+.pill--secondary {
+  background-color: $color-secondary;
+  color: $white;
+}
+
+// Needs to go last for overrides
+
+.pill--link {
+  background-color: transparent;
+  cursor: pointer;
+  color: $color-link;
+  &:hover,
+  &:focus {
+    background-color: #eee;
+  }
+}
+
+}

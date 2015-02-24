@@ -3737,6 +3737,7 @@ Sub-headings can be used when placing a heading under another heading.
 <a class="link--unsure" href="#">Unsure Link</a>
 <a class="link--warning" href="#">Warning Link</a>
 <a class="link--danger" href="#">Danger Link</a>
+<a class="link--secondary" href="#">Secondary Link</a>
 
 */
 .new-zanata .link--success, .new-zanata .message--success a,
@@ -3794,6 +3795,20 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
 .new-zanata .message--danger button.is-active {
   color: #592224 !important;
+}
+.new-zanata .link--danger, .new-zanata .message--danger a,
+.new-zanata .message--danger button {
+  color: #416988 !important;
+}
+.new-zanata .link--danger:hover, .new-zanata .message--danger a:hover,
+.new-zanata .message--danger button:hover, .new-zanata .link--danger:focus, .new-zanata .message--danger a:focus,
+.new-zanata .message--danger button:focus {
+  color: #2d495f !important;
+}
+.new-zanata .link--danger:active, .new-zanata .message--danger a:active,
+.new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
+.new-zanata .message--danger button.is-active {
+  color: #1a2a36 !important;
 }
 
 /*
@@ -5491,6 +5506,70 @@ Used in panel headers to match the header layout
 }
 .new-zanata .message--highlight {
   color: #416988;
+}
+
+/*
+
+### Pills
+
+```example
+<span class="pill">Pill</span>
+<span class="pill pill--link">Pill link</span>
+<span class="pill pill--highlight">Pill highlight</span>
+<span class="pill pill--success">Pill Success</span>
+<span class="pill pill--unsure">Pill unsure</span>
+<span class="pill pill--warning">Pill warning</span>
+<span class="pill pill--danger">Pill danger</span>
+<span class="pill pill--neutral">Pill Neutral</span>
+<span class="pill pill--secondary">Pill Secondary</span>
+```
+
+*/
+.new-zanata .pill {
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 0.8125em;
+  background-color: #d9e1e7;
+  font-weight: 400;
+}
+.new-zanata .pill--highlight {
+  background-color: #4e9fdd;
+  color: #fff;
+}
+.new-zanata .pill--success {
+  background-color: #70a98b;
+  color: #fff;
+}
+.new-zanata .pill--unsure {
+  background-color: #e0c350;
+  color: #fff;
+}
+.new-zanata .pill--warning {
+  background-color: #e3824e;
+  color: #fff;
+}
+.new-zanata .pill--danger {
+  background-color: #e0575b;
+  color: #fff;
+}
+.new-zanata .pill--neutral {
+  background-color: #c6d2db;
+  color: #7c96ac;
+}
+.new-zanata .pill--secondary {
+  background-color: #416988;
+  color: #fff;
+}
+.new-zanata .pill--link {
+  background-color: transparent;
+  cursor: pointer;
+  color: #4e9fdd;
+}
+.new-zanata .pill--link:hover, .new-zanata .pill--link:focus {
+  background-color: #eee;
 }
 
 /*
