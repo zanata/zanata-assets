@@ -247,8 +247,14 @@ zanata.form = (function ($) {
         $passwordInput.focus();
       });
 
+    $('.js-form--search__input, .js-form--search__button').on('click',
+      function (e) {
+        e.stopPropagation();
+      }
+    );
+
     $('.js-form--search__input, .js-form--search__button').on('focus',
-      function () {
+      function (e) {
         $(this).parents('.js-form--search').addClass('is-active');
       }
     );

@@ -152,7 +152,6 @@
       right: rhythm(.75);
     }
     &:before {
-      top: rhythm(.625);
       left: rhythm(.75);
     }
   }
@@ -160,7 +159,6 @@
     height: rhythm(2);
     padding: rhythm(.375) 0;
     position: absolute;
-    top: 0;
     width: 50%;
     left: 0;
     z-index: 1050;
@@ -171,7 +169,7 @@
 }
 
 .header__main-nav__menu {
-  a {
+  a:not(.button--full) {
     padding: rhythm(.5);
     height: rhythm(2);
     display: block;

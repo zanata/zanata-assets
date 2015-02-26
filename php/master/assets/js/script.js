@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-02-24
+/*! zanata-assets - v0.1.0 - 2015-02-26
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1897,6 +1897,12 @@ zanata.form = (function ($) {
 
         $passwordInput.focus();
       });
+
+    $('.js-form--search__input, .js-form--search__button').on('click',
+      function (e) {
+        e.stopPropagation();
+      }
+    );
 
     $('.js-form--search__input, .js-form--search__button').on('focus',
       function () {

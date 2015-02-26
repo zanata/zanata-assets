@@ -8385,7 +8385,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     right: 1.21875em;
   }
   .new-zanata .header__search:before {
-    top: 1.01563em;
     left: 1.21875em;
   }
 }
@@ -8394,7 +8393,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     height: 3.25em;
     padding: 0.60938em 0;
     position: absolute;
-    top: 0;
     width: 50%;
     left: 0;
     z-index: 1050;
@@ -8403,12 +8401,12 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     width: 150%;
   }
 }
-.new-zanata .header__main-nav__menu a {
+.new-zanata .header__main-nav__menu a:not(.button--full) {
   padding: 0.8125em;
   height: 3.25em;
   display: block;
 }
-.new-zanata .header__main-nav__menu a:hover {
+.new-zanata .header__main-nav__menu a:not(.button--full):hover {
   background-color: #4e9fdd;
   color: #fff;
 }

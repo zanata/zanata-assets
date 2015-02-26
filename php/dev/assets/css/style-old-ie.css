@@ -7793,7 +7793,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   height: 3.25em;
   padding: 0.60938em 0;
   position: absolute;
-  top: 0;
   width: 50%;
   left: 0;
   z-index: 1050;
@@ -7812,12 +7811,12 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   margin-left: 0.40625em;
   margin-left: 0.8125em;
 }
-.new-zanata .header__main-nav__menu a {
+.new-zanata .header__main-nav__menu a:not(.button--full) {
   padding: 0.8125em;
   height: 3.25em;
   display: block;
 }
-.new-zanata .header__main-nav__menu a:hover {
+.new-zanata .header__main-nav__menu a:not(.button--full):hover {
   background-color: #4e9fdd;
   color: #fff;
 }
