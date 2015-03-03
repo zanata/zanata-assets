@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-02-26
+/*! zanata-assets - v0.1.0 - 2015-03-03
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -2109,11 +2109,15 @@ zanata.modal = (function ($) {
   var show = function (el) {
     var $el = $(el);
     if ($el.parent().is('body')) {
-      $(el).addClass('is-active');
+      // TODO: Remove when old template is removed
+      $el.wrap('<div class="new-zanata new-zanata-base"></div>');
+      $el.addClass('is-active');
     }
     else {
       $el.before('<div id="' + $el.attr('id') + '-placeholder"/>');
       $el.appendTo('body');
+      // TODO: Remove when old template is removed
+      $el.wrap('<div class="new-zanata new-zanata-base"></div>');
       // Allow this to animate in
       setTimeout(function () {
         $el.addClass('is-active is-moved');
@@ -2129,6 +2133,7 @@ zanata.modal = (function ($) {
     if ($el.hasClass('is-moved')) {
       var elPlaceholder = '#' + $el.attr('id') + '-placeholder';
       setTimeout(function () {
+        $el.unwrap(); // TODO: Remove when old template is removed
         $el.appendTo(elPlaceholder).unwrap().removeClass('is-moved');
       }, 300);
     }

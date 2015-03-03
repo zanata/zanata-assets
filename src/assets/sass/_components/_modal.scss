@@ -71,7 +71,7 @@
     width: rhythm(2);
     top: 0;
     right: 0;
-    text-align: center;
+    text-align: center !important;
     border-left: $default-border;
     color: rgba($color-secondary, .3);
     &:hover {

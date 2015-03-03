@@ -254,7 +254,7 @@ zanata.form = (function ($) {
     );
 
     $('.js-form--search__input, .js-form--search__button').on('focus',
-      function (e) {
+      function () {
         $(this).parents('.js-form--search').addClass('is-active');
       }
     );

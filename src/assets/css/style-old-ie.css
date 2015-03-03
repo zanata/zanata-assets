@@ -6733,7 +6733,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 3.25em;
   top: 0;
   right: 0;
-  text-align: center;
+  text-align: center !important;
   border-left: 1px solid rgba(65, 105, 136, 0.15);
   color: rgba(65, 105, 136, 0.3);
 }
