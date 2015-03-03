@@ -16,7 +16,7 @@ Go to zanata-assets dir
 To start developing run `grunt wo`. This will start a livereload server, open the server in your browser and run a watch task.
 
 ## Building
-Just run `grunt` which will concat and minify all files.
+Just run `grunt build` which will concat and minify all files.
 
 ## Style Guide
 This will be generated from the css comments in `css-sg/style.css`. You can view the style guide from [localhost:4000/styleguide](http://localhost:4000/styleguide/).
