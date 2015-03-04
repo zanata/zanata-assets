@@ -5991,8 +5991,9 @@ Used in panel headers to match the header layout
   -webkit-border-radius: 100px;
   border-radius: 100px;
   text-align: center;
-  display: inline-block;
+  display: block;
   padding: 0 0.8125em;
+  margin: 0 -0.8125em;
   background-color: #d9e1e7;
   font-weight: 400;
   background-color: transparent;
@@ -6005,12 +6006,25 @@ Used in panel headers to match the header layout
 .new-zanata .pill:hover, .new-zanata .pill:focus {
   background-color: #eee;
 }
-.new-zanata .pill.is-active {
+.new-zanata .pill:active, .new-zanata .pill.is-active {
   cursor: default;
   color: #fff;
 }
+.new-zanata .pill--inline {
+  display: inline-block;
+  margin: 0;
+}
+.new-zanata .pill--inline:first-child {
+  margin-left: -0.8125em;
+}
+.new-zanata .pill--inline:last-child {
+  margin-right: -0.8125em;
+}
 .new-zanata .pill--highlight {
   color: #4e9fdd;
+}
+.new-zanata .pill--highlight:hover, .new-zanata .pill--highlight:focus {
+  background-color: rgba(78, 159, 221, 0.2);
 }
 .new-zanata .pill--highlight:active, .new-zanata .pill--highlight.is-active {
   background-color: #4e9fdd;
@@ -6018,11 +6032,17 @@ Used in panel headers to match the header layout
 .new-zanata .pill--success {
   color: #70a98b;
 }
+.new-zanata .pill--success:hover, .new-zanata .pill--success:focus {
+  background-color: rgba(112, 169, 139, 0.2);
+}
 .new-zanata .pill--success:active, .new-zanata .pill--success.is-active {
   background-color: #70a98b;
 }
 .new-zanata .pill--unsure {
   color: #e0c350;
+}
+.new-zanata .pill--unsure:hover, .new-zanata .pill--unsure:focus {
+  background-color: rgba(224, 195, 80, 0.2);
 }
 .new-zanata .pill--unsure:active, .new-zanata .pill--unsure.is-active {
   background-color: #e0c350;
@@ -6030,11 +6050,17 @@ Used in panel headers to match the header layout
 .new-zanata .pill--warning {
   color: #e3824e;
 }
+.new-zanata .pill--warning:hover, .new-zanata .pill--warning:focus {
+  background-color: rgba(227, 130, 78, 0.2);
+}
 .new-zanata .pill--warning:active, .new-zanata .pill--warning.is-active {
   background-color: #e3824e;
 }
 .new-zanata .pill--danger {
   color: #e0575b;
+}
+.new-zanata .pill--danger:hover, .new-zanata .pill--danger:focus {
+  background-color: rgba(224, 87, 91, 0.2);
 }
 .new-zanata .pill--danger:active, .new-zanata .pill--danger.is-active {
   background-color: #e0575b;
@@ -6042,12 +6068,18 @@ Used in panel headers to match the header layout
 .new-zanata .pill--neutral {
   color: #c6d2db;
 }
+.new-zanata .pill--neutral:hover, .new-zanata .pill--neutral:focus {
+  background-color: rgba(198, 210, 219, 0.2);
+}
 .new-zanata .pill--neutral:active, .new-zanata .pill--neutral.is-active {
   background-color: #c6d2db;
   color: #7c96ac;
 }
 .new-zanata .pill--secondary {
   color: #416988;
+}
+.new-zanata .pill--secondary:hover, .new-zanata .pill--secondary:focus {
+  background-color: rgba(65, 105, 136, 0.2);
 }
 .new-zanata .pill--secondary:active, .new-zanata .pill--secondary.is-active {
   background-color: #416988;
