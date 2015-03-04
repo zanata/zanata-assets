@@ -21,8 +21,9 @@
 .pill {
   @include border-radius(100px);
   text-align: center;
-  display: inline-block;
+  display: block;
   padding: 0 rhythm(.5);
+  margin: 0 rhythm(-.5);
   background-color: $color-secondary-20;
   font-weight: 400;
   background-color: transparent;
@@ -32,14 +33,30 @@
   &:focus {
     background-color: #eee;
   }
+  &:active,
   &.is-active {
     cursor: default;
     color: $white;
   }
 }
 
+.pill--inline {
+  display: inline-block;
+  margin: 0;
+  &:first-child {
+    margin-left: rhythm(-.5);
+  }
+  &:last-child {
+    margin-right: rhythm(-.5);
+  }
+}
+
 .pill--highlight {
   color: $color-highlight;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-highlight, .2);
+  }
   &:active,
   &.is-active {
     background-color: $color-highlight;
@@ -48,6 +65,10 @@
 
 .pill--success {
   color: $color-success;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-success, .2);
+  }
   &:active,
   &.is-active {
     background-color: $color-success;
@@ -56,6 +77,10 @@
 
 .pill--unsure {
   color: $color-unsure;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-unsure, .2);
+  }
   &:active,
   &.is-active {
     background-color: $color-unsure;
@@ -64,6 +89,10 @@
 
 .pill--warning {
   color: $color-warning;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-warning, .2);
+  }
   &:active,
   &.is-active {
     background-color: $color-warning;
@@ -72,6 +101,10 @@
 
 .pill--danger {
   color: $color-danger;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-danger, .2);
+  }
   &:active,
   &.is-active {
     background-color: $color-danger;
@@ -80,6 +113,10 @@
 
 .pill--neutral {
   color: $color-neutral;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-neutral, .2);
+  }
   &:active,
   &.is-active {
     background-color: $color-neutral;
@@ -89,6 +126,10 @@
 
 .pill--secondary {
   color: $color-secondary;
+  &:hover,
+  &:focus {
+    background-color: rgba($color-secondary, .2);
+  }
   &:active,
   &.is-active {
     background-color: $color-secondary;
