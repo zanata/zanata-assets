@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-03-03
+/*! zanata-assets - v0.1.0 - 2015-03-04
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 /*jslint browser:true, node:true*/
@@ -1852,8 +1852,21 @@ zanata.form = (function ($) {
   var checkboxBindings = function(el) {
     el = el || 'body';
     $(el).on('click', '.js-form__checkbox', function (e) {
-      e.preventDefault();
-      setCheckRadio($(this));
+
+      var directClick = e.target === e.currentTarget;
+      var tagName = e.target.tagName.toLowerCase();
+      var clickOnButton = tagName === 'button';
+      var clickOnAnchor = tagName === 'a';
+      var clickOnTextbox = tagName === 'input' && e.target.type === 'text';
+      var clickOnSubmit = tagName === 'input' && e.target.type === 'submit';
+
+      var clickOnClickHandler = clickOnButton || clickOnAnchor ||
+                                clickOnTextbox || clickOnSubmit;
+
+      if (directClick || !clickOnClickHandler) {
+        e.preventDefault();
+        setCheckRadio($(this));
+      }
     });
 
     $(el).on('change', '.js-form__checkbox__input', function (e) {
