@@ -23,7 +23,7 @@
   text-align: center;
   display: block;
   padding: 0 rhythm(.5);
-  margin: 0 rhythm(-.5);
+  margin: 0;
   background-color: $color-secondary-20;
   font-weight: 400;
   background-color: transparent;
@@ -42,12 +42,9 @@
 
 .pill--inline {
   display: inline-block;
-  margin: 0;
-  &:first-child {
-    margin-left: rhythm(-.5);
-  }
+  margin-right: rhythm(.25);
   &:last-child {
-    margin-right: rhythm(-.5);
+    margin-right: 0;
   }
 }
 

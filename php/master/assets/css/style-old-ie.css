@@ -5531,7 +5531,7 @@ Used in panel headers to match the header layout
   text-align: center;
   display: block;
   padding: 0 0.8125em;
-  margin: 0 -0.8125em;
+  margin: 0;
   background-color: #d9e1e7;
   font-weight: 400;
   background-color: transparent;
@@ -5550,13 +5550,10 @@ Used in panel headers to match the header layout
 }
 .new-zanata .pill--inline {
   display: inline-block;
-  margin: 0;
-}
-.new-zanata .pill--inline:first-child {
-  margin-left: -0.8125em;
+  margin-right: 0.40625em;
 }
 .new-zanata .pill--inline:last-child {
-  margin-right: -0.8125em;
+  margin-right: 0;
 }
 .new-zanata .pill--highlight {
   color: #4e9fdd;
@@ -5696,6 +5693,314 @@ Used in panel headers to match the header layout
 .new-zanata .badge--br {
   bottom: -0.23214em;
   right: -0.23214em;
+}
+
+/*
+
+### Calendar
+
+```example
+<div class="w--1-2">
+  <table class="cal cal--highlight">
+    <thead class="cal__head">
+      <tr>
+        <th class="cal__heading" title="Sunday">S</th>
+        <th class="cal__heading" title="Monday">M</th>
+        <th class="cal__heading" title="Tuesday">T</th>
+        <th class="cal__heading" title="Wednesday">W</th>
+        <th class="cal__heading" title="Thursday">T</th>
+        <th class="cal__heading" title="Friday">F</th>
+        <th class="cal__heading" title="Saturday">S</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="cal__week">
+        <td class="cal__day">
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">1</div>
+          <div class="cal__date-info" title="245 words">245</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">2</div>
+          <div class="cal__date-info" title="355 words">355</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">3</div>
+          <div class="cal__date-info" title="125 words">125</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">4</div>
+          <div class="cal__date-info" title="3546 words">3546</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">5</div>
+          <div class="cal__date-info" title="23 words">23</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">6</div>
+          <div class="cal__date-info" title="0 words">0</div>
+        </td>
+      </tr>
+      <tr class="cal__week">
+        <td class="cal__day">
+          <div class="cal__date">7</div>
+          <div class="cal__date-info" title="245 words">245</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">8</div>
+          <div class="cal__date-info" title="245 words">245</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">9</div>
+          <div class="cal__date-info" title="355 words">355</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">10</div>
+          <div class="cal__date-info" title="125 words">125</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">11</div>
+          <div class="cal__date-info" title="3546 words">3546</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">12</div>
+          <div class="cal__date-info" title="23 words">23</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">13</div>
+          <div class="cal__date-info" title="0 words">0</div>
+        </td>
+      </tr>
+      <tr class="cal__week">
+        <td class="cal__day">
+          <div class="cal__date">14</div>
+          <div class="cal__date-info" title="245 words">245</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">15</div>
+          <div class="cal__date-info" title="245 words">245</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">16</div>
+          <div class="cal__date-info" title="355 words">355</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">17</div>
+          <div class="cal__date-info" title="125 words">125</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">18</div>
+          <div class="cal__date-info" title="3546 words">3546</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">19</div>
+          <div class="cal__date-info" title="23 words">23</div>
+        </td>
+        <td class="cal__day is-active">
+          <div class="cal__date">20</div>
+          <div class="cal__date-info" title="0 words">0</div>
+        </td>
+      </tr>
+      <tr class="cal__week">
+        <td class="cal__day">
+          <div class="cal__date">21</div>
+          <div class="cal__date-info" title="245 words">245</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">22</div>
+          <div class="cal__date-info" title="245 words">245</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">23</div>
+          <div class="cal__date-info" title="355 words">355</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">24</div>
+          <div class="cal__date-info" title="125 words">125</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">25</div>
+          <div class="cal__date-info" title="3546 words">3546</div>
+        </td>
+        <td class="cal__day">
+          <div class="cal__date">26</div>
+          <div class="cal__date-info" title="23 words">23</div>
+        </td>
+        <td class="cal__day is-disabled">
+          <div class="cal__date">27</div>
+          <div class="cal__date-info"></div>
+        </td>
+      </tr>
+      <tr class="cal__week">
+        <td class="cal__day is-disabled">
+          <div class="cal__date">28</div>
+          <div class="cal__date-info"></div>
+        </td>
+        <td class="cal__day">
+        </td>
+        <td class="cal__day">
+        </td>
+        <td class="cal__day">
+        </td>
+        <td class="cal__day">
+        </td>
+        <td class="cal__day">
+        </td>
+        <td class="cal__day">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+*/
+.new-zanata .cal {
+  display: table;
+  table-layout: fixed;
+}
+.new-zanata .cal__head {
+  border: none;
+}
+.new-zanata .cal__heading,
+.new-zanata .cal__day {
+  display: table-cell;
+  width: 14.2857%;
+  text-align: center;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  padding: 0;
+}
+.new-zanata .cal__heading:first-child,
+.new-zanata .cal__day:first-child {
+  border-left: none;
+}
+.new-zanata .cal__heading:last-child,
+.new-zanata .cal__day:last-child {
+  border-right: none;
+}
+.new-zanata .cal__heading {
+  color: #416988;
+  font-weight: 400;
+}
+.new-zanata .cal__day {
+  background-color: #e2e8ed;
+  color: #416988;
+  border-radius: 0.8125em;
+  overflow: hidden;
+}
+.new-zanata .cal__day:focus .cal__date, .new-zanata .cal__day:hover .cal__date {
+  background-color: #a9bbc9;
+}
+.new-zanata .cal__day:focus .cal__date-info, .new-zanata .cal__day:hover .cal__date-info {
+  background-color: #c6d2db;
+}
+.new-zanata .cal__day:active, .new-zanata .cal__day.is-active {
+  color: #fff !important;
+}
+.new-zanata .cal__day:active .cal__date, .new-zanata .cal__day.is-active .cal__date {
+  background-color: #416988;
+}
+.new-zanata .cal__day:active .cal__date-info, .new-zanata .cal__day.is-active .cal__date-info {
+  background-color: #7a96ab;
+}
+.new-zanata .cal__day[disabled], .new-zanata .cal__day.is-disabled {
+  pointer-events: none;
+  opacity: 1;
+}
+.new-zanata .cal__day[disabled] .cal__date,
+.new-zanata .cal__day[disabled] .cal__date-info, .new-zanata .cal__day.is-disabled .cal__date,
+.new-zanata .cal__day.is-disabled .cal__date-info {
+  opacity: .8;
+  cursor: default;
+}
+.new-zanata .cal__date,
+.new-zanata .cal__date-info {
+  cursor: pointer;
+  transition: all .25s ease-out;
+}
+.new-zanata .cal__date {
+  padding: 0.11607em 0.23214em;
+  background-color: #c6d2db;
+  font-size: 0.875em;
+  line-height: 1.85714em;
+}
+.new-zanata .cal__date-info {
+  font-weight: 700;
+  min-height: 2.03125em;
+  padding: 0.20313em;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.new-zanata .cal--highlight .cal__heading {
+  color: #4e9fdd;
+}
+.new-zanata .cal--highlight .cal__day {
+  background-color: #e4f0f9;
+  color: #4e9fdd;
+}
+.new-zanata .cal--highlight .cal__day:focus .cal__date, .new-zanata .cal--highlight .cal__day:hover .cal__date {
+  background-color: #afd3ef;
+}
+.new-zanata .cal--highlight .cal__day:focus .cal__date-info, .new-zanata .cal--highlight .cal__day:hover .cal__date-info {
+  background-color: #c9e2f4;
+}
+.new-zanata .cal--highlight .cal__day:active .cal__date, .new-zanata .cal--highlight .cal__day.is-active .cal__date {
+  background-color: #4e9fdd;
+}
+.new-zanata .cal--highlight .cal__day:active .cal__date-info, .new-zanata .cal--highlight .cal__day.is-active .cal__date-info {
+  background-color: #83bbe7;
+}
+.new-zanata .cal--highlight .cal__date {
+  background-color: #c9e2f4;
+}
+.new-zanata .cal--success .cal__heading {
+  color: #70a98b;
+}
+.new-zanata .cal--success .cal__day {
+  background-color: #e9f2ed;
+  color: #70a98b;
+}
+.new-zanata .cal--success .cal__day:focus .cal__date, .new-zanata .cal--success .cal__day:hover .cal__date {
+  background-color: #bed8ca;
+}
+.new-zanata .cal--success .cal__day:focus .cal__date-info, .new-zanata .cal--success .cal__day:hover .cal__date-info {
+  background-color: #d4e5dc;
+}
+.new-zanata .cal--success .cal__day:active .cal__date, .new-zanata .cal--success .cal__day.is-active .cal__date {
+  background-color: #70a98b;
+}
+.new-zanata .cal--success .cal__day:active .cal__date-info, .new-zanata .cal--success .cal__day.is-active .cal__date-info {
+  background-color: #9ac2ad;
+}
+.new-zanata .cal--success .cal__date {
+  background-color: #d4e5dc;
+}
+.new-zanata .cal--unsure .cal__heading {
+  color: #e0c350;
+}
+.new-zanata .cal--unsure .cal__day {
+  background-color: #faf6e4;
+  color: #e0c350;
+}
+.new-zanata .cal--unsure .cal__day:focus .cal__date, .new-zanata .cal--unsure .cal__day:hover .cal__date {
+  background-color: #f1e4b0;
+}
+.new-zanata .cal--unsure .cal__day:focus .cal__date-info, .new-zanata .cal--unsure .cal__day:hover .cal__date-info {
+  background-color: #f5edca;
+}
+.new-zanata .cal--unsure .cal__day:active .cal__date, .new-zanata .cal--unsure .cal__day.is-active .cal__date {
+  background-color: #e0c350;
+}
+.new-zanata .cal--unsure .cal__day:active .cal__date-info, .new-zanata .cal--unsure .cal__day.is-active .cal__date-info {
+  background-color: #e9d584;
+}
+.new-zanata .cal--unsure .cal__date {
+  background-color: #f5edca;
 }
 
 /*
