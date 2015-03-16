@@ -44,6 +44,15 @@
     <li><a href="#" class="i__item--right">Upload translation<i class="i i--import i__item__icon"></i></a></li>
     <li><a href="#" class="i__item--right">Download for translation<i class="i i--export i__item__icon"></i></a></li>
     <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
+    <li><a href="#" class="i__item--right">Download for use<i class="i i--export i__item__icon"></i></a></li>
   </ul>
 </div>
 <div class="dropdown dropdown--header dropdown--small dropdown--right js-dropdown">
@@ -161,6 +170,8 @@
   padding: 0;
   float: left;
   min-width: 100%;
+  max-height: rhythm(13);
+  overflow: auto;
   .csstransforms3d & {
     @extend .is-transition-bounce;
     @include opacity(0);
