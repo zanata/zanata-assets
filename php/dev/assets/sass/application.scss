@@ -59,43 +59,70 @@ Removes some of the styling on the page-level splitters
   outline:none;
 }
 
-.THEMES_COMPACT .transUnitCol {
-  padding:0 0;
+
+// Reset fonts
+.transUnitCol,
+.transUnitCol td {
+  font-size: 1em !important;
 }
 
-.THEMES_COMPACT .transUnitCol .buttons {
-  font-size:1.2em;
+.transUnitCol .sourceContentsContainer,
+.transUnitCol .TableEditorCell-Target > table > tbody > tr > td {
+  padding: 1.25em 0 0 !important;
 }
 
-.THEMES_DEFAULT .transUnitCol .sourceContentsContainer,
-.THEMES_DEFAULT .transUnitCol .TableEditorCell-Target > table > tbody > tr > td {
-  padding: 1.25em 0 0;
+.transUnitCol .sourceContentsContainer {
+  padding-bottom: 1.8em !important;
 }
 
-.THEMES_DEFAULT .transUnitCol .sourceContentsContainer {
-  padding-bottom: 2.25em;
+.transUnitCol .buttons {
+  font-size: 16px;
 }
 
-.THEMES_DEFAULT .transUnitCol .buttons {
-  font-size:1.3em;
+// Default
+
+.THEMES_DEFAULT {
+  font-size: 16px;
 }
 
-.THEMES_LOOSE .transUnitCol {
-  padding:0.8em 0;
+// Compact
+
+.THEMES_COMPACT {
+  font-size: 14px;
 }
 
-.THEMES_LOOSE .transUnitCol .buttons {
-  font-size:1.5em;
+// Loose
+
+.THEMES_LOOSE {
+  font-size: 20px;
 }
 
 .sourceContentsContainer .g--tight {
   padding: 0 !important;
   margin: 0 !important;
+  position: relative;
+  min-height: 3.9em;
+}
+
+.sourceContentsContainer > .g--tight + .g--tight {
+  margin-top: 1.25em !important;
+}
+
+// Select all strings if there is more than 1. i.e. Plurals.
+.sourceContentsContainer > .g--tight:not(:only-of-type):hover {
+  background: rgba(0,0,0,0.05);
+  cursor: pointer;
 }
 
 .sourceContentsContainer .w--11-12 {
   width: 100% !important;
-  padding-right: 2em !important;
+  padding-right: 3em !important;
+}
+
+.sourceContentsContainer .w--1-12 {
+  position: absolute;
+  right: 1.5em;
+  top: .5em;
 }
 
 .TableEditorCell-Target .g--tight {
@@ -109,7 +136,7 @@ Removes some of the styling on the page-level splitters
   width: 1.5em !important;
   position: absolute;
   padding: 0 !important;
-  left: -1.3em;
+  left: -1.1em;
   top: -.85em
 }
 
@@ -136,7 +163,7 @@ Removes some of the styling on the page-level splitters
 
 .TableEditorCell-Target .w--11-12 {
   width: 100% !important;
-  padding-left: 2em !important;
+  padding-left: 3em !important;
 }
 
 .TableEditorCell-Target table,
@@ -154,14 +181,13 @@ Removes some of the styling on the page-level splitters
 // Bookmark icon bar
 .transUnitCol:first-child > ul > li:nth-of-type(3) {
   padding-left: .75em;
-  position: absolute;
-  bottom: .375em;
-  left: 0;
+  padding-bottom: 0.3em;
+  margin-top: -1.8em;
 }
 
 .transUnitCol:first-child > ul > li:nth-of-type(3) > a {
   // override l--push-top-quarter class
-  margin-top: 0 !important;
+  margin-top: .1em !important;
 }
 
 .TableEditorRow > li:nth-of-type(3) {
@@ -185,7 +211,7 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitTable tr.selected {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff;
     opacity: 1 !important;
 }
 
@@ -566,7 +592,7 @@ td.RejectedStateDecoration div div div
     margin-top: 5px;
     margin-bottom: 5px;
     min-height: 1em;
-    font-size: 14px;
+    // font-size: 14px;
     font-family: $font-family-base;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -582,7 +608,7 @@ td.RejectedStateDecoration div div div
   padding: 0;
   box-shadow: none;
   line-height: 1.6;
-  font-size: 16px !important;
+  font-size: 1em !important;
   resize: none;
 }
 
@@ -600,7 +626,8 @@ td.RejectedStateDecoration div div div
 }
 
 .resultTable tbody td {
-    vertical-align: top;
+  vertical-align: top;
+  font-size: 14px;
 }
 
 .resultTable .oddRow {
@@ -685,6 +712,7 @@ td.RejectedStateDecoration div div div
 .CodeMirror {
   background: transparent !important;
   line-height: 1.6 !important;
+  font-size: 1em !important;
 }
 
 /* this is to NOT display cursor in source panel*/
@@ -695,6 +723,7 @@ td.RejectedStateDecoration div div div
 /* change code mirror mouse cursor */
 .sourceTable .CodeMirror-lines {
     cursor: default;
+    padding: 0 !important;
 }
 
 /* when using highlighting label to display source */
