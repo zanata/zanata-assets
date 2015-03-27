@@ -18,6 +18,13 @@ To start developing run `grunt wo`. This will start a livereload server, open th
 ## Building
 Just run `grunt build` which will concat and minify all files.
 
+## Release
+To release a new version, run `grunt build --rel ${version.number}`
+
+## Package and release
+- To package as JAR file, run `mvn clean install`. This will run `grunt build --rel ${version-in.pom.xml}` and package it as zanata-assets.jar file.
+- To release JAR file to cloudbees, run `mvn deploy:deploy`.
+
 ## Style Guide
 This will be generated from the css comments in `css-sg/style.css`. You can view the style guide from [localhost:4000/styleguide](http://localhost:4000/styleguide/).
 
@@ -26,5 +33,5 @@ This will be generated from the css comments in `css-sg/style.css`. You can view
 - Basic dashboard styling
 
 ## License
-Copyright (c) 2013 Luke Brooker  
+Copyright (c) 2013 Luke Brooker
 Licensed under the MIT license.
