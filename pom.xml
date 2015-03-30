@@ -59,10 +59,6 @@
           <exclude>js/components/**</exclude>
           <exclude>js/vendors/**</exclude>
           <exclude>fonts/source/**</exclude>
-          <exclude>fonts/zanata-v1/**</exclude>
-          <exclude>fonts/zanata-v2/**</exclude>
-          <exclude>fonts/zanata-v3/**</exclude>
-          <exclude>fonts/zanata-v4/**</exclude>
         </excludes>
        </resource>
      </resources>
