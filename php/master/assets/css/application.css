@@ -17,6 +17,10 @@
   padding-top: 3.5em;
 }
 
+html {
+  overflow: hidden !important;
+}
+
 html,
 body,
 .off-canvas__outer,
@@ -53,28 +57,138 @@ Removes some of the styling on the page-level splitters
   outline: none;
 }
 
-.THEMES_COMPACT .transUnitCol {
-  padding: 0 0;
+.transUnitCol,
+.transUnitCol td {
+  font-size: 1em !important;
 }
 
-.THEMES_COMPACT .transUnitCol .buttons {
-  font-size: 1.2em;
+.transUnitCol .sourceContentsContainer,
+.transUnitCol .TableEditorCell-Target > table > tbody > tr > td {
+  padding: 1.25em 0 0 !important;
 }
 
-.THEMES_DEFAULT .transUnitCol {
-  padding: 0.5em 0;
+.transUnitCol .sourceContentsContainer {
+  padding-bottom: 1.8em !important;
 }
 
-.THEMES_DEFAULT .transUnitCol .buttons {
-  font-size: 1.3em;
+.transUnitCol .buttons {
+  font-size: 16px;
 }
 
-.THEMES_LOOSE .transUnitCol {
-  padding: 0.8em 0;
+.THEMES_DEFAULT {
+  font-size: 16px;
 }
 
-.THEMES_LOOSE .transUnitCol .buttons {
-  font-size: 1.5em;
+.THEMES_COMPACT {
+  font-size: 14px;
+}
+
+.THEMES_LOOSE {
+  font-size: 20px;
+}
+
+.sourceContentsContainer .g--tight {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative;
+  min-height: 3.9em;
+}
+
+.sourceContentsContainer > .g--tight + .g--tight {
+  margin-top: 1.25em !important;
+}
+
+.sourceContentsContainer > .g--tight:not(:only-of-type):hover {
+  background: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.sourceContentsContainer .w--11-12 {
+  width: 100% !important;
+  padding-right: 3em !important;
+}
+
+.sourceContentsContainer .w--1-12 {
+  position: absolute;
+  right: 1.5em;
+  top: .5em;
+}
+
+.TableEditorCell-Target .g--tight {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.TableEditorCell-Target .w--1-12 {
+  width: 1.5em !important;
+  position: absolute;
+  padding: 0 !important;
+  left: -1.1em;
+  top: -0.85em;
+}
+
+.TableEditorCell-Target .w--1-12 .icon-right-1 {
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: .2s ease-out;
+  display: inline-block;
+  padding: 6px;
+  text-align: center;
+}
+.TableEditorCell-Target .w--1-12 .icon-right-1:hover {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #f4f4f4;
+}
+.TableEditorCell-Target .w--1-12 .icon-right-1:active {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  background-color: #eee;
+}
+.TableEditorCell-Target .w--1-12 .icon-right-1:before {
+  margin-right: 0;
+}
+
+.TableEditorCell-Target .w--11-12 {
+  width: 100% !important;
+  padding-left: 3em !important;
+}
+
+.TableEditorCell-Target table,
+.TableEditorCell-Target tbody,
+.TableEditorCell-Target tr,
+.TableEditorCell-Target td {
+  display: block !important;
+  overflow: visible !important;
+}
+
+.transUnitCol.transUnitCol > ul {
+  margin: 0 !important;
+}
+
+.transUnitCol:first-child > ul > li:nth-of-type(3) {
+  padding-left: .75em;
+  padding-bottom: 0.3em;
+  margin-top: -1.8em;
+}
+
+.transUnitCol:first-child > ul > li:nth-of-type(3) > a {
+  margin-top: .1em !important;
+}
+
+.TableEditorRow > li:nth-of-type(3) {
+  padding-top: .375em;
+  padding-bottom: .375em;
+  padding-right: 1em;
+}
+
+.selected .TableEditorCell-Target > table > tbody {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.transUnitCol {
+  position: relative;
 }
 
 .transUnitTable {
@@ -83,12 +197,12 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitTable tr.selected {
-  background-color: #F3F7FB;
+  background-color: #fff;
   opacity: 1 !important;
 }
 
 .transUnitTable > tbody > tr.selected > td {
-  box-shadow: 0 4px 3px rgba(211, 211, 211, 0.7), 0 -4px 3px rgba(211, 211, 211, 0.7);
+  box-shadow: 0 4px 10px rgba(211, 211, 211, 0.7), 0 -4px 10px rgba(211, 211, 211, 0.7);
 }
 
 .transUnitTable > tbody > tr:hover, .transUnitTable > tbody > tr:hover .fadeElement {
@@ -112,24 +226,38 @@ Removes some of the styling on the page-level splitters
   border-color: rgba(211, 211, 211, 0.4);
 }
 
+.transUnitTable td {
+  padding: 0;
+}
+
+.TableEditorRow {
+  position: relative;
+}
+
+.TableEditorRow > li:first-child {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
 tr.TableEditorRow.content-filter-nomatch {
   filter: alpha(opacity=25);
   opacity: 0.25;
 }
 
-.ApprovedStateDecoration .TableEditorCell-Target {
+.ApprovedStateDecoration {
   border-left: 4px solid #4e9fdd;
 }
 
-.FuzzyStateDecoration .TableEditorCell-Target {
+.FuzzyStateDecoration {
   border-left: 4px solid #e0c350;
 }
 
-.TranslatedStateDecoration .TableEditorCell-Target {
+.TranslatedStateDecoration {
   border-left: 4px solid #70a98b;
 }
 
-.RejectedStateDecoration .TableEditorCell-Target {
+.RejectedStateDecoration {
   border-left: 4px solid #e3824e;
 }
 
@@ -402,6 +530,7 @@ td.RejectedStateDecoration div div div {
 /* represent one text string. If it's not in plural form, this wraps one text flow. In plural form, this is one string */
 .textFlowEntry {
   border-top: dotted 1px #cce2f5;
+  padding-left: .2em;
 }
 .textFlowEntry:first-child {
   border-top: none;
@@ -411,17 +540,23 @@ td.RejectedStateDecoration div div div {
   margin-top: 5px;
   margin-bottom: 5px;
   min-height: 1em;
-  font-size: 14px;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
 
 .translationContainer pre, .translationContainer textarea {
-  font-size: 1.1em !important;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif !important;
   word-wrap: break-word;
   white-space: pre-wrap;
+  background: transparent !important;
+  border: none !important;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  line-height: 1.6;
+  font-size: 1em !important;
+  resize: none;
 }
 
 .translationContainer pre {
@@ -433,10 +568,12 @@ td.RejectedStateDecoration div div div {
 /* TM and Glossary result*/
 .resultTable {
   display: table !important;
+  table-layout: fixed;
 }
 
 .resultTable tbody td {
   vertical-align: top;
+  font-size: 14px;
 }
 
 .resultTable .oddRow {
@@ -452,7 +589,8 @@ td.RejectedStateDecoration div div div {
 }
 
 .resultTable .smallCol {
-  width: 2em;
+  width: 5em;
+  padding: 0;
 }
 
 .tableMsg {
@@ -516,6 +654,12 @@ td.RejectedStateDecoration div div div {
   word-break: break-all;
 }
 
+.CodeMirror {
+  background: transparent !important;
+  line-height: 1.6 !important;
+  font-size: 1em !important;
+}
+
 /* this is to NOT display cursor in source panel*/
 .sourceTable .CodeMirror-cursor {
   display: none;
@@ -524,6 +668,7 @@ td.RejectedStateDecoration div div div {
 /* change code mirror mouse cursor */
 .sourceTable .CodeMirror-lines {
   cursor: default;
+  padding: 0 !important;
 }
 
 /* when using highlighting label to display source */
@@ -543,8 +688,51 @@ td.RejectedStateDecoration div div div {
 }
 
 .keyShortcutPanel {
-  border: none;
-  z-index: 100;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: none !important;
+  z-index: 4000;
+  left: 50% !important;
+  top: 1em !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 2px;
+  overflow: auto !important;
+  max-height: 95%;
+}
+.keyShortcutPanel .popupContent > div {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+.keyShortcutPanel h2 {
+  margin: 0;
+  color: #fff !important;
+}
+.keyShortcutPanel .txt--lead {
+  color: #ddd !important;
+  margin-top: 1em !important;
+}
+.keyShortcutPanel table {
+  display: table !important;
+}
+.keyShortcutPanel tr {
+  background-color: transparent !important;
+}
+.keyShortcutPanel td {
+  border: none !important;
+  border-bottom: 1px solid #444 !important;
+  color: #ddd !important;
+  background-color: transparent !important;
+}
+.keyShortcutPanel tbody > tr:last-child td {
+  border: none !important;
+}
+.keyShortcutPanel tr > td:first-child {
+  width: 25%;
+}
+.keyShortcutPanel tr > td:last-child {
+  width: 75%;
 }
 
 #gwt-debug-TMMerge {
@@ -691,6 +879,21 @@ a.downloadLink {
 
 .translatorEditorContainer > div:nth-of-type(2) {
   overflow: visible !important;
+  left: 5px !important;
+}
+
+.translatorEditorContainer > div:nth-of-type(4) {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.translatorEditorContainer > div:nth-of-type(4) input {
+  top: 1px;
+  position: relative;
+}
+
+.translationContainer > div:nth-of-type(2) > div > div:nth-of-type(2) {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .l--scroll-auto {
@@ -831,8 +1034,13 @@ a.downloadLink {
   display: table !important;
 }
 
-.CodeMirror .cm-space {
-  padding: 0 0.2em;
+.cm-space {
+  position: relative !important;
+  bottom: 6px !important;
+  display: inline-block;
+  width: 3px;
+  margin: 0 2px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2) !important;
 }
 
 /**

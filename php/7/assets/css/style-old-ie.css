@@ -773,6 +773,12 @@ a:hover,
 .new-zanata input[type="radio"] {
   padding: 0;
 }
+.new-zanata input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-bottom: 0.20625em;
+}
 .new-zanata input[type="search"]::-webkit-search-cancel-button,
 .new-zanata input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
