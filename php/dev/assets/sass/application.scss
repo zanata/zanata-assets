@@ -23,6 +23,10 @@
 
 // Editor specific styling
 
+html {
+  overflow: hidden !important;
+}
+
 html,
 body,
 .off-canvas__outer,
@@ -196,6 +200,10 @@ Removes some of the styling on the page-level splitters
   padding-right: 1em;
 }
 
+.TableEditorCell-Target > table > tbody {
+  background-color: rgba($color-bg, .8);
+}
+
 .selected .TableEditorCell-Target > table > tbody {
   content: "";
   background-color: rgba(255, 255, 255, .8);
@@ -210,13 +218,17 @@ Removes some of the styling on the page-level splitters
   table-layout: fixed;
 }
 
+.transUnitTable tr {
+  background-color: $color-bg;
+}
+
 .transUnitTable tr.selected {
     background-color: #fff;
     opacity: 1 !important;
 }
 
 .transUnitTable>tbody>tr.selected>td {
-  box-shadow: 0 4px 10px rgba(211,211,211,0.7), 0 -4px 10px rgba(211,211,211,0.7);
+  box-shadow: 0 4px 6px rgba(0,0,0,.03), 0 -4px 6px rgba(0,0,0,.03);
 }
 
 .transUnitTable>tbody>tr:hover, .transUnitTable>tbody>tr:hover .fadeElement {
@@ -248,6 +260,7 @@ Removes some of the styling on the page-level splitters
 
 .TableEditorRow {
   position: relative;
+  border-left: 4px solid $color-neutral;
 }
 
 .TableEditorRow > li:first-child {
@@ -742,10 +755,50 @@ td.RejectedStateDecoration div div div
     cursor: default;
 }
 
-.keyShortcutPanel
-{
-  border:none;
-  z-index: 100
+.keyShortcutPanel {
+  @include transform(translateX(-50%));
+  border: none !important;
+  z-index: 4000;
+  left: 50% !important;
+  top: 1em !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 2px;
+  overflow: auto !important;
+  max-height: 95%;
+  .popupContent > div {
+    opacity: 1 !important;
+    background-color: transparent !important;
+  }
+  h2 {
+    margin: 0;
+    color: #fff !important;
+  }
+  .txt--lead {
+    color: #ddd !important;
+    margin-top: 1em !important;
+  }
+  table {
+    display: table !important;
+  }
+  tr {
+    background-color: transparent !important;
+  }
+  td {
+    border: none !important;
+    border-bottom: 1px solid #444 !important;
+    color: #ddd !important;
+    background-color: transparent !important;
+  }
+  tbody > tr:last-child td {
+    border: none !important;
+  }
+  tr > td:first-child {
+    width: 25%;
+  }
+
+  tr > td:last-child {
+    width: 75%;
+  }
 }
 
 #gwt-debug-TMMerge {
@@ -911,6 +964,7 @@ a.downloadLink
 
 .translatorEditorContainer > div:nth-of-type(2) {
   overflow:visible !important;
+  left: 5px !important;
 }
 
 .translatorEditorContainer > div:nth-of-type(4) {
@@ -1066,8 +1120,12 @@ a.downloadLink
 // Editor background
 .translatorEditorContainer div:nth-of-type(2) > table,
 .translatorEditorContainer div:nth-of-type(3) > div {
-  background: transparent !important
-;}
+  background: transparent !important;
+}
+
+.translatorEditorContainer div:nth-of-type(3) > div >div:first-child {
+  overflow: hidden;
+}
 
 // History Tabs
 #gwt-debug-transHistory-content .gwt-TabLayoutPanel {

@@ -200,6 +200,10 @@ Removes some of the styling on the page-level splitters
   padding-right: 1em;
 }
 
+.TableEditorCell-Target > table > tbody {
+  background-color: rgba($color-bg-light, .8);
+}
+
 .selected .TableEditorCell-Target > table > tbody {
   content: "";
   background-color: rgba(255, 255, 255, .8);
@@ -220,7 +224,15 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitTable>tbody>tr.selected>td {
-  box-shadow: 0 4px 10px rgba(211,211,211,0.7), 0 -4px 10px rgba(211,211,211,0.7);
+  box-shadow: 0 4px 6px rgba(0,0,0,.03), 0 -4px 6px rgba(0,0,0,.03);
+}
+
+tr > .transUnitCol:last-child {
+  background-color: rgba($color-bg-light, .8);
+}
+
+tr.selected > .transUnitCol:last-child {
+  background-color: rgba($color-bg-lightest, .8);
 }
 
 .transUnitTable>tbody>tr:hover, .transUnitTable>tbody>tr:hover .fadeElement {
@@ -252,6 +264,7 @@ Removes some of the styling on the page-level splitters
 
 .TableEditorRow {
   position: relative;
+  border-left: 4px solid $color-neutral;
 }
 
 .TableEditorRow > li:first-child {
@@ -471,17 +484,17 @@ td.RejectedStateDecoration div div div
 
 /* when colour diff is enabled: */
 .diff-equal {
-
+  // background: fade-out($color-highlight, .8);
 }
 
 .diff-insert {
-  background: #99ccff;
-  text-decoration: underline;
+  background: fade-out($color-success, .8);
+  text-decoration: none;
 }
 
 .diff-delete {
-  background: #ff9999;
-  text-decoration: line-through;
+  background: fade-out($color-danger, .8);
+  text-decoration: none;
 }
 
 .DocumentListTable {
@@ -596,10 +609,11 @@ td.RejectedStateDecoration div div div
     margin-top: 5px;
     margin-bottom: 5px;
     min-height: 1em;
-    // font-size: 14px;
+    font-size: 14px;
     font-family: $font-family-base;
     word-wrap: break-word;
     white-space: pre-wrap;
+    font-weight: 500;
 }
 
 .translationContainer pre, .translationContainer textarea {
@@ -643,7 +657,7 @@ td.RejectedStateDecoration div div div
 }
 
 .resultTable tr:hover {
-  background:#DFE3E7;
+  background: #fff;
 }
 
 .resultTable .smallCol {
@@ -1111,8 +1125,12 @@ a.downloadLink
 // Editor background
 .translatorEditorContainer div:nth-of-type(2) > table,
 .translatorEditorContainer div:nth-of-type(3) > div {
-  background: transparent !important
-;}
+  background: transparent !important;
+}
+
+.translatorEditorContainer div:nth-of-type(3) > div >div:first-child {
+  overflow: hidden;
+}
 
 // History Tabs
 #gwt-debug-transHistory-content .gwt-TabLayoutPanel {
