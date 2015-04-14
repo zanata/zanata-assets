@@ -37,9 +37,9 @@
             <configuration>
               <exportAntProperties>true</exportAntProperties>
               <target name="grunt.build">
-                <echo message="Run grunt build from source to version:${version}"/>
+                <echo message="Run grunt build from source to version:${project.version}"/>
                 <exec executable="grunt" failonerror="true">
-                  <arg line="build --rel ${version}" />
+                  <arg line="build --rel ${project.version}" />
                 </exec>
               </target>            
             </configuration>
@@ -52,8 +52,8 @@
     </plugins>
     <resources>
        <resource>
-         <directory>${basedir}/php/${version}/assets</directory>
-         <targetPath>${resources.dir}/assets</targetPath>
+         <directory>${basedir}/php/${project.version}/assets</directory>
+         <targetPath>${resources.dir}/jars/assets</targetPath>
          <excludes>
           <exclude>sass/**</exclude>
           <exclude>js/components/**</exclude>
