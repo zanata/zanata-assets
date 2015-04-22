@@ -67,17 +67,18 @@
   <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
-      <id>zanata-cloudbees-release</id>
-      <name>zanata-cloudbees-release</name>
+      <id>cloudbees-private-release-repository</id>
+      <name>cloudbees-private-release-repository</name>
       <url>dav:https://repository-zanata.forge.cloudbees.com/release/</url>
       <layout>default</layout>
     </repository>
     <snapshotRepository>
       <uniqueVersion>false</uniqueVersion>
-      <id>zanata-cloudbees-snapshot</id>
-      <name>zanata-cloudbees-snapshot</name>
+      <id>cloudbees-private-snapshot-repository</id>
+      <name>cloudbees-private-snapshot-repository</name>
       <url>dav:https://repository-zanata.forge.cloudbees.com/snapshot/</url>
       <layout>default</layout>
     </snapshotRepository>
-  </distributionManagement>  
+  </distributionManagement>
+
 </project>
