@@ -1006,9 +1006,7 @@ zanata.createNS = function(t) {
       appendCheckboxes: r,
       appendRadios: c,
       checkboxBindings: m,
-      radioBindings: h,
-      activateInputLoading: u,
-      deactivateInputLoading: d
+      radioBindings: h
     }
   }(jQuery), jQuery(function() {
     zanata.form.init()
