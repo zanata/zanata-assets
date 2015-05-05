@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-04-02
+/*! zanata-assets - v0.1.0 - 2015-05-06
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 ;(function () {
@@ -1884,7 +1884,8 @@ zanata.form = (function ($) {
   };
 
   var enableInputLoading = function(el, callback) {
-    var $el = $(el),
+    var $el = el ? $(el).find('.js-form__input--load') :
+          $('.js-form__input--load'),
         $elParent = $(el).parent(),
         $loader = $('<span />')
           .addClass('js-loader form__loader loader loader--mini');
@@ -2002,7 +2003,7 @@ zanata.form = (function ($) {
 
     appendCheckboxes(el, checkboxBindings(el));
     appendRadios(el, radioBindings(el));
-    enableInputLoading(el);
+    enableInputLoading();
     clearFormInit(el);
 
     $('.js-form-password-parent')

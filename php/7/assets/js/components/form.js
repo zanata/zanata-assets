@@ -112,7 +112,8 @@ zanata.form = (function ($) {
   };
 
   var enableInputLoading = function(el, callback) {
-    var $el = $(el),
+    var $el = el ? $(el).find('.js-form__input--load') :
+          $('.js-form__input--load'),
         $elParent = $(el).parent(),
         $loader = $('<span />')
           .addClass('js-loader form__loader loader loader--mini');
@@ -230,7 +231,7 @@ zanata.form = (function ($) {
 
     appendCheckboxes(el, checkboxBindings(el));
     appendRadios(el, radioBindings(el));
-    enableInputLoading(el);
+    enableInputLoading();
     clearFormInit(el);
 
     $('.js-form-password-parent')

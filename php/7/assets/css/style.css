@@ -4540,7 +4540,7 @@ Sub-headings can be used when placing a heading under another heading.
 ```example
 <label class="form__label">Search Projects</label>
 <div>
-  <input type="text" class="form__input js-form__input--clear" placeholder="Search projects etc">
+  <input type="text" class="form__input js-form__input--clear js-form__input--load" placeholder="Search projects etc">
 </div>
 ```
 
@@ -4549,7 +4549,7 @@ Sub-headings can be used when placing a heading under another heading.
 ```example
 <label class="form__label">Search Projects</label>
 <div>
-  <input type="text" class="form__input" placeholder="Search projects etc">
+  <input type="text" class="form__input js-form__input--load" placeholder="Search projects etc">
 </div>
 ```
 

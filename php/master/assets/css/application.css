@@ -182,6 +182,10 @@ Removes some of the styling on the page-level splitters
   padding-right: 1em;
 }
 
+.TableEditorCell-Target > table > tbody {
+  background-color: rgba(245, 246, 247, 0.8);
+}
+
 .selected .TableEditorCell-Target > table > tbody {
   content: "";
   background-color: rgba(255, 255, 255, 0.8);
@@ -202,7 +206,15 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitTable > tbody > tr.selected > td {
-  box-shadow: 0 4px 10px rgba(211, 211, 211, 0.7), 0 -4px 10px rgba(211, 211, 211, 0.7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03), 0 -4px 6px rgba(0, 0, 0, 0.03);
+}
+
+tr > .transUnitCol:last-child {
+  background-color: rgba(245, 246, 247, 0.8);
+}
+
+tr.selected > .transUnitCol:last-child {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .transUnitTable > tbody > tr:hover, .transUnitTable > tbody > tr:hover .fadeElement {
@@ -232,6 +244,7 @@ Removes some of the styling on the page-level splitters
 
 .TableEditorRow {
   position: relative;
+  border-left: 4px solid #c6d2db;
 }
 
 .TableEditorRow > li:first-child {
@@ -425,13 +438,13 @@ td.RejectedStateDecoration div div div {
 */
 /* when colour diff is enabled: */
 .diff-insert {
-  background: #99ccff;
-  text-decoration: underline;
+  background: rgba(112, 169, 139, 0.2);
+  text-decoration: none;
 }
 
 .diff-delete {
-  background: #ff9999;
-  text-decoration: line-through;
+  background: rgba(224, 87, 91, 0.2);
+  text-decoration: none;
 }
 
 .DocumentListTable {
@@ -540,9 +553,11 @@ td.RejectedStateDecoration div div div {
   margin-top: 5px;
   margin-bottom: 5px;
   min-height: 1em;
+  font-size: 14px;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   word-wrap: break-word;
   white-space: pre-wrap;
+  font-weight: 500;
 }
 
 .translationContainer pre, .translationContainer textarea {
@@ -585,7 +600,7 @@ td.RejectedStateDecoration div div div {
 }
 
 .resultTable tr:hover {
-  background: #DFE3E7;
+  background: #fff;
 }
 
 .resultTable .smallCol {
@@ -1009,6 +1024,10 @@ a.downloadLink {
 .translatorEditorContainer div:nth-of-type(2) > table,
 .translatorEditorContainer div:nth-of-type(3) > div {
   background: transparent !important;
+}
+
+.translatorEditorContainer div:nth-of-type(3) > div > div:first-child {
+  overflow: hidden;
 }
 
 #gwt-debug-transHistory-content .gwt-TabLayoutPanel {
