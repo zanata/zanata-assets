@@ -68,7 +68,7 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitCol .sourceContentsContainer {
-  padding-bottom: 1.8em !important;
+  padding-bottom: .7em !important;
 }
 
 .transUnitCol .buttons {
@@ -91,7 +91,6 @@ Removes some of the styling on the page-level splitters
   padding: 0 !important;
   margin: 0 !important;
   position: relative;
-  min-height: 3.9em;
 }
 
 .sourceContentsContainer > .g--tight + .g--tight {
@@ -167,9 +166,7 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitCol:first-child > ul > li:nth-of-type(3) {
-  padding-left: .75em;
-  padding-bottom: 0.3em;
-  margin-top: -1.8em;
+  padding: .2em .75em;
 }
 
 .transUnitCol:first-child > ul > li:nth-of-type(3) > a {
@@ -673,6 +670,7 @@ td.RejectedStateDecoration div div div {
   background: transparent !important;
   line-height: 1.6 !important;
   font-size: 1em !important;
+  min-height: 0 !important;
 }
 
 /* this is to NOT display cursor in source panel*/
