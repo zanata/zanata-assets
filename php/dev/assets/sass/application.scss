@@ -76,7 +76,7 @@ Removes some of the styling on the page-level splitters
 }
 
 .transUnitCol .sourceContentsContainer {
-  padding-bottom: 1.8em !important;
+  padding-bottom: .7em !important;
 }
 
 .transUnitCol .buttons {
@@ -180,11 +180,6 @@ Removes some of the styling on the page-level splitters
 
 .transUnitCol.transUnitCol > ul {
   margin: 0 !important;
-}
-
-// Translation source
-.transUnitCol:first-child > ul > li:nth-of-type(3) {
-  padding-bottom: 0.7em;
 }
 
 // Bookmark icon bar
@@ -734,7 +729,7 @@ td.RejectedStateDecoration div div div
   background: transparent !important;
   line-height: 1.6 !important;
   font-size: 1em !important;
-  min-height: none !important;
+  min-height: 0 !important;
 }
 
 /* this is to NOT display cursor in source panel*/
@@ -1127,12 +1122,12 @@ a.downloadLink
 }
 
 // Editor background
-.translatorEditorContainer div:nth-of-type(2) > table,
-.translatorEditorContainer div:nth-of-type(3) > div {
+.translatorEditorContainer > div:nth-of-type(2) > table,
+.translatorEditorContainer > div:nth-of-type(3) > div {
   background: transparent !important;
 }
 
-.translatorEditorContainer div:nth-of-type(3) > div >div:first-child {
+.translatorEditorContainer > div:nth-of-type(3) > div >div:first-child {
   overflow: hidden;
 }
 
