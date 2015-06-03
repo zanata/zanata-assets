@@ -1122,12 +1122,12 @@ a.downloadLink
 }
 
 // Editor background
-.translatorEditorContainer > div:nth-of-type(2) > table,
-.translatorEditorContainer > div:nth-of-type(3) > div {
+.translatorEditorContainer div:nth-of-type(2) > table,
+.translatorEditorContainer div:nth-of-type(3) > div {
   background: transparent !important;
 }
 
-.translatorEditorContainer > div:nth-of-type(3) > div >div:first-child {
+.translatorEditorContainer div:nth-of-type(3) > div >div:first-child {
   overflow: hidden;
 }
 
@@ -1159,9 +1159,7 @@ a.downloadLink
   position: relative !important;
   bottom: 6px !important;
   display: inline-block;
-  width: 3px;
-  margin: 0 2px;
-  border-bottom: 2px solid rgba(0,0,0,.2) !important;
+  border-bottom: 2px solid rgba(0,0,0,.15) !important;
 }
 
 @import "standard";

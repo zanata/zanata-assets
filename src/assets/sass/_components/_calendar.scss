@@ -237,6 +237,7 @@
 .cal__date {
   padding: rhythm(.0625, 14px) rhythm(.125, 14px);
   background-color: tint($color-secondary, 70);
+  border-radius: rhythm(.5) rhythm(.5) 0 0;
   @include adjust-font-size-to(14px);
 }
 
@@ -244,6 +245,7 @@
   font-weight: 700;
   min-height: rhythm(1.25);
   padding: rhythm(.125);
+  border-radius: 0 0 rhythm(.5) rhythm(.5);
   @include ellipsis;
 }
 

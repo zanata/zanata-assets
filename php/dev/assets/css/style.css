@@ -57,17 +57,17 @@
 }
 
 .ph__color-primary:before {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .ph__color-primary:after {
-  content: "#4e9fdd";
+  content: "#03A6D7";
 }
 
 .ph__color-secondary:before {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .ph__color-secondary:after {
-  content: "#416988";
+  content: "#20718A";
 }
 
 .ph__color-base-font:before {
@@ -195,7 +195,7 @@ html.new-zanata,
 body.new-zanata,
 .new-zanata-base-inner {
   margin: 0;
-  background: #edeff1;
+  background: #ECEFF0;
   overflow-y: scroll;
 }
 
@@ -242,7 +242,7 @@ Used to section content and create hierarchy
 .new-zanata .delta, .new-zanata h5,
 .new-zanata .epsilon, .new-zanata h6,
 .new-zanata .zeta {
-  color: #416988;
+  color: #20718A;
   margin: 0;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -377,9 +377,9 @@ Used to section content and create hierarchy
   white-space: pre;
   padding: 0.8125em;
   margin: 0.92857em 0;
-  border-top: 1px solid rgba(65, 105, 136, 0.15);
-  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
-  background-color: rgba(65, 105, 136, 0.05);
+  border-top: 1px solid rgba(32, 113, 138, 0.15);
+  border-bottom: 1px solid rgba(32, 113, 138, 0.15);
+  background-color: rgba(32, 113, 138, 0.05);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -423,7 +423,7 @@ Used to section content and create hierarchy
 
 */
 .new-zanata a {
-  color: #4e9fdd;
+  color: #03A6D7;
   text-decoration: none;
   cursor: pointer;
   outline: none;
@@ -440,7 +440,7 @@ Used to section content and create hierarchy
 .new-zanata a h4,
 .new-zanata a h5,
 .new-zanata a h6 {
-  color: #4e9fdd;
+  color: #03A6D7;
   -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.1s;
   -o-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.1s;
   -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.1s;
@@ -450,7 +450,7 @@ Used to section content and create hierarchy
 .new-zanata .\3A hover,
 .new-zanata a:focus,
 .new-zanata .\3A focus {
-  color: #2479bb;
+  color: #026c8c;
 }
 .new-zanata a:hover h1,
 .new-zanata a:hover h2,
@@ -476,14 +476,14 @@ Used to section content and create hierarchy
 .new-zanata .\3A focus h4,
 .new-zanata .\3A focus h5,
 .new-zanata .\3A focus h6 {
-  color: #2479bb;
+  color: #026c8c;
 }
 .new-zanata a:focus {
-  -moz-box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
-  -webkit-box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
-  box-shadow: 0 0 0 4px rgba(78, 159, 221, 0.3);
+  -moz-box-shadow: 0 0 0 4px rgba(3, 166, 215, 0.3);
+  -webkit-box-shadow: 0 0 0 4px rgba(3, 166, 215, 0.3);
+  box-shadow: 0 0 0 4px rgba(3, 166, 215, 0.3);
   outline: 0;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 .new-zanata a:active:focus {
   -moz-box-shadow: none;
@@ -499,7 +499,7 @@ a:hover,
 .new-zanata a:active,
 .new-zanata a.is-active,
 .new-zanata .\3A active {
-  color: #416988;
+  color: #20718A;
 }
 .new-zanata a:active h1,
 .new-zanata a:active h2,
@@ -519,7 +519,7 @@ a:hover,
 .new-zanata .\3A active h4,
 .new-zanata .\3A active h5,
 .new-zanata .\3A active h6 {
-  color: #416988;
+  color: #20718A;
 }
 
 /*
@@ -721,31 +721,31 @@ a:hover,
   line-height: 1.625em;
 }
 .new-zanata ::-webkit-input-placeholder {
-  color: #a2b4c3;
+  color: #8fb8c4;
   font-weight: 300;
 }
 .new-zanata :-moz-placeholder {
-  color: #a2b4c3;
+  color: #8fb8c4;
   font-weight: 300;
 }
 .new-zanata ::-moz-placeholder {
-  color: #a2b4c3;
+  color: #8fb8c4;
   font-weight: 300;
 }
 .new-zanata :-ms-input-placeholder {
-  color: #a2b4c3;
+  color: #8fb8c4;
   font-weight: 300;
 }
 .new-zanata fieldset {
   border-width: 0.0625em;
   border-style: solid;
   padding: 0.75em;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   margin: 1.21875em 0;
   padding-bottom: 0;
-  border-color: #d9e1e7;
+  border-color: #d2e2e7;
 }
 .new-zanata legend {
   border: 0;
@@ -818,9 +818,9 @@ a:hover,
 .new-zanata input[type="time"],
 .new-zanata input[type="url"],
 .new-zanata textarea {
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -o-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
@@ -836,8 +836,8 @@ a:hover,
   display: block;
   width: 100%;
   font-weight: 400;
-  border: 1px solid #c6d2db;
-  background-color: #fdfdfe;
+  border: 1px solid #bcd4db;
+  background-color: #f7f8f9;
   color: #333333;
   margin: 0 0 0.8125em;
   -webkit-appearance: none;
@@ -858,7 +858,7 @@ a:hover,
   -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   outline: none !important;
-  border: 1px solid #7c96ac;
+  border: 1px solid #629bad;
   background: #fff;
 }
 .new-zanata input[type="text"][disabled],
@@ -872,7 +872,7 @@ a:hover,
 .new-zanata input[type="time"][disabled],
 .new-zanata input[type="url"][disabled],
 .new-zanata textarea[disabled] {
-  background-color: #e5e7e9;
+  background-color: #e4e7e8;
 }
 .new-zanata [contenteditable]:focus {
   outline: none !important;
@@ -889,7 +889,7 @@ a:hover,
   height: 2.03125em;
   border: 1px solid #ccc;
   color: #444c54;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .new-zanata audio,
@@ -926,7 +926,7 @@ a:hover,
   height: 0;
   width: 100%;
   border: 0;
-  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 1px solid rgba(32, 113, 138, 0.15);
   margin: 1.625em 0;
   background: transparent;
 }
@@ -2816,10 +2816,10 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 */
 .new-zanata .txt--invert {
-  color: #edeff1;
+  color: #ECEFF0;
 }
 .new-zanata .txt--invert a {
-  color: #c2c9d0 !important;
+  color: #c1cbce !important;
 }
 .new-zanata .txt--invert a:hover {
   color: white !important;
@@ -2896,7 +2896,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .txt--meta {
   font-size: 0.875em;
   line-height: 1.39286em;
-  color: #7c96ac;
+  color: #629bad;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -2911,7 +2911,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 */
 .new-zanata .txt--understated, .new-zanata .i--understated:before {
-  color: #7c96ac;
+  color: #629bad;
 }
 
 /*
@@ -2961,28 +2961,28 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--highlight,
 .new-zanata .txt--state-highlight {
-  color: #4e9fdd !important;
+  color: #03A6D7 !important;
 }
 .new-zanata .txt--success, .new-zanata .message--success,
 .new-zanata .txt--state-success {
-  color: #70a98b !important;
+  color: #5CCA7B !important;
 }
 .new-zanata .txt--unsure, .new-zanata .message--unsure,
 .new-zanata .txt--state-unsure {
-  color: #e0c350 !important;
+  color: #E9DF1B !important;
 }
 .new-zanata .txt--warning, .new-zanata .message--warning,
 .new-zanata .txt--state-warning {
-  color: #e3824e !important;
+  color: #FFA800 !important;
 }
 .new-zanata .txt--danger, .new-zanata .message--danger,
 .new-zanata .txt--state-danger,
 .new-zanata .txt--required {
-  color: #e0575b !important;
+  color: #FF3B3D !important;
 }
 .new-zanata .txt--neutral, .new-zanata .message--neutral,
 .new-zanata .txt--state-neutral {
-  color: #c6d2db !important;
+  color: #bcd4db !important;
 }
 
 /*
@@ -3004,7 +3004,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .divide, .new-zanata .d--right, .new-zanata .d--left, .new-zanata .d--bottom, .new-zanata .d--top {
   border-width: 0;
   border-style: solid;
-  border-color: rgba(65, 105, 136, 0.15);
+  border-color: rgba(32, 113, 138, 0.15);
 }
 .new-zanata .d--right {
   border-right-width: 1px;
@@ -3065,7 +3065,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .header__user-nav__menu:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
 .new-zanata .bg--high--hover:hover {
-  background-color: #f5f6f7;
+  background-color: #f4f6f6;
 }
 .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after,
 .new-zanata .bg--higher:hover,
@@ -3075,7 +3075,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover,
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .bg--higher--hover:hover {
-  background-color: #fdfdfe;
+  background-color: #f7f8f9;
 }
 .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active a,
 .new-zanata .tabs--vertical .tabs__nav > li > a.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
@@ -3097,31 +3097,31 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover {
-  background-color: #d0d5db;
+  background-color: #d0d7d9;
 }
 .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover {
-  background-color: #a5afb9;
+  background-color: #a5b3b8;
 }
 .new-zanata .bg--lowest,
 .new-zanata .bg--lowest--hover:hover {
-  background-color: #7a8998;
+  background-color: #7a8f96;
 }
 .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu {
-  border: 1px solid rgba(65, 105, 136, 0.15);
+  border: 1px solid rgba(32, 113, 138, 0.15);
   border-bottom-width: 2px;
 }
 .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header {
-  border: 1px solid rgba(65, 105, 136, 0.15);
+  border: 1px solid rgba(32, 113, 138, 0.15);
   border-bottom-width: 2px;
 }
 .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active a,
 .new-zanata .tabs--vertical .tabs__nav > li > a.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn {
-  border: 1px solid rgba(65, 105, 136, 0.15);
+  border: 1px solid rgba(32, 113, 138, 0.15);
   border-bottom-width: 2px;
 }
 .new-zanata .bg--neutral, .new-zanata .message--neutral {
-  background-color: #edeff1;
+  background-color: #ECEFF0;
 }
 
 /*
@@ -3147,25 +3147,25 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 */
 .new-zanata .bg--primary {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .new-zanata .bg--secondary {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .new-zanata .bg--danger, .new-zanata .message--danger {
-  background-color: #f8ddde;
+  background-color: #ffd7d8;
 }
 .new-zanata .bg--warning, .new-zanata .message--warning {
-  background-color: #f9e6db;
+  background-color: #ffedcc;
 }
 .new-zanata .bg--unsure, .new-zanata .message--unsure {
-  background-color: #fbf9ed;
+  background-color: #fcfbe8;
 }
 .new-zanata .bg--success, .new-zanata .message--success {
-  background-color: #e2ede7;
+  background-color: #def4e4;
 }
 .new-zanata .bg--highlight, .new-zanata .message--highlight {
-  background-color: #dbebf8;
+  background-color: #ccedf7;
 }
 
 /*
@@ -3694,7 +3694,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .heading--sub {
   margin-top: 0;
   font-weight: 400;
-  color: #84a8c4;
+  color: #52b8d7;
   display: inline-block;
 }
 
@@ -3801,7 +3801,7 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list--slat > li {
   padding: 0.40625em 0;
-  border-top: 1px solid rgba(65, 105, 136, 0.1);
+  border-top: 1px solid rgba(32, 113, 138, 0.1);
 }
 .new-zanata .list--slat > li > a {
   display: inline-block;
@@ -3859,7 +3859,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list--slat-horizontal > li {
   display: inline-block;
   padding: 0 0.40625em;
-  border-left: 1px solid rgba(65, 105, 136, 0.1);
+  border-left: 1px solid rgba(32, 113, 138, 0.1);
 }
 .new-zanata .list--slat-horizontal > li > a {
   display: inline-block;
@@ -3923,14 +3923,14 @@ Sub-headings can be used when placing a heading under another heading.
 ```
 */
 .new-zanata .list--panel > li, .new-zanata .list--stats > li {
-  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 1px solid rgba(32, 113, 138, 0.15);
   position: relative;
 }
 .new-zanata .list--panel > li.is-active, .new-zanata .list--stats > li.is-active {
   background-color: #fff;
 }
 .new-zanata .list--panel > li.is-active > a, .new-zanata .list--stats > li.is-active > a {
-  color: #416988;
+  color: #20718A;
 }
 .new-zanata .list--panel .list__item, .new-zanata .list--stats .list__item,
 .new-zanata .list--panel .list__item__content,
@@ -3979,7 +3979,7 @@ Sub-headings can be used when placing a heading under another heading.
   font-size: 0.875em;
   display: block;
   margin: 0 0 0.46429em;
-  color: #a2b4c3;
+  color: #8fb8c4;
   font-weight: 400;
   line-height: 1em;
   word-break: break-all;
@@ -4043,7 +4043,7 @@ Sub-headings can be used when placing a heading under another heading.
   margin-top: 0;
 }
 .new-zanata .list--stats > li.is-active {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .new-zanata .list--stats > li.is-active > a,
 .new-zanata .list--stats > li.is-active .dropdown__toggle,
@@ -4063,7 +4063,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list--stats .list__item__stats {
   margin-left: 0.8125em;
   text-align: right;
-  color: #416988;
+  color: #20718A;
   vertical-align: middle;
 }
 .new-zanata .list--stats .list__title {
@@ -4104,7 +4104,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--highlight > li:hover {
-  background-color: rgba(65, 105, 136, 0.05);
+  background-color: rgba(32, 113, 138, 0.05);
 }
 .new-zanata .list--highlight__item--none:hover {
   background-color: inherit !important;
@@ -4167,73 +4167,73 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .link--success, .new-zanata .message--success a,
 .new-zanata .message--success button {
-  color: #70a98b !important;
+  color: #5CCA7B !important;
 }
 .new-zanata .link--success:hover, .new-zanata .message--success a:hover,
 .new-zanata .message--success button:hover, .new-zanata .link--success:focus, .new-zanata .message--success a:focus,
 .new-zanata .message--success button:focus {
-  color: #4e7661 !important;
+  color: #408d56 !important;
 }
 .new-zanata .link--success:active, .new-zanata .message--success a:active,
 .new-zanata .message--success button:active, .new-zanata .link--success.is-active, .new-zanata .message--success a.is-active,
 .new-zanata .message--success button.is-active {
-  color: #2c4337 !important;
+  color: #245031 !important;
 }
 .new-zanata .link--unsure, .new-zanata .message--unsure a,
 .new-zanata .message--unsure button {
-  color: #e0c350 !important;
+  color: #E9DF1B !important;
 }
 .new-zanata .link--unsure:hover, .new-zanata .message--unsure a:hover,
 .new-zanata .message--unsure button:hover, .new-zanata .link--unsure:focus, .new-zanata .message--unsure a:focus,
 .new-zanata .message--unsure button:focus {
-  color: #9c8838 !important;
+  color: #a39c12 !important;
 }
 .new-zanata .link--unsure:active, .new-zanata .message--unsure a:active,
 .new-zanata .message--unsure button:active, .new-zanata .link--unsure.is-active, .new-zanata .message--unsure a.is-active,
 .new-zanata .message--unsure button.is-active {
-  color: #594e20 !important;
+  color: #5d590a !important;
 }
 .new-zanata .link--warning, .new-zanata .message--warning a,
 .new-zanata .message--warning button {
-  color: #e3824e !important;
+  color: #FFA800 !important;
 }
 .new-zanata .link--warning:hover, .new-zanata .message--warning a:hover,
 .new-zanata .message--warning button:hover, .new-zanata .link--warning:focus, .new-zanata .message--warning a:focus,
 .new-zanata .message--warning button:focus {
-  color: #9e5b36 !important;
+  color: #b27500 !important;
 }
 .new-zanata .link--warning:active, .new-zanata .message--warning a:active,
 .new-zanata .message--warning button:active, .new-zanata .link--warning.is-active, .new-zanata .message--warning a.is-active,
 .new-zanata .message--warning button.is-active {
-  color: #5a341f !important;
+  color: #664300 !important;
 }
 .new-zanata .link--danger, .new-zanata .message--danger a,
 .new-zanata .message--danger button {
-  color: #e0575b !important;
+  color: #FF3B3D !important;
 }
 .new-zanata .link--danger:hover, .new-zanata .message--danger a:hover,
 .new-zanata .message--danger button:hover, .new-zanata .link--danger:focus, .new-zanata .message--danger a:focus,
 .new-zanata .message--danger button:focus {
-  color: #9c3c3f !important;
+  color: #b2292a !important;
 }
 .new-zanata .link--danger:active, .new-zanata .message--danger a:active,
 .new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
 .new-zanata .message--danger button.is-active {
-  color: #592224 !important;
+  color: #661718 !important;
 }
 .new-zanata .link--danger, .new-zanata .message--danger a,
 .new-zanata .message--danger button {
-  color: #416988 !important;
+  color: #20718A !important;
 }
 .new-zanata .link--danger:hover, .new-zanata .message--danger a:hover,
 .new-zanata .message--danger button:hover, .new-zanata .link--danger:focus, .new-zanata .message--danger a:focus,
 .new-zanata .message--danger button:focus {
-  color: #2d495f !important;
+  color: #164f60 !important;
 }
 .new-zanata .link--danger:active, .new-zanata .message--danger a:active,
 .new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
 .new-zanata .message--danger button.is-active {
-  color: #1a2a36 !important;
+  color: #0c2d37 !important;
 }
 
 /*
@@ -4270,11 +4270,11 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form__item--error input,
 .new-zanata .form__item--error textarea {
-  border: 2px solid #e0575b !important;
+  border: 2px solid #FF3B3D !important;
 }
 .new-zanata .form__item--warning input,
 .new-zanata .form__item--warning textarea {
-  border: 2px solid #e3824e !important;
+  border: 2px solid #FFA800 !important;
 }
 .new-zanata .form__item--radio-vertical {
   text-align: center;
@@ -4332,12 +4332,12 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form__checkbox:hover, .new-zanata .form__checkbox.is-focused,
 .new-zanata .form__radio:hover,
 .new-zanata .form__radio.is-focused {
-  background-color: rgba(78, 159, 221, 0.06);
+  background-color: rgba(3, 166, 215, 0.06);
 }
 .new-zanata .form__checkbox.is-checked, .new-zanata .form__checkbox.is-checked:hover,
 .new-zanata .form__radio.is-checked,
 .new-zanata .form__radio.is-checked:hover {
-  background-color: rgba(78, 159, 221, 0.12);
+  background-color: rgba(3, 166, 215, 0.12);
 }
 .new-zanata .form__checkbox__item,
 .new-zanata .form__radio__item {
@@ -4352,7 +4352,7 @@ Sub-headings can be used when placing a heading under another heading.
   left: .43em;
   width: 1em;
   height: 1em;
-  border: 1px solid #a2b4c3;
+  border: 1px solid #8fb8c4;
   content: "";
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -4361,10 +4361,10 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form__checkbox__item.is-checked:before,
 .new-zanata .form__radio__item.is-checked:before {
-  border-color: #416988;
+  border-color: #20718A;
 }
 .new-zanata .form__checkbox__item:before {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 .new-zanata .form__checkbox__item:after {
   -moz-transform: scale(0.1, 0.1);
@@ -4376,7 +4376,7 @@ Sub-headings can be used when placing a heading under another heading.
   position: absolute;
   top: .3em;
   left: .43em;
-  color: #416988;
+  color: #20718A;
 }
 .new-zanata .form__checkbox__item.is-checked:before {
   background-color: #fff;
@@ -4405,12 +4405,12 @@ Sub-headings can be used when placing a heading under another heading.
   }
 }
 .new-zanata .form__radio__item.is-checked:before {
-  background-color: #416988;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iNDIlIj48c3RvcCBvZmZzZXQ9IjM3JSIgc3RvcC1jb2xvcj0iIzQxNjk4OCIvPjxzdG9wIG9mZnNldD0iNDIlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-color: #20718A;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iNDIlIj48c3RvcCBvZmZzZXQ9IjM3JSIgc3RvcC1jb2xvcj0iIzIwNzE4YSIvPjxzdG9wIG9mZnNldD0iNDIlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
-  background-image: -moz-radial-gradient(center, ellipse, #416988 37%, #ffffff 42%);
-  background-image: -webkit-radial-gradient(center, ellipse, #416988 37%, #ffffff 42%);
-  background-image: radial-gradient(ellipse at center, #416988 37%, #ffffff 42%);
+  background-image: -moz-radial-gradient(center, ellipse, #20718a 37%, #ffffff 42%);
+  background-image: -webkit-radial-gradient(center, ellipse, #20718a 37%, #ffffff 42%);
+  background-image: radial-gradient(ellipse at center, #20718a 37%, #ffffff 42%);
 }
 .new-zanata .form__checkbox__label,
 .new-zanata .form__radio__label {
@@ -4486,37 +4486,37 @@ Sub-headings can be used when placing a heading under another heading.
   left: 0.60938em;
   margin-top: 0.20313em;
   line-height: 1.625em;
-  color: #a2b4c3;
+  color: #8fb8c4;
   pointer-events: none;
 }
 .new-zanata .form--search.is-active:before {
-  color: #416988;
+  color: #20718A;
 }
 .new-zanata input.form--search__input {
   margin: 0;
   padding-right: 1.625em;
   padding-left: 2.03125em;
   height: 2.03125em;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 .new-zanata input.form--search__input:hover {
-  border-color: #a2b4c3;
+  border-color: #8fb8c4;
 }
 .new-zanata .form--search .form--search__submit {
   position: absolute;
   right: 0.40625em;
   top: 0.8125em;
-  color: #b3c3cf;
+  color: #a5c6d0;
   height: 1.625em;
 }
 .new-zanata .form--search.is-active .form--search__submit {
-  color: #4e9fdd;
+  color: #03A6D7;
 }
 .new-zanata .form--search.is-active .form--search__submit:hover, .new-zanata .form--search.is-active .form--search__submit:focus {
-  color: #2479bb;
+  color: #026c8c;
 }
 .new-zanata .form--search.is-active .form--search__submit:active {
-  color: #416988;
+  color: #20718A;
 }
 .new-zanata .form--search.is-loading:before {
   opacity: 0;
@@ -4714,7 +4714,7 @@ Keep focus while showing and hiding a password field
 
 */
 .new-zanata .form__placeholder {
-  color: #a2b4c3 !important;
+  color: #8fb8c4 !important;
   font-weight: 300 !important;
 }
 
@@ -4732,12 +4732,12 @@ Keep focus while showing and hiding a password field
   height: 1.625em;
   padding: 0.20313em;
   margin: 0;
-  background-color: #f5f6f7;
+  background-color: #f4f6f6;
   border-color: transparent;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #4e9fdd;
+  color: #03A6D7;
 }
 .new-zanata input.form__input--copyable:focus {
   color: #444c54;
@@ -4767,7 +4767,7 @@ Keep focus while showing and hiding a password field
   min-height: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #edeff1;
+  background-color: #ECEFF0;
   -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -o-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
@@ -4850,11 +4850,11 @@ Keep focus while showing and hiding a password field
 }
 
 .off-canvas__toggle--left {
-  border-right: 1px solid #d9e1e7;
+  border-right: 1px solid #d2e2e7;
 }
 
 .off-canvas__toggle--right {
-  border-left: 1px solid #d9e1e7;
+  border-left: 1px solid #d2e2e7;
 }
 
 .off-canvas__header {
@@ -4885,7 +4885,7 @@ Keep focus while showing and hiding a password field
   -webkit-backface-visibility: hidden;
 }
 [data-off-canvas=over].off-canvas--left, [data-off-canvas=over].off-canvas--right {
-  background-color: #fdfdfe;
+  background-color: #f7f8f9;
   -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -4985,11 +4985,11 @@ Keep focus while showing and hiding a password field
 }
 
 [data-off-canvas=over] .off-canvas__close {
-  background-color: #d9dde1;
-  color: #fbfcfc;
+  background-color: #d8dee0;
+  color: #fafbfb;
 }
 [data-off-canvas=over] .off-canvas__close:hover {
-  background-color: #c2c9d0;
+  background-color: #c1cbce;
   color: white;
 }
 
@@ -5014,7 +5014,7 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs__nav > ul > li.is-active > a,
 .new-zanata .tabs__nav > li.is-active > a {
-  color: #416988;
+  color: #20718A;
   cursor: default;
 }
 .new-zanata .tabs__nav > ul > li > a,
@@ -5051,7 +5051,7 @@ Keep focus while showing and hiding a password field
   display: block;
 }
 .new-zanata .tabs--lined > .tabs__nav {
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 2px solid rgba(32, 113, 138, 0.15);
   max-height: 3.25em;
 }
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
@@ -5073,19 +5073,19 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a.is-active:after,
 .new-zanata .tabs--lined > .tabs__nav > li > a.is-active:after {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .new-zanata .tabs--lined > .tabs__nav > ul > li:hover > a:after,
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a:hover:after,
 .new-zanata .tabs--lined > .tabs__nav > li:hover > a:after,
 .new-zanata .tabs--lined > .tabs__nav > li > a:hover:after {
-  background-color: #c6d2db;
+  background-color: #bcd4db;
 }
 .new-zanata .tabs--lined > .tabs__nav > ul > li.is-active > a:after,
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a.is-active:after,
 .new-zanata .tabs--lined > .tabs__nav > li.is-active > a:after,
 .new-zanata .tabs--lined > .tabs__nav > li > a.is-active:after {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--inline, .new-zanata .tabs--lined > .tabs__nav .i--left, .new-zanata .tabs--lined > .tabs__nav .i--right, .new-zanata .tabs--lined > .tabs__nav .i--understated, .new-zanata .tabs--lined > .tabs__nav .i--small, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .header__user-nav__toggle:before, .new-zanata .tabs--lined > .tabs__nav .i--huge, .new-zanata .tabs--lined > .tabs__nav .form__checkbox__item:after, .new-zanata .tabs--lined > .tabs__nav .form--search:before {
   line-height: 1.625em;
@@ -5116,8 +5116,8 @@ Keep focus while showing and hiding a password field
   line-height: 1.3em;
 }
 .new-zanata .tabs--accent .tabs__nav a.is-active {
-  border-left: 1px solid rgba(65, 105, 136, 0.15);
-  border-right: 1px solid rgba(65, 105, 136, 0.15);
+  border-left: 1px solid rgba(32, 113, 138, 0.15);
+  border-right: 1px solid rgba(32, 113, 138, 0.15);
   position: relative;
   cursor: default;
 }
@@ -5294,24 +5294,24 @@ Keep focus while showing and hiding a password field
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #c6d2db;
+  background-color: #bcd4db;
   list-style: none;
 }
 .new-zanata .progress-bar__success,
 .new-zanata .progress-bar__translated {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
   z-index: 1;
 }
 .new-zanata .progress-bar__fuzzy {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
   z-index: 2;
 }
 .new-zanata .progress-bar__rejected {
-  background-color: #e3824e;
+  background-color: #FFA800;
   z-index: 3;
 }
 .new-zanata .progress-bar__approved {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
   z-index: 4;
 }
 
@@ -5411,17 +5411,17 @@ Keep focus while showing and hiding a password field
   min-height: 1.625em;
   border: 1px solid transparent;
   border-bottom-width: 2px;
-  color: #4e9fdd;
+  color: #03A6D7;
   vertical-align: middle;
   cursor: pointer;
   width: 100%;
 }
 .new-zanata .dropdown__toggle:hover {
-  background-color: rgba(65, 105, 136, 0.03);
+  background-color: rgba(32, 113, 138, 0.03);
 }
 .new-zanata .dropdown__toggle:active {
   background-color: #fff;
-  border: 1px solid rgba(65, 105, 136, 0.15);
+  border: 1px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .dropdown__toggle:after {
   -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
@@ -5455,13 +5455,13 @@ Keep focus while showing and hiding a password field
   -moz-transform: translateZ(0);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  color: #416988 !important;
+  color: #20718A !important;
 }
 .new-zanata .dropdown.is-active .dropdown__toggle {
-  color: #416988 !important;
+  color: #20718A !important;
 }
 .new-zanata .dropdown:hover .dropdown__toggle {
-  color: #2479bb;
+  color: #026c8c;
 }
 .new-zanata .dropdown__toggle__icon {
   display: none;
@@ -5514,14 +5514,14 @@ Keep focus while showing and hiding a password field
 }
 .no-touch .new-zanata .dropdown__content > li > a:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link:hover {
-  background-color: #4e9fdd;
-  color: #fdfdfe;
+  background-color: #03A6D7;
+  color: #f7f8f9;
 }
 .no-touch .new-zanata .dropdown__content > li > a.txt--danger:hover, .no-touch .new-zanata .dropdown__content > li > a.message--danger:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link.txt--danger:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link.message--danger:hover {
-  background-color: #e0575b;
-  color: #fdfdfe !important;
+  background-color: #FF3B3D;
+  color: #f7f8f9 !important;
 }
 .new-zanata .dropdown__content > li > a[disabled],
 .new-zanata .dropdown__content > li > .dropdown__content__link[disabled] {
@@ -5533,7 +5533,7 @@ Keep focus while showing and hiding a password field
   width: 100% !important;
 }
 .new-zanata .dropdown__header {
-  border-bottom: 1px solid #edeff1;
+  border-bottom: 1px solid #ECEFF0;
   text-transform: uppercase;
   background-color: #fff !important;
   padding: 0 0.8125em !important;
@@ -5546,7 +5546,7 @@ Keep focus while showing and hiding a password field
   width: 100%;
   height: 1px;
   border-bottom: 1px solid transparent;
-  background-color: #edeff1;
+  background-color: #ECEFF0;
 }
 .new-zanata .dropdown.is-active .dropdown__content {
   visibility: visible;
@@ -5614,8 +5614,8 @@ Used in panel headers to match the header layout
   max-height: 3.80714em;
 }
 .new-zanata .dropdown--header .dropdown__toggle:active {
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
-  background-color: #f5f6f7;
+  border-bottom: 2px solid rgba(32, 113, 138, 0.15);
+  background-color: #f4f6f6;
 }
 .new-zanata .dropdown--header .dropdown__toggle:after,
 .new-zanata .dropdown--header .dropdown__toggle i {
@@ -5624,13 +5624,13 @@ Used in panel headers to match the header layout
 }
 .new-zanata .dropdown--header.is-active .dropdown__toggle {
   border: none;
-  border-left: 1px solid rgba(65, 105, 136, 0.15);
-  border-right: 1px solid rgba(65, 105, 136, 0.15);
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
-  background-color: #f5f6f7;
+  border-left: 1px solid rgba(32, 113, 138, 0.15);
+  border-right: 1px solid rgba(32, 113, 138, 0.15);
+  border-bottom: 2px solid rgba(32, 113, 138, 0.15);
+  background-color: #f4f6f6;
 }
 .new-zanata .dropdown--header.is-active .dropdown__toggle:hover {
-  background-color: #f5f6f7;
+  background-color: #f4f6f6;
 }
 .new-zanata .dropdown--header .dropdown__content {
   width: auto;
@@ -5756,19 +5756,19 @@ Used in panel headers to match the header layout
 .new-zanata .Dropdown--simple .Dropdown-title {
   font-size: calc(14/16 * 1rem);
   padding: 0.20313em 0.40625em;
-  background-color: #ecf0f3;
+  background-color: #e8f0f3;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  color: #67879f;
+  color: #4c8da1;
 }
 .new-zanata .Dropdown--simple .Dropdown-item {
   display: block;
   padding: 0.20313em 0.40625em;
   transition: all .2s ease-out;
-  color: #4e9fdd;
+  color: #03A6D7;
 }
 .new-zanata .Dropdown--simple .Dropdown-item:hover {
   color: #fff;
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .new-zanata .Dropdown--simple .Dropdown-item button,
 .new-zanata .Dropdown--simple .Dropdown-item button:hover {
@@ -5797,33 +5797,33 @@ Used in panel headers to match the header layout
 
 */
 .new-zanata .label, .new-zanata .label--highlight, .new-zanata .label--success, .new-zanata .label--unsure, .new-zanata .label--warning, .new-zanata .label--danger, .new-zanata .label--neutral {
-  background-color: #d9e1e7;
+  background-color: #d2e2e7;
   padding: 0 0.25em;
   margin: 0 0.135em;
   font-size: 0.8125em;
 }
 .new-zanata .label--highlight {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
   color: #fff;
 }
 .new-zanata .label--success {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
   color: #fff;
 }
 .new-zanata .label--unsure {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
   color: #fff;
 }
 .new-zanata .label--warning {
-  background-color: #e3824e;
+  background-color: #FFA800;
   color: #fff;
 }
 .new-zanata .label--danger {
-  background-color: #e0575b;
+  background-color: #FF3B3D;
   color: #fff;
 }
 .new-zanata .label--neutral {
-  background-color: #c6d2db;
+  background-color: #bcd4db;
   color: #fff;
 }
 
@@ -5847,7 +5847,7 @@ Used in panel headers to match the header layout
 .new-zanata .alert, .new-zanata .alert--danger {
   margin-bottom: 0.8125em;
   text-align: center;
-  background-color: #f5f6f7;
+  background-color: #f4f6f6;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5856,14 +5856,14 @@ Used in panel headers to match the header layout
   margin: 0;
   font-size: 1.5em;
   line-height: 1.625em;
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
   color: #f2f2f2;
 }
 .new-zanata .alert__content {
   padding: 1.625em;
 }
 .new-zanata .alert__highlight {
-  color: #4e9fdd;
+  color: #03A6D7;
   font-weight: 600;
 }
 
@@ -5881,13 +5881,13 @@ Used in panel headers to match the header layout
 ```
 */
 .new-zanata .alert--danger {
-  border-top: 2px solid #e0575b;
+  border-top: 2px solid #FF3B3D;
 }
 .new-zanata .alert--danger .alert__heading {
-  background-color: #e0575b;
+  background-color: #FF3B3D;
 }
 .new-zanata .alert--danger .alert__highlight {
-  color: #e0575b;
+  color: #FF3B3D;
 }
 
 .new-zanata .cursor--pointer {
@@ -5938,11 +5938,11 @@ Used in panel headers to match the header layout
   top: 0;
   right: 0;
   width: 2.4375em;
-  text-align: center;
+  text-align: center !important;
   padding: 0.40625em !important;
 }
 .new-zanata .message__remove .i, .new-zanata .message__remove .i--inline, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--understated, .new-zanata .message__remove .i--small, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form__checkbox__item:after, .new-zanata .message__remove .form--search:before {
-  line-height: 1.625em;
+  font-size: 1.21875em;
 }
 .new-zanata .message--global {
   -moz-transition: opacity 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01), -moz-transform 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
@@ -5984,7 +5984,7 @@ Used in panel headers to match the header layout
   opacity: 0.9;
 }
 .new-zanata .message--highlight {
-  color: #416988;
+  color: #20718A;
 }
 
 /*
@@ -6011,7 +6011,7 @@ Used in panel headers to match the header layout
   display: block;
   padding: 0 0.8125em;
   margin: 0;
-  background-color: #d9e1e7;
+  background-color: #d2e2e7;
   font-weight: 400;
   background-color: transparent;
   cursor: pointer;
@@ -6035,68 +6035,68 @@ Used in panel headers to match the header layout
   margin-right: 0;
 }
 .new-zanata .pill--highlight {
-  color: #4e9fdd;
+  color: #03A6D7;
 }
 .new-zanata .pill--highlight:hover, .new-zanata .pill--highlight:focus {
-  background-color: rgba(78, 159, 221, 0.2);
+  background-color: rgba(3, 166, 215, 0.2);
 }
 .new-zanata .pill--highlight:active, .new-zanata .pill--highlight.is-active {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .new-zanata .pill--success {
-  color: #70a98b;
+  color: #5CCA7B;
 }
 .new-zanata .pill--success:hover, .new-zanata .pill--success:focus {
-  background-color: rgba(112, 169, 139, 0.2);
+  background-color: rgba(92, 202, 123, 0.2);
 }
 .new-zanata .pill--success:active, .new-zanata .pill--success.is-active {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
 }
 .new-zanata .pill--unsure {
-  color: #e0c350;
+  color: #E9DF1B;
 }
 .new-zanata .pill--unsure:hover, .new-zanata .pill--unsure:focus {
-  background-color: rgba(224, 195, 80, 0.2);
+  background-color: rgba(233, 223, 27, 0.2);
 }
 .new-zanata .pill--unsure:active, .new-zanata .pill--unsure.is-active {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
 }
 .new-zanata .pill--warning {
-  color: #e3824e;
+  color: #FFA800;
 }
 .new-zanata .pill--warning:hover, .new-zanata .pill--warning:focus {
-  background-color: rgba(227, 130, 78, 0.2);
+  background-color: rgba(255, 168, 0, 0.2);
 }
 .new-zanata .pill--warning:active, .new-zanata .pill--warning.is-active {
-  background-color: #e3824e;
+  background-color: #FFA800;
 }
 .new-zanata .pill--danger {
-  color: #e0575b;
+  color: #FF3B3D;
 }
 .new-zanata .pill--danger:hover, .new-zanata .pill--danger:focus {
-  background-color: rgba(224, 87, 91, 0.2);
+  background-color: rgba(255, 59, 61, 0.2);
 }
 .new-zanata .pill--danger:active, .new-zanata .pill--danger.is-active {
-  background-color: #e0575b;
+  background-color: #FF3B3D;
 }
 .new-zanata .pill--neutral {
-  color: #c6d2db;
+  color: #bcd4db;
 }
 .new-zanata .pill--neutral:hover, .new-zanata .pill--neutral:focus {
-  background-color: rgba(198, 210, 219, 0.2);
+  background-color: rgba(188, 212, 219, 0.2);
 }
 .new-zanata .pill--neutral:active, .new-zanata .pill--neutral.is-active {
-  background-color: #c6d2db;
-  color: #7c96ac;
+  background-color: #bcd4db;
+  color: #629bad;
 }
 .new-zanata .pill--secondary {
-  color: #416988;
+  color: #20718A;
 }
 .new-zanata .pill--secondary:hover, .new-zanata .pill--secondary:focus {
-  background-color: rgba(65, 105, 136, 0.2);
+  background-color: rgba(32, 113, 138, 0.2);
 }
 .new-zanata .pill--secondary:active, .new-zanata .pill--secondary.is-active {
-  background-color: #416988;
+  background-color: #20718A;
 }
 
 /*
@@ -6125,7 +6125,7 @@ Used in panel headers to match the header layout
   text-align: center;
   display: inline-block;
   padding: 0 0.37143em;
-  background-color: #d9e1e7;
+  background-color: #d2e2e7;
   font-weight: 400;
 }
 .new-zanata .badge__container {
@@ -6138,28 +6138,28 @@ Used in panel headers to match the header layout
   margin-top: 0.23214em;
 }
 .new-zanata .badge--highlight {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
   color: #fff;
 }
 .new-zanata .badge--success {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
   color: #fff;
 }
 .new-zanata .badge--unsure {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
   color: #fff;
 }
 .new-zanata .badge--warning {
-  background-color: #e3824e;
+  background-color: #FFA800;
   color: #fff;
 }
 .new-zanata .badge--danger {
-  background-color: #e0575b;
+  background-color: #FF3B3D;
   color: #fff;
 }
 .new-zanata .badge--neutral {
-  background-color: #c6d2db;
-  color: #7c96ac;
+  background-color: #bcd4db;
+  color: #629bad;
 }
 .new-zanata .badge--bl, .new-zanata .badge--br {
   position: absolute;
@@ -6360,29 +6360,29 @@ Used in panel headers to match the header layout
   border-right: none;
 }
 .new-zanata .cal__heading {
-  color: #416988;
+  color: #20718A;
   font-weight: 400;
 }
 .new-zanata .cal__day {
-  background-color: #e2e8ed;
-  color: #416988;
+  background-color: #dde9ed;
+  color: #20718A;
   border-radius: 0.8125em;
   overflow: hidden;
 }
 .new-zanata .cal__day:focus .cal__date, .new-zanata .cal__day:hover .cal__date {
-  background-color: #a9bbc9;
+  background-color: #9abfca;
 }
 .new-zanata .cal__day:focus .cal__date-info, .new-zanata .cal__day:hover .cal__date-info {
-  background-color: #c6d2db;
+  background-color: #bcd4db;
 }
 .new-zanata .cal__day:active, .new-zanata .cal__day.is-active {
   color: #fff !important;
 }
 .new-zanata .cal__day:active .cal__date, .new-zanata .cal__day.is-active .cal__date {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .new-zanata .cal__day:active .cal__date-info, .new-zanata .cal__day.is-active .cal__date-info {
-  background-color: #7a96ab;
+  background-color: #629bad;
 }
 .new-zanata .cal__day[disabled], .new-zanata .cal__day.is-disabled {
   pointer-events: none;
@@ -6401,7 +6401,8 @@ Used in panel headers to match the header layout
 }
 .new-zanata .cal__date {
   padding: 0.11607em 0.23214em;
-  background-color: #c6d2db;
+  background-color: #bcd4db;
+  border-radius: 0.8125em 0.8125em 0 0;
   font-size: 0.875em;
   line-height: 1.85714em;
 }
@@ -6409,6 +6410,7 @@ Used in panel headers to match the header layout
   font-weight: 700;
   min-height: 2.03125em;
   padding: 0.20313em;
+  border-radius: 0 0 0.8125em 0.8125em;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -6416,70 +6418,70 @@ Used in panel headers to match the header layout
   text-overflow: ellipsis;
 }
 .new-zanata .cal--highlight .cal__heading {
-  color: #4e9fdd;
+  color: #03A6D7;
 }
 .new-zanata .cal--highlight .cal__day {
-  background-color: #e4f0f9;
-  color: #4e9fdd;
+  background-color: #d9f1f9;
+  color: #03A6D7;
 }
 .new-zanata .cal--highlight .cal__day:focus .cal__date, .new-zanata .cal--highlight .cal__day:hover .cal__date {
-  background-color: #afd3ef;
+  background-color: #8dd6ed;
 }
 .new-zanata .cal--highlight .cal__day:focus .cal__date-info, .new-zanata .cal--highlight .cal__day:hover .cal__date-info {
-  background-color: #c9e2f4;
+  background-color: #b3e4f3;
 }
 .new-zanata .cal--highlight .cal__day:active .cal__date, .new-zanata .cal--highlight .cal__day.is-active .cal__date {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .new-zanata .cal--highlight .cal__day:active .cal__date-info, .new-zanata .cal--highlight .cal__day.is-active .cal__date-info {
-  background-color: #83bbe7;
+  background-color: #4ec0e3;
 }
 .new-zanata .cal--highlight .cal__date {
-  background-color: #c9e2f4;
+  background-color: #b3e4f3;
 }
 .new-zanata .cal--success .cal__heading {
-  color: #70a98b;
+  color: #5CCA7B;
 }
 .new-zanata .cal--success .cal__day {
-  background-color: #e9f2ed;
-  color: #70a98b;
+  background-color: #e6f7eb;
+  color: #5CCA7B;
 }
 .new-zanata .cal--success .cal__day:focus .cal__date, .new-zanata .cal--success .cal__day:hover .cal__date {
-  background-color: #bed8ca;
+  background-color: #b5e7c3;
 }
 .new-zanata .cal--success .cal__day:focus .cal__date-info, .new-zanata .cal--success .cal__day:hover .cal__date-info {
-  background-color: #d4e5dc;
+  background-color: #ceefd7;
 }
 .new-zanata .cal--success .cal__day:active .cal__date, .new-zanata .cal--success .cal__day.is-active .cal__date {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
 }
 .new-zanata .cal--success .cal__day:active .cal__date-info, .new-zanata .cal--success .cal__day.is-active .cal__date-info {
-  background-color: #9ac2ad;
+  background-color: #8cd9a2;
 }
 .new-zanata .cal--success .cal__date {
-  background-color: #d4e5dc;
+  background-color: #ceefd7;
 }
 .new-zanata .cal--unsure .cal__heading {
-  color: #e0c350;
+  color: #E9DF1B;
 }
 .new-zanata .cal--unsure .cal__day {
-  background-color: #faf6e4;
-  color: #e0c350;
+  background-color: #fbfadc;
+  color: #E9DF1B;
 }
 .new-zanata .cal--unsure .cal__day:focus .cal__date, .new-zanata .cal--unsure .cal__day:hover .cal__date {
-  background-color: #f1e4b0;
+  background-color: #f5f098;
 }
 .new-zanata .cal--unsure .cal__day:focus .cal__date-info, .new-zanata .cal--unsure .cal__day:hover .cal__date-info {
-  background-color: #f5edca;
+  background-color: #f8f5ba;
 }
 .new-zanata .cal--unsure .cal__day:active .cal__date, .new-zanata .cal--unsure .cal__day.is-active .cal__date {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
 }
 .new-zanata .cal--unsure .cal__day:active .cal__date-info, .new-zanata .cal--unsure .cal__day.is-active .cal__date-info {
-  background-color: #e9d584;
+  background-color: #efe85f;
 }
 .new-zanata .cal--unsure .cal__date {
-  background-color: #f5edca;
+  background-color: #f8f5ba;
 }
 
 /*
@@ -6527,18 +6529,18 @@ Used in panel headers to match the header layout
 .new-zanata input.button--primary,
 .new-zanata .button--unsure,
 .new-zanata input.button--unsure {
-  -moz-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
-  -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
-  box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
+  -moz-box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
+  box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   display: inline-block;
   vertical-align: top;
   padding: 0.20313em 0.8125em;
   border: none;
-  border: 1px solid rgba(65, 105, 136, 0.15);
-  background-color: #fafafb;
+  border: 1px solid rgba(32, 113, 138, 0.15);
+  background-color: #f4f5f6;
   color: #565d65;
   text-align: center;
   font-weight: 600;
@@ -6577,10 +6579,10 @@ Used in panel headers to match the header layout
 .new-zanata .button--danger:focus,
 .new-zanata .button--unsure:focus {
   background-color: #fff;
-  border-color: rgba(65, 105, 136, 0.25);
-  -moz-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
-  -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
-  box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
+  border-color: rgba(32, 113, 138, 0.25);
+  -moz-box-shadow: inset 0 -2px 0 rgba(32, 113, 138, 0.17);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(32, 113, 138, 0.17);
+  box-shadow: inset 0 -2px 0 rgba(32, 113, 138, 0.17);
   color: #000;
   outline: none;
 }
@@ -6615,10 +6617,10 @@ Used in panel headers to match the header layout
 .new-zanata .is-active.button--warning,
 .new-zanata .is-active.button--danger,
 .new-zanata .is-active.button--unsure {
-  background-color: #e5e7e9;
-  -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
-  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
-  box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
+  background-color: #e4e7e8;
+  -moz-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
+  -webkit-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
+  box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
 }
 .new-zanata .button--disabled,
 .new-zanata .button[disbaled],
@@ -6822,25 +6824,25 @@ Used in panel headers to match the header layout
   border-radius: 0;
   background: none;
   text-align: inherit;
-  color: #4e9fdd;
+  color: #03A6D7;
   font-weight: 400;
   line-height: inherit;
 }
 .new-zanata .button--link:hover, .new-zanata .message__remove:hover, .new-zanata .button--link:focus, .new-zanata .message__remove:focus {
-  color: #2479bb;
+  color: #026c8c;
 }
 .new-zanata .button--link:active, .new-zanata .message__remove:active, .new-zanata .button--link.is-active, .new-zanata .is-active.message__remove {
-  color: #416988;
+  color: #20718A;
 }
 .new-zanata .button--inline-right {
-  -moz-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
 }
 .new-zanata .button--inline-left {
-  -moz-border-radius: 2px 0 0 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px 0 0 2px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 0 0 4px;
 }
 .new-zanata .button--primary, .new-zanata .button--secondary,
 .new-zanata input.button--secondary, .new-zanata .button--success,
@@ -6856,7 +6858,7 @@ Used in panel headers to match the header layout
   -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-  background-color: #4a97d1;
+  background-color: #029dcc;
   color: #f2f2f2;
 }
 .new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--success:hover, .new-zanata .button--warning:hover, .new-zanata .button--danger:hover, .new-zanata .button--primary:focus, .new-zanata .button--secondary:focus, .new-zanata .button--success:focus, .new-zanata .button--warning:focus, .new-zanata .button--danger:focus,
@@ -6874,7 +6876,7 @@ Used in panel headers to match the header layout
   -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
   color: #fff;
 }
 .new-zanata .button--primary:active, .new-zanata .button--secondary:active, .new-zanata .button--success:active, .new-zanata .button--warning:active, .new-zanata .button--danger:active, .new-zanata .button--primary.is-active, .new-zanata .is-active.button--secondary, .new-zanata .is-active.button--success, .new-zanata .is-active.button--warning, .new-zanata .is-active.button--danger,
@@ -6888,80 +6890,80 @@ Used in panel headers to match the header layout
 .new-zanata input.is-active.button--success,
 .new-zanata input.is-active.button--warning,
 .new-zanata input.is-active.button--danger {
-  background-color: #3e7fb0;
+  background-color: #0284ac;
   -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 .new-zanata .button--secondary,
 .new-zanata input.button--secondary {
-  background-color: #3d6381;
+  background-color: #1e6b83;
 }
 .new-zanata .button--secondary:hover, .new-zanata .button--secondary:focus,
 .new-zanata input.button--secondary:hover,
 .new-zanata input.button--secondary:focus {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .new-zanata .button--secondary:active, .new-zanata .button--secondary.is-active,
 .new-zanata input.button--secondary:active,
 .new-zanata input.button--secondary.is-active {
-  background-color: #34546c;
+  background-color: #195a6e;
 }
 .new-zanata .button--success,
 .new-zanata input.button--success {
-  background-color: #6aa084;
+  background-color: #57bf74;
 }
 .new-zanata .button--success:hover, .new-zanata .button--success:focus,
 .new-zanata input.button--success:hover,
 .new-zanata input.button--success:focus {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
 }
 .new-zanata .button--success:active, .new-zanata .button--success.is-active,
 .new-zanata input.button--success:active,
 .new-zanata input.button--success.is-active {
-  background-color: #59876f;
+  background-color: #49a162;
 }
 .new-zanata .button--unsure,
 .new-zanata input.button--unsure {
-  background-color: #d4b94c;
+  background-color: #ddd319;
 }
 .new-zanata .button--unsure:hover, .new-zanata .button--unsure:focus,
 .new-zanata input.button--unsure:hover,
 .new-zanata input.button--unsure:focus {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
 }
 .new-zanata .button--unsure:active, .new-zanata .button--unsure.is-active,
 .new-zanata input.button--unsure:active,
 .new-zanata input.button--unsure.is-active {
-  background-color: #b39c40;
+  background-color: #bab215;
 }
 .new-zanata .button--warning,
 .new-zanata input.button--warning {
-  background-color: #d77b4a;
+  background-color: #f29f00;
 }
 .new-zanata .button--warning:hover, .new-zanata .button--warning:focus,
 .new-zanata input.button--warning:hover,
 .new-zanata input.button--warning:focus {
-  background-color: #e3824e;
+  background-color: #FFA800;
 }
 .new-zanata .button--warning:active, .new-zanata .button--warning.is-active,
 .new-zanata input.button--warning:active,
 .new-zanata input.button--warning.is-active {
-  background-color: #b5683e;
+  background-color: #cc8600;
 }
 .new-zanata .button--danger,
 .new-zanata input.button--danger {
-  background-color: #d45256;
+  background-color: #f23839;
 }
 .new-zanata .button--danger:hover, .new-zanata .button--danger:focus,
 .new-zanata input.button--danger:hover,
 .new-zanata input.button--danger:focus {
-  background-color: #e0575b;
+  background-color: #FF3B3D;
 }
 .new-zanata .button--danger:active, .new-zanata .button--danger.is-active,
 .new-zanata input.button--danger:active,
 .new-zanata input.button--danger.is-active {
-  background-color: #b34548;
+  background-color: #cc2f30;
 }
 .new-zanata .button--fedora, .new-zanata .button--google, .new-zanata .button--yahoo, .new-zanata .button--openid {
   background-repeat: no-repeat;
@@ -7006,10 +7008,10 @@ Used in panel headers to match the header layout
 }
 .new-zanata .button--group .button:first-of-type, .new-zanata .button--group .button--small:first-of-type, .new-zanata .button--group .button--large:first-of-type, .new-zanata .button--group .button--huge:first-of-type, .new-zanata .button--group .button--snug:first-of-type, .new-zanata .button--group .button--full:first-of-type, .new-zanata .button--group .button--inline-right:first-of-type, .new-zanata .button--group .button--inline-left:first-of-type, .new-zanata .button--group .button--primary:first-of-type, .new-zanata .button--group .button--secondary:first-of-type, .new-zanata .button--group .button--success:first-of-type, .new-zanata .button--group .button--warning:first-of-type, .new-zanata .button--group .button--danger:first-of-type, .new-zanata .button--group .button--unsure:first-of-type {
   margin-left: 0;
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0 4px;
 }
 .new-zanata .button--group .button:last-of-type, .new-zanata .button--group .button--small:last-of-type, .new-zanata .button--group .button--large:last-of-type, .new-zanata .button--group .button--huge:last-of-type, .new-zanata .button--group .button--snug:last-of-type, .new-zanata .button--group .button--full:last-of-type, .new-zanata .button--group .button--inline-right:last-of-type, .new-zanata .button--group .button--inline-left:last-of-type, .new-zanata .button--group .button--primary:last-of-type, .new-zanata .button--group .button--secondary:last-of-type, .new-zanata .button--group .button--success:last-of-type, .new-zanata .button--group .button--warning:last-of-type, .new-zanata .button--group .button--danger:last-of-type, .new-zanata .button--group .button--unsure:last-of-type {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
 }
 .new-zanata .button--group input[type="radio"] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -7018,28 +7020,28 @@ Used in panel headers to match the header layout
   position: absolute;
 }
 .new-zanata .button--group input[type="radio"] + .button, .new-zanata .button--group input[type="radio"] + .button--small, .new-zanata .button--group input[type="radio"] + .button--large, .new-zanata .button--group input[type="radio"] + .button--huge, .new-zanata .button--group input[type="radio"] + .button--snug, .new-zanata .button--group input[type="radio"] + .button--full, .new-zanata .button--group input[type="radio"] + .button--inline-right, .new-zanata .button--group input[type="radio"] + .button--inline-left, .new-zanata .button--group input[type="radio"] + .button--primary, .new-zanata .button--group input[type="radio"] + .button--secondary, .new-zanata .button--group input[type="radio"] + .button--success, .new-zanata .button--group input[type="radio"] + .button--warning, .new-zanata .button--group input[type="radio"] + .button--danger, .new-zanata .button--group input[type="radio"] + .button--unsure {
-  -moz-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
-  -webkit-box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
-  box-shadow: inset 0 -1px 0 rgba(65, 105, 136, 0.09);
+  -moz-box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
+  box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
   border: none;
-  border: 1px solid rgba(65, 105, 136, 0.15);
-  background-color: #fafafb;
+  border: 1px solid rgba(32, 113, 138, 0.15);
+  background-color: #f4f5f6;
   color: #565d65;
 }
 .new-zanata .button--group input[type="radio"] + .button:hover, .new-zanata .button--group input[type="radio"] + .button--small:hover, .new-zanata .button--group input[type="radio"] + .button--large:hover, .new-zanata .button--group input[type="radio"] + .button--huge:hover, .new-zanata .button--group input[type="radio"] + .button--snug:hover, .new-zanata .button--group input[type="radio"] + .button--full:hover, .new-zanata .button--group input[type="radio"] + .button--inline-right:hover, .new-zanata .button--group input[type="radio"] + .button--inline-left:hover, .new-zanata .button--group input[type="radio"] + .button--primary:hover, .new-zanata .button--group input[type="radio"] + .button--secondary:hover, .new-zanata .button--group input[type="radio"] + .button--success:hover, .new-zanata .button--group input[type="radio"] + .button--warning:hover, .new-zanata .button--group input[type="radio"] + .button--danger:hover, .new-zanata .button--group input[type="radio"] + .button--unsure:hover, .new-zanata .button--group input[type="radio"] + .button:focus, .new-zanata .button--group input[type="radio"] + .button--small:focus, .new-zanata .button--group input[type="radio"] + .button--large:focus, .new-zanata .button--group input[type="radio"] + .button--huge:focus, .new-zanata .button--group input[type="radio"] + .button--snug:focus, .new-zanata .button--group input[type="radio"] + .button--full:focus, .new-zanata .button--group input[type="radio"] + .button--inline-right:focus, .new-zanata .button--group input[type="radio"] + .button--inline-left:focus, .new-zanata .button--group input[type="radio"] + .button--primary:focus, .new-zanata .button--group input[type="radio"] + .button--secondary:focus, .new-zanata .button--group input[type="radio"] + .button--success:focus, .new-zanata .button--group input[type="radio"] + .button--warning:focus, .new-zanata .button--group input[type="radio"] + .button--danger:focus, .new-zanata .button--group input[type="radio"] + .button--unsure:focus {
   background-color: #fff;
-  border-color: rgba(65, 105, 136, 0.25);
-  -moz-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
-  -webkit-box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
-  box-shadow: inset 0 -2px 0 rgba(65, 105, 136, 0.17);
+  border-color: rgba(32, 113, 138, 0.25);
+  -moz-box-shadow: inset 0 -2px 0 rgba(32, 113, 138, 0.17);
+  -webkit-box-shadow: inset 0 -2px 0 rgba(32, 113, 138, 0.17);
+  box-shadow: inset 0 -2px 0 rgba(32, 113, 138, 0.17);
   color: #000;
   outline: none;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button, .new-zanata .button--group input[type="radio"]:checked + .button--small, .new-zanata .button--group input[type="radio"]:checked + .button--large, .new-zanata .button--group input[type="radio"]:checked + .button--huge, .new-zanata .button--group input[type="radio"]:checked + .button--snug, .new-zanata .button--group input[type="radio"]:checked + .button--full, .new-zanata .button--group input[type="radio"]:checked + .button--inline-right, .new-zanata .button--group input[type="radio"]:checked + .button--inline-left, .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger, .new-zanata .button--group input[type="radio"]:checked + .button--unsure {
-  background-color: #e5e7e9;
-  -moz-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
-  -webkit-box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
-  box-shadow: inset 0 2px 0 rgba(65, 105, 136, 0.17);
+  background-color: #e4e7e8;
+  -moz-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
+  -webkit-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
+  box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   cursor: default;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger,
@@ -7053,23 +7055,23 @@ Used in panel headers to match the header layout
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--secondary {
-  background-color: #416988;
+  background-color: #20718A;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--success {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--unsure {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
   color: #000;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--warning {
-  background-color: #e3824e;
+  background-color: #FFA800;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button--danger {
-  background-color: #e0575b;
+  background-color: #FF3B3D;
 }
 
 /*
@@ -7179,8 +7181,8 @@ Used to show extra information on hover of the parent element
   color: #f2f2f2;
   text-align: center;
   text-decoration: none;
-  background-color: #416988;
-  border-radius: 2px;
+  background-color: #20718A;
+  border-radius: 4px;
 }
 
 .tooltip__arrow {
@@ -7196,21 +7198,21 @@ Used to show extra information on hover of the parent element
   left: 50%;
   margin-left: -5px;
   border-width: 5px 5px 0;
-  border-top-color: #416988;
+  border-top-color: #20718A;
 }
 
 .tooltip.top-left .tooltip__arrow {
   bottom: 0;
   left: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #416988;
+  border-top-color: #20718A;
 }
 
 .tooltip.top-right .tooltip__arrow {
   bottom: 0;
   right: 5px;
   border-width: 5px 5px 0;
-  border-top-color: #416988;
+  border-top-color: #20718A;
 }
 
 .tooltip.right .tooltip__arrow {
@@ -7218,7 +7220,7 @@ Used to show extra information on hover of the parent element
   left: 0;
   margin-top: -5px;
   border-width: 5px 5px 5px 0;
-  border-right-color: #416988;
+  border-right-color: #20718A;
 }
 
 .tooltip.left .tooltip__arrow {
@@ -7226,7 +7228,7 @@ Used to show extra information on hover of the parent element
   right: 0;
   margin-top: -5px;
   border-width: 5px 0 5px 5px;
-  border-left-color: #416988;
+  border-left-color: #20718A;
 }
 
 .tooltip.bottom .tooltip__arrow {
@@ -7234,21 +7236,21 @@ Used to show extra information on hover of the parent element
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #416988;
+  border-bottom-color: #20718A;
 }
 
 .tooltip.bottom-left .tooltip__arrow {
   top: 0;
   left: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #416988;
+  border-bottom-color: #20718A;
 }
 
 .tooltip.bottom-right .tooltip__arrow {
   top: 0;
   right: 5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #416988;
+  border-bottom-color: #20718A;
 }
 
 /*
@@ -7325,16 +7327,16 @@ Used to show extra information on hover of the parent element
 }
 
 a.loader:hover, a.loader--mini:hover, a.loader--small:hover, a.loader--large:hover, a.loader--huge:hover {
-  background-color: rgba(65, 105, 136, 0.03);
+  background-color: rgba(32, 113, 138, 0.03);
 }
 a.loader:active, a.loader--mini:active, a.loader--small:active, a.loader--large:active, a.loader--huge:active {
-  background-color: rgba(65, 105, 136, 0.03);
+  background-color: rgba(32, 113, 138, 0.03);
 }
 a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-active.loader--large, a.is-active.loader--huge {
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  background-color: rgba(65, 105, 136, 0.03);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: rgba(32, 113, 138, 0.03);
   cursor: default;
 }
 
@@ -7346,7 +7348,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   padding-left: 2.4375em;
-  color: #416988;
+  color: #20718A;
 }
 
 .loader__spinner {
@@ -7382,7 +7384,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 0.40625em;
   height: 0.40625em;
   border-radius: 1.625em;
-  background-color: #416988;
+  background-color: #20718A;
 }
 .loader__spinner span:nth-child(1) {
   -moz-animation-delay: 0s;
@@ -7506,7 +7508,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   padding: 3.25em 1.625em;
   width: 100%;
   height: 100%;
-  background-color: rgba(229, 231, 233, 0.9);
+  background-color: rgba(228, 231, 232, 0.9);
   -moz-perspective: 81.25em;
   -webkit-perspective: 81.25em;
   perspective: 81.25em;
@@ -7534,7 +7536,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .modal__header {
   background-color: #fff;
-  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 1px solid rgba(32, 113, 138, 0.15);
   position: relative;
 }
 .new-zanata .modal__title {
@@ -7550,16 +7552,16 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   top: 0;
   right: 0;
   text-align: center !important;
-  border-left: 1px solid rgba(65, 105, 136, 0.15);
-  color: rgba(65, 105, 136, 0.3);
+  border-left: 1px solid rgba(32, 113, 138, 0.15);
+  color: rgba(32, 113, 138, 0.3);
 }
 .new-zanata .modal__close:hover {
-  background-color: rgba(65, 105, 136, 0.05);
-  border-left: 1px solid rgba(65, 105, 136, 0.15);
+  background-color: rgba(32, 113, 138, 0.05);
+  border-left: 1px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .modal__close:active {
-  background-color: rgba(65, 105, 136, 0.1);
-  border-left: 1px solid rgba(65, 105, 136, 0.15);
+  background-color: rgba(32, 113, 138, 0.1);
+  border-left: 1px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .is-modal {
   overflow: hidden;
@@ -7567,7 +7569,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 
 .new-zanata .stats, .new-zanata .stats--mini, .new-zanata .stats--small, .new-zanata .stats--large {
-  color: #416988;
+  color: #20718A;
   font-size: 0.875em;
   line-height: 1.85714em;
 }
@@ -7928,12 +7930,12 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   height: 1.95em;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 1px solid rgba(32, 113, 138, 0.15);
   margin: 0;
 }
 .new-zanata .panel__search input:focus, .new-zanata .panel__search input:hover {
   border: none;
-  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 1px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .panel__results {
   position: relative;
@@ -7985,20 +7987,20 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   padding: 0;
   border: none;
   background-color: transparent;
-  color: #4e9fdd;
+  color: #03A6D7;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .new-zanata .panel__pager__button:hover, .new-zanata .panel__pager__button:focus, .new-zanata .panel__pager__button:active {
-  color: #2479bb;
-  background-color: #edeff1;
+  color: #026c8c;
+  background-color: #ECEFF0;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .new-zanata .panel__pager__button:active {
-  color: #416988;
+  color: #20718A;
 }
 
 .new-zanata .panels__container {
@@ -8066,7 +8068,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   position: relative;
 }
 .new-zanata .panels__panel__item.is-active {
-  background-color: #fdfdfe;
+  background-color: #f7f8f9;
 }
 
 .new-zanata .auto-complete {
@@ -8116,7 +8118,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   overflow: auto;
   max-height: 14.625em;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 4px;
   -webkit-overflow-scrolling: touch;
 }
 .new-zanata .autocomplete__result {
@@ -8128,13 +8130,13 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .autocomplete__result.is-selected {
   color: #fff;
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .new-zanata .autocomplete__result.is-selected a {
   color: #fff;
 }
 .new-zanata .autocomplete__result.is-selected .txt--understated, .new-zanata .autocomplete__result.is-selected .i--understated:before {
-  color: #d9e1e7;
+  color: #d2e2e7;
 }
 
 /*
@@ -8150,7 +8152,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 
 */
 .drag-drop {
-  border: 2px dashed rgba(65, 105, 136, 0.15);
+  border: 2px dashed rgba(32, 113, 138, 0.15);
   padding: 1.625em;
   text-align: center;
   position: relative;
@@ -8165,7 +8167,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 100%;
   height: 100%;
   background-color: #fff;
-  color: #7c96ac;
+  color: #629bad;
   content: "Drop files";
   font-weight: 300;
   visibility: hidden;
@@ -8173,7 +8175,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   opacity: 0;
 }
 .drag-drop.is-active {
-  border-color: #416988;
+  border-color: #20718A;
 }
 .drag-drop.is-active:after {
   visibility: visible;
@@ -8183,7 +8185,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 
 .new-zanata .edit-field {
   position: relative;
-  border-top: 1px solid rgba(65, 105, 136, 0.15);
+  border-top: 1px solid rgba(32, 113, 138, 0.15);
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -8273,7 +8275,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 2px;
   height: 1.4625em;
   margin-left: -1px;
-  background-color: #a2b4c3;
+  background-color: #8fb8c4;
 }
 .new-zanata .edit-field__cursor.is-blinking {
   -moz-animation: 1s blink step-end infinite;
@@ -8297,7 +8299,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   cursor: text;
 }
 .new-zanata .edit-item.is-focused {
-  background-color: #fdfdfe;
+  background-color: #f7f8f9;
 }
 .new-zanata .edit-item.is-unfocused {
   opacity: 0.6;
@@ -8323,7 +8325,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   }
 }
 .new-zanata .edit-item__status {
-  background-color: #c6d2db;
+  background-color: #bcd4db;
   text-indent: -9999px;
   height: 0.40625em;
   width: 100%;
@@ -8344,8 +8346,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   z-index: 2;
   padding-right: 0.8125em;
   padding-left: 0.8125em;
-  border-top: 1px solid rgba(65, 105, 136, 0.15);
-  border-bottom: 1px solid rgba(65, 105, 136, 0.15);
+  border-top: 1px solid rgba(32, 113, 138, 0.15);
+  border-bottom: 1px solid rgba(32, 113, 138, 0.15);
   background-color: #fff;
   height: 1.625em;
   width: 50%;
@@ -8370,19 +8372,19 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   vertical-align: top;
 }
 .new-zanata .edit-item--translated .edit-item__status {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
 }
 .new-zanata .edit-item--unsure .edit-item__status {
-  background-color: #e0c350;
+  background-color: #E9DF1B;
 }
 .new-zanata .edit-item--highlight .edit-item__status {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
 }
 .new-zanata .edit-item--danger .edit-item__status {
-  background-color: #e0575b;
+  background-color: #FF3B3D;
 }
 .new-zanata .edit-item--warning .edit-item__status {
-  background-color: #e3824e;
+  background-color: #FFA800;
 }
 .new-zanata .edit-item__source--vertical {
   position: absolute;
@@ -8392,7 +8394,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   float: none;
   margin-bottom: 0.8125em;
   width: 50%;
-  background-color: #fdfdfe;
+  background-color: #f7f8f9;
 }
 .new-zanata .edit-item__source--vertical .edit-item__header {
   width: 100%;
@@ -8413,19 +8415,19 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   border-radius: 0;
   background: transparent;
   background-clip: padding-box;
-  color: #4e9fdd;
+  color: #03A6D7;
   vertical-align: top;
   font-weight: 400;
   font-size: 0.875em;
   line-height: 1.85714em;
 }
 .new-zanata .toolbar__button:hover {
-  background-color: #f5f6f7;
+  background-color: #f4f6f6;
 }
 .new-zanata .toolbar__button.is-active {
-  background-color: #fdfdfe;
-  border-left-color: rgba(65, 105, 136, 0.15);
-  border-right-color: rgba(65, 105, 136, 0.15);
+  background-color: #f7f8f9;
+  border-left-color: rgba(32, 113, 138, 0.15);
+  border-right-color: rgba(32, 113, 138, 0.15);
 }
 .new-zanata .toolbar__button--inline,
 .new-zanata .toolbar__button__toggle {
@@ -8438,21 +8440,21 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   transform: rotate(180deg);
 }
 .new-zanata .toolbar__button--top.is-active {
-  border-top-color: #fdfdfe;
+  border-top-color: #f7f8f9;
 }
 .new-zanata .toolbar__button--bottom.is-active {
-  border-bottom-color: #fdfdfe;
+  border-bottom-color: #f7f8f9;
 }
 .new-zanata .toolbar__button--success {
-  background-color: #6aa084;
+  background-color: #57bf74;
   color: #f2f2f2;
 }
 .new-zanata .toolbar__button--success:hover, .new-zanata .toolbar__button--success:focus {
-  background-color: #70a98b;
+  background-color: #5CCA7B;
   color: #fff;
 }
 .new-zanata .toolbar__button--success:active, .new-zanata .toolbar__button--success.is-active {
-  background-color: #59876f;
+  background-color: #49a162;
 }
 
 /*
@@ -8537,7 +8539,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .rf-au-itm-sel {
   border-style: none;
-  background-color: #4e9fdd !important;
+  background-color: #03A6D7 !important;
   color: #fff;
 }
 .new-zanata .rf-au-itm-sel a {
@@ -8546,7 +8548,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .rf-au-itm-sel .txt--meta,
 .new-zanata .rf-au-itm-sel .txt--understated,
 .new-zanata .rf-au-itm-sel .i--understated:before {
-  color: #c6d2db;
+  color: #bcd4db;
 }
 .new-zanata .rf-au-lst-scrl {
   max-height: 10.5625em;
@@ -8576,7 +8578,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   height: 3.25em;
   z-index: 1000;
   background-color: #fff;
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 2px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .header:before {
   position: absolute;
@@ -8586,35 +8588,53 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 100%;
   height: 3.25em;
   background-color: #fff;
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
+  border-bottom: 2px solid rgba(32, 113, 138, 0.15);
   content: "";
+}
+@media (max-width: 58.0625em) {
+  .new-zanata .header {
+    text-align: center;
+  }
 }
 .new-zanata .header__title {
   font-size: 1.75em;
   line-height: 1.85714em;
   position: relative;
   z-index: 1001;
-  margin: 0;
-  padding: 0;
+  margin: 0.23214em 0;
+  padding: 0 0 0;
   font-weight: 400;
-  display: block;
+  display: inline-block;
   text-align: center;
-  min-height: 1.85714em;
+  height: 1.39286em;
+  width: 4.99107em;
+  background: transparent url("../img/logo/logo-text.svg") 1.50893em center no-repeat;
+  background-size: 3.48214em;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.new-zanata .header__title a {
+  display: block;
 }
 @media (min-width: 58.125em) {
   .new-zanata .header__title {
-    margin: 0 0 0 0.92857em;
+    margin-left: 0.92857em;
     float: left;
   }
 }
 @media (min-width: 96.25em) {
   .new-zanata .header__title {
-    margin: 0 0 0 1.85714em;
+    margin-left: 1.85714em;
   }
 }
 .new-zanata .header__site-logo {
-  height: 1.16071em;
+  height: 1.39286em;
+  width: 1.39286em;
   margin-bottom: -0.23214em;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .new-zanata .header__site-logo.header--loading {
   -moz-animation-name: rotate;
@@ -8632,6 +8652,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .header__menu,
 .new-zanata .header__main-nav {
+  text-align: left;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -8657,7 +8678,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 @media (min-width: 58.125em) {
   .new-zanata .header__menu,
   .new-zanata .header__main-nav {
-    margin-left: 1.625em;
+    margin-left: 1.21875em;
     z-index: 1001;
   }
 }
@@ -8672,9 +8693,9 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     margin-top: -3.25em;
     padding-top: 3.25em;
     min-width: 20em;
-    border-right: 1px solid rgba(65, 105, 136, 0.15);
-    border-bottom: 2px solid rgba(65, 105, 136, 0.15);
-    background-color: #f5f6f7;
+    border-right: 1px solid rgba(32, 113, 138, 0.15);
+    border-bottom: 2px solid rgba(32, 113, 138, 0.15);
+    background-color: #f4f6f6;
   }
   .csstransforms3d .new-zanata .header__main-nav__group {
     -moz-transition: cubic-bezier(0.55, -0.38, 0.22, 1.01) 0.25s;
@@ -8691,7 +8712,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 @media (min-width: 46.25em) and (max-width: 58.0625em) {
   .new-zanata .header__main-nav__group {
-    border-left: 1px solid rgba(65, 105, 136, 0.15);
+    border-left: 1px solid rgba(32, 113, 138, 0.15);
   }
 }
 .new-zanata .header__main-nav__toggle {
@@ -8709,8 +8730,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   padding: 0.4875em 0;
 }
 .new-zanata .header__main-nav__toggle:hover, .new-zanata .header__main-nav__toggle:focus {
-  background-color: #f5f6f7;
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
+  background-color: #f4f6f6;
+  border-bottom: 2px solid rgba(32, 113, 138, 0.15);
 }
 @media (min-width: 58.125em) {
   .new-zanata .header__main-nav__toggle {
@@ -8761,7 +8782,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   display: block;
 }
 .new-zanata .header__main-nav__menu a:not(.button--full):hover {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
   color: #fff;
 }
 @media (min-width: 58.125em) {
@@ -8787,33 +8808,33 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     display: inline-block;
     margin: 0 -.3em 0 0;
   }
-  .new-zanata .header__main-nav__menu a {
+  .new-zanata .header__main-nav__menu a:not(.button--full) {
     border-bottom: 2px solid transparent;
     padding: 0.8125em 0.40625em;
   }
-  .new-zanata .header__main-nav__menu a:hover, .new-zanata .header__main-nav__menu a:focus {
-    border-bottom-color: rgba(65, 105, 136, 0.15);
-    background-color: #f5f6f7;
-    color: #2479bb;
+  .new-zanata .header__main-nav__menu a:not(.button--full):hover, .new-zanata .header__main-nav__menu a:not(.button--full):focus {
+    border-bottom-color: rgba(32, 113, 138, 0.15);
+    background-color: #f4f6f6;
+    color: #026c8c;
   }
-  .new-zanata .header__main-nav__menu a:active {
-    background-color: #edeff1;
-    border-bottom-color: rgba(65, 105, 136, 0.15);
+  .new-zanata .header__main-nav__menu a:not(.button--full):active {
+    background-color: #ECEFF0;
+    border-bottom-color: rgba(32, 113, 138, 0.15);
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .header__main-nav__menu {
     margin-left: 0.8125em;
   }
-  .new-zanata .header__main-nav__menu a {
+  .new-zanata .header__main-nav__menu a:not(.button--full) {
     padding: 0.8125em;
   }
 }
 @media (max-width: 58.0625em) {
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle,
   .new-zanata .header__main-nav.is-active .header__main-nav__toggle {
-    border-right: 1px solid rgba(65, 105, 136, 0.15);
-    background-color: #f5f6f7;
+    border-right: 1px solid rgba(32, 113, 138, 0.15);
+    background-color: #f4f6f6;
     border-bottom: 2px solid transparent;
   }
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle:before,
@@ -8843,7 +8864,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 @media (min-width: 46.25em) and (max-width: 58.0625em) {
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle,
   .new-zanata .header__main-nav.is-active .header__main-nav__toggle {
-    border-left: 1px solid rgba(65, 105, 136, 0.15);
+    border-left: 1px solid rgba(32, 113, 138, 0.15);
   }
 }
 .new-zanata .header__login {
@@ -8916,8 +8937,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   border-bottom: 2px solid transparent;
 }
 .new-zanata .header__user-nav__toggle:hover, .new-zanata .header__user-nav__toggle:focus {
-  background-color: #f5f6f7;
-  border-bottom: 2px solid rgba(65, 105, 136, 0.15);
+  background-color: #f4f6f6;
+  border-bottom: 2px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .header__user-nav__toggle:before {
   position: absolute;
@@ -8960,7 +8981,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   min-width: 12.5em;
 }
 .new-zanata .header__user-nav__menu a:hover, .new-zanata .header__user-nav__menu a:focus {
-  background-color: #4e9fdd;
+  background-color: #03A6D7;
   color: #fff;
 }
 @media (max-width: 46.1875em) {
@@ -8973,8 +8994,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle,
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle {
-  border-left: 1px solid rgba(65, 105, 136, 0.15);
-  background-color: #f5f6f7;
+  border-left: 1px solid rgba(32, 113, 138, 0.15);
+  background-color: #f4f6f6;
   border-bottom: 2px solid transparent;
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle:before,
@@ -9003,6 +9024,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 @media (min-width: 46.25em) {
   .new-zanata .header__user-nav.is-hover .header__user-nav__toggle,
   .new-zanata .header__user-nav.is-active .header__user-nav__toggle {
-    border-right: 1px solid rgba(65, 105, 136, 0.15);
+    border-right: 1px solid rgba(32, 113, 138, 0.15);
   }
 }

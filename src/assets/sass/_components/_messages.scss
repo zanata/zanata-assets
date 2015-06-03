@@ -49,10 +49,10 @@
   top: 0;
   right: 0;
   width: rhythm(1.5);
-  text-align: center;
+  text-align: center !important;
   padding: rhythm(.25) !important;
   .i {
-    line-height: rhythm(1);
+    font-size: rhythm(.75);
   }
 }
 

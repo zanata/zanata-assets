@@ -60,34 +60,34 @@ $transition-fast-ease: 0.1s cubic-bezier(.26, .47, .36, .94);
 // Colors Global
 // -------------
 
-$color-primary                     : #4e9fdd;
-$color-secondary                   : #416988;
+$color-primary                     : #03A6D7;
+$color-secondary                   : #20718A;
 
-$color-primary-80                  : #76b4e4;
-$color-primary-70                  : #87bee7;
-$color-primary-50                  : #a8d0ee;
-$color-primary-30                  : #cce2f5;
-$color-primary-20                  : #dcecf7;
+$color-primary-80                  : tint($color-primary, 20%);
+$color-primary-70                  : tint($color-primary, 30%);
+$color-primary-50                  : tint($color-primary, 50%);
+$color-primary-30                  : tint($color-primary, 70%);
+$color-primary-20                  : tint($color-primary, 80%);
 
-$color-secondary-70                : #7c96ac;
-$color-secondary-50                : #a2b4c3;
-$color-secondary-30                : #c6d2db;
-$color-secondary-20                : #d9e1e7;
-$color-secondary-10                : #ecf0f3;
+$color-secondary-70                : tint($color-secondary, 30%);
+$color-secondary-50                : tint($color-secondary, 50%);
+$color-secondary-30                : tint($color-secondary, 70%);
+$color-secondary-20                : tint($color-secondary, 80%);
+$color-secondary-10                : tint($color-secondary, 90%);
 
-$color-bg                          : shade(#f0f2f4, 1%);
+$color-bg                          : #ECEFF0;
 $color-bg-lightest                 : $white;
-$color-bg-lighter                  : tint($color-bg, 93%);
+$color-bg-lighter                  : tint($color-bg, 60%);
 $color-bg-light                    : tint($color-bg, 46%);
 $color-bg-dark                     : shade($color-bg, 3%);
 $color-bg-darker                   : shade($color-bg, 6%);
 $color-bg-darkest                  : shade($color-bg, 9%);
 
 $color-highlight                   : $color-primary;
-$color-success                     : #70a98b;
-$color-unsure                      : #e0c350;
-$color-warning                     : #e3824e;
-$color-danger                      : #e0575b;
+$color-success                     : #5CCA7B;
+$color-unsure                      : #E9DF1B;
+$color-warning                     : #FFA800;
+$color-danger                      : #FF3B3D;
 $color-neutral                     : $color-secondary-30;
 
 $color-base-font                   : #444c54;
@@ -112,7 +112,7 @@ $font-family-heading               : 'Source Sans Pro', $font-sans-serif;
 
 $default-border-color              : rgba($color-secondary, .15);
 $default-border                    : 1px solid $default-border-color;
-$default-border-radius             : 2px;
+$default-border-radius             : 4px;
 $default-box-shadow                : 0 1px 2px rgba($black, 0.1);
 $default-box-shadow-inset          : inset 0 1px 2px rgba($black, 0.1);
 $default-text-shadow               : 0 1px 2px rgba($black, 0.1);
