@@ -287,22 +287,28 @@
 
 .header__logo-only {
   text-align: center;
-  .header__site-logo {
+  .header__site-logo,
+  img {
     @extend .is-transition;
-    width: rhythm(3);
-    height: rhythm(3);
+    position: static;
+    top: auto;
+    left: auto;
+    margin: 0 auto;
+    width: rhythm(5);
+    height: rhythm(5);
   }
   @include breakpoint($gte-medium) {
-    .header__site-logo {
-      width: rhythm(4);
-      height: rhythm(4);
+    .header__site-logo,
+    img {
+      width: rhythm(6);
+      height: rhythm(6);
     }
   }
   @include breakpoint($gte-large) {
-    margin-top: rhythm(1);
-    .header__site-logo {
-      width: rhythm(5);
-      height: rhythm(5);
+    .header__site-logo,
+    img {
+      width: rhythm(7);
+      height: rhythm(7);
     }
   }
 }

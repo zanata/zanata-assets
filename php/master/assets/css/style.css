@@ -2711,7 +2711,8 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata input.button--danger,
 .new-zanata input.button--primary,
 .new-zanata .button--unsure,
-.new-zanata input.button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .modal, .new-zanata .drag-drop:after, .new-zanata .edit-item, .new-zanata .header__logo-only .header__site-logo, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
+.new-zanata input.button--unsure, .no-touch .new-zanata .reveal__target, .new-zanata .reveal__target--slide, .new-zanata .modal, .new-zanata .drag-drop:after, .new-zanata .edit-item, .new-zanata .header__logo-only .header__site-logo,
+.new-zanata .header__logo-only img, .new-zanata .header__user-nav__toggle, .new-zanata .header__user-nav__toggle:before {
   -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -o-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
@@ -8891,23 +8892,27 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .header__logo-only {
   text-align: center;
 }
-.new-zanata .header__logo-only .header__site-logo {
-  width: 4.875em;
-  height: 4.875em;
+.new-zanata .header__logo-only .header__site-logo,
+.new-zanata .header__logo-only img {
+  position: static;
+  top: auto;
+  left: auto;
+  margin: 0 auto;
+  width: 8.125em;
+  height: 8.125em;
 }
 @media (min-width: 46.25em) {
-  .new-zanata .header__logo-only .header__site-logo {
-    width: 6.5em;
-    height: 6.5em;
+  .new-zanata .header__logo-only .header__site-logo,
+  .new-zanata .header__logo-only img {
+    width: 9.75em;
+    height: 9.75em;
   }
 }
 @media (min-width: 79.375em) {
-  .new-zanata .header__logo-only {
-    margin-top: 1.625em;
-  }
-  .new-zanata .header__logo-only .header__site-logo {
-    width: 8.125em;
-    height: 8.125em;
+  .new-zanata .header__logo-only .header__site-logo,
+  .new-zanata .header__logo-only img {
+    width: 11.375em;
+    height: 11.375em;
   }
 }
 .new-zanata .header__user-nav {
