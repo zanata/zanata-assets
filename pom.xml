@@ -77,6 +77,54 @@
      </resources>
   </build>
 
+  <profiles>
+    <profile>
+      <id>sonatype-oss-release</id>
+      <!-- This profile is enabled automatically by the Sonatype
+           oss-parent POM when invoking the Maven Release Plugin -->
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <configuration>
+              <useAgent>true</useAgent>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.6.5</version>
+            <extensions>true</extensions>
+            <configuration>
+              <serverId>sonatype-nexus-staging</serverId>
+              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <!-- Used for MEAD builds -->
+      <id>mead</id>
+      <activation>
+        <property>
+          <name>mead</name>
+        </property>
+      </activation>
+      <properties>
+        <allow.deploy.skip>false</allow.deploy.skip>
+        <checkstyle.skip>true</checkstyle.skip>
+        <enforcer.skip>true</enforcer.skip>
+        <findbugs.skip>true</findbugs.skip>
+        <mavensign.expand.skip>*</mavensign.expand.skip>
+        <mavensign.sign.skip>*</mavensign.sign.skip>
+        <skipTests>true</skipTests>
+      </properties>
+    </profile>
+  </profiles>
+
   <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
