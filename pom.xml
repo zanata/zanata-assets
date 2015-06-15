@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.zanata</groupId>
   <artifactId>zanata-assets</artifactId>
-  <version>8.0-SNAPSHOT</version>
+  <version>7.2-SNAPSHOT</version>
   <name>Zanata assets modules</name>
   <packaging>jar</packaging>
 
@@ -116,13 +116,6 @@
             </executions>
           </plugin>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <configuration>
-              <useAgent>true</useAgent>
-            </configuration>
-          </plugin>
-          <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
             <version>1.6.5</version>
@@ -161,7 +154,9 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.5</version>
+            <configuration>
+              <useAgent>true</useAgent>
+            </configuration>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
