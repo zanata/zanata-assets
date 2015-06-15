@@ -3,8 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.zanata</groupId>
   <artifactId>zanata-assets</artifactId>
-  <version>8.0-SNAPSHOT</version>
+  <version>7.4-SNAPSHOT</version>
   <name>Zanata assets modules</name>
+  <description>Zanata style guide and css</description>
+  <url>http://zanata.org/</url>
   <packaging>jar</packaging>
 
   <scm>
@@ -18,6 +20,69 @@
     <antrun-plugin.version>1.8</antrun-plugin.version>
     <resources.dir>META-INF/resources</resources.dir>
   </properties>
+
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License v2.1</name>
+      <url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Zanata Project</name>
+    <url>http://zanata.org/</url>
+  </organization>
+
+  <developers>
+    <!-- in alphabetical order (by id field) -->
+    <developer>
+      <id>aeng@redhat.com</id>
+      <name>Alex Eng</name>
+      <email>aeng@redhat.com</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>http://www.redhat.com/</organizationUrl>
+      <timezone>10</timezone>
+    </developer>
+    <developer>
+      <id>camunoz@redhat.com</id>
+      <name>Carlos Munoz</name>
+      <email>camunoz@redhat.com</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>http://www.redhat.com/</organizationUrl>
+      <timezone>10</timezone>
+    </developer>
+    <developer>
+      <id>damason@redhat.com</id>
+      <name>David Mason</name>
+      <email>damason@redhat.com</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>http://www.redhat.com/</organizationUrl>
+      <timezone>10</timezone>
+    </developer>
+    <developer>
+      <id>lbrooker@redhat.com</id>
+      <name>Luke Brooker</name>
+      <email>lbrooker@redhat.com</email>
+      <timezone>10</timezone>
+    </developer>
+    <developer>
+      <id>pahuang@redhat.com</id>
+      <name>Patrick Huang</name>
+      <email>pahuang@redhat.com</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>http://www.redhat.com/</organizationUrl>
+      <timezone>10</timezone>
+    </developer>
+    <developer>
+      <id>sflaniga@redhat.com</id>
+      <name>Sean Flanigan</name>
+      <email>sflaniga@redhat.com</email>
+      <organization>Red Hat</organization>
+      <organizationUrl>http://www.redhat.com/</organizationUrl>
+      <timezone>10</timezone>
+    </developer>
+  </developers>
 
   <build>
     <extensions>
@@ -116,13 +181,6 @@
             </executions>
           </plugin>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <configuration>
-              <useAgent>true</useAgent>
-            </configuration>
-          </plugin>
-          <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
             <version>1.6.5</version>
@@ -161,7 +219,10 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.5</version>
+            <version>1.6</version>
+            <configuration>
+              <useAgent>true</useAgent>
+            </configuration>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
