@@ -21,99 +21,160 @@
 
   <build>
     <extensions>
-       <extension>
-          <groupId>org.apache.maven.wagon</groupId>
-          <artifactId>wagon-webdav</artifactId>
-          <version>1.0-beta-2</version>
-       </extension>
-       <extension>
-        <!--
-        enables dav: protocol for distributionManagement in Maven 3+
-        -->
-          <groupId>org.apache.maven.wagon</groupId>
-          <artifactId>wagon-webdav-jackrabbit</artifactId>
-          <version>1.0-beta-7</version>
-        </extension>
+      <extension>
+	<groupId>org.apache.maven.wagon</groupId>
+	<artifactId>wagon-webdav</artifactId>
+	<version>1.0-beta-2</version>
+      </extension>
+      <extension>
+	<!--
+	enables dav: protocol for distributionManagement in Maven 3+
+	-->
+	<groupId>org.apache.maven.wagon</groupId>
+	<artifactId>wagon-webdav-jackrabbit</artifactId>
+	<version>1.0-beta-7</version>
+      </extension>
     </extensions>
     <plugins>
       <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>${antrun-plugin.version}</version>
-        <executions>
-          <execution>
-            <phase>compile</phase>
-            <configuration>
-              <exportAntProperties>true</exportAntProperties>
-              <target name="grunt.build">
-                <echo message="Run npm install" />
-                <exec executable="npm" failonerror="true">
-                  <arg line="install" />
-                </exec>
-                <echo message="Run grunt build from source to version:${project.version}" />
-                <exec executable="grunt" failonerror="true">
-                  <arg line="build --rel ${project.version}" />
-                </exec>
-              </target>            
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
+	<artifactId>maven-antrun-plugin</artifactId>
+	<version>${antrun-plugin.version}</version>
+	<executions>
+	  <execution>
+	    <phase>compile</phase>
+	    <configuration>
+	      <exportAntProperties>true</exportAntProperties>
+	      <target name="grunt.build">
+		<echo message="Run grunt build from source to version:${project.version}" />
+		<exec executable="grunt" failonerror="true">
+		  <arg line="build --rel ${project.version}" />
+		</exec>
+	      </target>            
+	    </configuration>
+	    <goals>
+	      <goal>run</goal>
+	    </goals>
+	  </execution>
+	</executions>
       </plugin>
       <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>2.7</version>
-        <executions>
-          <execution>
-            <id>default-resources</id>
-            <phase>test</phase>
-            <goals>
-              <goal>resources</goal>
-            </goals>
-          </execution>
-        </executions>
+	<artifactId>maven-resources-plugin</artifactId>
+	<version>2.7</version>
+	<executions>
+	  <execution>
+	    <id>default-resources</id>
+	    <phase>test</phase>
+	    <goals>
+	      <goal>resources</goal>
+	    </goals>
+	  </execution>
+	</executions>
       </plugin>
     </plugins>
     <resources>
-       <resource>
-         <directory>${basedir}/php/${project.version}/assets</directory>
-         <targetPath>${resources.dir}/jars/assets</targetPath>
-         <excludes>
-          <exclude>sass/**</exclude>
-          <exclude>js/components/**</exclude>
-          <exclude>js/vendors/**</exclude>
-          <exclude>fonts/source/**</exclude>
-        </excludes>
-       </resource>
-     </resources>
+      <resource>
+	<directory>${basedir}/php/${project.version}/assets</directory>
+	<targetPath>${resources.dir}/jars/assets</targetPath>
+	<excludes>
+	  <exclude>sass/**</exclude>
+	  <exclude>js/components/**</exclude>
+	  <exclude>js/vendors/**</exclude>
+	  <exclude>fonts/source/**</exclude>
+	</excludes>
+      </resource>
+    </resources>
   </build>
 
   <profiles>
     <profile>
       <id>sonatype-oss-release</id>
       <!-- This profile is enabled automatically by the Sonatype
-           oss-parent POM when invoking the Maven Release Plugin -->
+	   oss-parent POM when invoking the Maven Release Plugin -->
       <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <configuration>
-              <useAgent>true</useAgent>
-            </configuration>
-          </plugin>
-          <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.6.5</version>
-            <extensions>true</extensions>
-            <configuration>
-              <serverId>sonatype-nexus-staging</serverId>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-            </configuration>
-          </plugin>
-        </plugins>
+	<plugins>
+	  <plugin>
+	    <artifactId>maven-antrun-plugin</artifactId>
+	    <version>${antrun-plugin.version}</version>
+	    <executions>
+	      <execution>
+		<phase>compile</phase>
+		<configuration>
+		  <exportAntProperties>true</exportAntProperties>
+		  <target name="grunt.build">
+		    <echo message="Run npm install" />
+		    <exec executable="npm" failonerror="true">
+		      <arg line="install" />
+		    </exec> 
+		    <echo message="Run grunt build from source to version:${project.version}" />
+		    <exec executable="grunt" failonerror="true">
+		      <arg line="build --rel ${project.version}" />
+		    </exec>
+		  </target>            
+		</configuration>
+		<goals>
+		  <goal>run</goal>
+		</goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	  <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-gpg-plugin</artifactId>
+	    <configuration>
+	      <useAgent>true</useAgent>
+	    </configuration>
+	  </plugin>
+	  <plugin>
+	    <groupId>org.sonatype.plugins</groupId>
+	    <artifactId>nexus-staging-maven-plugin</artifactId>
+	    <version>1.6.5</version>
+	    <extensions>true</extensions>
+	    <configuration>
+	      <serverId>sonatype-nexus-staging</serverId>
+	      <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+	    </configuration>
+	  </plugin>
+	  <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-source-plugin</artifactId>
+	    <version>2.4</version>
+	    <executions>
+	      <execution>
+		<id>attach-sources</id>
+		<goals>
+		  <goal>jar-no-fork</goal>
+		</goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	  <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-javadoc-plugin</artifactId>
+	    <version>2.9.1</version>
+	    <executions>
+	      <execution>
+		<id>attach-javadocs</id>
+		<goals>
+		  <goal>jar</goal>
+		</goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	  <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-gpg-plugin</artifactId>
+	    <version>1.5</version>
+	    <executions>
+	      <execution>
+		<id>sign-artifacts</id>
+		<phase>verify</phase>
+		<goals>
+		  <goal>sign</goal>
+		</goals>
+	      </execution>
+	    </executions>
+	  </plugin>
+	</plugins>
       </build>
     </profile>
 
@@ -121,24 +182,24 @@
       <!-- Used for MEAD builds -->
       <id>mead</id>
       <activation>
-        <property>
-          <name>mead</name>
-        </property>
+	<property>
+	  <name>mead</name>
+	</property>
       </activation>
       <properties>
-        <allow.deploy.skip>false</allow.deploy.skip>
-        <checkstyle.skip>true</checkstyle.skip>
-        <enforcer.skip>true</enforcer.skip>
-        <findbugs.skip>true</findbugs.skip>
-        <mavensign.expand.skip>*</mavensign.expand.skip>
-        <mavensign.sign.skip>*</mavensign.sign.skip>
-        <skipTests>true</skipTests>
+	<allow.deploy.skip>false</allow.deploy.skip>
+	<checkstyle.skip>true</checkstyle.skip>
+	<enforcer.skip>true</enforcer.skip>
+	<findbugs.skip>true</findbugs.skip>
+	<mavensign.expand.skip>*</mavensign.expand.skip>
+	<mavensign.sign.skip>*</mavensign.sign.skip>
+	<skipTests>true</skipTests>
       </properties>
     </profile>
   </profiles>
 
   <distributionManagement>
-    <repository>
+    <!-- <repository>
       <uniqueVersion>false</uniqueVersion>
       <id>cloudbees-private-release-repository</id>
       <name>cloudbees-private-release-repository</name>
@@ -151,6 +212,14 @@
       <name>cloudbees-private-snapshot-repository</name>
       <url>dav:https://repository-zanata.forge.cloudbees.com/snapshot/</url>
       <layout>default</layout>
+    </snapshotRepository> -->
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
