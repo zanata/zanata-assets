@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.zanata</groupId>
   <artifactId>zanata-assets</artifactId>
-  <version>7.2</version>
+  <version>7.3-SNAPSHOT</version>
   <name>Zanata assets modules</name>
   <packaging>jar</packaging>
 
