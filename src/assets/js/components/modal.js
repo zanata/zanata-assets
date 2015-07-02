@@ -21,7 +21,7 @@ zanata.modal = (function ($) {
         $el.addClass('is-active is-moved');
       }, 0);
     }
-    $('body').addClass('is-modal');
+    $('body').addClass('is-modal').css('padding-right', getScrollBarWidth());
   };
 
   var hide = function (el) {
@@ -36,7 +36,7 @@ zanata.modal = (function ($) {
       }, 300);
     }
 
-    $('body').removeClass('is-modal');
+    $('body').removeClass('is-modal').removeAttr('style');
   };
 
   var init = function () {
@@ -73,6 +73,15 @@ zanata.modal = (function ($) {
     });
 
   };
+
+  function getScrollBarWidth () {
+    var $outer = $('<div>').css({visibility: 'hidden', width: 100,
+          overflow: 'scroll'}).appendTo('body'),
+        widthWithScroll = $('<div>').css({width: '100%'})
+          .appendTo($outer).outerWidth();
+    $outer.remove();
+    return 100 - widthWithScroll;
+  }
 
   // public API
   return {

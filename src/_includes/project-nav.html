@@ -1,0 +1,19 @@
+<div class="g__item w--1-m w--5-8-l w--2-3">
+  <div class="tabs--lined">
+    <nav class="tabs__nav">
+      <ul>
+        <li><a href="#"{% if page.activeTab == "Activity" %} class="is-active"{% endif %}><i class="i i--clock"></i><span class="is-hidden--s i__text--right">Activity</span></a></li>
+        <li><a href="{% if page.activeTab != "Versions" %}.{% endif %}./"{% if page.activeTab == "Versions" %} class="is-active"{% endif %}><i class="i i--version"></i><span class="is-hidden--s i__text--right">Versions <span class="txt--neutral"> 3</span></span></a></li>
+        <li><a href="{% if page.activeTab != "Versions" %}.{% endif %}./people"{% if page.activeTab == "People" %} class="is-active"{% endif %}><i class="i i--users"></i><span class="is-hidden--s i__text--right">People<span class="txt--neutral"> 5</span></span></a></li>
+        <li><a href="{% if page.activeTab != "Versions" %}.{% endif %}./about"{% if page.activeTab == "" %} class="is-active"{% endif %}><i class="i i--info"></i><span class="is-hidden--s i__text--right">About</span></a></li>
+        <li class="tab__end">
+          <div class="dropdown dropdown--tab dropdown--small dropdown--right dropdown--inline js-dropdown">
+            <a class="dropdown__toggle js-dropdown__toggle" href="#" title="More Actions"><i class="i i--ellipsis"></i></a>
+            <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+              <li><a href="#"class="i__item--right">Export Project to TMX<i class="i i--export i__item__icon"></i></a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="tab__end"><a href="{% if page.activeTab != "Versions" %}.{% endif %}./settings"{% if page.activeTab == "Settings" %} class="is-active"{% endif %} title="Project Settings"><span class="is-hidden--s i__text--left">Settings</span><i class="i i--settings" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>

@@ -1,0 +1,199 @@
+---
+title: People | Mortal Kombat | Projects | Zanata
+layout: home
+root: "../../../"
+activeTab: "People"
+---
+
+<div class="g">
+  {% include project-sidebar.html %}
+  {% include project-nav.html %}
+  <div class="panel l--push-top-1">
+    <div class="panel__header">
+      <div class="panel__header__actions">
+        <button class="button button--primary panel__header__button" data-toggle="modal" data-target="#modal-add-someone"><i class="i i--plus"></i> Add Someone</button>
+        <div class="dropdown dropdown--header dropdown--small dropdown--right dropdown--inline js-dropdown">
+          <a class="dropdown__toggle js-dropdown__toggle" href="#">Sort</a>
+          <ul class="dropdown__content js-dropdown__content" role="content" aria-labelledby="dropdownContent">
+            <li><a class="is-active" tabindex="-1" href="#">By Name</a></li>
+            <li><a tabindex="-1" href="#">By Role</a></li>
+          </ul>
+        </div>
+        <div class="modal" id="modal-add-someone" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal__dialog l--constrain-medium">
+            <header class="modal__header">
+              <h2 class="modal__title">Add Someone</h2>
+              <button class="modal__close button--link" data-dismiss="modal"><i class="i i--huge i--cancel"></i></button>
+            </header>
+            <div class="modal__content">
+              <div class="l--pad-all-1">
+                <h3 class="l--push-top-0">Select a user</h3>
+                <label for="add-person-user" class="is-invisible">User</label>
+                <input type="text" id="add-person-user" placeholder="Search name or username">
+                <h3>Add Permissions</h3>
+                <div class="g--tight">
+                  <div class="g__item w--1-3">
+                    <label for="add-person-user" class="l--push-bottom-0">Project</label>
+                  </div>
+                  <div class="g__item w--2-3">
+                    <ul class="list--horizontal">
+                      <li class="form__radio js-form__radio">
+                        <input name="project-permission" checked class="form__radio__input js-form__radio__input" id="project-permission-none" value="None" type="radio">
+                        <label for="project-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                      </li>
+                      <li class="form__radio js-form__radio">
+                        <input name="project-permission" class="form__radio__input js-form__radio__input" id="project-permission-translation-maintainer" value="Translation Maintainer" type="radio">
+                        <label for="project-permission-translation-maintainer" class="form__radio__label js-form__radio__label" >Translation Maintainer</label>
+                      </li>
+                      <li class="form__radio js-form__radio">
+                        <input name="project-permission" class="form__radio__input js-form__radio__input" id="project-permission-maintainer" value="Maintainer" type="radio">
+                        <label for="project-permission-maintainer" class="form__radio__label js-form__radio__label">Maintainer</label>
+                      </li>
+                    </ul>
+                    <p class="txt--meta l--push-top-half">A <strong>Translation Maintainer</strong> is able to add/remove translators and reviewers to any language as well as translate or review any language. They are not able to change project settings.</p>
+                  </div>
+                </div>
+                <hr>
+                <h4>Translation</h4>
+                <ul class="list--slat">
+                  <li>
+                    <div class="g--tight">
+                      <div class="g__item w--1-3">
+                        <label class="l--push-bottom-0" for="assamese-permission">Assamese</label>
+                      </div>
+                      <div class="g__item w--2-3">
+                        <ul class="list--horizontal">
+                          <li class="form__radio js-form__radio">
+                            <input name="assamese-permission" checked class="form__radio__input js-form__radio__input" id="assamese-permission-none" value="None" type="radio">
+                            <label for="assamese-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                          </li>
+                          <li class="form__radio js-form__radio">
+                            <input name="assamese-permission" class="form__radio__input js-form__radio__input" id="assamese-permission-translator" value="Translator" type="radio">
+                            <label for="assamese-permission-translator" class="form__radio__label js-form__radio__label" >Translator</label>
+                          </li>
+                          <li class="form__radio js-form__radio">
+                            <input name="assamese-permission" class="form__radio__input js-form__radio__input" id="assamese-permission-reviewer" value="Reviewer" type="radio">
+                            <label for="german-permission-reviewer" class="form__radio__label js-form__radio__label">Reviewer</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="g--tight">
+                      <div class="g__item w--1-3">
+                        <label class="l--push-bottom-0" for="french-permission">French</label>
+                      </div>
+                      <div class="g__item w--2-3">
+                        <ul class="list--horizontal">
+                          <li class="form__radio js-form__radio">
+                            <input name="french-permission" checked class="form__radio__input js-form__radio__input" id="french-permission-none" value="None" type="radio">
+                            <label for="french-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                          </li>
+                          <li class="form__radio js-form__radio">
+                            <input name="french-permission" class="form__radio__input js-form__radio__input" id="french-permission-translator" value="Translator" type="radio">
+                            <label for="french-permission-translator" class="form__radio__label js-form__radio__label" >Translator</label>
+                          </li>
+                          <li class="form__radio js-form__radio">
+                            <input name="french-permission" class="form__radio__input js-form__radio__input" id="french-permission-reviewer" value="Reviewer" type="radio">
+                            <label for="german-permission-reviewer" class="form__radio__label js-form__radio__label">Reviewer</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="g--tight">
+                      <div class="g__item w--1-3">
+                        <label class="l--push-bottom-0" for="german-permission">German</label>
+                      </div>
+                      <div class="g__item w--2-3">
+                        <ul class="list--horizontal">
+                          <li class="form__radio js-form__radio">
+                            <input name="german-permission" checked class="form__radio__input js-form__radio__input" id="german-permission-none" value="None" type="radio">
+                            <label for="german-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                          </li>
+                          <li class="form__radio js-form__radio">
+                            <input name="german-permission" class="form__radio__input js-form__radio__input" id="german-permission-translator" value="Translator" type="radio">
+                            <label for="german-permission-translator" class="form__radio__label js-form__radio__label" >Translator</label>
+                          </li>
+                          <li class="form__radio js-form__radio">
+                            <input name="german-permission" class="form__radio__input js-form__radio__input" id="german-permission-reviewer" value="Reviewer" type="radio">
+                            <label for="german-permission-reviewer" class="form__radio__label js-form__radio__label">Reviewer</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <footer class="modal__footer l--pad-h-1 l--pad-v-half bg--highest txt--align-right">
+                <button class="button--link h--1-1-4 l--push-right-half" data-dismiss="modal">Cancel</button>
+                <button class="button--primary" disabled>Add</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="panel__heading">People</h2>
+    </div>
+    <div class="panel__sub-header js-reveal">
+      <div class="form--search panel__search reveal__target--appear" id="people-search">
+        <label for="people-search__input" class="form--search__label"></label>
+        <input id="people-search__input" type="search" placeholder="Search peoples names, roles and languages" class="form--search__input js-reveal__target__input">
+        <button class="button--link panel__search__cancel js-reveal__cancel" data-target="#people-search">Cancel</button>
+      </div>
+      <div class="panel__results">
+        <div class="panel__results__type">
+          <i class="i i--language txt--neutral"></i>
+        </div>
+        <span class="txt--meta"><strong>3</strong> of 3</span>
+        <button class="button--link panel__search__reset js-reveal__reset is-hidden" title="Clear search" data-target="#people-search"><i class="i--right i--cancel"></i></button>
+        <button class="button--link panel__search__button js-reveal__show" data-target="#people-search">Search<i class="i--right i--search"></i></button>
+      </div>
+    </div>
+    <ul class="list--slat l--push-all-half">
+      <li>
+        <div class="g g--tighter">
+          <div class="g__item w--4-12">
+            <a href="/ankitpatel"><span class="w--r-1 bx--round l--push-right-quarter"><img src="http://placehold.it/48"></span>ankitpatel</a>
+          </div>
+          <div class="g__item w--4-12">
+            <span class="txt--understated">Maintainer</span>
+          </div>
+          <div class="g__item w--4-12 txt--align-right">
+            <button class="button button--small"><i class="i i--settings"></i> Manage permissions</button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="g g--tighter">
+          <div class="g__item w--4-12">
+            <a href="/ankitpatel"><span class="w--r-1 bx--round l--push-right-quarter"><img src="http://placehold.it/48"></span>lukebrooker</a>
+          </div>
+          <div class="g__item w--4-12">
+            <span class="txt--understated">Translation Maintainer</span>
+          </div>
+          <div class="g__item w--4-12 txt--align-right">
+            <button class="button button--small"><i class="i i--settings"></i> Manage permissions</button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="g g--tighter">
+          <div class="g__item w--4-12">
+            <a href="/ankitpatel"><span class="w--r-1 bx--round l--push-right-quarter"><img src="http://placehold.it/48"></span>davidmason</a>
+          </div>
+          <div class="g__item w--4-12">
+            <div class="txt--understated">Maintainer</div>
+            <div class="txt--understated">German Translator</div>
+          </div>
+          <div class="g__item w--4-12 txt--align-right">
+            <button class="button button--small"><i class="i i--settings"></i> Manage permissions</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>

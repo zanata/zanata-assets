@@ -227,6 +227,15 @@
   max-height: rhythm(2.05);
 }
 
+.panel__header__button {
+  margin-top: rhythm(.5);
+  margin-right: rhythm(.25);
+  margin-left: rhythm(.25);
+  padding-right: rhythm(.25, 14px);
+  padding-left: rhythm(.25, 14px);
+  @include adjust-font-size-to(14px, .875);
+}
+
 .panel__sub-header {
   @extend .bg--pop-higher;
   border-width: 0 0 2px 0;

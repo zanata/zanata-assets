@@ -109,7 +109,9 @@
   @extend .is-transition-fast;
   position: relative;
   padding-left: rhythm(1.125);
+  padding-right: rhythm(.375);
   cursor: pointer;
+  border-radius: $default-border-radius;
   &:hover,
   &.is-focused {
     background-color: rgba($color-primary, .06);
@@ -176,7 +178,7 @@
     border-radius: 100px; // Makes it round
     top: .33em;
     left: .45em;
-    @include box-shadow($default-box-shadow-inset);
+    box-shadow: inset 0 0 0 rhythm(.5) #fff, $default-box-shadow-inset;
     @include breakpoint($gte-huge) {
       top: .27em;
       width: 1.05em;
@@ -186,7 +188,7 @@
   &.is-checked {
     &:before {
       background-color: $color-secondary;
-      @include background-image(radial-gradient(ellipse at center, $color-secondary 37%, $white 42%));
+      box-shadow: inset 0 0 0 rhythm(.15) #fff, $default-box-shadow-inset;
     }
   }
 }
