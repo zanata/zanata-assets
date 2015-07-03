@@ -3807,18 +3807,22 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .message--danger button.is-active {
   color: #661718 !important;
 }
-.new-zanata .link--danger, .new-zanata .message--danger a,
-.new-zanata .message--danger button {
+.new-zanata .link--neutral {
+  color: #bcd4db !important;
+}
+.new-zanata .link--neutral:hover, .new-zanata .link--neutral:focus {
+  color: #839499 !important;
+}
+.new-zanata .link--neutral:active, .new-zanata .link--neutral.is-active {
+  color: #4b5457 !important;
+}
+.new-zanata .link--secondary {
   color: #20718A !important;
 }
-.new-zanata .link--danger:hover, .new-zanata .message--danger a:hover,
-.new-zanata .message--danger button:hover, .new-zanata .link--danger:focus, .new-zanata .message--danger a:focus,
-.new-zanata .message--danger button:focus {
+.new-zanata .link--secondary:hover, .new-zanata .link--secondary:focus {
   color: #164f60 !important;
 }
-.new-zanata .link--danger:active, .new-zanata .message--danger a:active,
-.new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
-.new-zanata .message--danger button.is-active {
+.new-zanata .link--secondary:active, .new-zanata .link--secondary.is-active {
   color: #0c2d37 !important;
 }
 
@@ -3926,6 +3930,12 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form__radio.is-checked,
 .new-zanata .form__radio.is-checked:hover {
   background-color: rgba(3, 166, 215, 0.12);
+}
+.new-zanata .form__checkbox.is-disabled, .new-zanata .form__checkbox.is-disabled:hover,
+.new-zanata .form__radio.is-disabled,
+.new-zanata .form__radio.is-disabled:hover {
+  cursor: default;
+  pointer-events: none;
 }
 .new-zanata .form__checkbox__item,
 .new-zanata .form__radio__item {

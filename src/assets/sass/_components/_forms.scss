@@ -120,6 +120,11 @@
   &.is-checked:hover {
     background-color: rgba($color-primary, .12);
   }
+  &.is-disabled,
+  &.is-disabled:hover {
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 .form__checkbox__item,

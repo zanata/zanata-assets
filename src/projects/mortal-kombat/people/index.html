@@ -27,34 +27,35 @@ activeTab: "People"
             </header>
             <div class="modal__content">
               <div class="l--pad-all-1">
-                <h3 class="l--push-top-0">Select a user</h3>
+                <h3 class="l--push-top-0">Select a User</h3>
                 <label for="add-person-user" class="is-invisible">User</label>
-                <input type="text" id="add-person-user" placeholder="Search name or username">
-                <h3>Add Permissions</h3>
+                <!-- <input type="text" id="add-person-user" placeholder="Search name or username"> -->
+                <p class="txt--lead">
+                  <a href="/djansen" cl><span class="w--r-1 bx--round l--push-right-quarter"><img src="https://avatars1.githubusercontent.com/u/4597195?v=3&s=460"></span>djansen</a>
+                  <button class="button button--link link--neutral bx--inline-block l--pad-v-quarter" title="Remove user"><i class="i i--small i--cross"></i><span class="is-sr-only">Remove user</span></button>
+                </p>
+                <hr>
+                <h3>Project Permissions</h3>
                 <div class="g--tight">
                   <div class="g__item w--1-3">
-                    <label for="add-person-user" class="l--push-bottom-0">Project</label>
+                    <label for="add-person-user" class="l--push-bottom-0">Project Permissions</label>
                   </div>
                   <div class="g__item w--2-3">
                     <ul class="list--horizontal">
-                      <li class="form__radio js-form__radio">
-                        <input name="project-permission" checked class="form__radio__input js-form__radio__input" id="project-permission-none" value="None" type="radio">
-                        <label for="project-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                      <li class="form__checkbox js-form__checkbox">
+                        <input name="project-permission" class="form__checkbox__input js-form__checkbox__input" id="project-permission-translation-maintainer" value="Translation Maintainer" type="checkbox">
+                        <label for="project-permission-translation-maintainer" class="form__checkbox__label js-form__checkbox__label" >Manage Translators</label>
                       </li>
-                      <li class="form__radio js-form__radio">
-                        <input name="project-permission" class="form__radio__input js-form__radio__input" id="project-permission-translation-maintainer" value="Translation Maintainer" type="radio">
-                        <label for="project-permission-translation-maintainer" class="form__radio__label js-form__radio__label" >Translation Maintainer</label>
-                      </li>
-                      <li class="form__radio js-form__radio">
-                        <input name="project-permission" class="form__radio__input js-form__radio__input" id="project-permission-maintainer" value="Maintainer" type="radio">
-                        <label for="project-permission-maintainer" class="form__radio__label js-form__radio__label">Maintainer</label>
+                      <li class="form__checkbox js-form__checkbox">
+                        <input name="project-permission" class="form__checkbox__input js-form__checkbox__input" id="project-permission-maintainer" value="Maintainer" type="checkbox">
+                        <label for="project-permission-maintainer" class="form__checkbox__label js-form__checkbox__label">Maintain Project</label>
                       </li>
                     </ul>
-                    <p class="txt--meta l--push-top-half">A <strong>Translation Maintainer</strong> is able to add/remove translators and reviewers to any language as well as translate or review any language. They are not able to change project settings.</p>
+                    <p class="txt--meta l--push-top-half"><strong>djansen</strong> will be able to add/remove translators and reviewers to any language as well as translate or review any language. They are not able to change project settings.</p>
                   </div>
                 </div>
                 <hr>
-                <h4>Translation</h4>
+                <h3>Translation Permissions</h3>
                 <ul class="list--slat">
                   <li>
                     <div class="g--tight">
@@ -63,17 +64,13 @@ activeTab: "People"
                       </div>
                       <div class="g__item w--2-3">
                         <ul class="list--horizontal">
-                          <li class="form__radio js-form__radio">
-                            <input name="assamese-permission" checked class="form__radio__input js-form__radio__input" id="assamese-permission-none" value="None" type="radio">
-                            <label for="assamese-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                          <li class="form__checkbox js-form__checkbox">
+                            <input name="assamese-permission" class="form__checkbox__input js-form__checkbox__input" id="assamese-permission-translator" value="Translate" type="checkbox">
+                            <label for="assamese-permission-translator" class="form__checkbox__label js-form__checkbox__label" >Translate</label>
                           </li>
-                          <li class="form__radio js-form__radio">
-                            <input name="assamese-permission" class="form__radio__input js-form__radio__input" id="assamese-permission-translator" value="Translator" type="radio">
-                            <label for="assamese-permission-translator" class="form__radio__label js-form__radio__label" >Translator</label>
-                          </li>
-                          <li class="form__radio js-form__radio">
-                            <input name="assamese-permission" class="form__radio__input js-form__radio__input" id="assamese-permission-reviewer" value="Reviewer" type="radio">
-                            <label for="german-permission-reviewer" class="form__radio__label js-form__radio__label">Reviewer</label>
+                          <li class="form__checkbox js-form__checkbox">
+                            <input name="assamese-permission" class="form__checkbox__input js-form__checkbox__input" id="assamese-permission-reviewer" value="Review" type="checkbox">
+                            <label for="german-permission-reviewer" class="form__checkbox__label js-form__checkbox__label">Review</label>
                           </li>
                         </ul>
                       </div>
@@ -86,17 +83,13 @@ activeTab: "People"
                       </div>
                       <div class="g__item w--2-3">
                         <ul class="list--horizontal">
-                          <li class="form__radio js-form__radio">
-                            <input name="french-permission" checked class="form__radio__input js-form__radio__input" id="french-permission-none" value="None" type="radio">
-                            <label for="french-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                          <li class="form__checkbox js-form__checkbox">
+                            <input name="french-permission" class="form__checkbox__input js-form__checkbox__input" id="french-permission-translator" value="Translate" type="checkbox">
+                            <label for="french-permission-translator" class="form__checkbox__label js-form__checkbox__label" >Translate</label>
                           </li>
-                          <li class="form__radio js-form__radio">
-                            <input name="french-permission" class="form__radio__input js-form__radio__input" id="french-permission-translator" value="Translator" type="radio">
-                            <label for="french-permission-translator" class="form__radio__label js-form__radio__label" >Translator</label>
-                          </li>
-                          <li class="form__radio js-form__radio">
-                            <input name="french-permission" class="form__radio__input js-form__radio__input" id="french-permission-reviewer" value="Reviewer" type="radio">
-                            <label for="german-permission-reviewer" class="form__radio__label js-form__radio__label">Reviewer</label>
+                          <li class="form__checkbox js-form__checkbox">
+                            <input name="french-permission" class="form__checkbox__input js-form__checkbox__input" id="french-permission-reviewer" value="Review" type="checkbox">
+                            <label for="german-permission-reviewer" class="form__checkbox__label js-form__checkbox__label">Review</label>
                           </li>
                         </ul>
                       </div>
@@ -109,17 +102,13 @@ activeTab: "People"
                       </div>
                       <div class="g__item w--2-3">
                         <ul class="list--horizontal">
-                          <li class="form__radio js-form__radio">
-                            <input name="german-permission" checked class="form__radio__input js-form__radio__input" id="german-permission-none" value="None" type="radio">
-                            <label for="german-permission-none" class="form__radio__label js-form__radio__label">None</label>
+                          <li class="form__checkbox js-form__checkbox">
+                            <input name="german-permission" class="form__checkbox__input js-form__checkbox__input" id="german-permission-translator" value="Translate" type="checkbox">
+                            <label for="german-permission-translator" class="form__checkbox__label js-form__checkbox__label" >Translate</label>
                           </li>
-                          <li class="form__radio js-form__radio">
-                            <input name="german-permission" class="form__radio__input js-form__radio__input" id="german-permission-translator" value="Translator" type="radio">
-                            <label for="german-permission-translator" class="form__radio__label js-form__radio__label" >Translator</label>
-                          </li>
-                          <li class="form__radio js-form__radio">
-                            <input name="german-permission" class="form__radio__input js-form__radio__input" id="german-permission-reviewer" value="Reviewer" type="radio">
-                            <label for="german-permission-reviewer" class="form__radio__label js-form__radio__label">Reviewer</label>
+                          <li class="form__checkbox js-form__checkbox">
+                            <input name="german-permission" class="form__checkbox__input js-form__checkbox__input" id="german-permission-reviewer" value="Review" type="checkbox">
+                            <label for="german-permission-reviewer" class="form__checkbox__label js-form__checkbox__label">Review</label>
                           </li>
                         </ul>
                       </div>
@@ -186,7 +175,7 @@ activeTab: "People"
           </div>
           <div class="g__item w--4-12">
             <div class="txt--understated">Maintainer</div>
-            <div class="txt--understated">German Translator</div>
+            <div class="txt--understated">German Translate</div>
           </div>
           <div class="g__item w--4-12 txt--align-right">
             <button class="button button--small"><i class="i i--settings"></i> Manage permissions</button>
