@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-06-03
+/*! zanata-assets - v0.1.0 - 2015-07-21
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 ;(function () {
@@ -1807,6 +1807,21 @@ zanata.form = (function ($) {
     }, 0);
   }
 
+  function toggleDisableCheckRadio ($this, shouldDisable) {
+    var $input = $this.find('.js-form__checkbox__input,.js-form__radio__input');
+
+    setTimeout(function () {
+      if (shouldDisable) {
+        $input.prop('disabled', true);
+        $this.addClass('is-disabled');
+      }
+      else {
+        $input.prop('disabled', false);
+        $this.removeClass('is-disabled');
+      }
+    }, 0);
+  }
+
   function removeRadioStatus ($this) {
     var $input = $this.find('.js-form__radio__input'),
         $item = $this.find('.js-form__checkbox__item, .js-form__radio__item'),
@@ -1969,11 +1984,25 @@ zanata.form = (function ($) {
       removeRadioStatus($parent);
       setCheckRadioStatus($parent);
     });
+
+    $(el).on('disable', '.js-form__radio__input', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      toggleDisableCheckRadio($parent, true);
+    });
+
+    $(el).on('enable', '.js-form__radio__input', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      toggleDisableCheckRadio($parent, false);
+    });
   };
 
   var checkboxBindings = function(el) {
     el = el || 'body';
     $(el).on('click', '.js-form__checkbox', function (e) {
+
+      if ($(this).hasClass('is-disabled')) {
+        return false;
+      }
 
       var directClick = e.target === e.currentTarget;
       var tagName = e.target.tagName.toLowerCase();
@@ -1995,6 +2024,17 @@ zanata.form = (function ($) {
       var $parent = $(this).parents('.js-form__checkbox');
       setCheckRadioStatus($parent);
     });
+
+    $(el).on('disable', '.js-form__checkbox__input', function (e) {
+      var $parent = $(this).parents('.js-form__checkbox');
+      toggleDisableCheckRadio($parent, true);
+    });
+
+    $(el).on('enable', '.js-form__checkbox__input', function (e) {
+      var $parent = $(this).parents('.js-form__checkbox');
+      toggleDisableCheckRadio($parent, false);
+    });
+
   };
 
   var init = function (el) {
@@ -2258,7 +2298,7 @@ zanata.modal = (function ($) {
         $el.addClass('is-active is-moved');
       }, 0);
     }
-    $('body').addClass('is-modal');
+    $('body').addClass('is-modal').css('padding-right', getScrollBarWidth());
   };
 
   var hide = function (el) {
@@ -2273,7 +2313,7 @@ zanata.modal = (function ($) {
       }, 300);
     }
 
-    $('body').removeClass('is-modal');
+    $('body').removeClass('is-modal').removeAttr('style');
   };
 
   var init = function () {
@@ -2310,6 +2350,15 @@ zanata.modal = (function ($) {
     });
 
   };
+
+  function getScrollBarWidth () {
+    var $outer = $('<div>').css({visibility: 'hidden', width: 100,
+          overflow: 'scroll'}).appendTo('body'),
+        widthWithScroll = $('<div>').css({width: '100%'})
+          .appendTo($outer).outerWidth();
+    $outer.remove();
+    return 100 - widthWithScroll;
+  }
 
   // public API
   return {

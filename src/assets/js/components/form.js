@@ -212,6 +212,16 @@ zanata.form = (function ($) {
       removeRadioStatus($parent);
       setCheckRadioStatus($parent);
     });
+
+    $(el).on('disable', '.js-form__radio__input', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      toggleDisableCheckRadio($parent, true);
+    });
+
+    $(el).on('enable', '.js-form__radio__input', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      toggleDisableCheckRadio($parent, false);
+    });
   };
 
   var checkboxBindings = function(el) {

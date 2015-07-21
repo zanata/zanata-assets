@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-07-03
+/*! zanata-assets - v0.1.0 - 2015-07-21
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 ;(function () {
@@ -1983,6 +1983,16 @@ zanata.form = (function ($) {
       var $parent = $(this).parents('.js-form__radio');
       removeRadioStatus($parent);
       setCheckRadioStatus($parent);
+    });
+
+    $(el).on('disable', '.js-form__radio__input', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      toggleDisableCheckRadio($parent, true);
+    });
+
+    $(el).on('enable', '.js-form__radio__input', function (e) {
+      var $parent = $(this).parents('.js-form__radio');
+      toggleDisableCheckRadio($parent, false);
     });
   };
 

@@ -2236,6 +2236,10 @@ Centered grids align grid items centrally without needing to use push or pull cl
   line-height: 1.625em !important;
 }
 
+.h--1-1-4 {
+  line-height: 2.03125em !important;
+}
+
 .h--1-1-2 {
   line-height: 2.4375em !important;
 }
@@ -3803,18 +3807,22 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .message--danger button.is-active {
   color: #661718 !important;
 }
-.new-zanata .link--danger, .new-zanata .message--danger a,
-.new-zanata .message--danger button {
+.new-zanata .link--neutral {
+  color: #bcd4db !important;
+}
+.new-zanata .link--neutral:hover, .new-zanata .link--neutral:focus {
+  color: #839499 !important;
+}
+.new-zanata .link--neutral:active, .new-zanata .link--neutral.is-active {
+  color: #4b5457 !important;
+}
+.new-zanata .link--secondary {
   color: #20718A !important;
 }
-.new-zanata .link--danger:hover, .new-zanata .message--danger a:hover,
-.new-zanata .message--danger button:hover, .new-zanata .link--danger:focus, .new-zanata .message--danger a:focus,
-.new-zanata .message--danger button:focus {
+.new-zanata .link--secondary:hover, .new-zanata .link--secondary:focus {
   color: #164f60 !important;
 }
-.new-zanata .link--danger:active, .new-zanata .message--danger a:active,
-.new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
-.new-zanata .message--danger button.is-active {
+.new-zanata .link--secondary:active, .new-zanata .link--secondary.is-active {
   color: #0c2d37 !important;
 }
 
@@ -3909,7 +3917,9 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form__radio {
   position: relative;
   padding-left: 1.82813em;
+  padding-right: 0.60938em;
   cursor: pointer;
+  border-radius: 4px;
 }
 .new-zanata .form__checkbox:hover, .new-zanata .form__checkbox.is-focused,
 .new-zanata .form__radio:hover,
@@ -3920,6 +3930,12 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form__radio.is-checked,
 .new-zanata .form__radio.is-checked:hover {
   background-color: rgba(3, 166, 215, 0.12);
+}
+.new-zanata .form__checkbox.is-disabled, .new-zanata .form__checkbox.is-disabled:hover,
+.new-zanata .form__radio.is-disabled,
+.new-zanata .form__radio.is-disabled:hover {
+  cursor: default;
+  pointer-events: none;
 }
 .new-zanata .form__checkbox__item,
 .new-zanata .form__radio__item {
@@ -3975,17 +3991,11 @@ Sub-headings can be used when placing a heading under another heading.
   border-radius: 100px;
   top: .33em;
   left: .45em;
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 0.8125em #fff, inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .new-zanata .form__radio__item.is-checked:before {
   background-color: #20718A;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iNDIlIj48c3RvcCBvZmZzZXQ9IjM3JSIgc3RvcC1jb2xvcj0iIzIwNzE4YSIvPjxzdG9wIG9mZnNldD0iNDIlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-  background-size: 100%;
-  background-image: -moz-radial-gradient(center, ellipse, #20718a 37%, #ffffff 42%);
-  background-image: -webkit-radial-gradient(center, ellipse, #20718a 37%, #ffffff 42%);
-  background-image: radial-gradient(ellipse at center, #20718a 37%, #ffffff 42%);
+  box-shadow: inset 0 0 0 0.24375em #fff, inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .new-zanata .form__checkbox__label,
 .new-zanata .form__radio__label {
@@ -7368,6 +7378,15 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 100%;
   position: relative;
   max-height: 3.33125em;
+}
+.new-zanata .panel__header__button {
+  margin-top: 0.8125em;
+  margin-right: 0.40625em;
+  margin-left: 0.40625em;
+  padding-right: 0.46429em;
+  padding-left: 0.46429em;
+  font-size: 0.875em;
+  line-height: 1.625em;
 }
 .new-zanata .panel__sub-header {
   border-width: 0 0 2px 0;
