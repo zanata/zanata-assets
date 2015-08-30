@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-08-06
+/*! zanata-assets - v0.1.0 - 2015-08-31
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 ;(function () {
@@ -2283,7 +2283,7 @@ zanata.modal = (function ($) {
 
   var show = function (el) {
     var $el = $(el);
-    $el.addClass('is-active');
+    $el.addClass('is-active').scrollTop(0);
     $('body').addClass('is-modal').css('padding-right', getScrollBarWidth());
   };
 

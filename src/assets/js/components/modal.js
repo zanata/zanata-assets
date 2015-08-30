@@ -6,7 +6,7 @@ zanata.modal = (function ($) {
 
   var show = function (el) {
     var $el = $(el);
-    $el.addClass('is-active');
+    $el.addClass('is-active').scrollTop(0);
     $('body').addClass('is-modal').css('padding-right', getScrollBarWidth());
   };
 
