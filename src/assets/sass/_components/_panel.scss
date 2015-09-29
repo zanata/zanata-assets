@@ -342,6 +342,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  border-top: $default-border;
 }
 
 .panel__results__type {
@@ -367,6 +368,15 @@
   top: 0;
   right: rhythm(.5,14px);
   font-weight: 400;
+}
+
+.panel__body {
+  min-height: 16rem;
+  max-height: 80vh;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-bottom: rhythm(1);
+  -webkit-overflow-scrolling: touch;
 }
 
 .panel__pager {

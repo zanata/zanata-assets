@@ -201,12 +201,10 @@ body.new-zanata,
 
 .new-zanata main {
   padding-top: 1.625em;
-  padding-bottom: 1.625em;
 }
 @media (min-width: 79.375em) {
   .new-zanata main {
     padding-top: 3.25em;
-    padding-bottom: rhytm(2);
   }
 }
 
@@ -2670,12 +2668,13 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .is-disabled {
   opacity: 0.6;
 }
-.new-zanata .is-transition, .new-zanata .is-removed, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .is-transition, .new-zanata .is-removed, .new-zanata .bg--faint, .new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .modal__content,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--pop-high:hover,
 .new-zanata .modal__dialog:hover,
 .new-zanata .panel:hover,
 .new-zanata .header__user-nav__menu:hover,
+.new-zanata .modal__content:hover,
 .new-zanata .bg--high--hover:hover, .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after,
 .new-zanata .bg--higher:hover,
 .new-zanata .bg--pop-higher:hover,
@@ -3062,13 +3061,14 @@ Centered grids align grid items centrally without needing to use push or pull cl
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-.new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .bg--high, .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu, .new-zanata .tabs--accent .tabs__nav a:hover, .new-zanata .modal__content,
 .new-zanata .bg--high:hover,
 .new-zanata .bg--pop-high:hover,
 .new-zanata .modal__dialog:hover,
 .new-zanata .panel:hover,
 .new-zanata .header__user-nav__menu:hover,
 .new-zanata .tabs--accent .tabs__nav a:hover,
+.new-zanata .modal__content:hover,
 .new-zanata .bg--high--hover:hover {
   background-color: #f4f6f6;
 }
@@ -7513,10 +7513,9 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   z-index: 2000;
   display: block;
   visibility: hidden;
-  overflow: auto;
-  overflow-y: scroll;
+  overflow: hidden;
   margin: 0 auto;
-  padding: 3.25em 1.625em;
+  padding: 1.625em;
   width: 100%;
   height: 100%;
   background-color: rgba(228, 231, 232, 0.9);
@@ -7532,6 +7531,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .modal__dialog {
   margin: 0 auto;
+  height: 100%;
   -moz-transform-origin: 0 50%;
   -ms-transform-origin: 0 50%;
   -webkit-transform-origin: 0 50%;
@@ -7548,7 +7548,11 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .modal__header {
   background-color: #fff;
   border-bottom: 1px solid rgba(32, 113, 138, 0.15);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.25em;
 }
 .new-zanata .modal__title {
   margin: 0;
@@ -7573,6 +7577,23 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .modal__close:active {
   background-color: rgba(32, 113, 138, 0.1);
   border-left: 1px solid rgba(32, 113, 138, 0.15);
+}
+.new-zanata .modal__content {
+  position: absolute;
+  top: 3.25em;
+  bottom: 3.65625em;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.new-zanata .modal__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.65625em;
+  border-top: 1px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .is-modal {
   overflow: hidden;
@@ -7968,6 +7989,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   position: absolute;
   bottom: 0;
   width: 100%;
+  border-top: 1px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .panel__results__type {
   position: absolute;
@@ -7991,6 +8013,14 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   top: 0;
   right: 0.92857em;
   font-weight: 400;
+}
+.new-zanata .panel__body {
+  min-height: 16rem;
+  max-height: 80vh;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-bottom: 1.625em;
+  -webkit-overflow-scrolling: touch;
 }
 .new-zanata .panel__pager {
   height: 1.625em;

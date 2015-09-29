@@ -17,7 +17,6 @@ zanata.tabs = (function ($) {
     }
     if (!$this.parent().hasClass('is-active')) {
       // Remove all is-active classes
-      console.log($this);
       $parent
         .find('> .js-tabs-content > li, > .js-tabs-nav > li > a')
         .removeClass('is-active');

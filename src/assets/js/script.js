@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-08-31
+/*! zanata-assets - v0.1.0 - 2015-09-29
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 ;(function () {
@@ -2352,6 +2352,41 @@ jQuery(function () {
 
 (function ($) {
   'use strict';
+
+  var $panelBody = $('.js-panel__body');
+  var resizeTimeout;
+
+  function resizePanels() {
+    var windowHeight = $(window).height();
+    $.each($panelBody, function(i) {
+      var $this = $(this);
+      var $panel = $this.parents('.js-panel');
+      var panelFromTop = $panelBody[i].getBoundingClientRect().top;
+      var bottomResultsSize =
+        $panel.find('.js-panel__results--bottom').height() || 29;
+      var footerHeight = $('.js-footer').height();
+      var panelHeight = Math.floor(
+        // Minus 1 to account for rounding errors
+        windowHeight - panelFromTop - footerHeight - bottomResultsSize - 1
+      );
+      console.log(panelFromTop);
+      $this.css('height', panelHeight);
+    });
+  }
+
+  if ($panelBody.length > 0) {
+    $(window).resize(function(event) {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(resizePanels, 600);
+    });
+    resizePanels();
+  }
+
+
+})(jQuery);
+
+(function ($) {
+  'use strict';
   $(document).on('click', '.js-reveal__show', function () {
     var $revealTarget = $($(this).attr('data-target')),
         $revealTargetInput = $revealTarget.find('.js-reveal__target__input'),
@@ -2466,7 +2501,6 @@ zanata.tabs = (function ($) {
     }
     if (!$this.parent().hasClass('is-active')) {
       // Remove all is-active classes
-      console.log($this);
       $parent
         .find('> .js-tabs-content > li, > .js-tabs-nav > li > a')
         .removeClass('is-active');

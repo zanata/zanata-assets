@@ -26,10 +26,9 @@
     z-index: 2000;
     display: block;
     visibility: hidden;
-    overflow: auto;
-    overflow-y: scroll;
+    overflow: hidden;
     margin: 0 auto;
-    padding: rhythm(2) rhythm(1);
+    padding: rhythm(1);
     width: 100%;
     height: 100%;
     background-color: rgba($color-bg-dark, .9);
@@ -44,6 +43,7 @@
   .modal__dialog {
     @extend .bg--pop-high;
     margin: 0 auto;
+    height: 100%;
     // max-width: emCalc(900px);
     @include transform-origin(0);
     @include transform3d(translateY(50%));
@@ -56,7 +56,11 @@
   .modal__header {
     background-color: $color-bg-lightest;
     border-bottom: $default-border;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: rhythm(2);
   }
 
   .modal__title {
@@ -85,7 +89,23 @@
   }
 
   .modal__content {
+    @extend .bg--high;
+    position: absolute;
+    top: rhythm(2);
+    bottom: rhythm(2.25);
+    left: 0;
+    right: 0;
+    overflow: auto;
+    overflow-x: hidden;
+  }
 
+  .modal__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: rhythm(2.25);
+    border-top: $default-border;
   }
 
     //body
