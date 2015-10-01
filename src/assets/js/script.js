@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2015-09-29
+/*! zanata-assets - v0.1.0 - 2015-10-01
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 ;(function () {
@@ -2350,40 +2350,48 @@ jQuery(function () {
   zanata.modal.init();
 });
 
-(function ($) {
-  'use strict';
+'use strict';
 
-  var $panelBody = $('.js-panel__body');
-  var resizeTimeout;
+zanata.createNS('zanata.panel');
 
-  function resizePanels() {
-    var windowHeight = $(window).height();
-    $.each($panelBody, function(i) {
-      var $this = $(this);
-      var $panel = $this.parents('.js-panel');
-      var panelFromTop = $panelBody[i].getBoundingClientRect().top;
-      var bottomResultsSize =
-        $panel.find('.js-panel__results--bottom').height() || 29;
-      var footerHeight = $('.js-footer').height();
-      var panelHeight = Math.floor(
-        // Minus 1 to account for rounding errors
-        windowHeight - panelFromTop - footerHeight - bottomResultsSize - 1
-      );
-      console.log(panelFromTop);
-      $this.css('height', panelHeight);
-    });
-  }
+zanata.panel = (function ($) {
 
-  if ($panelBody.length > 0) {
-    $(window).resize(function(event) {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(resizePanels, 600);
-    });
-    resizePanels();
-  }
+  var init = function () {
+    var $panelBody = $('.js-panel__body');
+    var resizeTimeout;
+    function resizePanels() {
+      var windowHeight = $(window).height();
+      $.each($panelBody, function(i) {
+        var $this = $(this);
+        var $panel = $this.parents('.js-panel');
+        var panelFromTop = $panelBody[i].getBoundingClientRect().top;
+        var footerHeight = $('.js-footer').height();
+        var panelHeight = Math.floor(
+          // Minus 2 to account for rounding errors
+          windowHeight - panelFromTop - footerHeight - 2
+        );
+        $this.css('height', panelHeight);
+      });
+    }
+    if ($panelBody.length > 0) {
+      $(window).resize(function(event) {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resizePanels, 0);
+      });
+      resizePanels();
+    }
+  };
 
+  // public API
+  return {
+    init: init
+  };
 
 })(jQuery);
+
+jQuery(function () {
+  zanata.panel.init();
+});
 
 (function ($) {
   'use strict';
@@ -2509,6 +2517,10 @@ zanata.tabs = (function ($) {
       // Add hashed class so we can remove ID to change the hash
       $(targetHash)
         .addClass('is-active');
+      // When changing tabs check for panels and resize to fit browser
+      if ($(targetHash).find('.js-panel__body').length > 0) {
+        zanata.panel.init();
+      }
     }
 
   };

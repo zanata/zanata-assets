@@ -25,6 +25,10 @@ zanata.tabs = (function ($) {
       // Add hashed class so we can remove ID to change the hash
       $(targetHash)
         .addClass('is-active');
+      // When changing tabs check for panels and resize to fit browser
+      if ($(targetHash).find('.js-panel__body').length > 0) {
+        zanata.panel.init();
+      }
     }
 
   };
