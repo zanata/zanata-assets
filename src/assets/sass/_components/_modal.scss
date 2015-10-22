@@ -28,7 +28,7 @@
     visibility: hidden;
     overflow: hidden;
     margin: 0 auto;
-    padding: rhythm(1);
+    padding: rhythm(3) rhythm(1);
     width: 100%;
     height: 100%;
     background-color: rgba($color-bg-dark, .9);
@@ -42,22 +42,22 @@
 
   .modal__dialog {
     @extend .bg--pop-high;
+    position: relative;
     margin: 0 auto;
-    height: 100%;
-    // max-width: emCalc(900px);
+    max-height: 100%;
+    top: 50%;
     @include transform-origin(0);
-    @include transform3d(translateY(50%));
   }
 
   .modal.is-active .modal__dialog {
-    @include transform3d(rotateX(0) translateY(0));
+    @include transform3d(rotateX(0) translateY(-50%));
   }
 
   .modal__header {
     background-color: $color-bg-lightest;
     border-bottom: $default-border;
     position: fixed;
-    top: 0;
+    top: rhythm(-2);
     left: 0;
     right: 0;
     height: rhythm(2);
@@ -90,18 +90,15 @@
 
   .modal__content {
     @extend .bg--high;
-    position: absolute;
-    top: rhythm(2);
-    bottom: rhythm(2.25);
-    left: 0;
-    right: 0;
+    position: relative;
     overflow: auto;
     overflow-x: hidden;
+    max-height: 100%;
   }
 
   .modal__footer {
     position: fixed;
-    bottom: 0;
+    bottom: rhythm(-2.25);
     left: 0;
     right: 0;
     height: rhythm(2.25);
