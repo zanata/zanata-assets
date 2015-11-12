@@ -122,7 +122,11 @@
             <phase>compile</phase>
             <configuration>
               <exportAntProperties>true</exportAntProperties>
-              <target name="grunt.build">
+	      <target name="grunt.build">
+		<echo message="Run npm install" />
+		<exec executable="npm" failonerror="true">
+		  <arg line="install" />
+	        </exec> 
                 <echo message="Run grunt build from source to version:${project.version}" />
                 <exec executable="grunt" failonerror="true">
                   <arg line="build --rel ${project.version}" />
@@ -165,36 +169,9 @@
 
   <profiles>
     <profile>
-      <id>sonatype-oss-release</id>
-      <!-- This profile is enabled automatically by the Sonatype
-     oss-parent POM when invoking the Maven Release Plugin -->
+      <id>release</id>
       <build>
         <plugins>
-          <plugin>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <version>${antrun-plugin.version}</version>
-            <executions>
-              <execution>
-                <phase>compile</phase>
-                <configuration>
-                  <exportAntProperties>true</exportAntProperties>
-                  <target name="grunt.build">
-                    <echo message="Run npm install" />
-                    <exec executable="npm" failonerror="true">
-                      <arg line="install" />
-                    </exec> 
-                    <echo message="Run grunt build from source to version:${project.version}" />
-                    <exec executable="grunt" failonerror="true">
-                      <arg line="build --rel ${project.version}" />
-                    </exec>
-                  </target>            
-                </configuration>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
