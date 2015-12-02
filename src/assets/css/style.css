@@ -356,7 +356,7 @@ Used to section content and create hierarchy
   padding: 0 0.23214em;
   font-family: "Monaco", Courier, "Courier New", monospace;
   font-weight: 700;
-  color: #565d65;
+  color: #575e65;
   font-size: 0.875em;
   line-height: 1.85714em;
   margin: 0;
@@ -719,19 +719,19 @@ a:hover,
   line-height: 1.625em;
 }
 .new-zanata ::-webkit-input-placeholder {
-  color: #8fb8c4;
+  color: #90b8c5;
   font-weight: 300;
 }
 .new-zanata :-moz-placeholder {
-  color: #8fb8c4;
+  color: #90b8c5;
   font-weight: 300;
 }
 .new-zanata ::-moz-placeholder {
-  color: #8fb8c4;
+  color: #90b8c5;
   font-weight: 300;
 }
 .new-zanata :-ms-input-placeholder {
-  color: #8fb8c4;
+  color: #90b8c5;
   font-weight: 300;
 }
 .new-zanata fieldset {
@@ -743,7 +743,7 @@ a:hover,
   border-radius: 4px;
   margin: 1.21875em 0;
   padding-bottom: 0;
-  border-color: #d2e2e7;
+  border-color: #d2e3e8;
 }
 .new-zanata legend {
   border: 0;
@@ -834,8 +834,8 @@ a:hover,
   display: block;
   width: 100%;
   font-weight: 400;
-  border: 1px solid #bcd4db;
-  background-color: #f7f8f9;
+  border: 1px solid #bcd4dc;
+  background-color: #f7f9f9;
   color: #333333;
   margin: 0 0 0.8125em;
   -webkit-appearance: none;
@@ -856,7 +856,7 @@ a:hover,
   -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   outline: none !important;
-  border: 1px solid #629bad;
+  border: 1px solid #639cad;
   background: #fff;
 }
 .new-zanata input[type="text"][disabled],
@@ -870,7 +870,7 @@ a:hover,
 .new-zanata input[type="time"][disabled],
 .new-zanata input[type="url"][disabled],
 .new-zanata textarea[disabled] {
-  background-color: #e4e7e8;
+  background-color: #e5e8e9;
 }
 .new-zanata [contenteditable]:focus {
   outline: none !important;
@@ -2909,7 +2909,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .txt--meta {
   font-size: 0.875em;
   line-height: 1.39286em;
-  color: #629bad;
+  color: #639cad;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -2924,7 +2924,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 */
 .new-zanata .txt--understated, .new-zanata .i--understated:before {
-  color: #629bad;
+  color: #639cad;
 }
 
 /*
@@ -2995,7 +2995,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .txt--neutral, .new-zanata .message--neutral,
 .new-zanata .txt--state-neutral {
-  color: #bcd4db !important;
+  color: #bcd4dc !important;
 }
 
 /*
@@ -3080,7 +3080,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .loader--center:hover,
 .new-zanata .modal__content:hover,
 .new-zanata .bg--high--hover:hover {
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
 }
 .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after,
 .new-zanata .bg--higher:hover,
@@ -3090,7 +3090,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover,
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .bg--higher--hover:hover {
-  background-color: #f7f8f9;
+  background-color: #f7f9f9;
 }
 .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active a,
 .new-zanata .tabs--vertical .tabs__nav > li > a.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
@@ -3112,7 +3112,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover {
-  background-color: #d0d7d9;
+  background-color: #d0d7da;
 }
 .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover {
@@ -3168,19 +3168,19 @@ Centered grids align grid items centrally without needing to use push or pull cl
   background-color: #20718A;
 }
 .new-zanata .bg--danger, .new-zanata .message--danger {
-  background-color: #ffd7d8;
+  background-color: #ffd8d8;
 }
 .new-zanata .bg--warning, .new-zanata .message--warning {
-  background-color: #ffedcc;
+  background-color: #ffeecc;
 }
 .new-zanata .bg--unsure, .new-zanata .message--unsure {
-  background-color: #fcfbe8;
+  background-color: #fdfce8;
 }
 .new-zanata .bg--success, .new-zanata .message--success {
-  background-color: #def4e4;
+  background-color: #def4e5;
 }
 .new-zanata .bg--highlight, .new-zanata .message--highlight {
-  background-color: #ccedf7;
+  background-color: #cdedf7;
 }
 
 /*
@@ -3709,7 +3709,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .heading--sub {
   margin-top: 0;
   font-weight: 400;
-  color: #52b8d7;
+  color: #53b8d7;
   display: inline-block;
 }
 
@@ -3994,7 +3994,7 @@ Sub-headings can be used when placing a heading under another heading.
   font-size: 0.875em;
   display: block;
   margin: 0 0 0.46429em;
-  color: #8fb8c4;
+  color: #90b8c5;
   font-weight: 400;
   line-height: 1em;
   word-break: break-all;
@@ -4192,7 +4192,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .link--success:active, .new-zanata .message--success a:active,
 .new-zanata .message--success button:active, .new-zanata .link--success.is-active, .new-zanata .message--success a.is-active,
 .new-zanata .message--success button.is-active {
-  color: #245031 !important;
+  color: #255131 !important;
 }
 .new-zanata .link--unsure, .new-zanata .message--unsure a,
 .new-zanata .message--unsure button {
@@ -4201,12 +4201,12 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .link--unsure:hover, .new-zanata .message--unsure a:hover,
 .new-zanata .message--unsure button:hover, .new-zanata .link--unsure:focus, .new-zanata .message--unsure a:focus,
 .new-zanata .message--unsure button:focus {
-  color: #a39c12 !important;
+  color: #a39c13 !important;
 }
 .new-zanata .link--unsure:active, .new-zanata .message--unsure a:active,
 .new-zanata .message--unsure button:active, .new-zanata .link--unsure.is-active, .new-zanata .message--unsure a.is-active,
 .new-zanata .message--unsure button.is-active {
-  color: #5d590a !important;
+  color: #5d590b !important;
 }
 .new-zanata .link--warning, .new-zanata .message--warning a,
 .new-zanata .message--warning button {
@@ -4215,7 +4215,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .link--warning:hover, .new-zanata .message--warning a:hover,
 .new-zanata .message--warning button:hover, .new-zanata .link--warning:focus, .new-zanata .message--warning a:focus,
 .new-zanata .message--warning button:focus {
-  color: #b27500 !important;
+  color: #b37600 !important;
 }
 .new-zanata .link--warning:active, .new-zanata .message--warning a:active,
 .new-zanata .message--warning button:active, .new-zanata .link--warning.is-active, .new-zanata .message--warning a.is-active,
@@ -4229,30 +4229,30 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .link--danger:hover, .new-zanata .message--danger a:hover,
 .new-zanata .message--danger button:hover, .new-zanata .link--danger:focus, .new-zanata .message--danger a:focus,
 .new-zanata .message--danger button:focus {
-  color: #b2292a !important;
+  color: #b3292b !important;
 }
 .new-zanata .link--danger:active, .new-zanata .message--danger a:active,
 .new-zanata .message--danger button:active, .new-zanata .link--danger.is-active, .new-zanata .message--danger a.is-active,
 .new-zanata .message--danger button.is-active {
-  color: #661718 !important;
+  color: #661818 !important;
 }
 .new-zanata .link--neutral {
-  color: #bcd4db !important;
+  color: #bcd4dc !important;
 }
 .new-zanata .link--neutral:hover, .new-zanata .link--neutral:focus {
-  color: #839499 !important;
+  color: #84949a !important;
 }
 .new-zanata .link--neutral:active, .new-zanata .link--neutral.is-active {
-  color: #4b5457 !important;
+  color: #4b5558 !important;
 }
 .new-zanata .link--secondary {
   color: #20718A !important;
 }
 .new-zanata .link--secondary:hover, .new-zanata .link--secondary:focus {
-  color: #164f60 !important;
+  color: #164f61 !important;
 }
 .new-zanata .link--secondary:active, .new-zanata .link--secondary.is-active {
-  color: #0c2d37 !important;
+  color: #0d2d37 !important;
 }
 
 /*
@@ -4379,7 +4379,7 @@ Sub-headings can be used when placing a heading under another heading.
   left: .43em;
   width: 1em;
   height: 1em;
-  border: 1px solid #8fb8c4;
+  border: 1px solid #90b8c5;
   content: "";
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -4507,7 +4507,7 @@ Sub-headings can be used when placing a heading under another heading.
   left: 0.60938em;
   margin-top: 0.20313em;
   line-height: 1.625em;
-  color: #8fb8c4;
+  color: #90b8c5;
   pointer-events: none;
 }
 .new-zanata .form--search.is-active:before {
@@ -4521,13 +4521,13 @@ Sub-headings can be used when placing a heading under another heading.
   border-radius: 4px;
 }
 .new-zanata input.form--search__input:hover {
-  border-color: #8fb8c4;
+  border-color: #90b8c5;
 }
 .new-zanata .form--search .form--search__submit {
   position: absolute;
   right: 0.40625em;
   top: 0.8125em;
-  color: #a5c6d0;
+  color: #a6c6d0;
   height: 1.625em;
 }
 .new-zanata .form--search.is-active .form--search__submit {
@@ -4735,7 +4735,7 @@ Keep focus while showing and hiding a password field
 
 */
 .new-zanata .form__placeholder {
-  color: #8fb8c4 !important;
+  color: #90b8c5 !important;
   font-weight: 300 !important;
 }
 
@@ -4753,7 +4753,7 @@ Keep focus while showing and hiding a password field
   height: 1.625em;
   padding: 0.20313em;
   margin: 0;
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
   border-color: transparent;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -4871,11 +4871,11 @@ Keep focus while showing and hiding a password field
 }
 
 .off-canvas__toggle--left {
-  border-right: 1px solid #d2e2e7;
+  border-right: 1px solid #d2e3e8;
 }
 
 .off-canvas__toggle--right {
-  border-left: 1px solid #d2e2e7;
+  border-left: 1px solid #d2e3e8;
 }
 
 .off-canvas__header {
@@ -4906,7 +4906,7 @@ Keep focus while showing and hiding a password field
   -webkit-backface-visibility: hidden;
 }
 [data-off-canvas=over].off-canvas--left, [data-off-canvas=over].off-canvas--right {
-  background-color: #f7f8f9;
+  background-color: #f7f9f9;
   -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -5100,7 +5100,7 @@ Keep focus while showing and hiding a password field
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a:hover:after,
 .new-zanata .tabs--lined > .tabs__nav > li:hover > a:after,
 .new-zanata .tabs--lined > .tabs__nav > li > a:hover:after {
-  background-color: #bcd4db;
+  background-color: #bcd4dc;
 }
 .new-zanata .tabs--lined > .tabs__nav > ul > li.is-active > a:after,
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a.is-active:after,
@@ -5315,7 +5315,7 @@ Keep focus while showing and hiding a password field
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #bcd4db;
+  background-color: #bcd4dc;
   list-style: none;
 }
 .new-zanata .progress-bar__success,
@@ -5536,13 +5536,13 @@ Keep focus while showing and hiding a password field
 .no-touch .new-zanata .dropdown__content > li > a:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link:hover {
   background-color: #03A6D7;
-  color: #f7f8f9;
+  color: #f7f9f9;
 }
 .no-touch .new-zanata .dropdown__content > li > a.txt--danger:hover, .no-touch .new-zanata .dropdown__content > li > a.message--danger:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link.txt--danger:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link.message--danger:hover {
   background-color: #FF3B3D;
-  color: #f7f8f9 !important;
+  color: #f7f9f9 !important;
 }
 .new-zanata .dropdown__content > li > a[disabled],
 .new-zanata .dropdown__content > li > .dropdown__content__link[disabled] {
@@ -5636,7 +5636,7 @@ Used in panel headers to match the header layout
 }
 .new-zanata .dropdown--header .dropdown__toggle:active {
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
 }
 .new-zanata .dropdown--header .dropdown__toggle:after,
 .new-zanata .dropdown--header .dropdown__toggle i {
@@ -5648,10 +5648,10 @@ Used in panel headers to match the header layout
   border-left: 1px solid rgba(32, 113, 138, 0.15);
   border-right: 1px solid rgba(32, 113, 138, 0.15);
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
 }
 .new-zanata .dropdown--header.is-active .dropdown__toggle:hover {
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
 }
 .new-zanata .dropdown--header .dropdown__content {
   width: auto;
@@ -5777,9 +5777,9 @@ Used in panel headers to match the header layout
 .new-zanata .Dropdown--simple .Dropdown-title {
   font-size: calc(14/16 * 1rem);
   padding: 0.20313em 0.40625em;
-  background-color: #e8f0f3;
+  background-color: #e9f1f3;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  color: #4c8da1;
+  color: #4d8da1;
 }
 .new-zanata .Dropdown--simple .Dropdown-item {
   display: block;
@@ -5818,7 +5818,7 @@ Used in panel headers to match the header layout
 
 */
 .new-zanata .label, .new-zanata .label--highlight, .new-zanata .label--success, .new-zanata .label--unsure, .new-zanata .label--warning, .new-zanata .label--danger, .new-zanata .label--neutral {
-  background-color: #d2e2e7;
+  background-color: #d2e3e8;
   padding: 0 0.25em;
   margin: 0 0.135em;
   font-size: 0.8125em;
@@ -5844,7 +5844,7 @@ Used in panel headers to match the header layout
   color: #fff;
 }
 .new-zanata .label--neutral {
-  background-color: #bcd4db;
+  background-color: #bcd4dc;
   color: #fff;
 }
 
@@ -5868,7 +5868,7 @@ Used in panel headers to match the header layout
 .new-zanata .alert, .new-zanata .alert--danger {
   margin-bottom: 0.8125em;
   text-align: center;
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -6032,7 +6032,7 @@ Used in panel headers to match the header layout
   display: block;
   padding: 0 0.8125em;
   margin: 0;
-  background-color: #d2e2e7;
+  background-color: #d2e3e8;
   font-weight: 400;
   background-color: transparent;
   cursor: pointer;
@@ -6101,14 +6101,14 @@ Used in panel headers to match the header layout
   background-color: #FF3B3D;
 }
 .new-zanata .pill--neutral {
-  color: #bcd4db;
+  color: #bcd4dc;
 }
 .new-zanata .pill--neutral:hover, .new-zanata .pill--neutral:focus {
-  background-color: rgba(188, 212, 219, 0.2);
+  background-color: rgba(188, 212, 220, 0.2);
 }
 .new-zanata .pill--neutral:active, .new-zanata .pill--neutral.is-active {
-  background-color: #bcd4db;
-  color: #629bad;
+  background-color: #bcd4dc;
+  color: #639cad;
 }
 .new-zanata .pill--secondary {
   color: #20718A;
@@ -6146,7 +6146,7 @@ Used in panel headers to match the header layout
   text-align: center;
   display: inline-block;
   padding: 0 0.37143em;
-  background-color: #d2e2e7;
+  background-color: #d2e3e8;
   font-weight: 400;
 }
 .new-zanata .badge__container {
@@ -6179,8 +6179,8 @@ Used in panel headers to match the header layout
   color: #fff;
 }
 .new-zanata .badge--neutral {
-  background-color: #bcd4db;
-  color: #629bad;
+  background-color: #bcd4dc;
+  color: #639cad;
 }
 .new-zanata .badge--bl, .new-zanata .badge--br {
   position: absolute;
@@ -6385,16 +6385,16 @@ Used in panel headers to match the header layout
   font-weight: 400;
 }
 .new-zanata .cal__day {
-  background-color: #dde9ed;
+  background-color: #deeaed;
   color: #20718A;
   border-radius: 0.8125em;
   overflow: hidden;
 }
 .new-zanata .cal__day:focus .cal__date, .new-zanata .cal__day:hover .cal__date {
-  background-color: #9abfca;
+  background-color: #9bbfca;
 }
 .new-zanata .cal__day:focus .cal__date-info, .new-zanata .cal__day:hover .cal__date-info {
-  background-color: #bcd4db;
+  background-color: #bcd4dc;
 }
 .new-zanata .cal__day:active, .new-zanata .cal__day.is-active {
   color: #fff !important;
@@ -6403,7 +6403,7 @@ Used in panel headers to match the header layout
   background-color: #20718A;
 }
 .new-zanata .cal__day:active .cal__date-info, .new-zanata .cal__day.is-active .cal__date-info {
-  background-color: #629bad;
+  background-color: #639cad;
 }
 .new-zanata .cal__day[disabled], .new-zanata .cal__day.is-disabled {
   pointer-events: none;
@@ -6422,7 +6422,7 @@ Used in panel headers to match the header layout
 }
 .new-zanata .cal__date {
   padding: 0.11607em 0.23214em;
-  background-color: #bcd4db;
+  background-color: #bcd4dc;
   border-radius: 0.8125em 0.8125em 0 0;
   font-size: 0.875em;
   line-height: 1.85714em;
@@ -6442,11 +6442,11 @@ Used in panel headers to match the header layout
   color: #03A6D7;
 }
 .new-zanata .cal--highlight .cal__day {
-  background-color: #d9f1f9;
+  background-color: #d9f2f9;
   color: #03A6D7;
 }
 .new-zanata .cal--highlight .cal__day:focus .cal__date, .new-zanata .cal--highlight .cal__day:hover .cal__date {
-  background-color: #8dd6ed;
+  background-color: #8ed7ed;
 }
 .new-zanata .cal--highlight .cal__day:focus .cal__date-info, .new-zanata .cal--highlight .cal__day:hover .cal__date-info {
   background-color: #b3e4f3;
@@ -6455,7 +6455,7 @@ Used in panel headers to match the header layout
   background-color: #03A6D7;
 }
 .new-zanata .cal--highlight .cal__day:active .cal__date-info, .new-zanata .cal--highlight .cal__day.is-active .cal__date-info {
-  background-color: #4ec0e3;
+  background-color: #4fc1e3;
 }
 .new-zanata .cal--highlight .cal__date {
   background-color: #b3e4f3;
@@ -6464,11 +6464,11 @@ Used in panel headers to match the header layout
   color: #5CCA7B;
 }
 .new-zanata .cal--success .cal__day {
-  background-color: #e6f7eb;
+  background-color: #e7f7eb;
   color: #5CCA7B;
 }
 .new-zanata .cal--success .cal__day:focus .cal__date, .new-zanata .cal--success .cal__day:hover .cal__date {
-  background-color: #b5e7c3;
+  background-color: #b6e7c4;
 }
 .new-zanata .cal--success .cal__day:focus .cal__date-info, .new-zanata .cal--success .cal__day:hover .cal__date-info {
   background-color: #ceefd7;
@@ -6477,7 +6477,7 @@ Used in panel headers to match the header layout
   background-color: #5CCA7B;
 }
 .new-zanata .cal--success .cal__day:active .cal__date-info, .new-zanata .cal--success .cal__day.is-active .cal__date-info {
-  background-color: #8cd9a2;
+  background-color: #8ddaa3;
 }
 .new-zanata .cal--success .cal__date {
   background-color: #ceefd7;
@@ -6486,23 +6486,23 @@ Used in panel headers to match the header layout
   color: #E9DF1B;
 }
 .new-zanata .cal--unsure .cal__day {
-  background-color: #fbfadc;
+  background-color: #fcfadd;
   color: #E9DF1B;
 }
 .new-zanata .cal--unsure .cal__day:focus .cal__date, .new-zanata .cal--unsure .cal__day:hover .cal__date {
-  background-color: #f5f098;
+  background-color: #f5f198;
 }
 .new-zanata .cal--unsure .cal__day:focus .cal__date-info, .new-zanata .cal--unsure .cal__day:hover .cal__date-info {
-  background-color: #f8f5ba;
+  background-color: #f8f5bb;
 }
 .new-zanata .cal--unsure .cal__day:active .cal__date, .new-zanata .cal--unsure .cal__day.is-active .cal__date {
   background-color: #E9DF1B;
 }
 .new-zanata .cal--unsure .cal__day:active .cal__date-info, .new-zanata .cal--unsure .cal__day.is-active .cal__date-info {
-  background-color: #efe85f;
+  background-color: #f0e95f;
 }
 .new-zanata .cal--unsure .cal__date {
-  background-color: #f8f5ba;
+  background-color: #f8f5bb;
 }
 
 /*
@@ -6561,8 +6561,8 @@ Used in panel headers to match the header layout
   padding: 0.20313em 0.8125em;
   border: none;
   border: 1px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f5f6;
-  color: #565d65;
+  background-color: #f5f7f7;
+  color: #575e65;
   text-align: center;
   font-weight: 600;
   cursor: pointer;
@@ -6638,7 +6638,7 @@ Used in panel headers to match the header layout
 .new-zanata .is-active.button--warning,
 .new-zanata .is-active.button--danger,
 .new-zanata .is-active.button--unsure {
-  background-color: #e4e7e8;
+  background-color: #e5e8e9;
   -moz-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   -webkit-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
@@ -6879,7 +6879,7 @@ Used in panel headers to match the header layout
   -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-  background-color: #029dcc;
+  background-color: #039ecc;
   color: #f2f2f2;
 }
 .new-zanata .button--primary:hover, .new-zanata .button--secondary:hover, .new-zanata .button--success:hover, .new-zanata .button--warning:hover, .new-zanata .button--danger:hover, .new-zanata .button--primary:focus, .new-zanata .button--secondary:focus, .new-zanata .button--success:focus, .new-zanata .button--warning:focus, .new-zanata .button--danger:focus,
@@ -6911,7 +6911,7 @@ Used in panel headers to match the header layout
 .new-zanata input.is-active.button--success,
 .new-zanata input.is-active.button--warning,
 .new-zanata input.is-active.button--danger {
-  background-color: #0284ac;
+  background-color: #0285ac;
   -moz-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2);
@@ -6928,11 +6928,11 @@ Used in panel headers to match the header layout
 .new-zanata .button--secondary:active, .new-zanata .button--secondary.is-active,
 .new-zanata input.button--secondary:active,
 .new-zanata input.button--secondary.is-active {
-  background-color: #195a6e;
+  background-color: #1a5a6e;
 }
 .new-zanata .button--success,
 .new-zanata input.button--success {
-  background-color: #57bf74;
+  background-color: #57c075;
 }
 .new-zanata .button--success:hover, .new-zanata .button--success:focus,
 .new-zanata input.button--success:hover,
@@ -6942,11 +6942,11 @@ Used in panel headers to match the header layout
 .new-zanata .button--success:active, .new-zanata .button--success.is-active,
 .new-zanata input.button--success:active,
 .new-zanata input.button--success.is-active {
-  background-color: #49a162;
+  background-color: #4aa262;
 }
 .new-zanata .button--unsure,
 .new-zanata input.button--unsure {
-  background-color: #ddd319;
+  background-color: #ddd41a;
 }
 .new-zanata .button--unsure:hover, .new-zanata .button--unsure:focus,
 .new-zanata input.button--unsure:hover,
@@ -6956,11 +6956,11 @@ Used in panel headers to match the header layout
 .new-zanata .button--unsure:active, .new-zanata .button--unsure.is-active,
 .new-zanata input.button--unsure:active,
 .new-zanata input.button--unsure.is-active {
-  background-color: #bab215;
+  background-color: #bab216;
 }
 .new-zanata .button--warning,
 .new-zanata input.button--warning {
-  background-color: #f29f00;
+  background-color: #f2a000;
 }
 .new-zanata .button--warning:hover, .new-zanata .button--warning:focus,
 .new-zanata input.button--warning:hover,
@@ -6974,7 +6974,7 @@ Used in panel headers to match the header layout
 }
 .new-zanata .button--danger,
 .new-zanata input.button--danger {
-  background-color: #f23839;
+  background-color: #f2383a;
 }
 .new-zanata .button--danger:hover, .new-zanata .button--danger:focus,
 .new-zanata input.button--danger:hover,
@@ -6984,7 +6984,7 @@ Used in panel headers to match the header layout
 .new-zanata .button--danger:active, .new-zanata .button--danger.is-active,
 .new-zanata input.button--danger:active,
 .new-zanata input.button--danger.is-active {
-  background-color: #cc2f30;
+  background-color: #cc2f31;
 }
 .new-zanata .button--fedora, .new-zanata .button--google, .new-zanata .button--yahoo, .new-zanata .button--openid {
   background-repeat: no-repeat;
@@ -7046,8 +7046,8 @@ Used in panel headers to match the header layout
   box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
   border: none;
   border: 1px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f5f6;
-  color: #565d65;
+  background-color: #f5f7f7;
+  color: #575e65;
 }
 .new-zanata .button--group input[type="radio"] + .button:hover, .new-zanata .button--group input[type="radio"] + .button--small:hover, .new-zanata .button--group input[type="radio"] + .button--large:hover, .new-zanata .button--group input[type="radio"] + .button--huge:hover, .new-zanata .button--group input[type="radio"] + .button--snug:hover, .new-zanata .button--group input[type="radio"] + .button--full:hover, .new-zanata .button--group input[type="radio"] + .button--inline-right:hover, .new-zanata .button--group input[type="radio"] + .button--inline-left:hover, .new-zanata .button--group input[type="radio"] + .button--primary:hover, .new-zanata .button--group input[type="radio"] + .button--secondary:hover, .new-zanata .button--group input[type="radio"] + .button--success:hover, .new-zanata .button--group input[type="radio"] + .button--warning:hover, .new-zanata .button--group input[type="radio"] + .button--danger:hover, .new-zanata .button--group input[type="radio"] + .button--unsure:hover, .new-zanata .button--group input[type="radio"] + .button:focus, .new-zanata .button--group input[type="radio"] + .button--small:focus, .new-zanata .button--group input[type="radio"] + .button--large:focus, .new-zanata .button--group input[type="radio"] + .button--huge:focus, .new-zanata .button--group input[type="radio"] + .button--snug:focus, .new-zanata .button--group input[type="radio"] + .button--full:focus, .new-zanata .button--group input[type="radio"] + .button--inline-right:focus, .new-zanata .button--group input[type="radio"] + .button--inline-left:focus, .new-zanata .button--group input[type="radio"] + .button--primary:focus, .new-zanata .button--group input[type="radio"] + .button--secondary:focus, .new-zanata .button--group input[type="radio"] + .button--success:focus, .new-zanata .button--group input[type="radio"] + .button--warning:focus, .new-zanata .button--group input[type="radio"] + .button--danger:focus, .new-zanata .button--group input[type="radio"] + .button--unsure:focus {
   background-color: #fff;
@@ -7059,7 +7059,7 @@ Used in panel headers to match the header layout
   outline: none;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button, .new-zanata .button--group input[type="radio"]:checked + .button--small, .new-zanata .button--group input[type="radio"]:checked + .button--large, .new-zanata .button--group input[type="radio"]:checked + .button--huge, .new-zanata .button--group input[type="radio"]:checked + .button--snug, .new-zanata .button--group input[type="radio"]:checked + .button--full, .new-zanata .button--group input[type="radio"]:checked + .button--inline-right, .new-zanata .button--group input[type="radio"]:checked + .button--inline-left, .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger, .new-zanata .button--group input[type="radio"]:checked + .button--unsure {
-  background-color: #e4e7e8;
+  background-color: #e5e8e9;
   -moz-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   -webkit-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
@@ -7537,7 +7537,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   padding: 1.625em;
   width: 100%;
   height: 100%;
-  background-color: rgba(228, 231, 232, 0.9);
+  background-color: rgba(229, 232, 233, 0.9);
   -moz-perspective: 81.25em;
   -webkit-perspective: 81.25em;
   perspective: 81.25em;
@@ -8125,7 +8125,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   position: relative;
 }
 .new-zanata .panels__panel__item.is-active {
-  background-color: #f7f8f9;
+  background-color: #f7f9f9;
 }
 
 .new-zanata .auto-complete {
@@ -8193,7 +8193,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   color: #fff;
 }
 .new-zanata .autocomplete__result.is-selected .txt--understated, .new-zanata .autocomplete__result.is-selected .i--understated:before {
-  color: #d2e2e7;
+  color: #d2e3e8;
 }
 
 /*
@@ -8224,7 +8224,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 100%;
   height: 100%;
   background-color: #fff;
-  color: #629bad;
+  color: #639cad;
   content: "Drop files";
   font-weight: 300;
   visibility: hidden;
@@ -8332,7 +8332,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   width: 2px;
   height: 1.4625em;
   margin-left: -1px;
-  background-color: #8fb8c4;
+  background-color: #90b8c5;
 }
 .new-zanata .edit-field__cursor.is-blinking {
   -moz-animation: 1s blink step-end infinite;
@@ -8356,7 +8356,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   cursor: text;
 }
 .new-zanata .edit-item.is-focused {
-  background-color: #f7f8f9;
+  background-color: #f7f9f9;
 }
 .new-zanata .edit-item.is-unfocused {
   opacity: 0.6;
@@ -8382,7 +8382,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   }
 }
 .new-zanata .edit-item__status {
-  background-color: #bcd4db;
+  background-color: #bcd4dc;
   text-indent: -9999px;
   height: 0.40625em;
   width: 100%;
@@ -8451,7 +8451,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   float: none;
   margin-bottom: 0.8125em;
   width: 50%;
-  background-color: #f7f8f9;
+  background-color: #f7f9f9;
 }
 .new-zanata .edit-item__source--vertical .edit-item__header {
   width: 100%;
@@ -8479,10 +8479,10 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   line-height: 1.85714em;
 }
 .new-zanata .toolbar__button:hover {
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
 }
 .new-zanata .toolbar__button.is-active {
-  background-color: #f7f8f9;
+  background-color: #f7f9f9;
   border-left-color: rgba(32, 113, 138, 0.15);
   border-right-color: rgba(32, 113, 138, 0.15);
 }
@@ -8497,13 +8497,13 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   transform: rotate(180deg);
 }
 .new-zanata .toolbar__button--top.is-active {
-  border-top-color: #f7f8f9;
+  border-top-color: #f7f9f9;
 }
 .new-zanata .toolbar__button--bottom.is-active {
-  border-bottom-color: #f7f8f9;
+  border-bottom-color: #f7f9f9;
 }
 .new-zanata .toolbar__button--success {
-  background-color: #57bf74;
+  background-color: #57c075;
   color: #f2f2f2;
 }
 .new-zanata .toolbar__button--success:hover, .new-zanata .toolbar__button--success:focus {
@@ -8511,7 +8511,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   color: #fff;
 }
 .new-zanata .toolbar__button--success:active, .new-zanata .toolbar__button--success.is-active {
-  background-color: #49a162;
+  background-color: #4aa262;
 }
 
 /*
@@ -8605,7 +8605,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .rf-au-itm-sel .txt--meta,
 .new-zanata .rf-au-itm-sel .txt--understated,
 .new-zanata .rf-au-itm-sel .i--understated:before {
-  color: #bcd4db;
+  color: #bcd4dc;
 }
 .new-zanata .rf-au-lst-scrl {
   max-height: 10.5625em;
@@ -8752,7 +8752,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     min-width: 20em;
     border-right: 1px solid rgba(32, 113, 138, 0.15);
     border-bottom: 2px solid rgba(32, 113, 138, 0.15);
-    background-color: #f4f6f6;
+    background-color: #f5f6f7;
   }
   .csstransforms3d .new-zanata .header__main-nav__group {
     -moz-transition: cubic-bezier(0.55, -0.38, 0.22, 1.01) 0.25s;
@@ -8787,7 +8787,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   padding: 0.4875em 0;
 }
 .new-zanata .header__main-nav__toggle:hover, .new-zanata .header__main-nav__toggle:focus {
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
 }
 @media (min-width: 58.125em) {
@@ -8871,7 +8871,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   }
   .new-zanata .header__main-nav__menu a:not(.button--full):hover, .new-zanata .header__main-nav__menu a:not(.button--full):focus {
     border-bottom-color: rgba(32, 113, 138, 0.15);
-    background-color: #f4f6f6;
+    background-color: #f5f6f7;
     color: #026c8c;
   }
   .new-zanata .header__main-nav__menu a:not(.button--full):active {
@@ -8891,7 +8891,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle,
   .new-zanata .header__main-nav.is-active .header__main-nav__toggle {
     border-right: 1px solid rgba(32, 113, 138, 0.15);
-    background-color: #f4f6f6;
+    background-color: #f5f6f7;
     border-bottom: 2px solid transparent;
   }
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle:before,
@@ -8998,7 +8998,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   border-bottom: 2px solid transparent;
 }
 .new-zanata .header__user-nav__toggle:hover, .new-zanata .header__user-nav__toggle:focus {
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .header__user-nav__toggle:before {
@@ -9056,7 +9056,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle,
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle {
   border-left: 1px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f6f6;
+  background-color: #f5f6f7;
   border-bottom: 2px solid transparent;
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle:before,
