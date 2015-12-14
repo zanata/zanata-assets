@@ -119,7 +119,7 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
   border: none;
   padding: 0.40625em 0.8125em;
   background-color: #fff;
-  color: #575e65;
+  color: #565d65;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -138,11 +138,11 @@ button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[
   transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
 }
 .button:hover, button:hover, input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, a.action_link:hover {
-  background-color: #f5f6f7;
+  background-color: #f4f6f6;
   color: #000;
 }
 .button:active, button:active, input[type="reset"]:active, input[type="submit"]:active, input[type="button"]:active, a.action_link:active {
-  background-color: #e3e5e6;
+  background-color: #e2e5e6;
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -479,7 +479,7 @@ a.action_link:hover {
 }
 a.action_link:active {
   background-color: #20718A;
-  color: #d2e3e8;
+  color: #d2e2e7;
 }
 
 a.disabled {
@@ -555,7 +555,7 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
 .footer {
   width: 100%;
   min-width: 960px;
-  background: #e5e8e9;
+  background: #e4e7e8;
   color: #777777;
   font-size: 13px;
   padding-top: 3px;
@@ -673,18 +673,18 @@ a.readonly_link, a.readonly_link:visited, a.readonly_link:link {
   width: 100%;
   empty-cells: show;
   border: 0;
-  background-color: #f5f6f7;
+  background-color: #f4f6f6;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .rich-table tbody tr {
-  border-top: 1px solid #90b8c5;
+  border-top: 1px solid #8fb8c4;
 }
 
 .rich-table tbody tr:hover {
-  background-color: #f7f9f9;
+  background-color: #f7f8f9;
 }
 
 .rich-table-cell {
@@ -938,7 +938,7 @@ input[type="text"].loginForm_input, input[type="password"].loginForm_input {
 }
 
 .statusBar_untranslated {
-  background-color: #bcd4dc;
+  background-color: #bcd4db;
 }
 
 /* -----------------------  End Stats bar CSS  -------------------------*/

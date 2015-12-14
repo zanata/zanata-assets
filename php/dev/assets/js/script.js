@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! zanata-assets - v0.1.0 - 2015-12-01
+=======
+/*! zanata-assets - v0.1.0 - 2015-12-11
+>>>>>>> origin/master
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2015 Red Hat; Licensed MIT */
 ;(function () {

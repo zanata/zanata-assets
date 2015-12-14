@@ -83,7 +83,7 @@
       <timezone>10</timezone>
     </developer>
   </developers>
-  
+
   <contributors>
     <!-- in alphabetical order (by email field) -->
     <contributor>
@@ -126,12 +126,12 @@
 		<echo message="Run npm install" />
 		<exec executable="npm" failonerror="true">
 		  <arg line="install" />
-	        </exec> 
+	        </exec>
                 <echo message="Run grunt build from source to version:${project.version}" />
                 <exec executable="grunt" failonerror="true">
                   <arg line="build --rel ${project.version}" />
                 </exec>
-              </target>            
+              </target>
             </configuration>
             <goals>
               <goal>run</goal>
