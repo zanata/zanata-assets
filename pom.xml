@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.zanata</groupId>
   <artifactId>zanata-assets</artifactId>
-  <version>8.2-SNAPSHOT</version>
+  <version>8.2</version>
   <name>Zanata assets modules</name>
   <description>Zanata style guide and css</description>
   <url>http://zanata.org/</url>
