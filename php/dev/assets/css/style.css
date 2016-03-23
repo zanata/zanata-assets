@@ -21,38 +21,38 @@
   <div class="ph__color-base-font">$color-base-font</div>
 */
 [class*="ph__color"] {
-  margin-bottom: 1.625em;
+  margin-bottom: 1.5em;
   width: 100%;
   font-family: Monaco, Courier, monospace;
-  line-height: 2.4375em;
+  line-height: 2.25em;
 }
 [class*="ph__color"]:before {
   display: block;
   content: "";
-  height: 3.25em;
+  height: 3em;
 }
 [class*="ph__color"]:after {
   display: block;
-  padding: 0 0.8125em;
+  padding: 0 0.75em;
   background-color: rgba(0, 0, 0, 0.025);
 }
 @media (min-width: 79.375em) {
   [class*="ph__color"] {
-    line-height: 4.875em;
+    line-height: 4.5em;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.025);
   }
   [class*="ph__color"]:before {
-    height: 4.875em;
+    height: 4.5em;
     float: left;
     width: 20%;
-    margin-right: 0.8125em;
+    margin-right: 0.75em;
   }
   [class*="ph__color"]:after {
     float: right;
     width: 20%;
     text-align: center;
-    margin-left: 0.8125em;
+    margin-left: 0.75em;
   }
 }
 
@@ -88,18 +88,18 @@
   <div class="ph__font-family-heading">$font-family-heading</div>
 */
 [class*="ph__font"] {
-  margin-bottom: 1.625em;
-  padding: 0 0.8125em;
+  margin-bottom: 1.5em;
+  padding: 0 0.75em;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.025);
   font-family: Monaco, Courier, monospace;
-  line-height: 2.4375em;
-  line-height: 3.25em;
+  line-height: 2.25em;
+  line-height: 3em;
 }
 [class*="ph__font"]:before {
   display: block;
-  margin: 0 -0.8125em;
-  padding: 0 0.8125em;
+  margin: 0 -0.75em;
+  padding: 0 0.75em;
   background-color: rgba(0, 0, 0, 0.025);
   content: "";
 }
@@ -115,7 +115,7 @@
 }
 
 .ph__block, .ph__inline-block {
-  line-height: 8.125em;
+  line-height: 7.5em;
   text-align: center;
   background-color: #e6e6e6;
   display: block;
@@ -176,35 +176,25 @@ NOTE: No classes should go in element files
 
 html.new-zanata,
 .new-zanata-base {
-  line-height: 1.625em;
+  line-height: 1.5;
   color: #444c54;
   font-size: 16px;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
   min-width: 20em;
-}
-@media (min-width: 96.25em) {
-  html.new-zanata,
-  .new-zanata-base {
-    font-size: 18px;
-  }
 }
 
 body.new-zanata,
 .new-zanata-base-inner {
   margin: 0;
-  background: #ECEFF0;
-  overflow-y: scroll;
+  background: #fff;
 }
 
 .new-zanata main {
-  padding-top: 1.625em;
+  padding-top: 1.5em;
 }
 @media (min-width: 79.375em) {
   .new-zanata main {
-    padding-top: 3.25em;
+    padding-top: 3em;
   }
 }
 
@@ -259,57 +249,57 @@ Used to section content and create hierarchy
 .new-zanata h1,
 .new-zanata .alpha {
   font-size: 2.25em;
-  line-height: 1.08333em;
+  line-height: 1em;
   letter-spacing: -0.05em;
 }
 .new-zanata h1 {
-  margin-bottom: 0.36111em;
+  margin-bottom: 0.33333em;
 }
 .new-zanata h2,
 .new-zanata .beta {
   font-size: 1.75em;
-  line-height: 1.39286em;
+  line-height: 1.28571em;
   letter-spacing: -0.05em;
 }
 .new-zanata h2 {
-  margin-top: 0.92857em;
-  margin-bottom: 0.46429em;
+  margin-top: 0.85714em;
+  margin-bottom: 0.42857em;
 }
 .new-zanata h3,
 .new-zanata .gamma {
   font-size: 1.5em;
-  line-height: 1.625em;
+  line-height: 1.5em;
   letter-spacing: -0.05em;
 }
 .new-zanata h3 {
-  margin-top: 1.08333em;
-  margin-bottom: 0.54167em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 .new-zanata h4,
 .new-zanata .delta {
   font-size: 1.25em;
-  line-height: 1.3em;
+  line-height: 1.2em;
 }
 .new-zanata h4 {
-  margin-top: 0.65em;
-  margin-bottom: 0.325em;
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
 }
 .new-zanata h5,
 .new-zanata .epsilon {
   font-size: 1.125em;
-  line-height: 1.44444em;
+  line-height: 1.33333em;
 }
 .new-zanata h5 {
-  margin-top: 0.72222em;
-  margin-bottom: 0.72222em;
+  margin-top: 0.66667em;
+  margin-bottom: 0.66667em;
 }
 .new-zanata h6,
 .new-zanata .zeta {
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata h6 {
-  margin-top: 0.8125em;
+  margin-top: 0.75em;
 }
 
 /*
@@ -325,7 +315,7 @@ Used to section content and create hierarchy
 
 */
 .new-zanata p {
-  margin: 0 0 0.8125em;
+  margin: 0 0 0.75em;
   word-wrap: break-word;
   hyphens: auto;
 }
@@ -353,12 +343,12 @@ Used to section content and create hierarchy
 .new-zanata kbd,
 .new-zanata pre,
 .new-zanata samp {
-  padding: 0 0.23214em;
+  padding: 0 0.21429em;
   font-family: "Monaco", Courier, "Courier New", monospace;
   font-weight: 700;
   color: #565d65;
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
   margin: 0;
 }
 .new-zanata p code,
@@ -373,8 +363,8 @@ Used to section content and create hierarchy
 }
 .new-zanata pre {
   white-space: pre;
-  padding: 0.8125em;
-  margin: 0.92857em 0;
+  padding: 0.75em;
+  margin: 0.85714em 0;
   border-top: 1px solid rgba(32, 113, 138, 0.15);
   border-bottom: 1px solid rgba(32, 113, 138, 0.15);
   background-color: rgba(32, 113, 138, 0.05);
@@ -549,13 +539,13 @@ a:hover,
 */
 .new-zanata ul,
 .new-zanata ol {
-  margin: 0.8125em 0;
-  padding: 0 0 0 1.625em;
+  margin: 0.75em 0;
+  padding: 0 0 0 1.5em;
 }
 .new-zanata ul li,
 .new-zanata ol li {
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 1.5em;
   list-style-type: disc;
   word-wrap: break-word;
   hyphens: auto;
@@ -584,7 +574,7 @@ a:hover,
 
 */
 .new-zanata dd {
-  margin: 0 0 0 1.625em;
+  margin: 0 0 0 1.5em;
 }
 
 /*
@@ -655,13 +645,13 @@ a:hover,
 }
 .new-zanata th,
 .new-zanata td {
-  padding: 0.20313em 0.40625em;
+  padding: 0.1875em 0.375em;
   text-align: left;
 }
 @media (min-width: 46.25em) {
   .new-zanata th,
   .new-zanata td {
-    padding: 0.40625em 0.8125em;
+    padding: 0.375em 0.75em;
   }
 }
 .new-zanata [colspan] {
@@ -713,10 +703,10 @@ a:hover,
 
 */
 .new-zanata form {
-  margin: 0 0 0.8125em;
+  margin: 0 0 0.75em;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata ::-webkit-input-placeholder {
   color: #8fb8c4;
@@ -737,11 +727,11 @@ a:hover,
 .new-zanata fieldset {
   border-width: 0.0625em;
   border-style: solid;
-  padding: 0.75em;
+  padding: 0.6875em;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  margin: 1.21875em 0;
+  margin: 1.125em 0;
   padding-bottom: 0;
   border-color: #d2e2e7;
 }
@@ -749,14 +739,14 @@ a:hover,
   border: 0;
   font-weight: 600;
   background: #fff;
-  padding: 0 0.20313em;
-  margin-left: -0.20313em;
+  padding: 0 0.1875em;
+  margin-left: -0.1875em;
 }
 .new-zanata label {
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 1.5em;
   display: inline-block;
-  margin-bottom: 0.40625em;
+  margin-bottom: 0.375em;
   color: #444c54;
   font-weight: 600;
   font-family: inherit;
@@ -771,7 +761,7 @@ a:hover,
 }
 .new-zanata button,
 .new-zanata input {
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata button,
 .new-zanata html input[type="button"],
@@ -830,14 +820,14 @@ a:hover,
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.20313em 0.40625em;
+  padding: 0.1875em 0.375em;
   display: block;
   width: 100%;
   font-weight: 400;
   border: 1px solid #bcd4db;
-  background-color: #f7f8f9;
+  background-color: #fcfcfc;
   color: #333333;
-  margin: 0 0 0.8125em;
+  margin: 0 0 0.75em;
   -webkit-appearance: none;
 }
 .new-zanata input[type="text"]:focus,
@@ -870,7 +860,7 @@ a:hover,
 .new-zanata input[type="time"][disabled],
 .new-zanata input[type="url"][disabled],
 .new-zanata textarea[disabled] {
-  background-color: #e4e7e8;
+  background-color: #f7f7f7;
 }
 .new-zanata [contenteditable]:focus {
   outline: none !important;
@@ -879,12 +869,12 @@ a:hover,
   overflow: auto;
   height: auto;
   vertical-align: top;
-  min-height: 4.875em;
+  min-height: 4.5em;
 }
 .new-zanata select {
   width: 100%;
   margin: 0;
-  height: 2.03125em;
+  height: 1.875em;
   border: 1px solid #ccc;
   color: #444c54;
   border-radius: 4px;
@@ -925,7 +915,7 @@ a:hover,
   width: 100%;
   border: 0;
   border-bottom: 1px solid rgba(32, 113, 138, 0.15);
-  margin: 1.625em 0;
+  margin: 1.5em 0;
   background: transparent;
 }
 
@@ -1018,45 +1008,45 @@ These are components that can be utilised or are depended on by other components
 
 */
 .new-zanata .l--constrain-small {
-  max-width: 24.375em;
+  max-width: 22.5em;
 }
 .new-zanata .l--constrain-medium {
-  max-width: 52em;
+  max-width: 48em;
 }
 .new-zanata .l--constrain-large {
-  max-width: 68.25em;
+  max-width: 63em;
 }
 @media (min-width: 46.25em) and (max-width: 79.3125em) {
   .new-zanata .l--constrain-small-m {
-    max-width: 24.375em;
+    max-width: 22.5em;
   }
   .new-zanata .l--constrain-medium-m {
-    max-width: 52em;
+    max-width: 48em;
   }
   .new-zanata .l--constrain-large-m {
-    max-width: 68.25em;
+    max-width: 63em;
   }
 }
 @media (min-width: 79.375em) and (max-width: 96.1875em) {
   .new-zanata .l--constrain-small-l {
-    max-width: 24.375em;
+    max-width: 22.5em;
   }
   .new-zanata .l--constrain-medium-l {
-    max-width: 52em;
+    max-width: 48em;
   }
   .new-zanata .l--constrain-large-l {
-    max-width: 68.25em;
+    max-width: 63em;
   }
 }
 @media (min-width: 96.25em) {
   .new-zanata .l--constrain-small-h {
-    max-width: 24.375em;
+    max-width: 22.5em;
   }
   .new-zanata .l--constrain-medium-h {
-    max-width: 52em;
+    max-width: 48em;
   }
   .new-zanata .l--constrain-large-h {
-    max-width: 68.25em;
+    max-width: 63em;
   }
 }
 
@@ -1080,45 +1070,45 @@ These are components that can be utilised or are depended on by other components
 
 */
 .new-zanata .l--limit-small {
-  min-width: 24.375em;
+  min-width: 22.5em;
 }
 .new-zanata .l--limit-medium {
-  min-width: 52em;
+  min-width: 48em;
 }
 .new-zanata .l--limit-large {
-  min-width: 68.25em;
+  min-width: 63em;
 }
 @media (min-width: 46.25em) and (max-width: 79.3125em) {
   .new-zanata .l--limit-small-m {
-    min-width: 24.375em;
+    min-width: 22.5em;
   }
   .new-zanata .l--limit-medium-m {
-    min-width: 52em;
+    min-width: 48em;
   }
   .new-zanata .l--limit-large-m {
-    min-width: 68.25em;
+    min-width: 63em;
   }
 }
 @media (min-width: 79.375em) and (max-width: 96.1875em) {
   .new-zanata .l--limit-small-l {
-    min-width: 24.375em;
+    min-width: 22.5em;
   }
   .new-zanata .l--limit-medium-l {
-    min-width: 52em;
+    min-width: 48em;
   }
   .new-zanata .l--limit-large-l {
-    min-width: 68.25em;
+    min-width: 63em;
   }
 }
 @media (min-width: 96.25em) {
   .new-zanata .l--limit-small-h {
-    min-width: 24.375em;
+    min-width: 22.5em;
   }
   .new-zanata .l--limit-medium-h {
-    min-width: 52em;
+    min-width: 48em;
   }
   .new-zanata .l--limit-large-h {
-    min-width: 68.25em;
+    min-width: 63em;
   }
 }
 
@@ -1133,16 +1123,16 @@ $max-site-width is assigned to this
   max-width: 120em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 0.8125em;
+  padding: 0 0.75em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .l__wrapper {
-    padding: 0 1.625em;
+    padding: 0 1.5em;
   }
 }
 @media (min-width: 96.25em) {
   .new-zanata .l__wrapper {
-    padding: 0 3.25em;
+    padding: 0 3em;
   }
 }
 
@@ -1627,234 +1617,234 @@ Only use them if it does not make sense to add this styling to another element/c
   padding: 0em !important;
 }
 .new-zanata .l--push-top-quarter {
-  margin-top: 0.40625em !important;
+  margin-top: 0.375em !important;
 }
 .new-zanata .l--pad-top-quarter {
-  padding-top: 0.40625em !important;
+  padding-top: 0.375em !important;
 }
 .new-zanata .l--push-bottom-quarter {
-  margin-bottom: 0.40625em !important;
+  margin-bottom: 0.375em !important;
 }
 .new-zanata .l--pad-bottom-quarter {
-  padding-bottom: 0.40625em !important;
+  padding-bottom: 0.375em !important;
 }
 .new-zanata .l--push-left-quarter {
-  margin-left: 0.40625em !important;
+  margin-left: 0.375em !important;
 }
 .new-zanata .l--pad-left-quarter {
-  padding-left: 0.40625em !important;
+  padding-left: 0.375em !important;
 }
 .new-zanata .l--push-right-quarter {
-  margin-right: 0.40625em !important;
+  margin-right: 0.375em !important;
 }
 .new-zanata .l--pad-right-quarter {
-  padding-right: 0.40625em !important;
+  padding-right: 0.375em !important;
 }
 .new-zanata .l--push-v-quarter {
-  margin-top: 0.40625em !important;
-  margin-bottom: 0.40625em !important;
+  margin-top: 0.375em !important;
+  margin-bottom: 0.375em !important;
 }
 .new-zanata .l--pad-v-quarter {
-  padding-top: 0.40625em !important;
-  padding-bottom: 0.40625em !important;
+  padding-top: 0.375em !important;
+  padding-bottom: 0.375em !important;
 }
 .new-zanata .l--push-h-quarter {
-  margin-left: 0.40625em !important;
-  margin-right: 0.40625em !important;
+  margin-left: 0.375em !important;
+  margin-right: 0.375em !important;
 }
 .new-zanata .l--pad-h-quarter {
-  padding-left: 0.40625em !important;
-  padding-right: 0.40625em !important;
+  padding-left: 0.375em !important;
+  padding-right: 0.375em !important;
 }
 .new-zanata .l--push-all-quarter {
-  margin: 0.40625em !important;
+  margin: 0.375em !important;
 }
 .new-zanata .l--pad-all-quarter {
-  padding: 0.40625em !important;
+  padding: 0.375em !important;
 }
 .new-zanata .l--push-top-half {
-  margin-top: 0.8125em !important;
+  margin-top: 0.75em !important;
 }
 .new-zanata .l--pad-top-half {
-  padding-top: 0.8125em !important;
+  padding-top: 0.75em !important;
 }
 .new-zanata .l--push-bottom-half {
-  margin-bottom: 0.8125em !important;
+  margin-bottom: 0.75em !important;
 }
 .new-zanata .l--pad-bottom-half {
-  padding-bottom: 0.8125em !important;
+  padding-bottom: 0.75em !important;
 }
 .new-zanata .l--push-left-half {
-  margin-left: 0.8125em !important;
+  margin-left: 0.75em !important;
 }
 .new-zanata .l--pad-left-half {
-  padding-left: 0.8125em !important;
+  padding-left: 0.75em !important;
 }
 .new-zanata .l--push-right-half {
-  margin-right: 0.8125em !important;
+  margin-right: 0.75em !important;
 }
 .new-zanata .l--pad-right-half {
-  padding-right: 0.8125em !important;
+  padding-right: 0.75em !important;
 }
 .new-zanata .l--push-v-half {
-  margin-top: 0.8125em !important;
-  margin-bottom: 0.8125em !important;
+  margin-top: 0.75em !important;
+  margin-bottom: 0.75em !important;
 }
 .new-zanata .l--pad-v-half {
-  padding-top: 0.8125em !important;
-  padding-bottom: 0.8125em !important;
+  padding-top: 0.75em !important;
+  padding-bottom: 0.75em !important;
 }
 .new-zanata .l--push-h-half {
-  margin-left: 0.8125em !important;
-  margin-right: 0.8125em !important;
+  margin-left: 0.75em !important;
+  margin-right: 0.75em !important;
 }
 .new-zanata .l--pad-h-half {
-  padding-left: 0.8125em !important;
-  padding-right: 0.8125em !important;
+  padding-left: 0.75em !important;
+  padding-right: 0.75em !important;
 }
 .new-zanata .l--push-all-half {
-  margin: 0.8125em !important;
+  margin: 0.75em !important;
 }
 .new-zanata .l--pad-all-half {
-  padding: 0.8125em !important;
+  padding: 0.75em !important;
 }
 .new-zanata .l--push-top-1 {
-  margin-top: 1.625em !important;
+  margin-top: 1.5em !important;
 }
 .new-zanata .l--pad-top-1 {
-  padding-top: 1.625em !important;
+  padding-top: 1.5em !important;
 }
 .new-zanata .l--push-bottom-1 {
-  margin-bottom: 1.625em !important;
+  margin-bottom: 1.5em !important;
 }
 .new-zanata .l--pad-bottom-1 {
-  padding-bottom: 1.625em !important;
+  padding-bottom: 1.5em !important;
 }
 .new-zanata .l--push-left-1 {
-  margin-left: 1.625em !important;
+  margin-left: 1.5em !important;
 }
 .new-zanata .l--pad-left-1 {
-  padding-left: 1.625em !important;
+  padding-left: 1.5em !important;
 }
 .new-zanata .l--push-right-1 {
-  margin-right: 1.625em !important;
+  margin-right: 1.5em !important;
 }
 .new-zanata .l--pad-right-1 {
-  padding-right: 1.625em !important;
+  padding-right: 1.5em !important;
 }
 .new-zanata .l--push-v-1 {
-  margin-top: 1.625em !important;
-  margin-bottom: 1.625em !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 1.5em !important;
 }
 .new-zanata .l--pad-v-1 {
-  padding-top: 1.625em !important;
-  padding-bottom: 1.625em !important;
+  padding-top: 1.5em !important;
+  padding-bottom: 1.5em !important;
 }
 .new-zanata .l--push-h-1 {
-  margin-left: 1.625em !important;
-  margin-right: 1.625em !important;
+  margin-left: 1.5em !important;
+  margin-right: 1.5em !important;
 }
 .new-zanata .l--pad-h-1 {
-  padding-left: 1.625em !important;
-  padding-right: 1.625em !important;
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
 }
 .new-zanata .l--push-all-1 {
-  margin: 1.625em !important;
+  margin: 1.5em !important;
 }
 .new-zanata .l--pad-all-1 {
-  padding: 1.625em !important;
+  padding: 1.5em !important;
 }
 .new-zanata .l--push-top-1half {
-  margin-top: 2.4375em !important;
+  margin-top: 2.25em !important;
 }
 .new-zanata .l--pad-top-1half {
-  padding-top: 2.4375em !important;
+  padding-top: 2.25em !important;
 }
 .new-zanata .l--push-bottom-1half {
-  margin-bottom: 2.4375em !important;
+  margin-bottom: 2.25em !important;
 }
 .new-zanata .l--pad-bottom-1half {
-  padding-bottom: 2.4375em !important;
+  padding-bottom: 2.25em !important;
 }
 .new-zanata .l--push-left-1half {
-  margin-left: 2.4375em !important;
+  margin-left: 2.25em !important;
 }
 .new-zanata .l--pad-left-1half {
-  padding-left: 2.4375em !important;
+  padding-left: 2.25em !important;
 }
 .new-zanata .l--push-right-1half {
-  margin-right: 2.4375em !important;
+  margin-right: 2.25em !important;
 }
 .new-zanata .l--pad-right-1half {
-  padding-right: 2.4375em !important;
+  padding-right: 2.25em !important;
 }
 .new-zanata .l--push-v-1half {
-  margin-top: 2.4375em !important;
-  margin-bottom: 2.4375em !important;
+  margin-top: 2.25em !important;
+  margin-bottom: 2.25em !important;
 }
 .new-zanata .l--pad-v-1half {
-  padding-top: 2.4375em !important;
-  padding-bottom: 2.4375em !important;
+  padding-top: 2.25em !important;
+  padding-bottom: 2.25em !important;
 }
 .new-zanata .l--push-h-1half {
-  margin-left: 2.4375em !important;
-  margin-right: 2.4375em !important;
+  margin-left: 2.25em !important;
+  margin-right: 2.25em !important;
 }
 .new-zanata .l--pad-h-1half {
-  padding-left: 2.4375em !important;
-  padding-right: 2.4375em !important;
+  padding-left: 2.25em !important;
+  padding-right: 2.25em !important;
 }
 .new-zanata .l--push-all-1half {
-  margin: 2.4375em !important;
+  margin: 2.25em !important;
 }
 .new-zanata .l--pad-all-1half {
-  padding: 2.4375em !important;
+  padding: 2.25em !important;
 }
 .new-zanata .l--push-top-2 {
-  margin-top: 3.25em !important;
+  margin-top: 3em !important;
 }
 .new-zanata .l--pad-top-2 {
-  padding-top: 3.25em !important;
+  padding-top: 3em !important;
 }
 .new-zanata .l--push-bottom-2 {
-  margin-bottom: 3.25em !important;
+  margin-bottom: 3em !important;
 }
 .new-zanata .l--pad-bottom-2 {
-  padding-bottom: 3.25em !important;
+  padding-bottom: 3em !important;
 }
 .new-zanata .l--push-left-2 {
-  margin-left: 3.25em !important;
+  margin-left: 3em !important;
 }
 .new-zanata .l--pad-left-2 {
-  padding-left: 3.25em !important;
+  padding-left: 3em !important;
 }
 .new-zanata .l--push-right-2 {
-  margin-right: 3.25em !important;
+  margin-right: 3em !important;
 }
 .new-zanata .l--pad-right-2 {
-  padding-right: 3.25em !important;
+  padding-right: 3em !important;
 }
 .new-zanata .l--push-v-2 {
-  margin-top: 3.25em !important;
-  margin-bottom: 3.25em !important;
+  margin-top: 3em !important;
+  margin-bottom: 3em !important;
 }
 .new-zanata .l--pad-v-2 {
-  padding-top: 3.25em !important;
-  padding-bottom: 3.25em !important;
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
 }
 .new-zanata .l--push-h-2 {
-  margin-left: 3.25em !important;
-  margin-right: 3.25em !important;
+  margin-left: 3em !important;
+  margin-right: 3em !important;
 }
 .new-zanata .l--pad-h-2 {
-  padding-left: 3.25em !important;
-  padding-right: 3.25em !important;
+  padding-left: 3em !important;
+  padding-right: 3em !important;
 }
 .new-zanata .l--push-all-2 {
-  margin: 3.25em !important;
+  margin: 3em !important;
 }
 .new-zanata .l--pad-all-2 {
-  padding: 3.25em !important;
+  padding: 3em !important;
 }
 
 /*
@@ -1895,8 +1885,8 @@ Only use them if it does not make sense to add this styling to another element/c
 .new-zanata .g, .new-zanata .g--fit, .new-zanata .g--loose, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
   *zoom: 1;
   margin: 0;
-  margin-left: -0.40625em;
-  margin-right: -0.40625em;
+  margin-left: -0.375em;
+  margin-right: -0.375em;
   padding: 0;
   list-style: none;
   letter-spacing: -0.31em;
@@ -1908,14 +1898,14 @@ Only use them if it does not make sense to add this styling to another element/c
 }
 @media (min-width: 46.25em) {
   .new-zanata .g, .new-zanata .g--fit, .new-zanata .g--loose, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
-    margin-left: -0.8125em;
-    margin-right: -0.8125em;
+    margin-left: -0.75em;
+    margin-right: -0.75em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g, .new-zanata .g--fit, .new-zanata .g--loose, .new-zanata .g--tight, .new-zanata .g--tighter, .new-zanata .g--collapsed, .new-zanata .g--rev, .new-zanata .g--right, .new-zanata .g--centered {
-    margin-left: -1.625em;
-    margin-right: -1.625em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
   }
 }
 .new-zanata .g > .g, .new-zanata .g--fit > .g, .new-zanata .g--loose > .g, .new-zanata .g--tight > .g, .new-zanata .g--tighter > .g, .new-zanata .g--collapsed > .g, .new-zanata .g--rev > .g, .new-zanata .g--right > .g, .new-zanata .g--centered > .g, .new-zanata .g > .g--fit, .new-zanata .g--fit > .g--fit, .new-zanata .g--loose > .g--fit, .new-zanata .g--tight > .g--fit, .new-zanata .g--tighter > .g--fit, .new-zanata .g--collapsed > .g--fit, .new-zanata .g--rev > .g--fit, .new-zanata .g--right > .g--fit, .new-zanata .g--centered > .g--fit, .new-zanata .g > .g--loose, .new-zanata .g--fit > .g--loose, .new-zanata .g--loose > .g--loose, .new-zanata .g--tight > .g--loose, .new-zanata .g--tighter > .g--loose, .new-zanata .g--collapsed > .g--loose, .new-zanata .g--rev > .g--loose, .new-zanata .g--right > .g--loose, .new-zanata .g--centered > .g--loose, .new-zanata .g > .g--tight, .new-zanata .g--fit > .g--tight, .new-zanata .g--loose > .g--tight, .new-zanata .g--tight > .g--tight, .new-zanata .g--tighter > .g--tight, .new-zanata .g--collapsed > .g--tight, .new-zanata .g--rev > .g--tight, .new-zanata .g--right > .g--tight, .new-zanata .g--centered > .g--tight, .new-zanata .g > .g--tighter, .new-zanata .g--fit > .g--tighter, .new-zanata .g--loose > .g--tighter, .new-zanata .g--tight > .g--tighter, .new-zanata .g--tighter > .g--tighter, .new-zanata .g--collapsed > .g--tighter, .new-zanata .g--rev > .g--tighter, .new-zanata .g--right > .g--tighter, .new-zanata .g--centered > .g--tighter, .new-zanata .g > .g--collapsed, .new-zanata .g--fit > .g--collapsed, .new-zanata .g--loose > .g--collapsed, .new-zanata .g--tight > .g--collapsed, .new-zanata .g--tighter > .g--collapsed, .new-zanata .g--collapsed > .g--collapsed, .new-zanata .g--rev > .g--collapsed, .new-zanata .g--right > .g--collapsed, .new-zanata .g--centered > .g--collapsed, .new-zanata .g > .g--rev, .new-zanata .g--fit > .g--rev, .new-zanata .g--loose > .g--rev, .new-zanata .g--tight > .g--rev, .new-zanata .g--tighter > .g--rev, .new-zanata .g--collapsed > .g--rev, .new-zanata .g--rev > .g--rev, .new-zanata .g--right > .g--rev, .new-zanata .g--centered > .g--rev, .new-zanata .g > .g--right, .new-zanata .g--fit > .g--right, .new-zanata .g--loose > .g--right, .new-zanata .g--tight > .g--right, .new-zanata .g--tighter > .g--right, .new-zanata .g--collapsed > .g--right, .new-zanata .g--rev > .g--right, .new-zanata .g--right > .g--right, .new-zanata .g--centered > .g--right, .new-zanata .g > .g--centered, .new-zanata .g--fit > .g--centered, .new-zanata .g--loose > .g--centered, .new-zanata .g--tight > .g--centered, .new-zanata .g--tighter > .g--centered, .new-zanata .g--collapsed > .g--centered, .new-zanata .g--rev > .g--centered, .new-zanata .g--right > .g--centered, .new-zanata .g--centered > .g--centered {
@@ -1930,8 +1920,8 @@ Only use them if it does not make sense to add this styling to another element/c
   display: inline-block;
   margin: 0;
   padding: 0;
-  padding-left: 0.40625em;
-  padding-right: 0.40625em;
+  padding-left: 0.375em;
+  padding-right: 0.375em;
   width: 100%;
   vertical-align: top;
   word-spacing: normal;
@@ -1940,14 +1930,14 @@ Only use them if it does not make sense to add this styling to another element/c
 }
 @media (min-width: 46.25em) {
   .new-zanata .g__item {
-    padding-left: 0.8125em;
-    padding-right: 0.8125em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g__item {
-    padding-left: 1.625em;
-    padding-right: 1.625em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
   }
 }
 
@@ -1988,35 +1978,35 @@ Loose grids have all the properties of regular grids, but with half the spacing.
 
 */
 .new-zanata .g--loose {
-  margin-left: -0.8125em;
-  margin-right: -0.8125em;
+  margin-left: -0.75em;
+  margin-right: -0.75em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .g--loose {
-    margin-left: -1.625em;
-    margin-right: -1.625em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g--loose {
-    margin-left: -3.25em;
-    margin-right: -3.25em;
+    margin-left: -3em;
+    margin-right: -3em;
   }
 }
 .new-zanata .g--loose > .g__item {
-  padding-left: 0.8125em;
-  padding-right: 0.8125em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .g--loose > .g__item {
-    padding-left: 1.625em;
-    padding-right: 1.625em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g--loose > .g__item {
-    padding-left: 3.25em;
-    padding-right: 3.25em;
+    padding-left: 3em;
+    padding-right: 3em;
   }
 }
 
@@ -2037,35 +2027,35 @@ Tight grids have all the properties of regular grids, but with half the spacing.
 
 */
 .new-zanata .g--tight {
-  margin-left: -0.20313em;
-  margin-right: -0.20313em;
+  margin-left: -0.1875em;
+  margin-right: -0.1875em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .g--tight {
-    margin-left: -0.40625em;
-    margin-right: -0.40625em;
+    margin-left: -0.375em;
+    margin-right: -0.375em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g--tight {
-    margin-left: -0.8125em;
-    margin-right: -0.8125em;
+    margin-left: -0.75em;
+    margin-right: -0.75em;
   }
 }
 .new-zanata .g--tight > .g__item {
-  padding-left: 0.20313em;
-  padding-right: 0.20313em;
+  padding-left: 0.1875em;
+  padding-right: 0.1875em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .g--tight > .g__item {
-    padding-left: 0.40625em;
-    padding-right: 0.40625em;
+    padding-left: 0.375em;
+    padding-right: 0.375em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g--tight > .g__item {
-    padding-left: 0.8125em;
-    padding-right: 0.8125em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
   }
 }
 
@@ -2086,29 +2076,29 @@ Tighter grids have all the properties of regular grids, but with a quarter the s
 
 */
 .new-zanata .g--tighter {
-  margin-left: -0.20313em;
+  margin-left: -0.1875em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .g--tighter {
-    margin-left: -0.40625em;
+    margin-left: -0.375em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g--tighter {
-    margin-left: -0.8125em;
+    margin-left: -0.75em;
   }
 }
 .new-zanata .g--tighter > .g__item {
-  padding-left: 0.20313em;
+  padding-left: 0.1875em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .g--tighter > .g__item {
-    padding-left: 0.40625em;
+    padding-left: 0.375em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .g--tighter > .g__item {
-    padding-left: 0.8125em;
+    padding-left: 0.75em;
   }
 }
 
@@ -2575,13 +2565,13 @@ Centered grids align grid items centrally without needing to use push or pull cl
   }
 }
 .new-zanata .w--r-1-2 {
-  width: 0.8125em;
+  width: 0.75em;
 }
 .new-zanata .w--r-1 {
-  width: 1.625em;
+  width: 1.5em;
 }
 .new-zanata .w--r-2 {
-  width: 3.25em;
+  width: 3em;
 }
 
 .h--1-2,
@@ -2592,23 +2582,23 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 
 .h--1-2 {
-  line-height: 0.8125em !important;
+  line-height: 0.75em !important;
 }
 
 .h--1 {
-  line-height: 1.625em !important;
+  line-height: 1.5em !important;
 }
 
 .h--1-1-4 {
-  line-height: 2.03125em !important;
+  line-height: 1.875em !important;
 }
 
 .h--1-1-2 {
-  line-height: 2.4375em !important;
+  line-height: 2.25em !important;
 }
 
 .h--2 {
-  line-height: 3.25em !important;
+  line-height: 3em !important;
 }
 
 .new-zanata .is-hidden {
@@ -2829,10 +2819,10 @@ Centered grids align grid items centrally without needing to use push or pull cl
 
 */
 .new-zanata .txt--invert {
-  color: #ECEFF0;
+  color: #fff;
 }
 .new-zanata .txt--invert a {
-  color: #c1cbce !important;
+  color: #d9d9d9 !important;
 }
 .new-zanata .txt--invert a:hover {
   color: white !important;
@@ -2852,7 +2842,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--lead {
   font-size: 1.25em;
-  line-height: 1.3em;
+  line-height: 1.2em;
   font-weight: 300;
 }
 .new-zanata .txt--lead strong {
@@ -2870,7 +2860,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--hero {
   font-size: 1.5em;
-  line-height: 1.625em;
+  line-height: 1.5em;
   font-weight: 300;
 }
 .new-zanata .txt--hero strong {
@@ -2879,7 +2869,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 @media (min-width: 46.25em) {
   .new-zanata .txt--hero {
     font-size: 1.75em;
-    line-height: 1.16071em;
+    line-height: 1.07143em;
   }
 }
 
@@ -2894,7 +2884,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--mini {
   font-size: 0.875em;
-  line-height: 1.39286em;
+  line-height: 1.28571em;
 }
 
 /*
@@ -2908,7 +2898,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 */
 .new-zanata .txt--meta {
   font-size: 0.875em;
-  line-height: 1.39286em;
+  line-height: 1.28571em;
   color: #629bad;
   font-weight: 400;
   letter-spacing: 0;
@@ -3080,7 +3070,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .loader--center:hover,
 .new-zanata .modal__content:hover,
 .new-zanata .bg--high--hover:hover {
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
 }
 .new-zanata .bg--higher, .new-zanata .bg--pop-higher, .new-zanata .dropdown__content, .new-zanata .panel__sub-header, .new-zanata .tabs--accent .tabs__nav a.is-active, .new-zanata .tabs--accent .tabs__nav a.is-active:after,
 .new-zanata .bg--higher:hover,
@@ -3090,7 +3080,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover,
 .new-zanata .tabs--accent .tabs__nav a.is-active:hover:after,
 .new-zanata .bg--higher--hover:hover {
-  background-color: #f7f8f9;
+  background-color: #fcfcfc;
 }
 .new-zanata .bg--highest, .new-zanata .bg--pop-highest, .new-zanata .tabs--vertical .tabs__nav > li.is-active a,
 .new-zanata .tabs--vertical .tabs__nav > li > a.is-active, .new-zanata .tabs--vertical .tabs__content > li, .new-zanata .dropdown.is-active .dropdown__toggle, .new-zanata .panel__header, .new-zanata .panels__panel.is-active, .new-zanata .autocomplete__results, .new-zanata .rf-au-lst-dcrtn, .new-zanata .tabs--accent .tabs__nav,
@@ -3112,15 +3102,15 @@ Centered grids align grid items centrally without needing to use push or pull cl
 }
 .new-zanata .bg--low,
 .new-zanata .bg--low--hover:hover {
-  background-color: #d0d7d9;
+  background-color: #e6e6e6;
 }
 .new-zanata .bg--lower,
 .new-zanata .bg--lower--hover:hover {
-  background-color: #a5b3b8;
+  background-color: #bfbfbf;
 }
 .new-zanata .bg--lowest,
 .new-zanata .bg--lowest--hover:hover {
-  background-color: #7a8f96;
+  background-color: #999999;
 }
 .new-zanata .bg--pop-high, .new-zanata .modal__dialog, .new-zanata .panel, .new-zanata .header__user-nav__menu {
   border: 1px solid rgba(32, 113, 138, 0.15);
@@ -3136,7 +3126,7 @@ Centered grids align grid items centrally without needing to use push or pull cl
   border-bottom-width: 2px;
 }
 .new-zanata .bg--neutral, .new-zanata .message--neutral {
-  background-color: #ECEFF0;
+  background-color: #fff;
 }
 
 /*
@@ -3461,13 +3451,13 @@ All icons also need the class `.i` added to them.
   text-align: center;
 }
 .new-zanata .i--inline:before {
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata .i--left:before {
-  margin-right: 0.20313em;
+  margin-right: 0.1875em;
 }
 .new-zanata .i--right:before {
-  margin-left: 0.20313em;
+  margin-left: 0.1875em;
 }
 .new-zanata .i--small:before {
   font-size: 0.875em;
@@ -3498,28 +3488,28 @@ Use to display icons to the far side of text, either left or right. Usually used
   white-space: nowrap;
 }
 .new-zanata .i__item--left .i__item__icon, .new-zanata .i__item--right .i__item__icon {
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata .i__item--left {
   text-align: right;
-  padding-left: 2.4375em !important;
+  padding-left: 2.25em !important;
 }
 .new-zanata .i__item--left .i__item__icon {
   float: left;
-  margin-left: -1.625em;
+  margin-left: -1.5em;
 }
 .new-zanata .i__item--right {
-  padding-right: 2.4375em !important;
+  padding-right: 2.25em !important;
 }
 .new-zanata .i__item--right .i__item__icon {
   float: right;
-  margin-right: -1.625em;
+  margin-right: -1.5em;
 }
 .new-zanata .i__text--right {
-  margin-left: 0.20313em;
+  margin-left: 0.1875em;
 }
 .new-zanata .i__text--left {
-  margin-right: 0.20313em;
+  margin-right: 0.1875em;
 }
 .new-zanata .i--list:before,
 .new-zanata .i--menu:before {
@@ -3794,7 +3784,7 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list--horizontal > li, .new-zanata .list--panel .list__item__list > li, .new-zanata .list--stats .list__item__list > li, .new-zanata .panel__pager > li {
   display: inline-block;
-  margin-right: 0.40625em;
+  margin-right: 0.375em;
 }
 .new-zanata .list--horizontal > li:last-child, .new-zanata .list--panel .list__item__list > li:last-child, .new-zanata .list--stats .list__item__list > li:last-child, .new-zanata .panel__pager > li:last-child {
   margin-right: 0;
@@ -3815,7 +3805,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--slat > li {
-  padding: 0.40625em 0;
+  padding: 0.375em 0;
   border-top: 1px solid rgba(32, 113, 138, 0.1);
 }
 .new-zanata .list--slat > li > a {
@@ -3834,7 +3824,7 @@ Sub-headings can be used when placing a heading under another heading.
   -webkit-hyphens: auto;
   hyphens: auto;
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 
 /*
@@ -3851,8 +3841,8 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list__icon {
   display: inline-block;
-  width: 1.21875em;
-  margin-right: 0.20313em;
+  width: 1.125em;
+  margin-right: 0.1875em;
   text-align: center;
   height: 1.2em;
 }
@@ -3873,7 +3863,7 @@ Sub-headings can be used when placing a heading under another heading.
 */
 .new-zanata .list--slat-horizontal > li {
   display: inline-block;
-  padding: 0 0.40625em;
+  padding: 0 0.375em;
   border-left: 1px solid rgba(32, 113, 138, 0.1);
 }
 .new-zanata .list--slat-horizontal > li > a {
@@ -3912,7 +3902,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .list--block-links > li > a {
   display: block;
-  padding: 0.8125em;
+  padding: 0.75em;
 }
 .new-zanata .list--block-links > li > a:hover {
   background-color: #fff;
@@ -3952,7 +3942,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list--stats .list__item__content {
   display: table;
   table-layout: fixed;
-  padding: 0.40625em 0.8125em;
+  padding: 0.375em 0.75em;
 }
 .new-zanata .list--panel .list__item__info, .new-zanata .list--stats .list__item__info {
   display: table-cell;
@@ -3964,17 +3954,17 @@ Sub-headings can be used when placing a heading under another heading.
   position: relative;
 }
 .new-zanata .list--panel .list__item--actionable .list__item__content, .new-zanata .list--stats .list__item--actionable .list__item__content {
-  padding-left: 2.23438em;
+  padding-left: 2.0625em;
 }
 .new-zanata .list--panel .list__item__action, .new-zanata .list--stats .list__item__action {
   position: absolute;
-  left: 0.325em;
+  left: 0.3em;
   top: 50%;
   margin-top: -1em;
-  width: 0.8125em;
+  width: 0.75em;
 }
 .new-zanata .list--panel .list__item__actions, .new-zanata .list--stats .list__item__actions {
-  margin-left: 0.8125em;
+  margin-left: 0.75em;
   text-align: right;
   vertical-align: middle;
   white-space: nowrap;
@@ -3984,7 +3974,7 @@ Sub-headings can be used when placing a heading under another heading.
   line-height: .75em;
 }
 .new-zanata .list--panel .list__item__list > li, .new-zanata .list--stats .list__item__list > li {
-  margin-right: 0.20313em;
+  margin-right: 0.1875em;
   line-height: 1em;
 }
 .new-zanata .list--panel .list__item__list > li:last-child, .new-zanata .list--stats .list__item__list > li:last-child {
@@ -3993,7 +3983,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .list--panel .list__item__meta, .new-zanata .list--stats .list__item__meta {
   font-size: 0.875em;
   display: block;
-  margin: 0 0 0.46429em;
+  margin: 0 0 0.42857em;
   color: #8fb8c4;
   font-weight: 400;
   line-height: 1em;
@@ -4052,7 +4042,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .list--stats > li {
-  padding-bottom: 0.40625em;
+  padding-bottom: 0.375em;
 }
 .new-zanata .list--stats > li:first-child {
   margin-top: 0;
@@ -4072,11 +4062,11 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .list--stats .list__item,
 .new-zanata .list--stats .list__item__content {
-  padding: 0.8125em 0.8125em 0.40625em;
-  min-height: 3.25em;
+  padding: 0.75em 0.75em 0.375em;
+  min-height: 3em;
 }
 .new-zanata .list--stats .list__item__stats {
-  margin-left: 0.8125em;
+  margin-left: 0.75em;
   text-align: right;
   color: #20718A;
   vertical-align: middle;
@@ -4085,7 +4075,7 @@ Sub-headings can be used when placing a heading under another heading.
   line-height: 1em;
 }
 .new-zanata .list--stats .list__item__meta {
-  margin: 0.37143em 0 0;
+  margin: 0.34286em 0 0;
 }
 
 /*
@@ -4146,12 +4136,12 @@ Sub-headings can be used when placing a heading under another heading.
   background-size: contain;
   content: "";
   display: inline-block;
-  margin-right: 0.40625em;
-  width: 1.21875em;
-  height: 1.21875em;
+  margin-right: 0.375em;
+  width: 1.125em;
+  height: 1.125em;
   border-radius: 50px;
   vertical-align: middle;
-  margin-top: -0.1625em;
+  margin-top: -0.15em;
 }
 .new-zanata .list__item--fedora:before {
   background-image: url(../img/fedora-logo.svg);
@@ -4280,7 +4270,7 @@ Sub-headings can be used when placing a heading under another heading.
 
 */
 .new-zanata .form__item, .new-zanata .form__item--error, .new-zanata .form__item--warning {
-  margin-bottom: 0.8125em;
+  margin-bottom: 0.75em;
 }
 .new-zanata .form__item--error input,
 .new-zanata .form__item--error textarea, .new-zanata .form__item--warning input,
@@ -4305,9 +4295,9 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form__item--radio-vertical .form__item__label {
   display: block;
-  padding: 0 0.46429em;
+  padding: 0 0.42857em;
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 .new-zanata .form__item--radio-vertical .form__item__input {
   display: inline-block;
@@ -4345,8 +4335,8 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form__checkbox,
 .new-zanata .form__radio {
   position: relative;
-  padding-left: 1.82813em;
-  padding-right: 0.60938em;
+  padding-left: 1.6875em;
+  padding-right: 0.5625em;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -4420,7 +4410,7 @@ Sub-headings can be used when placing a heading under another heading.
   border-radius: 100px;
   top: .33em;
   left: .45em;
-  box-shadow: inset 0 0 0 0.8125em #fff, inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 0.75em #fff, inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 96.25em) {
   .new-zanata .form__radio__item:before {
@@ -4431,7 +4421,7 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form__radio__item.is-checked:before {
   background-color: #20718A;
-  box-shadow: inset 0 0 0 0.24375em #fff, inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 0.225em #fff, inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .new-zanata .form__checkbox__label,
 .new-zanata .form__radio__label {
@@ -4466,19 +4456,19 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form__checkbox--spaced .form__radio__item,
 .new-zanata .form__radio--spaced .form__checkbox__item,
 .new-zanata .form__radio--spaced .form__radio__item {
-  top: 0.40625em;
+  top: 0.375em;
 }
 .new-zanata .form__checkbox--heading {
-  width: 2.4375em;
-  height: 3.25em;
+  width: 2.25em;
+  height: 3em;
   float: left;
-  margin-right: -1.01563em;
+  margin-right: -0.9375em;
   background-color: transparent !important;
 }
 .new-zanata .form__checkbox--heading .form__checkbox__item,
 .new-zanata .form__checkbox--heading .form__radio__item {
-  top: 0.8125em;
-  left: 0.20313em;
+  top: 0.75em;
+  left: 0.1875em;
 }
 
 /*
@@ -4504,9 +4494,9 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .form--search:before {
   z-index: 11;
   position: absolute;
-  left: 0.60938em;
-  margin-top: 0.20313em;
-  line-height: 1.625em;
+  left: 0.5625em;
+  margin-top: 0.1875em;
+  line-height: 1.5em;
   color: #8fb8c4;
   pointer-events: none;
 }
@@ -4515,9 +4505,9 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata input.form--search__input {
   margin: 0;
-  padding-right: 1.625em;
-  padding-left: 2.03125em;
-  height: 2.03125em;
+  padding-right: 1.5em;
+  padding-left: 1.875em;
+  height: 1.875em;
   border-radius: 4px;
 }
 .new-zanata input.form--search__input:hover {
@@ -4525,10 +4515,10 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form--search .form--search__submit {
   position: absolute;
-  right: 0.40625em;
-  top: 0.8125em;
+  right: 0.375em;
+  top: 0.75em;
   color: #a5c6d0;
-  height: 1.625em;
+  height: 1.5em;
 }
 .new-zanata .form--search.is-active .form--search__submit {
   color: #03A6D7;
@@ -4581,14 +4571,14 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata input.form__input--load,
 .new-zanata input.form__input--clear {
-  padding-right: 2.03125em;
+  padding-right: 1.875em;
 }
 .new-zanata .form__loader {
   position: absolute;
-  right: 0.20313em;
+  right: 0.1875em;
   top: 0;
-  width: 2.4375em;
-  height: 2.4375em;
+  width: 2.25em;
+  height: 2.25em;
   -moz-transform: scale(0, 0);
   -ms-transform: scale(0, 0);
   -webkit-transform: scale(0, 0);
@@ -4602,16 +4592,16 @@ Sub-headings can be used when placing a heading under another heading.
 }
 .new-zanata .form__button--clear {
   position: absolute;
-  right: 0.40625em;
+  right: 0.375em;
   top: 0;
-  height: 2.03125em;
+  height: 1.875em;
 }
 .new-zanata .form__load.form--search .form__loader {
-  left: 0.20313em;
+  left: 0.1875em;
   right: auto;
 }
 .new-zanata .form__load.form--search:not(.form__clear) .form--search__input {
-  padding-right: 0.40625em;
+  padding-right: 0.375em;
 }
 .new-zanata .form__load.is-loading .form__button--clear {
   opacity: 0;
@@ -4640,14 +4630,14 @@ Keep focus while showing and hiding a password field
   position: relative;
 }
 .new-zanata .form__password .form__input {
-  padding-right: 3.25em;
+  padding-right: 3em;
 }
 .new-zanata .form__password .form__toggle {
   font-size: 0.875em;
-  line-height: 2.78571em;
+  line-height: 2.57143em;
   position: absolute;
   top: 0;
-  right: 0.92857em;
+  right: 0.85714em;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -4749,11 +4739,11 @@ Keep focus while showing and hiding a password field
 
 */
 .new-zanata input.form__input--copyable {
-  line-height: 1.625em;
-  height: 1.625em;
-  padding: 0.20313em;
+  line-height: 1.5em;
+  height: 1.5em;
+  padding: 0.1875em;
   margin: 0;
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
   border-color: transparent;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -4788,7 +4778,7 @@ Keep focus while showing and hiding a password field
   min-height: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #ECEFF0;
+  background-color: #fff;
   -moz-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -o-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   -webkit-transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
@@ -4847,24 +4837,24 @@ Keep focus while showing and hiding a password field
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  padding: 0.40625em;
+  padding: 0.375em;
   text-align: center;
-  height: 3.25em;
+  height: 3em;
 }
 .off-canvas__toggle img, .off-canvas__toggle--left img, .off-canvas__toggle--right img, .new-zanata .off-canvas__close img {
-  -moz-border-radius: 3.25em;
-  -webkit-border-radius: 3.25em;
-  border-radius: 3.25em;
-  max-width: 2.4375em;
+  -moz-border-radius: 3em;
+  -webkit-border-radius: 3em;
+  border-radius: 3em;
+  max-width: 2.25em;
 }
 .off-canvas__toggle .i, .off-canvas__toggle--left .i, .off-canvas__toggle--right .i, .new-zanata .off-canvas__close .i, .off-canvas__toggle .new-zanata .i--inline, .new-zanata .off-canvas__toggle .i--inline, .off-canvas__toggle--left .new-zanata .i--inline, .new-zanata .off-canvas__toggle--left .i--inline, .off-canvas__toggle--right .new-zanata .i--inline, .new-zanata .off-canvas__toggle--right .i--inline, .new-zanata .off-canvas__close .i--inline, .off-canvas__toggle .new-zanata .i--left, .new-zanata .off-canvas__toggle .i--left, .off-canvas__toggle--left .new-zanata .i--left, .new-zanata .off-canvas__toggle--left .i--left, .off-canvas__toggle--right .new-zanata .i--left, .new-zanata .off-canvas__toggle--right .i--left, .new-zanata .off-canvas__close .i--left, .off-canvas__toggle .new-zanata .i--right, .new-zanata .off-canvas__toggle .i--right, .off-canvas__toggle--left .new-zanata .i--right, .new-zanata .off-canvas__toggle--left .i--right, .off-canvas__toggle--right .new-zanata .i--right, .new-zanata .off-canvas__toggle--right .i--right, .new-zanata .off-canvas__close .i--right, .off-canvas__toggle .new-zanata .i--understated, .new-zanata .off-canvas__toggle .i--understated, .off-canvas__toggle--left .new-zanata .i--understated, .new-zanata .off-canvas__toggle--left .i--understated, .off-canvas__toggle--right .new-zanata .i--understated, .new-zanata .off-canvas__toggle--right .i--understated, .new-zanata .off-canvas__close .i--understated, .off-canvas__toggle .new-zanata .i--small, .new-zanata .off-canvas__toggle .i--small, .off-canvas__toggle--left .new-zanata .i--small, .new-zanata .off-canvas__toggle--left .i--small, .off-canvas__toggle--right .new-zanata .i--small, .new-zanata .off-canvas__toggle--right .i--small, .new-zanata .off-canvas__close .i--small, .off-canvas__toggle .new-zanata .i--large, .new-zanata .off-canvas__toggle .i--large, .off-canvas__toggle--left .new-zanata .i--large, .new-zanata .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .new-zanata .i--large, .new-zanata .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before, .off-canvas__toggle .new-zanata .i--huge, .new-zanata .off-canvas__toggle .i--huge, .off-canvas__toggle--left .new-zanata .i--huge, .new-zanata .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .new-zanata .i--huge, .new-zanata .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge, .off-canvas__toggle .new-zanata .form__checkbox__item:after, .new-zanata .off-canvas__toggle .form__checkbox__item:after, .off-canvas__toggle--left .new-zanata .form__checkbox__item:after, .new-zanata .off-canvas__toggle--left .form__checkbox__item:after, .off-canvas__toggle--right .new-zanata .form__checkbox__item:after, .new-zanata .off-canvas__toggle--right .form__checkbox__item:after, .new-zanata .off-canvas__close .form__checkbox__item:after, .off-canvas__toggle .new-zanata .form--search:before, .new-zanata .off-canvas__toggle .form--search:before, .off-canvas__toggle--left .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--left .form--search:before, .off-canvas__toggle--right .new-zanata .form--search:before, .new-zanata .off-canvas__toggle--right .form--search:before, .new-zanata .off-canvas__close .form--search:before {
-  padding: 0.20313em;
+  padding: 0.1875em;
 }
 .off-canvas__toggle .i--large, .off-canvas__toggle--left .i--large, .off-canvas__toggle--right .i--large, .new-zanata .off-canvas__close .i--large, .off-canvas__toggle .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle .header__user-nav__toggle:before, .off-canvas__toggle--left .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--left .header__user-nav__toggle:before, .off-canvas__toggle--right .new-zanata .header__user-nav__toggle:before, .new-zanata .off-canvas__toggle--right .header__user-nav__toggle:before, .new-zanata .off-canvas__close .header__user-nav__toggle:before {
-  padding: 0.1625em;
+  padding: 0.15em;
 }
 .off-canvas__toggle .i--huge, .off-canvas__toggle--left .i--huge, .off-canvas__toggle--right .i--huge, .new-zanata .off-canvas__close .i--huge {
-  padding: 0.13542em;
+  padding: 0.125em;
 }
 .off-canvas__toggle.is-active, .is-active.off-canvas__toggle--left, .is-active.off-canvas__toggle--right, .new-zanata .is-active.off-canvas__close {
   color: #444c54;
@@ -4880,7 +4870,7 @@ Keep focus while showing and hiding a password field
 
 .off-canvas__header {
   background-color: #5b6670;
-  height: 3.25em;
+  height: 3em;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -4906,7 +4896,7 @@ Keep focus while showing and hiding a password field
   -webkit-backface-visibility: hidden;
 }
 [data-off-canvas=over].off-canvas--left, [data-off-canvas=over].off-canvas--right {
-  background-color: #f7f8f9;
+  background-color: #fcfcfc;
   -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -4981,11 +4971,11 @@ Keep focus while showing and hiding a password field
 
 .new-zanata .off-canvas__close {
   font-size: 1.5em;
-  line-height: 1.08333em;
-  margin: 0.54167em;
+  line-height: 1em;
+  margin: 0.5em;
   padding: 0;
-  width: 1.08333em;
-  height: 1.08333em;
+  width: 1em;
+  height: 1em;
   border-radius: 50%;
   background-color: #8e99a3;
   color: #5b6670;
@@ -5006,11 +4996,11 @@ Keep focus while showing and hiding a password field
 }
 
 [data-off-canvas=over] .off-canvas__close {
-  background-color: #d8dee0;
-  color: #fafbfb;
+  background-color: #ededed;
+  color: white;
 }
 [data-off-canvas=over] .off-canvas__close:hover {
-  background-color: #c1cbce;
+  background-color: #d9d9d9;
   color: white;
 }
 
@@ -5040,7 +5030,7 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs__nav > ul > li > a,
 .new-zanata .tabs__nav > li > a {
-  padding: 0.40625em;
+  padding: 0.375em;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -5054,7 +5044,7 @@ Keep focus while showing and hiding a password field
 @media (min-width: 46.25em) {
   .new-zanata .tabs__nav > ul > li > a,
   .new-zanata .tabs__nav > li > a {
-    padding: 0.8125em;
+    padding: 0.75em;
   }
 }
 .new-zanata .tabs__content {
@@ -5073,13 +5063,13 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs--lined > .tabs__nav {
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
-  max-height: 3.25em;
+  max-height: 3em;
 }
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
 .new-zanata .tabs--lined > .tabs__nav > li > a {
   text-align: center;
-  padding: 0.8125em;
-  max-height: 3.25em;
+  padding: 0.75em;
+  max-height: 3em;
   position: relative;
 }
 .new-zanata .tabs--lined > .tabs__nav > ul > li > a:after,
@@ -5109,13 +5099,13 @@ Keep focus while showing and hiding a password field
   background-color: #20718A;
 }
 .new-zanata .tabs--lined > .tabs__nav .i, .new-zanata .tabs--lined > .tabs__nav .i--inline, .new-zanata .tabs--lined > .tabs__nav .i--left, .new-zanata .tabs--lined > .tabs__nav .i--right, .new-zanata .tabs--lined > .tabs__nav .i--understated, .new-zanata .tabs--lined > .tabs__nav .i--small, .new-zanata .tabs--lined > .tabs__nav .i--large, .new-zanata .tabs--lined > .tabs__nav .header__user-nav__toggle:before, .new-zanata .tabs--lined > .tabs__nav .i--huge, .new-zanata .tabs--lined > .tabs__nav .form__checkbox__item:after, .new-zanata .tabs--lined > .tabs__nav .form--search:before {
-  line-height: 1.625em;
-  padding: 0 0 0.12188em;
+  line-height: 1.5em;
+  padding: 0 0 0.1125em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .tabs--lined > .tabs__nav > ul > li > a,
   .new-zanata .tabs--lined > .tabs__nav > li > a {
-    max-height: 3.25em;
+    max-height: 3em;
   }
 }
 .new-zanata .tabs--accent .tabs__nav {
@@ -5124,17 +5114,17 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .tabs--accent .tabs__nav a {
   text-align: center;
-  line-height: 1.625em;
-  min-width: 3.25em;
-  max-height: 3.25em;
+  line-height: 1.5em;
+  min-width: 3em;
+  max-height: 3em;
 }
 .new-zanata .tabs--accent .tabs__nav a .i, .new-zanata .tabs--accent .tabs__nav a .i--inline, .new-zanata .tabs--accent .tabs__nav a .i--left, .new-zanata .tabs--accent .tabs__nav a .i--right, .new-zanata .tabs--accent .tabs__nav a .i--understated, .new-zanata .tabs--accent .tabs__nav a .i--small, .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .header__user-nav__toggle:before, .new-zanata .tabs--accent .tabs__nav a .i--huge, .new-zanata .tabs--accent .tabs__nav a .form__checkbox__item:after, .new-zanata .tabs--accent .tabs__nav a .form--search:before {
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata .tabs--accent .tabs__nav a .i--large, .new-zanata .tabs--accent .tabs__nav a .header__user-nav__toggle:before {
   font-size: 1.25em;
-  line-height: 1.3em;
+  line-height: 1.2em;
 }
 .new-zanata .tabs--accent .tabs__nav a.is-active {
   border-left: 1px solid rgba(32, 113, 138, 0.15);
@@ -5191,7 +5181,7 @@ Keep focus while showing and hiding a password field
   z-index: 4;
 }
 .new-zanata .tabs--vertical .tabs__nav > li > a {
-  padding: 0.8125em;
+  padding: 0.75em;
   border: 1px solid transparent;
   display: block;
 }
@@ -5222,12 +5212,12 @@ Keep focus while showing and hiding a password field
   width: 84%;
 }
 .new-zanata .tabs--vertical .tabs__content > li {
-  padding: 0.8125em;
-  min-height: 17.875em;
+  padding: 0.75em;
+  min-height: 16.5em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .tabs--vertical .tabs__content > li {
-    padding: 1.625em;
+    padding: 1.5em;
   }
 }
 @media (min-width: 79.375em) {
@@ -5250,33 +5240,33 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .media__item--left {
   float: left;
-  margin-right: 1.625em;
+  margin-right: 1.5em;
 }
 .new-zanata .media__item--right {
   float: right;
-  margin-left: 1.625em;
+  margin-left: 1.5em;
 }
 
 .new-zanata .progress-bar, .new-zanata .progress-bar--large {
   position: relative;
   width: 100%;
-  height: 0.40625em;
+  height: 0.375em;
   margin: 0;
 }
 .new-zanata .progress-bar--full {
-  height: 0.8125em;
+  height: 0.75em;
 }
 .new-zanata .progress-bar--large {
-  height: 0.8125em;
+  height: 0.75em;
 }
 .new-zanata .progress-bar__expander {
   position: relative;
-  margin-top: -0.40625em;
-  padding-bottom: 0.8125em !important;
+  margin-top: -0.375em;
+  padding-bottom: 0.75em !important;
   border-bottom: none !important;
 }
 .no-touch .new-zanata .progress-bar__expander:hover .progress-bar, .no-touch .new-zanata .progress-bar__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar, .no-touch .new-zanata .progress-bar__expander.is-active .progress-bar--large {
-  height: 0.8125em;
+  height: 0.75em;
 }
 .new-zanata .progress-bar__expander .progress-bar, .new-zanata .progress-bar__expander .progress-bar--large {
   -moz-transition-delay: 0.2s;
@@ -5286,15 +5276,15 @@ Keep focus while showing and hiding a password field
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: -0.8125em;
+  margin-top: -0.75em;
 }
 .new-zanata .progress-bar--large__expander {
   position: relative;
-  padding-bottom: 0.8125em !important;
+  padding-bottom: 0.75em !important;
   border-bottom: none !important;
 }
 .no-touch .new-zanata .progress-bar--large__expander:hover .progress-bar--large, .no-touch .new-zanata .progress-bar--large__expander.is-active .progress-bar--large {
-  height: 1.625em;
+  height: 1.5em;
 }
 .new-zanata .progress-bar--large__expander .progress-bar--large {
   -moz-transition-delay: 0.2s;
@@ -5304,7 +5294,7 @@ Keep focus while showing and hiding a password field
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: -0.8125em;
+  margin-top: -0.75em;
 }
 .new-zanata .progress-bar__item, .new-zanata .progress-bar__untranslated, .new-zanata .progress-bar__success,
 .new-zanata .progress-bar__translated, .new-zanata .progress-bar__fuzzy, .new-zanata .progress-bar__rejected, .new-zanata .progress-bar__approved {
@@ -5427,9 +5417,9 @@ Keep focus while showing and hiding a password field
   position: relative;
   z-index: 12;
   display: inline-block;
-  padding: 0.40625em 0.60938em;
-  padding-left: 1.625em !important;
-  min-height: 1.625em;
+  padding: 0.375em 0.5625em;
+  padding-left: 1.5em !important;
+  min-height: 1.5em;
   border: 1px solid transparent;
   border-bottom-width: 2px;
   color: #03A6D7;
@@ -5451,25 +5441,25 @@ Keep focus while showing and hiding a password field
   transition: cubic-bezier(0.26, 0.47, 0.36, 0.94) 0.2s;
   position: absolute;
   top: 0;
-  left: 0.40625em;
-  line-height: 3.25em;
+  left: 0.375em;
+  line-height: 3em;
 }
 .new-zanata .dropdown__toggle--large {
   font-size: 1.5em;
-  line-height: 1.08333em;
-  padding: 0.27083em 0.40625em;
-  padding-left: 1.08333em !important;
+  line-height: 1em;
+  padding: 0.25em 0.375em;
+  padding-left: 1em !important;
 }
 .new-zanata .dropdown__toggle--large:after {
   font-size: 0.75em;
-  left: 0.27083em;
+  left: 0.25em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .dropdown__toggle--large {
     font-size: 1.75em;
-    line-height: 1.16071em;
-    padding: 0.23214em 0.34821em;
-    padding-left: 0.92857em !important;
+    line-height: 1.07143em;
+    padding: 0.21429em 0.32143em;
+    padding-left: 0.85714em !important;
   }
 }
 .new-zanata .dropdown__container.is-active .dropdown__toggle {
@@ -5503,7 +5493,7 @@ Keep focus while showing and hiding a password field
   padding: 0;
   float: left;
   min-width: 100%;
-  max-height: 21.125em;
+  max-height: 19.5em;
   overflow: auto;
 }
 .csstransforms3d .new-zanata .dropdown__content {
@@ -5517,14 +5507,14 @@ Keep focus while showing and hiding a password field
   list-style: none;
   margin: 0;
   padding: 0;
-  line-height: 1.21875em;
+  line-height: 1.125em;
 }
 .new-zanata .dropdown__content > li .i__item__icon {
-  line-height: 1.21875em;
+  line-height: 1.125em;
 }
 .new-zanata .dropdown__content > li > a,
 .new-zanata .dropdown__content > li > .dropdown__content__link {
-  padding: 0.60938em;
+  padding: 0.5625em;
   display: block;
   width: 100%;
   margin: 0;
@@ -5536,13 +5526,13 @@ Keep focus while showing and hiding a password field
 .no-touch .new-zanata .dropdown__content > li > a:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link:hover {
   background-color: #03A6D7;
-  color: #f7f8f9;
+  color: #fcfcfc;
 }
 .no-touch .new-zanata .dropdown__content > li > a.txt--danger:hover, .no-touch .new-zanata .dropdown__content > li > a.message--danger:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link.txt--danger:hover, .no-touch
 .new-zanata .dropdown__content > li > .dropdown__content__link.message--danger:hover {
   background-color: #FF3B3D;
-  color: #f7f8f9 !important;
+  color: #fcfcfc !important;
 }
 .new-zanata .dropdown__content > li > a[disabled],
 .new-zanata .dropdown__content > li > .dropdown__content__link[disabled] {
@@ -5554,10 +5544,10 @@ Keep focus while showing and hiding a password field
   width: 100% !important;
 }
 .new-zanata .dropdown__header {
-  border-bottom: 1px solid #ECEFF0;
+  border-bottom: 1px solid #fff;
   text-transform: uppercase;
   background-color: #fff !important;
-  padding: 0 0.8125em !important;
+  padding: 0 0.75em !important;
   width: auto;
 }
 .new-zanata .dropdown__divider {
@@ -5567,7 +5557,7 @@ Keep focus while showing and hiding a password field
   width: 100%;
   height: 1px;
   border-bottom: 1px solid transparent;
-  background-color: #ECEFF0;
+  background-color: #fff;
 }
 .new-zanata .dropdown.is-active .dropdown__content {
   visibility: visible;
@@ -5600,11 +5590,11 @@ Keep focus while showing and hiding a password field
 }
 .new-zanata .dropdown--inline--initial {
   position: relative;
-  margin-left: -0.60938em;
+  margin-left: -0.5625em;
 }
 .new-zanata .dropdown--small .dropdown__content {
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 
 /*
@@ -5623,24 +5613,24 @@ Used in panel headers to match the header layout
 }
 .new-zanata .dropdown--header .dropdown__toggle {
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
   padding-top: 0;
   padding-bottom: 0;
-  padding-right: 0.92857em;
+  padding-right: 0.85714em;
   border: none;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-bottom: 2px solid transparent;
-  line-height: 3.71429em;
-  max-height: 3.80714em;
+  line-height: 3.42857em;
+  max-height: 3.51429em;
 }
 .new-zanata .dropdown--header .dropdown__toggle:active {
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
 }
 .new-zanata .dropdown--header .dropdown__toggle:after,
 .new-zanata .dropdown--header .dropdown__toggle i {
-  line-height: 3.71429em;
+  line-height: 3.42857em;
   vertical-align: inherit;
 }
 .new-zanata .dropdown--header.is-active .dropdown__toggle {
@@ -5648,10 +5638,10 @@ Used in panel headers to match the header layout
   border-left: 1px solid rgba(32, 113, 138, 0.15);
   border-right: 1px solid rgba(32, 113, 138, 0.15);
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
 }
 .new-zanata .dropdown--header.is-active .dropdown__toggle:hover {
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
 }
 .new-zanata .dropdown--header .dropdown__content {
   width: auto;
@@ -5662,19 +5652,19 @@ Used in panel headers to match the header layout
   padding: 0;
 }
 .new-zanata .dropdown--header .dropdown__content > li > a {
-  padding: 0.60938em 0.8125em;
+  padding: 0.5625em 0.75em;
 }
 
 .new-zanata .dropdown--single .dropdown__toggle {
   font-size: 1em;
   padding: 0;
-  width: 1.625em;
-  height: 1.625em;
+  width: 1.5em;
+  height: 1.5em;
   text-align: center;
 }
 .new-zanata .dropdown--single .dropdown__toggle:after {
-  left: 0.325em;
-  line-height: 1.625em;
+  left: 0.3em;
+  line-height: 1.5em;
 }
 .new-zanata .dropdown--single .dropdown__content {
   margin-top: -1px;
@@ -5685,13 +5675,13 @@ Used in panel headers to match the header layout
   padding: 0;
 }
 .new-zanata .dropdown--single.is-active .dropdown__toggle:after {
-  left: 0.40625em;
+  left: 0.375em;
 }
 
 .new-zanata .dropdown--tab .dropdown__toggle {
-  padding-top: 0.8125em;
-  padding-bottom: 0.8125em;
-  max-height: 3.25em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  max-height: 3em;
 }
 
 .new-zanata {
@@ -5700,25 +5690,25 @@ Used in panel headers to match the header layout
    */
 }
 .new-zanata .dropdown--toggle-right .dropdown__toggle {
-  padding-left: 0.60938em !important;
-  padding-right: 1.625em !important;
+  padding-left: 0.5625em !important;
+  padding-right: 1.5em !important;
 }
 .new-zanata .dropdown--toggle-right .dropdown__toggle:after {
   left: auto !important;
-  right: 0.40625em !important;
+  right: 0.375em !important;
 }
 .new-zanata .dropdown--toggle-right .dropdown__toggle--large {
-  padding-left: 0.40625em !important;
-  padding-right: 1.08333em !important;
+  padding-left: 0.375em !important;
+  padding-right: 1em !important;
 }
 .new-zanata .dropdown--toggle-right .dropdown__toggle--large:after {
   left: auto !important;
-  right: 0.27083em !important;
+  right: 0.25em !important;
 }
 @media (min-width: 46.25em) {
   .new-zanata .dropdown--toggle-right .dropdown__toggle--large {
-    padding-left: 0.34821em !important;
-    padding-right: 1.04464em !important;
+    padding-left: 0.32143em !important;
+    padding-right: 0.96429em !important;
   }
 }
 .new-zanata .Dropdown--simple {
@@ -5763,7 +5753,7 @@ Used in panel headers to match the header layout
   opacity: 0;
   background-color: #fff;
   background-clip: padding-box;
-  box-shadow: 0 0 1.625em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.1);
 }
 .new-zanata .Dropdown--simple .Dropdown-content--Bordered {
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -5776,14 +5766,14 @@ Used in panel headers to match the header layout
 }
 .new-zanata .Dropdown--simple .Dropdown-title {
   font-size: calc(14/16 * 1rem);
-  padding: 0.20313em 0.40625em;
+  padding: 0.1875em 0.375em;
   background-color: #e8f0f3;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   color: #4c8da1;
 }
 .new-zanata .Dropdown--simple .Dropdown-item {
   display: block;
-  padding: 0.20313em 0.40625em;
+  padding: 0.1875em 0.375em;
   transition: all .2s ease-out;
   color: #03A6D7;
 }
@@ -5819,8 +5809,8 @@ Used in panel headers to match the header layout
 */
 .new-zanata .label, .new-zanata .label--highlight, .new-zanata .label--success, .new-zanata .label--unsure, .new-zanata .label--warning, .new-zanata .label--danger, .new-zanata .label--neutral {
   background-color: #d2e2e7;
-  padding: 0 0.25em;
-  margin: 0 0.135em;
+  padding: 0 0.23077em;
+  margin: 0 0.12462em;
   font-size: 0.8125em;
 }
 .new-zanata .label--highlight {
@@ -5866,9 +5856,9 @@ Used in panel headers to match the header layout
 
 */
 .new-zanata .alert, .new-zanata .alert--danger {
-  margin-bottom: 0.8125em;
+  margin-bottom: 0.75em;
   text-align: center;
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5876,12 +5866,12 @@ Used in panel headers to match the header layout
 .new-zanata .alert__heading {
   margin: 0;
   font-size: 1.5em;
-  line-height: 1.625em;
+  line-height: 1.5em;
   background-color: #03A6D7;
   color: #f2f2f2;
 }
 .new-zanata .alert__content {
-  padding: 1.625em;
+  padding: 1.5em;
 }
 .new-zanata .alert__highlight {
   color: #03A6D7;
@@ -5937,18 +5927,18 @@ Used in panel headers to match the header layout
 
 */
 .new-zanata .message, .new-zanata .message--danger, .new-zanata .message--warning, .new-zanata .message--unsure, .new-zanata .message--success, .new-zanata .message--highlight, .new-zanata .message--neutral {
-  padding: 0.40625em 0.8125em;
+  padding: 0.375em 0.75em;
   position: relative;
 }
 .new-zanata .message--removable {
-  padding-right: 3.25em;
+  padding-right: 3em;
 }
 .new-zanata .message--removable:after {
   content: "";
   position: absolute;
   height: 100%;
   width: 0;
-  right: 2.4375em;
+  right: 2.25em;
   top: 0;
   border-left: 1px solid rgba(0, 0, 0, 0.03);
 }
@@ -5958,12 +5948,12 @@ Used in panel headers to match the header layout
   position: absolute;
   top: 0;
   right: 0;
-  width: 2.4375em;
+  width: 2.25em;
   text-align: center !important;
-  padding: 0.40625em !important;
+  padding: 0.375em !important;
 }
 .new-zanata .message__remove .i, .new-zanata .message__remove .i--inline, .new-zanata .message__remove .i--left, .new-zanata .message__remove .i--right, .new-zanata .message__remove .i--understated, .new-zanata .message__remove .i--small, .new-zanata .message__remove .i--large, .new-zanata .message__remove .header__user-nav__toggle:before, .new-zanata .message__remove .i--huge, .new-zanata .message__remove .form__checkbox__item:after, .new-zanata .message__remove .form--search:before {
-  font-size: 1.21875em;
+  font-size: 1.125em;
 }
 .new-zanata .message--global {
   -moz-transition: opacity 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01), -moz-transform 0.25s cubic-bezier(0.55, -0.38, 0.22, 1.01);
@@ -5980,12 +5970,12 @@ Used in panel headers to match the header layout
   -webkit-transform: translateY(-250%);
   transform: translateY(-250%);
   position: absolute;
-  top: 3.25em;
-  right: 0.8125em;
-  left: 0.8125em;
+  top: 3em;
+  right: 0.75em;
+  left: 0.75em;
   z-index: 9999;
   margin: 0 auto;
-  max-width: 32.5em;
+  max-width: 30em;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
@@ -6030,7 +6020,7 @@ Used in panel headers to match the header layout
   border-radius: 100px;
   text-align: center;
   display: block;
-  padding: 0 0.8125em;
+  padding: 0 0.75em;
   margin: 0;
   background-color: #d2e2e7;
   font-weight: 400;
@@ -6050,7 +6040,7 @@ Used in panel headers to match the header layout
 }
 .new-zanata .pill--inline {
   display: inline-block;
-  margin-right: 0.40625em;
+  margin-right: 0.375em;
 }
 .new-zanata .pill--inline:last-child {
   margin-right: 0;
@@ -6137,15 +6127,15 @@ Used in panel headers to match the header layout
 */
 .new-zanata .badge, .new-zanata .badge--highlight, .new-zanata .badge--success, .new-zanata .badge--unsure, .new-zanata .badge--warning, .new-zanata .badge--danger, .new-zanata .badge--neutral, .new-zanata .badge--bl, .new-zanata .badge--br {
   font-size: 0.875em;
-  line-height: 1.39286em;
+  line-height: 1.28571em;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
-  min-width: 1.39286em;
-  height: 1.39286em;
+  min-width: 1.28571em;
+  height: 1.28571em;
   text-align: center;
   display: inline-block;
-  padding: 0 0.37143em;
+  padding: 0 0.34286em;
   background-color: #d2e2e7;
   font-weight: 400;
 }
@@ -6156,7 +6146,7 @@ Used in panel headers to match the header layout
 }
 .new-zanata .badge--inline {
   position: relative;
-  margin-top: 0.23214em;
+  margin-top: 0.21429em;
 }
 .new-zanata .badge--highlight {
   background-color: #03A6D7;
@@ -6187,12 +6177,12 @@ Used in panel headers to match the header layout
   z-index: 2;
 }
 .new-zanata .badge--bl {
-  bottom: -0.23214em;
-  left: -0.23214em;
+  bottom: -0.21429em;
+  left: -0.21429em;
 }
 .new-zanata .badge--br {
-  bottom: -0.23214em;
-  right: -0.23214em;
+  bottom: -0.21429em;
+  right: -0.21429em;
 }
 
 /*
@@ -6387,7 +6377,7 @@ Used in panel headers to match the header layout
 .new-zanata .cal__day {
   background-color: #dde9ed;
   color: #20718A;
-  border-radius: 0.8125em;
+  border-radius: 0.75em;
   overflow: hidden;
 }
 .new-zanata .cal__day:focus .cal__date, .new-zanata .cal__day:hover .cal__date {
@@ -6421,17 +6411,17 @@ Used in panel headers to match the header layout
   transition: all .25s ease-out;
 }
 .new-zanata .cal__date {
-  padding: 0.11607em 0.23214em;
+  padding: 0.10714em 0.21429em;
   background-color: #bcd4db;
-  border-radius: 0.8125em 0.8125em 0 0;
+  border-radius: 0.75em 0.75em 0 0;
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 .new-zanata .cal__date-info {
   font-weight: 700;
-  min-height: 2.03125em;
-  padding: 0.20313em;
-  border-radius: 0 0 0.8125em 0.8125em;
+  min-height: 1.875em;
+  padding: 0.1875em;
+  border-radius: 0 0 0.75em 0.75em;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -6558,10 +6548,10 @@ Used in panel headers to match the header layout
   border-radius: 4px;
   display: inline-block;
   vertical-align: top;
-  padding: 0.20313em 0.8125em;
+  padding: 0.1875em 0.75em;
   border: none;
   border: 1px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f5f6;
+  background-color: #f9f9f9;
   color: #565d65;
   text-align: center;
   font-weight: 600;
@@ -6638,7 +6628,7 @@ Used in panel headers to match the header layout
 .new-zanata .is-active.button--warning,
 .new-zanata .is-active.button--danger,
 .new-zanata .is-active.button--unsure {
-  background-color: #e4e7e8;
+  background-color: #f7f7f7;
   -moz-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   -webkit-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
@@ -6808,20 +6798,20 @@ Used in panel headers to match the header layout
 }
 .new-zanata .button--small {
   font-size: 0.875em;
-  line-height: 1.3em;
-  height: 1.85714em;
-  padding: 0.23214em 0.46429em;
+  line-height: 1.2em;
+  height: 1.71429em;
+  padding: 0.21429em 0.42857em;
 }
 .new-zanata .button--large {
   font-size: 1.25em;
-  line-height: 1.3em;
+  line-height: 1.2em;
 }
 .new-zanata .button--huge {
   font-size: 1.5em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata .button--snug {
-  padding: 0.40625em;
+  padding: 0.375em;
 }
 .new-zanata .button--full {
   display: block;
@@ -7024,7 +7014,7 @@ Used in panel headers to match the header layout
 .new-zanata .button--group .button, .new-zanata .button--group .button--small, .new-zanata .button--group .button--large, .new-zanata .button--group .button--huge, .new-zanata .button--group .button--snug, .new-zanata .button--group .button--full, .new-zanata .button--group .button--inline-right, .new-zanata .button--group .button--inline-left, .new-zanata .button--group .button--primary, .new-zanata .button--group .button--secondary, .new-zanata .button--group .button--success, .new-zanata .button--group .button--warning, .new-zanata .button--group .button--danger, .new-zanata .button--group .button--unsure {
   position: relative;
   margin: 0;
-  margin-left: -0.325em;
+  margin-left: -0.3em;
   border-radius: 0;
 }
 .new-zanata .button--group .button:first-of-type, .new-zanata .button--group .button--small:first-of-type, .new-zanata .button--group .button--large:first-of-type, .new-zanata .button--group .button--huge:first-of-type, .new-zanata .button--group .button--snug:first-of-type, .new-zanata .button--group .button--full:first-of-type, .new-zanata .button--group .button--inline-right:first-of-type, .new-zanata .button--group .button--inline-left:first-of-type, .new-zanata .button--group .button--primary:first-of-type, .new-zanata .button--group .button--secondary:first-of-type, .new-zanata .button--group .button--success:first-of-type, .new-zanata .button--group .button--warning:first-of-type, .new-zanata .button--group .button--danger:first-of-type, .new-zanata .button--group .button--unsure:first-of-type {
@@ -7046,7 +7036,7 @@ Used in panel headers to match the header layout
   box-shadow: inset 0 -1px 0 rgba(32, 113, 138, 0.09);
   border: none;
   border: 1px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f5f6;
+  background-color: #f9f9f9;
   color: #565d65;
 }
 .new-zanata .button--group input[type="radio"] + .button:hover, .new-zanata .button--group input[type="radio"] + .button--small:hover, .new-zanata .button--group input[type="radio"] + .button--large:hover, .new-zanata .button--group input[type="radio"] + .button--huge:hover, .new-zanata .button--group input[type="radio"] + .button--snug:hover, .new-zanata .button--group input[type="radio"] + .button--full:hover, .new-zanata .button--group input[type="radio"] + .button--inline-right:hover, .new-zanata .button--group input[type="radio"] + .button--inline-left:hover, .new-zanata .button--group input[type="radio"] + .button--primary:hover, .new-zanata .button--group input[type="radio"] + .button--secondary:hover, .new-zanata .button--group input[type="radio"] + .button--success:hover, .new-zanata .button--group input[type="radio"] + .button--warning:hover, .new-zanata .button--group input[type="radio"] + .button--danger:hover, .new-zanata .button--group input[type="radio"] + .button--unsure:hover, .new-zanata .button--group input[type="radio"] + .button:focus, .new-zanata .button--group input[type="radio"] + .button--small:focus, .new-zanata .button--group input[type="radio"] + .button--large:focus, .new-zanata .button--group input[type="radio"] + .button--huge:focus, .new-zanata .button--group input[type="radio"] + .button--snug:focus, .new-zanata .button--group input[type="radio"] + .button--full:focus, .new-zanata .button--group input[type="radio"] + .button--inline-right:focus, .new-zanata .button--group input[type="radio"] + .button--inline-left:focus, .new-zanata .button--group input[type="radio"] + .button--primary:focus, .new-zanata .button--group input[type="radio"] + .button--secondary:focus, .new-zanata .button--group input[type="radio"] + .button--success:focus, .new-zanata .button--group input[type="radio"] + .button--warning:focus, .new-zanata .button--group input[type="radio"] + .button--danger:focus, .new-zanata .button--group input[type="radio"] + .button--unsure:focus {
@@ -7059,7 +7049,7 @@ Used in panel headers to match the header layout
   outline: none;
 }
 .new-zanata .button--group input[type="radio"]:checked + .button, .new-zanata .button--group input[type="radio"]:checked + .button--small, .new-zanata .button--group input[type="radio"]:checked + .button--large, .new-zanata .button--group input[type="radio"]:checked + .button--huge, .new-zanata .button--group input[type="radio"]:checked + .button--snug, .new-zanata .button--group input[type="radio"]:checked + .button--full, .new-zanata .button--group input[type="radio"]:checked + .button--inline-right, .new-zanata .button--group input[type="radio"]:checked + .button--inline-left, .new-zanata .button--group input[type="radio"]:checked + .button--primary, .new-zanata .button--group input[type="radio"]:checked + .button--secondary, .new-zanata .button--group input[type="radio"]:checked + .button--success, .new-zanata .button--group input[type="radio"]:checked + .button--warning, .new-zanata .button--group input[type="radio"]:checked + .button--danger, .new-zanata .button--group input[type="radio"]:checked + .button--unsure {
-  background-color: #e4e7e8;
+  background-color: #f7f7f7;
   -moz-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   -webkit-box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
   box-shadow: inset 0 2px 0 rgba(32, 113, 138, 0.17);
@@ -7136,7 +7126,7 @@ Used to show extra information on hover of the parent element
 .new-zanata .reveal__target--slide.is-active {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  max-height: 4.875em;
+  max-height: 4.5em;
 }
 .new-zanata .reveal__target--appear {
   display: none !important;
@@ -7146,17 +7136,17 @@ Used to show extra information on hover of the parent element
 }
 .new-zanata .reveal--list-item {
   position: relative;
-  padding-right: 1.625em !important;
+  padding-right: 1.5em !important;
 }
 .new-zanata .reveal--list-item .reveal__target {
   position: absolute;
   right: 0;
 }
 .new-zanata .reveal--list-item .reveal__target .i, .new-zanata .reveal--list-item .reveal__target .i--inline, .new-zanata .reveal--list-item .reveal__target .i--left, .new-zanata .reveal--list-item .reveal__target .i--right, .new-zanata .reveal--list-item .reveal__target .i--understated, .new-zanata .reveal--list-item .reveal__target .i--small, .new-zanata .reveal--list-item .reveal__target .i--large, .new-zanata .reveal--list-item .reveal__target .header__user-nav__toggle:before, .new-zanata .reveal--list-item .reveal__target .i--huge, .new-zanata .reveal--list-item .reveal__target .form__checkbox__item:after, .new-zanata .reveal--list-item .reveal__target .form--search:before {
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata .reveal--list-item .reveal__target .i--large, .new-zanata .reveal--list-item .reveal__target .header__user-nav__toggle:before {
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 
 .tooltip {
@@ -7340,11 +7330,11 @@ Used to show extra information on hover of the parent element
   display: block;
   text-align: center;
   margin: 0 auto;
-  line-height: 1.625em;
-  min-height: 1.625em;
+  line-height: 1.5em;
+  min-height: 1.5em;
 }
 .loader.is-active, .is-active.loader--mini, .is-active.loader--small, .is-active.loader--large, .is-active.loader--huge {
-  min-width: 1.625em;
+  min-width: 1.5em;
 }
 
 a.loader:hover, a.loader--mini:hover, a.loader--small:hover, a.loader--large:hover, a.loader--huge:hover {
@@ -7368,7 +7358,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .loader.is-active .loader__label, .is-active.loader--mini .loader__label, .is-active.loader--small .loader__label, .is-active.loader--large .loader__label, .is-active.loader--huge .loader__label {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
-  padding-left: 2.4375em;
+  padding-left: 2.25em;
   color: #20718A;
 }
 
@@ -7382,7 +7372,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   position: absolute;
   left: 0;
   top: 50%;
-  height: 0.40625em;
+  height: 0.375em;
 }
 .loader.is-active .loader__spinner, .is-active.loader--mini .loader__spinner, .is-active.loader--small .loader__spinner, .is-active.loader--large .loader__spinner, .is-active.loader--huge .loader__spinner {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -7402,9 +7392,9 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   position: absolute;
-  width: 0.40625em;
-  height: 0.40625em;
-  border-radius: 1.625em;
+  width: 0.375em;
+  height: 0.375em;
+  border-radius: 1.5em;
   background-color: #20718A;
 }
 .loader__spinner span:nth-child(1) {
@@ -7417,30 +7407,30 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   -moz-animation-delay: -0.15s;
   -webkit-animation-delay: -0.15s;
   animation-delay: -0.15s;
-  left: 0.60938em;
+  left: 0.5625em;
 }
 .loader__spinner span:nth-child(3) {
   -moz-animation-delay: -0.3s;
   -webkit-animation-delay: -0.3s;
   animation-delay: -0.3s;
-  left: 1.21875em;
+  left: 1.125em;
 }
 
 .loader > .loader__spinner, .loader--mini > .loader__spinner, .loader--small > .loader__spinner, .loader--large > .loader__spinner, .loader--huge > .loader__spinner {
   left: 50%;
-  margin-left: -0.8125em;
+  margin-left: -0.75em;
 }
 
 .loader--inline {
-  min-height: 1.625em;
+  min-height: 1.5em;
   display: inline-block;
   vertical-align: middle;
   margin-left: -0.3em;
 }
 .loader--inline.is-active {
-  min-width: 1.625em;
-  margin-left: 0.20313em;
-  margin-right: 0.20313em;
+  min-width: 1.5em;
+  margin-left: 0.1875em;
+  margin-right: 0.1875em;
 }
 
 .loader--center {
@@ -7454,22 +7444,22 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 
 .loader--mini {
   font-size: 0.75em;
-  line-height: 2.16667em;
+  line-height: 2em;
 }
 
 .loader--small {
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 
 .loader--large {
   font-size: 1.5em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 
 .loader--huge {
   font-size: 2.25em;
-  line-height: 1.44444em;
+  line-height: 1.33333em;
 }
 
 @-moz-keyframes loading {
@@ -7537,17 +7527,13 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   visibility: hidden;
   overflow: hidden;
   margin: 0 auto;
-<<<<<<< HEAD
-  padding: 1.625em;
-=======
-  padding: 0.8125em;
->>>>>>> origin/master
+  padding: 0.75em;
   width: 100%;
   height: 100%;
-  background-color: rgba(228, 231, 232, 0.9);
-  -moz-perspective: 81.25em;
-  -webkit-perspective: 81.25em;
-  perspective: 81.25em;
+  background-color: rgba(247, 247, 247, 0.9);
+  -moz-perspective: 75em;
+  -webkit-perspective: 75em;
+  perspective: 75em;
   -webkit-overflow-scrolling: touch;
 }
 .new-zanata .modal.is-active {
@@ -7578,18 +7564,18 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .modal__header {
   background-color: #fff;
   border-bottom: 1px solid rgba(32, 113, 138, 0.15);
-  height: 3.25em;
+  height: 3em;
 }
 .new-zanata .modal__title {
   margin: 0;
   font-size: 1.25em;
-  line-height: 1.3em;
-  padding: 0.65em 1.95em 0.65em 1.3em;
+  line-height: 1.2em;
+  padding: 0.6em 1.8em 0.6em 1.2em;
 }
 .new-zanata .modal__close {
   position: absolute;
-  height: 3.25em;
-  width: 3.25em;
+  height: 3em;
+  width: 3em;
   top: 0;
   right: 0;
   text-align: center !important;
@@ -7608,18 +7594,14 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   overflow: auto;
   overflow-x: hidden;
   max-height: 100%;
-  margin-bottom: 3.65625em;
+  margin-bottom: 3.375em;
 }
 .new-zanata .modal__footer {
-<<<<<<< HEAD
-  position: fixed;
-=======
   position: absolute;
->>>>>>> origin/master
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3.65625em;
+  height: 3.375em;
   border-top: 1px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .is-modal {
@@ -7630,11 +7612,11 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .stats, .new-zanata .stats--mini, .new-zanata .stats--small, .new-zanata .stats--large {
   color: #20718A;
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 .new-zanata .stats--mini {
   font-size: 0.75em;
-  line-height: 2.16667em;
+  line-height: 2em;
 }
 .new-zanata .stats--mini .stats__figure {
   font-size: 1.75em;
@@ -7645,16 +7627,16 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .stats--small {
   font-size: 0.75em;
-  line-height: 2.16667em;
+  line-height: 2em;
 }
 .new-zanata .stats--large {
   font-size: 1.0625em;
-  line-height: 1.52941em;
+  line-height: 1.41176em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .stats--large {
     font-size: 1.3125em;
-    line-height: 1.2381em;
+    line-height: 1.71429em;
   }
 }
 .new-zanata .stats__figure {
@@ -7891,29 +7873,29 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   border-width: 0 0 2px 0;
   width: 100%;
   position: relative;
-  max-height: 3.33125em;
+  max-height: 3.075em;
 }
 .new-zanata .panel__header__button {
-  margin-top: 0.8125em;
-  margin-right: 0.40625em;
-  margin-left: 0.40625em;
-  padding-right: 0.46429em;
-  padding-left: 0.46429em;
+  margin-top: 0.75em;
+  margin-right: 0.375em;
+  margin-left: 0.375em;
+  padding-right: 0.42857em;
+  padding-left: 0.42857em;
   font-size: 0.875em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata .panel__sub-header {
   border-width: 0 0 2px 0;
 }
 .new-zanata .panel__heading {
   font-size: 1em;
-  line-height: 3.25em;
+  line-height: 3em;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  padding: 0 0.8125em;
+  padding: 0 0.75em;
   font-weight: 400;
   overflow: hidden;
   margin: 0;
@@ -7921,8 +7903,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 @media (min-width: 46.25em) {
   .new-zanata .panel__heading {
     font-size: 1.125em;
-    line-height: 2.88889em;
-    padding: 0 0.72222em;
+    line-height: 2.66667em;
+    padding: 0 0.66667em;
   }
 }
 .new-zanata .panel__header__info {
@@ -7931,19 +7913,19 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  padding: 0.73125em 0.8125em;
+  padding: 0.675em 0.75em;
   overflow: hidden;
   margin: 0;
 }
 .new-zanata .panel__heading--small {
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  padding: 0 0.92857em;
+  padding: 0 0.85714em;
   font-weight: 400;
   overflow: hidden;
   margin: 0;
@@ -7955,24 +7937,24 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   white-space: nowrap;
 }
 .new-zanata .panel__header__back {
-  height: 3.25em;
-  width: 2.4375em;
+  height: 3em;
+  width: 2.25em;
   text-align: center;
   display: inline-block;
   position: absolute;
   left: 0;
   top: 0;
-  padding: 0.8125em 0;
+  padding: 0.75em 0;
 }
 .new-zanata .panel__header__back i:before {
-  height: 3.25em;
+  height: 3em;
 }
 .new-zanata .panel__header__back + .panel__heading {
-  padding-left: 2.4375em;
+  padding-left: 2.25em;
 }
 @media (min-width: 0) {
   .new-zanata .panel__header__back + .panel__heading {
-    padding-left: 2.16667em;
+    padding-left: 2em;
   }
 }
 @media (min-width: 46.25em) {
@@ -7980,22 +7962,22 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     display: none;
   }
   .new-zanata .panel__header__back + .panel__heading {
-    padding-left: 0.72222em;
+    padding-left: 0.66667em;
   }
 }
 .new-zanata .panel__search {
   display: block;
 }
 .new-zanata .panel__search:before {
-  left: 0.69063em;
+  left: 0.6375em;
   top: 0em;
-  line-height: 1.625em;
+  line-height: 1.5em;
 }
 .new-zanata .panel__search input {
   font-size: 0.875em;
-  line-height: 1.48571em;
-  padding: 0.23214em 3.71429em 0.23214em 2.55357em;
-  height: 1.95em;
+  line-height: 1.37143em;
+  padding: 0.21429em 3.42857em 0.21429em 2.35714em;
+  height: 1.8em;
   border-radius: 0;
   border: none;
   border-bottom: 1px solid rgba(32, 113, 138, 0.15);
@@ -8007,7 +7989,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .panel__results {
   position: relative;
-  padding: 0 0.40625em 0 2.23438em;
+  padding: 0 0.375em 0 2.0625em;
 }
 .new-zanata .panel__results .txt--meta {
   line-height: inherit;
@@ -8020,25 +8002,25 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .panel__results__type {
   position: absolute;
-  top: 0.46429em;
-  left: 0.92857em;
+  top: 0.42857em;
+  left: 0.85714em;
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 .new-zanata .panel__search__reset,
 .new-zanata .panel__search__button {
   vertical-align: inherit;
 }
 .new-zanata .panel__search__button {
-  margin-left: 0.23214em !important;
+  margin-left: 0.21429em !important;
   font-weight: 400;
 }
 .new-zanata .panel__search__cancel {
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
   position: absolute;
   top: 0;
-  right: 0.92857em;
+  right: 0.85714em;
   font-weight: 400;
 }
 .new-zanata .panel__body {
@@ -8050,17 +8032,17 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   -webkit-overflow-scrolling: touch;
 }
 .new-zanata .panel__pager {
-  height: 1.625em;
+  height: 1.5em;
   float: right;
 }
 .new-zanata .panel__pager li {
   vertical-align: top;
-  margin: 0 0 0 -0.20313em;
+  margin: 0 0 0 -0.1875em;
 }
 .new-zanata .panel__pager__button {
-  line-height: 1.625em;
-  height: 1.625em;
-  width: 1.625em;
+  line-height: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -8071,7 +8053,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .panel__pager__button:hover, .new-zanata .panel__pager__button:focus, .new-zanata .panel__pager__button:active {
   color: #026c8c;
-  background-color: #ECEFF0;
+  background-color: #fff;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -8082,7 +8064,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 
 .new-zanata .panels__container {
   position: relative;
-  min-height: 19.5em;
+  min-height: 18em;
 }
 .new-zanata .panels, .new-zanata .panels--2, .new-zanata .panels--3 {
   display: table;
@@ -8139,7 +8121,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   position: relative;
 }
 .new-zanata .panels__panel__item.is-active {
-  background-color: #f7f8f9;
+  background-color: #fcfcfc;
 }
 
 .new-zanata .auto-complete {
@@ -8187,13 +8169,13 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   top: 100%;
   z-index: 200;
   overflow: auto;
-  max-height: 14.625em;
+  max-height: 13.5em;
   width: 100%;
   border-radius: 4px;
   -webkit-overflow-scrolling: touch;
 }
 .new-zanata .autocomplete__result {
-  padding: 0.20313em 0.40625em;
+  padding: 0.1875em 0.375em;
   cursor: pointer;
 }
 .new-zanata .autocomplete__result a {
@@ -8224,17 +8206,17 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 */
 .drag-drop {
   border: 2px dashed rgba(32, 113, 138, 0.15);
-  padding: 1.625em;
+  padding: 1.5em;
   text-align: center;
   position: relative;
 }
 .drag-drop:after {
   font-size: 1.625em;
-  line-height: 1.5em;
+  line-height: 1.38462em;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 1em;
+  padding: 0.92308em;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -8270,7 +8252,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   -webkit-appearance: none;
   overflow: hidden;
   border: none;
-  min-height: 1.625em;
+  min-height: 1.5em;
 }
 .new-zanata .edit-field__underlay {
   box-shadow: none;
@@ -8290,8 +8272,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .edit-field__readonly {
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1.625em;
-  padding: 1.625em 0.8125em;
+  line-height: 1.5em;
+  padding: 1.5em 0.75em;
   margin: 0;
   white-space: pre-wrap;
   -moz-tab-size: 4;
@@ -8312,7 +8294,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   font-weight: 400;
   font-family: "Source Sans Pro", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1.625em;
+  line-height: 1.5em;
   padding: 0;
   margin: 0;
   border: none;
@@ -8344,7 +8326,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .edit-field__cursor {
   position: absolute;
   width: 2px;
-  height: 1.4625em;
+  height: 1.35em;
   margin-left: -1px;
   background-color: #8fb8c4;
 }
@@ -8370,7 +8352,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   cursor: text;
 }
 .new-zanata .edit-item.is-focused {
-  background-color: #f7f8f9;
+  background-color: #fcfcfc;
 }
 .new-zanata .edit-item.is-unfocused {
   opacity: 0.6;
@@ -8398,7 +8380,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .edit-item__status {
   background-color: #bcd4db;
   text-indent: -9999px;
-  height: 0.40625em;
+  height: 0.375em;
   width: 100%;
 }
 @media (min-width: 46.25em) {
@@ -8406,8 +8388,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -0.20313em;
-    width: 0.40625em;
+    margin-left: -0.1875em;
+    width: 0.375em;
     height: 100%;
   }
 }
@@ -8415,12 +8397,12 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .edit-item__footer {
   position: absolute;
   z-index: 2;
-  padding-right: 0.8125em;
-  padding-left: 0.8125em;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
   border-top: 1px solid rgba(32, 113, 138, 0.15);
   border-bottom: 1px solid rgba(32, 113, 138, 0.15);
   background-color: #fff;
-  height: 1.625em;
+  height: 1.5em;
   width: 50%;
 }
 .new-zanata .edit-item__header:hover,
@@ -8428,14 +8410,14 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   cursor: default;
 }
 .new-zanata .edit-item__header {
-  top: -0.8125em;
+  top: -0.75em;
 }
 .new-zanata .edit-item__footer {
-  bottom: -0.8125em;
+  bottom: -0.75em;
 }
 .new-zanata .edit-item__heading {
   font-size: 0.875em;
-  line-height: 1.71429em;
+  line-height: 1.57143em;
   margin: 0;
   text-transform: uppercase;
   font-weight: 400;
@@ -8463,9 +8445,9 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   right: 0;
   z-index: 2;
   float: none;
-  margin-bottom: 0.8125em;
+  margin-bottom: 0.75em;
   width: 50%;
-  background-color: #f7f8f9;
+  background-color: #fcfcfc;
 }
 .new-zanata .edit-item__source--vertical .edit-item__header {
   width: 100%;
@@ -8479,8 +8461,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   box-shadow: none;
   position: relative;
   margin-top: -1px;
-  padding: 0 0.46429em;
-  height: 1.85714em;
+  padding: 0 0.42857em;
+  height: 1.71429em;
   border: none;
   border: 1px solid transparent;
   border-radius: 0;
@@ -8490,19 +8472,19 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   vertical-align: top;
   font-weight: 400;
   font-size: 0.875em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
 }
 .new-zanata .toolbar__button:hover {
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
 }
 .new-zanata .toolbar__button.is-active {
-  background-color: #f7f8f9;
+  background-color: #fcfcfc;
   border-left-color: rgba(32, 113, 138, 0.15);
   border-right-color: rgba(32, 113, 138, 0.15);
 }
 .new-zanata .toolbar__button--inline,
 .new-zanata .toolbar__button__toggle {
-  margin-left: -0.40625em;
+  margin-left: -0.375em;
 }
 .new-zanata .toolbar__button__toggle.is-active {
   -moz-transform: rotate(180deg);
@@ -8511,10 +8493,10 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   transform: rotate(180deg);
 }
 .new-zanata .toolbar__button--top.is-active {
-  border-top-color: #f7f8f9;
+  border-top-color: #fcfcfc;
 }
 .new-zanata .toolbar__button--bottom.is-active {
-  border-bottom-color: #f7f8f9;
+  border-bottom-color: #fcfcfc;
 }
 .new-zanata .toolbar__button--success {
   background-color: #57bf74;
@@ -8599,8 +8581,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .rf-au-itm {
   font-size: 0.875em;
-  line-height: 1.85714em;
-  padding: 0.23214em 1.85714em 0.23214em 0.46429em;
+  line-height: 1.71429em;
+  padding: 0.21429em 1.71429em 0.21429em 0.42857em;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -8622,8 +8604,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   color: #bcd4db;
 }
 .new-zanata .rf-au-lst-scrl {
-  max-height: 10.5625em;
-  min-height: 1.625em;
+  max-height: 9.75em;
+  min-height: 1.5em;
   overflow: auto;
 }
 
@@ -8646,7 +8628,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 */
 .new-zanata .header {
   position: relative;
-  height: 3.25em;
+  height: 3em;
   z-index: 1000;
   background-color: #fff;
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
@@ -8657,7 +8639,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 3.25em;
+  height: 3em;
   background-color: #fff;
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
   content: "";
@@ -8669,18 +8651,18 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .header__title {
   font-size: 1.75em;
-  line-height: 1.85714em;
+  line-height: 1.71429em;
   position: relative;
   z-index: 1001;
-  margin: 0.23214em 0;
+  margin: 0.21429em 0;
   padding: 0 0 0;
   font-weight: 400;
   display: inline-block;
   text-align: center;
-  height: 1.39286em;
-  width: 4.99107em;
-  background: transparent url("../img/logo/logo-text.svg") 1.50893em center no-repeat;
-  background-size: 3.48214em;
+  height: 1.28571em;
+  width: 4.60714em;
+  background: transparent url("../img/logo/logo-text.svg") 1.39286em center no-repeat;
+  background-size: 3.21429em;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -8690,19 +8672,19 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 @media (min-width: 58.125em) {
   .new-zanata .header__title {
-    margin-left: 0.92857em;
+    margin-left: 0.85714em;
     float: left;
   }
 }
 @media (min-width: 96.25em) {
   .new-zanata .header__title {
-    margin-left: 1.85714em;
+    margin-left: 1.71429em;
   }
 }
 .new-zanata .header__site-logo {
-  height: 1.39286em;
-  width: 1.39286em;
-  margin-bottom: -0.23214em;
+  height: 1.28571em;
+  width: 1.28571em;
+  margin-bottom: -0.21429em;
   position: absolute;
   top: 0;
   left: 0;
@@ -8730,7 +8712,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   *zoom: 1;
   *display: inline;
   position: relative;
-  min-height: 3.25em;
+  min-height: 3em;
 }
 @media (max-width: 58.0625em) {
   .new-zanata .header__menu,
@@ -8743,13 +8725,13 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 @media (min-width: 46.25em) and (max-width: 58.0625em) {
   .new-zanata .header__menu,
   .new-zanata .header__main-nav {
-    left: 1.625em;
+    left: 1.5em;
   }
 }
 @media (min-width: 58.125em) {
   .new-zanata .header__menu,
   .new-zanata .header__main-nav {
-    margin-left: 1.21875em;
+    margin-left: 1.125em;
     z-index: 1001;
   }
 }
@@ -8761,12 +8743,12 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     left: 0;
     z-index: 0;
     visibility: hidden;
-    margin-top: -3.25em;
-    padding-top: 3.25em;
+    margin-top: -3em;
+    padding-top: 3em;
     min-width: 20em;
     border-right: 1px solid rgba(32, 113, 138, 0.15);
     border-bottom: 2px solid rgba(32, 113, 138, 0.15);
-    background-color: #f4f6f6;
+    background-color: #f9f9f9;
   }
   .csstransforms3d .new-zanata .header__main-nav__group {
     -moz-transition: cubic-bezier(0.55, -0.38, 0.22, 1.01) 0.25s;
@@ -8788,20 +8770,20 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 .new-zanata .header__main-nav__toggle {
   font-size: 1.25em;
-  line-height: 1.3em;
+  line-height: 1.2em;
   border-right: 1px solid transparent;
   border-bottom: 2px solid transparent;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1002;
-  width: 2.6em;
-  height: 2.6em;
+  width: 2.4em;
+  height: 2.4em;
   text-align: center;
-  padding: 0.4875em 0;
+  padding: 0.45em 0;
 }
 .new-zanata .header__main-nav__toggle:hover, .new-zanata .header__main-nav__toggle:focus {
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
 }
 @media (min-width: 58.125em) {
@@ -8820,24 +8802,24 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   -webkit-transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   transition: width 0.3s cubic-bezier(0.26, 0.47, 0.36, 0.94);
   margin: 0;
-  height: 3.65625em;
-  padding: 0.8125em 0.8125em 0.40625em;
+  height: 3.375em;
+  padding: 0.75em 0.75em 0.375em;
 }
 @media (max-width: 58.0625em) {
   .new-zanata .header__search {
     width: 100%;
   }
   .new-zanata .header__search .header__search__submit {
-    right: 1.21875em;
+    right: 1.125em;
   }
   .new-zanata .header__search:before {
-    left: 1.21875em;
+    left: 1.125em;
   }
 }
 @media (min-width: 58.125em) {
   .new-zanata .header__search {
-    height: 3.25em;
-    padding: 0.60938em 0;
+    height: 3em;
+    padding: 0.5625em 0;
     position: absolute;
     width: 50%;
     left: 0;
@@ -8848,8 +8830,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   }
 }
 .new-zanata .header__main-nav__menu a:not(.button--full) {
-  padding: 0.8125em;
-  height: 3.25em;
+  padding: 0.75em;
+  height: 3em;
   display: block;
 }
 .new-zanata .header__main-nav__menu a:not(.button--full):hover {
@@ -8865,7 +8847,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
     *display: inline;
     position: relative;
     left: 50%;
-    margin-left: 0.40625em;
+    margin-left: 0.375em;
   }
   .new-zanata .header__main-nav__menu li,
   .new-zanata .header__main-nav__menu a {
@@ -8881,31 +8863,31 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   }
   .new-zanata .header__main-nav__menu a:not(.button--full) {
     border-bottom: 2px solid transparent;
-    padding: 0.8125em 0.40625em;
+    padding: 0.75em 0.375em;
   }
   .new-zanata .header__main-nav__menu a:not(.button--full):hover, .new-zanata .header__main-nav__menu a:not(.button--full):focus {
     border-bottom-color: rgba(32, 113, 138, 0.15);
-    background-color: #f4f6f6;
+    background-color: #f9f9f9;
     color: #026c8c;
   }
   .new-zanata .header__main-nav__menu a:not(.button--full):active {
-    background-color: #ECEFF0;
+    background-color: #fff;
     border-bottom-color: rgba(32, 113, 138, 0.15);
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .header__main-nav__menu {
-    margin-left: 0.8125em;
+    margin-left: 0.75em;
   }
   .new-zanata .header__main-nav__menu a:not(.button--full) {
-    padding: 0.8125em;
+    padding: 0.75em;
   }
 }
 @media (max-width: 58.0625em) {
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle,
   .new-zanata .header__main-nav.is-active .header__main-nav__toggle {
     border-right: 1px solid rgba(32, 113, 138, 0.15);
-    background-color: #f4f6f6;
+    background-color: #f9f9f9;
     border-bottom: 2px solid transparent;
   }
   .new-zanata .header__main-nav.is-hover .header__main-nav__toggle:before,
@@ -8943,21 +8925,21 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.52813em 0.40625em 0.52813em 0;
+  padding: 0.4875em 0.375em 0.4875em 0;
 }
 @media (min-width: 58.125em) {
   .new-zanata .header__login {
-    padding: 0.52813em 1.625em 0.52813em 0;
+    padding: 0.4875em 1.5em 0.4875em 0;
   }
 }
 @media (min-width: 96.25em) {
   .new-zanata .header__login {
-    padding: 0.52813em 3.25em 0.52813em 0;
+    padding: 0.4875em 3em 0.4875em 0;
   }
 }
 .new-zanata .header__avatar {
-  width: 2.03125em;
-  height: 2.03125em;
+  width: 1.875em;
+  height: 1.875em;
 }
 .new-zanata .header__logo-only {
   text-align: center;
@@ -8968,21 +8950,21 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   top: auto;
   left: auto;
   margin: 0 auto;
-  width: 8.125em;
-  height: 8.125em;
+  width: 7.5em;
+  height: 7.5em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .header__logo-only .header__site-logo,
   .new-zanata .header__logo-only img {
-    width: 9.75em;
-    height: 9.75em;
+    width: 9em;
+    height: 9em;
   }
 }
 @media (min-width: 79.375em) {
   .new-zanata .header__logo-only .header__site-logo,
   .new-zanata .header__logo-only img {
-    width: 11.375em;
-    height: 11.375em;
+    width: 10.5em;
+    height: 10.5em;
   }
 }
 .new-zanata .header__user-nav {
@@ -8993,32 +8975,32 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 }
 @media (min-width: 46.25em) {
   .new-zanata .header__user-nav {
-    right: 1.625em;
+    right: 1.5em;
   }
 }
 @media (min-width: 96.25em) {
   .new-zanata .header__user-nav {
-    right: 3.25em;
+    right: 3em;
   }
 }
 .new-zanata .header__user-nav__toggle {
   position: relative;
   display: block;
   right: 0;
-  height: 3.25em;
-  padding: 0.60938em 0.8125em 0.60938em 1.625em;
+  height: 3em;
+  padding: 0.5625em 0.75em 0.5625em 1.5em;
   z-index: 1001;
   border-left: 1px solid transparent;
   border-bottom: 2px solid transparent;
 }
 .new-zanata .header__user-nav__toggle:hover, .new-zanata .header__user-nav__toggle:focus {
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
   border-bottom: 2px solid rgba(32, 113, 138, 0.15);
 }
 .new-zanata .header__user-nav__toggle:before {
   position: absolute;
-  left: 0.1625em;
-  line-height: 1.625em;
+  left: 0.15em;
+  line-height: 1.5em;
 }
 @media (min-width: 46.25em) {
   .new-zanata .header__user-nav__toggle {
@@ -9032,8 +9014,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   right: 0;
   bottom: 0;
   border-top: none;
-  padding-top: 3.25em;
-  margin-top: -3.25em;
+  padding-top: 3em;
+  margin-top: -3em;
 }
 .csstransforms3d .new-zanata .header__user-nav__menu {
   -moz-transition: cubic-bezier(0.55, -0.38, 0.22, 1.01) 0.25s;
@@ -9051,7 +9033,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
   padding: 0;
 }
 .new-zanata .header__user-nav__menu a {
-  padding: 0.8125em;
+  padding: 0.75em;
   display: block;
   min-width: 12.5em;
 }
@@ -9070,7 +9052,7 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle,
 .new-zanata .header__user-nav.is-active .header__user-nav__toggle {
   border-left: 1px solid rgba(32, 113, 138, 0.15);
-  background-color: #f4f6f6;
+  background-color: #f9f9f9;
   border-bottom: 2px solid transparent;
 }
 .new-zanata .header__user-nav.is-hover .header__user-nav__toggle:before,
