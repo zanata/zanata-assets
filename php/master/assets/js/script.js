@@ -1,4 +1,4 @@
-/*! zanata-assets - v0.1.0 - 2016-03-23
+/*! zanata-assets - v0.1.0 - 2016-06-02
 * https://github.com/lukebrooker/zanata-proto
 * Copyright (c) 2016 Red Hat; Licensed MIT */
 ;(function () {
