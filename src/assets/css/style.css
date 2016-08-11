@@ -8034,6 +8034,8 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .panel__pager {
   height: 1.5em;
   float: right;
+  position:absolute;
+  right:0;
 }
 .new-zanata .panel__pager li {
   vertical-align: top;
