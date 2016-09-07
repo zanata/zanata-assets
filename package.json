@@ -2,7 +2,7 @@
   "name": "zanata-assets",
   "description": "The front-end assets for the Zanata Project",
   "version": "0.1.0",
-  "homepage": "https://github.com/lukebrooker/zanata-proto",
+  "homepage": "http://zanata.org/",
   "author": {
     "name": "Red Hat",
     "email": "zanata@redhat.com",
