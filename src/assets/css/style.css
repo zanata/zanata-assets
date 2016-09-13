@@ -3699,7 +3699,7 @@ Sub-headings can be used when placing a heading under another heading.
 .new-zanata .heading--sub {
   margin-top: 0;
   font-weight: 400;
-  color: #52b8d7;
+  color: #53b8d7;
   display: inline-block;
 }
 
@@ -8034,8 +8034,6 @@ a.loader.is-active, a.is-active.loader--mini, a.is-active.loader--small, a.is-ac
 .new-zanata .panel__pager {
   height: 1.5em;
   float: right;
-  position:absolute;
-  right:0;
 }
 .new-zanata .panel__pager li {
   vertical-align: top;

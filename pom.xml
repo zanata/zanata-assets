@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.zanata</groupId>
   <artifactId>zanata-assets</artifactId>
-  <version>9.0</version>
+  <version>10.0-SNAPSHOT</version>
   <name>Zanata assets modules</name>
   <description>Zanata style guide and css</description>
   <url>http://zanata.org/</url>
@@ -13,7 +13,7 @@
     <connection>scm:git:git://github.com/zanata/zanata-assets.git</connection>
     <developerConnection>scm:git:git@github.com:zanata/zanata-assets.git</developerConnection>
     <url>https://github.com/zanata/zanata-assets</url>
-    <tag>zanata-assets-9.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
