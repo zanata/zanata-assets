@@ -991,7 +991,10 @@ a.downloadLink
   vertical-align: middle;
 }
 
-
+.gwt-DialogBox td.dialogTopCenter
+{
+  padding: 0!important
+}
 /* -------------- Fixed size dialog box ---------------*/
 .gwt-DialogBox-fixedSize
 {
