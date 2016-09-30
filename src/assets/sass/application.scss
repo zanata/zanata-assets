@@ -757,6 +757,10 @@ td.RejectedStateDecoration div div div
     cursor: default;
 }
 
+.resultTable .CodeMirror-searching {
+  background: #ff6 !important;
+}
+
 .keyShortcutPanel {
   @include transform(translateX(-50%));
   border: none !important;
