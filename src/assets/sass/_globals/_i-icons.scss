@@ -17,7 +17,7 @@ All icons also need the class `.i` added to them.
 	font-style: normal;
 }
 
-$icons: list, code, review, language, star, notification, project, document, clock, history, all, maintain, translate, translate-up, users, user, settings, add, edit, cancel, remove, checkmark, arrow-left, arrow-down, arrow-up, arrow-right, star-outline, search, keyboard, comment;
+$icons: list, code, review, language, star, notification, project, document, clock, history, all, maintain, translate, translate-up, users, user, settings, add, edit, cancel, remove, checkmark, arrow-left, arrow-down, arrow-up, arrow-right, star-outline, search, keyboard, comment, assign, servmon, stats, tm;
 
 @each $icon in $icons {
 /*
@@ -330,7 +330,20 @@ Use to display icons to the far side of text, either left or right. Usually used
 	content: "\e612";
 }
 .i--dot:before {
-	content: "\e613"
+	content: "\e613";
 }
+.i--assign:before {
+	content: "\ea45";
+}
+.i--servmon:before {
+	content: "\ea7c";
+}
+.i--stats:before {
+	content: "\ea77";
+}
+.i--tm:before {
+	content: "\e9e1"
+}
+
 
 }

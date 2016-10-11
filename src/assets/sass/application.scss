@@ -761,6 +761,10 @@ td.RejectedStateDecoration div div div
   background: #ff6 !important;
 }
 
+ul.legend .button--link {
+  color:#333;
+}
+
 .keyShortcutPanel {
   @include transform(translateX(-50%));
   border: none !important;
