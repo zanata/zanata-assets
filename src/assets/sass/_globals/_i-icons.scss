@@ -6,26 +6,17 @@ All icons also need the class `.i` added to them.
 
 */
 
+
 @font-face {
-	font-family: 'Zanata';
-	src:url('../fonts/zanata-v5/zanata.eot');
-	src:url('../fonts/zanata-v5/zanata.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/zanata-v5/zanata.woff') format('woff'),
-		url('../fonts/zanata-v5/zanata.ttf') format('truetype'),
-		url('../fonts/zanata-v5/zanata.svg#zanata') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'zanata';
+  src:  url('../fonts/zanata-v6/zanata.eot?ds8ffm');
+  src:  url('../fonts/zanata-v6/zanata.eot?ds8ffm#iefix') format('embedded-opentype'),
+    url('../fonts/zanata-v6/zanata.ttf?ds8ffm') format('truetype'),
+    url('../fonts/zanata-v6/zanata.woff?ds8ffm') format('woff'),
+    url('../fonts/zanata-v6/zanata.svg?ds8ffm#zanata') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-
-$icons: list, code, review, language, star, notification, project, document, clock, history, all, maintain, translate, translate-up, users, user, settings, add, edit, cancel, remove, checkmark, arrow-left, arrow-down, arrow-up, arrow-right, star-outline, search, keyboard, comment, assign, servmon, stats, tm;
-
-@each $icon in $icons {
-/*
-<pre><i class="i i--#{$icon}"></i> .i--#{$icon}</pre>
-*/
-}
-
-// TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
 .i {
@@ -149,201 +140,280 @@ Use to display icons to the far side of text, either left or right. Usually used
 	margin-right: rhythm(.125);
 }
 
-.i--list:before,
-.i--menu:before {
-	content: "\f0ac";
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'zanata' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.i--code:before,
-.i--source:before {
-	content: "\e000";
+
+
+.i--code {
+  &:before {
+    content: "\e000";
+  }
 }
-.i--eye:before,
-.i--review:before {
-	content: "\e002";
+.i--star {
+  &:before {
+    content: "\e001";
+  }
 }
-.i--globe,
+.i--review {
+  &:before {
+    content: "\e002";
+  }
+}
 .i--language {
-	&:before {
-		content: "\e003";
-	}
+  &:before {
+    content: "\e003";
+  }
 }
-.i--star:before {
-	content: "\e001";
+.i--notification {
+  &:before {
+    content: "\e004";
+  }
 }
-.i--bell:before,
-.i--notification:before {
-	content: "\e004";
-}
-.i--clipboard,
 .i--project {
-	// margin-top: rhythm(-.08);
-	&:before {
-		content: "\e005";
-	}
+  &:before {
+    content: "\e005";
+  }
 }
-.i--document-alt-fill,
+.i--cancel {
+  &:before {
+    content: "\e006";
+  }
+}
 .i--document {
-	// margin-top: rhythm(-.06);
-	&:before {
-		content: "\e007";
-	}
+  &:before {
+    content: "\e007";
+  }
 }
 .i--clock {
-	// margin-top: rhythm(-.06);
-	&:before {
-		content: "\e008";
-	}
+  &:before {
+    content: "\e008";
+  }
 }
-.i--history:before {
-	content: "\e009";
+.i--history {
+  &:before {
+    content: "\e009";
+  }
 }
-.i--infinity:before,
-.i--all:before {
-	content: "\e00a";
+.i--all {
+  &:before {
+    content: "\e00a";
+  }
 }
-.i--maintain {
-	// margin-top: rhythm(-.06);
-	&:before {
-		content: "\e01c";
-	}
+.i--translate {
+  &:before {
+    content: "\e00b";
+  }
 }
-.i--network:before,
-.i--translate:before {
-	content: "\e00b";
+.i--users {
+  &:before {
+    content: "\e00c";
+  }
 }
-.i--network-up:before,
-.i--translate-up:before {
-	content: "\e01b";
+.i--checkmark {
+  &:before {
+    content: "\e00d";
+  }
 }
-.i--users:before {
-	content: "\e00c";
+.i--user {
+  &:before {
+    content: "\e00e";
+  }
 }
-.i--user:before {
-	content: "\e00e";
+.i--cog {
+  &:before {
+    content: "\e00f";
+  }
 }
-.i--cog:before,
-.i--settings:before {
-	content: "\e00f";
+.i--arrow-left {
+  &:before {
+    content: "\e010";
+  }
 }
-.i--plus:before,
-.i--add:before {
-	content: "\e011";
+.i--add {
+  &:before {
+    content: "\e011";
+  }
 }
-.i--pencil:before,
-.i--edit:before,
- {
-	content: "\e014";
+.i--arrow-down {
+  &:before {
+    content: "\e012";
+  }
 }
-.i--cross,
-.i--remove,
-.i--cancel {
-	&:before {
-		content: "\e006";
-	}
+.i--arrow-up {
+  &:before {
+    content: "\e013";
+  }
 }
-.i--checkmark:before {
-	content: "\e00d";
+.i--edit {
+  &:before {
+    content: "\e014";
+  }
 }
-.i--arrow-left:before {
-	content: "\e010";
+.i--arrow-right {
+  &:before {
+    content: "\e015";
+  }
 }
-.i--arrow-down:before {
-	content: "\e012";
+.i--star-outline {
+  &:before {
+    content: "\e016";
+  }
 }
-.i--arrow-up:before {
-	content: "\e013";
+.i--search {
+  &:before {
+    content: "\e017";
+  }
 }
-.i--arrow-right:before {
-	content: "\e015";
+.i--keyboard {
+  &:before {
+    content: "\e018";
+  }
 }
-.i--star-2:before,
-.i--star-outline:before {
-	content: "\e016";
-}
-.i--search:before {
-	content: "\e017";
-}
-.i--keyboard:before {
-	content: "\e018";
-}
-.i--comment:before {
-	content: "\e019";
+.i--comment {
+  &:before {
+    content: "\e019";
+  }
 }
 .i--version {
-	// margin-top: rhythm(-.12);
-	&:before {
-		content: "\e01a";
-	}
+  &:before {
+    content: "\e01a";
+  }
 }
-.i--dashboard:before {
-	content: "\e600";
+.i--tm {
+  &:before {
+    content: "\e9e1";
+  }
 }
-.i--group:before {
-	content: "\e601";
+.i--user-roles {
+  &:before {
+    content: "\ea45";
+  }
 }
-.i--glossary:before {
-	content: "\e602";
+.i--stats {
+  &:before {
+    content: "\ea77";
+  }
 }
-.i--info:before {
-	content: "\e603";
+.i--translate-up {
+  &:before {
+    content: "\ea7c";
+  }
 }
-.i--help:before {
-	content: "\e604";
+.i--maintain {
+  &:before {
+    content: "\e01c";
+  }
 }
-.i--logout:before {
-	content: "\e605";
+.i--dashboard {
+  &:before {
+    content: "\e600";
+  }
 }
-.i--archive:before {
-	content: "\e606";
+.i--folder {
+  &:before {
+    content: "\e601";
+  }
 }
-.i--attach:before {
-	content: "\e607";
+.i--book {
+  &:before {
+    content: "\e602";
+  }
 }
-.i--admin:before {
-	content: "\e608";
+.i--info {
+  &:before {
+    content: "\e603";
+  }
 }
-.i--notes:before {
-	content: "\e609";
+.i--question {
+  &:before {
+    content: "\e604";
+  }
 }
-.i--import:before {
-	content: "\e60a";
+.i--logout {
+  &:before {
+    content: "\e605";
+  }
 }
-.i--export:before {
-	content: "\e60f";
+.i--archive {
+  &:before {
+    content: "\e606";
+  }
 }
-.i--external-link:before {
-	content: "\e60b";
+.i--attachment {
+  &:before {
+    content: "\e607";
+  }
 }
-.i--lock:before {
-	content: "\e60d";
+.i--cogs {
+  &:before {
+    content: "\e608";
+  }
 }
-.i--unlock:before {
-	content: "\e60e";
+.i--list {
+  &:before {
+    content: "\e609";
+  }
 }
-.i--ellipsis:before {
-	content: "\e60c";
+.i--upload {
+  &:before {
+    content: "\e60a";
+  }
 }
-.i--location:before {
-	content: "\e611";
+.i--export {
+  &:before {
+    content: "\e60b";
+  }
 }
-.i--trash:before {
-	content: "\e612";
+.i--ellipsis {
+  &:before {
+    content: "\e60c";
+  }
 }
-.i--dot:before {
-	content: "\e613";
+.i--lock {
+  &:before {
+    content: "\e60d";
+  }
 }
-.i--assign:before {
-	content: "\ea45";
+.i--unlock {
+  &:before {
+    content: "\e60e";
+  }
 }
-.i--servmon:before {
-	content: "\ea7c";
+.i--download {
+  &:before {
+    content: "\e60f";
+  }
 }
-.i--stats:before {
-	content: "\ea77";
+.i--filter {
+  &:before {
+    content: "\e610";
+  }
 }
-.i--tm:before {
-	content: "\e9e1"
+.i--location {
+  &:before {
+    content: "\e611";
+  }
 }
-
-
+.i--trash {
+  &:before {
+    content: "\e612";
+  }
+}
+.i--circle {
+  &:before {
+    content: "\e613";
+  }
+}
 }
