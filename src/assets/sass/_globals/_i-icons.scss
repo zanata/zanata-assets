@@ -416,4 +416,9 @@ i {
     content: "\e613";
   }
 }
+.i--monitor {
+  &:before {
+    content: "\ea79";
+  }
+
 }
