@@ -106,319 +106,319 @@ Use to display icons to the far side of text, either left or right. Usually used
 // TODO: Remove namespacing when old zanata removed
 .new-zanata {
 
-%i__item {
-	white-space: nowrap;
-	.i__item__icon {
-		line-height: rhythm(1);
-	}
-}
+  %i__item {
+    white-space: nowrap;
+    .i__item__icon {
+      line-height: rhythm(1);
+    }
+  }
 
-.i__item--left {
-	@extend %i__item;
-	text-align: right;
-	padding-left: rhythm(1.5) !important;
-	.i__item__icon {
-		float: left;
-		margin-left: rhythm(-1);
-	}
-}
+  .i__item--left {
+    @extend %i__item;
+    text-align: right;
+    padding-left: rhythm(1.5) !important;
+    .i__item__icon {
+      float: left;
+      margin-left: rhythm(-1);
+    }
+  }
 
-.i__item--right {
-	@extend %i__item;
-	padding-right: rhythm(1.5) !important;
-	.i__item__icon {
-		float: right;
-		margin-right: rhythm(-1);
-	}
-}
+  .i__item--right {
+    @extend %i__item;
+    padding-right: rhythm(1.5) !important;
+    .i__item__icon {
+      float: right;
+      margin-right: rhythm(-1);
+    }
+  }
 
-.i__text--right {
-	margin-left: rhythm(.125);
-}
+  .i__text--right {
+    margin-left: rhythm(.125);
+  }
 
-.i__text--left {
-	margin-right: rhythm(.125);
-}
+  .i__text--left {
+    margin-right: rhythm(.125);
+  }
 
-i {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'zanata' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+  i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'zanata' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-
-.i--code {
-  &:before {
-    content: "\e000";
+  .i--code {
+    &:before {
+      content: "\e000";
+    }
   }
-}
-.i--star {
-  &:before {
-    content: "\e001";
+  .i--star {
+    &:before {
+      content: "\e001";
+    }
   }
-}
-.i--review {
-  &:before {
-    content: "\e002";
+  .i--review {
+    &:before {
+      content: "\e002";
+    }
   }
-}
-.i--language {
-  &:before {
-    content: "\e003";
+  .i--language {
+    &:before {
+      content: "\e003";
+    }
   }
-}
-.i--notification {
-  &:before {
-    content: "\e004";
+  .i--notification {
+    &:before {
+      content: "\e004";
+    }
   }
-}
-.i--project {
-  &:before {
-    content: "\e005";
+  .i--project {
+    &:before {
+      content: "\e005";
+    }
   }
-}
-.i--cancel {
-  &:before {
-    content: "\e006";
+  .i--cancel {
+    &:before {
+      content: "\e006";
+    }
   }
-}
-.i--document {
-  &:before {
-    content: "\e007";
+  .i--document {
+    &:before {
+      content: "\e007";
+    }
   }
-}
-.i--clock {
-  &:before {
-    content: "\e008";
+  .i--clock {
+    &:before {
+      content: "\e008";
+    }
   }
-}
-.i--history {
-  &:before {
-    content: "\e009";
+  .i--history {
+    &:before {
+      content: "\e009";
+    }
   }
-}
-.i--all {
-  &:before {
-    content: "\e00a";
+  .i--all {
+    &:before {
+      content: "\e00a";
+    }
   }
-}
-.i--translate {
-  &:before {
-    content: "\e00b";
+  .i--translate {
+    &:before {
+      content: "\e00b";
+    }
   }
-}
-.i--users {
-  &:before {
-    content: "\e00c";
+  .i--users {
+    &:before {
+      content: "\e00c";
+    }
   }
-}
-.i--checkmark {
-  &:before {
-    content: "\e00d";
+  .i--checkmark {
+    &:before {
+      content: "\e00d";
+    }
   }
-}
-.i--user {
-  &:before {
-    content: "\e00e";
+  .i--user {
+    &:before {
+      content: "\e00e";
+    }
   }
-}
-.i--settings {
-  &:before {
-    content: "\e00f";
+  .i--settings {
+    &:before {
+      content: "\e00f";
+    }
   }
-}
-.i--arrow-left {
-  &:before {
-    content: "\e010";
+  .i--arrow-left {
+    &:before {
+      content: "\e010";
+    }
   }
-}
-.i--add {
-  &:before {
-    content: "\e011";
+  .i--add {
+    &:before {
+      content: "\e011";
+    }
   }
-}
-.i--arrow-down {
-  &:before {
-    content: "\e012";
+  .i--arrow-down {
+    &:before {
+      content: "\e012";
+    }
   }
-}
-.i--arrow-up {
-  &:before {
-    content: "\e013";
+  .i--arrow-up {
+    &:before {
+      content: "\e013";
+    }
   }
-}
-.i--edit {
-  &:before {
-    content: "\e014";
+  .i--edit {
+    &:before {
+      content: "\e014";
+    }
   }
-}
-.i--arrow-right {
-  &:before {
-    content: "\e015";
+  .i--arrow-right {
+    &:before {
+      content: "\e015";
+    }
   }
-}
-.i--star-outline {
-  &:before {
-    content: "\e016";
+  .i--star-outline {
+    &:before {
+      content: "\e016";
+    }
   }
-}
-.i--search {
-  &:before {
-    content: "\e017";
+  .i--search {
+    &:before {
+      content: "\e017";
+    }
   }
-}
-.i--keyboard {
-  &:before {
-    content: "\e018";
+  .i--keyboard {
+    &:before {
+      content: "\e018";
+    }
   }
-}
-.i--comment {
-  &:before {
-    content: "\e019";
+  .i--comment {
+    &:before {
+      content: "\e019";
+    }
   }
-}
-.i--version {
-  &:before {
-    content: "\e01a";
+  .i--version {
+    &:before {
+      content: "\e01a";
+    }
   }
-}
-.i--tm {
-  &:before {
-    content: "\e9e1";
+  .i--tm {
+    &:before {
+      content: "\e9e1";
+    }
   }
-}
-.i--user-roles {
-  &:before {
-    content: "\ea45";
+  .i--user-roles {
+    &:before {
+      content: "\ea45";
+    }
   }
-}
-.i--stats {
-  &:before {
-    content: "\ea77";
+  .i--stats {
+    &:before {
+      content: "\ea77";
+    }
   }
-}
-.i--translate-up {
-  &:before {
-    content: "\ea7c";
+  .i--translate-up {
+    &:before {
+      content: "\ea7c";
+    }
   }
-}
-.i--maintain {
-  &:before {
-    content: "\e01c";
+  .i--maintain {
+    &:before {
+      content: "\e01c";
+    }
   }
-}
-.i--dashboard {
-  &:before {
-    content: "\e600";
+  .i--dashboard {
+    &:before {
+      content: "\e600";
+    }
   }
-}
-.i--folder {
-  &:before {
-    content: "\e601";
+  .i--folder {
+    &:before {
+      content: "\e601";
+    }
   }
-}
-.i--book {
-  &:before {
-    content: "\e602";
+  .i--book {
+    &:before {
+      content: "\e602";
+    }
   }
-}
-.i--info {
-  &:before {
-    content: "\e603";
+  .i--info {
+    &:before {
+      content: "\e603";
+    }
   }
-}
-.i--question {
-  &:before {
-    content: "\e604";
+  .i--question {
+    &:before {
+      content: "\e604";
+    }
   }
-}
-.i--logout {
-  &:before {
-    content: "\e605";
+  .i--logout {
+    &:before {
+      content: "\e605";
+    }
   }
-}
-.i--archive {
-  &:before {
-    content: "\e606";
+  .i--archive {
+    &:before {
+      content: "\e606";
+    }
   }
-}
-.i--attachment {
-  &:before {
-    content: "\e607";
+  .i--attachment {
+    &:before {
+      content: "\e607";
+    }
   }
-}
-.i--cogs {
-  &:before {
-    content: "\e608";
+  .i--cogs {
+    &:before {
+      content: "\e608";
+    }
   }
-}
-.i--list {
-  &:before {
-    content: "\e609";
+  .i--list {
+    &:before {
+      content: "\e609";
+    }
   }
-}
-.i--upload {
-  &:before {
-    content: "\e60a";
+  .i--upload {
+    &:before {
+      content: "\e60a";
+    }
   }
-}
-.i--export {
-  &:before {
-    content: "\e60b";
+  .i--export {
+    &:before {
+      content: "\e60b";
+    }
   }
-}
-.i--ellipsis {
-  &:before {
-    content: "\e60c";
+  .i--ellipsis {
+    &:before {
+      content: "\e60c";
+    }
   }
-}
-.i--lock {
-  &:before {
-    content: "\e60d";
+  .i--lock {
+    &:before {
+      content: "\e60d";
+    }
   }
-}
-.i--unlock {
-  &:before {
-    content: "\e60e";
+  .i--unlock {
+    &:before {
+      content: "\e60e";
+    }
   }
-}
-.i--download {
-  &:before {
-    content: "\e60f";
+  .i--download {
+    &:before {
+      content: "\e60f";
+    }
   }
-}
-.i--filter {
-  &:before {
-    content: "\e610";
+  .i--filter {
+    &:before {
+      content: "\e610";
+    }
   }
-}
-.i--location {
-  &:before {
-    content: "\e611";
+  .i--location {
+    &:before {
+      content: "\e611";
+    }
   }
-}
-.i--trash {
-  &:before {
-    content: "\e612";
+  .i--trash {
+    &:before {
+      content: "\e612";
+    }
   }
-}
-.i--circle {
-  &:before {
-    content: "\e613";
+  .i--circle {
+    &:before {
+      content: "\e613";
+    }
   }
-}
-.i--monitor {
-  &:before {
-    content: "\ea79";
+  .i--monitor {
+    &:before {
+      content: "\ea79";
+    }
   }
 
 }
