@@ -433,7 +433,7 @@ td.RejectedStateDecoration div div div {
 */
 /* when colour diff is enabled: */
 .diff-insert {
-  background: rgba(92, 202, 123, 0.2);
+  background: rgba(3, 166, 215, 0.2);
   text-decoration: none;
 }
 
@@ -698,6 +698,10 @@ td.RejectedStateDecoration div div div {
   cursor: default;
 }
 
+.CodeMirror-searching {
+  background: #ff6 !important;
+}
+
 .keyShortcutPanel {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -913,6 +917,10 @@ a.downloadLink {
 
 .list--horizontal li {
   vertical-align: middle;
+}
+
+.gwt-DialogBox td.dialogTopCenter {
+  padding: 0 !important;
 }
 
 /* -------------- Fixed size dialog box ---------------*/

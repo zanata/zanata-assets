@@ -484,7 +484,7 @@ td.RejectedStateDecoration div div div
 }
 
 .diff-insert {
-  background: fade-out($color-success, .8);
+  background: fade-out($color-highlight, .8);
   text-decoration: none;
 }
 
@@ -757,6 +757,10 @@ td.RejectedStateDecoration div div div
     cursor: default;
 }
 
+.CodeMirror-searching {
+  background: #ff6 !important;
+}
+
 .keyShortcutPanel {
   @include transform(translateX(-50%));
   border: none !important;
@@ -991,7 +995,10 @@ a.downloadLink
   vertical-align: middle;
 }
 
-
+.gwt-DialogBox td.dialogTopCenter
+{
+  padding: 0!important
+}
 /* -------------- Fixed size dialog box ---------------*/
 .gwt-DialogBox-fixedSize
 {

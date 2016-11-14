@@ -3338,102 +3338,12 @@ All icons also need the class `.i` added to them.
 
 */
 @font-face {
-  font-family: 'Zanata';
-  src: url("../fonts/zanata-v5/zanata.eot");
-  src: url("../fonts/zanata-v5/zanata.eot?#iefix") format("embedded-opentype"), url("../fonts/zanata-v5/zanata.woff") format("woff"), url("../fonts/zanata-v5/zanata.ttf") format("truetype"), url("../fonts/zanata-v5/zanata.svg#zanata") format("svg");
+  font-family: 'zanata';
+  src: url("../fonts/zanata-v6/zanata.eot?ds8ffm");
+  src: url("../fonts/zanata-v6/zanata.eot?ds8ffm#iefix") format("embedded-opentype"), url("../fonts/zanata-v6/zanata.ttf?ds8ffm") format("truetype"), url("../fonts/zanata-v6/zanata.woff?ds8ffm") format("woff"), url("../fonts/zanata-v6/zanata.svg?ds8ffm#zanata") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-/*
-<pre><i class="i i--list"></i> .i--list</pre>
-*/
-/*
-<pre><i class="i i--code"></i> .i--code</pre>
-*/
-/*
-<pre><i class="i i--review"></i> .i--review</pre>
-*/
-/*
-<pre><i class="i i--language"></i> .i--language</pre>
-*/
-/*
-<pre><i class="i i--star"></i> .i--star</pre>
-*/
-/*
-<pre><i class="i i--notification"></i> .i--notification</pre>
-*/
-/*
-<pre><i class="i i--project"></i> .i--project</pre>
-*/
-/*
-<pre><i class="i i--document"></i> .i--document</pre>
-*/
-/*
-<pre><i class="i i--clock"></i> .i--clock</pre>
-*/
-/*
-<pre><i class="i i--history"></i> .i--history</pre>
-*/
-/*
-<pre><i class="i i--all"></i> .i--all</pre>
-*/
-/*
-<pre><i class="i i--maintain"></i> .i--maintain</pre>
-*/
-/*
-<pre><i class="i i--translate"></i> .i--translate</pre>
-*/
-/*
-<pre><i class="i i--translate-up"></i> .i--translate-up</pre>
-*/
-/*
-<pre><i class="i i--users"></i> .i--users</pre>
-*/
-/*
-<pre><i class="i i--user"></i> .i--user</pre>
-*/
-/*
-<pre><i class="i i--settings"></i> .i--settings</pre>
-*/
-/*
-<pre><i class="i i--add"></i> .i--add</pre>
-*/
-/*
-<pre><i class="i i--edit"></i> .i--edit</pre>
-*/
-/*
-<pre><i class="i i--cancel"></i> .i--cancel</pre>
-*/
-/*
-<pre><i class="i i--remove"></i> .i--remove</pre>
-*/
-/*
-<pre><i class="i i--checkmark"></i> .i--checkmark</pre>
-*/
-/*
-<pre><i class="i i--arrow-left"></i> .i--arrow-left</pre>
-*/
-/*
-<pre><i class="i i--arrow-down"></i> .i--arrow-down</pre>
-*/
-/*
-<pre><i class="i i--arrow-up"></i> .i--arrow-up</pre>
-*/
-/*
-<pre><i class="i i--arrow-right"></i> .i--arrow-right</pre>
-*/
-/*
-<pre><i class="i i--star-outline"></i> .i--star-outline</pre>
-*/
-/*
-<pre><i class="i i--search"></i> .i--search</pre>
-*/
-/*
-<pre><i class="i i--keyboard"></i> .i--keyboard</pre>
-*/
-/*
-<pre><i class="i i--comment"></i> .i--comment</pre>
-*/
 .new-zanata .i, .new-zanata .i--inline, .new-zanata .i--left, .new-zanata .i--right, .new-zanata .i--understated, .new-zanata .i--small, .new-zanata .i--large, .new-zanata .header__user-nav__toggle:before, .new-zanata .i--huge, .new-zanata .form__checkbox__item:after, .new-zanata .form--search:before {
   vertical-align: middle;
   text-transform: none;
@@ -3511,34 +3421,40 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i__text--left {
   margin-right: 0.1875em;
 }
-.new-zanata .i--list:before,
-.new-zanata .i--menu:before {
-  content: "\f0ac";
+.new-zanata i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'zanata' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.new-zanata .i--code:before,
-.new-zanata .i--source:before {
+.new-zanata .i--code:before {
   content: "\e000";
-}
-.new-zanata .i--eye:before,
-.new-zanata .i--review:before {
-  content: "\e002";
-}
-.new-zanata .i--globe:before,
-.new-zanata .i--language:before {
-  content: "\e003";
 }
 .new-zanata .i--star:before {
   content: "\e001";
 }
-.new-zanata .i--bell:before,
+.new-zanata .i--review:before {
+  content: "\e002";
+}
+.new-zanata .i--language:before {
+  content: "\e003";
+}
 .new-zanata .i--notification:before {
   content: "\e004";
 }
-.new-zanata .i--clipboard:before,
 .new-zanata .i--project:before {
   content: "\e005";
 }
-.new-zanata .i--document-alt-fill:before,
+.new-zanata .i--cancel:before {
+  content: "\e006";
+}
 .new-zanata .i--document:before {
   content: "\e007";
 }
@@ -3548,49 +3464,29 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--history:before {
   content: "\e009";
 }
-.new-zanata .i--infinity:before,
 .new-zanata .i--all:before {
   content: "\e00a";
 }
-.new-zanata .i--maintain:before {
-  content: "\e01c";
-}
-.new-zanata .i--network:before,
 .new-zanata .i--translate:before {
   content: "\e00b";
-}
-.new-zanata .i--network-up:before,
-.new-zanata .i--translate-up:before {
-  content: "\e01b";
 }
 .new-zanata .i--users:before {
   content: "\e00c";
 }
-.new-zanata .i--user:before {
-  content: "\e00e";
-}
-.new-zanata .i--cog:before,
-.new-zanata .i--settings:before {
-  content: "\e00f";
-}
-.new-zanata .i--plus:before,
-.new-zanata .i--add:before {
-  content: "\e011";
-}
-.new-zanata .i--pencil:before,
-.new-zanata .i--edit:before {
-  content: "\e014";
-}
-.new-zanata .i--cross:before,
-.new-zanata .i--remove:before,
-.new-zanata .i--cancel:before {
-  content: "\e006";
-}
 .new-zanata .i--checkmark:before, .new-zanata .form__checkbox__item:after {
   content: "\e00d";
 }
+.new-zanata .i--user:before {
+  content: "\e00e";
+}
+.new-zanata .i--settings:before {
+  content: "\e00f";
+}
 .new-zanata .i--arrow-left:before {
   content: "\e010";
+}
+.new-zanata .i--add:before {
+  content: "\e011";
 }
 .new-zanata .i--arrow-down:before, .new-zanata .dropdown__toggle:after, .new-zanata .header__user-nav__toggle:before {
   content: "\e012";
@@ -3598,10 +3494,12 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--arrow-up:before {
   content: "\e013";
 }
+.new-zanata .i--edit:before {
+  content: "\e014";
+}
 .new-zanata .i--arrow-right:before {
   content: "\e015";
 }
-.new-zanata .i--star-2:before,
 .new-zanata .i--star-outline:before {
   content: "\e016";
 }
@@ -3617,19 +3515,34 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--version:before {
   content: "\e01a";
 }
+.new-zanata .i--tm:before {
+  content: "\e9e1";
+}
+.new-zanata .i--user-roles:before {
+  content: "\ea45";
+}
+.new-zanata .i--stats:before {
+  content: "\ea77";
+}
+.new-zanata .i--translate-up:before {
+  content: "\ea7c";
+}
+.new-zanata .i--maintain:before {
+  content: "\e01c";
+}
 .new-zanata .i--dashboard:before {
   content: "\e600";
 }
-.new-zanata .i--group:before {
+.new-zanata .i--folder:before {
   content: "\e601";
 }
-.new-zanata .i--glossary:before {
+.new-zanata .i--book:before {
   content: "\e602";
 }
 .new-zanata .i--info:before {
   content: "\e603";
 }
-.new-zanata .i--help:before {
+.new-zanata .i--question:before {
   content: "\e604";
 }
 .new-zanata .i--logout:before {
@@ -3638,23 +3551,23 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--archive:before {
   content: "\e606";
 }
-.new-zanata .i--attach:before {
+.new-zanata .i--attachment:before {
   content: "\e607";
 }
-.new-zanata .i--admin:before {
+.new-zanata .i--cogs:before {
   content: "\e608";
 }
-.new-zanata .i--notes:before {
+.new-zanata .i--list:before {
   content: "\e609";
 }
-.new-zanata .i--import:before {
+.new-zanata .i--upload:before {
   content: "\e60a";
 }
-.new-zanata .i--export:before {
-  content: "\e60f";
-}
-.new-zanata .i--external-link:before {
+.new-zanata .i--logout:before {
   content: "\e60b";
+}
+.new-zanata .i--ellipsis:before {
+  content: "\e60c";
 }
 .new-zanata .i--lock:before {
   content: "\e60d";
@@ -3662,8 +3575,11 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--unlock:before {
   content: "\e60e";
 }
-.new-zanata .i--ellipsis:before {
-  content: "\e60c";
+.new-zanata .i--export:before {
+  content: "\e60f";
+}
+.new-zanata .i--filter:before {
+  content: "\e610";
 }
 .new-zanata .i--location:before {
   content: "\e611";
@@ -3671,8 +3587,11 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--trash:before {
   content: "\e612";
 }
-.new-zanata .i--dot:before {
-  content: "";
+.new-zanata .i--circle:before {
+  content: "\e613";
+}
+.new-zanata .i--monitor:before {
+  content: "\ea79";
 }
 
 /*
