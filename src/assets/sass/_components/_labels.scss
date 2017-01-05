@@ -60,4 +60,10 @@
   color: $white;
 }
 
+.label--approved {
+  @extend .label;
+  background-color: $color-approved;
+  color: $white;
+}
+
 }
