@@ -3119,6 +3119,9 @@ Use to display icons to the far side of text, either left or right. Usually used
 .new-zanata .i--maintain:before {
   content: "\e01c";
 }
+.new-zanata .i--group:before {
+  content: "\e601";
+}
 .new-zanata .i--dashboard:before {
   content: "\e600";
 }
@@ -4240,7 +4243,7 @@ Keep focus while showing and hiding a password field
 .new-zanata input.form__input--copyable {
   line-height: 1.5em;
   height: 1.5em;
-  padding: 0.1875em;
+  padding: 0.09375em;
   margin: 0;
   background-color: #fafafa;
   border-color: transparent;
@@ -5270,7 +5273,7 @@ Used in panel headers to match the header layout
 ```
 
 */
-.new-zanata .label, .new-zanata .label--highlight, .new-zanata .label--success, .new-zanata .label--unsure, .new-zanata .label--warning, .new-zanata .label--danger, .new-zanata .label--neutral {
+.new-zanata .label, .new-zanata .label--highlight, .new-zanata .label--success, .new-zanata .label--unsure, .new-zanata .label--warning, .new-zanata .label--danger, .new-zanata .label--neutral, .new-zanata .label--approved {
   background-color: #d2e3e8;
   padding: 0 0.23077em;
   margin: 0 0.12462em;
@@ -5298,6 +5301,10 @@ Used in panel headers to match the header layout
 }
 .new-zanata .label--neutral {
   background-color: #bcd4dc;
+  color: #fff;
+}
+.new-zanata .label--approved {
+  background-color: #03A6D7;
   color: #fff;
 }
 
