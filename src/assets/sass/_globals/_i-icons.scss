@@ -315,6 +315,11 @@ Use to display icons to the far side of text, either left or right. Usually used
       content: "\e01c";
     }
   }
+  .i--group {
+    &:before {
+      content: "\e601";
+    }
+  }
   .i--dashboard {
     &:before {
       content: "\e600";
