@@ -1,6 +1,6 @@
-/*! zanata-assets - v0.1.0 - 2016-11-15
+/*! zanata-assets - v0.1.0 - 2017-02-02
 * http://zanata.org/
-* Copyright (c) 2016 Red Hat; Licensed MIT */
+* Copyright (c) 2017 Red Hat; Licensed MIT */
 ;(function () {
   'use strict';
 
