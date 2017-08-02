@@ -1,7 +1,0 @@
-// A separate stylesheet for ie8 and below
-// ---------------------------------------
-
-$breakpoint-no-queries:         true; //? Only true in ie stylesheet
-$breakpoint-no-query-wrappers:  false;
-
-@import "style";
