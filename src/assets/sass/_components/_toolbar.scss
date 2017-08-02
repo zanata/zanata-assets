@@ -1,0 +1,72 @@
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.toolbar__button,
+.toolbar__button:hover,
+.toolbar__button:focus,
+.toolbar__button:active,
+.toolbar__button.is-active {
+  box-shadow: none;
+  position: relative;
+  margin-top: -1px;
+  padding: 0 rhythm(.25, 14px);
+  height: rhythm(1, 14px);
+  border: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  background-clip: padding-box;
+  color: $color-link;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: emCalc(14px);
+  line-height: rhythm(1, 14px);
+}
+
+.toolbar__button {
+  &:hover {
+    background-color: $color-bg-light;
+  }
+  &.is-active {
+    background-color: $color-bg-lighter;
+    border-left-color: $default-border-color;
+    border-right-color: $default-border-color;
+  }
+}
+
+.toolbar__button--inline,
+.toolbar__button__toggle {
+  margin-left: rhythm(-.25);
+}
+
+.toolbar__button__toggle.is-active {
+  @include rotate(180deg);
+}
+
+.toolbar__button--top {
+  &.is-active {
+    border-top-color: $color-bg-lighter;
+  }
+}
+
+.toolbar__button--bottom {
+  &.is-active {
+    border-bottom-color: $color-bg-lighter;
+  }
+}
+
+.toolbar__button--success {
+  background-color: shade($color-success, 5%);
+  color: $lightest-grey;
+  &:hover,
+  &:focus {
+    background-color: $color-success;
+    color: $white;
+  }
+  &:active,
+  &.is-active {
+    background-color: shade($color-success, 20%);
+  }
+}
+
+}

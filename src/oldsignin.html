@@ -1,0 +1,131 @@
+---
+title: Sign in | Open Translation, For Everyone
+layout: old
+---
+
+<div id="container">
+      <div id="bd">
+        <div id="search_div"><div id="search_panel" xmlns="http://www.w3.org/1999/xhtml">
+<form id="j_id52" name="j_id52" method="post" action="/zanata/account/sign_form" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id52" value="j_id52">
+
+
+     <span class="icon-search search-icon"></span><input id="j_id52:q" type="text" name="j_id52:q" class="with_icon"><input type="submit" name="j_id52:j_id55" value="Search Projects" class="projectSearchButton"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id5" autocomplete="off">
+</form>
+
+</div>
+          </div>
+          <div id="breadcrumbs_div"><div id="breadcrumbs_panel" xmlns="http://www.w3.org/1999/xhtml">
+<form id="j_id59" name="j_id59" method="post" action="/zanata/account/sign_form" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id59" value="j_id59">
+<a href="/zanata/" id="j_id59:j_id60" class="breadcrumbs_home">
+        <span class="icon-home-1" title="Zanata"></span></a>
+        <span class="icon-right-open breadcrumbs-seperator"></span><span id="j_id59:j_id62:0:j_id65" class="breadcrumbs_display">Sign In</span><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id5" autocomplete="off">
+</form>
+</div>
+          </div>
+        <div id="yui-main">
+          <div class="yui-b"><span id="j_id69"></span>
+            <div id="main_body_content">
+<form id="login" name="login" method="post" action="/zanata/account/sign_form" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="login" value="login">
+
+    <!-- Load jQuery --><script type="text/javascript">//<![CDATA[
+ {
+  var selector = "";
+  try {
+    selector = eval("");
+  } catch (e) {}
+  jQuery(selector).jquery;
+}
+//]]></script>
+
+    <script type="text/javascript">
+        function showLoginButton()
+        {
+            jQuery("[id='login:Sign_in']").show();
+        }
+    </script><input type="hidden" name="javax.faces.FormSignature" value="DaIvCWGmXyZboYyFp4X2rW3jB3s="><div class="rich-panel " id="login:j_id75"><div class="rich-panel-header " id="login:j_id75_header">Sign In</div><div class="rich-panel-body " id="login:j_id75_body"><div id="login:j_id88"><div id="login:j_id89">
+
+
+
+    <!-- Load jQuery --><script type="text/javascript">//<![CDATA[
+ {
+  var selector = "";
+  try {
+    selector = eval("");
+  } catch (e) {}
+  jQuery(selector).jquery;
+}
+//]]></script>
+
+    <script type="text/javascript">
+        function updateLoginType(selectedElement, type, showUsername, usernameLabel, showPassword)
+        {
+            jQuery(".selected_login_option").each( function(){ jQuery(this).removeClass('selected_login_option') } );
+            jQuery(selectedElement).addClass('selected_login_option');
+
+            var fieldSelector = "[id='login:login_provider']";
+            jQuery(fieldSelector).val(type);
+
+            var usernamefieldSelector = "[id='login:providerUsernameField']";
+            if( showUsername )
+            {
+                jQuery('#identityLabel').html( usernameLabel );
+                jQuery('#' + usernamefieldSelector).show();
+            }
+            else
+            {
+                jQuery('#' + usernamefieldSelector).hide();
+            }
+
+            var passwordfieldSelector = "[id='login:providerPasswordField']";
+            if( showPassword )
+            {
+                jQuery('#' + passwordfieldSelector).show();
+            }
+            else
+            {
+                jQuery('#' + passwordfieldSelector).hide();
+            }
+
+            showLoginButton();
+        }
+    </script>How are you logging in?
+    <br>
+    <br><img alt="" class="rich-spacer " height="10" id="login:j_id96" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="1"><img id="login:fedora_signin" src="../images/openid/fedora.png" height="40" onclick="updateLoginType(this, 'Fedora', true, 'Fedora Username')" title="Fedora" width="40" class="login_option"><img alt="" class="rich-spacer " height="1" id="login:j_id97" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="10"><img id="login:google_signin" src="../images/openid/google.png" height="40" onclick="updateLoginType(this, 'Google', false)" title="Google" width="40" class="login_option"><img alt="" class="rich-spacer " height="1" id="login:j_id98" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="10"><img id="login:myopenid_signin" src="../images/openid/myopenid.png" height="40" onclick="updateLoginType(this, 'MyOpenId', true, 'MyOpenID User')" title="MyOpenID" width="40" class="login_option"><img alt="" class="rich-spacer " height="1" id="login:j_id99" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="10"><img id="login:yahoo_signin" src="../images/openid/yahoo.png" height="40" onclick="updateLoginType(this, 'Yahoo', true, 'Yahoo Username')" title="Yahoo" width="40" class="login_option"><img alt="" class="rich-spacer " height="1" id="login:j_id100" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="10"><img id="login:openid_signin" src="../images/openid/openid.png" height="40" onclick="updateLoginType(this, 'Generic', true, 'Open ID')" title="Open ID" width="40" class="login_option"><img alt="" class="rich-spacer " height="1" id="login:j_id101" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="10"><img id="login:internal_signin" src="../images/z-logo-50px.png" height="40" onclick="updateLoginType(this, 'INTERNAL', true, 'Username', true)" title="Zanata" width="40" class="login_option"><img alt="" class="rich-spacer " height="1" id="login:j_id102" src="/zanata/a4j/g/3_3_3.Finalimages/spacer.gif" width="10"><input id="login:login_provider" type="hidden" name="login:login_provider"><div style="display: none" id="login:providerUsernameField">
+
+    <div class="prop"><label for="login:providerUsernameField:username" class="name ">
+
+            <span id="identityLabel" class="loginForm_label">Fedora Username</span></label>
+
+        <span class="value "><input id="login:providerUsernameField:username" type="text" name="login:providerUsernameField:username" class="name">
+        <br>
+        </span>
+
+        <span class="value  errorsMessage">
+        </span>
+    </div></div><div style="display: none" id="login:providerPasswordField">
+
+    <div class="prop"><label for="login:providerPasswordField:password" class="name ">
+
+            <span id="passwordLabel" class="loginForm_label">Password</span></label>
+
+        <span class="value "><input id="login:providerPasswordField:password" type="password" name="login:providerPasswordField:password" value="" class="name">
+        <br>
+        </span>
+
+        <span class="value  errorsMessage">
+        </span>
+    </div></div></div></div>
+        <div style="clear:both"></div>
+        <div class="actionButtons"><input id="login:Sign_in" type="submit" name="login:Sign_in" value="Sign In" style="display:none">
+        </div></div></div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="j_id5" autocomplete="off">
+</form>
+            </div>
+          </div>
+        </div>
+        <div class="yui-b"><div class="rich-panel " id="j_id153"><div class="rich-panel-body " id="j_id153_body"><a href="/zanata/account/password_reset_request" id="j_id154" class="table_link">Forgot your password?</a></div></div>
+        </div>
+      </div>
+    </div>

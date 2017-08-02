@@ -1,0 +1,558 @@
+/*
+### Lists
+
+#### No Bullet List
+
+```
+<ul class="list--no-bullets">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//ul
+.list--no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+  }
+}
+
+}
+
+/*
+
+#### Navigation list
+
+```
+<nav>
+  <ul>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+  </ul>
+</nav>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+nav ul,
+nav ol {
+  @extend .list--no-bullets;
+}
+
+}
+
+/*
+
+#### Horizontal List
+
+```
+<ul class="list--horizontal">
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//ul
+.list--horizontal {
+  @extend .list--no-bullets;
+  > li {
+    display: inline-block;
+    margin-right: rhythm(.25);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+}
+
+/*
+
+#### List Slat
+
+```
+<ul class="list--slat">
+  <li>Standard</li>
+  <li><a href="#">Link</a></li>
+  <li><span class="list__title">Title</span></li>
+  <li><span class="list__title"><a href="#">Title Link</a></span></li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list--slat {
+  @extend .list--no-bullets;
+  > li {
+    @include old-ie {
+      border-top: 1px solid $color-secondary-20;
+    }
+    padding: rhythm(.25) 0;
+    border-top: 1px solid rgba($color-secondary, .1);
+    > a {
+      display: inline-block;
+    }
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.list__title {
+  margin: 0;
+  font-weight: 600;
+  @include hyphenation;
+  @include adjust-font-size-to($base-font-size);
+}
+
+}
+
+/*
+
+#### List Icon
+
+```
+<ul class="list--no-bullets">
+  <li><i class="i i--translate list__icon"></i>Brisbane</li>
+  <li><i class="i i--language list__icon"></i>English</li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list__icon {
+  display: inline-block;
+  width: rhythm(.75);
+  margin-right: rhythm(.125);
+  text-align: center;
+  height: 1.2em;
+}
+
+}
+
+/*
+
+#### List Slat Horizontal
+
+```
+<ul class="list--slat-horizontal">
+  <li>Standard</li>
+  <li><a href="#">Link</a></li>
+  <li><span class="list__title">Title</span></li>
+  <li><span class="list__title"><a href="#">Title Link</a></span></li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list--slat-horizontal {
+  @extend .list--no-bullets;
+  > li {
+    @include old-ie {
+      border-left: 1px solid $color-secondary-20;
+    }
+    display: inline-block;
+    padding: 0 rhythm(.25);
+    border-left: 1px solid rgba($color-secondary, .1);
+    > a {
+      display: inline-block;
+    }
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+    &.list__right {
+      padding: 0;
+      border-left: none;
+      @include breakpoint($gte-medium) {
+        float: right;
+      }
+    }
+  }
+}
+
+}
+
+/*
+
+#### List Block Links
+
+```
+<ul class="list--block-links">
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list--block-links {
+  > li {
+    padding: 0;
+    > a {
+      display: block;
+      padding: rhythm(.5);
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.txt--invert.list--block-links li > a {
+  &:hover {
+    background-color: darken($color-base-font, 5%) !important;
+  }
+  &:active {
+    background-color: darken($color-base-font, 10%) !important;
+  }
+}
+
+}
+
+/*
+
+#### List Panel
+
+```example
+<ul class="list--panel">
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+  <li>List Item</li>
+</ul>
+```
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list--panel {
+  @extend .list--no-bullets;
+  > li {
+    // background-color: $color-bg-lighter;
+    border-bottom: $default-border;
+    position: relative;
+    &:hover {
+      @extend .bg--highest--hover;
+    }
+    &.is-active {
+      background-color: $color-bg-lightest;
+      > a {
+        color: $color-link-active;
+      }
+    }
+  }
+  // Don't use legacy `list__item` class
+  // Use `list__item__content` *inside* an li
+  .list__item,
+  .list__item__content {
+    display: table;
+    table-layout: fixed;
+    padding: rhythm(.25) rhythm(.5);
+  }
+  .list__item__info {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 1em;
+  }
+  .list__item--actionable {
+    position: relative;
+    .list__item__content {
+      padding-left: rhythm(1.375);
+    }
+  }
+  .list__item__action {
+    position: absolute;
+    left: rhythm(.2);
+    top: 50%;
+    margin-top: -1em;
+    width: rhythm(.5);
+  }
+  .list__item__actions {
+    margin-left: rhythm(.5);
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .list__item__list {
+    @extend .list--horizontal;
+    display: inline-block;
+    line-height: .75em;
+    > li {
+      margin-right: rhythm(.125);
+      line-height: 1em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .list__item__meta {
+    @include font-size(14px);
+    display: block;
+    margin: 0 0 rhythm(.25,14px);
+    color: $color-secondary-50;
+    font-weight: 400;
+    line-height: 1em;
+    @include hyphenation;
+  }
+}
+
+}
+
+/*
+
+#### List Stats
+
+```example
+<ul class="list--stats">
+  <li class="progress-bar__expander panels__panel__item is-active">
+    <a href="#">
+      <div class="list__item">
+        <div class="list__item__info">
+          <span class="list__title">Russian</span>
+        </div>
+        <div class="list__item__stats">
+          <span class="stats--small txt--state-neutral">
+            <span class="stats__figure">0%</span>
+            <span class="stats__unit">translated</span>
+          </span>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <span class="progress-bar__item"></span>
+      </div>
+    </a>
+  </li>
+  <li class="progress-bar__expander bg--highest--hover">
+    <a href="#">
+      <div class="list__item">
+        <div class="list__item__info">
+          <span class="list__title">Japanese</span>
+        </div>
+        <div class="list__item__stats">
+          <span class="stats--small txt--state-neutral">
+            <span class="stats__figure">0%</span>
+            <span class="stats__unit">translated</span>
+          </span>
+        </div>
+      </div>
+      <div class="progress-bar">
+        <span class="progress-bar__item"></span>
+      </div>
+    </a>
+  </li>
+</ul>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.list--stats {
+  @extend .list--panel;
+  > li {
+    padding-bottom: rhythm(.25);
+    &:first-child {
+      margin-top: 0;
+    }
+    &.is-active {
+      // Inverted style needs to override a lot
+      background-color: $color-secondary;
+      > a,
+      .dropdown__toggle,
+      .list__title,
+      .list__item__stats,
+      .list__item__stats span {
+        color: $white;
+      }
+      .list__item__meta {
+        color: $lighter-grey;
+      }
+    }
+  }
+  .list__item, // Don't use this class
+  .list__item__content {
+    padding: rhythm(.5) rhythm(.5) rhythm(.25);
+    min-height: rhythm(2);
+  }
+  .list__item__stats {
+    margin-left: rhythm(.5);
+    text-align: right;
+    color: $color-secondary;
+    vertical-align: middle;
+  }
+  .list__title {
+    line-height: 1em;
+  }
+  .list__item__meta {
+    margin: rhythm(.2,14px) 0 0;
+  }
+}
+
+}
+
+/*
+
+#### List Highlight
+
+```example
+<ul class="list--slat list--highlight">
+  <li class="reveal--list-item">
+    Assamese<span class="txt--understated l--push-left-quarter">&#91;as&#93;</span>
+    <a href="#" class="l--float-right txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
+  <li class="reveal--list-item">
+    Chinese (Simplified Han)<span class="txt--understated l--push-left-quarter">&#91;zh-Hans&#93;</span>
+    <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
+  <li class="reveal--list-item">
+    Chinese (Traditional Han)<span class="txt--understated l--push-left-quarter">&#91;zh-Hant&#93;</span>
+    <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
+  <li class="reveal--list-item">
+    English (United States)<span class="txt--understated l--push-left-quarter">&#91;en-US&#93;</span>
+    <a href="#" class="txt--danger reveal__target"><i class="i--large i--remove"></i></a>
+  </li>
+  <li>
+    <label for="settings-project">Add a Language</label>
+    <input type="text" placeholder="Search Languages">
+  </li>
+</ul>
+```
+
+*/
+
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//ul
+.list--highlight {
+  > li {
+    @extend .is-transition;
+    &:hover {
+      background-color: rgba($color-secondary, .05);
+    }
+  }
+}
+
+.list--highlight__item--none {
+  &:hover {
+    background-color: inherit !important;
+  }
+}
+
+}
+
+/*
+
+#### List Highlight
+
+```example
+<ul class="list--slat">
+  <li class="list__item--google">Google</li>
+  <li class="list__item--yahoo">Yahoo</li>
+  <li class="list__item--fedora">Fedora</li>
+</ul>
+```
+
+*/
+
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+// Specific Branded Buttons
+
+%list__item--brand {
+  &:before {
+    background-repeat: no-repeat;
+    @include background-size(contain);
+    content: "";
+    display: inline-block;
+    margin-right: rhythm(.25);
+    width: rhythm(.75);
+    height: rhythm(.75);
+    border-radius: 50px; //Round
+    vertical-align: middle;
+    margin-top: rhythm(-.1);
+  }
+}
+
+.list__item--fedora {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/fedora-logo.svg);
+  }
+}
+
+.list__item--google {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/google-logo.svg);
+  }
+}
+
+.list__item--yahoo {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/yahoo-logo.svg);
+  }
+}
+
+.list__item--openid {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/openid-logo.svg);
+  }
+}
+
+.list__item--zanata {
+  @extend %list__item--brand;
+  &:before {
+    background-image: url(../img/logo/logo.svg);
+  }
+}
+
+}

@@ -1,0 +1,116 @@
+/*
+
+### Rich Faces Components
+
+#### RF - Autocomplete
+
+```example
+<div id="settings-projects-form:newVersionField">
+  <div>
+    <span class="rf-au auto-complete" id="settings-projects-form:newVersionField:newVersion">
+      <input id="settings-projects-form:newVersionField:newVersionValue" name="settings-projects-form:newVersionField:newVersionValue" type="hidden" value="tes">
+      <span>
+        <input autocomplete="off" class="rf-au-fnt rf-au-inp " id="settings-projects-form:newVersionField:newVersionInput" name="settings-projects-form:newVersionField:newVersionInput" type="text" value="test-project 1.0"></span>
+    </span>
+  </div>
+</div>
+
+<div class="rf-au-lst-cord" id="settings-projects-form:newVersionField:newVersionList" style="left: 13px; top: 74px; display: block;">
+  <div class="rf-au-shdw">
+    <div class="rf-au-shdw-t"></div>
+    <div class="rf-au-shdw-l"></div>
+    <div class="rf-au-shdw-r"></div>
+    <div class="rf-au-shdw-b"></div>
+    <div class="rf-au-lst-dcrtn auto-complete-list">
+      <div class="rf-au-lst-scrl">
+        <ul id="settings-projects-form:newVersionField:newVersionItems" class="rf-au-lst-ul">
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp rf-au-itm-sel rf-au-opt-sel"><a href="#">Test Project</a> (ignore)<span class="txt--understated l--push-left-quarter">1.0</span></li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">Test Project (ignore)<span class="txt--understated l--push-left-quarter">1.1</span></li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes <span class="txt--meta">5.1.0</span></li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.0</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EAP - Release Notes - 6.1.1</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">ZTESTING - Python Test Project (ignore) - 1.0</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">ZTESTING - Python Test Project (ignore) - 1.2</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EBP - BRMS Release Notes - 5.2.0</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss EBP - BRMS Release Notes - 5.3</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss SOA - Release Notes - 4.3.5</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss SOA - Release Notes - 6.1.0</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss AS Console - test</li>
+          <li class="rf-au-itm rf-au-opt rf-au-fnt rf-au-inp">JBoss AS Console - another_test</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+// Look at auto-complete.scss for initial overrides
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+// See autocompletee for override
+
+.rf-au-fnt {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.rf-au-shdw {
+  border: none;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+
+.rf-au-shdw-t, .rf-au-shdw-l, .rf-au-shdw-r, .rf-au-shdw-b {
+  background-image: none;
+  background-position: 0%;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.rf-au-lst-dcrtn {
+  @extend .bg--pop-highest;
+}
+
+.rf-au-lst-scrl {
+  width: auto;
+}
+
+.rf-au-lst-ul {
+  @extend .list--no-bullets;
+}
+
+.rf-au-itm {
+  @include adjust-font-size-to(14px);
+  padding: rhythm(.125, 14px) rhythm(1, 14px) rhythm(.125, 14px) rhythm(.25, 14px);
+  @include ellipsis;
+  cursor: pointer;
+}
+
+.rf-au-itm-sel {
+  border-style: none;
+  background-color: $color-link !important;
+  color: $white;
+  a {
+    color: $lightest-grey;
+  }
+  .txt--meta,
+  .txt--understated {
+    color: tint($color-secondary, 70%);
+  }
+}
+
+.rf-au-lst-scrl {
+  max-height: rhythm(6.5);
+  min-height: rhythm(1);
+  overflow: auto;
+}
+
+}

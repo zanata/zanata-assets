@@ -1,0 +1,115 @@
+/*
+
+### Text
+
+#### Standard Paragraph
+
+```
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</p>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+p {
+  margin: 0 0 rhythm(.5);
+  word-wrap: break-word;
+  hyphens: auto;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  padding: 0 rhythm(.125, 14px);
+  font-family: "Monaco", Courier, "Courier New", monospace;
+  font-weight: 700;
+  color: tint($color-base-font, 10%);
+  @include adjust-font-size-to(14px);
+  margin: 0;
+}
+
+p {
+  code,
+  kbd,
+  pre,
+  samp {
+    line-height: 1;
+  }
+}
+
+code {
+  display: inline-block;
+  background-color: $white;
+}
+
+pre {
+  white-space: pre;
+  // white-space: pre-wrap;
+  // word-wrap: break-word;
+  padding: rhythm(.5);
+  margin: rhythm(.5, 14px) 0;
+  border-top: 1px solid $default-border-color;
+  border-bottom: 1px solid $default-border-color;
+  background-color: rgba($color-secondary, .05);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  code {
+    background-color: transparent;
+    font-size: 1em;
+  }
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+}

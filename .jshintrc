@@ -1,0 +1,34 @@
+{
+
+  "globals": {
+    "zanata": true,
+    "FastClick": true
+  },
+
+  "browser": true,
+
+  "jquery": true,
+
+  "node": true,
+
+  "camelcase": true,
+
+  "eqeqeq": true,
+
+  "eqnull": true,
+
+  "latedef": true,
+
+  "newcap": true,
+
+  "quotmark": "single",
+
+  "trailing": true,
+
+  "undef": true,
+
+  "maxlen": 80,
+
+  "strict": true
+
+}

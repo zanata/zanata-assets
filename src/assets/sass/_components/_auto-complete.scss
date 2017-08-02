@@ -1,0 +1,91 @@
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+// Rich components - Auto complete
+.auto-complete {
+  border-width: initial;
+  border-style: initial;
+  border-color: initial;
+  display: initial;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-color: initial;
+  font-size: inherit;
+  input {
+    background-image: none;
+  }
+}
+
+}
+
+/*
+
+### Autocomplete
+
+```example
+<div class="autocomplete">
+  <input type="text" class="autocomplete__input" placeholder="Search…">
+  <ul class="autocomplete__results">
+    <li class="autocomplete__result">Result 1</li>
+    <li class="autocomplete__result">Result 2 <span class="txt--understated">Understated</span></li>
+    <li class="autocomplete__result is-selected">Result 3 <span class="txt--understated">Understated</span></li>
+    <li class="autocomplete__result">Result 4</li>
+    <li class="autocomplete__result"><a href="#">Result 5</a></li>
+    <li class="autocomplete__result">Result 6</li>
+    <li class="autocomplete__result">Result 7</li>
+    <li class="autocomplete__result">Result 8</li>
+  </ul>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+//div
+.autocomplete {
+  position: relative;
+  z-index: 10;
+}
+
+//input
+.autocomplete__input {
+
+}
+
+//ul
+.autocomplete__results {
+  @extend .list--no-bullets;
+  @extend .bg--pop-highest;
+  position: absolute;
+  top: 100%;
+  z-index: 200;
+  overflow: auto;
+  max-height: rhythm(9);
+  width: 100%;
+  border-radius: $default-border-radius;
+  -webkit-overflow-scrolling: touch;
+}
+
+//li
+.autocomplete__result {
+  padding: rhythm(.125) rhythm(.25);
+  cursor: pointer;
+  a {
+    color: $color-base-font;
+  }
+  &.is-selected {
+    color: $white;
+    background-color: $color-link;
+    a {
+      color: $white;
+    }
+    .txt--understated {
+      color: $color-secondary-20;
+    }
+  }
+}
+
+}

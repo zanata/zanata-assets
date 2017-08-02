@@ -1,0 +1,698 @@
+<!DOCTYPE>
+<!--[if lt IE 7]>      <html class="no-js new-zanata lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js new-zanata lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js new-zanata lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js new-zanata"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+    <title></title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- Prefetch DNS for external assets (Twitter widgets etc). -->
+  <!-- TODO: Add prefetches -->
+
+  <!-- TODO: Insert logo link -->
+  <link rel="logo" type="image/svg" href=""/>
+
+  <!-- TODO: Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/style-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+  <!--<![endif]-->
+
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Source+Sans+Pro:300,400,600,700,400italic:latin,latin-ext' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <!-- JavaScript -->
+  <!-- TODO: Add modernizr here -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script> -->
+
+</head>
+
+<body class="new-zanata">
+
+
+<header role="banner" class="header">
+  
+<h1 class="header__title"><a href="/"><img class="header__site-logo" src="../logo.svg"> Zanata</a></h1>
+
+
+  <nav id="nav-main" class="header__main-nav js-dropdown">
+    <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+    <div class="header__main-nav__group js-dropdown__content">
+      <form action="" class="form--search header__search js-form--search">
+        <div class="autocomplete">
+          <label class="form--search__label" for="form--search">Search Projects</label>
+          <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
+        </div>
+      </form>
+      <ul class="header__main-nav__menu">
+        <li><a href="../projects-old.html">Projects <i class="is-hidden--m-l-up l--float-right i--inline i--project"></i></a></li>
+        <li><a href="../groups">Groups <i class="is-hidden--m-l-up l--float-right i--inline i--group"></i></a></li>
+        <li><a href="../languages">Languages <i class="is-hidden--m-l-up l--float-right i--inline i--language"></i></a></li>
+        <li><a href="../languages">Glossary <i class="is-hidden--m-l-up l--float-right i--inline i--glossary"></i></a></li>
+        <li><a href="../help">Help <i class="is-hidden--m-l-up l--float-right i--inline i--help"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--<a href="#" class="header__user-admin">Admin <i class="i--right i--large i--admin"></i></a>-->
+  <nav class="header__user-nav js-dropdown">
+    <a href="#nav-user" class="header__user-nav__toggle js-dropdown__toggle">
+      <div class="badge__container">
+        <div class="bx--round header__avatar">
+          <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
+        </div>
+        <span class="badge--br badge--highlight" title="4 Notifications">4</span>
+      </div>
+    </a>
+    <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
+      <li><a href="dashboard" class="i__item--right">Dashboard <i class="i i--dashboard i__item__icon"></i></a></li>
+      <li><a href="#" class="i__item--right">Settings <i class="i__item__icon i i--settings"></i></a></li>
+      <li class="header__user-nav__admin"><a href="#" class="i__item--right">Admin <i class="i__item__icon i i--admin"></i></a></li>
+      <li><a href="#" class="i__item--right">Logout <i class="i__item__icon i i--logout"></i></a></li>
+    </ul>
+  </nav>
+</header>
+
+
+      <main role="main">
+        <div class="l__wrapper">
+          <h1 class="txt--meta l--push-all-0">Projects</h1>
+<div class="l--push-bottom-1">
+  <span class="txt--hero txt--understated bx--inline-block">Browse the</span>
+  <span class="dropdown dropdown--inline dropdown--toggle-right js-dropdown">
+    <a class="dropdown__toggle dropdown__toggle--large js-dropdown__toggle" href="#">most active projects</a>
+    <ul class="dropdown__content js-dropdown__content">
+      <li><a class="is-active" href="#">Most active projects</a></li>
+      <li><a href="#">Most starred projects</a></li>
+      <li><a href="#">Projects requiring the most help</a></li>
+    </ul>
+  </span>
+  <span class="dropdown dropdown--inline dropdown--toggle-right js-dropdown">
+    <a class="dropdown__toggle dropdown__toggle--large js-dropdown__toggle" href="#">this week</a>
+    <ul class="dropdown__content js-dropdown__content">
+      <li><a href="#">today</a></li>
+      <li><a class="is-active" href="#">this week</a></li>
+      <li><a href="#">this month</a></li>
+    </ul>
+  </span>
+  <span class="txt--hero txt--understated bx--inline-block">in</span>
+  <span class="dropdown dropdown--inline dropdown--toggle-right js-dropdown">
+    <a class="dropdown__toggle dropdown__toggle--large js-dropdown__toggle" href="#">all languages</a>
+    <ul class="dropdown__content js-dropdown__content">
+      <li class="l--pad-all-quarter">
+        <form class="l--push-all-0">
+          <label class="is-sr-only" for="form--search">Search Projects</label>
+          <input type="search" class="l--push-bottom-0" placeholder="Search languages">
+        </form>
+      </li>
+      <li><a class="is-active" href="#">all languages</a></li>
+      <li><a href="#">Chinese</a></li>
+      <li><a href="#">English</a></li>
+      <li><a href="#">etc</a></li>
+    </ul>
+  </span>
+</div>
+
+<ul class="g">
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72/4e9fdd/fff&text=Zanata">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Zanata Server</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>31 languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 80%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 80%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 9%; margin-left: 91%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="80% Translated"><i class="i i--dot txt--success"></i>80%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="9% Untranslated"><i class="i i--dot txt--neutral"></i>9%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="1 Document"><i class="i i--left i--document txt--neutral"></i>1</li>
+          <li title="7 Maintainers"><i class="i i--left i--users txt--neutral"></i>7</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 1 hour ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Something else</h2>
+          <p class="txt--meta">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+  <li class="g__item w--1-2-m w--1-3 l--push-bottom-1">
+    <a class="bg--pop-high bg--highest--hover bx--block">
+      <div class="media l--pad-all-half">
+        <div class="media__item--left bx--round">
+          <img src="http://placehold.it/72">
+        </div>
+        <div class="media__body">
+          <h2 class="l--push-all-0 delta">Mortal Kombat</h2>
+          <p class="txt--meta">Test you might… sometime in the future when you care a bit more, for now just have a rest.</p>
+        </div>
+      </div>
+      <div class="l--pad-h-half d--top txt--understated">
+        <ul class="g">
+          <li class="g__item w--1-2 w--1-2-s"><i class="i i--left i--version txt--neutral"></i>master</li>
+          <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s"><i class="i i--left i--language txt--neutral"></i>21 Languages</li>
+        </ul>
+      </div>
+      <ul class="progress-bar">
+        <li class="progress-bar__translated" style="width: 50%"><span class="is-sr-only">Translated</span></li>
+        <li class="progress-bar__fuzzy" style="width: 11%; margin-left: 50%"><span class="is-sr-only">Fuzzy</span></li>
+        <li class="progress-bar__item" style="width: 39%; margin-left: 61%;"><span class="is-sr-only">Untranslated</span></li>
+      </ul>
+      <div class="l--pad-h-half l--pad-v-quarter txt--meta">
+        <ul class="list--horizontal">
+          <li title="50% Translated"><i class="i i--dot txt--success"></i>50%<span class="is-sr-only">Translated</span></li>
+          <li title="11% Fuzzy"><i class="i i--dot txt--unsure"></i>11%<span class="is-sr-only">Fuzzy</span></li>
+          <li title="39% Untranslated"><i class="i i--dot txt--neutral"></i>39%<span class="is-sr-only">Untranslated</span></li>
+        </ul>
+        <ul class="list--horizontal">
+          <li>10,403 words remaining</li>
+          <li>103.5 hours remaining</li>
+        </ul>
+      </div>
+      <div class="l--pad-h-half bg--high l--pad-v-quarter d--top txt--meta">
+        <ul class="list--horizontal">
+          <li title="26 Documents"><i class="i i--left i--document txt--neutral"></i>26</li>
+          <li title="5 Maintainers"><i class="i i--left i--users txt--neutral"></i>5</li>
+          <li>23,768 words</li>
+          <li class="l--float-right" title="Last activity: 12:32pm 3rd Mar 2014"><i class="i i--left i--clock txt--neutral"></i> 3 days ago</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+</ul>
+
+<ul class="g">
+  <li class="g__item w--1-2 w--1-2-s">
+    <a href="#" class="button button--disabled" disabled><i class="i i--left i--arrow-left"></i>Previous</a>
+  </li>
+  <li class="g__item w--1-2 w--1-2-s txt--align-right txt--align-right-s">
+    <a href="#" class="button">Next<i class="i i--right i--arrow-right"></i></a>
+  </li>
+</ul>
+
+        </div>
+      </main>
+
+  <footer role="contentinfo" class="js-footer">
+    <div class="l__wrapper l--pad-top-1">
+      <div class="l--pad-v-half d--top">
+        <div class="g">
+          <div class="g__item w--1-2">
+            <ul class="list--horizontal txt--meta">
+              <li><a href="http://zanata.org/terms">Terms</a></li>
+              <li><a href="http://zanata.org/about">About</a></li>
+              <li><a href="http://zanata.org/blog">Blog</a></li>
+              <li><a href="http://zanata.org/help">Help</a></li>
+              <li><a href="https://bugzilla.redhat.com/enter_bug.cgi?format=guided&product=Zanata">Report a problem</a></li>
+            </ul>
+          </div>
+          <div class="g__item w--1-2 txt--align-right">
+            <p class="txt--meta">Copyright &copy; 2008-2013 Red Hat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
+

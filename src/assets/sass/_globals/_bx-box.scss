@@ -1,0 +1,122 @@
+/*
+
+### Box
+
+#### Box Round
+
+Only apply to block level content, otherwise .bx--inline-block or bx--block is needed.
+
+```
+<div class="bx--round">
+  <a href="/profile"><img src="http://placehold.it/115x115" alt="Luke Brooker"></a>
+</div>
+```
+
+*/
+
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+  .bx--round {
+    @extend .bx--inline-block;
+    border-radius: 1000px !important; // Use of % here will distort box if it is not square
+    overflow: hidden;
+    img {
+      display: block;
+    }
+  }
+}
+
+.bx--table {
+  display: table;
+}
+
+.bx--table__cell {
+  display: table-cell;
+}
+
+/*
+
+#### Box Block
+
+Display an element with `display: block`
+
+```example
+<span class="bx--block ph__block">Box Block</span>
+```
+
+*/
+
+.bx--block {
+  display: block !important;
+}
+
+/*
+
+#### Box Inline
+
+Display an element with `display: inline`
+
+```example
+<span class="bx--inline ph__block">Box Inline</span>
+```
+
+*/
+
+.bx--inline {
+  display: inline !important;
+}
+
+/*
+
+#### Box Inline Block
+
+Display an element with `display: inline-block`
+
+```example
+<span class="bx--inline-block ph__block">Box Inline Block</span>
+```
+
+*/
+
+.bx--inline-block {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+/*
+
+#### Box Break All
+
+Wrap long words that expand the boundaries of their container.
+Beware this will break words at arbitary points.
+Also adds a hyphen to these words, except in Chrome, Opera and Android.
+
+```example
+<div class="bx--break-all l--constrain-small">WowThisIsALongWordISureHopeItEndsSoonOtherwiseTHisLineIsGoingToBreak</div>
+```
+
+*/
+
+.bx--break-all {
+  word-break: break-all;
+  hyphens: auto;
+}
+
+/*
+
+#### Box Break Word
+
+Wrap long words that expand the boundaries of their container. This wont break words with no breakable characters.
+Also adds a hyphen to these words, except in Chrome, Opera and Android.
+
+```example
+<div class="bx--break-word l--constrain-small">WowThisIsALongWordISureHopeItEnds-SoonOtherwiseTHisLineIsGoingToBreak</div>
+```
+
+*/
+
+.bx--break-word {
+  word-wrap: break-word;
+  hyphens: auto;
+}

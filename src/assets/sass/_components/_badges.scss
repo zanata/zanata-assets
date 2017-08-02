@@ -1,0 +1,98 @@
+/*
+
+### Badges
+
+```example
+<span class="badge">6</span>
+<span class="badge--highlight">1</span>
+<span class="badge--success">2</span>
+<span class="badge--unsure">3</span>
+<span class="badge--warning">4</span>
+<span class="badge--danger">5</span>
+<span class="badge--neutral">6</span>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.badge {
+  @include adjust-font-size-to(14px, 0.75);
+  @include border-radius(100px);
+  min-width: rhythm(.75, 14px);
+  height: rhythm(.75, 14px);
+  text-align: center;
+  display: inline-block;
+  padding: 0 rhythm(.2, 14px);
+  background-color: $color-secondary-20;
+  font-weight: 400;
+}
+
+.badge__container {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.badge--inline {
+  position: relative;
+  margin-top: rhythm(.125,14px);
+}
+
+.badge--highlight {
+  @extend .badge;
+  background-color: $color-highlight;
+  color: $white;
+}
+
+.badge--success {
+  @extend .badge;
+  background-color: $color-success;
+  color: $white;
+}
+
+.badge--unsure {
+  @extend .badge;
+  background-color: $color-unsure;
+  color: $white;
+}
+
+.badge--warning {
+  @extend .badge;
+  background-color: $color-warning;
+  color: $white;
+}
+
+.badge--danger {
+  @extend .badge;
+  background-color: $color-danger;
+  color: $white;
+}
+
+.badge--neutral {
+  @extend .badge;
+  background-color: $color-neutral;
+  color: $color-secondary-70;
+}
+
+
+%badge--position {
+  @extend .badge;
+  position: absolute;
+  z-index: 2;
+}
+
+.badge--bl {
+  @extend %badge--position;
+  bottom: rhythm(-.125, 14px);
+  left: rhythm(-.125, 14px);
+}
+
+.badge--br {
+  @extend %badge--position;
+  bottom: rhythm(-.125, 14px);
+  right: rhythm(-.125, 14px);
+}
+
+}

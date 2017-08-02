@@ -1,0 +1,1027 @@
+@import "_includes/vendors";
+@import "_includes/functions";
+@import "_includes/mixins";
+@import "settings";
+
+// Helpers
+
+.l--clearfix-overflow {
+  @include pie-clearfix;
+}
+
+// body {
+//   background-color: #f8f9fa;
+// }
+
+#container {
+  width: 100%;
+  font-family: $font-family-base;
+  @include box-sizing(border-box);
+  margin-top: -3.5em;
+  padding-top: 3.5em;
+}
+
+// Editor specific styling
+
+html,
+body,
+.off-canvas__outer,
+.off-canvas__inner,
+#container {
+  height: 100% !important;
+  font-family: $font-family-base;
+}
+
+/*
+Styling for errors when webtrans fails to load
+*/
+div.AppLoadError {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #ff2222;
+  padding: 25px;
+}
+
+/*
+Removes some of the styling on the page-level splitters
+*/
+.gwt-SplitLayoutPanel-HDragger {
+  cursor: col-resize;
+  background:#E0E8EE;
+}
+
+.gwt-SplitLayoutPanel-VDragger {
+  cursor: row-resize;
+  background:#E5E5E5;
+}
+
+.gwt-Button, .gwt-PushButton {
+  outline:none;
+}
+
+.THEMES_COMPACT .transUnitCol {
+  padding:0px 0px;
+}
+
+.THEMES_COMPACT .transUnitCol .buttons {
+  font-size:16px;
+}
+
+.THEMES_DEFAULT .transUnitCol {
+  padding:10px 0px;
+}
+
+.THEMES_DEFAULT .transUnitCol .buttons {
+  font-size:18px;
+}
+
+.THEMES_LOOSE .transUnitCol {
+  padding:20px 0px;
+}
+
+.THEMES_LOOSE .transUnitCol .buttons {
+  font-size:20px;
+}
+
+.transUnitTable tr.selected
+{
+  border-left: 2px dotted $color-primary;
+  border-right: 2px dotted $color-primary;
+    background-color:#F3F7FB;
+}
+
+
+.transUnitTable tr.selected .transUnitCol
+{
+  border-top: 2px solid $color-primary;
+  border-bottom: 2px solid $color-primary;
+}
+
+.transUnitTable tr:hover
+{
+  background-color:#F3F7FB;
+}
+
+.transUnitTable tr:hover .fadeElement, .transUnitTable tr.selected .fadeElement
+{
+  opacity:1;
+
+}
+.transUnitTable tr .fadeElement
+{
+  opacity:0;
+}
+
+
+td.TableEditorCell {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.TableEditorCell-Source-Table {
+  width: 100%;
+}
+
+.TableEditorCell-Target-Table {
+    width: 100%;
+}
+
+tr.TableEditorRow.content-filter-nomatch {
+  filter: alpha(opacity =     25);
+  opacity: 0.25;
+}
+
+tr.FuzzyStateDecoration td.TableEditorCell-Target .TableEditorContent {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+tr.FuzzyStateDecoration td.TableEditorCell-Target div.TableEditorCell-Target {
+  border-left: 3px solid $color-unsure;
+  border-right: 3px solid $color-unsure;
+}
+
+table.ApprovedStateDecoration div.TableEditorCell-Target {
+    border-left: 3px solid $color-highlight;
+    border-right: 3px solid $color-highlight;
+}
+
+table.FuzzyStateDecoration div.TableEditorCell-Target {
+    border-left: 3px solid $color-unsure;
+    border-right: 3px solid $color-unsure;
+}
+
+table.TranslatedStateDecoration div.TableEditorCell-Target {
+    border-left: 3px solid $color-success;
+    border-right: 3px solid $color-success;
+}
+
+table.RejectedStateDecoration div.TableEditorCell-Target {
+    border-left: 3px solid $color-warning;
+    border-right: 3px solid $color-warning;
+}
+
+tr.ApprovedStateDecoration td.TableEditorCell-Target .TableEditorContent {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+tr.ApprovedStateDecoration td.TableEditorCell-Target div.TableEditorCell-Target
+{
+  border-left: 3px solid $color-highlight;
+  border-right: 3px solid $color-highlight;
+}
+
+tr.ApprovedStateDecoration td.TableEditorCell-Target .TableEditorContent-Edit
+  {
+  border-left: 3px solid $color-highlight;
+  border-right: 3px solid $color-highlight;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Search-replace page
+ * TODO arrange for these to share styles with editor table
+ */
+
+.gwt-ListBox
+{
+  color: inherit;
+}
+
+.projectWideSearchBoxLabel
+{
+  font-size: 1.2em;
+  margin-left: 30px;
+}
+
+.projectWideSearchReportLabel
+{
+  margin-left: 40px;
+  color: #555588;
+  font-size: 1.1em;
+}
+
+.projectWideSearchSelectAllChk
+{
+  margin-left: 27px;
+}
+
+.projectWideSearchLogPanel
+{
+  background-color: #667788;
+  color: #ffffff;
+  border-top: 3px solid #e0e8ee;
+  padding: 0px 30px;
+}
+
+.projectWideSearchSelectionInfo
+{
+  font-size: 1.3em;
+  white-space: nowrap;
+}
+
+.projectWideReplacButton-Disabled
+{
+  color: #777777;
+  background-color: #bbbbbb;
+  border: 2px solid #bbbbbb;
+}
+
+.projectWideReplaceFeedbackLabel
+{
+  margin-left: 60px;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.projectWideSearchResultsPanel
+{
+  padding: 10px;
+  padding-bottom: 0px;
+  background-color: #e0e8ee;
+}
+
+.projectWideSearchNoResultsLabel
+{
+  width: 100%;
+  margin-top: 70px;
+  font-style: italic;
+  font-size: 1.3em;
+  color: #666666;
+  text-align: center;
+}
+
+.projectWideSearchResultsDocumentHeader
+{
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid lightgrey;
+  border-bottom-style: none;
+}
+
+.projectWideSearchResultsDocumentTitle
+{
+  font-size: 1.5em;
+  color: #333333;
+  margin-right: 40px;
+}
+
+.projectWideSearchResultsDocumentLink
+{
+  float: right;
+}
+
+.projectWideSearchResultsDocumentBody
+{
+  padding-top: 15px;
+  background-color: #ffffff;
+  border: 2px solid lightgrey;
+  border-top-style: none;
+  border-bottom-width: 3px;
+  margin-bottom: 30px;
+}
+
+.projectWideSearchResultsActionColumn
+{
+  padding: 2px 4px !important;
+  overflow: visible !important;
+}
+
+.projectWideSearchResultsInfo
+{
+  cursor:pointer;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size:16px;
+}
+
+.linkLabel
+{
+  cursor:pointer;
+  text-decoration: underline;
+  margin-left: 8px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.linkLabelNormalColor
+{
+  color:#114477;
+}
+
+
+td.FuzzyStateDecoration div div div
+{
+  border-left: 3px solid $color-warning;
+  border-right: 3px solid $color-warning;
+  padding: 5px;
+}
+
+td.TranslatedStateDecoration div div div
+{
+  border-left: 3px solid $color-success;
+  border-right: 3px solid $color-success;
+  padding: 5px;
+}
+
+td.ApprovedStateDecoration div div div
+{
+    border-left: 3px solid $color-highlight;
+    border-right: 3px solid $color-highlight;
+    padding: 5px;
+}
+
+td.RejectedStateDecoration div div div
+{
+    border-left: 3px solid $color-warning;
+    border-right: 3px solid $color-warning;
+    padding: 5px;
+}
+
+.Severity-Error {
+  background-color: #ffcccc;
+}
+
+.Severity-Info {
+  background-color: #eeeeff;
+}
+
+.Severity-Warning {
+  background-color: #ffffcc;
+}
+
+/* when match highlighting is enabled: */
+/*
+.TransMemoryHighlightMatches .diff-equal {
+  background:#FF0;
+}
+
+.TransMemoryHighlightMatches .diff-insert {
+  background:#e6ffe6;
+  text-decoration: none;
+}
+
+.TransMemoryHighlightMatches .diff-delete {
+  display: none;
+}
+*/
+
+/* when colour diff is enabled: */
+.diff-equal {
+
+}
+
+.diff-insert {
+  background: #99ccff;
+  text-decoration: underline;
+}
+
+.diff-delete {
+  background: #ff9999;
+  text-decoration: line-through;
+}
+
+.DocumentListTable {
+  width: 100%;
+  font-size: 16px;
+}
+
+.DocumentListTable tr:hover
+{
+  background: $color-bg-lighter;
+}
+
+.DocumentListTable td.sortable
+{
+  // text-decoration:underline;
+  cursor:pointer;
+}
+
+
+.DocumentListTable th, .DocumentListTable td.docListHeader {
+  font-size: 13px;
+  font-weight:bold;
+  color: $color-secondary;
+  font-family: $font-family-base;
+  background-color: $color-bg-lightest;
+  border-bottom:none;
+  border-left:1px solid #FFFFFF;
+  text-align:center;
+}
+
+.DocumentListTable th:hover {
+  color:#FFFFFF;
+}
+
+.DocumentListTable th:first-child, .DocumentListTable td.docListHeader:first-child {
+  border-top-left-radius: 5px;
+  border-left:none;
+}
+
+.DocumentListTable th:last-child, .DocumentListTable td.docListHeader:last-child {
+  border-top-right-radius: 5px;
+}
+
+.DocumentListTable td {
+  font-size: 16px;
+}
+
+.THEMES_COMPACT .DocumentListTable td {
+  padding:0px 5px;
+}
+
+.THEMES_DEFAULT .DocumentListTable td {
+  padding:10px 5px;
+}
+
+.THEMES_LOOSE .DocumentListTable td {
+  padding:20px 5px;
+}
+
+.DocumentListTable td.pathCol {
+  max-width:150px;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+.DocumentListTable td.documentCol {
+  max-width:100px;
+  width: 25%;
+  color: $color-link;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  cursor:pointer;
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+.DocumentListTable .hasError {
+  color:#e0575b;
+  font-weight:bold;
+}
+
+
+.DocumentListTable td.statisticCol {
+  font-size:14px;
+  text-align:center;
+  min-width:130px;
+}
+
+.DocumentListTable td.translatedCol {
+  font-weight:bold;
+  font-size:14px;
+  color: $color-success;
+  text-align:center;
+}
+
+.DocumentListTable td.untranslatedCol {
+  font-weight:bold;
+  font-size:14px;
+  color: $color-secondary;
+  text-align:center;
+}
+
+.DocumentListTable td.remainingCol {
+  font-weight:bold;
+  font-size:14px;
+  color: $color-secondary;
+  text-align:center;
+}
+
+.DocumentListTable td.auditCol {
+  font-size:12px;
+  text-align:center;
+}
+
+.DocumentListTable td.actionCol {
+  text-align:center;
+}
+
+.DocumentListTable td.actionCol .uploadButton {
+  font-size:20px;
+  cursor:pointer
+
+}
+
+.DocumentListTable td.actionCol .uploadButton:hover {
+  color:$color-primary;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* represent one text string. If it's not in plural form, this wraps one text flow. In plural form, this is one string */
+.textFlowEntry {
+  border-top: dotted 1px $color-primary-30;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.textFlowEntry pre
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-height: 1em;
+    font-size: 14px;
+    font-family: $font-family-base;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.translationContainer pre, .translationContainer textarea {
+  font-size: 14px !important; // Stop code mirror css skipping this
+  font-family: $font-family-base;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* TM and Glossary result*/
+.resultTable
+{
+  width:100%;
+    table-layout: fixed;
+}
+.resultTable tbody td
+{
+    vertical-align: top;
+}
+
+.resultTable .oddRow
+{
+  background:#F3F7FB;
+}
+
+.resultTable tr:first-child:hover
+{
+  background:none;
+}
+
+.resultTable tr:hover
+{
+  background:#DFE3E7;
+}
+
+.resultTable .numTransCol
+{
+  width:60px;
+}
+
+.resultTable .detailCol
+{
+  width:60px;
+}
+
+.resultTable .similarityCol
+{
+  width:60px;
+}
+
+.resultTable .actionCol
+{
+  width:60px;
+}
+
+.resultTable .th
+{
+  color: $color-primary;
+  font-weight: bold;
+  font-size:13px;
+  text-decoration:underline;
+}
+
+.resultTable .centered
+{
+  text-align:center;
+}
+
+.resultTable .details
+{
+  font-size:16px;
+  color: $color-secondary;
+  cursor:pointer;
+}
+
+.resultTable .details:hover
+{
+  color:#e0575b;
+}
+
+.tableMsg
+{
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+  padding:25px;
+}
+
+.loadingPanel {
+  background: #000000;
+  padding: 20px 30px;
+  opacity: 0.60;
+  border-radius: 20px;
+}
+
+.confirmationDialogPanel {
+  background: #4C4C4C;
+  padding: 1em;
+  color: #FFFFFF;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.confirmationDialogPanel button {
+  margin:0.8em 0.2em 0.2em 0.2em;
+}
+
+.confirmationDialogPanel .message {
+  text-align:center;
+  font-size:1.1em;
+  font-weight:bold;
+  color: $color-secondary-30;
+}
+
+.confirmationDialogPanel .info {
+  color: #FFFFFF;
+  font-weight: normal;
+  font-size:0.9em;
+  margin:0.8em;
+  padding:0.3em;
+  border:1px dotted #808080;
+  border-radius:3px;
+}
+
+.confirmationDialogPanel .info .infoIcon {
+  color: $color-primary;
+  font-size:18px;
+}
+
+.confirmationDialogPanel .info .subInfo {
+  padding-left:50px;
+}
+
+.sourceTable {
+  border-spacing:5px;
+  width:100%;
+  height:100%;
+    word-break: break-all;
+}
+
+/* this is to NOT display cursor in source panel*/
+.sourceTable .CodeMirror-cursor {
+    display: none;
+}
+
+/* change code mirror mouse cursor */
+.sourceTable .CodeMirror-lines {
+    cursor: default;
+}
+
+/* when using highlighting label to display source */
+.sourceTable pre.cm-s-default {
+    background: #ffffff;
+    margin: 0;
+    padding: .4em;
+    min-height: 2em;
+}
+
+.reviewTable .CodeMirror-cursor {
+    display: none;
+}
+
+.reviewTable .CodeMirror-lines {
+    cursor: default;
+}
+
+.keyShortcutPanel
+{
+  border:none;
+}
+
+#gwt-debug-TMMerge {
+  width:auto;
+  height:auto;
+}
+
+#gwt-debug-TMMerge-caption, #gwt-debug-transHistory-caption {
+    background: $color-bg-light;
+    color: $color-secondary;
+    text-align: center;
+}
+
+/* translation history style */
+#gwt-debug-transHistoryTabPanel.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+    cursor: pointer;
+    padding: 3px 12px;
+    border-top-left-radius: $default-border-radius;
+    border-top-right-radius: $default-border-radius;
+    background: transparent;
+    color: $color-link;
+}
+
+#gwt-debug-transHistoryTabPanel.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+    cursor: default;
+    border-top-left-radius: $default-border-radius;
+    border-top-right-radius: $default-border-radius;
+    background: $color-bg-light;
+    color: $color-secondary;
+    font-weight: 700;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom: none;
+}
+
+#gwt-debug-transHistoryTabPanel.gwt-TabLayoutPanel .gwt-TabLayoutPanelContent {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top: none;
+    border-radius: $default-border-radius;
+    border-top-left-radius: 0;
+    background: $color-bg-light;
+}
+/* end translation history style*/
+
+.gwt-sideMenu-header {
+    font-weight:bold;
+    font-size:13px;
+    text-align:center;
+    padding:3px 0;
+    border-radius: $default-border-radius;
+    border:1px dotted gray;
+    color:#FFFFFF;
+}
+
+/* -------------- No fixed size dialog box ---------------*/
+.gwt-DialogBox-NoFixedSize
+{
+  background:#F2F2F2;
+  border:1px solid #C0C0C0;
+  border-radius:3px;
+  padding:5px;
+  box-shadow:1px 1px 3px #5C5C5C;
+}
+
+.gwt-DialogBox-NoFixedSize .Caption
+{
+  padding:4px;
+  margin-bottom:10px;
+  font-weight:bold;
+  font-size:1.1em;
+  border-radius:3px;
+  background:#575757;
+  color:#FFFFFF;
+  cursor:move;
+}
+
+.gwt-DialogBox-NoFixedSize .info span
+{
+  font-size:20px;
+  color: $color-secondary;
+}
+
+
+.gwt-DialogBox-NoFixedSize .message
+{
+  max-width:500px;
+  max-height:500px;
+  overflow:auto;
+}
+
+
+.gwt-DialogBox-NoFixedSize .buttonPanel
+{
+  margin-top:8px;
+}
+
+.gwt-DialogBox-NoFixedSize .buttonPanel td
+{
+  padding:2px;
+}
+
+.gwt-DialogBox-NoFixedSize .buttonPanel .button
+{
+  border-radius:3px;
+  width:60px;
+  text-align:center;
+}
+
+.gwt-DialogBox-NoFixedSize span.time_label
+{
+  font-size:12px;
+}
+
+.gwt-DialogBox-NoFixedSize span.severity_icon
+{
+  font-size:18px;
+}
+
+.gwt-DialogBox-NoFixedSize a.downloadLink
+{
+  color:#575757;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.gwt-DialogBox-NoFixedSize form
+{
+  margin:0;
+}
+
+.gwt-DialogBox-NoFixedSize .message_label
+{
+  padding:8px;
+}
+
+span.severity_info
+{
+  color:#3090C7;
+}
+
+span.severity_warning
+{
+  color:$color-warning;
+}
+
+span.severity_error
+{
+  color:$color-danger;
+}
+
+a.downloadFileLink
+{
+  color:$color-link;
+  font-size:0.9em;
+  cursor:pointer;
+}
+
+a.downloadLink
+{
+  color:$color-link;
+  font-size:0.9em;
+  cursor:pointer;
+}
+
+.translatorEditorContainer > div:nth-of-type(2) {
+  overflow:visible !important;
+}
+
+
+/* -------------- Fixed size dialog box ---------------*/
+.gwt-DialogBox-fixedSize
+{
+  width:600px;
+  height:400px;
+  background:#F2F2F2;
+  border:1px solid #C0C0C0;
+  border-radius:3px;
+  padding:5px;
+  box-shadow:1px 1px 3px #5C5C5C;
+}
+
+.gwt-DialogBox-fixedSize .Caption
+{
+  padding:4px;
+  font-weight:bold;
+  font-size:1.1em;
+  border-radius:3px;
+  background:#575757;
+  color:#FFFFFF;
+  cursor:move;
+}
+
+.gwt-DialogBox-fixedSize table
+{
+  width:100%;
+}
+
+.gwt-DialogBox-fixedSize .headerLabel
+{
+  padding-right:5px;
+  color: $color-secondary;
+  font-weight:bold;
+}
+
+.gwt-DialogBox-fixedSize .alignTop
+{
+  vertical-align:top;
+}
+
+.gwt-DialogBox-fixedSize .lastModifiedLabel
+{
+  color: $color-secondary;
+  font-weight:bold;
+}
+
+.gwt-DialogBox-fixedSize .button
+{
+  width:70px;
+  margin:1px;
+  padding:2px;
+}
+
+.gwt-DialogBox-CloseButton
+{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    float: right;
+    margin: 0;
+    width: 5em;
+    border: none !important;
+    border-radius: $default-border-radius;
+    background-color: $color-bg-lightest;
+    box-shadow: $default-box-shadow;
+    text-align: center;
+    &:hover {
+      background-color: $color-bg-lighter;
+    }
+    &:active {
+      background-color: $color-bg-dark;
+      box-shadow: $default-box-shadow-inset;
+    }
+}
+
+.transUnitCol .bookmark
+{
+    float: left;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+
+// custom webkit scroll bar
+// Let's get this party started
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+    $background: $color-secondary-20;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $light-grey;
+    $background: $color-secondary-50;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: $lightest-grey;
+}
+// end custom webkit scroll bar
+
+// New Styles for 3.0
+// Because GWT is a piece of $%@$#^ we need !important for everything
+
+// main container
+#container > div {
+  background: $color-bg !important;
+  margin-top: rhythm(.25) !important;
+  > div:nth-of-type(3),
+  > div:nth-of-type(4) {
+    top: 32px !important;
+  }
+}
+
+// breadcrumb links
+.subHeader > div:nth-of-type(2) td:first-of-type > div {
+  padding: 2px 10px !important;
+  div:last-of-type a {
+    color: $color-secondary !important;
+  }
+}
+
+// Editor background
+.translatorEditorContainer div:nth-of-type(2) > table,
+.translatorEditorContainer div:nth-of-type(3) > div {
+  background: transparent !important
+;}
+
+// History Tabs
+#gwt-debug-transHistory-content .gwt-TabLayoutPanel {
+  font-size: 14px;
+  height: 100% !important;
+  > div:nth-of-type(2) {
+    height: 32px !important;
+  }
+  > div:nth-of-type(3) {
+    top: 32px !important;
+  }
+}
+
+// Document background
+
+.gwt-TabLayoutPanelContent > div:nth-of-type(2) > div {
+  background: transparent !important;
+}
+
+.DocumentListTable {
+  background: $color-bg-light !important;
+  @include box-shadow($default-box-shadow);
+}
+
+@import "standard";

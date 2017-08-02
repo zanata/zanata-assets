@@ -1,0 +1,25 @@
+/*
+
+### Miscellaneous
+
+#### Horizontal Rule
+
+```
+<hr>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+hr {
+  height: 0;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba($color-secondary, .15);
+  margin: rhythm(1) 0;
+  background: transparent;
+}
+
+}

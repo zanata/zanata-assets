@@ -1,0 +1,172 @@
+//
+// Background Component - Default Settings
+// ---------------------------------------
+// Change in _settings.scss
+
+$bg-pop-shadow : 0 1px 4px rgba($black, 0.1) !default;
+
+/*
+
+### Backgrounds
+
+#### Background Levels
+
+```
+<div class="bg--lowest l--pad-all-1 l--push-bottom-half">I am so so very low. Go away.</div>
+
+<div class="bg--lower l--pad-all-1 l--push-bottom-half">I am very low</div>
+
+<div class="bg--low l--pad-all-1 l--push-bottom-half">I am low</div>
+
+<div class="bg--neutral l--pad-all-1 l--push-bottom-half">I am keeping the peace. I mean I am neutral.</div>
+
+<div class="bg--high l--pad-all-1 l--push-bottom-half">I am soooo high</div>
+
+<div class="bg--higher l--pad-all-1 l--push-bottom-half">I am way higher</div>
+
+<div class="bg--highest l--pad-all-1 l--push-bottom-half">I am the highest, wooo!</div>
+
+<div class="bg--highest l--pad-all-1 l--push-bottom-half">I am the highest, wooo!</div>
+
+<div class="bg--high--hover l--pad-all-1 l--push-bottom-half">I am just hovering around.</div>
+
+<div class="bg--pop-highest l--pad-all-1 l--push-bottom-half">Yeah, but I am poppin.</div>
+
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.bg--faint {
+  @extend .is-transition;
+  @include opacity(.9);
+  &:hover {
+    .no-touch & {
+      @include opacity(1);
+    }
+  }
+}
+
+// TODO: Fix hover for touch devices
+// Use hover for each class so it is not overwritten by other hover classes
+
+.bg--high,
+.bg--high:hover,
+.bg--high--hover:hover {
+  @extend .is-transition;
+  background-color: $color-bg-light;
+}
+
+.bg--higher,
+.bg--higher:hover,
+.bg--higher--hover:hover {
+  @extend .is-transition;
+  background-color: $color-bg-lighter;
+}
+
+.bg--highest,
+.bg--highest:hover,
+.bg--highest--hover:hover {
+  @extend .is-transition;
+  background-color: $color-bg-lightest;
+}
+
+.bg--low,
+.bg--low--hover:hover {
+  @extend .is-transition;
+  background-color: darken($color-body-background, 10%);
+}
+
+.bg--lower,
+.bg--lower--hover:hover {
+  @extend .is-transition;
+  background-color: darken($color-body-background, 25%);
+}
+
+.bg--lowest,
+.bg--lowest--hover:hover {
+  @extend .is-transition;
+  background-color: darken($color-body-background, 40%);
+}
+
+.bg--pop-high {
+  @extend .bg--high;
+  border: $default-border;
+  border-bottom-width: 2px;
+}
+
+.bg--pop-higher {
+  @extend .bg--higher;
+  border: $default-border;
+  border-bottom-width: 2px;
+}
+
+.bg--pop-highest {
+  @extend .bg--highest;
+  border: $default-border;
+  border-bottom-width: 2px;
+}
+
+.bg--neutral {
+  background-color: $color-bg;
+}
+
+}
+
+/*
+
+#### Background States
+
+```
+<div class="bg--primary l--pad-all-1 l--push-bottom-half">I am Primary.</div>
+
+<div class="bg--secondary l--pad-all-1 l--push-bottom-half">I am Secondary.</div>
+
+<div class="bg--danger l--pad-all-1 l--push-bottom-half">Oh noes.</div>
+
+<div class="bg--warning l--pad-all-1 l--push-bottom-half">Careful.</div>
+
+<div class="bg--unsure l--pad-all-1 l--push-bottom-half">Are you sure.</div>
+
+<div class="bg--success l--pad-all-1 l--push-bottom-half">Woo hoo!.</div>
+
+<div class="bg--highlight l--pad-all-1 l--push-bottom-half">Hi.</div>
+
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.bg--primary {
+  background-color: $color-primary;
+}
+
+.bg--secondary {
+  background-color: $color-secondary;
+}
+
+.bg--danger {
+  background-color: tint($color-danger, 80%);
+}
+
+.bg--warning {
+  background-color: tint($color-warning, 80%);
+}
+
+.bg--unsure {
+  background-color: tint($color-unsure, 90%);
+}
+
+.bg--success {
+  background-color: tint($color-success, 80%);
+}
+
+.bg--highlight {
+  background-color: tint($color-highlight, 80%);
+}
+
+}

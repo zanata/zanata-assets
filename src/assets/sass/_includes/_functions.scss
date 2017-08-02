@@ -1,0 +1,25 @@
+
+// Functions
+// =========
+
+@function convert-number-to-word($num) {
+  $count:1;
+  @each $word in one,two,three,four,five,six,seven,eight,nine,ten,eleven,
+    twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,
+    twenty,twentyone,twentytwo,twentythree,twentyfour{
+    @if ($count == $num) { @return $word; }
+    $count: $count + 1;
+  }
+  @return "invalid";
+}
+
+@function grid-calc($column-number, $columns) {
+  @return percentage(($column-number / $columns));
+}
+
+// Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
+// Only use this when you would otherwise use pixels.
+// Try and stick to using the compass `rhythm()` function
+@function emCalc($pxWidth) {
+  @return $pxWidth / $base-font-size * 1em;
+}

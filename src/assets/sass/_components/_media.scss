@@ -1,0 +1,35 @@
+/*
+
+### Media
+
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.media {
+  @extend .l--cf-of;
+}
+
+.media__body {
+  overflow: hidden;
+}
+
+.media__item--left {
+  float: left;
+  margin-right: rhythm(1);
+}
+
+.media__item--right {
+  float: right;
+  margin-left: rhythm(1);
+}
+
+// Deprecated
+.media--circle {
+  @extend .bx--round;
+  @extend .bx--inline-block;
+}
+
+}

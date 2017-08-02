@@ -1,0 +1,25 @@
+<header role="banner" class="header">
+  {% include title.html %}
+  <nav id="nav-main" class="header__main-nav js-dropdown">
+    <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+    <div class="header__main-nav__group js-dropdown__content">
+      <form action="" class="form--search header__search js-form--search">
+        <label class="form--search__label" for="form--search">Search Projects</label>
+        <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
+      </form>
+      <ul class="header__main-nav__menu">
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}projects-old.html">Projects</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Languages</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Glossary</a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help</a></li>
+        <li class="is-hidden--m-up l--pad-all-half"><a href="{% if page.root %}{{ page.root }}{% endif %}signup" class="button--full">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Alternative -->
+  <div class="header__login l--float-right">
+    <a href="{% if page.root %}{{ page.root }}{% endif %}signup" class="is-hidden--s button">Sign Up</a>
+    <a href="{% if page.root %}{{ page.root }}{% endif %}login" class="l--push-left-half button--primary">Log In</a>
+  </div>
+</header>

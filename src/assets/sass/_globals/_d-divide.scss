@@ -1,0 +1,33 @@
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.divide {
+  border-width: 0;
+  border-style: solid;
+  @include old-ie {
+    border-color: $color-secondary-20;
+  }
+  border-color: $default-border-color;
+}
+
+.d--right {
+  @extend .divide;
+  border-right-width: 1px;
+}
+
+.d--left {
+  @extend .divide;
+  border-left-width: 1px;
+}
+
+.d--bottom {
+  @extend .divide;
+  border-bottom-width: 1px;
+}
+
+.d--top {
+  @extend .divide;
+  border-top-width: 1px;
+}
+
+}

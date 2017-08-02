@@ -1,0 +1,120 @@
+$heading-font         : $font-family-heading;
+$heading-h1-size      : 36px !default;
+$heading-h2-size      : 28px !default;
+$heading-h3-size      : 24px !default;
+$heading-h4-size      : 20px !default;
+$heading-h5-size      : 18px !default;
+$heading-h6-size      : 16px !default;
+$heading-color        : $color-heading;
+$heading-small-adjust : 0.8;
+$heading-weight       : 600;
+
+/*
+### Headings
+
+#### General headings
+
+Used to section content and create hierarchy
+
+```
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+```
+<div class="alpha">Alpha</div>
+<div class="beta">Beta</div>
+<div class="gamma">Gamma</div>
+<div class="delta">Delta</div>
+<div class="epsilon">Epsilon</div>
+<div class="zeta">Zeta</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+%heading {
+  color: $heading-color;
+  margin: 0;
+  font-family: $font-family-heading;
+  font-weight: $heading-weight;
+  word-wrap: break-word;
+  hyphens: auto;
+  a {
+    display: inline-block;
+  }
+}
+
+h1,
+.alpha {
+  @extend %heading;
+  @include adjust-font-size-to($heading-h1-size, 1.5);
+  letter-spacing: -0.05em;
+}
+
+h1 {
+  margin-bottom: rhythm(.5, $heading-h1-size);
+}
+
+h2,
+.beta {
+  @extend %heading;
+  @include adjust-font-size-to($heading-h2-size);
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  margin-top: rhythm(1,$heading-h2-size);
+  margin-bottom: rhythm(.5,$heading-h2-size);
+}
+
+h3,
+.gamma {
+  @extend %heading;
+  @include adjust-font-size-to($heading-h3-size);
+  letter-spacing: -0.05em;
+}
+
+h3 {
+  margin-top: rhythm(1,$heading-h3-size);
+  margin-bottom: rhythm(.5,$heading-h3-size);
+}
+
+h4,
+.delta {
+  @extend %heading;
+  @include adjust-font-size-to($heading-h4-size);
+}
+
+h4 {
+  margin-top: rhythm(.5, $heading-h4-size);
+  margin-bottom: rhythm(.25,$heading-h4-size);
+}
+
+h5,
+.epsilon {
+  @extend %heading;
+  @include adjust-font-size-to($heading-h5-size)
+}
+
+h5 {
+  margin-top: rhythm(.5, $heading-h5-size);
+  margin-bottom: rhythm(.5, $heading-h5-size);
+}
+
+h6,
+.zeta {
+  @extend %heading;
+  @include adjust-font-size-to($heading-h6-size);
+}
+
+h6 {
+  margin-top: rhythm(.5, $heading-h6-size);
+}
+
+}

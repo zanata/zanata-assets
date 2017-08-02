@@ -1,0 +1,43 @@
+
+//  Mixins
+//  ======
+
+
+// These do the same thing but they are good to use for their specific contexts
+// Also incase we do want to change them
+
+@mixin no-mqueries {
+  @if $breakpoint-no-queries {
+    @content;
+  }
+}
+
+@mixin old-ie {
+  @include no-mqueries {
+    @content;
+  }
+}
+
+// For changing the font size independently of line height
+
+@mixin font-size($to-size, $from-size: $base-font-size) {
+  @if not $relative-font-sizing and $from-size != $base-font-size {
+    @warn "$relative-font-sizing is false but a relative font size was passed to adjust-font-size-to"; }
+  font-size: $font-unit * ($to-size / $from-size);
+}
+
+@mixin readable-line-length($characters: 70, $font-size: $base-font-size) {
+  $font-size: $font-size / 1px;
+  max-width: ($characters / $font-size) * 8em; // This just seems to get good estimates
+}
+
+@mixin ellipsis($no-wrap: true) {
+  @if $no-wrap {
+    white-space: nowrap;
+  }
+  overflow: hidden;
+  @include experimental(text-overflow, ellipsis, not -moz, not -webkit, -o, -ms, not -khtml, official);
+  @if $experimental-support-for-mozilla and $use-mozilla-ellipsis-binding {
+    -moz-binding: stylesheet-url(unquote("xml/ellipsis.xml#ellipsis"));
+  }
+}

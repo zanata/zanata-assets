@@ -1,0 +1,413 @@
+/*
+
+### Panels
+
+```example
+<div class="g">
+  <div class="g__item w--1-2-h l--push-v-1">
+    <div class="panel">
+      <div class="tabs--accent">
+        <nav class="tabs__nav panel__header">
+          <ul>
+            <li>
+              <a href="#" class="is-active"><i aria-hidden="true" class="i i--infinity"></i><span class="is-invisible">All</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--eye"></i><span class="is-invisible">Reviewer</span></a>
+            </li>
+            <li>
+              <a href="#"><i aria-hidden="true" class="i i--star"></i><span class="is-invisible">Starred</span></a>
+            </li>
+            <li class="tab__end">
+              <a href="#"><i aria-hidden="true" class="i i--plus i i--large"></i><span class="is-invisible">New Project</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="tabs__content">
+          <header class="l--pad-all-half panel__sub-header">
+            <div class="g--tight">
+              <div class="g__item w--6-10 w--6-10-s">
+                <h2 class="delta heading--secondary">All Projects</h2>
+              </div>
+              <div class="g__item w--4-10 w--4-10-s txt--align-right txt--s-align-right">
+                <span class="txt--meta">5 of 12 <i aria-hidden="true" class="i i--clipboard"></i></span>
+                <div class="dropdown dropdown--inline dropdown--right">
+                  <div class="dropdown__toggle" href="#">
+                    <i aria-hidden="true" class="i i--clock"></i><span class="is-invisible">Recent</span>
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li class="dropdown__header">Sort by:</li>
+                    <li><a href="#">Recent <i aria-hidden="true" class="i i--clock"></i></a></li>
+                    <li><a href="#">Alphabetically <i aria-hidden="true" class="i i--clock"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <ul class="list--no-bullets">
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+            <li class="bg--faint l--pad-top-half bg--highest--hover progress-bar__expander dropdown__container">
+              <div class="g--tight l--pad-h-half">
+                <div class="g__item w--3-4 w--3-4-s">
+                  <h3 class="epsilon"><a href="#">Zanata</a></h3>
+                </div>
+                <div class="g__item w--1-4 w--1-4-s txt--align-right txt--s-align-right">
+                  <ul class=" list--horizontal">
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--network"></i><span class="is-invisible">Translator</span></span>
+                    </li>
+                    <li>
+                      <span class="txt--meta"><i aria-hidden="true" class="i i--pencil"></i><span class="is-invisible">Maintainer</span></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="l--pad-h-half l--pad-bottom-half">
+                <div class="dropdown">
+                  <div class="dropdown__toggle" href="#">
+                    <i class="i i--arrow-down dropdown__toggle__icon"></i>
+                    <ul class="dropdown__toggle__content list--horizontal ">
+                      <li>
+                        <a href="new-page.html" title="Version 3.0"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 3.0</a>
+                      </li>
+                      <li>
+                        <a href="#" title="43 Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 43</a>
+                      </li>
+                      <li>
+                        <a href="#" title="16 Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 16</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Go to Japanese translation">JP</a>
+                      </li>
+                      <li class="l--float-right">
+                        <span class="txt--state-success">73%</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="dropdown__content">
+                    <li>
+                      <ul class="list--horizontal">
+                        <li>
+                          <a href="#" title="Version"><i aria-hidden="true" class="i i--star-2"></i><span class="is-invisible">Version</span> 2.6</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Documents"><i aria-hidden="true" class="i i--document-alt-fill"></i><span class="is-invisible">Documents</span> 35</a>
+                        </li>
+                        <li>
+                          <a href="#" title="Languages"><i aria-hidden="true" class="i i--globe"></i><span class="is-invisible">Languages</span> 13</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__divider"></li>
+                    <li>
+                      <span class="txt--meta">Last updated 2 days ago</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="progress-bar__translated" title="73% Translated" style="width: 73%;">
+                  <span class="is-invisible">Translated</span>
+                </span>
+                <span class="progress-bar__fuzzy" title="8% Fuzzy" style="width: 8%; margin-left: 73%;">
+                  <span class="is-invisible">Fuzzy</span>
+                </span>
+                <span class="progress-bar__rejected" title="3% Rejected" style="width: 3%; margin-left: 81%;">
+                  <span class="is-invisible">Rejected</span>
+                </span>
+                <span class="progress-bar__approved" title="52% Approved" style="width: 52%;">
+                  <span class="is-invisible">Approved</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.panel {
+  @extend .bg--pop-high;
+  position: relative;
+}
+
+.panel__header {
+  @extend .bg--pop-highest;
+  border-width: 0 0 2px 0;
+  // display: table;
+  width: 100%;
+  position: relative;
+  max-height: rhythm(2.05);
+}
+
+.panel__header__button {
+  margin-top: rhythm(.5);
+  margin-right: rhythm(.25);
+  margin-left: rhythm(.25);
+  padding-right: rhythm(.25, 14px);
+  padding-left: rhythm(.25, 14px);
+  @include adjust-font-size-to(14px, .875);
+}
+
+.panel__sub-header {
+  @extend .bg--pop-higher;
+  border-width: 0 0 2px 0;
+}
+
+.panel__heading {
+  @include adjust-font-size-to(16px, 2);
+  @include ellipsis;
+  padding: 0 rhythm(.5, 16px);
+  font-weight: 400;
+  overflow: hidden;
+  margin: 0;
+  @include breakpoint($gte-medium) {
+    @include adjust-font-size-to(18px, 2);
+    padding: 0 rhythm(.5, 18px);
+  }
+}
+
+.panel__header__info {
+  @include ellipsis;
+  padding: rhythm(.45) rhythm(.5);
+  overflow: hidden;
+  margin: 0;
+}
+
+.panel__heading--small {
+  @include adjust-font-size-to(14px);
+  @include ellipsis;
+  padding: 0 rhythm(.5, 14px);
+  font-weight: 400;
+  overflow: hidden;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.panel__header__sort,
+.panel__header__actions {
+  float: right;
+  white-space: nowrap;
+  // margin: rhythm(.45) rhythm(.5) 0 0;
+}
+
+.panel__header__back {
+  height: rhythm(2);
+  width: rhythm(1.5);
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: rhythm(.5) 0;
+  i:before {
+    height: rhythm(2);
+  }
+  + .panel__heading {
+    padding-left: rhythm(1.5, 16px);
+  }
+  @include breakpoint($gte-small) {
+    + .panel__heading {
+      padding-left: rhythm(1.5, 18px);
+    }
+  }
+  @include breakpoint($gte-medium) {
+    display: none;
+    + .panel__heading {
+      padding-left: rhythm(.5, 18px);
+    }
+  }
+}
+
+.panel__search {
+  display: block;
+  &:before {
+    left: rhythm(.425);
+    top: rhythm(0);
+    line-height: rhythm(1);
+  }
+  input {
+    @include adjust-font-size-to(14px, .8);
+    padding: rhythm(.125, 14px) rhythm(2, 14px) rhythm(.125, 14px) rhythm(1.375, 14px);
+    height: rhythm(1.05, 14px);
+    border-radius: 0;
+    border: none;
+    border-bottom: $default-border;
+    margin: 0;
+    &:focus,
+    &:hover {
+      border: none;
+      border-bottom: $default-border;
+    }
+  }
+}
+
+.panel__results {
+  @extend .l--cf-of;
+  position: relative;
+  padding: 0 rhythm(.25) 0 rhythm(1.375);
+  .txt--meta {
+    line-height: inherit;
+  }
+}
+
+.panel__results--bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: $default-border;
+}
+
+.panel__results__type {
+  position: absolute;
+  top: rhythm(.25, 14px);
+  left: rhythm(.5, 14px);
+  @include adjust-font-size-to(14px);
+}
+
+.panel__search__reset,
+.panel__search__button {
+  vertical-align: inherit;
+}
+
+.panel__search__button {
+  margin-left: rhythm(.125, 14px) !important;
+  font-weight: 400;
+}
+
+.panel__search__cancel {
+  @include adjust-font-size-to(14px);
+  position: absolute;
+  top: 0;
+  right: rhythm(.5,14px);
+  font-weight: 400;
+}
+
+.panel__body {
+  min-height: 16rem;
+  max-height: 80vh;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-bottom: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.panel__pager {
+  @extend .list--horizontal;
+  height: rhythm(1);
+  float: right;
+  li {
+    vertical-align: top;
+    margin: 0 0 0 rhythm(-.125);
+  }
+}
+
+.panel__pager__button {
+  line-height: rhythm(1);
+  height: rhythm(1);
+  width: rhythm(1);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $color-link;
+  @include box-shadow(none);
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-link-hover;
+    background-color: $color-bg;
+    @include box-shadow(none);
+  }
+  &:active {
+    color: $color-link-active;
+  }
+}
+
+}

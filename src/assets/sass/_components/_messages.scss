@@ -1,0 +1,136 @@
+/*
+
+### Messages
+
+```
+<div class="message--danger l--push-bottom-half">Oh noes! Don't do that.<a href="#" class="message__remove"><i class="i i--remove"></i></a></div>
+
+<div class="message--warning l--push-bottom-half">Ooooh that looks risky…</div>
+
+<div class="message--unsure l--push-bottom-half">Wait, are you sure?</div>
+
+<div class="message--success l--push-bottom-half">Yay! Way to GO!!!!!</div>
+
+<div class="message--highlight l--push-bottom-half">Oh look, a squirrel!</div>
+
+<div class="message--neutral l--push-bottom-half">Blah di blah blah.</div>
+
+<div class="message--highlight message--removable message--global l--push-bottom-half js-message-removable is-active">Use the menu on the left to naviagte.<button class="message__remove js-message-remove"><i class="i i--remove"></i></button></div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.message {
+  @extend .bx--break-word;
+  padding: rhythm(.25) rhythm(.5);
+  position: relative;
+}
+
+.message--removable {
+  padding-right: rhythm(2);
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    right: rhythm(1.5);
+    top: 0;
+    border-left: 1px solid rgba($black, 0.03);
+  }
+}
+
+.message__remove {
+  @extend .button--link;
+  @include opacity(.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: rhythm(1.5);
+  text-align: center !important;
+  padding: rhythm(.25) !important;
+  .i {
+    font-size: rhythm(.75);
+  }
+}
+
+.message--global {
+  @include transition(opacity 0.25s cubic-bezier(.55,-0.38,.22,1.01), transform 0.25s cubic-bezier(.55,-0.38,.22,1.01));
+  @include opacity(.95);
+  @include box-shadow($default-box-shadow);
+  @include transform(translateY(-250%));
+  position: absolute;
+  top: rhythm(2);
+  right: rhythm(.5);
+  left: rhythm(.5);
+  z-index: 9999;
+  margin: 0 auto;
+  max-width: rhythm(20);
+  @include opacity(0);
+  &.is-fixed {
+    @include transform(translateY(-150%));
+    position: fixed;
+    top: 0;
+  }
+  &.is-active {
+    @include transform3d(translateY(0));
+    @include opacity(.9);
+  }
+}
+
+.message--danger {
+  @extend .message;
+  @extend .bg--danger;
+  @extend .txt--danger;
+  a,
+  button {
+    @extend .link--danger;
+  }
+}
+
+.message--warning {
+  @extend .message;
+  @extend .bg--warning;
+  @extend .txt--warning;
+  a,
+  button {
+    @extend .link--warning;
+  }
+}
+
+.message--unsure {
+  @extend .message;
+  @extend .bg--unsure;
+  @extend .txt--unsure;
+  a,
+  button {
+    @extend .link--unsure;
+  }
+}
+
+.message--success {
+  @extend .message;
+  @extend .bg--success;
+  @extend .txt--success;
+  a,
+  button {
+    @extend .link--success;
+  }
+}
+
+.message--highlight {
+  @extend .message;
+  @extend .bg--highlight;
+  color: $color-secondary;
+}
+
+.message--neutral {
+  @extend .message;
+  @extend .bg--neutral;
+  @extend .txt--neutral;
+
+}
+
+}

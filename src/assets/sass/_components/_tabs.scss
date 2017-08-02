@@ -1,0 +1,253 @@
+/*
+
+### Tabs
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.tabs {
+
+}
+
+.tabs__nav {
+  letter-spacing: -0.2em;
+  margin: 0;
+  padding: 0;
+  > ul > li,
+  > li {
+    @include inline-block;
+    letter-spacing: normal;
+    &.is-active {
+      > a {
+        color: $color-link-active;
+        cursor: default;
+      }
+    }
+    > a {
+      padding: rhythm(.25);
+      @include inline-block;
+      font-weight: 600;
+    }
+  }
+
+  .tab__end {
+    float: right;
+  }
+  @include breakpoint($gte-medium) {
+    > ul > li > a,
+    > li > a {
+      padding: rhythm(.5);
+    }
+  }
+}
+
+.tabs__content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    display: none;
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.tabs--lined {
+  > .tabs__nav {
+    border-bottom: 2px solid $default-border-color;
+    max-height: rhythm(2);
+    > ul > li > a,
+    > li > a {
+      text-align: center;
+      padding: rhythm(.5);
+      max-height: rhythm(2);
+      position: relative;
+      &:after {
+        @extend .is-transition;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: transparent;
+      }
+      &.is-active {
+        &:after {
+          background-color: $color-secondary;
+        }
+      }
+    }
+    > ul > li,
+    > li {
+      &:hover > a,
+      > a:hover {
+        &:after {
+          background-color: $color-secondary-30;
+        }
+      }
+      &.is-active > a,
+      > a.is-active {
+        &:after {
+          background-color: $color-secondary;
+        }
+      }
+    }
+    .i {
+      line-height: rhythm(1);
+      padding: 0 0 rhythm(.075);
+    }
+  }
+  @include breakpoint($gte-medium) {
+    > .tabs__nav {
+      > ul > li > a,
+      > li > a {
+        max-height: rhythm(2);
+      }
+    }
+  }
+}
+
+.tabs--accent {
+  .tabs__nav {
+    @extend .bg--highest;
+    z-index: 1;
+    position: relative;
+    a {
+      text-align: center;
+      line-height: rhythm(1);
+      min-width: rhythm(2);
+      max-height: rhythm(2);
+      .i {
+        @include adjust-font-size-to(16px);
+      }
+      .i--large {
+        @include adjust-font-size-to(20px,1);
+      }
+    }
+    a:hover {
+      @extend .bg--high;
+    }
+    a.is-active {
+      @extend .bg--higher;
+      border-left: 1px solid rgba($color-secondary, .15);
+      border-right: 1px solid rgba($color-secondary, .15);
+      position: relative;
+      cursor: default;
+      &:after {
+        @extend .bg--higher;
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+      }
+    }
+    li:first-child a.is-active {
+      border-left: none;
+    }
+    // li
+    .tab__end a.is-active {
+      border-right: none;
+    }
+  }
+  .tabs__content {
+    z-index: 0;
+  }
+}
+
+}
+
+/*
+
+#### Tabs Vertical
+
+```example
+<div class="tabs--vertical js-tabs">
+  <ul class="tabs__nav js-tabs-nav">
+    <li class="is-active"><a href="#tab-vertical-1"><i class="i i--language"></i> <span class="is-hidden--s">Tab 1</span></a></li>
+    <li><a href="#tab-vertical-2"><i class="i i--language"></i> <span class="is-hidden--s">Tab 2</span></a></li>
+    <li><a href="#tab-vertical-3"><i class="i i--language"></i> <span class="is-hidden--s">Tab 3</span></a></li>
+  </ul>
+  <ul class="tabs__content js-tabs-content">
+    <li class="is-active" id="tab-vertical-1">Tab content here, more tab content and maybe some more. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.</li>
+    <li id="tab-vertical-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.Tab content here, more tab content and maybe some more.</li>
+    <li id="tab-vertical-3">Tab content here, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem. more tab content and maybe some more.</li>
+  </ul>
+</div>
+```
+
+*/
+
+// TODO: Remove namespacing when old zanata removed
+.new-zanata {
+
+.tabs--vertical {
+  .tabs__nav {
+    float: left;
+    width: 16%;
+    z-index: 5;
+    position: relative;
+    > li {
+      display: block;
+      z-index: 4;
+      > a {
+        padding: rhythm(.5);
+        border: 1px solid transparent;
+        display: block;
+        &:after {
+          @include transition($default-transition);
+          position: absolute;
+          top: 0;
+          right: -2px;
+          width: 2px;
+          height: 100%;
+          background-color: transparent;
+          content: "";
+        }
+      }
+      &.is-active a,
+      > a.is-active {
+        @extend .bg--pop-highest;
+        border-right-width: 0;
+        position: relative;
+        &:after {
+          background-color: $color-bg-lightest;
+        }
+      }
+    }
+  }
+  .tabs__content {
+    float: left;
+    width: 84%;
+    > li {
+      @extend .bg--pop-highest;
+      padding: rhythm(.5);
+      min-height: rhythm(11);
+    }
+  }
+  @include breakpoint($gte-medium) {
+    .tabs__content {
+      > li {
+        padding: rhythm(1);
+      }
+    }
+  }
+  @include breakpoint($gte-large) {
+    .tabs__nav {
+      width: 20% !important;
+    }
+    .tabs__content {
+      width: 80% !important;
+    }
+  }
+}
+
+}

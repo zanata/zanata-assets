@@ -1,0 +1,279 @@
+/* ====================== Rich Data Table ==========================*/
+
+table{
+  position: relative;
+  overflow: auto;
+  width:100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
+}
+
+table.rf-dt {
+    width: 100%;
+    empty-cells: show;
+    border:0;
+    background-color: $color-bg-light;
+    margin-top: rhythm(1);
+    @include box-shadow($default-box-shadow);
+}
+
+.rf-dt-shdr th:first-child {
+    border-top-left-radius: $default-border-radius;
+}
+
+.rf-dt-shdr th:last-child {
+    border-top-right-radius: $default-border-radius;
+    border-right:0;
+}
+/* Header cell */
+th.rf-dt-shdr-c {
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 13px;
+    border: none;
+    color: $color-heading;
+    font-family: $font-family-base;
+    white-space: nowrap;
+    background:$color-bg-lightest;
+    @include box-shadow($default-box-shadow);
+    position: relative;
+    z-index: 2;
+}
+
+.rf-dt tbody tr:hover {
+    background-color: $color-bg-lighter;
+}
+
+/* Table cell */
+td.rf-dt-c {
+    padding: 14px;
+    font-size: 14px;
+    color: #595959;
+    font-family: $font-family-base;
+    border: none;
+    border-top: 1px solid $color-secondary-10;
+}
+
+.noBorderTable {
+    border-width: 0px;
+    background:none;
+}
+
+.noBorderTable .rich-table-headercell {
+    border-width: 0px;
+}
+
+.noBorderTable .rich-table-cell {
+    border-width: 0px;
+}
+
+/* ====================== End Rich Data Table ========================== */
+
+/* ====================== Rich Data Scroller =========================== */
+span.rf-ds {
+
+}
+
+/* Enabled Buttons */
+a.rf-ds-btn {
+    // @extend .button;
+    // background-image: none;
+    // border-radius: 2px;
+    // background-color: transparent;
+}
+
+a.rf-ds-btn:hover {
+    color: #000000;
+    background-color: #dcdcdc;
+}
+
+/* Disabled Buttons */
+span.rf-ds-dis {
+    background-color: transparent;
+    background-image: none;
+    border-radius: $default-border-radius;
+}
+
+/* Number button */
+a.rf-ds-nmb-btn {
+    border-top-color: transparent;
+    background-image: none;
+}
+
+a.rf-ds-nmb-btn:hover {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
+
+/* ====================== End Rich Data Scroller =========================== */
+
+/* ====================== Rich Panel =========================== */
+div.rf-p {
+    border-radius: $default-border-radius;
+    margin-bottom: rhythm(1);
+    background-color: $color-bg-lightest;
+    @include box-shadow($default-box-shadow);
+    border: none;
+    padding: 0;
+}
+
+/* Header */
+.rf-p .rf-p-hdr {
+    background-image: none;
+    padding:10px 8px;
+    font-size:14px;
+    border: none;
+    border-radius: $default-border-radius $default-border-radius 0 0;
+    background-color: $color-primary;
+    color: white;
+    font-weight: bold;
+    font-family: $font-family-base;
+}
+
+/* Body */
+.rf-p .rf-p-b {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    font-family: $font-family-base;
+    // border-color: $color-bg-lightest;
+    @include box-shadow($default-box-shadow);
+}
+
+/* ====================== Rich Data Panel =========================== */
+
+/* ====================== Rich Tab Panel & Tabs =========================== */
+
+.rf-tbp {
+
+// Header (where the tabs go)
+div.rf-tab-hdr-tabline-vis.rf-tab-hdr-tabline-top {
+    background: none;
+    border: none;
+    height: auto;
+}
+
+.rf-tab-hdr-tabs {
+    height: auto;
+}
+
+// Header seaparator from content
+div.rf-tab-hdr-brd {
+    border: none;
+    background-color: transparent;
+}
+
+// Tab Active
+td.rf-tab-hdr-act.rf-tab-hdr-top {
+    background: $color-bg-lightest;
+    color: $color-base-font;
+    border: none;
+    font-weight: 700;
+    border-top-right-radius: $default-border-radius;
+    border-top-left-radius: $default-border-radius;
+    padding: 6px 16px;
+    @include box-shadow(0 0px 2px rgba($black, 0.1));
+}
+
+// Inactive Tab
+td.rf-tab-hdr-inact.rf-tab-hdr-top {
+    color: $color-link;
+    background: $color-bg-light;
+    border: none;
+    border-top-right-radius: $default-border-radius;
+    border-top-left-radius: $default-border-radius;
+    padding: 6px 16px;
+    &:hover {
+        background: $color-bg-lighter;
+    }
+}
+
+// Active Tab
+// td.rf-tab-hdr-act.rf-tab-hdr-top {
+//     background: $color-bg-lighter;
+//     color: $color-base-font;
+// }
+
+// Tab contents
+div.rf-tab-cnt {
+    border: none;
+    border-radius: $default-border-radius;
+    border-top-left-radius: 0;
+    background-color: $color-bg-lightest;
+    font-size: 14px;
+    padding: 12px 16px;
+    @include box-shadow($default-box-shadow);
+}
+
+div.rf-tab-hdr-brd {
+    height: 0px;
+}
+
+.rf-tab-lbl,
+.rf-dg-c {
+    font-family: $font-family-base;
+    @include adjust-font-size-to(14px);
+}
+
+.rf-tab-hdr-spcr {
+    display: none;
+}
+
+}
+
+/* ====================== End Rich Tab Panel & Tabs =========================== */
+
+/* ====================== Rich Dialogs =========================== */
+
+/* Dialog content */
+div.rf-pp-cntr {
+    border-radius: $default-border-radius;
+    border-color: transparent;
+}
+
+/* Dialog Shadow */
+div.rf-pp-shdw {
+    border-radius: $default-border-radius;
+}
+
+/* Header */
+div.rf-pp-hdr {
+    background-image: none;
+    background-color: $color-primary;
+    border-top-right-radius: $default-border-radius;
+    border-top-left-radius: $default-border-radius;
+    padding: 7px;
+}
+
+/* Body */
+div.rf-pp-cnt {
+    border-bottom-left-radius: $default-border-radius;
+    border-bottom-right-radius: $default-border-radius;
+}
+
+/* ====================== End Rich Dialogs =========================== */
+
+/* ====================== Collapsible panel =========================== */
+
+div.rf-cp-hdr {
+    background-image: none;
+    background-color: $color-primary;
+    border-top-left-radius: $default-border-radius;
+    border-top-right-radius: $default-border-radius;
+}
+
+div.rf-cp-lbl-colps, div.rf-cp-lbl-exp {
+    color: #FFFFFF;
+    font-size:11px;
+    font-weight: bold;
+}
+
+div.rf-cp {
+    padding:0;
+    border-radius: $default-border-radius;
+    margin-top:5px;
+}
+
+/* ====================== End Collapsible panel =========================== */

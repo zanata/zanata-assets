@@ -1,0 +1,38 @@
+<header role="banner" class="header">
+  {% include title.html %}
+  <nav id="nav-main" class="header__main-nav js-dropdown">
+    <a href="#nav-main" class="header__main-nav__toggle js-dropdown__toggle"><i class="i i--huge i--list"></i><span class="is-invisible">Menu</span></a>
+    <div class="header__main-nav__group js-dropdown__content">
+      <form action="" class="form--search header__search js-form--search">
+        <div class="autocomplete">
+          <label class="form--search__label" for="form--search">Search Projects</label>
+          <input type="text" class="form--search__input js-form--search__input" id="form--search" placeholder="Search projects">
+        </div>
+      </form>
+      <ul class="header__main-nav__menu">
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}projects-old.html">Projects <i class="is-hidden--m-l-up l--float-right i--inline i--project"></i></a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}groups">Groups <i class="is-hidden--m-l-up l--float-right i--inline i--group"></i></a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Languages <i class="is-hidden--m-l-up l--float-right i--inline i--language"></i></a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}languages">Glossary <i class="is-hidden--m-l-up l--float-right i--inline i--glossary"></i></a></li>
+        <li><a href="{% if page.root %}{{ page.root }}{% endif %}help">Help <i class="is-hidden--m-l-up l--float-right i--inline i--help"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--<a href="#" class="header__user-admin">Admin <i class="i--right i--large i--admin"></i></a>-->
+  <nav class="header__user-nav js-dropdown">
+    <a href="#nav-user" class="header__user-nav__toggle js-dropdown__toggle">
+      <div class="badge__container">
+        <div class="bx--round header__avatar">
+          <img src="http://www.gravatar.com/avatar/fd8eefdca68e2044a7680d7a0cf574d7?d=mm&amp;r=g&amp;s=72">
+        </div>
+        <span class="badge--br badge--highlight" title="4 Notifications">4</span>
+      </div>
+    </a>
+    <ul id="nav-user" class="header__user-nav__menu js-dropdown__content">
+      <li><a href="dashboard" class="i__item--right">Dashboard <i class="i i--dashboard i__item__icon"></i></a></li>
+      <li><a href="#" class="i__item--right">Settings <i class="i__item__icon i i--settings"></i></a></li>
+      <li class="header__user-nav__admin"><a href="#" class="i__item--right">Admin <i class="i__item__icon i i--admin"></i></a></li>
+      <li><a href="#" class="i__item--right">Logout <i class="i__item__icon i i--logout"></i></a></li>
+    </ul>
+  </nav>
+</header>
