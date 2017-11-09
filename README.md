@@ -1,4 +1,4 @@
-## Zanata assets has been depreciated
+## Zanata assets has been deprecated
 
 A newer styleguide can be found here: https://github.com/zanata/zanata-styleguide
 
